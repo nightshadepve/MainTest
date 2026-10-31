@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.3")]
+    [Info("NightshadeHud", "Nightshade", "1.0.4")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -52,6 +52,7 @@ namespace Oxide.Plugins
         private string clockCache = "\0";
         private string onlineCache = "\0";
         private string countdownCache = "\0";
+        private string deepSeaCache = "\0";
 
         private readonly HashSet<ulong> bradleys = new HashSet<ulong>();
         private readonly HashSet<ulong> helis = new HashSet<ulong>();
@@ -106,6 +107,8 @@ namespace Oxide.Plugins
             [JsonProperty("Inactive event alpha (0-1)")] public float InactiveAlpha = 0.55f;
             [JsonProperty("Active event color")] public string ActiveColor = "#3DDC84";
             [JsonProperty("Contested event color")] public string ContestedColor = "#FFB020";
+            [JsonProperty("Deep Sea open color")] public string DeepSeaOpenColor = "#7EC8FF";
+            [JsonProperty("Event font size")] public int EventFontSize = 9;
             [JsonProperty("PvE badge text")] public string BadgePveText = "PVE";
             [JsonProperty("PvP badge text")] public string BadgePvpText = "PVP";
             [JsonProperty("PvE badge color")] public string BadgePveColor = "#3DDC84";
@@ -155,6 +158,8 @@ namespace Oxide.Plugins
             if (config.Columns < 1) config.Columns = 3;
             if (config.Width < 120f) config.Width = 120f;
             if (config.IconSize < 16f) config.IconSize = 16f;
+            if (config.EventFontSize < 8 || config.EventFontSize > 16) config.EventFontSize = 9;
+            if (string.IsNullOrEmpty(config.DeepSeaOpenColor)) config.DeepSeaOpenColor = "#7EC8FF";
             bool added = false;
             foreach (var known in DefaultEvents())
             {
@@ -480,20 +485,29 @@ namespace Oxide.Plugins
             float textX = Pad + config.IconSize + 6f;
             float top = -Pad;
             string parent = HalfParent(container);
-            AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(textX, top - 16f), Px(textX + 42f, top));
+            float clockW = 80f;
+            AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(textX, top - 16f), Px(textX + 38f, top));
             AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? config.BadgePvpText : config.BadgePveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
-            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName ?? "Nightshade", Hex(config.NameColor), 13, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 48f, top - 16f), Px(config.Width - Pad, top), true);
-            float y = -(Pad + config.IconSize + 4f);
-            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleLeft, "0 1", "0 1", Px(Pad, y - Line), Px(Pad + 100f, y));
-            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 11, TextAnchor.MiddleRight, "0 1", "1 1", Px(104f, y - Line), Px(-Pad, y));
-            y -= Line;
+            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName ?? "Nightshade", Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 42f, top - 16f), Px(config.Width - Pad - clockW - 4f, top), true);
+            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - Pad - clockW, top - 16f), Px(config.Width - Pad, top));
+            float row2 = top - 18f;
+            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 11, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX, row2 - 16f), Px(config.Width - Pad, row2));
+            float y = -(Pad + config.IconSize + 2f);
             string countText, countColor;
             Countdown(out countText, out countColor);
-            AddLabel(container, "NightshadeHud.Countdown", parent, countText, countColor, 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
-            y -= Line;
+            float split = Mathf.Max(120f, config.Width * 0.56f);
+            AddLabel(container, "NightshadeHud.Countdown", parent, countText, countColor, 11, TextAnchor.MiddleLeft, "0 1", "0 1", Px(Pad, y - Line), Px(split, y));
             string shieldText, shieldColor;
             ShieldLine(player, out shieldText, out shieldColor);
-            AddLabel(container, "NightshadeHud.Shield", parent, shieldText, shieldColor, 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
+            AddLabel(container, "NightshadeHud.Shield", parent, shieldText, shieldColor, 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(split + 4f, y - Line), Px(config.Width - Pad, y));
+            y -= Line;
+            if (ShowDeepSea())
+            {
+                string seaText, seaColor;
+                DeepSeaLine(out seaText, out seaColor);
+                AddLabel(container, "NightshadeHud.DeepSea", parent, seaText, seaColor, 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
+                deepSeaCache = seaText + "|" + seaColor;
+            }
             if (player != null) shieldCache[player.userID] = shieldText + "|" + shieldColor;
             badgeCache = pvp ? "1" : "0";
             clockCache = ClockText();
@@ -544,7 +558,7 @@ namespace Oxide.Plugins
                 int row = i / columns;
                 float x = Pad + col * colW;
                 float y = -row * Line;
-                AddLabel(container, "NightshadeHud.Ev." + entry.Key, Events, text, color, 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(x, y - Line), Px(x + colW, y));
+                AddLabel(container, "NightshadeHud.Ev." + entry.Key, Events, text, color, EventFont(), TextAnchor.MiddleLeft, "0 1", "0 1", Px(x, y - Line), Px(x + colW, y));
             }
         }
 
@@ -603,7 +617,12 @@ namespace Oxide.Plugins
             return Px(-config.Right - width, -config.Top - height);
         }
 
-        private float HalfHeight() => Pad + config.IconSize + 4f + Line * 3f + Pad;
+        private float HalfHeight()
+        {
+            float height = Pad + config.IconSize + 2f + Line;
+            if (ShowDeepSea()) height += Line;
+            return height + Pad;
+        }
 
         private float PanelHeight(string state)
         {
@@ -648,17 +667,28 @@ namespace Oxide.Plugins
             if (onlineChanged) onlineCache = online;
             if (countChanged) countdownCache = countSig;
             if (badgeChanged) badgeCache = badge;
-            if (!clockChanged && !onlineChanged && !countChanged && !badgeChanged && !includeShield) return;
+            string seaText = null;
+            string seaColor = null;
+            bool seaChanged = false;
+            if (ShowDeepSea())
+            {
+                DeepSeaLine(out seaText, out seaColor);
+                string seaSig = seaText + "|" + seaColor;
+                seaChanged = seaSig != deepSeaCache;
+                if (seaChanged) deepSeaCache = seaSig;
+            }
+            if (!clockChanged && !onlineChanged && !countChanged && !badgeChanged && !includeShield && !seaChanged) return;
             foreach (var player in BasePlayer.activePlayerList)
             {
                 if (player == null || !player.IsConnected) continue;
                 string state;
                 if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
                 if (badgeChanged) PushBadge(player, pvp);
-                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleLeft);
-                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleRight);
+                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleRight);
+                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleLeft);
                 if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor, TextAnchor.MiddleLeft);
                 if (includeShield) PushShield(player, false);
+                if (seaChanged) PushText(player, "NightshadeHud.DeepSea", seaText, seaColor, TextAnchor.MiddleLeft);
             }
         }
 
@@ -698,7 +728,7 @@ namespace Oxide.Plugins
             shieldCache[player.userID] = sig;
             string text, color;
             ShieldLine(player, out text, out color);
-            PushText(player, "NightshadeHud.Shield", text, color, TextAnchor.MiddleLeft);
+            PushText(player, "NightshadeHud.Shield", text, color, TextAnchor.MiddleRight);
         }
 
         private void PushBadge(BasePlayer player, bool pvp)
@@ -784,7 +814,7 @@ namespace Oxide.Plugins
                             new CuiTextComponent
                             {
                                 Text = EventText(entry, count, on),
-                                FontSize = 10,
+                                FontSize = EventFont(),
                                 Align = TextAnchor.MiddleLeft,
                                 Color = EventColor(on, contested),
                                 Font = "robotocondensed-bold.ttf"
@@ -879,17 +909,17 @@ namespace Oxide.Plugins
             double seconds = ToDouble(DictValue(raw, "seconds"));
             if (state == "active")
             {
-                text = "Shield: active " + FormatDur(seconds);
+                text = "Shield " + FormatDur(seconds);
                 color = Hex(config.ShieldActive);
                 return;
             }
             if (state == "queued")
             {
-                text = "Shield: queued " + FormatDur(seconds);
+                text = "Shield queued";
                 color = Hex(config.ShieldQueued);
                 return;
             }
-            text = config.HideShieldWhenNone ? string.Empty : "Shield: none";
+            text = config.HideShieldWhenNone ? string.Empty : "No shield";
             color = Hex(config.MutedColor, config.InactiveAlpha);
         }
 
@@ -981,8 +1011,25 @@ namespace Oxide.Plugins
         private void OnEntityKill(HackableLockedCrate entity) { if (!scanning) NoteOil(entity, false); }
         private void OnCrateHack(HackableLockedCrate entity) { if (entity != null && entity.net != null) oilHacking.Add(entity.net.ID.Value); MarkEvents(); }
         private void OnCrateHackEnd(HackableLockedCrate entity) { if (entity != null && entity.net != null) oilHacking.Remove(entity.net.ID.Value); MarkEvents(); }
-        private void OnDeepSeaOpened(DeepSeaManager manager) { deepSea = true; MarkEvents(); }
-        private void OnDeepSeaClosed(DeepSeaManager manager) { deepSea = false; MarkEvents(); }
+        private void OnDeepSeaOpened(DeepSeaManager manager) { deepSea = true; deepSeaCache = "\0"; PushDeepSeaAll(); }
+        private void OnDeepSeaClosed(DeepSeaManager manager) { deepSea = false; deepSeaCache = "\0"; PushDeepSeaAll(); }
+
+        private void PushDeepSeaAll()
+        {
+            if (!ShowDeepSea()) return;
+            string text, color;
+            DeepSeaLine(out text, out color);
+            string sig = text + "|" + color;
+            deepSeaCache = sig;
+            if (BasePlayer.activePlayerList == null) return;
+            foreach (var player in BasePlayer.activePlayerList)
+            {
+                string state;
+                if (player == null || !player.IsConnected) continue;
+                if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
+                PushText(player, "NightshadeHud.DeepSea", text, color, TextAnchor.MiddleLeft);
+            }
+        }
         private void OnConvoyStart() { convoy = true; MarkEvents(); }
         private void OnConvoyStop() { convoy = false; MarkEvents(); }
         private void OnArmoredTrainEventStart() { train = true; MarkEvents(); }
@@ -1316,9 +1363,59 @@ namespace Oxide.Plugins
         {
             var list = new List<EventCfg>();
             foreach (var entry in config.Events)
-                if (entry != null && entry.Enabled && !string.IsNullOrEmpty(entry.Key)) list.Add(entry);
+            {
+                if (entry == null || !entry.Enabled || string.IsNullOrEmpty(entry.Key)) continue;
+                if (entry.Key == "DeepSea") continue;
+                list.Add(entry);
+            }
             list.Sort((a, b) => a.Order.CompareTo(b.Order));
             return list;
+        }
+
+        private bool ShowDeepSea()
+        {
+            if (config.Events == null) return true;
+            foreach (var entry in config.Events)
+                if (entry != null && entry.Key == "DeepSea") return entry.Enabled;
+            return true;
+        }
+
+        private string DeepSeaLabel()
+        {
+            if (config.Events != null)
+            {
+                foreach (var entry in config.Events)
+                    if (entry != null && entry.Key == "DeepSea" && !string.IsNullOrEmpty(entry.Label)) return entry.Label;
+            }
+            return "DEEP SEA";
+        }
+
+        private void DeepSeaLine(out string text, out string color)
+        {
+            string label = DeepSeaLabel();
+            bool open = false;
+            double remain = 0d;
+            DeepSeaManager manager = PointEntity<DeepSeaManager>.ServerInstance;
+            if (manager != null)
+            {
+                open = manager.IsOpen() || manager.IsBusy();
+                if (open)
+                {
+                    double wipe = manager.TimeToWipe;
+                    if (wipe > 1d) remain = wipe;
+                }
+            }
+            deepSea = open;
+            text = open && remain > 1d ? label + " " + FormatDur(remain) : label;
+            color = open ? Hex(config.DeepSeaOpenColor) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private int EventFont()
+        {
+            int size = config.EventFontSize;
+            if (size < 8) return 9;
+            if (size > 16) return 9;
+            return size;
         }
 
         private static string EventText(EventCfg entry, int count, bool on)
