@@ -5,5 +5,9 @@
   "Offline protection damage reduction percent (100 = fully block)": 100,
   "Prevent teammates authorized on TC from damaging their own shielded building": false,
   "Show blocked-hit message to attacker (rate limited)": true,
-  "Maximum total paid shield time on one TC in hours": 72
+  "Maximum total paid shield time on one TC in hours": 72,
+  "Drive TruePVE from the Eastern weekend window": true,
+  "TruePVE ruleset during the weekend window": "nightshade_pvp_weekend",
+  "TruePVE ruleset outside the weekend window": "default",
+  "Yield TruePVE changes while a purge is active": true
 }
