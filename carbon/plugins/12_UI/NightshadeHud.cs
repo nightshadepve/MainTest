@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.1")]
+    [Info("NightshadeHud", "Nightshade", "1.0.2")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -163,8 +163,16 @@ namespace Oxide.Plugins
                 added = true;
             }
             config.Events.RemoveAll(e => e == null || string.IsNullOrEmpty(e.Key));
-            if (added || config.Events.Count == 0) SaveConfig();
-            else SaveConfig();
+            foreach (var entry in config.Events)
+            {
+                string updated;
+                if (entry != null && OldLabels.TryGetValue(entry.Key + "|" + entry.Label, out updated))
+                {
+                    entry.Label = updated;
+                    added = true;
+                }
+            }
+            SaveConfig();
         }
 
         protected override void SaveConfig() => Config.WriteObject(config, true);
@@ -252,6 +260,12 @@ namespace Oxide.Plugins
         private void CmdHud(BasePlayer player, string command, string[] args)
         {
             if (player == null) return;
+            if (args != null && args.Length > 0 && args[0].Equals("debug", StringComparison.OrdinalIgnoreCase))
+            {
+                if (!player.IsAdmin) { player.ChatMessage("<color=#b084ff>[Nightshade]</color> HUD debug is admin only."); return; }
+                DebugHud(player);
+                return;
+            }
             string requested = args == null || args.Length == 0 ? "cycle" : Normalize(args[0]);
             if (requested == null)
             {
@@ -346,6 +360,7 @@ namespace Oxide.Plugins
                 AddHalf(container, player);
                 if (state == "full") AddEvents(container);
             }
+            AddIconButton(container, state);
             CuiHelper.AddUi(player, container);
             shown[player.userID] = state;
         }
@@ -379,6 +394,9 @@ namespace Oxide.Plugins
             {
                 CuiHelper.DestroyUi(player, Events);
             }
+            var hit = new CuiElementContainer();
+            AddIconButton(hit, to);
+            CuiHelper.AddUi(player, hit);
             shown[player.userID] = to;
             if (to != "minimized") shieldCache[player.userID] = ShieldSignature(player);
         }
@@ -431,16 +449,29 @@ namespace Oxide.Plugins
                     new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
                 }
             });
+        }
+
+        private void AddIconButton(CuiElementContainer container, string state)
+        {
+            string min = state == "minimized" ? Px(0f, -config.IconSize) : Px(Pad, -Pad - config.IconSize);
+            string max = state == "minimized" ? Px(config.IconSize, 0f) : Px(Pad + config.IconSize, -Pad);
             container.Add(new CuiElement
             {
                 Name = IconHit,
                 Parent = Root,
+                DestroyUi = IconHit,
                 Components =
                 {
-                    new CuiButtonComponent { Command = "nightshadehud.ui", Color = "0 0 0 0" },
+                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
                     new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
                 }
             });
+        }
+
+        private string IconCommand()
+        {
+            string command = string.IsNullOrEmpty(config.Command) ? "hud" : config.Command;
+            return "chat.say /" + command + " cycle";
         }
 
         private void AddHalf(CuiElementContainer container, BasePlayer player)
@@ -451,10 +482,10 @@ namespace Oxide.Plugins
             string parent = HalfParent(container);
             AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(textX, top - 16f), Px(textX + 42f, top));
             AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? config.BadgePvpText : config.BadgePveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
-            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName, Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 48f, top - 16f), Px(config.Width - 104f, top), true);
-            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - 100f, top - 16f), Px(config.Width - Pad, top));
-            float y = top - config.IconSize - 4f;
-            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.9f), 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
+            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName ?? "Nightshade", Hex(config.NameColor), 13, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 48f, top - 16f), Px(config.Width - Pad, top), true);
+            float y = -(Pad + config.IconSize + 4f);
+            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleLeft, "0 1", "0 1", Px(Pad, y - Line), Px(Pad + 100f, y));
+            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 11, TextAnchor.MiddleRight, "0 1", "1 1", Px(104f, y - Line), Px(-Pad, y));
             y -= Line;
             string countText, countColor;
             Countdown(out countText, out countColor);
@@ -554,7 +585,7 @@ namespace Oxide.Plugins
                 Update = true,
                 Components =
                 {
-                    new CuiButtonComponent { Command = "nightshadehud.ui", Color = "0 0 0 0" },
+                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
                     new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
                 }
             });
@@ -624,9 +655,9 @@ namespace Oxide.Plugins
                 string state;
                 if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
                 if (badgeChanged) PushBadge(player, pvp);
-                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor));
-                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.9f));
-                if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor);
+                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleLeft);
+                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleRight);
+                if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor, TextAnchor.MiddleLeft);
                 if (includeShield) PushShield(player, false);
             }
         }
@@ -667,7 +698,7 @@ namespace Oxide.Plugins
             shieldCache[player.userID] = sig;
             string text, color;
             ShieldLine(player, out text, out color);
-            PushText(player, "NightshadeHud.Shield", text, color);
+            PushText(player, "NightshadeHud.Shield", text, color, TextAnchor.MiddleLeft);
         }
 
         private void PushBadge(BasePlayer player, bool pvp)
@@ -698,14 +729,14 @@ namespace Oxide.Plugins
             CuiHelper.AddUi(player, container);
         }
 
-        private void PushText(BasePlayer player, string name, string text, string color)
+        private void PushText(BasePlayer player, string name, string text, string color, TextAnchor align)
         {
             var container = new CuiElementContainer();
             container.Add(new CuiElement
             {
                 Name = name,
                 Update = true,
-                Components = { new CuiTextComponent { Text = text ?? string.Empty, FontSize = 11, Align = TextAnchor.MiddleLeft, Color = color, Font = "robotocondensed-regular.ttf" } }
+                Components = { new CuiTextComponent { Text = text ?? string.Empty, FontSize = 11, Align = align, Color = color, Font = "robotocondensed-regular.ttf" } }
             });
             CuiHelper.AddUi(player, container);
         }
@@ -783,16 +814,19 @@ namespace Oxide.Plugins
             return text;
         }
 
+        private int ConnectedCount()
+        {
+            int online = 0;
+            if (BasePlayer.activePlayerList == null) return 0;
+            foreach (var player in BasePlayer.activePlayerList)
+                if (player != null && player.IsConnected) online++;
+            return online;
+        }
+
         private string OnlineText()
         {
             if (!config.ShowOnline && !config.ShowSleepers) return string.Empty;
-            int online = 0;
-            foreach (var player in BasePlayer.activePlayerList)
-            {
-                if (player == null) continue;
-                if (!config.CountAdmins && player.IsAdmin) continue;
-                online++;
-            }
+            int online = ConnectedCount();
             int sleepers = BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count;
             if (config.ShowOnline && config.ShowSleepers)
                 return "Online " + online + "  ·  Sleepers " + sleepers;
@@ -840,9 +874,9 @@ namespace Oxide.Plugins
                 color = Hex(config.MutedColor, config.InactiveAlpha);
                 return;
             }
-            var raw = NightshadeRaidProtection.Call("API_GetPlayerShield", player) as Dictionary<string, object>;
-            string state = raw != null && raw.ContainsKey("state") ? raw["state"] as string : "none";
-            double seconds = raw != null && raw.ContainsKey("seconds") ? ToDouble(raw["seconds"]) : 0d;
+            object raw = NightshadeRaidProtection.Call("API_GetPlayerShield", player);
+            string state = DictString(raw, "state") ?? "none";
+            double seconds = ToDouble(DictValue(raw, "seconds"));
             if (state == "active")
             {
                 text = "Shield: active " + FormatDur(seconds);
@@ -864,6 +898,29 @@ namespace Oxide.Plugins
             string text, color;
             ShieldLine(player, out text, out color);
             return text + "|" + color;
+        }
+
+        private void DebugHud(BasePlayer player)
+        {
+            object activeRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_IsPvPActive") : null;
+            object secondsRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_SecondsUntilPvPChange") : null;
+            object weekendRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_GetWeekend") : null;
+            object shieldRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_GetPlayerShield", player) : null;
+            BuildingPrivlidge tc = player.GetBuildingPrivilege();
+            bool authed = tc != null && tc.authorizedPlayers != null && tc.authorizedPlayers.Contains(player.userID);
+            string ruleset = DictString(weekendRaw, "ruleset") ?? "(no weekend result)";
+            player.ChatMessage("<color=#b084ff>[Nightshade HUD]</color> mode " + StateOf(player)
+                + " | raid plugin " + (NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? "loaded" : "MISSING"));
+            player.ChatMessage("PvP active raw: " + (activeRaw == null ? "null" : activeRaw.GetType().Name + " " + activeRaw)
+                + " | seconds raw: " + (secondsRaw == null ? "null" : secondsRaw.GetType().Name + " " + secondsRaw)
+                + " | ruleset: " + ruleset);
+            player.ChatMessage("Online count: " + ConnectedCount() + " (you are admin: " + player.IsAdmin + ") | sleepers: " + (BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count));
+            player.ChatMessage("Cupboard net id: " + (tc == null || tc.net == null ? "none" : tc.net.ID.Value.ToString())
+                + " | building " + (tc == null ? "none" : tc.buildingID.ToString())
+                + " | authorized: " + authed
+                + " | shield: " + (DictString(shieldRaw, "state") ?? "null call")
+                + " " + ToDouble(DictValue(shieldRaw, "seconds")).ToString("0") + "s"
+                + " tc " + (DictString(shieldRaw, "tcId") ?? "-"));
         }
 
         private static string FormatDur(double seconds)
@@ -1281,25 +1338,33 @@ namespace Oxide.Plugins
         {
             return new List<EventCfg>
             {
-                Ev("Bradley", "BRAD", true, true, 10),
+                Ev("Bradley", "BRADLEY", true, true, 10),
                 Ev("PatrolHeli", "HELI", true, true, 20),
                 Ev("Cargo", "CARGO", true, true, 30),
                 Ev("Harbor", "HARBOR", true, false, 40),
-                Ev("AirDrop", "DROP", true, true, 50),
+                Ev("AirDrop", "AIRDROP", true, true, 50),
                 Ev("CH47", "CH47", false, true, 60),
                 Ev("SmallOil", "OIL-S", false, false, 70),
                 Ev("LargeOil", "OIL-L", false, false, 80),
-                Ev("DeepSea", "DEEP", true, false, 90),
+                Ev("DeepSea", "DEEP SEA", true, false, 90),
                 Ev("Convoy", "CONVOY", true, false, 100),
                 Ev("ArmoredTrain", "TRAIN", true, false, 110),
                 Ev("Raids", "RAIDS", true, true, 120),
                 Ev("Dungeon", "DUNGEON", true, true, 130),
-                Ev("Defend", "DEFEND", true, true, 140),
+                Ev("Defend", "DEFENDABLE", true, true, 140),
                 Ev("Purge", "PURGE", true, false, 150),
                 Ev("Sputnik", "SPUTNIK", false, false, 160),
                 Ev("HarborEvent", "HARBOR-EV", false, false, 170)
             };
         }
+
+        private static readonly Dictionary<string, string> OldLabels = new Dictionary<string, string>
+        {
+            { "Bradley|BRAD", "BRADLEY" },
+            { "AirDrop|DROP", "AIRDROP" },
+            { "DeepSea|DEEP", "DEEP SEA" },
+            { "Defend|DEFEND", "DEFENDABLE" }
+        };
 
         private static EventCfg Ev(string key, string label, bool enabled, bool count, int order)
         {
@@ -1336,6 +1401,19 @@ namespace Oxide.Plugins
                     new CuiRectTransformComponent { AnchorMin = anchorMin, AnchorMax = anchorMax, OffsetMin = offsetMin, OffsetMax = offsetMax }
                 }
             });
+        }
+
+        private static object DictValue(object raw, string key)
+        {
+            var dict = raw as System.Collections.IDictionary;
+            if (dict == null || !dict.Contains(key)) return null;
+            return dict[key];
+        }
+
+        private static string DictString(object raw, string key)
+        {
+            object value = DictValue(raw, key);
+            return value == null ? null : value.ToString();
         }
 
         private static bool CallBool(Plugin plugin, string method)
