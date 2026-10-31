@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.8")]
+    [Info("NightshadeHud", "Nightshade", "1.0.9")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -216,9 +216,9 @@ namespace Oxide.Plugins
             if (zoneFallback)
                 PrintWarning("Time zone '" + config.TimeZoneId + "' was not found. Using a built-in US Eastern zone.");
             if (ServerMgr.Instance != null)
-                startupRoutine = ServerMgr.Instance.StartCoroutine(Startup());
+                startupRoutine = ServerMgr.Instance.StartCoroutine(BootHud());
             else
-                timer.Once(1f, () => { if (ServerMgr.Instance != null) startupRoutine = ServerMgr.Instance.StartCoroutine(Startup()); });
+                timer.Once(1f, () => { if (ServerMgr.Instance != null) startupRoutine = ServerMgr.Instance.StartCoroutine(BootHud()); });
         }
 
         private void Unload()
@@ -1335,16 +1335,30 @@ namespace Oxide.Plugins
         {
             smallOilFound = false;
             largeOilFound = false;
-            if (TerrainMeta.Path == null || TerrainMeta.Path.Monuments == null) return;
-            foreach (var monument in TerrainMeta.Path.Monuments)
+            var path = TerrainMeta.Path;
+            if (path == null) return;
+            object raw = null;
+            try
             {
+                var field = typeof(TerrainPath).GetField("Monuments", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+                if (field != null) raw = field.GetValue(path);
+            }
+            catch
+            {
+                return;
+            }
+            var monuments = raw as System.Collections.IEnumerable;
+            if (monuments == null) return;
+            foreach (var entry in monuments)
+            {
+                var monument = entry as MonumentInfo;
                 if (monument == null || string.IsNullOrEmpty(monument.name)) continue;
                 if (monument.name.Contains("oilrig_2")) { smallOil = monument.transform.position; smallOilFound = true; }
                 else if (monument.name.Contains("oilrig_1")) { largeOil = monument.transform.position; largeOilFound = true; }
             }
         }
 
-        private IEnumerator Startup()
+        private IEnumerator BootHud()
         {
             // Return from OnServerInitialized before any scene query or CUI build.
             yield return null;
