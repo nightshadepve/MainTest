@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeRaidProtection", "Nightshade", "1.1.2")]
+    [Info("NightshadeRaidProtection", "Nightshade", "1.1.3")]
     [Description("PvP-window Tool Cupboard raid shields, offline protection, and the Eastern-time weekend window that drives TruePVE.")]
     public class NightshadeRaidProtection : RustPlugin
     {
@@ -189,6 +189,7 @@ namespace Oxide.Plugins
         // OnNightshadeShieldQueued(ulong cupboardNetId, uint buildingId, double remainingSeconds)
         // OnNightshadeShieldEnded(ulong cupboardNetId, uint buildingId)
 
+        [HookMethod("API_IsPvPActive")]
         public bool API_IsPvPActive()
         {
             DateTime start, end;
@@ -197,6 +198,7 @@ namespace Oxide.Plugins
             return active;
         }
 
+        [HookMethod("API_SecondsUntilPvPChange")]
         public double API_SecondsUntilPvPChange()
         {
             DateTime start, end;
@@ -205,6 +207,7 @@ namespace Oxide.Plugins
             return SecondsUntilNow(start, end, active);
         }
 
+        [HookMethod("API_GetPvPStartUtcTicks")]
         public long API_GetPvPStartUtcTicks()
         {
             DateTime start, end;
@@ -213,6 +216,7 @@ namespace Oxide.Plugins
             return start.Ticks;
         }
 
+        [HookMethod("API_GetPvPEndUtcTicks")]
         public long API_GetPvPEndUtcTicks()
         {
             DateTime start, end;
@@ -221,6 +225,7 @@ namespace Oxide.Plugins
             return end.Ticks;
         }
 
+        [HookMethod("API_GetWeekend")]
         public Dictionary<string, object> API_GetWeekend()
         {
             DateTime start, end;
@@ -236,14 +241,18 @@ namespace Oxide.Plugins
             };
         }
 
+        // The cupboard the player is standing in, whether or not they are authorized on it.
+        // Authorization still gates damage blocking; this is only the status lookup.
+        [HookMethod("API_GetPlayerShield")]
         public Dictionary<string, object> API_GetPlayerShield(BasePlayer player)
         {
             if (player == null) return NoneShield();
             BuildingPrivlidge tc = player.GetBuildingPrivilege();
-            if (tc == null || !Authorized(tc, player.userID)) return NoneShield();
+            if (tc == null) return NoneShield();
             return API_GetCupboardShield(CupboardId(tc));
         }
 
+        [HookMethod("API_GetCupboardShield")]
         public Dictionary<string, object> API_GetCupboardShield(ulong cupboardNetId)
         {
             Shield shield;
@@ -252,6 +261,7 @@ namespace Oxide.Plugins
             return Describe(shield);
         }
 
+        [HookMethod("API_GetBuildingShield")]
         public Dictionary<string, object> API_GetBuildingShield(uint buildingId)
         {
             if (buildingId == 0u) return NoneShield();

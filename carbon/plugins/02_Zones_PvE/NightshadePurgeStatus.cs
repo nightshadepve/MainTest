@@ -10,7 +10,7 @@ using System.Text;
 
 namespace Oxide.Plugins
 {
-    [Info("Nightshade Purge Status", "Nightshade", "1.1.1")]
+    [Info("Nightshade Purge Status", "Nightshade", "1.1.2")]
     [Description("Manual purge period toggle: join notification, AdvancedStatus countdown bar, and a small API.")]
     public class NightshadePurgeStatus : RustPlugin
     {
@@ -346,10 +346,13 @@ namespace Oxide.Plugins
         // Hooks: OnPurgeStarted(double endUnixTimestamp), OnPurgeEnded()
         // Hooks fire when a purge starts or ends, not when this plugin reloads onto an active purge.
 
+        [HookMethod("API_IsPurgeActive")]
         public bool API_IsPurgeActive() => _data != null && _data.Active;
 
+        [HookMethod("API_GetPurgeEndTimestamp")]
         public double API_GetPurgeEndTimestamp() => _data != null && _data.Active ? _data.EndTime : 0d;
 
+        [HookMethod("API_GetActiveRulesetOverride")]
         public string API_GetActiveRulesetOverride()
         {
             if (_data == null || !_data.Active || _config == null || !_config.SyncTruePve) return null;
