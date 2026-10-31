@@ -10,8 +10,8 @@ using System.Text;
 
 namespace Oxide.Plugins
 {
-    [Info("Nightshade Purge Status", "Nightshade", "1.0.0")]
-    [Description("Manual purge period toggle: join notification + AdvancedStatus countdown bar.")]
+    [Info("Nightshade Purge Status", "Nightshade", "1.1.0")]
+    [Description("Manual purge period toggle: join notification, AdvancedStatus countdown bar, and a small API.")]
     public class NightshadePurgeStatus : RustPlugin
     {
         [PluginReference] private Plugin AdvancedStatus;
@@ -137,6 +137,9 @@ namespace Oxide.Plugins
                 {
                     ScheduleEndTimer(remaining);
                     ApplyBarToAll();
+                    // The weekend scheduler may already have replaced the ruleset during boot.
+                    if (_config.SyncTruePve)
+                        timer.Once(1f, ReassertPurgeRuleset);
                 }
             }
         }
@@ -296,6 +299,7 @@ namespace Oxide.Plugins
             ScheduleEndTimer(remaining);
             ApplyBarToAll();
             Broadcast(_config.StartBroadcast.Replace("{time}", FormatTimeSpan(remaining)));
+            Interface.CallHook("OnPurgeStarted", endTimestamp);
         }
 
         private void ExtendPurge(double extraSeconds)
@@ -325,7 +329,34 @@ namespace Oxide.Plugins
 
             if (announce)
                 Broadcast(_config.StopBroadcast);
+            Interface.CallHook("OnPurgeEnded");
         }
+
+        // In-memory only. StartPurge already wrote the purge ruleset into TruePVE's config.
+        private void ReassertPurgeRuleset()
+        {
+            if (!_data.Active || !_config.SyncTruePve || string.IsNullOrEmpty(_config.TruePvePurgeRuleset)) return;
+            Server.Command("tpve.ruleset " + _config.TruePvePurgeRuleset);
+        }
+
+        #region API
+        // API_IsPurgeActive() -> bool
+        // API_GetPurgeEndTimestamp() -> double unix seconds, or 0 when inactive
+        // API_GetActiveRulesetOverride() -> string TruePVE ruleset while a purge is active, otherwise null
+        // Hooks: OnPurgeStarted(double endUnixTimestamp), OnPurgeEnded()
+        // Hooks fire when a purge starts or ends, not when this plugin reloads onto an active purge.
+
+        public bool API_IsPurgeActive() => _data != null && _data.Active;
+
+        public double API_GetPurgeEndTimestamp() => _data != null && _data.Active ? _data.EndTime : 0d;
+
+        public string API_GetActiveRulesetOverride()
+        {
+            if (_data == null || !_data.Active || _config == null || !_config.SyncTruePve) return null;
+            return _config.TruePvePurgeRuleset;
+        }
+
+        #endregion
 
         private void ScheduleEndTimer(double seconds)
         {

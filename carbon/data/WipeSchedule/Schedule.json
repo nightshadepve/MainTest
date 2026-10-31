@@ -4,7 +4,7 @@
     "EventType": "GlobalWipe",
     "Enable": true,
     "Name": "Server Wipe",
-    "DateTimeEvent": "2026-07-02T20:00:00",
+    "DateTimeEvent": "2026-07-02T14:00:00",
     "CustomDateTimeEvent": {
       "Mode": "Months",
       "DaysInterval": 1,
@@ -19,13 +19,13 @@
         false
       ],
       "Times": {
-        "Hour": 20,
+        "Hour": 14,
         "Minute": 0
       },
       "MonthRepeatOnDay": false,
       "MonthRepeatOnDayOfWeek": true
     },
-    "Descriptions": "Full Server Reset",
+    "Descriptions": "Full server reset at 2 PM Eastern",
     "UrlIcon": "default",
     "Color": {
       "HEX": "#FF0000",
