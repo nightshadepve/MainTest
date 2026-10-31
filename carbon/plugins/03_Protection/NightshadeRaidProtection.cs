@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Oxide.Core;
 using Oxide.Core.Plugins;
 using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeRaidProtection", "Nightshade", "1.1.1")]
+    [Info("NightshadeRaidProtection", "Nightshade", "1.1.2")]
     [Description("PvP-window Tool Cupboard raid shields, offline protection, and the Eastern-time weekend window that drives TruePVE.")]
     public class NightshadeRaidProtection : RustPlugin
     {
@@ -137,16 +139,16 @@ namespace Oxide.Plugins
                 PrintWarning("America/New_York and Eastern Standard Time were unavailable. Using a built-in US Eastern zone (EST/EDT).");
             SeedShieldStates();
             CheckWindow();
-            DisableBuiltInSchedule();
+            WarnIfTruePveScheduleEnabled();
             EnsureRuleset();
             rulesTimer = timer.Every(60f, EnsureRuleset);
-            Puts("Weekend window is America/New_York Friday 8:00 PM through Monday 3:00 AM. TruePVE's own schedule should stay disabled.");
+            Puts("Weekend window is America/New_York Friday 8:00 PM through Monday 3:00 AM.");
         }
 
         private void OnPluginLoaded(Plugin plugin)
         {
             if (plugin != null && plugin.Name == "TruePVE")
-                timer.Once(1f, () => { DisableBuiltInSchedule(); EnsureRuleset(); });
+                timer.Once(1f, EnsureRuleset);
         }
 
         private void OnPurgeStarted(double endTimestamp) => timer.Once(1f, EnsureRuleset);
@@ -621,15 +623,29 @@ namespace Oxide.Plugins
             };
         }
 
-        // TruePVE registers "tpve.sched" and also "tpve". HandleScheduleSet requires args[0] to be
-        // the subcommand and args[1] to be enable|disable. "tpve.sched disable" arrives as
-        // args ["disable"], so TruePVE logs: Invalid parameters for command "tpve.disable".
-        // "tpve sched disable" is the form that method accepts. It returns without a message
-        // when the schedule is already off, and this is not called from the once-a-minute check.
-        private void DisableBuiltInSchedule()
+        // TruePVE's schedule command cannot be disabled cleanly: both "tpve.sched disable"
+        // and "tpve sched disable" reach HandleScheduleSet with args ["disable"], which
+        // logs "Invalid parameters for command tpve.disable". The schedule is left off
+        // in configs/TruePVE.json. This only reads that file and warns once if it is on.
+        private void WarnIfTruePveScheduleEnabled()
         {
-            if (!settings.DriveTruePve || TruePVE == null || !TruePVE.IsLoaded) return;
-            Server.Command("tpve", "sched", "disable");
+            if (!settings.DriveTruePve) return;
+            string path = Path.Combine(Interface.Oxide.ConfigDirectory, "TruePVE.json");
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    PrintWarning("TruePVE.json was not found. Leave Schedule.enabled false so TruePVE's clock does not fight the Eastern weekend window.");
+                    return;
+                }
+                JToken enabled = JObject.Parse(File.ReadAllText(path))["Schedule"]?["enabled"];
+                if (enabled != null && enabled.Type == JTokenType.Boolean && enabled.Value<bool>())
+                    PrintWarning("TruePVE Schedule.enabled is true. Set Schedule.enabled to false in carbon/configs/TruePVE.json and reload TruePVE. NightshadeRaidProtection sets the ruleset; TruePVE's own schedule will override it.");
+            }
+            catch (Exception ex)
+            {
+                PrintWarning("Could not read TruePVE's schedule flag: " + ex.Message);
+            }
         }
 
         private void EnsureRuleset()
