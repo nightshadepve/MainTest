@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.2")]
+    [Info("NightshadeHud", "Nightshade", "1.0.3")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -1108,7 +1108,7 @@ namespace Oxide.Plugins
             if (BasePlayer.activePlayerList != null)
                 foreach (var connected in BasePlayer.activePlayerList)
                     if (connected != null) players.Add(connected);
-            for (int i = 0; i < players.Length; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 var player = players[i];
                 if (player != null && player.IsConnected) Show(player);
