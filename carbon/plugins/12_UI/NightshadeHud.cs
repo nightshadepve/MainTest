@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.4")]
+    [Info("NightshadeHud", "Nightshade", "1.0.5")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -90,6 +90,8 @@ namespace Oxide.Plugins
             [JsonProperty("Hide while using a computer station")] public bool HideInComputerStation = true;
             [JsonProperty("Logo URL")] public string LogoUrl = "https://raw.githubusercontent.com/nightshadepve/Nightshadeserver/refs/heads/main/260625_Logo_75_nobg.png";
             [JsonProperty("Server name")] public string ServerName = "Nightshade";
+            [JsonProperty("Tag text")] public string TagText = "Solo/Duo";
+            [JsonProperty("Tag color")] public string TagColor = "#C4A6E0";
             [JsonProperty("Use 24-hour clock")] public bool Use24Hour = false;
             [JsonProperty("Time zone id")] public string TimeZoneId = "America/New_York";
             [JsonProperty("Show ET label")] public bool ShowZoneLabel = true;
@@ -101,7 +103,7 @@ namespace Oxide.Plugins
             [JsonProperty("Hide shield line when none")] public bool HideShieldWhenNone = false;
             [JsonProperty("Panel color")] public string PanelColor = "#0E0E12";
             [JsonProperty("Panel opacity (0-100)")] public float PanelOpacity = 78f;
-            [JsonProperty("Name color")] public string NameColor = "#F4F1EA";
+            [JsonProperty("Name color")] public string NameColor = "#A267D3";
             [JsonProperty("Clock color")] public string ClockColor = "#E7E2F2";
             [JsonProperty("Muted text color")] public string MutedColor = "#8A8A8A";
             [JsonProperty("Inactive event alpha (0-1)")] public float InactiveAlpha = 0.55f;
@@ -160,6 +162,10 @@ namespace Oxide.Plugins
             if (config.IconSize < 16f) config.IconSize = 16f;
             if (config.EventFontSize < 8 || config.EventFontSize > 16) config.EventFontSize = 9;
             if (string.IsNullOrEmpty(config.DeepSeaOpenColor)) config.DeepSeaOpenColor = "#7EC8FF";
+            if (string.IsNullOrEmpty(config.NameColor) || string.Equals(config.NameColor, "#F4F1EA", StringComparison.OrdinalIgnoreCase))
+                config.NameColor = "#A267D3";
+            if (config.TagText == null) config.TagText = "Solo/Duo";
+            if (string.IsNullOrEmpty(config.TagColor)) config.TagColor = "#C4A6E0";
             bool added = false;
             foreach (var known in DefaultEvents())
             {
@@ -485,13 +491,17 @@ namespace Oxide.Plugins
             float textX = Pad + config.IconSize + 6f;
             float top = -Pad;
             string parent = HalfParent(container);
-            float clockW = 80f;
+            float nameW = 76f;
+            float tagX = textX + 42f + nameW + 4f;
             AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(textX, top - 16f), Px(textX + 38f, top));
             AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? config.BadgePvpText : config.BadgePveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
-            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName ?? "Nightshade", Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 42f, top - 16f), Px(config.Width - Pad - clockW - 4f, top), true);
-            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - Pad - clockW, top - 16f), Px(config.Width - Pad, top));
+            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName ?? "Nightshade", Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 42f, top - 16f), Px(textX + 42f + nameW, top), true);
+            if (!string.IsNullOrEmpty(config.TagText))
+                AddLabel(container, "NightshadeHud.Tag", parent, config.TagText, Hex(config.TagColor), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(tagX, top - 15f), Px(config.Width - Pad, top - 1f));
             float row2 = top - 18f;
-            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 11, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX, row2 - 16f), Px(config.Width - Pad, row2));
+            float clockW = 68f;
+            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX, row2 - 16f), Px(config.Width - Pad - clockW - 4f, row2));
+            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - Pad - clockW, row2 - 16f), Px(config.Width - Pad, row2));
             float y = -(Pad + config.IconSize + 2f);
             string countText, countColor;
             Countdown(out countText, out countColor);
@@ -641,8 +651,7 @@ namespace Oxide.Plugins
         private void ScheduleClock()
         {
             clockTimer?.Destroy();
-            double seconds = CountdownSeconds();
-            float delay = seconds <= 600d ? 10f : 60f;
+            float delay = 12f;
             clockTimer = timer.Once(delay, () =>
             {
                 TickShared(true);
@@ -684,8 +693,8 @@ namespace Oxide.Plugins
                 string state;
                 if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
                 if (badgeChanged) PushBadge(player, pvp);
-                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleRight);
-                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleLeft);
+                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleRight, 11);
+                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleLeft, 10);
                 if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor, TextAnchor.MiddleLeft);
                 if (includeShield) PushShield(player, false);
                 if (seaChanged) PushText(player, "NightshadeHud.DeepSea", seaText, seaColor, TextAnchor.MiddleLeft);
@@ -759,14 +768,14 @@ namespace Oxide.Plugins
             CuiHelper.AddUi(player, container);
         }
 
-        private void PushText(BasePlayer player, string name, string text, string color, TextAnchor align)
+        private void PushText(BasePlayer player, string name, string text, string color, TextAnchor align, int fontSize = 11)
         {
             var container = new CuiElementContainer();
             container.Add(new CuiElement
             {
                 Name = name,
                 Update = true,
-                Components = { new CuiTextComponent { Text = text ?? string.Empty, FontSize = 11, Align = align, Color = color, Font = "robotocondensed-regular.ttf" } }
+                Components = { new CuiTextComponent { Text = text ?? string.Empty, FontSize = fontSize, Align = align, Color = color, Font = "robotocondensed-regular.ttf" } }
             });
             CuiHelper.AddUi(player, container);
         }
@@ -838,10 +847,17 @@ namespace Oxide.Plugins
 
         private string ClockText()
         {
-            DateTime local = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zone);
-            string text = local.ToString(config.Use24Hour ? "HH:mm" : "h:mm tt", CultureInfo.InvariantCulture);
-            if (config.ShowZoneLabel) text += " ET";
-            return text;
+            TOD_Sky sky = TOD_Sky.Instance;
+            if (sky == null || sky.Cycle == null) return "--:--";
+            float hour = sky.Cycle.Hour;
+            if (float.IsNaN(hour) || float.IsInfinity(hour)) return "--:--";
+            int hours = Mathf.FloorToInt(Mathf.Repeat(hour, 24f));
+            int minutes = Mathf.FloorToInt(Mathf.Repeat(hour, 1f) * 60f);
+            if (minutes > 59) minutes = 59;
+            if (config.Use24Hour) return hours.ToString("00") + ":" + minutes.ToString("00");
+            int hour12 = hours % 12;
+            if (hour12 == 0) hour12 = 12;
+            return hour12 + ":" + minutes.ToString("00") + (hours < 12 ? " AM" : " PM");
         }
 
         private int ConnectedCount()
