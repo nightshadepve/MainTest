@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.6")]
+    [Info("NightshadeHud", "Nightshade", "1.0.7")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -293,20 +293,19 @@ namespace Oxide.Plugins
                 player.ChatMessage("<color=#b084ff>[Nightshade]</color> /" + config.Command + " min | half | full | cycle");
                 return;
             }
-            SetState(player, requested == "cycle" ? Cycle(StateOf(player)) : requested, true);
+            SetState(player, requested == "cycle" ? Cycle(StateOf(player)) : requested);
         }
 
         private void CmdUi(ConsoleSystem.Arg arg)
         {
             var player = arg.Player();
             if (player == null) return;
-            SetState(player, Cycle(StateOf(player)), false);
+            SetState(player, Cycle(StateOf(player)));
         }
 
-        private void SetState(BasePlayer player, string next, bool announce)
+        private void SetState(BasePlayer player, string next)
         {
             string id = player.UserIDString;
-            string previous = StateOf(player);
             mode[player.userID] = next;
             stored.Players[id] = next;
             SaveData();
@@ -314,8 +313,6 @@ namespace Oxide.Plugins
             string visible;
             if (!shown.TryGetValue(player.userID, out visible)) Show(player);
             else if (visible != next) Transition(player, visible, next);
-            if (announce)
-                player.ChatMessage("<color=#b084ff>[Nightshade]</color> HUD: " + next + ".");
         }
 
         private string StateOf(BasePlayer player)
