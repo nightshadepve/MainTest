@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeRaidProtection", "Nightshade", "1.1.0")]
+    [Info("NightshadeRaidProtection", "Nightshade", "1.1.1")]
     [Description("PvP-window Tool Cupboard raid shields, offline protection, and the Eastern-time weekend window that drives TruePVE.")]
     public class NightshadeRaidProtection : RustPlugin
     {
@@ -137,6 +137,7 @@ namespace Oxide.Plugins
                 PrintWarning("America/New_York and Eastern Standard Time were unavailable. Using a built-in US Eastern zone (EST/EDT).");
             SeedShieldStates();
             CheckWindow();
+            DisableBuiltInSchedule();
             EnsureRuleset();
             rulesTimer = timer.Every(60f, EnsureRuleset);
             Puts("Weekend window is America/New_York Friday 8:00 PM through Monday 3:00 AM. TruePVE's own schedule should stay disabled.");
@@ -145,7 +146,7 @@ namespace Oxide.Plugins
         private void OnPluginLoaded(Plugin plugin)
         {
             if (plugin != null && plugin.Name == "TruePVE")
-                timer.Once(1f, EnsureRuleset);
+                timer.Once(1f, () => { DisableBuiltInSchedule(); EnsureRuleset(); });
         }
 
         private void OnPurgeStarted(double endTimestamp) => timer.Once(1f, EnsureRuleset);
@@ -620,10 +621,20 @@ namespace Oxide.Plugins
             };
         }
 
+        // TruePVE registers "tpve.sched" and also "tpve". HandleScheduleSet requires args[0] to be
+        // the subcommand and args[1] to be enable|disable. "tpve.sched disable" arrives as
+        // args ["disable"], so TruePVE logs: Invalid parameters for command "tpve.disable".
+        // "tpve sched disable" is the form that method accepts. It returns without a message
+        // when the schedule is already off, and this is not called from the once-a-minute check.
+        private void DisableBuiltInSchedule()
+        {
+            if (!settings.DriveTruePve || TruePVE == null || !TruePVE.IsLoaded) return;
+            Server.Command("tpve", "sched", "disable");
+        }
+
         private void EnsureRuleset()
         {
             if (!settings.DriveTruePve || TruePVE == null || !TruePVE.IsLoaded) return;
-            Server.Command("tpve.sched disable");
             if (settings.YieldToPurge && PurgeStatus != null && PurgeStatus.IsLoaded)
             {
                 string purgeRuleset = PurgeStatus.Call("API_GetActiveRulesetOverride") as string;
@@ -644,7 +655,7 @@ namespace Oxide.Plugins
             if (string.IsNullOrEmpty(name) || TruePVE == null || !TruePVE.IsLoaded) return;
             string current = TruePVE.Call("CurrentRuleSetName") as string;
             if (string.Equals(current, name, StringComparison.OrdinalIgnoreCase)) return;
-            Server.Command("tpve.ruleset " + name);
+            Server.Command("tpve.ruleset", name);
             Puts("Set TruePVE ruleset to " + name + (fakeUtc.HasValue ? " (test clock)" : "") + ".");
         }
 

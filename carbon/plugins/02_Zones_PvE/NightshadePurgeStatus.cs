@@ -10,7 +10,7 @@ using System.Text;
 
 namespace Oxide.Plugins
 {
-    [Info("Nightshade Purge Status", "Nightshade", "1.1.0")]
+    [Info("Nightshade Purge Status", "Nightshade", "1.1.1")]
     [Description("Manual purge period toggle: join notification, AdvancedStatus countdown bar, and a small API.")]
     public class NightshadePurgeStatus : RustPlugin
     {
@@ -336,7 +336,7 @@ namespace Oxide.Plugins
         private void ReassertPurgeRuleset()
         {
             if (!_data.Active || !_config.SyncTruePve || string.IsNullOrEmpty(_config.TruePvePurgeRuleset)) return;
-            Server.Command("tpve.ruleset " + _config.TruePvePurgeRuleset);
+            Server.Command("tpve.ruleset", _config.TruePvePurgeRuleset);
         }
 
         #region API

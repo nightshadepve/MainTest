@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection;
 using Newtonsoft.Json;
 using Oxide.Core;
 using Oxide.Core.Plugins;
@@ -9,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.0")]
+    [Info("NightshadeHud", "Nightshade", "1.0.1")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -28,6 +30,7 @@ namespace Oxide.Plugins
         [PluginReference("Raidable Bases")] private Plugin RaidableBases;
         [PluginReference] private Plugin ArmoredTrain;
         [PluginReference] private Plugin Convoy;
+        [PluginReference] private Plugin DefendableHomes;
 
         private Settings config;
         private Stored stored;
@@ -37,6 +40,8 @@ namespace Oxide.Plugins
         private bool eventsDirty;
         private bool popDirty;
         private Timer clockTimer;
+        private Coroutine startupRoutine;
+        private Coroutine convoyRoutine;
 
         private readonly Dictionary<ulong, string> mode = new Dictionary<ulong, string>();
         private readonly Dictionary<ulong, string> shown = new Dictionary<ulong, string>();
@@ -178,16 +183,22 @@ namespace Oxide.Plugins
         {
             if (zoneFallback)
                 PrintWarning("Time zone '" + config.TimeZoneId + "' was not found. Using a built-in US Eastern zone.");
-            FindOilRigs();
-            Rescan();
-            foreach (var player in BasePlayer.activePlayerList)
-                if (player != null) Show(player);
-            ScheduleClock();
+            if (ServerMgr.Instance != null)
+                startupRoutine = ServerMgr.Instance.StartCoroutine(Startup());
+            else
+                timer.Once(1f, () => { if (ServerMgr.Instance != null) startupRoutine = ServerMgr.Instance.StartCoroutine(Startup()); });
         }
 
         private void Unload()
         {
             clockTimer?.Destroy();
+            if (ServerMgr.Instance != null)
+            {
+                if (startupRoutine != null) ServerMgr.Instance.StopCoroutine(startupRoutine);
+                if (convoyRoutine != null) ServerMgr.Instance.StopCoroutine(convoyRoutine);
+            }
+            startupRoutine = null;
+            convoyRoutine = null;
             SaveData();
             foreach (var player in BasePlayer.activePlayerList)
                 if (player != null) CuiHelper.DestroyUi(player, Root);
@@ -871,10 +882,25 @@ namespace Oxide.Plugins
 
         private void OnPluginLoaded(Plugin plugin)
         {
-            if (plugin == null) return;
-            string name = plugin.Name;
-            if (name == "Raidable Bases" || name == "ArmoredTrain" || name == "Convoy" || name == "Dungeon Events" || name == "NightshadeRaidProtection" || name == "Nightshade Purge Status")
-                timer.Once(1f, Rescan);
+            if (plugin == null || scanning) return;
+            timer.Once(1f, () => RefreshFromPlugin(plugin.Name));
+        }
+
+        private void RefreshFromPlugin(string name)
+        {
+            if (scanning) return;
+            if (name == "Raidable Bases") RefreshRaids();
+            else if (name == "ArmoredTrain") { train = CallBool(ArmoredTrain, "IsArmoredTrainActive"); MarkEvents(); }
+            else if (name == "Convoy" && ServerMgr.Instance != null)
+            {
+                convoy = false;
+                if (convoyRoutine != null) ServerMgr.Instance.StopCoroutine(convoyRoutine);
+                convoyRoutine = ServerMgr.Instance.StartCoroutine(CollectConvoyVehicles());
+            }
+            else if (name == "Dungeon Events") RefreshDungeons();
+            else if (name == "DefendableHomes") { defend = CountDefend(); MarkEvents(); }
+            else if (name == "Nightshade Purge Status") { purge = CallBool(PurgeStatus, "API_IsPurgeActive"); MarkEvents(); PushModeLine(); }
+            else if (name == "NightshadeRaidProtection") PushModeLine();
         }
 
         private void OnNightshadePvPStarted(long startUtcTicks, long endUtcTicks) => PushModeLine();
@@ -926,7 +952,7 @@ namespace Oxide.Plugins
 
         private void NoteCargo(CargoShip ship, bool alive)
         {
-            if (ship == null || ship.net == null) return;
+            if (scanning || ship == null || ship.net == null) return;
             ulong id = ship.net.ID.Value;
             cargoSailing.Remove(id);
             cargoDocked.Remove(id);
@@ -940,20 +966,18 @@ namespace Oxide.Plugins
 
         private void RecountCargo()
         {
-            var keep = new List<CargoShip>();
-            foreach (var net in BaseNetworkable.serverEntities)
-            {
-                var ship = net as CargoShip;
-                if (ship != null && !ship.IsDestroyed) keep.Add(ship);
-            }
+            if (scanning) return;
             cargoSailing.Clear();
             cargoDocked.Clear();
-            foreach (var ship in keep) NoteCargo(ship, true);
+            var ships = UnityEngine.Object.FindObjectsOfType<CargoShip>();
+            if (ships == null) { MarkEvents(); return; }
+            foreach (var ship in ships)
+                if (ship != null && !ship.IsDestroyed) NoteCargo(ship, true);
         }
 
         private void NoteOil(HackableLockedCrate crate, bool alive)
         {
-            if (crate == null || crate.net == null) return;
+            if (scanning || crate == null || crate.net == null) return;
             ulong id = crate.net.ID.Value;
             oilCrates.Remove(id);
             if (!alive) oilHacking.Remove(id);
@@ -987,40 +1011,34 @@ namespace Oxide.Plugins
             }
         }
 
-        private void Rescan()
+        private IEnumerator Startup()
         {
+            // Return from OnServerInitialized before any scene query or CUI build.
+            yield return null;
+            FindOilRigs();
+            yield return null;
             scanning = true;
             bradleys.Clear(); helis.Clear(); chinooks.Clear(); drops.Clear();
             cargoSailing.Clear(); cargoDocked.Clear(); oilCrates.Clear(); oilHacking.Clear();
             dungeons = 0;
-            bool convoyFound = false;
-            foreach (var net in BaseNetworkable.serverEntities)
+            convoy = false;
+            var steps = new IEnumerator[]
             {
-                var entity = net as BaseEntity;
-                if (entity == null || entity.IsDestroyed || entity.net == null) continue;
-                ulong id = entity.net.ID.Value;
-                if (entity is BradleyAPC) { if (entity.OwnerID == 0) bradleys.Add(id); }
-                else if (entity is PatrolHelicopter)
-                {
-                    if (entity.OwnerID == 0) helis.Add(id);
-                    if (!convoyFound && Convoy != null && Convoy.IsLoaded && Convoy.Call("IsConvoyHeli", entity) is bool heli && heli) convoyFound = true;
-                }
-                else if (entity is CH47Helicopter) { if (entity.OwnerID == 0) chinooks.Add(id); }
-                else if (entity is SupplyDrop) drops.Add(id);
-                else if (entity is CargoShip ship) { if (ship.IsShipDocked) cargoDocked.Add(id); else cargoSailing.Add(id); }
-                else if (entity is HackableLockedCrate crate)
-                {
-                    string rig = OilRig(crate.transform.position);
-                    if (rig != null)
-                    {
-                        oilCrates[id] = rig;
-                        if (crate.IsBeingHacked()) oilHacking.Add(id);
-                    }
-                }
-                else if (entity is BasePortal && entity.OwnerID == config.DungeonPortalOwner) dungeons++;
-                else if (!convoyFound && entity is BaseVehicle && Convoy != null && Convoy.IsLoaded && Convoy.Call("IsConvoyVehicle", entity) is bool vehicle && vehicle) convoyFound = true;
+                CollectOwned<BradleyAPC>(bradleys),
+                CollectHelis(),
+                CollectOwned<CH47Helicopter>(chinooks),
+                CollectAll<SupplyDrop>(drops),
+                CollectCargoShips(),
+                CollectOilCrates(),
+                CollectPortals(),
+                CollectConvoyVehicles()
+            };
+            for (int s = 0; s < steps.Length; s++)
+            {
+                var step = steps[s];
+                while (step != null && step.MoveNext()) yield return step.Current;
             }
-            convoy = convoyFound;
+            yield return null;
             train = CallBool(ArmoredTrain, "IsArmoredTrainActive");
             raids = RaidableBases != null && RaidableBases.IsLoaded ? (int)ToDouble(RaidableBases.Call("GetAllEventsCount")) : 0;
             deepSea = DeepSeaOpen();
@@ -1029,6 +1047,131 @@ namespace Oxide.Plugins
             scanning = false;
             eventCache.Clear();
             MarkEvents();
+            var players = new List<BasePlayer>();
+            if (BasePlayer.activePlayerList != null)
+                foreach (var connected in BasePlayer.activePlayerList)
+                    if (connected != null) players.Add(connected);
+            for (int i = 0; i < players.Length; i++)
+            {
+                var player = players[i];
+                if (player != null && player.IsConnected) Show(player);
+                if ((i + 1) % 2 == 0) yield return null;
+            }
+            ScheduleClock();
+            startupRoutine = null;
+        }
+
+
+        private IEnumerator CollectOwned<T>(HashSet<ulong> set) where T : BaseEntity
+        {
+            var entities = UnityEngine.Object.FindObjectsOfType<T>();
+            yield return null;
+            if (entities == null) yield break;
+            for (int i = 0; i < entities.Length; i++)
+            {
+                var entity = entities[i];
+                if (entity != null && !entity.IsDestroyed && entity.net != null && entity.OwnerID == 0)
+                    set.Add(entity.net.ID.Value);
+                if ((i + 1) % 40 == 0) yield return null;
+            }
+        }
+
+        private IEnumerator CollectAll<T>(HashSet<ulong> set) where T : BaseEntity
+        {
+            var entities = UnityEngine.Object.FindObjectsOfType<T>();
+            yield return null;
+            if (entities == null) yield break;
+            for (int i = 0; i < entities.Length; i++)
+            {
+                var entity = entities[i];
+                if (entity != null && !entity.IsDestroyed && entity.net != null)
+                    set.Add(entity.net.ID.Value);
+                if ((i + 1) % 40 == 0) yield return null;
+            }
+        }
+
+        private IEnumerator CollectHelis()
+        {
+            var found = UnityEngine.Object.FindObjectsOfType<PatrolHelicopter>();
+            yield return null;
+            if (found == null) yield break;
+            for (int i = 0; i < found.Length; i++)
+            {
+                var heli = found[i];
+                if (heli != null && !heli.IsDestroyed && heli.net != null)
+                {
+                    if (heli.OwnerID == 0) helis.Add(heli.net.ID.Value);
+                    if (!convoy && Convoy != null && Convoy.IsLoaded && Convoy.Call("IsConvoyHeli", heli) is bool yes && yes)
+                        convoy = true;
+                }
+                if ((i + 1) % 20 == 0) yield return null;
+            }
+        }
+
+        private IEnumerator CollectCargoShips()
+        {
+            var ships = UnityEngine.Object.FindObjectsOfType<CargoShip>();
+            yield return null;
+            if (ships == null) yield break;
+            for (int i = 0; i < ships.Length; i++)
+            {
+                var ship = ships[i];
+                if (ship == null || ship.IsDestroyed || ship.net == null) continue;
+                if (ship.IsShipDocked) cargoDocked.Add(ship.net.ID.Value);
+                else cargoSailing.Add(ship.net.ID.Value);
+            }
+        }
+
+        private IEnumerator CollectOilCrates()
+        {
+            var crates = UnityEngine.Object.FindObjectsOfType<HackableLockedCrate>();
+            yield return null;
+            if (crates == null) yield break;
+            for (int i = 0; i < crates.Length; i++)
+            {
+                var crate = crates[i];
+                if (crate == null || crate.IsDestroyed || crate.net == null) continue;
+                string rig = OilRig(crate.transform.position);
+                if (rig == null) continue;
+                oilCrates[crate.net.ID.Value] = rig;
+                if (crate.IsBeingHacked()) oilHacking.Add(crate.net.ID.Value);
+                if ((i + 1) % 20 == 0) yield return null;
+            }
+        }
+
+        private IEnumerator CollectPortals()
+        {
+            var portals = UnityEngine.Object.FindObjectsOfType<BasePortal>();
+            yield return null;
+            if (portals == null) yield break;
+            int count = 0;
+            for (int i = 0; i < portals.Length; i++)
+            {
+                var portal = portals[i];
+                if (portal != null && !portal.IsDestroyed && portal.OwnerID == config.DungeonPortalOwner) count++;
+                if ((i + 1) % 40 == 0) yield return null;
+            }
+            dungeons = count;
+        }
+
+        private IEnumerator CollectConvoyVehicles()
+        {
+            if (convoy || Convoy == null || !Convoy.IsLoaded) yield break;
+            var vehicles = UnityEngine.Object.FindObjectsOfType<BaseVehicle>();
+            yield return null;
+            if (vehicles == null) yield break;
+            for (int i = 0; i < vehicles.Length && !convoy; i++)
+            {
+                var vehicle = vehicles[i];
+                if (vehicle != null && !vehicle.IsDestroyed && Convoy.Call("IsConvoyVehicle", vehicle) is bool yes && yes)
+                {
+                    convoy = true;
+                    if (!scanning) MarkEvents();
+                    yield break;
+                }
+                if ((i + 1) % 25 == 0) yield return null;
+            }
+            if (!scanning) MarkEvents();
         }
 
         private void RefreshRaids()
@@ -1042,10 +1185,11 @@ namespace Oxide.Plugins
         {
             if (scanning) return;
             int count = 0;
-            foreach (var net in BaseNetworkable.serverEntities)
+            var portals = UnityEngine.Object.FindObjectsOfType<BasePortal>();
+            if (portals != null)
             {
-                var portal = net as BasePortal;
-                if (portal != null && !portal.IsDestroyed && portal.OwnerID == config.DungeonPortalOwner) count++;
+                foreach (var portal in portals)
+                    if (portal != null && !portal.IsDestroyed && portal.OwnerID == config.DungeonPortalOwner) count++;
             }
             dungeons = count;
             MarkEvents();
@@ -1057,18 +1201,18 @@ namespace Oxide.Plugins
             return manager != null && (manager.IsOpen() || manager.IsBusy());
         }
 
-        private static int CountDefend()
+        private int CountDefend()
         {
-            int count = 0;
+            if (DefendableHomes == null || !DefendableHomes.IsLoaded) return defend;
             try
             {
-                var behaviours = UnityEngine.Object.FindObjectsOfType<MonoBehaviour>();
-                if (behaviours == null) return 0;
-                foreach (var behaviour in behaviours)
-                    if (behaviour != null && behaviour.GetType().Name == "ControllerHomeRaid") count++;
+                var property = DefendableHomes.GetType().GetProperty("Controllers", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+                var value = property == null ? null : property.GetValue(DefendableHomes, null);
+                var collection = value as System.Collections.ICollection;
+                if (collection != null) return collection.Count;
             }
             catch { }
-            return count;
+            return defend;
         }
 
         private void ReadEvent(string key, out int count, out bool on, out bool contested)
