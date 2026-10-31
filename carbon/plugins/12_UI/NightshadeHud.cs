@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.7")]
+    [Info("NightshadeHud", "Nightshade", "1.0.8")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -24,6 +24,9 @@ namespace Oxide.Plugins
         private const string DataPath = "NightshadeHud/State";
         private const float Pad = 6f;
         private const float Line = 15f;
+        private const int BadgeFont = 8;
+        private const string BadgeBgName = "NightshadeHud.BadgeBg";
+        private const string BadgeName = "NightshadeHud.Badge";
 
         [PluginReference] private Plugin NightshadeRaidProtection;
         [PluginReference("Nightshade Purge Status")] private Plugin PurgeStatus;
@@ -371,14 +374,13 @@ namespace Oxide.Plugins
             string state = StateOf(player);
             var container = new CuiElementContainer();
             AddRoot(container, state);
-            AddIcon(container, state);
             if (state != "minimized")
             {
                 AddBackground(container);
                 AddHalf(container, player);
                 if (state == "full") AddEvents(container);
             }
-            AddIconButton(container, state);
+            AddIconGroup(container, state);
             CuiHelper.AddUi(player, container);
             shown[player.userID] = state;
         }
@@ -387,7 +389,6 @@ namespace Oxide.Plugins
         {
             if (from == to) return;
             Resize(player, to);
-            MoveIcon(player, to);
             if (from == "minimized")
             {
                 var add = new CuiElementContainer();
@@ -412,9 +413,14 @@ namespace Oxide.Plugins
             {
                 CuiHelper.DestroyUi(player, Events);
             }
-            var hit = new CuiElementContainer();
-            AddIconButton(hit, to);
-            CuiHelper.AddUi(player, hit);
+            if (from == "minimized")
+            {
+                var icon = new CuiElementContainer();
+                AddIconGroup(icon, to);
+                CuiHelper.AddUi(player, icon);
+            }
+            else
+                MoveIconGroup(player, to);
             shown[player.userID] = to;
             if (to != "minimized") shieldCache[player.userID] = ShieldSignature(player);
         }
@@ -448,14 +454,60 @@ namespace Oxide.Plugins
             });
         }
 
+        private void MoveIconGroup(BasePlayer player, string state)
+        {
+            float left, top, badgeLeft, badgeBottom, badgeRight, badgeTop, hitLeft, hitBottom, hitRight, hitTop;
+            IconOrigin(state, out left, out top);
+            BadgeRect(state, out badgeLeft, out badgeBottom, out badgeRight, out badgeTop);
+            HitRect(state, out hitLeft, out hitBottom, out hitRight, out hitTop);
+            var container = new CuiElementContainer();
+            container.Add(new CuiElement
+            {
+                Name = Icon,
+                Update = true,
+                Components =
+                {
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, top - config.IconSize), OffsetMax = Px(left + config.IconSize, top) }
+                }
+            });
+            container.Add(new CuiElement
+            {
+                Name = BadgeBgName,
+                Update = true,
+                Components =
+                {
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(badgeLeft, badgeBottom), OffsetMax = Px(badgeRight, badgeTop) }
+                }
+            });
+            container.Add(new CuiElement
+            {
+                Name = IconHit,
+                Update = true,
+                Components =
+                {
+                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(hitLeft, hitBottom), OffsetMax = Px(hitRight, hitTop) }
+                }
+            });
+            CuiHelper.AddUi(player, container);
+        }
+
+        private void AddIconGroup(CuiElementContainer container, string state)
+        {
+            AddIcon(container, state);
+            AddBadge(container, state);
+            AddIconButton(container, state);
+        }
+
         private void AddIcon(CuiElementContainer container, string state)
         {
-            string min = state == "minimized" ? Px(0f, -config.IconSize) : Px(Pad, -Pad - config.IconSize);
-            string max = state == "minimized" ? Px(config.IconSize, 0f) : Px(Pad + config.IconSize, -Pad);
+            float left, top;
+            IconOrigin(state, out left, out top);
             container.Add(new CuiElement
             {
                 Name = Icon,
                 Parent = Root,
+                DestroyUi = Icon,
                 Components =
                 {
                     new CuiRawImageComponent
@@ -464,15 +516,52 @@ namespace Oxide.Plugins
                         Color = "1 1 1 1",
                         Sprite = "assets/content/textures/generic/fulltransparent.tga"
                     },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, top - config.IconSize), OffsetMax = Px(left + config.IconSize, top) }
                 }
             });
         }
 
+        private void AddBadge(CuiElementContainer container, string state)
+        {
+            bool pvp = CombatPvp();
+            float left, bottom, right, top;
+            BadgeRect(state, out left, out bottom, out right, out top);
+            string text = pvp ? BadgeWord(config.BadgePvpText, "PVP") : BadgeWord(config.BadgePveText, "PVE");
+            container.Add(new CuiElement
+            {
+                Name = BadgeBgName,
+                Parent = Root,
+                DestroyUi = BadgeBgName,
+                Components =
+                {
+                    new CuiImageComponent { Color = Hex(pvp ? config.BadgePvpBg : config.BadgePveBg) },
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) }
+                }
+            });
+            container.Add(new CuiElement
+            {
+                Name = BadgeName,
+                Parent = BadgeBgName,
+                Components =
+                {
+                    new CuiTextComponent
+                    {
+                        Text = text,
+                        FontSize = BadgeFont,
+                        Align = TextAnchor.MiddleCenter,
+                        Color = Hex(pvp ? config.BadgePvpColor : config.BadgePveColor),
+                        Font = "robotocondensed-bold.ttf"
+                    },
+                    new CuiRectTransformComponent { AnchorMin = "0 0", AnchorMax = "1 1", OffsetMin = "0 0", OffsetMax = "0 0" }
+                }
+            });
+            badgeCache = pvp ? "1" : "0";
+        }
+
         private void AddIconButton(CuiElementContainer container, string state)
         {
-            string min = state == "minimized" ? Px(0f, -config.IconSize) : Px(Pad, -Pad - config.IconSize);
-            string max = state == "minimized" ? Px(config.IconSize, 0f) : Px(Pad + config.IconSize, -Pad);
+            float left, bottom, right, top;
+            HitRect(state, out left, out bottom, out right, out top);
             container.Add(new CuiElement
             {
                 Name = IconHit,
@@ -481,9 +570,64 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) }
                 }
             });
+        }
+
+        private static string BadgeWord(string text, string fallback)
+        {
+            return string.IsNullOrEmpty(text) ? fallback : text;
+        }
+
+        private void IconOrigin(string state, out float left, out float top)
+        {
+            if (state == "minimized")
+            {
+                left = 0f;
+                top = 0f;
+                return;
+            }
+            left = Pad;
+            top = -Pad;
+        }
+
+        private void BadgeMetrics(out float width, out float height, out float hang)
+        {
+            float text = Mathf.Max(TextWidth(BadgeWord(config.BadgePveText, "PVE"), BadgeFont, true), TextWidth(BadgeWord(config.BadgePvpText, "PVP"), BadgeFont, true));
+            width = text + 6f;
+            height = BadgeFont + 2f;
+            hang = height / 3f;
+        }
+
+        private void BadgeRect(string state, out float left, out float bottom, out float right, out float top)
+        {
+            float iconLeft, iconTop, width, height, hang;
+            IconOrigin(state, out iconLeft, out iconTop);
+            BadgeMetrics(out width, out height, out hang);
+            float center = iconLeft + config.IconSize * 0.5f;
+            left = center - width * 0.5f;
+            right = left + width;
+            bottom = iconTop - config.IconSize - hang;
+            top = bottom + height;
+        }
+
+        private float BadgeHang()
+        {
+            float width, height, hang;
+            BadgeMetrics(out width, out height, out hang);
+            return hang;
+        }
+
+        private void HitRect(string state, out float left, out float bottom, out float right, out float top)
+        {
+            float iconLeft, iconTop, badgeLeft, badgeBottom, badgeRight, badgeTop;
+            IconOrigin(state, out iconLeft, out iconTop);
+            BadgeRect(state, out badgeLeft, out badgeBottom, out badgeRight, out badgeTop);
+            left = Mathf.Min(iconLeft, badgeLeft);
+            right = Mathf.Max(iconLeft + config.IconSize, badgeRight);
+            top = iconTop;
+            bottom = Mathf.Min(iconTop - config.IconSize, badgeBottom);
         }
 
         private string IconCommand()
@@ -494,30 +638,22 @@ namespace Oxide.Plugins
 
         private void AddHalf(CuiElementContainer container, BasePlayer player)
         {
-            bool pvp = CombatPvp();
             float top = -Pad;
             string parent = HalfParent(container);
             float nameX = Pad + config.IconSize + 3f;
+            float edge = config.Width - Pad;
             string name = string.IsNullOrEmpty(config.ServerName) ? "Nightshade" : config.ServerName;
             float nameInk = TextWidth(name, 12, true);
-            string pveText = string.IsNullOrEmpty(config.BadgePveText) ? "PVE" : config.BadgePveText;
-            string pvpText = string.IsNullOrEmpty(config.BadgePvpText) ? "PVP" : config.BadgePvpText;
-            float badgeW = Mathf.Max(TextWidth(pveText, 11, true), TextWidth(pvpText, 11, true)) + 14f;
-            if (badgeW < 34f) badgeW = 34f;
-            float badgeRight = config.Width - Pad;
-            float badgeLeft = badgeRight - badgeW;
-            float nameRight = Mathf.Min(nameX + nameInk + 1f, badgeLeft - 4f);
-            AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(badgeLeft, top - 16f), Px(badgeRight, top));
-            AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? pvpText : pveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
+            float nameRight = Mathf.Min(nameX + nameInk + 1f, edge);
             AddLabel(container, "NightshadeHud.Name", parent, name, Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(nameX, top - 16f), Px(nameRight, top), true);
             float tagX = nameX + nameInk + 4f;
-            if (!string.IsNullOrEmpty(config.TagText) && tagX < badgeLeft - 12f)
-                AddLabel(container, "NightshadeHud.Tag", parent, config.TagText, Hex(config.TagColor), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(tagX, top - 16f), Px(badgeLeft - 4f, top));
+            if (!string.IsNullOrEmpty(config.TagText) && tagX < edge - 8f)
+                AddLabel(container, "NightshadeHud.Tag", parent, config.TagText, Hex(config.TagColor), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(tagX, top - 16f), Px(edge, top));
             float row2 = top - 18f;
             float clockW = 68f;
             AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(nameX, row2 - 16f), Px(config.Width - Pad - clockW - 4f, row2));
             AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - Pad - clockW, row2 - 16f), Px(config.Width - Pad, row2));
-            float y = -(Pad + config.IconSize + 2f);
+            float y = -(Pad + config.IconSize + BadgeHang() + 2f);
             string countText, countColor;
             Countdown(out countText, out countColor);
             float split = Mathf.Max(120f, config.Width * 0.56f);
@@ -528,7 +664,6 @@ namespace Oxide.Plugins
             y -= Line;
             AddStatusLine(container, parent, y);
             if (player != null) shieldCache[player.userID] = shieldText + "|" + shieldColor;
-            badgeCache = pvp ? "1" : "0";
             clockCache = ClockText();
             onlineCache = OnlineText();
             countdownCache = countText + "|" + countColor;
@@ -636,34 +771,6 @@ namespace Oxide.Plugins
             CuiHelper.AddUi(player, container);
         }
 
-        private void MoveIcon(BasePlayer player, string state)
-        {
-            string min = state == "minimized" ? Px(0f, -config.IconSize) : Px(Pad, -Pad - config.IconSize);
-            string max = state == "minimized" ? Px(config.IconSize, 0f) : Px(Pad + config.IconSize, -Pad);
-            var container = new CuiElementContainer();
-            container.Add(new CuiElement
-            {
-                Name = Icon,
-                Update = true,
-                Components =
-                {
-                    new CuiRawImageComponent { Url = config.LogoUrl, Color = "1 1 1 1", Sprite = "assets/content/textures/generic/fulltransparent.tga" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
-                }
-            });
-            container.Add(new CuiElement
-            {
-                Name = IconHit,
-                Update = true,
-                Components =
-                {
-                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
-                }
-            });
-            CuiHelper.AddUi(player, container);
-        }
-
         private static string Px(float x, float y) => x.ToString("0.#", CultureInfo.InvariantCulture) + " " + y.ToString("0.#", CultureInfo.InvariantCulture);
 
         // Advance widths in thousandths of an em, measured from Roboto Condensed (the robotocondensed face).
@@ -703,14 +810,14 @@ namespace Oxide.Plugins
 
         private float HalfHeight()
         {
-            float height = Pad + config.IconSize + 2f + Line;
+            float height = Pad + config.IconSize + BadgeHang() + 2f + Line;
             if (HasStatusLine()) height += Line;
             return height + Pad;
         }
 
         private float PanelHeight(string state)
         {
-            if (state == "minimized") return config.IconSize;
+            if (state == "minimized") return config.IconSize + BadgeHang();
             if (state != "full") return HalfHeight();
             int count = EnabledEvents().Count;
             int columns = Math.Max(1, config.Columns);
@@ -771,8 +878,9 @@ namespace Oxide.Plugins
             {
                 if (player == null || !player.IsConnected) continue;
                 string state;
-                if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
+                if (!shown.TryGetValue(player.userID, out state)) continue;
                 if (badgeChanged) PushBadge(player, pvp);
+                if (state == "minimized") continue;
                 if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleRight, 11);
                 if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleLeft, 10);
                 if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor, TextAnchor.MiddleLeft);
@@ -838,20 +946,20 @@ namespace Oxide.Plugins
             var container = new CuiElementContainer();
             container.Add(new CuiElement
             {
-                Name = "NightshadeHud.BadgeBg",
+                Name = BadgeBgName,
                 Update = true,
                 Components = { new CuiImageComponent { Color = Hex(pvp ? config.BadgePvpBg : config.BadgePveBg) } }
             });
             container.Add(new CuiElement
             {
-                Name = "NightshadeHud.Badge",
+                Name = BadgeName,
                 Update = true,
                 Components =
                 {
                     new CuiTextComponent
                     {
-                        Text = pvp ? config.BadgePvpText : config.BadgePveText,
-                        FontSize = 11,
+                        Text = pvp ? BadgeWord(config.BadgePvpText, "PVP") : BadgeWord(config.BadgePveText, "PVE"),
+                        FontSize = BadgeFont,
                         Align = TextAnchor.MiddleCenter,
                         Color = Hex(pvp ? config.BadgePvpColor : config.BadgePveColor),
                         Font = "robotocondensed-bold.ttf"
