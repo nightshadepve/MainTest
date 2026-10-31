@@ -1,6 +1,7 @@
 {
   "Storm": {
     "RampTimeSeconds": 120.0,
+    "WeatherTickSeconds": 1.5,
     "StormDurationSeconds": 300.0,
     "RadiationPerTick": 15.0,
     "DamageTickInterval": 2.0,
@@ -11,6 +12,7 @@
     "PeakRain": 1.0,
     "PeakThunder": 1.0,
     "PeakFog": 0.8,
+    "PeakCloudCoverage": 1.0,
     "RedSkyRayleigh": 0.2,
     "RedSkyMie": 1.5,
     "RedSkyBrightness": 0.4,
