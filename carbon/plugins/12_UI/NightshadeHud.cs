@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.5")]
+    [Info("NightshadeHud", "Nightshade", "1.0.6")]
     [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -53,6 +53,8 @@ namespace Oxide.Plugins
         private string onlineCache = "\0";
         private string countdownCache = "\0";
         private string deepSeaCache = "\0";
+        private string heliCache = "\0";
+        private string bradCache = "\0";
 
         private readonly HashSet<ulong> bradleys = new HashSet<ulong>();
         private readonly HashSet<ulong> helis = new HashSet<ulong>();
@@ -110,6 +112,10 @@ namespace Oxide.Plugins
             [JsonProperty("Active event color")] public string ActiveColor = "#3DDC84";
             [JsonProperty("Contested event color")] public string ContestedColor = "#FFB020";
             [JsonProperty("Deep Sea open color")] public string DeepSeaOpenColor = "#7EC8FF";
+            [JsonProperty("Patrol heli label")] public string HeliLabel = "KAREN";
+            [JsonProperty("Patrol heli active color")] public string HeliActiveColor = "#FF4D4D";
+            [JsonProperty("Bradley label")] public string BradleyLabel = "BRAD";
+            [JsonProperty("Bradley active color")] public string BradleyActiveColor = "";
             [JsonProperty("Event font size")] public int EventFontSize = 9;
             [JsonProperty("PvE badge text")] public string BadgePveText = "PVE";
             [JsonProperty("PvP badge text")] public string BadgePvpText = "PVP";
@@ -166,6 +172,10 @@ namespace Oxide.Plugins
                 config.NameColor = "#A267D3";
             if (config.TagText == null) config.TagText = "Solo/Duo";
             if (string.IsNullOrEmpty(config.TagColor)) config.TagColor = "#C4A6E0";
+            if (string.IsNullOrEmpty(config.HeliLabel)) config.HeliLabel = "KAREN";
+            if (string.IsNullOrEmpty(config.HeliActiveColor)) config.HeliActiveColor = "#FF4D4D";
+            if (string.IsNullOrEmpty(config.BradleyLabel)) config.BradleyLabel = "BRAD";
+            if (config.BradleyActiveColor == null) config.BradleyActiveColor = "";
             bool added = false;
             foreach (var known in DefaultEvents())
             {
@@ -488,19 +498,27 @@ namespace Oxide.Plugins
         private void AddHalf(CuiElementContainer container, BasePlayer player)
         {
             bool pvp = CombatPvp();
-            float textX = Pad + config.IconSize + 6f;
             float top = -Pad;
             string parent = HalfParent(container);
-            float nameW = 76f;
-            float tagX = textX + 42f + nameW + 4f;
-            AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(textX, top - 16f), Px(textX + 38f, top));
-            AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? config.BadgePvpText : config.BadgePveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
-            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName ?? "Nightshade", Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 42f, top - 16f), Px(textX + 42f + nameW, top), true);
-            if (!string.IsNullOrEmpty(config.TagText))
-                AddLabel(container, "NightshadeHud.Tag", parent, config.TagText, Hex(config.TagColor), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(tagX, top - 15f), Px(config.Width - Pad, top - 1f));
+            float nameX = Pad + config.IconSize + 3f;
+            string name = string.IsNullOrEmpty(config.ServerName) ? "Nightshade" : config.ServerName;
+            float nameInk = TextWidth(name, 12, true);
+            string pveText = string.IsNullOrEmpty(config.BadgePveText) ? "PVE" : config.BadgePveText;
+            string pvpText = string.IsNullOrEmpty(config.BadgePvpText) ? "PVP" : config.BadgePvpText;
+            float badgeW = Mathf.Max(TextWidth(pveText, 11, true), TextWidth(pvpText, 11, true)) + 14f;
+            if (badgeW < 34f) badgeW = 34f;
+            float badgeRight = config.Width - Pad;
+            float badgeLeft = badgeRight - badgeW;
+            float nameRight = Mathf.Min(nameX + nameInk + 1f, badgeLeft - 4f);
+            AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(badgeLeft, top - 16f), Px(badgeRight, top));
+            AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? pvpText : pveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
+            AddLabel(container, "NightshadeHud.Name", parent, name, Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(nameX, top - 16f), Px(nameRight, top), true);
+            float tagX = nameX + nameInk + 4f;
+            if (!string.IsNullOrEmpty(config.TagText) && tagX < badgeLeft - 12f)
+                AddLabel(container, "NightshadeHud.Tag", parent, config.TagText, Hex(config.TagColor), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(tagX, top - 16f), Px(badgeLeft - 4f, top));
             float row2 = top - 18f;
             float clockW = 68f;
-            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX, row2 - 16f), Px(config.Width - Pad - clockW - 4f, row2));
+            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(nameX, row2 - 16f), Px(config.Width - Pad - clockW - 4f, row2));
             AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - Pad - clockW, row2 - 16f), Px(config.Width - Pad, row2));
             float y = -(Pad + config.IconSize + 2f);
             string countText, countColor;
@@ -511,18 +529,51 @@ namespace Oxide.Plugins
             ShieldLine(player, out shieldText, out shieldColor);
             AddLabel(container, "NightshadeHud.Shield", parent, shieldText, shieldColor, 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(split + 4f, y - Line), Px(config.Width - Pad, y));
             y -= Line;
-            if (ShowDeepSea())
-            {
-                string seaText, seaColor;
-                DeepSeaLine(out seaText, out seaColor);
-                AddLabel(container, "NightshadeHud.DeepSea", parent, seaText, seaColor, 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
-                deepSeaCache = seaText + "|" + seaColor;
-            }
+            AddStatusLine(container, parent, y);
             if (player != null) shieldCache[player.userID] = shieldText + "|" + shieldColor;
             badgeCache = pvp ? "1" : "0";
             clockCache = ClockText();
             onlineCache = OnlineText();
             countdownCache = countText + "|" + countColor;
+        }
+
+        private void AddStatusLine(CuiElementContainer container, string parent, float y)
+        {
+            float x = Pad;
+            float limit = config.Width - Pad;
+            const float gap = 10f;
+            const int font = 11;
+            if (ShowDeepSea())
+            {
+                string text, color;
+                DeepSeaLine(out text, out color);
+                x = AddChip(container, "NightshadeHud.DeepSea", parent, text, color, font, x, TextWidth(text, font, false) + 2f, limit, y) + gap;
+                deepSeaCache = text + "|" + color;
+            }
+            if (ShowChip("PatrolHeli") && x < limit)
+            {
+                string text, color;
+                HeliLine(out text, out color);
+                x = AddChip(container, "NightshadeHud.Karen", parent, text, color, font, x, TextWidth(text, font, false) + 2f, limit, y) + gap;
+                heliCache = text + "|" + color;
+            }
+            if (ShowChip("Bradley") && x < limit)
+            {
+                string text, color;
+                BradleyLine(out text, out color);
+                float width = Mathf.Max(TextWidth(text, font, false), TextWidth(BradleySlotText(), font, false)) + 2f;
+                AddChip(container, "NightshadeHud.Brad", parent, text, color, font, x, width, limit, y);
+                bradCache = text + "|" + color;
+            }
+        }
+
+        private float AddChip(CuiElementContainer container, string name, string parent, string text, string color, int font, float x, float width, float limit, float y)
+        {
+            float end = x + width;
+            if (end > limit) end = limit;
+            if (end - x < 8f) return x;
+            AddLabel(container, name, parent, text, color, font, TextAnchor.MiddleLeft, "0 1", "0 1", Px(x, y - Line), Px(end, y));
+            return end;
         }
 
         private string HalfParent(CuiElementContainer container)
@@ -618,6 +669,32 @@ namespace Oxide.Plugins
 
         private static string Px(float x, float y) => x.ToString("0.#", CultureInfo.InvariantCulture) + " " + y.ToString("0.#", CultureInfo.InvariantCulture);
 
+        // Advance widths in thousandths of an em, measured from Roboto Condensed (the robotocondensed face).
+        private static readonly int[] BoldUpper = { 597, 561, 570, 565, 491, 476, 585, 614, 271, 490, 553, 479, 758, 612, 604, 569, 604, 554, 540, 543, 571, 578, 749, 560, 542, 530 };
+        private static readonly int[] BoldLower = { 471, 495, 460, 496, 479, 328, 503, 492, 252, 246, 479, 252, 742, 492, 498, 495, 497, 332, 454, 307, 492, 449, 633, 453, 446, 453 };
+        private static readonly int[] RegUpper = { 576, 545, 567, 571, 497, 480, 591, 620, 250, 483, 545, 475, 755, 619, 601, 554, 601, 531, 518, 521, 562, 560, 762, 551, 524, 522 };
+        private static readonly int[] RegLower = { 479, 493, 462, 496, 468, 316, 493, 483, 229, 224, 451, 229, 752, 484, 502, 493, 500, 304, 456, 295, 483, 428, 650, 439, 417, 439 };
+
+        private static float TextWidth(string text, int fontSize, bool bold)
+        {
+            if (string.IsNullOrEmpty(text) || fontSize <= 0) return 0f;
+            int[] upper = bold ? BoldUpper : RegUpper;
+            int[] lower = bold ? BoldLower : RegLower;
+            int sum = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                char c = text[i];
+                if (c >= 'A' && c <= 'Z') sum += upper[c - 'A'];
+                else if (c >= 'a' && c <= 'z') sum += lower[c - 'a'];
+                else if (c >= '0' && c <= '9') sum += bold ? 506 : 494;
+                else if (c == ' ') sum += bold ? 230 : 229;
+                else if (c == '/' || c == '\\') sum += bold ? 331 : 371;
+                else if (c == '-' || c == '\u2013') sum += bold ? 363 : 248;
+                else sum += bold ? 500 : 480;
+            }
+            return sum / 1000f * fontSize;
+        }
+
         private string OffsetMax() => Px(-config.Right, -config.Top);
 
         private string OffsetMin(string state)
@@ -630,7 +707,7 @@ namespace Oxide.Plugins
         private float HalfHeight()
         {
             float height = Pad + config.IconSize + 2f + Line;
-            if (ShowDeepSea()) height += Line;
+            if (HasStatusLine()) height += Line;
             return height + Pad;
         }
 
@@ -686,7 +763,13 @@ namespace Oxide.Plugins
                 seaChanged = seaSig != deepSeaCache;
                 if (seaChanged) deepSeaCache = seaSig;
             }
-            if (!clockChanged && !onlineChanged && !countChanged && !badgeChanged && !includeShield && !seaChanged) return;
+            string heliText = null;
+            string heliColor = null;
+            string bradText = null;
+            string bradColor = null;
+            bool heliChanged = ChipChanged(ShowChip("PatrolHeli"), true, ref heliText, ref heliColor, ref heliCache);
+            bool bradChanged = ChipChanged(ShowChip("Bradley"), false, ref bradText, ref bradColor, ref bradCache);
+            if (!clockChanged && !onlineChanged && !countChanged && !badgeChanged && !includeShield && !seaChanged && !heliChanged && !bradChanged) return;
             foreach (var player in BasePlayer.activePlayerList)
             {
                 if (player == null || !player.IsConnected) continue;
@@ -698,7 +781,20 @@ namespace Oxide.Plugins
                 if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor, TextAnchor.MiddleLeft);
                 if (includeShield) PushShield(player, false);
                 if (seaChanged) PushText(player, "NightshadeHud.DeepSea", seaText, seaColor, TextAnchor.MiddleLeft);
+                if (heliChanged) PushText(player, "NightshadeHud.Karen", heliText, heliColor, TextAnchor.MiddleLeft);
+                if (bradChanged) PushText(player, "NightshadeHud.Brad", bradText, bradColor, TextAnchor.MiddleLeft);
             }
+        }
+
+        private bool ChipChanged(bool shownChip, bool heli, ref string text, ref string color, ref string cache)
+        {
+            if (!shownChip) return false;
+            if (heli) HeliLine(out text, out color);
+            else BradleyLine(out text, out color);
+            string sig = text + "|" + color;
+            if (sig == cache) return false;
+            cache = sig;
+            return true;
         }
 
         private void PushModeLine()
@@ -803,35 +899,47 @@ namespace Oxide.Plugins
                 eventCache[entry.Key] = sig;
                 dirty.Add(entry);
             }
-            if (dirty.Count == 0) return;
+            string heliText = null;
+            string heliColor = null;
+            string bradText = null;
+            string bradColor = null;
+            bool heliChanged = ChipChanged(ShowChip("PatrolHeli"), true, ref heliText, ref heliColor, ref heliCache);
+            bool bradChanged = ChipChanged(ShowChip("Bradley"), false, ref bradText, ref bradColor, ref bradCache);
+            if (dirty.Count == 0 && !heliChanged && !bradChanged) return;
             foreach (var player in BasePlayer.activePlayerList)
             {
+                if (player == null) continue;
                 string state;
-                if (player == null || !shown.TryGetValue(player.userID, out state) || state != "full") continue;
-                var container = new CuiElementContainer();
-                foreach (var entry in dirty)
+                if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
+                if (state == "full" && dirty.Count > 0)
                 {
-                    int count;
-                    bool on, contested;
-                    ReadEvent(entry.Key, out count, out on, out contested);
-                    container.Add(new CuiElement
+                    var container = new CuiElementContainer();
+                    foreach (var entry in dirty)
                     {
-                        Name = "NightshadeHud.Ev." + entry.Key,
-                        Update = true,
-                        Components =
+                        int count;
+                        bool on, contested;
+                        ReadEvent(entry.Key, out count, out on, out contested);
+                        container.Add(new CuiElement
                         {
-                            new CuiTextComponent
+                            Name = "NightshadeHud.Ev." + entry.Key,
+                            Update = true,
+                            Components =
                             {
-                                Text = EventText(entry, count, on),
-                                FontSize = EventFont(),
-                                Align = TextAnchor.MiddleLeft,
-                                Color = EventColor(on, contested),
-                                Font = "robotocondensed-bold.ttf"
+                                new CuiTextComponent
+                                {
+                                    Text = EventText(entry, count, on),
+                                    FontSize = EventFont(),
+                                    Align = TextAnchor.MiddleLeft,
+                                    Color = EventColor(on, contested),
+                                    Font = "robotocondensed-bold.ttf"
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                    CuiHelper.AddUi(player, container);
                 }
-                CuiHelper.AddUi(player, container);
+                if (heliChanged) PushText(player, "NightshadeHud.Karen", heliText, heliColor, TextAnchor.MiddleLeft);
+                if (bradChanged) PushText(player, "NightshadeHud.Brad", bradText, bradColor, TextAnchor.MiddleLeft);
             }
         }
 
@@ -1381,19 +1489,32 @@ namespace Oxide.Plugins
             foreach (var entry in config.Events)
             {
                 if (entry == null || !entry.Enabled || string.IsNullOrEmpty(entry.Key)) continue;
-                if (entry.Key == "DeepSea") continue;
+                if (entry.Key == "DeepSea" || entry.Key == "PatrolHeli" || entry.Key == "Bradley") continue;
                 list.Add(entry);
             }
             list.Sort((a, b) => a.Order.CompareTo(b.Order));
             return list;
         }
 
-        private bool ShowDeepSea()
+        private bool ShowDeepSea() => ShowChip("DeepSea");
+
+        private bool HasStatusLine()
         {
-            if (config.Events == null) return true;
+            return ShowChip("DeepSea") || ShowChip("PatrolHeli") || ShowChip("Bradley");
+        }
+
+        private bool ShowChip(string key)
+        {
+            EventCfg entry = FindEvent(key);
+            return entry == null || entry.Enabled;
+        }
+
+        private EventCfg FindEvent(string key)
+        {
+            if (config.Events == null || string.IsNullOrEmpty(key)) return null;
             foreach (var entry in config.Events)
-                if (entry != null && entry.Key == "DeepSea") return entry.Enabled;
-            return true;
+                if (entry != null && entry.Key == key) return entry;
+            return null;
         }
 
         private string DeepSeaLabel()
@@ -1408,22 +1529,36 @@ namespace Oxide.Plugins
 
         private void DeepSeaLine(out string text, out string color)
         {
-            string label = DeepSeaLabel();
+            text = DeepSeaLabel();
             bool open = false;
-            double remain = 0d;
             DeepSeaManager manager = PointEntity<DeepSeaManager>.ServerInstance;
-            if (manager != null)
-            {
-                open = manager.IsOpen() || manager.IsBusy();
-                if (open)
-                {
-                    double wipe = manager.TimeToWipe;
-                    if (wipe > 1d) remain = wipe;
-                }
-            }
+            if (manager != null) open = manager.IsOpen() || manager.IsBusy();
             deepSea = open;
-            text = open && remain > 1d ? label + " " + FormatDur(remain) : label;
             color = open ? Hex(config.DeepSeaOpenColor) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private void HeliLine(out string text, out string color)
+        {
+            text = string.IsNullOrEmpty(config.HeliLabel) ? "KAREN" : config.HeliLabel;
+            color = helis.Count > 0 ? Hex(config.HeliActiveColor) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private void BradleyLine(out string text, out string color)
+        {
+            string label = string.IsNullOrEmpty(config.BradleyLabel) ? "BRAD" : config.BradleyLabel;
+            EventCfg entry = FindEvent("Bradley");
+            bool showCount = entry == null || entry.ShowCount;
+            text = bradleys.Count > 1 && showCount ? label + " " + bradleys.Count.ToString(CultureInfo.InvariantCulture) : label;
+            string active = string.IsNullOrEmpty(config.BradleyActiveColor) ? config.ActiveColor : config.BradleyActiveColor;
+            color = bradleys.Count > 0 ? Hex(active) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private string BradleySlotText()
+        {
+            string label = string.IsNullOrEmpty(config.BradleyLabel) ? "BRAD" : config.BradleyLabel;
+            EventCfg entry = FindEvent("Bradley");
+            if (entry != null && !entry.ShowCount) return label;
+            return label + " 99";
         }
 
         private int EventFont()
