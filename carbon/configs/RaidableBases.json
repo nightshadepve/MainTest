@@ -1,0 +1,929 @@
+{
+  "Settings": {
+    "Wipe Management (/data/RaidableBases.json)": {
+      "Wipe triggers when Rust protocol changes": true,
+      "Wipe triggers on detection of map wipe": true,
+      "Wipe includes current data": true,
+      "Wipe includes lifetime data (NOT recommended!)": false,
+      "Manual wipe (command: rb wipe) revokes below permissions and groups from players": true,
+      "Permissions and groups to revoke on wipe (command: rb revokepg)": []
+    },
+    "Experimental [* = everything]": {
+      "Apply Custom Auto Height To": [],
+      "Bunker Bases Or Profiles": [],
+      "Multi Foundation Bases Or Profiles": []
+    },
+    "Raid Management": {
+      "Block Grid On Spawns Database Positions": false,
+      "Grids To Block Spawns At": [],
+      "Blocked Monument Markers (* = everything)": [],
+      "Block Spawns At Positions": [
+        {
+          "position": "(0.00, 0.00, 0.00)",
+          "radius": 200.0
+        }
+      ],
+      "Additional Map Prefabs To Block Spawns At": {
+        "test_prefab": 150.0,
+        "test_prefab_2": 125.25
+      },
+      "Max Amount Of Players Allowed To Enter Each Difficulty (0 = infinite, -1 = none)": {
+        "Bypass For PVP Bases": false,
+        "Easy": {
+          "Buyable Events": 0,
+          "Maintained Events": 0,
+          "Manual Events": 0,
+          "Scheduled Events": 0
+        },
+        "Medium": {
+          "Buyable Events": 0,
+          "Maintained Events": 0,
+          "Manual Events": 0,
+          "Scheduled Events": 0
+        },
+        "Hard": {
+          "Buyable Events": 0,
+          "Maintained Events": 0,
+          "Manual Events": 0,
+          "Scheduled Events": 0
+        },
+        "Expert": {
+          "Buyable Events": 0,
+          "Maintained Events": 0,
+          "Manual Events": 0,
+          "Scheduled Events": 0
+        },
+        "Nightmare": {
+          "Buyable Events": 0,
+          "Maintained Events": 0,
+          "Manual Events": 0,
+          "Scheduled Events": 0
+        }
+      },
+      "Max Amount Allowed To Automatically Spawn Per Difficulty (0 = infinite, -1 = disabled)": {
+        "Allow Max Amount Increase From Difficulties Disabled On A Specific Day Of The Week": false,
+        "Easy": -1,
+        "Medium": -1,
+        "Hard": 1,
+        "Expert": 1,
+        "Nightmare": 1
+      },
+      "Chance To Automatically Spawn Each Difficulty (-1 = ignore)": {
+        "Use Cumulative Probability": true,
+        "Easy": -1.0,
+        "Medium": -1.0,
+        "Hard": -1.0,
+        "Expert": -1.0,
+        "Nightmare": -1.0
+      },
+      "Player Lockouts (0 = ignore)": {
+        "Apply Lockouts To PVE": true,
+        "Apply Lockouts To PVP": true,
+        "Apply All Lockouts Everytime": false,
+        "Block Clans From Owning More Than One Raid": false,
+        "Block Friends From Owning More Than One Raid": false,
+        "Block Teams From Owning More Than One Raid": false,
+        "Block Players From Joining A Clan/Team To Exploit Restrictions": false,
+        "Time Between Raids In Minutes (Easy)": 0.0,
+        "Time Between Raids In Minutes (Medium)": 0.0,
+        "Time Between Raids In Minutes (Hard)": 0.0,
+        "Time Between Raids In Minutes (Expert)": 0.0,
+        "Time Between Raids In Minutes (Nightmare)": 0.0
+      },
+      "Additional Containers To Include As Boxes": [],
+      "Difficulty Colors (Border)": {
+        "Easy": "000000",
+        "Medium": "000000",
+        "Hard": "000000",
+        "Expert": "000000",
+        "Nightmare": "000000"
+      },
+      "Difficulty Colors (Inner)": {
+        "Easy": "00FF00",
+        "Medium": "FFEB04",
+        "Hard": "FF0000",
+        "Expert": "0000FF",
+        "Nightmare": "000000"
+      },
+      "Entities Allowed To Drop Loot": {
+        "Despawn These Dropped Loot Bags When Base Despawns": false,
+        "Auto Turrets": true,
+        "Flame Turret": false,
+        "Fog Machine": false,
+        "Gun Trap": false,
+        "SAM Site": false
+      },
+      "Additional Blocked Colliders": [
+        "cubes"
+      ],
+      "Allow Teleport": true,
+      "Allow Teleport Ignores Respawning": false,
+      "Allow Cupboard Loot To Drop": true,
+      "Allow Players To Use Ladders": true,
+      "Allow Players To Upgrade Event Buildings": true,
+      "Allow Player Bags To Be Lootable At PVP Bases": false,
+      "Allow Player Bags To Be Lootable At PVE Bases": false,
+      "Allow Players To Loot Traps": true,
+      "Allow Npcs To Target Other Npcs": false,
+      "Allow Raid Bases Inland": true,
+      "Allow Raid Bases On Beaches": true,
+      "Allow Raid Bases On Ice Sheets": true,
+      "Allow Raid Bases On Roads": false,
+      "Allow Raid Bases On Rivers": true,
+      "Allow Raid Bases On Railroads": false,
+      "Allow Raid Bases On Building Topology": true,
+      "Allow Raid Bases On Monument Topology": true,
+      "Amount Of Spawn Position Checks Per Frame (ADVANCED USERS ONLY)": 20,
+      "Allow Vending Machines To Broadcast": false,
+      "Backpacks Can Be Opened At PVE Bases": true,
+      "Backpacks Can Be Opened At PVP Bases": true,
+      "Rust Backpacks Drop At PVE Bases": true,
+      "Rust Backpacks Drop At PVP Bases": true,
+      "Backpacks Drop At PVE Bases": true,
+      "Backpacks Drop At PVP Bases": true,
+      "Block Custom Loot Plugin": false,
+      "Block AlphaLoot Plugin": false,
+      "Block BetterLoot Plugin": true,
+      "Block Npc Kits Plugin": false,
+      "Block Helicopter Damage To Bases": false,
+      "Block Mounted Damage To Bases And Players": false,
+      "Block Damage From Siege Weapons To Bases": false,
+      "Block Mini Collision Damage": false,
+      "Block DoubleJump Plugin": true,
+      "Block RestoreUponDeath Plugin For PVP Bases": false,
+      "Block RestoreUponDeath Plugin For PVE Bases": false,
+      "Block LifeSupport Plugin": true,
+      "Block Rewards During Server Restart": false,
+      "Bypass Lock Treasure To First Attacker For PVE Bases": true,
+      "Bypass Lock Treasure To First Attacker For PVP Bases": true,
+      "Despawn Spawned Mounts": true,
+      "Do Not Destroy Player Built Deployables": false,
+      "Do Not Destroy Player Built Structures": false,
+      "Divide Rewards Among All Raiders": true,
+      "Draw Corpse Time (Seconds)": 300.0,
+      "Destroy Boxes Clipped Too Far Into Terrain": true,
+      "Destroy Turrets Clipped Too Far Into Terrain": true,
+      "Eject Sleepers Before Spawning Base": true,
+      "Eject Scavengers When Raid Is Completed": false,
+      "Eject Mountables Before Spawning A Base": true,
+      "Kill Deployables Before Spawning A Base": true,
+      "Eject Deployables Before Spawning A Base": false,
+      "Extra Distance To Spawn From Monuments": 25.0,
+      "Move Weapons Onto Weapon Racks": false,
+      "Divide Weapon Rack Loot When Enabled": true,
+      "Move Cookables Into Ovens": false,
+      "Move Food Into BBQ Or Fridge": false,
+      "Blacklist For BBQ And Fridge": [
+        "syrup",
+        "pancakes"
+      ],
+      "Move Resources Into Tool Cupboard": false,
+      "Move Items Into Lockers": false,
+      "Divide Locker Loot When Enabled": false,
+      "Max Inactive Time Before Ineligible For Rewards (Minutes) (0 = disabled)": 20.0,
+      "Lock Treasure To First Attacker": false,
+      "Lock Treasure Max Inactive Time (Minutes)": 0.0,
+      "Assign Lockout When Lock Treasure Max Inactive Time Expires": false,
+      "Lock Players To Raid Base After Entering Zone": false,
+      "Only Award First Attacker and Allies": false,
+      "Only Award Owner Of Raid": false,
+      "Mounts Can Take Damage From Players": false,
+      "Player Cupboard Detection Radius": 125.0,
+      "Players With PVP Delay Can Damage Anything Inside Zone": false,
+      "Players With PVP Delay Can Damage Other Players With PVP Delay Anywhere": false,
+      "PVP Delay Between Zone Hopping": 10.0,
+      "PVP Delay Between Zone Hopping Persists After Despawn": false,
+      "PVP Delay Triggers When Entity Destroyed From Outside Zone": false,
+      "Prevent Fire From Spreading": false,
+      "Prevent Players From Hogging Raids": true,
+      "Prevent Fall Damage When Base Despawns": false,
+      "Require Cupboard To Be Looted Before Completion": false,
+      "Destroying The Cupboard Completes The Raid": true,
+      "Require All Bases To Spawn Before Respawning An Existing Base": false,
+      "Require All Bases To Spawn For Individual Players": false,
+      "Require All Bases To Spawn Persists On Restart": false,
+      "Turn Lights On At Night": true,
+      "Turn Lights On Indefinitely": false,
+      "Turn Lights On Bypasses NightLantern": true,
+      "Ignore List For Turn Lights On": [
+        "laserlight",
+        "weaponrack",
+        "lightswitch",
+        "soundlight",
+        "xmas"
+      ],
+      "Traps And Turrets Ignore Users Using NOCLIP": false,
+      "Use Random Codes On Code Locks": true,
+      "Maximum Water Depth For All Npcs": 3.0,
+      "Minutes Until Despawn After Looting (min: 1)": 20,
+      "Minutes Until Despawn After Looting Resets When Damaged": true,
+      "Minutes Until Despawn After Inactive (0 = disabled)": 30,
+      "Minutes Until Despawn After Inactive Resets When Damaged": true,
+      "Wait To Start Despawn Timer When Base Takes Damage From Player": true,
+      "Wait To Start Despawn Timer Until Npc Is Killed By Player": false,
+      "Apply Title Case To Difficulty Name": false,
+      "Block RevivePlayer Plugin For PVP Bases": false,
+      "Block RevivePlayer Plugin For PVE Bases": false,
+      "Easy Raids Can Spawn On": {
+        "Monday": true,
+        "Tuesday": true,
+        "Wednesday": true,
+        "Thursday": true,
+        "Friday": true,
+        "Saturday": true,
+        "Sunday": true
+      },
+      "Medium Raids Can Spawn On": {
+        "Monday": true,
+        "Tuesday": true,
+        "Wednesday": true,
+        "Thursday": true,
+        "Friday": true,
+        "Saturday": true,
+        "Sunday": true
+      },
+      "Hard Raids Can Spawn On": {
+        "Monday": false,
+        "Tuesday": true,
+        "Wednesday": false,
+        "Thursday": true,
+        "Friday": false,
+        "Saturday": true,
+        "Sunday": false
+      },
+      "Expert Raids Can Spawn On": {
+        "Monday": false,
+        "Tuesday": false,
+        "Wednesday": true,
+        "Thursday": false,
+        "Friday": false,
+        "Saturday": true,
+        "Sunday": false
+      },
+      "Nightmare Raids Can Spawn On": {
+        "Monday": false,
+        "Tuesday": false,
+        "Wednesday": false,
+        "Thursday": false,
+        "Friday": true,
+        "Saturday": true,
+        "Sunday": true
+      }
+    },
+    "Map Markers": {
+      "Marker Name": "Raid Base",
+      "Radius": 0.25,
+      "Radius (Map Size 3600 Or Less)": 0.35,
+      "Use Vending Map Marker": true,
+      "Show Remaining Loot When No Owner (PVE)": true,
+      "Show Remaining Loot When No Owner (PVP)": false,
+      "Show Owners Name on Map Marker": true,
+      "Show If Purchased On Map Marker": true,
+      "Use Explosion Map Marker": false,
+      "Create Markers For Buyable Events": true,
+      "Create Markers For Maintained Events": true,
+      "Create Markers For Scheduled Events": true,
+      "Create Markers For Manual Events": true
+    },
+    "Buyable Events": {
+      "Enable X Hours After Wipe (0 = immediately)": {
+        "Easy": [
+          {
+            "Permission Or Group": "raidablebases.buyraid.easywipetime",
+            "Hours After Wipe": 0.0
+          },
+          {
+            "Permission Or Group": "default",
+            "Hours After Wipe": 0.0
+          }
+        ],
+        "Medium": [
+          {
+            "Permission Or Group": "raidablebases.buyraid.mediumwipetime",
+            "Hours After Wipe": 12.0
+          },
+          {
+            "Permission Or Group": "default",
+            "Hours After Wipe": 24.0
+          }
+        ],
+        "Hard": [
+          {
+            "Permission Or Group": "raidablebases.buyraid.hardwipetime",
+            "Hours After Wipe": 48.0
+          },
+          {
+            "Permission Or Group": "default",
+            "Hours After Wipe": 72.0
+          }
+        ],
+        "Expert": [
+          {
+            "Permission Or Group": "raidablebases.buyraid.expertwipetime",
+            "Hours After Wipe": 96.0
+          },
+          {
+            "Permission Or Group": "default",
+            "Hours After Wipe": 120.0
+          }
+        ],
+        "Nightmare": [
+          {
+            "Permission Or Group": "raidablebases.buyraid.nightmarewipetime",
+            "Hours After Wipe": 144.0
+          },
+          {
+            "Permission Or Group": "default",
+            "Hours After Wipe": 168.0
+          }
+        ]
+      },
+      "Max Amount Purchasable Per Difficulty (0 = infinite, -1 = disabled)": {
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0,
+        "Expert": 0,
+        "Nightmare": 0
+      },
+      "Cooldowns (0 = No Cooldown)": {
+        "Reset Cooldown Costs": {
+          "Custom Currency": {
+            "Plugin": {
+              "Plugin Name": "",
+              "Deposit Method (API)": "",
+              "Withdraw Method (API)": "",
+              "Balance Method (API)": "",
+              "ShoppyStock Shop Name": "",
+              "Currency Name": "",
+              "Amount": 0.0,
+              "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+              "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+            },
+            "Enabled": false,
+            "Item Shortname": "scrap",
+            "Item Name": null,
+            "Amount": 0,
+            "Skin": 0
+          },
+          "Economics Money": 0.0,
+          "ServerRewards Points": 0
+        },
+        "Apply Cooldown To Entire Clan And Team": false,
+        "Apply Cooldown To Participants Only": false,
+        "Apply All Cooldowns": false,
+        "Apply Cooldown When Rewards Are Given": true,
+        "Cooldown Override Applied To All Other Difficulties": 0.0,
+        "Easy": {
+          "VIP Permission: raidablebases.vipcooldown": 300.0,
+          "Admin Permission: raidablebases.allow": 0.0,
+          "Server Admins": 0.0,
+          "Normal Users": 600.0
+        },
+        "Medium": {
+          "VIP Permission: raidablebases.vipcooldown": 300.0,
+          "Admin Permission: raidablebases.allow": 0.0,
+          "Server Admins": 0.0,
+          "Normal Users": 600.0
+        },
+        "Hard": {
+          "VIP Permission: raidablebases.vipcooldown": 300.0,
+          "Admin Permission: raidablebases.allow": 0.0,
+          "Server Admins": 0.0,
+          "Normal Users": 600.0
+        },
+        "Expert": {
+          "VIP Permission: raidablebases.vipcooldown": 300.0,
+          "Admin Permission: raidablebases.allow": 0.0,
+          "Server Admins": 0.0,
+          "Normal Users": 600.0
+        },
+        "Nightmare": {
+          "VIP Permission: raidablebases.vipcooldown": 300.0,
+          "Admin Permission: raidablebases.allow": 0.0,
+          "Server Admins": 0.0,
+          "Normal Users": 600.0
+        }
+      },
+      "Refunds": {
+        "Refund Despawned Bases": false,
+        "Base Becomes Ineligible For Rewards On Despawn": true,
+        "Block Refund If Base Is Damaged": true,
+        "Block Despawn If Base Is Damaged": true,
+        "Block Despawn If Anything Is Looted": true,
+        "Refund Percentage": 100.0,
+        "Refund Resets Cooldown Timer": false,
+        "Cooldown (0 = No Cooldown)": 0.0,
+        "Purchase Same Base While On Despawn Cooldown": false
+      },
+      "Allow Players To Spawn Specified Base Files": false,
+      "Allow Players To Buy PVP Raids": false,
+      "Allow Ally With Lockouts To Enter": true,
+      "Lock Raid To Buyer And Friends": true,
+      "Reset Purchased Owner After X Minutes Inactive": 0.0,
+      "Max Inactive Time Before Ineligible For Rewards (Minutes) (0 = disabled)": 20.0,
+      "Max Buyable Events": 2,
+      "Prevent Players From Buying Until Previous Raid Despawns": true,
+      "Prevent Players From Hogging Purchased Raids": false,
+      "Use Permission (raidablebases.buyraid)": true,
+      "Spawn At Closest Position From Player": true,
+      "Auto Close Buyable Ui When At Maximum Limit": false,
+      "Add Personal Marker On Owners Map": true,
+      "Use Raids Can Spawn On Options": false,
+      "Convert PVE To PVP": false,
+      "Convert PVP To PVE": true,
+      "Ignore Safe Checks": false,
+      "Ignore Safe Checks In X Radius Only": 0.0,
+      "Ignore Player Entities At Custom Spawn Locations": false,
+      "Spawn Bases X Distance Apart": 175.0,
+      "Spawns Database File (Optional)": "none"
+    },
+    "Maintained Events": {
+      "Always Maintain Max Events": true,
+      "Max Maintained Events": 3,
+      "Max Maintained Events (When Deep Sea Is Open)": -1,
+      "Enable X Hours After Wipe (0 = immediately)": {
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0,
+        "Expert": 0,
+        "Nightmare": 0
+      },
+      "Chance To Randomly Spawn PVP Bases (0 = Ignore Setting)": 1.0,
+      "Include PVE Bases": true,
+      "Include PVP Bases": true,
+      "Minimum Required Players Online": 1,
+      "Maximum Limit Of Players Online": 100,
+      "Permission To Ignore With Players Online Limit": "",
+      "Time To Wait Between Spawns": 60.0,
+      "Convert PVE To PVP": false,
+      "Convert PVP To PVE": true,
+      "Ignore Safe Checks": false,
+      "Ignore Safe Checks In X Radius Only": 0.0,
+      "Ignore Player Entities At Custom Spawn Locations": false,
+      "Spawn Bases X Distance Apart": 175.0,
+      "Spawns Database File (Optional)": "none"
+    },
+    "Manual Events": {
+      "Convert PVE To PVP": false,
+      "Convert PVP To PVE": true,
+      "Max Manual Events": 5,
+      "Max Manual Events (When Deep Sea Is Open)": -1,
+      "Spawns Database File (Optional)": "none",
+      "Bypass Lock Treasure To First Attacker For PVE Bases": false,
+      "Bypass Lock Treasure To First Attacker For PVP Bases": true
+    },
+    "Scheduled Events": {
+      "Enabled": false,
+      "Every Min Seconds": 3600.0,
+      "Every Max Seconds": 7200.0,
+      "Max Scheduled Events": 1,
+      "Max Scheduled Events (When Deep Sea Is Open)": -1,
+      "Max To Spawn At Once (0 = Use Max Scheduled Events Amount)": 0,
+      "Enable X Hours After Wipe (0 = immediately)": {
+        "Easy": 0.0,
+        "Medium": 1.0,
+        "Hard": 3.0,
+        "Expert": 12.0,
+        "Nightmare": 24.0
+      },
+      "Chance To Randomly Spawn PVP Bases (0 = Ignore Setting)": 0.0,
+      "Include PVE Bases": true,
+      "Include PVP Bases": true,
+      "Minimum Required Players Online": 1,
+      "Maximum Limit Of Players Online": 300,
+      "Permission To Ignore With Players Online Limit": "",
+      "Time To Wait Between Spawns": 60.0,
+      "Convert PVE To PVP": false,
+      "Convert PVP To PVE": true,
+      "Ignore Safe Checks": false,
+      "Ignore Safe Checks In X Radius Only": 0.0,
+      "Ignore Player Entities At Custom Spawn Locations": false,
+      "Spawn Bases X Distance Apart": 175.0,
+      "Spawns Database File (Optional)": "none"
+    },
+    "Allowed Zone Manager Zones": [
+      "pvp",
+      "99999999"
+    ],
+    "Buyable Event Costs": {
+      "Require Custom Costs": false,
+      "Require Economics Costs": false,
+      "Require Server Rewards Costs": true
+    },
+    "Economics Buy Raid Costs (0 = disabled)": {
+      "Easy": 0.0,
+      "Medium": 0.0,
+      "Hard": 0.0,
+      "Expert": 0.0,
+      "Nightmare": 0.0
+    },
+    "ServerRewards Buy Raid Costs (0 = disabled)": {
+      "Easy": 500,
+      "Medium": 1000,
+      "Hard": 2000,
+      "Expert": 3500,
+      "Nightmare": 5000
+    },
+    "Custom Buy Raid Cost": {
+      "Easy": [
+        {
+          "Plugin": {
+            "Plugin Name": "",
+            "Deposit Method (API)": "",
+            "Withdraw Method (API)": "",
+            "Balance Method (API)": "",
+            "ShoppyStock Shop Name": "",
+            "Currency Name": "",
+            "Amount": 0.0,
+            "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+            "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+          },
+          "Enabled": false,
+          "Item Shortname": "scrap",
+          "Item Name": null,
+          "Amount": 50,
+          "Skin": 0
+        }
+      ],
+      "Medium": [
+        {
+          "Plugin": {
+            "Plugin Name": "",
+            "Deposit Method (API)": "",
+            "Withdraw Method (API)": "",
+            "Balance Method (API)": "",
+            "ShoppyStock Shop Name": "",
+            "Currency Name": "",
+            "Amount": 0.0,
+            "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+            "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+          },
+          "Enabled": false,
+          "Item Shortname": "scrap",
+          "Item Name": null,
+          "Amount": 100,
+          "Skin": 0
+        }
+      ],
+      "Hard": [
+        {
+          "Plugin": {
+            "Plugin Name": "",
+            "Deposit Method (API)": "",
+            "Withdraw Method (API)": "",
+            "Balance Method (API)": "",
+            "ShoppyStock Shop Name": "",
+            "Currency Name": "",
+            "Amount": 0.0,
+            "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+            "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+          },
+          "Enabled": false,
+          "Item Shortname": "scrap",
+          "Item Name": null,
+          "Amount": 150,
+          "Skin": 0
+        }
+      ],
+      "Expert": [
+        {
+          "Plugin": {
+            "Plugin Name": "",
+            "Deposit Method (API)": "",
+            "Withdraw Method (API)": "",
+            "Balance Method (API)": "",
+            "ShoppyStock Shop Name": "",
+            "Currency Name": "",
+            "Amount": 0.0,
+            "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+            "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+          },
+          "Enabled": false,
+          "Item Shortname": "scrap",
+          "Item Name": null,
+          "Amount": 200,
+          "Skin": 0
+        }
+      ],
+      "Nightmare": [
+        {
+          "Plugin": {
+            "Plugin Name": "",
+            "Deposit Method (API)": "",
+            "Withdraw Method (API)": "",
+            "Balance Method (API)": "",
+            "ShoppyStock Shop Name": "",
+            "Currency Name": "",
+            "Amount": 0.0,
+            "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+            "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+          },
+          "Enabled": false,
+          "Item Shortname": "scrap",
+          "Item Name": null,
+          "Amount": 250,
+          "Skin": 0
+        }
+      ]
+    },
+    "Use Grid Locations In Allowed Zone Manager Zones Only": false,
+    "Extended Distance To Spawn Away From Zone Manager Zones": 25.0,
+    "Automatically Teleport Admins To Their Map Marker Positions": false,
+    "Automatically Destroy Markers That Admins Teleport To": false,
+    "Block Archery Plugin At PVE Events": false,
+    "Block Archery Plugin At PVP Events": false,
+    "Block Wizardry Plugin At PVE Events": false,
+    "Block Wizardry Plugin At PVP Events": false,
+    "Block Weapons From Use": [
+      "toolgun"
+    ],
+    "Chat Steam64ID": 76561199564392767,
+    "Expansion Mode (Dangerous Treasures)": false,
+    "Remove Admins From Raiders List": false,
+    "Show Direction To Coordinates": false,
+    "Show Grid Coordinates": true,
+    "Show X Z Coordinates": false,
+    "Buy Raid Command": "buyraid",
+    "Event Command": "rbe",
+    "Hunter Command": "rb",
+    "Server Console Command": "rbevent",
+    "Remove Paid Content Command": "krhfxihk"
+  },
+  "Event Messages": {
+    "Ineligible For Rewards": {
+      "Flying": false,
+      "Vanished": false,
+      "Inactive": true,
+      "Not An Ally": true,
+      "Not The Owner": true,
+      "Not A Participant": true,
+      "Remove Admins From Raiders List": false
+    },
+    "Announce Raid Unlocked": true,
+    "Announce Buy Base Messages": true,
+    "Announce Thief Message": true,
+    "Announce PVE/PVP Enter/Exit Messages": true,
+    "Announce When Blocks Are Immune To Damage": true,
+    "Show Destroy Warning": true,
+    "Show Opened Message For PVE Bases": true,
+    "Show Opened Message For PVP Bases": true,
+    "Show Opened Message For Paid Bases": true,
+    "Show Message For Block Damage Outside Of The Dome To Players Inside": false,
+    "Show Message When Purchase Becomes Available": true,
+    "Show Prefix": true,
+    "Notify Plugin - Type (-1 = disabled)": -1,
+    "Rust Game Tip Style (0 = blue norm, 1 = red norm, 2 = blue long, 3 = blue short, 4 = server)": -1,
+    "Strip Colors From Rust Game Tip Messages": false,
+    "Notification Interval": 1.0,
+    "Send Messages To Player": true,
+    "Save Thieves To Log File": true,
+    "Distance To Notify Players When Near An Event": 0.0
+  },
+  "GUIAnnouncements": {
+    "Enabled": false,
+    "Banner Tint Color": "Grey",
+    "Maximum Distance": 300.0,
+    "Text Color": "White"
+  },
+  "Ranked Ladder": {
+    "Award Top X Players On Wipe": 3,
+    "Enabled": true,
+    "Amount Of Days Before Removing Inactive User From The Lifetime Ladder?": 60.0,
+    "Show Top X Ladder": 10,
+    "Assign Rank After X Completions": {
+      "Assign To Owner Of Raid Only": false,
+      "Easy": 0,
+      "Medium": 0,
+      "Hard": 0,
+      "Expert": 0,
+      "Nightmare": 0
+    },
+    "Difficulty Points": {
+      "Assign To Owner Of Raid Only": false,
+      "Easy": 1,
+      "Medium": 2,
+      "Hard": 3,
+      "Expert": 4,
+      "Nightmare": 5
+    },
+    "Easy": {
+      "Permission": "raidablebases.ladder.easy",
+      "Group": "raideasy",
+      "Mode": "Easy"
+    },
+    "Medium": {
+      "Permission": "raidablebases.ladder.medium",
+      "Group": "raidmedium",
+      "Mode": "Medium"
+    },
+    "Hard": {
+      "Permission": "raidablebases.ladder.hard",
+      "Group": "raidhard",
+      "Mode": "Hard"
+    },
+    "Expert": {
+      "Permission": "raidablebases.ladder.expert",
+      "Group": "raidexpert",
+      "Mode": "Expert"
+    },
+    "Nightmare": {
+      "Permission": "raidablebases.ladder.nightmare",
+      "Group": "raidnightmare",
+      "Mode": "Nightmare"
+    },
+    "Points": {
+      "Permission": "raidablebases.th",
+      "Group": "raidhunter",
+      "Mode": "Points"
+    }
+  },
+  "Skins": {
+    "Boxes": {
+      "Preset Skins": [],
+      "Ignore If Skinned Already": true,
+      "Use Identical Skins": false,
+      "Use Random Skin": false,
+      "Use Workshop Skins": false,
+      "Use Imported Workshop Skins File": false,
+      "Use Approved Workshop Skins Only": false
+    },
+    "Npcs": {
+      "Use Identical Skins": false,
+      "Use Skins With Murderer Kits": false,
+      "Use Skins With Scientist Kits": false,
+      "Ignore Skinned Murderer Kits": false,
+      "Ignore Skinned Scientist Kits": false,
+      "Use Random Skin": false,
+      "Use Workshop Skins": false,
+      "Use Imported Workshop Skins File": false,
+      "Use Approved Workshop Skins Only": false
+    },
+    "Loot Items": {
+      "Use Identical Skins For Stackable Items": false,
+      "Use Identical Skins For Non-Stackable Items": false,
+      "Use Random Skin": false,
+      "Use Workshop Skins": false,
+      "Use Imported Workshop Skins File": false,
+      "Use Approved Workshop Skins Only": false
+    },
+    "Deployables": {
+      "Partial Names": [
+        "door",
+        "barricade",
+        "chair",
+        "fridge",
+        "furnace",
+        "locker",
+        "reactivetarget",
+        "rug",
+        "sleepingbag",
+        "table",
+        "vendingmachine",
+        "waterpurifier",
+        "skullspikes",
+        "skulltrophy",
+        "summer_dlc",
+        "sled"
+      ],
+      "Preset Door Skins": [],
+      "Skin Everything": false,
+      "Ignore If Skinned Already": false,
+      "Use Identical Skins": false,
+      "Use Random Skin": true,
+      "Use Workshop Skins": false,
+      "Use Imported Workshop Skins File": false,
+      "Use Approved Workshop Skins Only": false
+    }
+  },
+  "Treasure": {
+    "Resources Not Moved To Cupboards": [
+      "skull.human",
+      "battery.small",
+      "bone.fragments",
+      "can.beans.empty",
+      "can.tuna.empty",
+      "water.salt",
+      "water",
+      "skull.wolf"
+    ],
+    "Use Day Of Week Loot": false,
+    "Do Not Duplicate Base Loot": false,
+    "Do Not Duplicate Difficulty Loot": false,
+    "Do Not Duplicate Default Loot": false,
+    "Use Stack Size Limit For Spawning Items": true
+  },
+  "UI": {
+    "Advanced Alerts UI": {
+      "Enabled": true,
+      "Anchor Min": "0.35 0.85",
+      "Offset Min": "0 0",
+      "Anchor Max": "0.65 0.95",
+      "Offset Max": "0 0",
+      "Time Shown": 5.0,
+      "Title Background Color": "#000000"
+    },
+    "Buyable Events UI": {
+      "Enabled": true,
+      "Sort By Price Instead Of Difficulty Level": false,
+      "Offset Min": "-34.159 86.718",
+      "Offset Max": "179.959 254.682",
+      "Panel Alpha": 0.98,
+      "Background Color": "#1a1622",
+      "Title Background Color": "#0d0b12",
+      "Cursor Enabled": false,
+      "Button Alpha": 1.0,
+      "X Text Color": "#e6dcff",
+      "Font Size": 14,
+      "Use Contrast Colors For Text Color": true,
+      "Use Difficulty Colors For Buttons": true,
+      "X Button Color": "#b084ff",
+      "Easy Button Color": "#6a4fb3",
+      "Easy Text Color": "#f1edff",
+      "Medium Button Color": "#8a63d2",
+      "Medium Text Color": "#f1edff",
+      "Hard Button Color": "#a855f7",
+      "Hard Text Color": "#ffffff",
+      "Expert Button Color": "#c084fc",
+      "Expert Text Color": "#ffffff",
+      "Nightmare Button Color": "#00ffff",
+      "Nightmare Text Color": "#0d0b12"
+    },
+    "Buyable Cooldowns UI": {
+      "Enabled": true,
+      "Hidden While Buyable Events UI Is Closed": false,
+      "Offset Min": "-117.966 -77.055",
+      "Offset Max": "-17.834 -33.74",
+      "Panel Alpha": 0.98,
+      "Background Color": "#1a1622",
+      "Title Text Color": "#e6dcff",
+      "Title Embed Color": "#1a1622",
+      "Title Panel Color": "#0d0b12"
+    },
+    "Delay UI": {
+      "Enabled": false,
+      "Offset Min": "-34.488 87.056",
+      "Offset Max": "179.631 124.804",
+      "Font Size": 14,
+      "Panel Alpha": 0.98,
+      "Text Color": "#ff4d6d",
+      "Background Color": "#1a1622",
+      "Title Background Color": "#0d0b12"
+    },
+    "Lockouts UI": {
+      "Enabled": true,
+      "Hidden While Buyable Events UI Is Closed": false,
+      "Offset Min": "-117.966 -149.658",
+      "Offset Max": "-17.834 -106.342",
+      "Panel Alpha": 0.98,
+      "Background Color": "#1a1622",
+      "Title Text Color": "#e6dcff",
+      "Title Embed Color": "#1a1622",
+      "Title Panel Color": "#0d0b12"
+    },
+    "Status UI": {
+      "Font Size": 12,
+      "PVP Color": "#ff4d6d",
+      "PVE Color": "#4ade80",
+      "Show Loot Left": true,
+      "Hide Loot Left Number When There Is No Owner": true,
+      "Enabled": true,
+      "Offset Min": "191.957 17.056",
+      "Offset Max": "327.626 79.024",
+      "Panel Alpha": 0.98,
+      "Background Color": "#1a1622",
+      "Title Background Color": "#0d0b12",
+      "No Owner Color": "#e6dcff",
+      "Negative Color": "#ff4d6d",
+      "Positive Color": "#4ade80"
+    }
+  },
+  "Weapons": {
+    "Infinite Ammo": {
+      "AutoTurret": false,
+      "FlameTurret": true,
+      "FogMachine": true,
+      "GunTrap": false,
+      "SamSite": true
+    },
+    "Ammo": {
+      "AutoTurret": 20,
+      "FlameTurret": 50,
+      "FogMachine": 5,
+      "GunTrap": 100,
+      "SamSite": 100
+    },
+    "No Fuel Source": [
+      "skull_fire_pit",
+      "cauldron"
+    ],
+    "Fog Machine Allows Motion Toggle": true,
+    "Fog Machine Requires A Power Source": true,
+    "Spooky Speakers Requires Power Source": false,
+    "Test Generator Power": 100.0,
+    "Sprinkler Requires A Power Source": true,
+    "Furnace Starting Fuel": 1000
+  },
+  "Log Debug To File": false,
+  "Block paid and restricted content to comply with Facepunch TOS": true,
+  "Destroy DLC containers once looted": true
+}

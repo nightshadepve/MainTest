@@ -1,0 +1,357 @@
+{
+  "BaseC4": {
+    "C4Tiers": {
+      "c4_tier1": {
+        "ExplosionDamage": 1000.0,
+        "Info": "Tier 1 C4",
+        "SkinId": "3425076124"
+      },
+      "c4_tier2": {
+        "ExplosionDamage": 2000.0,
+        "Info": "Tier 2 C4",
+        "SkinId": "3425076601"
+      },
+      "c4_tier3": {
+        "ExplosionDamage": 5000.0,
+        "Info": "Tier 3 C4",
+        "SkinId": "3425076743"
+      }
+    }
+  },
+  "BaseRockets": {
+    "RocketHvTiers": {
+      "rocket_tier1": {
+        "ExplosionDamage": 250.0,
+        "Info": "Tier 1 HV rocket",
+        "SkinId": "3447956979"
+      },
+      "rocket_tier2": {
+        "ExplosionDamage": 350.0,
+        "Info": "Tier 2 HV rocket",
+        "SkinId": "3447957790"
+      },
+      "rocket_tier3": {
+        "ExplosionDamage": 450.0,
+        "Info": "Tier 3 HV rocket",
+        "SkinId": "3447954671"
+      }
+    },
+    "RocketTiers": {
+      "rocket_tier1": {
+        "ExplosionDamage": 500.0,
+        "Info": "Tier 1 basic rocket",
+        "SkinId": "3447956979"
+      },
+      "rocket_tier2": {
+        "ExplosionDamage": 750.0,
+        "Info": "Tier 2 basic rocket",
+        "SkinId": "3447957790"
+      },
+      "rocket_tier3": {
+        "ExplosionDamage": 1000.0,
+        "Info": "Tier 3 basic rocket",
+        "SkinId": "3447954671"
+      }
+    }
+  },
+  "General": {
+    "EnableBasicRocketTiers": true,
+    "EnableHvRocketTiers": true,
+    "ForceMagazineOverride": true,
+    "ForceRocketDamageOverride": false
+  },
+  "LootSpawns": {
+    "ContainerPrefabs": [
+      "crate_normal_2",
+      "crate_elite",
+      "crate_toolbox",
+      "bradley_crate"
+    ],
+    "Enabled": false,
+    "MaxExtraItemsPerContainer": 2,
+    "Rules": [
+      {
+        "Chance": 0.03,
+        "ItemType": "c4",
+        "MaxAmount": 1,
+        "MinAmount": 1,
+        "Tier": "c4_tier1"
+      },
+      {
+        "Chance": 0.02,
+        "ItemType": "rocketlauncher",
+        "MaxAmount": 1,
+        "MinAmount": 1,
+        "Tier": "rocket_tier1"
+      },
+      {
+        "Chance": 0.005,
+        "ItemType": "proto_launcher",
+        "MaxAmount": 1,
+        "MinAmount": 1,
+        "Tier": "proto0"
+      },
+      {
+        "Chance": 0.005,
+        "ItemType": "proto_c4",
+        "MaxAmount": 1,
+        "MinAmount": 1,
+        "Tier": "proto_c4_0"
+      }
+    ]
+  },
+  "NameDisplay": {
+    "ShowDamageInC4TierName": true,
+    "ShowDamageInRocketLauncherTierName": true
+  },
+  "NormalLauncher": {
+    "RocketLauncherTiers": {
+      "rocket_tier1": {
+        "ConditionLossPerShot": 10.0,
+        "DisplayName": "Rocketlauncher T1",
+        "Info": "Rocketlauncher T1 | mag 9 | wear/shot 10",
+        "MagazineSize": 9
+      },
+      "rocket_tier2": {
+        "ConditionLossPerShot": 6.0,
+        "DisplayName": "Rocketlauncher T2",
+        "Info": "Rocketlauncher T2 | mag 5 | wear/shot 6",
+        "MagazineSize": 5
+      },
+      "rocket_tier3": {
+        "ConditionLossPerShot": 3.0,
+        "DisplayName": "Rocketlauncher T3",
+        "Info": "Rocketlauncher T3 | mag 3 | wear/shot 3",
+        "MagazineSize": 3
+      }
+    }
+  },
+  "PrototypeC4": {
+    "AllowConvertNormalC4ToPrototype": false,
+    "AllowStackPrototypeC4Upgrades": true,
+    "ConvertC4ToProto0Costs": [
+      {
+        "Amount": 250,
+        "ShortName": "scrap"
+      }
+    ],
+    "EnablePrototypeC4": true,
+    "PrototypeC4Tiers": {
+      "proto_c4_0": {
+        "ExplosionDamage": 500.0,
+        "Info": "Prototype C4 0 – baseline charge. Engineers logged this batch as safe enough for field handling.",
+        "SkinId": "3667082709"
+      },
+      "proto_c4_1": {
+        "ExplosionDamage": 700.0,
+        "Info": "Prototype C4 I – pressure-stabilized blend with improved brisance.",
+        "SkinId": "3667082876"
+      },
+      "proto_c4_2": {
+        "ExplosionDamage": 800.0,
+        "Info": "Prototype C4 II – denser packing and hotter detonation front.",
+        "SkinId": "3667083073"
+      },
+      "proto_c4_3": {
+        "ExplosionDamage": 950.0,
+        "Info": "Prototype C4 III – volatile primer chain. Do not store near heat.",
+        "SkinId": "3667083247"
+      },
+      "proto_c4_4": {
+        "ExplosionDamage": 1400.0,
+        "Info": "Prototype C4 IV – lab-only formulation, now somehow in your hands.",
+        "SkinId": "3667083408"
+      }
+    },
+    "PrototypeC4UpgradeConfig": {
+      "proto_c4_0": {
+        "Costs": [
+          {
+            "Amount": 250,
+            "ShortName": "scrap"
+          },
+          {
+            "Amount": 500,
+            "ShortName": "metal.fragments"
+          }
+        ],
+        "ToTier": "proto_c4_1"
+      },
+      "proto_c4_1": {
+        "Costs": [
+          {
+            "Amount": 350,
+            "ShortName": "scrap"
+          },
+          {
+            "Amount": 20,
+            "ShortName": "metal.refined"
+          }
+        ],
+        "ToTier": "proto_c4_2"
+      },
+      "proto_c4_2": {
+        "Costs": [
+          {
+            "Amount": 500,
+            "ShortName": "scrap"
+          },
+          {
+            "Amount": 5,
+            "ShortName": "explosives"
+          }
+        ],
+        "ToTier": "proto_c4_3"
+      },
+      "proto_c4_3": {
+        "Costs": [
+          {
+            "Amount": 750,
+            "ShortName": "scrap"
+          },
+          {
+            "Amount": 10,
+            "ShortName": "explosives"
+          }
+        ],
+        "ToTier": "proto_c4_4"
+      }
+    }
+  },
+  "PrototypeLauncher": {
+    "AllowConvertNormalLauncherToPrototype": false,
+    "AllowStackPrototypeUpgrades": true,
+    "ConvertLauncherToProto0Costs": [
+      {
+        "Amount": 500,
+        "ShortName": "scrap"
+      },
+      {
+        "Amount": 40,
+        "ShortName": "metal.refined"
+      }
+    ],
+    "EnablePrototypeLauncher": true,
+    "PrototypeLauncherTiers": {
+      "proto0": {
+        "BasicExplosionDamage": 500.0,
+        "ConditionLossPerShot": 0.0,
+        "DamageMultiplier": 0.0,
+        "DisplayName": "Prototype Rocketlauncher 0",
+        "HvExplosionDamage": 250.0,
+        "Info": "Baseline prototype shell with unmodified firing chamber. It behaves like a standard launcher while engineers collect clean baseline data from your raids.",
+        "MagazineSize": 1,
+        "SkinId": "3667143033"
+      },
+      "proto1": {
+        "BasicExplosionDamage": 800.0,
+        "ConditionLossPerShot": 8.0,
+        "DamageMultiplier": 0.0,
+        "DisplayName": "Prototype Rocketlauncher I",
+        "HvExplosionDamage": 350.0,
+        "Info": "First field-tuned prototype. Additional sensors tweak propellant venting, slightly increasing impact yield with almost no extra risk.",
+        "MagazineSize": 1,
+        "SkinId": "3667165620"
+      },
+      "proto2": {
+        "BasicExplosionDamage": 900.0,
+        "ConditionLossPerShot": 7.0,
+        "DamageMultiplier": 0.0,
+        "DisplayName": "Prototype Rocketlauncher II",
+        "HvExplosionDamage": 450.0,
+        "Info": "Reinforced rails and experimental chamber lining let the launcher handle hotter propellant mixes for harder breaches.",
+        "MagazineSize": 2,
+        "SkinId": "3667167584"
+      },
+      "proto3": {
+        "BasicExplosionDamage": 1100.0,
+        "ConditionLossPerShot": 6.0,
+        "DamageMultiplier": 0.0,
+        "DisplayName": "Prototype Rocketlauncher III",
+        "HvExplosionDamage": 600.0,
+        "Info": "Now considered highly unstable by its designers, this version pushes most safety margins into raw wall-breaking power.",
+        "MagazineSize": 3,
+        "SkinId": "3667169403"
+      },
+      "proto4": {
+        "BasicExplosionDamage": 1500.0,
+        "ConditionLossPerShot": 5.0,
+        "DamageMultiplier": 0.0,
+        "DisplayName": "Prototype Rocketlauncher IV",
+        "HvExplosionDamage": 760.0,
+        "Info": "The final \"do not deploy\" prototype. According to lab records it was never officially tested on live structures… until now.",
+        "MagazineSize": 4,
+        "SkinId": "3667188067"
+      }
+    },
+    "PrototypeLauncherUpgradeConfig": {
+      "proto0": {
+        "Costs": [
+          {
+            "Amount": 750,
+            "ShortName": "metal.fragments"
+          },
+          {
+            "Amount": 300,
+            "ShortName": "gunpowder"
+          }
+        ],
+        "ToTier": "proto1"
+      },
+      "proto1": {
+        "Costs": [
+          {
+            "Amount": 80,
+            "ShortName": "metal.refined"
+          },
+          {
+            "Amount": 10,
+            "ShortName": "explosives"
+          }
+        ],
+        "ToTier": "proto2"
+      },
+      "proto2": {
+        "Costs": [
+          {
+            "Amount": 150,
+            "ShortName": "metal.refined"
+          },
+          {
+            "Amount": 20,
+            "ShortName": "explosives"
+          }
+        ],
+        "ToTier": "proto3"
+      },
+      "proto3": {
+        "Costs": [
+          {
+            "Amount": 250,
+            "ShortName": "metal.refined"
+          },
+          {
+            "Amount": 40,
+            "ShortName": "explosives"
+          }
+        ],
+        "ToTier": "proto4"
+      }
+    }
+  },
+  "RaidRankSystem": {
+    "Enabled": false,
+    "ShowRankUpMessages": true,
+    "ShowXpMessages": false,
+    "TopListAmount": 10,
+    "XPForC4TierChargeUsed": 3,
+    "XPForPrototypeC4ChargeUsed": 5,
+    "XPForPrototypeRocketlauncherShotFired": 5,
+    "XPForRocketlauncherTierShotFired": 2
+  },
+  "UI": {
+    "PrototypeUiImageAlpha": 0.35,
+    "PrototypeUiImageName": "proto_launcher_bg",
+    "PrototypeUiImageUrl": "https://codefling.com/uploads/monthly_2026_02/prototypev2.png.c80600aab383e3c00701cac63d5ac070.png"
+  }
+}

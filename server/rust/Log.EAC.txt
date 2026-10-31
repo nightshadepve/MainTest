@@ -1,0 +1,7 @@
+10:39:32 EventCache either took too long to flush (10.015 ms) or had a very large payload (3.909 KB, 6 events). Listing events in the payload for investigation:
+10:39:32     EOSSDK.HTTP.Complete,675
+10:39:32     EOSSDK.HTTP.Complete,692
+10:39:32     EOSSDK.HTTP.Complete,680
+10:39:32     AntiCheatServer.ActiveSession,512
+10:39:32     EOSSDK.Heartbeat,755
+10:39:32     EOSSDK.HTTP.Complete,676

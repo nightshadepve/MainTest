@@ -1,0 +1,54 @@
+{
+  "Events": [
+    {
+      "Messages Active": true,
+      "Event Name": "Airdrop",
+      "Start Message": "Airdrop was <color=green>dropped</color>",
+      "Discord Message (empty = use Start Message)": ""
+    },
+    {
+      "Messages Active": true,
+      "Event Name": "Chinook (CH47)",
+      "Start Message": "Chinook 47 has <color=green>started</color> and is making its rounds",
+      "Discord Message (empty = use Start Message)": ""
+    },
+    {
+      "Messages Active": true,
+      "Event Name": "Cargo Ship",
+      "Start Message": "<color=blue>RustTanic</color> has set <color=green>sail</color> ",
+      "Discord Message (empty = use Start Message)": ""
+    },
+    {
+      "Messages Active": true,
+      "Event Name": "Patrol Helicopter",
+      "Start Message": "Karen <color=green>started</color> the search for the manager",
+      "Discord Message (empty = use Start Message)": ""
+    },
+    {
+      "Messages Active": false,
+      "Event Name": "Deep Sea (Open)",
+      "Start Message": "Deep Sea event is now <color=green>active</color>!",
+      "Discord Message (empty = use Start Message)": ""
+    },
+    {
+      "Messages Active": true,
+      "Event Name": "Deep Sea (Close)",
+      "Start Message": "Deep Sea event has <color=red>ended</color>.",
+      "Discord Message (empty = use Start Message)": ""
+    }
+  ],
+  "Type 0 - chat, 1 - GUIAnnouncements": 0,
+  "Chat Icon (Steam ID, 0 = no icon)": 0,
+  "Discord Settings": {
+    "Enabled": false,
+    "Webhook URL": "",
+    "Embed Color (Decimal)": 3066993,
+    "Bot Username": "Event Manager",
+    "Bot Avatar URL": ""
+  },
+  "Version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 11
+  }
+}

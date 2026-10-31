@@ -1,0 +1,947 @@
+[2026.10.01 16:42:35] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 16:42:35] [INFO] Carbon 2.0.259.0 [2026.09.03.0] 21063e8 on Linux 
+[2026.10.01 16:42:35] [INFO]        raul on production (2026-09-06 15:39:42 +0200)
+[2026.10.01 16:42:35] [INFO] Rust   107/2633.288.1 on release (22/09/2026 08:48:10) 165217
+[2026.10.01 16:42:36] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 350ms
+[2026.10.01 16:42:36] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 102ms
+[2026.10.01 16:42:36] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 281ms
+[2026.10.01 16:42:37] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 164ms
+[2026.10.01 16:42:43] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 16:42:43] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 16:42:43] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 16:42:43] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 16:42:43] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 16:42:43] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 16:42:43] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 16:42:44] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 16:42:46] [WARN]  Failed uninstalling patch: OnNewSave[262c2cd587f74148bf3c0c96f6a64c63]
+[2026.10.01 16:42:46] [INFO] Script processor has been unloaded.
+[2026.10.01 16:42:46] [INFO] ZipScript processor has been unloaded.
+[2026.10.01 16:42:46] [INFO]  processor has been unloaded.
+[2026.10.01 16:43:07] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 16:43:07] [INFO] Carbon 2.0.259.0 [2026.09.03.0] 21063e8 on Linux 
+[2026.10.01 16:43:07] [INFO]        raul on production (2026-09-06 15:39:42 +0200)
+[2026.10.01 16:43:07] [INFO] Rust   107/2633.288.1 on release (22/09/2026 08:48:10) 165217
+[2026.10.01 16:43:07] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 374ms
+[2026.10.01 16:43:08] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 43ms
+[2026.10.01 16:43:08] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 297ms
+[2026.10.01 16:43:08] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 67ms
+[2026.10.01 16:43:15] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 16:43:15] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 16:43:15] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 16:43:16] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 16:43:16] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 16:43:16] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 16:43:16] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 16:43:19] [WARN]  Failed uninstalling patch: OnNewSave[262c2cd587f74148bf3c0c96f6a64c63]
+[2026.10.01 16:43:19] [INFO] Script processor has been unloaded.
+[2026.10.01 16:43:19] [INFO] ZipScript processor has been unloaded.
+[2026.10.01 16:43:19] [INFO]  processor has been unloaded.
+[2026.10.01 16:56:58] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 16:56:58] [INFO] Carbon 2.0.259.0 [2026.09.03.0] 21063e8 on Linux 
+[2026.10.01 16:56:58] [INFO]        raul on production (2026-09-06 15:39:42 +0200)
+[2026.10.01 16:56:58] [INFO] Rust   107/2633.288.1 on release (22/09/2026 08:48:10) 165217
+[2026.10.01 16:56:59] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 402ms
+[2026.10.01 16:56:59] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 74ms
+[2026.10.01 16:56:59] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 323ms
+[2026.10.01 16:56:59] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 166ms
+[2026.10.01 16:57:07] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 16:57:07] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 16:57:07] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 16:57:07] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 16:57:07] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 16:57:07] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 16:57:07] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 16:57:10] [WARN]  Failed uninstalling patch: OnNewSave[262c2cd587f74148bf3c0c96f6a64c63]
+[2026.10.01 16:57:10] [INFO] Script processor has been unloaded.
+[2026.10.01 16:57:10] [INFO] ZipScript processor has been unloaded.
+[2026.10.01 16:57:10] [INFO]  processor has been unloaded.
+[2026.10.01 16:57:30] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 16:57:31] [INFO] Carbon 2.0.259.0 [2026.09.03.0] 21063e8 on Linux 
+[2026.10.01 16:57:31] [INFO]        raul on production (2026-09-06 15:39:42 +0200)
+[2026.10.01 16:57:31] [INFO] Rust   107/2633.288.1 on release (22/09/2026 08:48:10) 165217
+[2026.10.01 16:57:31] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 380ms
+[2026.10.01 16:57:31] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 62ms
+[2026.10.01 16:57:32] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 298ms
+[2026.10.01 16:57:32] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 172ms
+[2026.10.01 16:57:38] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 16:57:38] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 16:57:38] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 16:57:38] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 16:57:38] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 16:57:39] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 16:57:39] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 16:57:47] [WARN] [RustEdit] - No IO data found in map file
+[2026.10.01 16:57:47] [WARN] [RustEdit] - No vending data found in map file
+[2026.10.01 16:57:47] [WARN] [RustEdit] - No loot data found in map file
+[2026.10.01 16:57:47] [WARN] [RustEdit] - No APC path data found in map file
+[2026.10.01 16:57:47] [WARN] [RustEdit] - No vehicle data found in map file
+[2026.10.01 16:57:47] [WARN] [RustEdit] - No NPC data found in map file
+[2026.10.01 17:03:14] [WARN] [RustEdit] - No ocean patrol path data found in map file
+[2026.10.01 17:04:33] [WARN] Requested 'PhysgunRGT' for compilation
+[2026.10.01 17:04:33] [WARN] [ImageDatabase] The server identifier has changed. Wiping old image database. [old 0, new 121943]
+[2026.10.01 17:04:33] [INFO] [RustEdit] - Checking for updates...
+[2026.10.01 17:04:33] [INFO]  Batch completed! OSI on 24 plugins.
+[2026.10.01 17:04:57] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 17:04:57] [INFO] [RustEdit] - The RustEdit extension is up to date!
+[2026.10.01 17:05:01] [INFO] [RustEdit] - No custom vending machines found in map
+[2026.10.01 17:05:01] [INFO] [RustEdit] - 0 loot containers processed!
+[2026.10.01 17:05:01] [INFO] [RustEdit] - 0 resource entities processed!
+[2026.10.01 17:05:01] [INFO] [RustEdit] - 0 junkpiles processed!
+[2026.10.01 17:05:01] [INFO] [RustEdit] - Connected 27 shopkeepers to vending machines
+[2026.10.01 17:05:09] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [1113ms]
+[2026.10.01 17:31:13] [INFO] Saving plugin configuration and data..
+[2026.10.01 17:31:13] [INFO] Shutting down Carbon..
+[2026.10.01 17:31:14] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 17:31:14] [INFO] Unloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 17:31:14] [INFO] Unloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 17:31:14] [INFO] Unloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 17:31:14] [INFO] Unloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 17:31:14] [INFO] Unloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 17:31:14] [INFO] Unloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 17:31:14] [INFO] Unloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 17:31:14] [INFO] Unloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 17:31:14] [INFO] Unloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 17:31:14] [INFO] Unloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 17:31:15] [INFO] Unloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 17:31:16] [INFO] Unloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 17:31:16] [INFO] Unloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 17:49:04] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 17:49:04] [INFO] Carbon 2.0.261.0 [2026.10.01.0] c74c4ca on Linux 
+[2026.10.01 17:49:04] [INFO]        raul on production (2026-10-01 18:53:35 +0200)
+[2026.10.01 17:49:04] [INFO] Rust   115/2634.289.1 on release (01/10/2026 13:49:11) 166494
+[2026.10.01 17:49:05] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 437ms
+[2026.10.01 17:49:05] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 47ms
+[2026.10.01 17:49:06] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 384ms
+[2026.10.01 17:49:06] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 84ms
+[2026.10.01 17:49:16] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 17:49:16] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 17:49:16] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 17:49:16] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 17:49:17] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 17:49:17] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 17:49:17] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 17:49:21] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [908ms]
+[2026.10.01 17:49:31] [WARN] [RustEdit] - No IO data found in map file
+[2026.10.01 17:49:31] [WARN] [RustEdit] - No vending data found in map file
+[2026.10.01 17:49:31] [WARN] [RustEdit] - No loot data found in map file
+[2026.10.01 17:49:31] [WARN] [RustEdit] - No APC path data found in map file
+[2026.10.01 17:49:31] [WARN] [RustEdit] - No vehicle data found in map file
+[2026.10.01 17:49:31] [WARN] [RustEdit] - No NPC data found in map file
+[2026.10.01 17:56:21] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 17:56:21] [INFO] Carbon 2.0.261.0 [2026.10.01.0] c74c4ca on Linux 
+[2026.10.01 17:56:21] [INFO]        raul on production (2026-10-01 18:53:35 +0200)
+[2026.10.01 17:56:21] [INFO] Rust   115/2634.289.1 on release (01/10/2026 13:49:11) 166494
+[2026.10.01 17:56:22] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 487ms
+[2026.10.01 17:56:22] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 47ms
+[2026.10.01 17:56:23] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 329ms
+[2026.10.01 17:56:23] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 72ms
+[2026.10.01 17:56:29] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 17:56:30] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 17:56:30] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 17:56:30] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 17:56:30] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 17:56:30] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 17:56:30] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 17:56:32] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [823ms]
+[2026.10.01 17:56:38] [INFO] [RustEdit] - IO data loaded and ready to be processed!
+[2026.10.01 17:56:38] [INFO] [RustEdit] - Vending data loaded and ready to be processed!
+[2026.10.01 17:56:38] [WARN] [RustEdit] - No loot data found in map file
+[2026.10.01 17:56:38] [INFO] [RustEdit] - APC path data loaded and ready to be processed!
+[2026.10.01 17:56:38] [WARN] [RustEdit] - No vehicle data found in map file
+[2026.10.01 17:56:38] [INFO] [RustEdit] - NPC data loaded and ready to be processed!
+[2026.10.01 17:56:45] [WARN] [RustEdit] - No ocean patrol path data found in map file
+[2026.10.01 17:57:21] [WARN] [ImageDatabase] The server identifier has changed. Wiping old image database. [old 121943, new 58498]
+[2026.10.01 17:57:21] [INFO] [RustEdit] - Checking for updates...
+[2026.10.01 17:57:21] [INFO]  Batch completed! OSI on 25 plugins.
+[2026.10.01 17:57:37] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 17:57:37] [INFO] [RustEdit] - The RustEdit extension is up to date!
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:37] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at BaseEntity.GetRpcTargetNetworkGroup (RpcTarget& target) (at <616082a036f44680a1abefc5766796cc>:0)
+  at BaseEntity.ClientRPC (RpcTarget target, ProtoBuf.UpdateItem arg1) (at <616082a036f44680a1abefc5766796cc>:0)
+  at WorldItem.SendItemUpdate () (at <616082a036f44680a1abefc5766796cc>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <9eb95eb8095e4188a231283b0e509a46>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <9af42e0489ee47e08d6c7099c5bb8736>:0)
+[2026.10.01 17:57:40] [INFO] [RustEdit] - Processing 207 IO entities
+[2026.10.01 17:57:44] [INFO] [RustEdit] - Successfully connected 207 IO links
+[2026.10.01 17:57:44] [INFO] [RustEdit] - Generating 1 APC paths from map file
+[2026.10.01 17:57:44] [INFO] [RustEdit] - 1 APC patrol paths successfully processed!
+[2026.10.01 17:57:44] [INFO] [RustEdit] - No custom vending machines found in map
+[2026.10.01 17:57:44] [INFO] [RustEdit] - 525 loot containers processed!
+[2026.10.01 17:57:44] [INFO] [RustEdit] - Created 7 keycard desk respawners
+[2026.10.01 17:57:44] [INFO] [RustEdit] - 28 resource entities processed!
+[2026.10.01 17:57:44] [INFO] [RustEdit] - 5 junkpiles processed!
+[2026.10.01 17:57:44] [INFO] [RustEdit] - Created 208 NPC spawn handlers!
+[2026.10.01 17:57:44] [INFO] [RustEdit] - Connected 18 shopkeepers to vending machines
+[2026.10.01 17:57:47] [INFO] [RustEdit] - BradleyAPC Spawned at :(13.39, 9.25, 18.83)
+[2026.10.01 18:01:59] [INFO] #  package                                                                          author                                           version  hook time  hook fires  hook memory  hook lag  hook exceptions  compile time  uptime
+1  Carbon Community (1)                                                                                                                                                                                                          
+   Core                                                                             Carbon Community                                 v1.0.0              3           1.9mb                                                 4m22s 
+2  Scripts (1)                                                                                                                                                                                                                   
+   PhysgunRGT                                                                       Physgun                                          v1.0.0              3           44.0kb                                  823ms [20ms]  4m21s 
+3  Zip Scripts                                                                                                                                                                                                                   
+4  Chaos - k1lly0u (Oxide Extension) (2)                                                                                                                                                                                         
+   Chaos Commands                                                                   k1lly0u                                          v1.0.64             4                                                                 4m22s 
+   Chaos Plugin Interface                                                           k1lly0u                                          v1.0.64             3                                                                 4m22s 
+5  ChaosNPC - k1lly0u (Oxide Extension) (2)                                                                                                                                                                                      
+   ChaosNPC                                                                         k1lly0u                                          v3.0.45             3                                                                 4m22s 
+   ChaosNPC Commands                                                                k1lly0u                                          v3.0.45             4                                                                 4m22s 
+6  Discord - PsychoTea & DylanSMR & Tricky & Kirollos & MJSU (Oxide Extension) (1)                                                                                                                                               
+   Discord Extension                                                                PsychoTea & DylanSMR & Tricky & Kirollos & MJSU  v3.1.7              5                                                                 4m22s 
+7  RustEdit - k1lly0u (Oxide Extension) (18)                                                                                                                                                                                     
+   RustEdit Automatic Updater                                                       Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Core                                                                    Chaos                                            v1.0.1              22,834                                                            4m22s 
+   RustEdit Deployable Core                                                         Chaos                                            v1.0.1              55,897                                                            4m22s 
+   RustEdit IO Core                                                                 Chaos                                            v1.0.1              2,106                                                             4m22s 
+   RustEdit Vending Core                                                            Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Loot Core                                                               Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Diesel Collectable Spawner                                              Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Desk Keycard Spawner                                                    Chaos                                            v1.0.1              22,762                                                            4m22s 
+   RustEdit Resource Core                                                           Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit JunkPile Core                                                           Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Spawn Core                                                              Chaos                                            v1.0.1              22,762                                                            4m22s 
+   RustEdit Ocean Path                                                              Chaos                                            v1.0.1              3                                                                 4m22s 
+   RustEdit APC Core                                                                Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Vehicle Core                                                            Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit NPC Core                                                                Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Excavator Rotation Correction                                           Chaos                                            v1.0.1              3                                                                 4m22s 
+   RustEdit Custom Topology Layers                                                  Chaos                                            v1.0.1              2                                                                 4m22s 
+   RustEdit Shop Keepers                                                            Chaos                                            v1.0.1              35                                                                4m22s
+*  unloaded plugins (0)
+*  failed plugins (0)  line  stacktrace
+[2026.10.01 18:09:42] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 18:10:11] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 18:11:20] [INFO] [uMod] Caching plugin metadata for displaying plugins in the Admin module -> Plugins tab. This might take a while..
+[2026.10.01 18:11:21] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 18:11:21] [INFO] Caching plugin metadata page 0 out of 157
+[2026.10.01 18:12:22] [INFO] Saving plugin configuration and data..
+[2026.10.01 18:12:22] [INFO] Shutting down Carbon..
+[2026.10.01 18:12:22] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 18:12:22] [INFO] Unloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 18:12:22] [INFO] Unloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 18:12:22] [INFO] Unloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 18:12:22] [INFO] Unloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 18:12:22] [INFO] Unloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 18:12:22] [INFO] Unloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 18:12:22] [INFO] Unloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 18:12:23] [INFO] Unloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 18:12:24] [INFO] Unloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 18:12:24] [INFO] Unloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 18:12:24] [INFO] Unloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 18:13:15] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 18:13:15] [INFO] Carbon 2.0.261.0 [2026.10.01.0] c74c4ca on Linux 
+[2026.10.01 18:13:15] [INFO]        raul on production (2026-10-01 18:53:35 +0200)
+[2026.10.01 18:13:15] [INFO] Rust   115/2634.289.1 on release (01/10/2026 13:49:11) 166494
+[2026.10.01 18:13:16] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 455ms
+[2026.10.01 18:13:16] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 73ms
+[2026.10.01 18:13:16] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 304ms
+[2026.10.01 18:13:17] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 91ms
+[2026.10.01 18:13:24] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 18:13:24] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 18:13:24] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 18:13:24] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 18:13:24] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 18:13:24] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 18:13:24] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 18:13:25] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 18:13:25] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 18:13:25] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 18:13:26] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [752ms]
+[2026.10.01 18:13:34] [INFO] [RustEdit] - IO data loaded and ready to be processed!
+[2026.10.01 18:13:34] [INFO] [RustEdit] - Vending data loaded and ready to be processed!
+[2026.10.01 18:13:34] [WARN] [RustEdit] - No loot data found in map file
+[2026.10.01 18:13:34] [INFO] [RustEdit] - APC path data loaded and ready to be processed!
+[2026.10.01 18:13:34] [WARN] [RustEdit] - No vehicle data found in map file
+[2026.10.01 18:13:34] [INFO] [RustEdit] - NPC data loaded and ready to be processed!
+[2026.10.01 18:13:41] [WARN] [RustEdit] - No ocean patrol path data found in map file
+[2026.10.01 18:14:00] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 18:14:00] [WARN] Requested 'PhysgunRGT' for compilation
+[2026.10.01 18:14:00] [INFO] [uMod] Caching plugin metadata for displaying plugins in the Admin module -> Plugins tab. This might take a while..
+[2026.10.01 18:14:00] [INFO] [RustEdit] - Checking for updates...
+[2026.10.01 18:14:01] [INFO]  Batch completed! OSI on 24 plugins.
+[2026.10.01 18:14:17] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 18:14:17] [INFO] [RustEdit] - The RustEdit extension is up to date!
+[2026.10.01 18:14:17] [INFO] Caching plugin metadata page 0 out of 157
+[2026.10.01 18:14:18] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [198ms]
+[2026.10.01 18:14:26] [INFO] [RustEdit] - Processing 207 IO entities
+[2026.10.01 18:14:29] [INFO] [RustEdit] - Successfully connected 207 IO links
+[2026.10.01 18:14:29] [INFO] [RustEdit] - Generating 1 APC paths from map file
+[2026.10.01 18:14:29] [INFO] [RustEdit] - 1 APC patrol paths successfully processed!
+[2026.10.01 18:14:29] [INFO] [RustEdit] - No custom vending machines found in map
+[2026.10.01 18:14:30] [INFO] [RustEdit] - 525 loot containers processed!
+[2026.10.01 18:14:30] [INFO] [RustEdit] - Created 7 keycard desk respawners
+[2026.10.01 18:14:30] [INFO] [RustEdit] - 28 resource entities processed!
+[2026.10.01 18:14:30] [INFO] [RustEdit] - 5 junkpiles processed!
+[2026.10.01 18:14:30] [INFO] [RustEdit] - Created 208 NPC spawn handlers!
+[2026.10.01 18:14:30] [INFO] [RustEdit] - Connected 18 shopkeepers to vending machines
+[2026.10.01 18:14:32] [INFO] [RustEdit] - BradleyAPC Spawned at :(77.67, 9.25, 23.41)
+[2026.10.01 18:16:12] [INFO] [Core] Processing Oxide.Plugins.PhysgunRGT
+[2026.10.01 18:16:12] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 18:16:12] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [198ms]
+[2026.10.01 18:16:50] [INFO] Saving plugin configuration and data..
+[2026.10.01 18:16:50] [INFO] Shutting down Carbon..
+[2026.10.01 18:16:51] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 18:16:51] [INFO] Unloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 18:16:51] [INFO] Unloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 18:16:51] [INFO] Unloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 18:16:51] [INFO] Unloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 18:16:51] [INFO] Unloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 18:16:51] [INFO] Unloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 18:16:52] [INFO] Unloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 18:19:37] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.01 18:19:37] [INFO] Carbon 2.0.261.0 [2026.10.01.0] c74c4ca on Linux 
+[2026.10.01 18:19:37] [INFO]        raul on production (2026-10-01 18:53:35 +0200)
+[2026.10.01 18:19:37] [INFO] Rust   115/2634.289.1 on release (01/10/2026 13:49:11) 166494
+[2026.10.01 18:19:37] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 346ms
+[2026.10.01 18:19:37] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 69ms
+[2026.10.01 18:19:38] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 303ms
+[2026.10.01 18:19:38] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 120ms
+[2026.10.01 18:19:44] [INFO] Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 18:19:44] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 18:19:44] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 18:19:44] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 18:19:44] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.01 18:19:45] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 18:19:45] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.01 18:19:47] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [762ms]
+[2026.10.01 18:20:02] [WARN] [Image Library] Config update detected! Updating config values...
+[2026.10.01 18:20:02] [WARN] [Image Library] Config update completed!
+[2026.10.01 18:20:02] [INFO] Loaded plugin Image Library v2.0.67 by Absolut & K1lly0u [458ms]
+[2026.10.01 18:20:02] [INFO] Loaded plugin Monument Finder v3.1.5 by WhiteThunder [195ms]
+[2026.10.01 18:20:02] [INFO] Loaded plugin Player DLC API v1.6.2 by k1lly0u [61ms]
+[2026.10.01 18:20:02] [INFO] Loaded plugin Discord Status (Webhook) v6.1.0 by AhmadAkal [41ms]
+[2026.10.01 18:20:03] [INFO] Loaded plugin MedioReports v2.2.1 by MediocratyItself [49ms]
+[2026.10.01 18:20:03] [INFO] [NightshadeConsoleFilter] Loaded. Active filters: 829. Suppressing selected Unity/Rust log spam after plugin load.
+[2026.10.01 18:20:03] [INFO] Loaded plugin NightshadeConsoleFilter v1.0.1 by Nightshade [70ms]
+[2026.10.01 18:20:03] [INFO] Loaded plugin PopControl v1.7.0 by Papa [125ms]
+[2026.10.01 18:20:03] [INFO] Loaded plugin Queue Holder v1.0.2 by Tryhard [54ms]
+[2026.10.01 18:20:04] [INFO] Loaded plugin Monuments Watcher v0.1.12 by IIIaKa [279ms]
+[2026.10.01 18:20:04] [INFO] Loaded plugin Nightshade Purge Status v1.0.0 by Nightshade [114ms]
+[2026.10.01 18:20:05] [WARN] Command 'pvemode' already exists.
+[2026.10.01 18:20:05] [INFO] [NightshadePvPOptOut] [NightshadePvPOptOut] Loaded 2 opted-out players.
+[2026.10.01 18:20:05] [INFO] Loaded plugin NightshadePvPOptOut v1.0.0 by Nightshade [43ms]
+[2026.10.01 18:20:06] [INFO] Loaded plugin TruePVE v2.4.4 by nivex [732ms]
+[2026.10.01 18:20:07] [INFO] Loaded plugin ZoneDomes v2.0.2 by k1lly0u [61ms]
+[2026.10.01 18:20:07] [INFO] Loaded plugin Zone Manager v3.1.14 by k1lly0u [403ms]
+[2026.10.01 18:20:09] [INFO] Loaded plugin Zone Manager Auto Zones v1.4.5 by FastBurst [225ms]
+[2026.10.01 18:20:09] [WARN] [Offline Raid Protection] Config update detected! Update config values...
+[2026.10.01 18:20:10] [WARN] [Offline Raid Protection] Config update has been completed!
+[2026.10.01 18:20:10] [INFO] Loaded plugin Offline Raid Protection v1.8.2 by realedwin/HunterZ [891ms]
+[2026.10.01 18:20:11] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Loaded share data: 0 entries. Known players: 133.
+[2026.10.01 18:20:11] [INFO] Loaded plugin UnifiedLootProtection v1.0.1 by Nightshade [183ms]
+[2026.10.01 18:20:11] [INFO] Loaded plugin BetterTC v1.7.1 by ninco90 [522ms]
+[2026.10.01 18:20:11] [INFO] Loaded plugin Bodies to Bags v2.0.0 by Ryan [67ms]
+[2026.10.01 18:20:12] [INFO] Loaded plugin Chest Stacks v1.4.7 by supreme [125ms]
+[2026.10.01 18:20:12] [INFO] Loaded plugin CustomC4RocketTiers v1.1.0 by Blackmatic [343ms]
+[2026.10.01 18:20:12] [INFO] Loaded plugin Hardy Planters v1.0.12 by imthenewguy [160ms]
+[2026.10.01 18:20:13] [INFO] Loaded plugin NightshadeCrateEjector v1.0.0 by Nightshade [108ms]
+[2026.10.01 18:20:13] [INFO] Loaded plugin Remover Tool v4.3.48 by Reneb/Fuji/Arainrr/Tryhard [282ms]
+[2026.10.01 18:20:14] [INFO] Loaded plugin Restore Upon Death v0.6.5 by k1lly0u [93ms]
+[2026.10.01 18:20:14] [INFO] Loaded plugin VirtualQuarries v2.5.8 by ThePitereq [370ms]
+[2026.10.01 18:20:15] [INFO] Loaded plugin WirelessPower v1.2.9 by RickySpanish [258ms]
+[2026.10.01 18:20:15] [INFO] Loaded plugin aQuarry v2.0.6 by AvG Лаймон [212ms]
+[2026.10.01 18:20:16] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.OnStorageItemTransferEnd_Patch1' (IndustrialStorageOnStorageItemTransferEnd) method [AfterPluginInit].
+[2026.10.01 18:20:16] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.get_Container_Patch1' (IndustrialStorageAdaptorPatch) method [AfterPluginInit].
+[2026.10.01 18:20:16] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.InputSlotRange_Patch1' (IndustrialStorageAdaptor_InputSlotRange) method [AfterPluginInit].
+[2026.10.01 18:20:16] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.OutputSlotRange_Patch1' (IndustrialStorageAdaptor_OutputSlotRange) method [AfterPluginInit].
+[2026.10.01 18:20:16] [INFO] Loaded plugin extendedindustrial v1.2.6 by bmgjet [168ms]
+[2026.10.01 18:20:16] [ERRO] Failed compiling 'Backpacks.cs':
+[2026.10.01 18:20:16] [ERRO]   1. Cannot implicitly convert type 'System.Action<Item, bool>' to 'System.Action<Item, bool, BasePlayer>' [CS0029]
+     (Backpacks 74 line 6055)
+[2026.10.01 18:20:17] [INFO] Loaded plugin IQTeleportation v1.37.7 by Mercury [491ms]
+[2026.10.01 18:20:19] [INFO] Loaded plugin PlayerRanks v2.3.4 by Steenamaroo [411ms]
+[2026.10.01 18:20:20] [INFO] Loaded plugin Sign Artist v1.4.6 by Whispers88 [164ms]
+[2026.10.01 18:20:20] [ERRO] Failed compiling 'Skinner.cs':
+[2026.10.01 18:20:20] [ERRO]   1. No overload for 'Preremove' matches delegate 'Action<Item, BasePlayer>' [CS0123]
+     (Skinner 45 line 2891)
+[2026.10.01 18:20:20] [ERRO]   2. There is no argument given that corresponds to the required parameter 'arg3' of 'Action<Item, bool, BasePlayer>' [CS7036]
+     (Skinner 28 line 3291)
+[2026.10.01 18:20:21] [INFO] Loaded plugin Team Leader Online v3.0.1 by PureForce [93ms]
+[2026.10.01 18:20:22] [INFO] Loaded plugin UltimateLocker v2.1.5 by Scalbox [1072ms]
+[2026.10.01 18:20:22] [INFO] Loaded plugin VIPPerks v1.2.0 by Nightshade [109ms]
+[2026.10.01 18:20:23] [INFO] Loaded plugin Cases v2.0.1 by Mevent [313ms]
+[2026.10.01 18:20:23] [INFO] Loaded plugin NightshadeRecycler v3.2.1 by Nightshade [128ms]
+[2026.10.01 18:20:24] [INFO] Loaded plugin NightshadeShop v1.4.2 by Rustonauts & Nightshade [284ms]
+[2026.10.01 18:20:24] [INFO] Loaded plugin Personal Marketplace v1.4.1 by ZEODE [159ms]
+[2026.10.01 18:20:25] [INFO] Loaded plugin Server Rewards v2.0.8 by k1lly0u [499ms]
+[2026.10.01 18:20:25] [INFO] Loaded plugin Server Rewards Wipe v2.0.2 by ZEODE [66ms]
+[2026.10.01 18:20:25] [INFO] Loaded plugin Super Card v1.0.7 by Mevent [81ms]
+[2026.10.01 18:20:45] [INFO] Loaded plugin Activity Rewards v0.1.9 by IIIaKa [284ms]
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Shield.ServerSideAttack_Patch1' (Shield_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'ChickenCoop.SubmitEggForHatching_Patch1' (ChickenCoop_SubmitEggForHatching_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'FarmableAnimal.ServerPetChicken_Patch1' (FarmableAnimal_ServerPetChicken_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.LivestockAnimal.AddFamiliarity_Patch1' (LivestockAnimal_AddFamiliarity_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.LivestockAnimal.HandlingCreditFor_Patch1' (LivestockAnimal_HandlingCreditFor_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Cow.TryMilk_Patch1' (Cow_TryMilk_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Sheep.GiveShearItems_Patch1' (Sheep_GiveShearItems_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Sheep.Shear_Patch1' (Sheep_Shear_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.Server_SelectAnimal_Patch1' (LivestockVendor_Server_SelectAnimal_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.Server_SelectWool_Patch1' (LivestockVendor_Server_SelectWool_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.RollOffers_Patch1' (LivestockVendor_RollOffers_AddOffers_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.RollOffers_Patch2' (LivestockVendor_RollOffers_ScaleOffers_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'FishLookup.GetFish_Patch1' (FishLookup_GetFish_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'MetalDetectorSource.CreateFlag_Patch1' (Item_SplitItem_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'MetalDetectorFlag.OnFullyDug_Patch1' (OnFullyDug_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'BaseFishingRod.Server_RequestCast_Patch1' (FishingRod_Cast_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Recycler.StopRecycling_Patch1' (StopRecycling_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'Recycler.GetRecyclerStats_Patch2' (Recycler_GetRecyclerStats_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'BasePlayer.RadiationProtection_Patch1' (RadiationProtection_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] [SkillTree] Automatically Harmony patched 'ItemModContainerArmorSlot.CreateForPlayer_Patch1' (ItemModContainerArmorSlot_Patch) method [AfterPluginInit].
+[2026.10.01 18:20:46] [INFO] Loaded plugin Skill Tree v1.8.0 by imthenewguy [1851ms]
+[2026.10.01 18:20:46] [INFO] Loaded plugin SkillTreeXPEvent v1.0.15 by imthenewguy [180ms]
+[2026.10.01 18:20:47] [INFO] Loaded plugin BuyableTugboats v1.0.9 by imthenewguy [135ms]
+[2026.10.01 18:20:47] [INFO] Loaded plugin Claim Vehicle v1.8.1 by WhiteThunder [116ms]
+[2026.10.01 18:20:47] [INFO] Loaded plugin Craft Car Chassis v1.2.5 by WhiteThunder [169ms]
+[2026.10.01 18:20:48] [INFO] Loaded plugin Nightshade MLRS Truck v1.0.8 by Nightshade [106ms]
+[2026.10.01 18:20:49] [INFO] Loaded plugin Vehicle Decay Protection v2.9.0 by WhiteThunder [142ms]
+[2026.10.01 18:20:51] [INFO] Loaded plugin Vehicle Licence v1.9.2 by Mabel [961ms]
+[2026.10.01 18:20:52] [INFO] Loaded plugin ArmoredTrain v2.0.5 by Adem [790ms]
+[2026.10.01 18:20:53] [WARN] [Bradley Drops] WARN: Config update detected! Updating config...
+[2026.10.01 18:20:53] [WARN] [Bradley Drops] WARN: Config updated successfully.
+[2026.10.01 18:20:53] [INFO] Loaded plugin Bradley Drops v1.4.1 by ZEODE [427ms]
+[2026.10.01 18:20:54] [INFO] Loaded plugin Convoy v3.0.4 by Adem [838ms]
+[2026.10.01 18:20:54] [ERRO] Failed compiling 'DungeonEvents.cs':
+[2026.10.01 18:20:54] [ERRO]   1. An expression of type 'BaseAnimalNPC' cannot be handled by a pattern of type 'Chicken'. [CS8121]
+     (DungeonEvents 27 line 8599)
+[2026.10.01 18:20:55] [INFO] Loaded plugin EventsManager v4.2.2 by Mevent & Qbis [657ms]
+[2026.10.01 18:20:56] [INFO] Loaded plugin EventsManagerNotifier v1.0.11 by Mevent & M&B-Studios [50ms]
+[2026.10.01 18:20:56] [WARN] [Heli Signals] WARN: Config update detected! Updating config file...
+[2026.10.01 18:20:56] [WARN] [Heli Signals] WARN: Config update complete!
+[2026.10.01 18:20:57] [INFO] Loaded plugin Heli Signals v1.4.1 by ZEODE [418ms]
+[2026.10.01 18:20:57] [INFO] Loaded plugin HideAndSeek v1.1.0 by Nightshade [127ms]
+[2026.10.01 18:20:57] [INFO] Loaded plugin NightshadeAnnouncer v1.3.1 by Nightshade [146ms]
+[2026.10.01 18:20:58] [INFO] Loaded plugin NightshadeVoteDay v1.2.0 by Nightshade [43ms]
+[2026.10.01 18:20:58] [INFO] Loaded plugin Copy Paste v4.3.0 by misticos [444ms]
+[2026.10.01 18:20:59] [INFO] Loaded plugin DefendableHomes v1.2.2 by KpucTaJl [383ms]
+[2026.10.01 18:21:08] [INFO] Loaded plugin NightshadeRaidbase v1.0.16 by Nightshade [236ms]
+[2026.10.01 18:21:08] [ERRO] Failed compiling 'RaidableBases.cs':
+[2026.10.01 18:21:08] [ERRO]   1. Cannot implicitly convert type 'System.Action<Item>' to 'System.Action<Item, BasePlayer>' [CS0029]
+     (RaidableBases 57 line 8570)
+[2026.10.01 18:21:10] [INFO] Loaded plugin NpcSpawn v3.4.1 by KpucTaJl [1173ms]
+[2026.10.01 18:21:11] [INFO] Loaded plugin Spawns v2.0.36 by Reneb / k1lly0u [99ms]
+[2026.10.01 18:21:11] [INFO] [ZombieHorde] Automatically Harmony patched 'TravellingVendor.IsInvalidPlayer_Patch1' (TravellingVendorIsInvalidPlayerPatch) method [AfterPluginInit].
+[2026.10.01 18:21:11] [INFO] Loaded plugin ZombieHorde v0.6.36 by k1lly0u [197ms]
+[2026.10.01 18:21:11] [INFO] Loaded plugin Advanced Status v0.1.26 by IIIaKa [203ms]
+[2026.10.01 18:21:12] [INFO] Loaded plugin Convert Status v1.0.8 by Orange [63ms]
+[2026.10.01 18:21:12] [INFO] Loaded plugin Hud v3.5.2 by ahigao [244ms]
+[2026.10.01 18:21:12] [INFO] Loaded plugin NPC Health Bar v1.0.10 by Chris [168ms]
+[2026.10.01 18:21:13] [INFO] Loaded plugin NightshadeChat v1.0.0 by Rustonauts & Nightshade [280ms]
+[2026.10.01 18:21:13] [INFO] Loaded plugin Notify v1.0.15 by Mevent [136ms]
+[2026.10.01 18:21:13] [INFO] Loaded plugin PopUpAPI v2.0.4 by ThePitereq [52ms]
+[2026.10.01 18:21:14] [INFO] Loaded plugin Restart Status v0.1.1 by IIIaKa [129ms]
+[2026.10.01 18:21:14] [INFO] Loaded plugin ServerPanel v2.0.25 by Mevent [896ms]
+[2026.10.01 18:21:15] [INFO] [ServerPanel Migrations] Loaded 6 migrations
+[2026.10.01 18:21:15] [INFO] Loaded plugin ServerPanel Migrations v2.0.25 by Mevent [312ms]
+[2026.10.01 18:21:16] [INFO] Loaded plugin ServerPanel Pop Ups v2.0.25 by Mevent [385ms]
+[2026.10.01 18:21:16] [INFO] Loaded plugin Sort Button v2.7.0 by WhiteThunder, MON@H [143ms]
+[2026.10.01 18:21:17] [INFO] Loaded plugin Teleport Status v0.1.2 by IIIaKa [167ms]
+[2026.10.01 18:21:17] [INFO] Loaded plugin Wipe Schedule v2.0.22 by Mevent [467ms]
+[2026.10.01 18:21:18] [INFO] Loaded plugin XFastButtons v1.1.0 by Monster [174ms]
+[2026.10.01 18:21:21] [INFO] Loaded plugin AdminMenu v1.4.10 by 0xF // dsc.gg/0xf-plugins [633ms]
+[2026.10.01 18:21:22] [INFO] Loaded plugin PowerfulAdmin v1.2.7 by codeboy [2340ms]
+[2026.10.01 18:21:22] [INFO] [PowerfulAdmin Discord] Discord bot is disabled in PowerfulAdmin settings - bot idle.
+[2026.10.01 18:21:22] [INFO] Loaded plugin PowerfulAdmin Discord v1.1.0 by codeboy [156ms]
+[2026.10.01 18:21:22] [INFO] Loaded plugin Telekinesis v3.3.1 by WhiteThunder [242ms]
+[2026.10.01 18:21:23] [INFO] Loaded plugin ServerPanel Installer v2.0.25 by Mevent [165ms]
+[2026.10.01 18:21:31] [INFO] [RustEdit] - IO data loaded and ready to be processed!
+[2026.10.01 18:21:31] [INFO] [RustEdit] - Vending data loaded and ready to be processed!
+[2026.10.01 18:21:31] [WARN] [RustEdit] - No loot data found in map file
+[2026.10.01 18:21:31] [INFO] [RustEdit] - APC path data loaded and ready to be processed!
+[2026.10.01 18:21:31] [WARN] [RustEdit] - No vehicle data found in map file
+[2026.10.01 18:21:31] [INFO] [RustEdit] - NPC data loaded and ready to be processed!
+[2026.10.01 18:21:39] [WARN] [RustEdit] - No ocean patrol path data found in map file
+[2026.10.01 18:21:52] [INFO] [NightshadeAnnouncer] Announcement sent: [Nightshade] A portal tears open at sea… Deep Sea has spawned (North).
+[2026.10.01 18:21:52] [INFO] [NightshadeAnnouncer] NightshadeAnnouncer: Deep Sea portal fired at (0.00, 0.00, 2500.00) (North)
+[2026.10.01 18:22:03] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 18:22:03] [WARN] Requested 'PhysgunRGT' for compilation
+[2026.10.01 18:22:03] [INFO] [uMod] Caching plugin metadata for displaying plugins in the Admin module -> Plugins tab. This might take a while..
+[2026.10.01 18:22:03] [WARN] [Image Library] The CommunityEntity instance ID has changed! Due to the way CUI works in Rust all previously stored images must be removed and re-stored using the new ID as reference so clients can find the images. These images will be added to a new load order. Interupting this process will result in being required to re-download these images from the web
+[2026.10.01 18:22:03] [INFO] [Discord Status (Webhook)] The plugin will attempt to edit the message with ID: 1512407393131171985
+[2026.10.01 18:22:03] [INFO] [PopControl] [LWPop] Captured original maxplayers value: 100
+[2026.10.01 18:22:03] [INFO] [PopControl] [LWPop] maxplayers -> 50 (online=0, joining=0, queued=0, offset=1, bounds=50-100)
+[2026.10.01 18:22:03] [WARN] [Monuments Watcher] Wipe detected! Monument boundaries(excluding custom ones) have been reset to ensure proper creation of new boundaries.
+[2026.10.01 18:22:03] [WARN]  Zone Manager Auto Zones v1.4.5 by FastBurst hook 'OnServerInitialized' took longer than 100ms [148ms]
+[2026.10.01 18:22:03] [INFO] [BetterTC] Harmony Patched: RPC_PickupWallpaperStart_Patch
+[2026.10.01 18:22:03] [INFO] [BetterTC] Harmony Patched: HasClothForPlacement_Patch
+[2026.10.01 18:22:03] [INFO] [BetterTC] Harmony Patched: CheckWallpaper_Patch
+[2026.10.01 18:22:03] [INFO] [BetterTC] Harmony Patched (Force both sides wallpapers: true)
+[2026.10.01 18:22:03] [INFO] [Hardy Planters] Found and setup: 0 planter boxes.
+[2026.10.01 18:22:03] [INFO] [IQTeleportation] Received information about 56 monuments on the map
+[2026.10.01 18:22:03] [INFO] [IQTeleportation] Saved 0 tugboats and 0 player boats for setting players' home points.
+
+[2026.10.01 18:22:03] [INFO] [IQTeleportation] Saved 62 apartment rooms for setting players' home points
+[2026.10.01 18:22:03] [INFO] [IQTeleportation] Initialized 3 warps; reserved commands: outpost, bandit, apartments
+[2026.10.01 18:22:03] [WARN] [PlayerRanks] Clans is not installed and will not be used.
+[2026.10.01 18:22:03] [WARN] [PlayerRanks] Rust:IO is not installed and will not be used.
+[2026.10.01 18:22:03] [WARN] [PlayerRanks] PlayTime Tracker is not installed and will not be used.
+[2026.10.01 18:22:03] [WARN] [PlayerRanks] Economics is not installed and will not be used.
+[2026.10.01 18:22:03] [WARN] [Sign Artist] Waiting for Steamworks to update item definitions....
+[2026.10.01 18:22:03] [INFO] [UltimateLocker] Waiting for Steam Workshop to update item definitions....
+[2026.10.01 18:22:03] [ERRO] [Cases] Items with the same ID found 11
+[2026.10.01 18:22:03] [ERRO] [Cases] Items with the same ID found 12
+[2026.10.01 18:22:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: Marketplace_Server_CanAcceptOrder_Patch
+[2026.10.01 18:22:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: MarketTerminal_Server_SetMarketplaceHasPower_Patch
+[2026.10.01 18:22:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: Marketplace_ChargeFraction_Patch
+[2026.10.01 18:22:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: Marketplace_Server_RefreshChargeState_Patch
+[2026.10.01 18:22:04] [WARN] [Activity Rewards] MonumentsWatcher plugin not found! MonumentsWatcher is required to work with monuments!
+* https://codefling.com/plugins/monuments-watcher
+[2026.10.01 18:22:04] [WARN] [Activity Rewards] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Adding new tree: Husbandry
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Removed node Clever Incubator from Cooking. It now belongs to the Husbandry tree.
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Removed node Soft Touch from Cooking. It now belongs to the Husbandry tree.
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Removed node Factory Farmer from Cooking. It now belongs to the Husbandry tree.
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Spawned: workbench1.deployed
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Spawned: workbench2.deployed
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Spawned: workbench3.deployed
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Loading 9 images into ImageLibrary
+[2026.10.01 18:22:04] [INFO] [Skill Tree] Tracking 2 required nodes.
+[2026.10.01 18:22:05] [INFO] [NpcSpawn] Loading custom navigation mesh files...
+[2026.10.01 18:22:05] [INFO] [NpcSpawn] All custom navigation mesh files have loaded successfully!
+[2026.10.01 18:22:05] [WARN]  NpcSpawn v3.4.1 by KpucTaJl hook 'OnServerInitialized' took longer than 100ms [609ms]
+[2026.10.01 18:22:05] [INFO] [ZombieHorde] Validating horde profiles...
+[2026.10.01 18:22:05] [INFO] [ZombieHorde] Loadout profile loadout-4 does not exist. Removing from config
+[2026.10.01 18:22:05] [WARN]  ZombieHorde v0.6.36 by k1lly0u hook 'ChaosNPC_PreSpawn' took longer than 100ms [418ms]
+[2026.10.01 18:22:05] [WARN] [Restart Status] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[2026.10.01 18:22:05] [WARN] Command 'help' already exists.
+[2026.10.01 18:22:05] [WARN] Command 'help' already exists.
+[2026.10.01 18:22:05] [WARN] [Teleport Status] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[2026.10.01 18:22:05] [WARN]  Wipe Schedule v2.0.22 by Mevent hook 'OnServerInitialized' took longer than 100ms [269ms]
+[2026.10.01 18:22:05] [WARN] [XFastButtons] 
+-----------------------------
+     Author - Monster
+     VK - vk.com/idannopol
+     Discord - Monster#4837
+-----------------------------
+[2026.10.01 18:22:06] [WARN]  PowerfulAdmin v1.2.7 by codeboy hook 'OnServerInitialized' took longer than 100ms [176ms]
+[2026.10.01 18:22:06] [INFO] [RustEdit] - Checking for updates...
+[2026.10.01 18:22:06] [INFO]  Batch completed! OSI on 110 plugins.
+[2026.10.01 18:22:23] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.01 18:22:23] [INFO] [BetterTC] CheckUpdate: No new items found in remote data.
+[2026.10.01 18:22:23] [INFO] [ServerPanel Installer] Server Panel data loaded successfully!
+[2026.10.01 18:22:23] [INFO] [VirtualQuarries] [VirtualQuarries ERROR] Quarry with ID 0 had missing resource container! Recreating...
+[2026.10.01 18:22:23] [INFO] [VirtualQuarries] [VirtualQuarries ERROR] Quarry with ID 1 had missing resource container! Recreating...
+[2026.10.01 18:22:23] [INFO] [WirelessPower] Added 1 new consumer prefabs to config. Edit priorities as desired.
+[2026.10.01 18:22:23] [INFO] [WirelessPower] Initialized 0 power grids
+[2026.10.01 18:22:23] [INFO] [NightshadeAnnouncer] NightshadeAnnouncer: DeepSeaManager component cached successfully.
+[2026.10.01 18:22:23] [INFO] [NightshadeAnnouncer] NightshadeAnnouncer: Deep Sea portal found on init scan (cached position).
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] List of biome positions: Arid = 0, Temperate = 0, Tundra = 0, Arctic = 0, Jungle = 0
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] List of road positions: ExtraWide = 679, Standard = 1655, ExtraNarrow = 0
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] 1677 railway positions found
+[2026.10.01 18:22:23] [INFO] [RustEdit] - The RustEdit extension is up to date!
+[2026.10.01 18:22:23] [INFO] [DefendableHomes] Image Tab_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] Image Preset_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [DefendableHomes] Image Clock_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] Image Find_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [DefendableHomes] Image Npc_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] Image Delete_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [DefendableHomes] Image Foundation_KpucTaJl download is complete
+[2026.10.01 18:22:23] [INFO] [NpcSpawn] Image Indicator_KpucTaJl download is complete
+[2026.10.01 18:22:25] [INFO] [UltimateLocker] ########## Restored 0 lock scale sizes in 0.10 seconds ##########
+[2026.10.01 18:22:25] [INFO] [Personal Marketplace] INFO: Missing/Destroyed Marketplace with ID 29530262, data entry removed.
+[2026.10.01 18:22:28] [INFO] Caching plugin metadata page 0 out of 157
+[2026.10.01 18:22:31] [INFO] [NpcSpawn] Image Back_KpucTaJl download is complete
+[2026.10.01 18:22:31] [INFO] [NpcSpawn] Image Copy_KpucTaJl download is complete
+[2026.10.01 18:22:31] [INFO] [NpcSpawn] Image coconut-underwear download is complete
+[2026.10.01 18:22:31] [INFO] [NpcSpawn] Image femaleunderwear_mummywraps.icon download is complete
+[2026.10.01 18:22:31] [INFO] [NpcSpawn] Image maleunderwear_mummywraps.icon download is complete
+[2026.10.01 18:22:31] [INFO] [NpcSpawn] Image pink_bikini download is complete
+[2026.10.01 18:22:32] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [127ms]
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image rapido_male download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image swimwear_gradient_female download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image swimwear_gradient_male download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image swimwear_palmleaves_female download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image swimwear_palmleaves_male download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image swimwear_scribble_female download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image swimwear_scribble_male download is complete
+[2026.10.01 18:22:32] [INFO] [Image Library] Starting order Server Rewards
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image twitchunderwear_female download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image twitchunderwear_male download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image underwear_default_female download is complete
+[2026.10.01 18:22:32] [INFO] [NpcSpawn] Image underwear_default_male download is complete
+[2026.10.01 18:22:33] [INFO] [NpcSpawn] Image grassskirt-underwear-female download is complete
+[2026.10.01 18:22:33] [INFO] [NpcSpawn] Image grassskirt-underwear-male download is complete
+[2026.10.01 18:22:33] [INFO] [Image Library] Starting order SkillTree
+[2026.10.01 18:22:34] [INFO] [RustEdit] - Processing 207 IO entities
+[2026.10.01 18:22:38] [INFO] [RustEdit] - Successfully connected 207 IO links
+[2026.10.01 18:22:38] [INFO] [RustEdit] - Generating 1 APC paths from map file
+[2026.10.01 18:22:38] [INFO] [RustEdit] - 1 APC patrol paths successfully processed!
+[2026.10.01 18:22:38] [INFO] [RustEdit] - No custom vending machines found in map
+[2026.10.01 18:22:38] [INFO] [RustEdit] - 525 loot containers processed!
+[2026.10.01 18:22:38] [INFO] [RustEdit] - Created 7 keycard desk respawners
+[2026.10.01 18:22:38] [INFO] [RustEdit] - 28 resource entities processed!
+[2026.10.01 18:22:38] [INFO] [RustEdit] - 5 junkpiles processed!
+[2026.10.01 18:22:38] [INFO] [RustEdit] - Created 208 NPC spawn handlers!
+[2026.10.01 18:22:38] [INFO] [RustEdit] - Connected 18 shopkeepers to vending machines
+[2026.10.01 18:22:41] [INFO] [Skill Tree] Loaded all images for SkillTree.
+[2026.10.01 18:22:41] [INFO] [RustEdit] - BradleyAPC Spawned at :(13.39, 9.25, 18.83)
+[2026.10.01 18:22:44] [INFO] [UltimateLocker] Processing Steam Workshop definitions...
+[2026.10.01 18:22:44] [INFO] [Copy Paste] Skin detection initialized: 6649 official skins, 380 DLC items. Processing 0 queued paste(s).
+[2026.10.01 18:22:48] [INFO] [Image Library] Starting order Notify
+[2026.10.01 18:25:41] [INFO] Caching plugin metadata page 39 out of 157
+[2026.10.01 18:28:09] [INFO] [NightshadeChat] [Global] FlipNeroo (76561199389941588): kits bugged
+[2026.10.01 18:28:56] [INFO] Caching plugin metadata page 78 out of 157
+[2026.10.01 18:29:11] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): how so?
+[2026.10.01 18:29:32] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): oh
+[2026.10.01 18:29:36] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): I see
+[2026.10.01 18:29:37] [INFO] [NightshadeChat] [Global] FlipNeroo (76561199389941588): say inventory is full for daily and its saying i used my 4 day
+[2026.10.01 18:30:16] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): I'm working on it give me just a sec
+[2026.10.01 18:30:39] [INFO] [NightshadeChat] [Global] FlipNeroo (76561199389941588): take your time also i love the new shop
+[2026.10.01 18:31:13] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): yeah? I think it runs a hell of a lot smoother
+[2026.10.01 18:31:25] [INFO] [NightshadeChat] [Global] FlipNeroo (76561199389941588): it does i agree
+[2026.10.01 18:32:05] [INFO] [NightshadeChat] [Global] FlipNeroo (76561199389941588): so glad its a diff map that other map was so bad lol
+[2026.10.01 18:32:11] [INFO] Caching plugin metadata page 117 out of 157
+[2026.10.01 18:33:22] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.01 18:35:27] [INFO] Caching plugin metadata page 156 out of 157
+[2026.10.01 18:35:28] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): haha I usually swap it around every month
+[2026.10.01 18:35:37] [INFO] [Admin] Stored uMod plugin metadata cache to file.
+[2026.10.01 18:37:41] [INFO] Unloaded plugin VIPPerks v1.2.0 by Nightshade
+[2026.10.01 18:37:41] [INFO] Loaded plugin VIPPerks v1.2.1 by Nightshade [145ms]
+[2026.10.01 18:37:46] [INFO] [VIPPerks] [VIPPerks] Kit refused for RunaObscura: needs 27 slots, free=25 (main cap=24, items=3; belt cap=6, items=2)
+[2026.10.01 18:37:48] [INFO] [VIPPerks] [VIPPerks] Kit refused for RunaObscura: needs 29 slots, free=25 (main cap=24, items=3; belt cap=6, items=2)
+[2026.10.01 18:38:42] [INFO] [VIPPerks] [VIPPerks] Kit refused for FlipNeroo: needs 27 slots, free=16 (main cap=24, items=8; belt cap=6, items=6)
+[2026.10.01 18:43:41] [INFO] [VIPPerks] [VIPPerks] Kit refused for FlipNeroo: needs 27 slots, free=15 (main cap=24, items=10; belt cap=6, items=5)
+[2026.10.01 18:48:22] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.01 18:49:22] [INFO] [VIPPerks] [VIPPerks] Kit refused for RunaObscura: needs 27 slots, free=25 (main cap=24, items=3; belt cap=6, items=2)
+[2026.10.01 18:49:30] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): okay I found the issue.
+[2026.10.01 18:49:47] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): the stack sizes needed to be updated again. I'll need to do a quick restart
+[2026.10.01 18:49:59] [INFO] Rolling back item manager
+[2026.10.01 18:51:00] [INFO] [VIPPerks] [VIPPerks] Kit refused for RunaObscura: needs 29 slots, free=25 (main cap=24, items=3; belt cap=6, items=2)
+[2026.10.01 18:51:01] [INFO] [VIPPerks] [VIPPerks] Kit refused for RunaObscura: needs 27 slots, free=25 (main cap=24, items=3; belt cap=6, items=2)
+[2026.10.01 18:52:03] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.01 18:52:22] [INFO] [VIPPerks] [VIPPerks] Kit refused for RunaObscura: needs 29 slots, free=25 (main cap=24, items=3; belt cap=6, items=2)
+[2026.10.01 18:52:30] [INFO] Rolling back item manager
+[2026.10.01 18:53:10] [INFO] [VIPPerks] [VIPPerks] Kit refused for FlipNeroo: needs 27 slots, free=23 (main cap=24, items=4; belt cap=6, items=3)
+[2026.10.01 18:53:23] [INFO] Saving plugin configuration and data..
+[2026.10.01 18:53:23] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.01 18:53:23] [INFO] Shutting down Carbon..
+[2026.10.01 18:53:23] [INFO] Unloaded plugin Image Library v2.0.67 by Absolut & K1lly0u
+[2026.10.01 18:53:23] [INFO] Unloaded plugin Monument Finder v3.1.5 by WhiteThunder
+[2026.10.01 18:53:24] [INFO] Unloaded plugin Player DLC API v1.6.2 by k1lly0u
+[2026.10.01 18:53:24] [INFO] Unloaded plugin Discord Status (Webhook) v6.1.0 by AhmadAkal
+[2026.10.01 18:53:24] [INFO] Unloaded plugin MedioReports v2.2.1 by MediocratyItself
+[2026.10.01 18:53:24] [INFO] Unloaded plugin NightshadeConsoleFilter v1.0.1 by Nightshade
+[2026.10.01 18:53:24] [INFO] [PopControl] [LWPop] Restored maxplayers to original value: 100
+[2026.10.01 18:53:24] [INFO] Unloaded plugin PopControl v1.7.0 by Papa
+[2026.10.01 18:53:24] [INFO] Unloaded plugin Queue Holder v1.0.2 by Tryhard
+[2026.10.01 18:53:25] [INFO] Unloaded plugin Monuments Watcher v0.1.12 by IIIaKa
+[2026.10.01 18:53:25] [INFO] Unloaded plugin Nightshade Purge Status v1.0.0 by Nightshade
+[2026.10.01 18:53:25] [INFO] Unloaded plugin NightshadePvPOptOut v1.0.0 by Nightshade
+[2026.10.01 18:53:25] [INFO] Unloaded plugin TruePVE v2.4.4 by nivex
+[2026.10.01 18:53:25] [INFO] Unloaded plugin ZoneDomes v2.0.2 by k1lly0u
+[2026.10.01 18:53:25] [INFO] Unloaded plugin Zone Manager v3.1.14 by k1lly0u
+[2026.10.01 18:53:25] [INFO] Unloaded plugin Zone Manager Auto Zones v1.4.5 by FastBurst
+[2026.10.01 18:53:26] [INFO] Unloaded plugin Offline Raid Protection v1.8.2 by realedwin/HunterZ
+[2026.10.01 18:53:26] [INFO] Unloaded plugin UnifiedLootProtection v1.0.1 by Nightshade
+[2026.10.01 18:53:26] [INFO] Unloaded plugin BetterTC v1.7.1 by ninco90
+[2026.10.01 18:53:26] [INFO] Unloaded plugin Bodies to Bags v2.0.0 by Ryan
+[2026.10.01 18:53:26] [INFO] Unloaded plugin Chest Stacks v1.4.7 by supreme
+[2026.10.01 18:53:26] [INFO] Unloaded plugin CustomC4RocketTiers v1.1.0 by Blackmatic
+[2026.10.01 18:53:26] [INFO] Unloaded plugin Hardy Planters v1.0.12 by imthenewguy
+[2026.10.01 18:53:27] [INFO] Unloaded plugin NightshadeCrateEjector v1.0.0 by Nightshade
+[2026.10.01 18:53:27] [INFO] Unloaded plugin Remover Tool v4.3.48 by Reneb/Fuji/Arainrr/Tryhard
+[2026.10.01 18:53:27] [INFO] Unloaded plugin Restore Upon Death v0.6.5 by k1lly0u
+[2026.10.01 18:53:27] [INFO] Unloaded plugin VirtualQuarries v2.5.8 by ThePitereq
+[2026.10.01 18:53:27] [INFO] Unloaded plugin WirelessPower v1.2.9 by RickySpanish
+[2026.10.01 18:53:27] [INFO] Unloaded plugin aQuarry v2.0.6 by AvG Лаймон
+[2026.10.01 18:53:27] [INFO] Unloaded plugin extendedindustrial v1.2.6 by bmgjet
+[2026.10.01 18:53:28] [INFO] Unloaded plugin IQTeleportation v1.37.7 by Mercury
+[2026.10.01 18:53:28] [INFO] Unloaded plugin PlayerRanks v2.3.4 by Steenamaroo
+[2026.10.01 18:53:28] [INFO] Unloaded plugin Sign Artist v1.4.6 by Whispers88
+[2026.10.01 18:53:28] [INFO] Unloaded plugin Team Leader Online v3.0.1 by PureForce
+[2026.10.01 18:53:28] [WARN]  UltimateLocker v2.1.5 by Scalbox hook 'Unload' took longer than 100ms [250ms]
+[2026.10.01 18:53:29] [INFO] Unloaded plugin UltimateLocker v2.1.5 by Scalbox
+[2026.10.01 18:53:29] [INFO] Unloaded plugin Cases v2.0.1 by Mevent
+[2026.10.01 18:53:29] [INFO] Unloaded plugin NightshadeRecycler v3.2.1 by Nightshade
+[2026.10.01 18:53:29] [INFO] Unloaded plugin NightshadeShop v1.4.2 by Rustonauts & Nightshade
+[2026.10.01 18:53:29] [WARN]  Personal Marketplace v1.4.1 by ZEODE hook 'Unload' took longer than 100ms [192ms]
+[2026.10.01 18:53:29] [INFO] Unloaded plugin Personal Marketplace v1.4.1 by ZEODE
+[2026.10.01 18:53:29] [INFO] Unloaded plugin Server Rewards v2.0.8 by k1lly0u
+[2026.10.01 18:53:29] [INFO] Unloaded plugin Server Rewards Wipe v2.0.2 by ZEODE
+[2026.10.01 18:53:30] [INFO] Unloaded plugin Super Card v1.0.7 by Mevent
+[2026.10.01 18:53:30] [INFO] Unloaded plugin Activity Rewards v0.1.9 by IIIaKa
+[2026.10.01 18:53:30] [INFO] Unloaded plugin Skill Tree v1.8.0 by imthenewguy
+[2026.10.01 18:53:30] [INFO] Unloaded plugin SkillTreeXPEvent v1.0.15 by imthenewguy
+[2026.10.01 18:53:30] [INFO] Unloaded plugin BuyableTugboats v1.0.9 by imthenewguy
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Claim Vehicle v1.8.1 by WhiteThunder
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Craft Car Chassis v1.2.5 by WhiteThunder
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Nightshade MLRS Truck v1.0.8 by Nightshade
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Vehicle Decay Protection v2.9.0 by WhiteThunder
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Vehicle Licence v1.9.2 by Mabel
+[2026.10.01 18:53:31] [INFO] Unloaded plugin ArmoredTrain v2.0.5 by Adem
+[2026.10.01 18:53:31] [WARN] [Bradley Drops] WARN: INFO: Harmony patches removed and cache cleared successfully!
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Bradley Drops v1.4.1 by ZEODE
+[2026.10.01 18:53:31] [INFO] Unloaded plugin Convoy v3.0.4 by Adem
+[2026.10.01 18:53:32] [INFO] Unloaded plugin EventsManager v4.2.2 by Mevent & Qbis
+[2026.10.01 18:53:32] [INFO] Unloaded plugin EventsManagerNotifier v1.0.11 by Mevent & M&B-Studios
+[2026.10.01 18:53:32] [INFO] [Heli Signals] INFO: Harmony patches removed and cache cleared successfully!
+[2026.10.01 18:53:32] [INFO] Unloaded plugin Heli Signals v1.4.1 by ZEODE
+[2026.10.01 18:53:32] [INFO] Unloaded plugin HideAndSeek v1.1.0 by Nightshade
+[2026.10.01 18:53:32] [INFO] Unloaded plugin NightshadeAnnouncer v1.3.1 by Nightshade
+[2026.10.01 18:53:32] [INFO] Unloaded plugin NightshadeVoteDay v1.2.0 by Nightshade
+[2026.10.01 18:53:32] [INFO] Unloaded plugin Copy Paste v4.3.0 by misticos
+[2026.10.01 18:53:33] [INFO] Unloaded plugin DefendableHomes v1.2.2 by KpucTaJl
+[2026.10.01 18:53:33] [INFO] [NightshadeRaidbase] Raid turret interference max restored to 12.
+[2026.10.01 18:53:33] [INFO] Unloaded plugin NightshadeRaidbase v1.0.16 by Nightshade
+[2026.10.01 18:53:33] [INFO] Unloaded plugin NpcSpawn v3.4.1 by KpucTaJl
+[2026.10.01 18:53:33] [INFO] Unloaded plugin Spawns v2.0.36 by Reneb / k1lly0u
+[2026.10.01 18:53:33] [INFO] Unloaded plugin ZombieHorde v0.6.36 by k1lly0u
+[2026.10.01 18:53:34] [WARN]  Advanced Status v0.1.26 by IIIaKa hook 'Unload' took longer than 100ms [380ms]
+[2026.10.01 18:53:34] [INFO] Unloaded plugin Advanced Status v0.1.26 by IIIaKa
+[2026.10.01 18:53:34] [INFO] Unloaded plugin Convert Status v1.0.8 by Orange
+[2026.10.01 18:53:34] [INFO] Unloaded plugin Hud v3.5.2 by ahigao
+[2026.10.01 18:53:34] [INFO] Unloaded plugin NPC Health Bar v1.0.10 by Chris
+[2026.10.01 18:53:34] [INFO] Unloaded plugin NightshadeChat v1.0.0 by Rustonauts & Nightshade
+[2026.10.01 18:53:35] [INFO] Unloaded plugin Notify v1.0.15 by Mevent
+[2026.10.01 18:53:35] [INFO] Unloaded plugin PopUpAPI v2.0.4 by ThePitereq
+[2026.10.01 18:53:35] [INFO] Unloaded plugin Restart Status v0.1.1 by IIIaKa
+[2026.10.01 18:53:35] [WARN]  [ServerPanel] Unloading 'ServerPanel Installer v2.0.25 by Mevent' because parent 'ServerPanel v2.0.25 by Mevent' has been unloaded.
+[2026.10.01 18:53:35] [INFO] Unloaded plugin ServerPanel Installer v2.0.25 by Mevent
+[2026.10.01 18:53:35] [INFO] Unloaded plugin ServerPanel v2.0.25 by Mevent
+[2026.10.01 18:53:35] [INFO] Unloaded plugin ServerPanel Migrations v2.0.25 by Mevent
+[2026.10.01 18:53:35] [INFO] Unloaded plugin ServerPanel Pop Ups v2.0.25 by Mevent
+[2026.10.01 18:53:35] [INFO] Unloaded plugin Sort Button v2.7.0 by WhiteThunder, MON@H
+[2026.10.01 18:53:36] [INFO] Unloaded plugin Teleport Status v0.1.2 by IIIaKa
+[2026.10.01 18:53:36] [INFO] Unloaded plugin Wipe Schedule v2.0.22 by Mevent
+[2026.10.01 18:53:36] [INFO] Unloaded plugin XFastButtons v1.1.0 by Monster
+[2026.10.01 18:53:36] [INFO] Unloaded plugin AdminMenu v1.4.10 by 0xF // dsc.gg/0xf-plugins
+[2026.10.01 18:53:36] [INFO] Unloaded plugin PowerfulAdmin v1.2.7 by codeboy
+[2026.10.01 18:53:36] [INFO] Unloaded plugin PowerfulAdmin Discord v1.1.0 by codeboy
+[2026.10.01 18:53:36] [INFO] Unloaded plugin Telekinesis v3.3.1 by WhiteThunder
+[2026.10.01 18:53:37] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.01 18:53:37] [INFO] Unloaded plugin VIPPerks v1.2.1 by Nightshade
+[2026.10.01 18:53:37] [INFO] Unloaded plugin Chaos Commands v1.0.64 by k1lly0u
+[2026.10.01 18:53:37] [INFO] Unloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+[2026.10.01 18:53:37] [INFO] Unloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.01 18:53:37] [INFO] Unloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.01 18:53:37] [INFO] Unloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.01 18:53:37] [INFO] Unloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.01 18:53:38] [INFO] Unloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.01 18:53:39] [INFO] Unloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.01 18:53:40] [INFO] Unloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.01 18:53:40] [INFO] Unloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos

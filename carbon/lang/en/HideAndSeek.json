@@ -1,0 +1,23 @@
+{
+  "GameStart": "<color=#ff4444>HIDE AND SEEK</color>\n<color=#ffcc00>{0}</color> is the Prey! Seekers, hunt them down for <color=#00ff88>{1} RP</color> + <color=#ccaa00>{2} Scrap</color>!\nThey must survive for <color=#ff8800>{3}</color>!",
+  "GracePeriod": "<color=#ff4444>[Hide and Seek]</color> Grace period active — Prey is safe for <color=#ff8800>{0}s</color>. Get ready, Seekers!",
+  "GraceOver": "<color=#ff4444>[Hide and Seek]</color> Grace period over! The hunt is on!",
+  "PreyNotify": "<color=#ff4444>YOU ARE THE PREY!</color>\nSurvive for <color=#ff8800>{0}</color>!\nYou have a <color=#00ff88>{1}s grace period</color> — use it to hide!\nYou CANNOT hide in locked buildings. Seekers are coming!\nGood luck...",
+  "TimeRemaining": "<color=#ff4444>[Hide and Seek]</color> <color=#ffcc00>{0}</color> (Prey) has <color=#ff8800>{1}</color> remaining! Seekers, close in!",
+  "PreyWin": "<color=#00ff88>PREY ESCAPED!</color>\n<color=#ffcc00>{0}</color> survived the hunt!\nReward: <color=#00ff88>{1} RP</color> + <color=#ccaa00>{2} Scrap</color> + <color=#00ff88>{3} RP time bonus</color>!",
+  "SeekerWin": "<color=#ff4444>PREY CAUGHT!</color>\n<color=#ffcc00>{0}</color> caught the Prey!\nReward: <color=#00ff88>{1} RP</color> + <color=#ccaa00>{2} Scrap</color>!\n<color=#ffcc00>{3}</color> (Prey) earns <color=#00ff88>{4} RP time bonus</color> for surviving <color=#ff8800>{5}</color>.",
+  "GameAlreadyActive": "A Hide and Seek game is already active!",
+  "NotEnoughPlayers": "Not enough players online. Minimum: {0}",
+  "NoGameActive": "No Hide and Seek game is currently active.",
+  "GameStopped": "The Hide and Seek game has been stopped by an admin.",
+  "PreyDisconnected": "The Prey disconnected. Game over!",
+  "PreyFell": "<color=#ff4444>[Hide and Seek]</color> The Prey has fallen! No reward this round.",
+  "NoPlugin": "ServerRewards plugin not found. Points reward disabled.",
+  "HudText": "HIDE AND SEEK — Prey: <color=#ffcc00>{0}</color> | <color=#ff8800>{1}</color>",
+  "HudGrace": "HIDE AND SEEK — Grace period: <color=#00ff88>{0}s</color> remaining",
+  "YouArePrey": "YOU ARE THE PREY | <color=#ff8800>{0}</color>",
+  "YouArePreyGrace": "YOU ARE THE PREY | Grace: <color=#00ff88>{0}s</color> — hide!",
+  "PlayerNotFound": "Could not find a player matching '{0}'. Make sure they are online.",
+  "PreySet": "Prey has been manually set to <color=#ffcc00>{0}</color>.",
+  "OnCooldown": "Hide and Seek is on cooldown. Next game available in <color=#ff8800>{0}s</color>."
+}

@@ -1,0 +1,702 @@
+{
+  "Command List": [
+    "qr",
+    "quarry",
+    "quarries",
+    "vq",
+    "virtualquarry",
+    "virtualquarries"
+  ],
+  "UI Action Cooldown (in seconds, 0 to disable)": 0.0,
+  "Enable Console Logs": true,
+  "PopUpAPI - Preset Name": "Legacy",
+  "Require Permission For Use": false,
+  "Lock Access To Quarry Profiles If Lost Permission": false,
+  "Check For Quarry Amount Permission (option above must be set to true to work)": false,
+  "OnEntityTakeDamage Return Value": false,
+  "Mining Quarry/Pump Jack Limit Permissions": {
+    "virtualquarries.default": {
+      "pumpjack": 1,
+      "quarry": 1,
+      "woodjack": 0,
+      "sulfurquarry": 0,
+      "metalquarry": 1
+    },
+    "virtualquarries.vip": {
+      "pumpjack": 2,
+      "quarry": 1,
+      "woodjack": 1,
+      "sulfurquarry": 1,
+      "metalquarry": 1
+    }
+  },
+  "Sharing - Require Permission": false,
+  "Sharing - Remove Members If Owner Offline More Than X Days (0, to disable)": 0,
+  "Sharing - Share Only To Teammates": false,
+  "Data - Enable Data Wipe On Server Wipe": true,
+  "Data - Wipe Data Only On Force Wipe": false,
+  "Data - Store Container Data In File And Restore On Server Wipe": false,
+  "Data - Store Container Interval (in seconds)": 1800,
+  "Quarry Tick (how often quarries dig resources, in seconds)": 60,
+  "Static Quarry Tick (how often quarries dig resources, in seconds)": 60,
+  "Excavator Quarry Tick (how often quarries dig resources, in seconds)": 60,
+  "Storage Prefab": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+  "Sound - Start Sound": "assets/prefabs/npc/autoturret/effects/online.prefab",
+  "Sound - Stop Sound": "assets/prefabs/npc/autoturret/effects/offline.prefab",
+  "Listed Quarries Permissions Font Size": 20,
+  "Survey Charge - Allow Throwing Survey Charges": true,
+  "Survey Charget Types": {
+    "survey": {
+      "Effect Path": "assets/bundled/prefabs/fx/survey_explosion.prefab",
+      "Required Permission (empty, if not required)": "",
+      "Chance For Resources (0-100)": 85,
+      "Displayed Survey Title Translation Key": "SurveyCharge",
+      "Required Item": {
+        "Shortname": "surveycharge",
+        "Skin": 0,
+        "Amount": 1,
+        "Display Name": null,
+        "Icon URL": ""
+      }
+    }
+  },
+  "Upgrades - Used Economy Plugin (0 - None, See Website For More Info)": 2,
+  "Upgrades - Economy Currency (If Economy Plugin Is 5 - ShoppyStock)": "rp",
+  "Removing Quarries - Refund Items": true,
+  "Removing Quarries - Refund Upgrades": false,
+  "Go Back Button - Position (1-2)": 1,
+  "Upgrade UI - Responsive Position": true,
+  "Static Quarries - Enable": false,
+  "Static Quarries - Disable Running Effect": false,
+  "Excavator Quarry - Enable": true,
+  "Excavator Quarry - Resource Container Size": 18,
+  "Excavator Quarry - Fuel Container Size": 6,
+  "Static Quarries - Quarry Requires Permission": false,
+  "Static Quarries - Pump Jack Requires Permission": false,
+  "Static Quarries - Excavator Requires Permission": false,
+  "Static Quarries - Resource Container Size": 18,
+  "Static Quarries - Fuel Container Size": 6,
+  "Static Quarries - Fuel Item": {
+    "Shortname": "diesel_barrel",
+    "Skin": 0,
+    "Amount": 1.0,
+    "Display Name": null,
+    "Icon URL": null
+  },
+  "Excavator Quarry - Fuel Item": {
+    "Shortname": "diesel_barrel",
+    "Skin": 0,
+    "Amount": 1.0,
+    "Display Name": null,
+    "Icon URL": null
+  },
+  "Static Quarries - Metal Quarry Output": [
+    {
+      "Shortname": "stones",
+      "Skin": 0,
+      "Amount Per Tick": 150.0,
+      "Display Name": ""
+    },
+    {
+      "Shortname": "metal.ore",
+      "Skin": 0,
+      "Amount Per Tick": 22.5,
+      "Display Name": ""
+    }
+  ],
+  "Static Quarries - Sulfur Quarry Output": [
+    {
+      "Shortname": "sulfur.ore",
+      "Skin": 0,
+      "Amount Per Tick": 22.5,
+      "Display Name": ""
+    }
+  ],
+  "Static Quarries - HQM Quarry Output": [
+    {
+      "Shortname": "hq.metal.ore",
+      "Skin": 0,
+      "Amount Per Tick": 1.5,
+      "Display Name": ""
+    }
+  ],
+  "Static Quarries - Pump Jack Output": [
+    {
+      "Shortname": "crude.oil",
+      "Skin": 0,
+      "Amount Per Tick": 130.0,
+      "Display Name": ""
+    }
+  ],
+  "Static Quarries - Excavator Outputs": {
+    "HQM": [
+      {
+        "Shortname": "hq.metal.ore",
+        "Skin": 0,
+        "Amount Per Tick": 50.0,
+        "Display Name": ""
+      }
+    ],
+    "Metal": [
+      {
+        "Shortname": "metal.fragments",
+        "Skin": 0,
+        "Amount Per Tick": 2500.0,
+        "Display Name": ""
+      }
+    ],
+    "Stone": [
+      {
+        "Shortname": "stones",
+        "Skin": 0,
+        "Amount Per Tick": 5000.0,
+        "Display Name": ""
+      }
+    ],
+    "Sulfur": [
+      {
+        "Shortname": "sulfur.ore",
+        "Skin": 0,
+        "Amount Per Tick": 1000.0,
+        "Display Name": ""
+      }
+    ]
+  },
+  "Quarry Profiles": {
+    "pumpjack": {
+      "Required Permission (empty, if not required)": "virtualquarries.pumpjack",
+      "Displayed Icon": {
+        "Shortname": "mining.pumpjack",
+        "Skin": 0,
+        "Amount": 1,
+        "Display Name": null,
+        "Icon URL": ""
+      },
+      "Survey Type": "survey",
+      "Displayed Quarry Title Translation Key": "PumpjackTitle",
+      "Chance": 10,
+      "Minimal Resources Per Node": 1,
+      "Maximal Resources Per Node": 4,
+      "Fuel Required Per Tick": {
+        "Shortname": "diesel_barrel",
+        "Skin": 0,
+        "Amount": 1.0,
+        "Display Name": null,
+        "Icon URL": null
+      },
+      "Enable Upgrades": true,
+      "Items Required To Place": [
+        {
+          "Shortname": "mining.pumpjack",
+          "Skin": 0,
+          "Amount": 1,
+          "Display Name": null,
+          "Icon URL": ""
+        }
+      ],
+      "Resources": {
+        "crude": {
+          "Output Item - Shortname": "crude.oil",
+          "Output Item - Skin": 0,
+          "Output Item - Display Name": "",
+          "Output Item - Icon URL (Required if Skin not 0)": "",
+          "Include Always": true,
+          "Required Permission (empty if not required)": "",
+          "Chance": 0,
+          "Minimal Output Per Tick": 80.0,
+          "Maximal Output Per Tick": 120.0,
+          "Additional Items Required To Place": []
+        }
+      },
+      "Upgrades": [
+        {
+          "Required Items": [],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 0,
+          "Fuel Storage Capacity": 6,
+          "Capacity": 6,
+          "Gather Multiplier": 1.0,
+          "Fuel Usage Multiplier": 1.0,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 14000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 10000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 12000,
+          "Fuel Storage Capacity": 9,
+          "Capacity": 9,
+          "Gather Multiplier": 1.2,
+          "Fuel Usage Multiplier": 1.0,
+          "Additional Resources (Resources keys)": []
+        }
+      ]
+    },
+    "quarry": {
+      "Required Permission (empty, if not required)": "virtualquarries.stonequarry",
+      "Displayed Icon": {
+        "Shortname": "mining.quarry",
+        "Skin": 0,
+        "Amount": 1,
+        "Display Name": null,
+        "Icon URL": ""
+      },
+      "Survey Type": "survey",
+      "Displayed Quarry Title Translation Key": "Stone Quarry",
+      "Chance": 25,
+      "Minimal Resources Per Node": 1,
+      "Maximal Resources Per Node": 2,
+      "Fuel Required Per Tick": {
+        "Shortname": "lowgradefuel",
+        "Skin": 0,
+        "Amount": 48.0,
+        "Display Name": null,
+        "Icon URL": null
+      },
+      "Enable Upgrades": true,
+      "Items Required To Place": [
+        {
+          "Shortname": "mining.quarry",
+          "Skin": 0,
+          "Amount": 1,
+          "Display Name": null,
+          "Icon URL": ""
+        }
+      ],
+      "Resources": {
+        "stone": {
+          "Output Item - Shortname": "stones",
+          "Output Item - Skin": 0,
+          "Output Item - Display Name": "",
+          "Output Item - Icon URL (Required if Skin not 0)": "",
+          "Include Always": true,
+          "Required Permission (empty if not required)": "",
+          "Chance": 0,
+          "Minimal Output Per Tick": 270.0,
+          "Maximal Output Per Tick": 450.0,
+          "Additional Items Required To Place": []
+        }
+      },
+      "Upgrades": [
+        {
+          "Required Items": [],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 0,
+          "Fuel Storage Capacity": 48,
+          "Capacity": 6,
+          "Gather Multiplier": 1.0,
+          "Fuel Usage Multiplier": 1.0,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 7000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 5000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 6000,
+          "Fuel Storage Capacity": 68,
+          "Capacity": 9,
+          "Gather Multiplier": 1.6,
+          "Fuel Usage Multiplier": 1.4,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 20000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 15000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "virtualquarries.vip",
+          "Required Currency (0 to disable)": 12000,
+          "Fuel Storage Capacity": 87,
+          "Capacity": 12,
+          "Gather Multiplier": 2.3,
+          "Fuel Usage Multiplier": 1.8,
+          "Additional Resources (Resources keys)": []
+        }
+      ]
+    },
+    "woodjack": {
+      "Required Permission (empty, if not required)": "virtualquarries.woodjack",
+      "Displayed Icon": {
+        "Shortname": "chainsaw",
+        "Skin": 0,
+        "Amount": 1,
+        "Display Name": "Sawmill",
+        "Icon URL": ""
+      },
+      "Survey Type": "survey",
+      "Displayed Quarry Title Translation Key": "Sawmill",
+      "Chance": 25,
+      "Minimal Resources Per Node": 1,
+      "Maximal Resources Per Node": 2,
+      "Fuel Required Per Tick": {
+        "Shortname": "lowgradefuel",
+        "Skin": 0,
+        "Amount": 48.0,
+        "Display Name": null,
+        "Icon URL": null
+      },
+      "Enable Upgrades": true,
+      "Items Required To Place": [
+        {
+          "Shortname": "chainsaw",
+          "Skin": 0,
+          "Amount": 5,
+          "Display Name": null,
+          "Icon URL": ""
+        }
+      ],
+      "Resources": {
+        "wood": {
+          "Output Item - Shortname": "wood",
+          "Output Item - Skin": 0,
+          "Output Item - Display Name": "",
+          "Output Item - Icon URL (Required if Skin not 0)": "",
+          "Include Always": true,
+          "Required Permission (empty if not required)": "",
+          "Chance": 0,
+          "Minimal Output Per Tick": 150.0,
+          "Maximal Output Per Tick": 350.0,
+          "Additional Items Required To Place": []
+        }
+      },
+      "Upgrades": [
+        {
+          "Required Items": [],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 0,
+          "Fuel Storage Capacity": 48,
+          "Capacity": 6,
+          "Gather Multiplier": 1.0,
+          "Fuel Usage Multiplier": 1.0,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 7000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 5000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 6000,
+          "Fuel Storage Capacity": 72,
+          "Capacity": 9,
+          "Gather Multiplier": 1.7,
+          "Fuel Usage Multiplier": 1.5,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 20000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 15000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "virtualquarries.vip",
+          "Required Currency (0 to disable)": 12000,
+          "Fuel Storage Capacity": 96,
+          "Capacity": 12,
+          "Gather Multiplier": 2.5,
+          "Fuel Usage Multiplier": 2.0,
+          "Additional Resources (Resources keys)": []
+        }
+      ]
+    },
+    "sulfurquarry": {
+      "Required Permission (empty, if not required)": "virtualquarries.sulfurquarry",
+      "Displayed Icon": {
+        "Shortname": "mining.quarry",
+        "Skin": 0,
+        "Amount": 1,
+        "Display Name": null,
+        "Icon URL": ""
+      },
+      "Survey Type": "survey",
+      "Displayed Quarry Title Translation Key": "Sulfur Quarry",
+      "Chance": 25,
+      "Minimal Resources Per Node": 1,
+      "Maximal Resources Per Node": 1,
+      "Fuel Required Per Tick": {
+        "Shortname": "lowgradefuel",
+        "Skin": 0,
+        "Amount": 48.0,
+        "Display Name": null,
+        "Icon URL": null
+      },
+      "Enable Upgrades": true,
+      "Items Required To Place": [
+        {
+          "Shortname": "mining.quarry",
+          "Skin": 0,
+          "Amount": 1,
+          "Display Name": null,
+          "Icon URL": ""
+        }
+      ],
+      "Resources": {
+        "sulfur": {
+          "Output Item - Shortname": "sulfur.ore",
+          "Output Item - Skin": 0,
+          "Output Item - Display Name": "",
+          "Output Item - Icon URL (Required if Skin not 0)": "",
+          "Include Always": true,
+          "Required Permission (empty if not required)": "",
+          "Chance": 0,
+          "Minimal Output Per Tick": 45.0,
+          "Maximal Output Per Tick": 80.0,
+          "Additional Items Required To Place": [
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 5000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ]
+        }
+      },
+      "Upgrades": [
+        {
+          "Required Items": [],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 0,
+          "Fuel Storage Capacity": 48,
+          "Capacity": 6,
+          "Gather Multiplier": 1.0,
+          "Fuel Usage Multiplier": 1.0,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 20000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 50000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 12000,
+          "Fuel Storage Capacity": 72,
+          "Capacity": 9,
+          "Gather Multiplier": 1.7,
+          "Fuel Usage Multiplier": 1.5,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 50000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 100000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "virtualquarries.vip",
+          "Required Currency (0 to disable)": 25000,
+          "Fuel Storage Capacity": 96,
+          "Capacity": 12,
+          "Gather Multiplier": 2.5,
+          "Fuel Usage Multiplier": 2.0,
+          "Additional Resources (Resources keys)": []
+        }
+      ]
+    },
+    "metalquarry": {
+      "Required Permission (empty, if not required)": "virtualquarries.metalquarry",
+      "Displayed Icon": {
+        "Shortname": "mining.quarry",
+        "Skin": 0,
+        "Amount": 1,
+        "Display Name": null,
+        "Icon URL": ""
+      },
+      "Survey Type": "survey",
+      "Displayed Quarry Title Translation Key": "Metal Quarry",
+      "Chance": 25,
+      "Minimal Resources Per Node": 1,
+      "Maximal Resources Per Node": 1,
+      "Fuel Required Per Tick": {
+        "Shortname": "lowgradefuel",
+        "Skin": 0,
+        "Amount": 48.0,
+        "Display Name": null,
+        "Icon URL": null
+      },
+      "Enable Upgrades": true,
+      "Items Required To Place": [
+        {
+          "Shortname": "mining.quarry",
+          "Skin": 0,
+          "Amount": 1,
+          "Display Name": null,
+          "Icon URL": ""
+        }
+      ],
+      "Resources": {
+        "hq": {
+          "Output Item - Shortname": "hq.metal.ore",
+          "Output Item - Skin": 0,
+          "Output Item - Display Name": "",
+          "Output Item - Icon URL (Required if Skin not 0)": "",
+          "Include Always": true,
+          "Required Permission (empty if not required)": "",
+          "Chance": 0,
+          "Minimal Output Per Tick": 2.0,
+          "Maximal Output Per Tick": 5.0,
+          "Additional Items Required To Place": []
+        },
+        "metal": {
+          "Output Item - Shortname": "metal.ore",
+          "Output Item - Skin": 0,
+          "Output Item - Display Name": "",
+          "Output Item - Icon URL (Required if Skin not 0)": "",
+          "Include Always": true,
+          "Required Permission (empty if not required)": "",
+          "Chance": 0,
+          "Minimal Output Per Tick": 36.0,
+          "Maximal Output Per Tick": 60.0,
+          "Additional Items Required To Place": []
+        }
+      },
+      "Upgrades": [
+        {
+          "Required Items": [],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 0,
+          "Fuel Storage Capacity": 48,
+          "Capacity": 6,
+          "Gather Multiplier": 1.0,
+          "Fuel Usage Multiplier": 1.0,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 7000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 5000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "",
+          "Required Currency (0 to disable)": 6000,
+          "Fuel Storage Capacity": 72,
+          "Capacity": 9,
+          "Gather Multiplier": 1.7,
+          "Fuel Usage Multiplier": 1.5,
+          "Additional Resources (Resources keys)": []
+        },
+        {
+          "Required Items": [
+            {
+              "Shortname": "wood",
+              "Skin": 0,
+              "Amount": 20000,
+              "Display Name": null,
+              "Icon URL": ""
+            },
+            {
+              "Shortname": "stones",
+              "Skin": 0,
+              "Amount": 15000,
+              "Display Name": null,
+              "Icon URL": ""
+            }
+          ],
+          "Required Permission To Upgrade": "virtualquarries.vip",
+          "Required Currency (0 to disable)": 12000,
+          "Fuel Storage Capacity": 96,
+          "Capacity": 12,
+          "Gather Multiplier": 2.5,
+          "Fuel Usage Multiplier": 2.0,
+          "Additional Resources (Resources keys)": []
+        }
+      ]
+    }
+  }
+}

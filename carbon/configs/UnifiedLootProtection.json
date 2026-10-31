@@ -1,0 +1,69 @@
+{
+  "Bradley": {
+    "Enabled": true,
+    "DamageLockThreshold": 0.2,
+    "TooHotSeconds": 180.0,
+    "LockForSeconds": 300,
+    "BroadcastKillToKiller": true,
+    "XPReward": 200.0
+  },
+  "Helicopter": {
+    "Enabled": true,
+    "DamageLockThreshold": 0.35,
+    "TooHotSeconds": 480.0,
+    "LockForSeconds": 480,
+    "BroadcastKillToKiller": true,
+    "BroadcastLockedToChat": true,
+    "XPReward": 500.0,
+    "RustRewardsRP": 250.0
+  },
+  "HackableCrate": {
+    "Enabled": true,
+    "LockForSeconds": 900
+  },
+  "NPC": {
+    "Enabled": true,
+    "DamageLockThreshold": 0.2,
+    "LockForSeconds": 300,
+    "BroadcastKillToKiller": true,
+    "RustRewardsRP": 25.0
+  },
+  "SupplyDrop": {
+    "Enabled": true,
+    "LockForSeconds": 600
+  },
+  "StorageProtection": {
+    "Enabled": true,
+    "UseTeams": true,
+    "UseCupboard": true,
+    "OnlyInCupboardRange": true
+  },
+  "CorpseProtection": {
+    "Enabled": true,
+    "UseTeams": true,
+    "AdminCanLoot": false
+  },
+  "WeaponRackProtection": {
+    "Enabled": true,
+    "UseTeams": true
+  },
+  "ChatAlerts": {
+    "KillLockNotifyOwner": true,
+    "TooHot": true,
+    "LootBlocked": true,
+    "StorageBlocked": true,
+    "CorpseBlocked": true,
+    "WeaponRackBlocked": true,
+    "TCAuthBlocked": true,
+    "VendingAdminBlocked": true,
+    "PickupBlocked": true,
+    "OvenToggleBlocked": true
+  },
+  "WeekendPvP": {
+    "Disable UnifiedLootProtection access restrictions during PvP weekend": true,
+    "Read TruePVE GetPlayerMapping for the active weekend profile": true,
+    "Weekend TruePVE ruleset name": "nightshade_pvp_weekend",
+    "Use Friday 8 PM - Monday 3 AM Eastern clock fallback when TruePVE mapping is unavailable": true,
+    "Disable Bradley, heli, NPC, hackable crate and supply drop ownership locks": true
+  }
+}

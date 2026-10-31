@@ -1,0 +1,60 @@
+{
+  "Is it worth generating restart hooks? 0 - disabled, 1 - one-time activation, 2 - always enabled": 2,
+  "List of language keys for creating language files": [
+    "en"
+  ],
+  "The type of the bar(TimeProgressCounter or TimeCounter)": "TimeCounter",
+  "The height of the bar": 26,
+  "The display order of the bar": 10,
+  "The background color of the bar(HEX or RGBA)": "#E5423F",
+  "The background transparency of the bar": 0.7,
+  "The background material of the bar, leave empty to disable": "",
+  "The URL of the bar image": "https://i.imgur.com/rAiHloW.png",
+  "The local image of the bar, leave empty to use URL": "RestartStatus_Default",
+  "The sprite image of the bar, leave empty to use local or URL": "",
+  "Is it worth using a raw image for the bar?": false,
+  "The color of the bar image(HEX or RGBA)": "#E5423F",
+  "The transparency of the bar image": 1.0,
+  "The outline color of the bar image(HEX or RGBA)": "0.1 0.3 0.8 0.9",
+  "The outline transparency of the bar image": 1.0,
+  "The outline distance of the bar image, leave empty to disable. Example '0.75 0.75'": "",
+  "The size of the bar text": 12,
+  "The color of the bar text(HEX or RGBA)": "#FFFFFF",
+  "The transparency of the bar text": 1.0,
+  "The font of the bar text(https://umod.org/guides/rust/basic-concepts-of-gui#fonts)": "RobotoCondensed-Bold.ttf",
+  "The horizontal offset of the bar text": 0,
+  "The outline color of the bar text(HEX or RGBA)": "#000000",
+  "The outline transparency of the bar text": 1.0,
+  "The outline distance of the bar text, leave empty to disable": "",
+  "The size of the bar subtext": 12,
+  "The color of the bar subtext(HEX or RGBA)": "#FFFFFF",
+  "The transparency of the bar subtext": 1.0,
+  "The font of the bar subtext": "RobotoCondensed-Bold.ttf",
+  "The outline color of the bar subtext(HEX or RGBA)": "0.5 0.6 0.7 0.5",
+  "The outline transparency of the bar subtext": 1.0,
+  "The outline distance of the bar subtext, leave empty to disable": "",
+  "The background color of the progress bar(HEX or RGBA)": "1 1 1 0.15",
+  "The background transparency of the progress bar": 0.15,
+  "Is it worth making the progress reversible?": true,
+  "The color of the bar progress(HEX or RGBA)": "#E5423F",
+  "The transparency of the bar progress": 0.7,
+  "The OffsetMin of the bar progress": "0 0",
+  "The OffsetMax of the bar progress": "0 0",
+  "The list of restart hooks. Note: After modifying hooks, do not forget to toggle hook generation": [
+    {
+      "Hook triggered at the start of a restart": "OnSmoothRestartInit",
+      "Argument position containing the number of seconds until restart(counting from 0)": 0,
+      "Hook triggered at the cancellation of a restart": "OnSmoothRestartCancelled"
+    },
+    {
+      "Hook triggered at the start of a restart": "OnRestartScheduled",
+      "Argument position containing the number of seconds until restart(counting from 0)": 0,
+      "Hook triggered at the cancellation of a restart": "OnRestartCancelled"
+    }
+  ],
+  "Version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 1
+  }
+}

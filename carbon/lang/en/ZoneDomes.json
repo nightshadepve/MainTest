@@ -1,0 +1,20 @@
+{
+  "Error.NoInfo": "Unable to find information for: ",
+  "Error.NoEntity": "Unable to find the sphere entity for zone ID: ",
+  "Error.InvalidID": "Unable to validate the zone ID from ZoneManager for: ",
+  "Error.NoLocation": "Unable to retrieve location data from ZoneManager for: ",
+  "Error.NoRadius": "Unable to retrieve radius data from ZoneManager for: ",
+  "Error.NoZoneManager": "Unable to find ZoneManager, unable to proceed",
+  "Error.NoPermission": "You do not have permission to use this command",
+  "Notification.RemoveInvalidData": "Removing invalid zone data",
+  "Notification.RemoveSuccess": "You have successfully removed the sphere from zone: ",
+  "Notification.Created": "You have successfully created a sphere for the zone: ",
+  "Notification.InvalidZones": "Found {0} invalid zones. Removing them from data",
+  "Notification.AlreadyExists": "This zone already has a dome",
+  "Chat.Title": "<color=#ce422b>ZoneDomes</color>",
+  "Chat.AddSyntax": "<color=#ce422b>/zd add <zoneId> <opt:type> <opt:stack></color><color=#939393> - Adds a sphere to a zone</color>",
+  "Chat.RemoveSyntax": "<color=#ce422b>/zd remove <zoneId></color><color=#939393> - Removes a sphere from a zone</color>",
+  "Chat.ListSyntax": "<color=#ce422b>/zd list</color><color=#939393> - Lists all current active spheres and their position</color>",
+  "Chat.Types": "<color=#ce422b>Sphere Types</color><color=#939393>:\n0 = <color=#464646>Standard</color>\n1 = <color=#ce422b>Red</color>\n2 = <color=#2b7fce>Blue</color>\n3 = <color=#2bce7f>Green</color>\n4 = <color=#7f2bce>Purple</color>\n*NOTE : Colored spheres need to interact with terrain or objects in the world to be visible!</color>",
+  "Format.List": "--- Sphere List --- \n Zone ID -- Radius -- Position -- Color -- Stack"
+}

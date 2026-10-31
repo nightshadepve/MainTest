@@ -1,0 +1,2152 @@
+{
+  "Categories": [
+    {
+      "ID": 1081959012,
+      "Enabled": true,
+      "Permission": "",
+      "Visible": true,
+      "Title": "GENERAL",
+      "Icon": "",
+      "Chat Button": false,
+      "Show Pages?": false,
+      "Commands": [
+        "info",
+        "start"
+      ],
+      "Pages": [
+        {
+          "Title": "WELCOME TO NIGHTSHADE",
+          "Icon": null,
+          "Commands": [],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.General.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "WELCOME TO NIGHTSHADE"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.General.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.General.Subtitle",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "WIPE: <color=#ECCA97>FIRST THURSDAY</color> @ <color=#ECCA97>2PM EASTERN</color>",
+                "PURGE: <color=#D58D7C>LAST 2 DAYS OF WIPE</color> — SERVERWIDE FAFO"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E2DBD3",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -105.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -50.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.General.Description",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>SERVER INFO</b></size></color>",
+                "<color=#E8DDD5>Nightshade is a cozy-but-feral hybrid PvPvE Rust server: PvE outside protected PvP areas, with monuments and event zones ready to bite.</color>",
+                "",
+                "<color=#E2DBD3>– Vanilla gathering on resources, components, and food</color>",
+                "<color=#E2DBD3>– 10x+ stack sizes with exceptions for balance</color>",
+                "<color=#E2DBD3>– Monthly wipe cycle: first Thursday @ 2PM Eastern unless Discord says otherwise</color>",
+                "<color=#ECCA97>– Monuments are always PvP. Watch the zone warnings before wandering in like loot with legs.</color>",
+                "<color=#E2DBD3>– Custom progression through /shop, Skill Tree, quarries, events, and VIP perks</color>",
+                "<color=#E2DBD3>– Loot protection on earned kills, crates, drops, and event rewards</color>",
+                "<color=#E2DBD3>– Active admins and Discord support</color>",
+                "",
+                "<color=#ECCA97><size=16><b>WHERE TO START</b></size></color>",
+                "<color=#E2DBD3>/rules first. /commands second. /shop when you are ready to make questionable financial choices with RP.</color>",
+                "<color=#E2DBD3>Discord: </color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -415.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -105.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Panel_50a5b7b1c9",
+              "Type (Label/Panel/Button/Image)": "InputField",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "discord.gg/dFmeweQmsy"
+              ],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "MiddleCenter",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.5,
+              "AnchorMin (Y)": 0.5,
+              "AnchorMax (X)": 0.5,
+              "AnchorMax (Y)": 0.5,
+              "OffsetMin (X)": -125.0,
+              "OffsetMin (Y)": -217.5,
+              "OffsetMax (X)": 75.0,
+              "OffsetMax (Y)": -192.5
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        }
+      ],
+      "Use Auto-Resize?": false,
+      "Localizations": {
+        "en": {
+          "Text": "GENERAL",
+          "Width": 100.0
+        }
+      }
+    },
+    {
+      "ID": -1091246031,
+      "Enabled": true,
+      "Permission": "",
+      "Visible": true,
+      "Title": "SERVER RULES",
+      "Icon": "",
+      "Chat Button": false,
+      "Show Pages?": false,
+      "Commands": [
+        "rules",
+        "rule"
+      ],
+      "Pages": [
+        {
+          "Title": "SERVER RULES",
+          "Icon": null,
+          "Commands": [],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerRules.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "SERVER RULES"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerRules.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerRules.Left",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>BASES & BUILDING</b></size></color>",
+                "<color=#D58D7C>– No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside Purge or approved raid events.</color>",
+                "<color=#D58D7C>– Do not block roads, monuments, caves, vendors, event areas, or another player's build.</color>",
+                "<color=#E2DBD3>– Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>LOOT & OWNERSHIP</b></size></color>",
+                "<color=#D58D7C>– Do not steal from player containers, bodies, drops, event crates, or protected loot.</color>",
+                "<color=#D58D7C>– If Loot Protection says it is not yours, it is not yours. This is not a riddle.</color>",
+                "<color=#E2DBD3>– Team up or ask for share access when you want to split loot.</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 270.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerRules.Divider",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#8B8B8B",
+                "Opacity (0 - 100)": 18.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.5,
+              "AnchorMin (Y)": 0.0,
+              "AnchorMax (X)": 0.5,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": -1.0,
+              "OffsetMin (Y)": 45.0,
+              "OffsetMax (X)": 1.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerRules.Right",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>PVP</b></size></color>",
+                "<color=#E2DBD3>– PvP is allowed inside marked PvP monuments, PvP domes, PvP-enabled events, and during Purge.</color>",
+                "<color=#D58D7C>– Outside those areas, do not attack, bait, exploit rules, or play loophole lawyer.</color>",
+                "<color=#E2DBD3>– Watch entry/leave messages. If a dome looks spicy, assume it bites.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>COMMUNITY</b></size></color>",
+                "<color=#D58D7C>– No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.</color>",
+                "<color=#E2DBD3>– Trash talk can be spicy. Do not make it personal, creepy, or radioactive.</color>",
+                "<color=#E2DBD3>– Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene.</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 290.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 540.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        }
+      ],
+      "Use Auto-Resize?": false,
+      "Localizations": {
+        "en": {
+          "Text": "SERVER RULES",
+          "Width": 120.0
+        }
+      }
+    },
+    {
+      "ID": 2016740227,
+      "Enabled": true,
+      "Permission": "",
+      "Visible": true,
+      "Title": "SERVER COMMANDS",
+      "Icon": "",
+      "Chat Button": false,
+      "Show Pages?": false,
+      "Commands": [
+        "commands",
+        "cmds",
+        "command"
+      ],
+      "Pages": [
+        {
+          "Title": "SERVER COMMANDS",
+          "Icon": null,
+          "Commands": [],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerCommands.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "SERVER COMMANDS"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerCommands.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerCommands.Left",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>CORE</b></size></color>",
+                "<color=#E2DBD3>/info – open this panel</color>",
+                "<color=#E2DBD3>/rules – server rules</color>",
+                "<color=#E2DBD3>/commands – command list</color>",
+                "<color=#E2DBD3>/systems – server systems</color>",
+                "<color=#E2DBD3>/events – events and help</color>",
+                "<color=#E2DBD3>/vip – VIP perks and donation help</color>",
+                "",
+                "<color=#ECCA97><size=16><b>HOMES</b></size></color>",
+                "<color=#E2DBD3>/sethome <name> – save a home</color>",
+                "<color=#E2DBD3>/home <name> – teleport home</color>",
+                "<color=#E2DBD3>/removehome <name> – remove a home</color>",
+                "<color=#AFAFAF>Player-to-player teleport commands are not listed for next wipe.</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 270.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerCommands.Divider",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#8B8B8B",
+                "Opacity (0 - 100)": 18.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.5,
+              "AnchorMin (Y)": 0.0,
+              "AnchorMax (X)": 0.5,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": -1.0,
+              "OffsetMin (Y)": 45.0,
+              "OffsetMax (X)": 1.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerCommands.Right",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>PROGRESSION & QOL</b></size></color>",
+                "<color=#E2DBD3>/shop – open the RP shop</color>",
+                "<color=#E2DBD3>/vq – virtual quarries</color>",
+                "<color=#E2DBD3>/skills, /skilltree, /st – Skill Tree</color>",
+                "<color=#E2DBD3>/limits – entity limits</color>",
+                "",
+                "<color=#ECCA97><size=16><b>SKINS / LOOT / HELP</b></size></color>",
+                "<color=#E2DBD3>/skin, /skincraft, /skinitem, /skininv, /skinauto, /skinbase</color>",
+                "<color=#E2DBD3>/skinrequest <WorkshopID> – request a Workshop skin</color>",
+                "<color=#E2DBD3>/loot, /share, /unshare, /sharelist, /shareclear</color>",
+                "<color=#E2DBD3>/vehicleinfo – vehicle rules</color>",
+                "<color=#E2DBD3>/hordehelp – Hordes help page</color>",
+                "<color=#E2DBD3>/checkfoundations – check Defendable Homes foundations</color>",
+                "<color=#E2DBD3>/raidbuilderinfo – vetted raidbase builder help</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 290.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 540.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        }
+      ],
+      "Use Auto-Resize?": false,
+      "Localizations": {
+        "en": {
+          "Text": "SERVER COMMANDS",
+          "Width": 145.0
+        }
+      }
+    },
+    {
+      "ID": 1900312201,
+      "Enabled": true,
+      "Permission": "",
+      "Visible": true,
+      "Title": "SERVER SYSTEMS",
+      "Icon": "",
+      "Chat Button": false,
+      "Show Pages?": false,
+      "Commands": [
+        "systems",
+        "sys"
+      ],
+      "Pages": [
+        {
+          "Title": "SERVER SYSTEMS",
+          "Icon": null,
+          "Commands": [],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerSystems.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "SERVER SYSTEMS"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerSystems.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerSystems.Left",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>ECONOMY</b></size></color>",
+                "<color=#E2DBD3>– /shop opens the RP shop.</color>",
+                "<color=#E2DBD3>– RP is the main player-facing currency.</color>",
+                "<color=#E2DBD3>– Admin Shop and Black Market systems may use special item currency when configured.</color>",
+                "<color=#E2DBD3>– Shop stock can rotate by wipe, event, or balance pass.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>LOOT PROTECTION</b></size></color>",
+                "<color=#E2DBD3>– Kills, crates, drops, and event rewards may lock to the player/team that earned them.</color>",
+                "<color=#E2DBD3>– Use /share when you want another player to access protected loot.</color>",
+                "<color=#D58D7C>– If a protected container says no, believe it.</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 270.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerSystems.Divider",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#8B8B8B",
+                "Opacity (0 - 100)": 18.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.5,
+              "AnchorMin (Y)": 0.0,
+              "AnchorMax (X)": 0.5,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": -1.0,
+              "OffsetMin (Y)": 45.0,
+              "OffsetMax (X)": 1.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.ServerSystems.Right",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>QUARRIES / PROGRESSION</b></size></color>",
+                "<color=#E2DBD3>– /vq opens Virtual Quarries when enabled.</color>",
+                "<color=#E2DBD3>– Skill Tree unlocks long-term bonuses and progression perks.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>VEHICLES / QOL</b></size></color>",
+                "<color=#E2DBD3>– Car chassis are buyable with RP from /shop.</color>",
+                "<color=#E2DBD3>– Build purchased chassis at the car lift.</color>",
+                "<color=#E2DBD3>– 4-module chassis are VIP-only.</color>",
+                "<color=#E2DBD3>– VIP can use /tug for tugboat access/spawning.</color>",
+                "<color=#E2DBD3>– ChestStacks are available to everyone: 3 stacks for non-VIP, 5 stacks for VIP.</color>",
+                "<color=#E2DBD3>– Use /limits to check entity limits before the server starts judging your decor choices.</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 290.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 540.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        }
+      ],
+      "Use Auto-Resize?": false,
+      "Localizations": {
+        "en": {
+          "Text": "SERVER SYSTEMS",
+          "Width": 135.0
+        }
+      }
+    },
+    {
+      "ID": -1803324194,
+      "Enabled": true,
+      "Permission": "",
+      "Visible": true,
+      "Title": "EVENT HELP",
+      "Icon": "",
+      "Chat Button": false,
+      "Show Pages?": false,
+      "Commands": [
+        "events",
+        "eventinfo",
+        "help"
+      ],
+      "Pages": [
+        {
+          "Title": "EVENT HELP",
+          "Icon": null,
+          "Commands": [],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.EventHelp.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "EVENT HELP"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.EventHelp.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.EventHelp.Left",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>REGULAR EVENTS</b></size></color>",
+                "<color=#E2DBD3>– Hide and Seek runs on scheduled event days when announced.</color>",
+                "<color=#E2DBD3>– Purge is the last 2 days of wipe: PvP, raiding, and base destruction are allowed serverwide.</color>",
+                "<color=#D58D7C>– Monuments are always PvP. Watch the zone warnings.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>SIGNALS / BOSSES</b></size></color>",
+                "<color=#E2DBD3>– Heli and Bradley signals may have tiers, cooldowns, rewards, and team recommendations.</color>",
+                "<color=#E2DBD3>– Read event warnings before throwing expensive signals like a gremlin with fireworks.</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 270.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.EventHelp.Divider",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#8B8B8B",
+                "Opacity (0 - 100)": 18.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.5,
+              "AnchorMin (Y)": 0.0,
+              "AnchorMax (X)": 0.5,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": -1.0,
+              "OffsetMin (Y)": 45.0,
+              "OffsetMax (X)": 1.0,
+              "OffsetMax (Y)": -95.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.EventHelp.Right",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>SIGNALS / RAID CONTENT</b></size></color>",
+                "<color=#E2DBD3>– Bradley and Heli signals are player-triggered combat events.</color>",
+                "<color=#E2DBD3>– Raidable Bases are event bases, not normal player bases.</color>",
+                "<color=#E2DBD3>– Read difficulty/tier info before donating your kit to the floor.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>HELP PAGES</b></size></color>",
+                "<color=#E2DBD3>/hordehelp – Hordes rules and reminders</color>",
+                "<color=#E2DBD3>/raidbuilderinfo – vetted raidbase builder commands</color>",
+                "<color=#E2DBD3>/rbinfo – raidable bases overview</color>",
+                "<color=#E2DBD3>/pvpinfo – PvP zone reminders</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 290.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 540.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        },
+        {
+          "Title": "HORDES HELP",
+          "Icon": null,
+          "Commands": [
+            "hordehelp",
+            "hordeshelp"
+          ],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.HordesHelp.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "HORDES HELP"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.HordesHelp.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.HordesHelp.Subtitle",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "Command: <color=#ECCA97>/hordehelp</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E2DBD3",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -90.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -60.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.HordesHelp.Description",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>HORDES HELP</b></size></color>",
+                "<color=#E2DBD3>Hordes are Defendable Homes style wave events. Build smart, check your foundations, then try not to become part of the furniture.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>FOUNDATION REQUIREMENTS</b></size></color>",
+                "<color=#E2DBD3>– Your Defendable Home must be built on normal terrain using owned square or triangle foundations.</color>",
+                "<color=#E2DBD3>– Foundations must belong to you or your team/friends/clan.</color>",
+                "<color=#E2DBD3>– You must be inside the Tool Cupboard area of the house when checking.</color>",
+                "<color=#E2DBD3>– Invalid areas include monuments, cliffs, mountains, clutter/decor terrain, and bad topology.</color>",
+                "<color=#E2DBD3>– Do not build too close to another active Defendable Homes event.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>/CHECKFOUNDATIONS</b></size></color>",
+                "<color=#E2DBD3>Use /checkfoundations to check all foundations for the event.</color>",
+                "<color=#AFAFAF>⊘ = You/friends are not the foundation owner.</color>",
+                "<color=#AFAFAF>⊝ = Foundation height/depth does not match.</color>",
+                "<color=#AFAFAF>⊛ = Terrain topology is invalid. Prohibited: Cliff, Cliffside, Decor, Building, Monument, Clutter, Mountain.</color>",
+                "<color=#AFAFAF>◉ = Foundation is within 40m of a custom monument.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>BASIC RULES</b></size></color>",
+                "<color=#E2DBD3>– Bring ammo, meds, armor, and room in your inventory.</color>",
+                "<color=#E2DBD3>– Do not drag hordes into player bases, vendors, safe builds, or random bystanders.</color>",
+                "<color=#E2DBD3>– PvP only applies if the event area is marked PvP or the server is in Purge.</color>",
+                "<color=#E2DBD3>– Loot ownership follows Loot Protection and event rules.</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        },
+        {
+          "Title": "RAIDABLE BASES",
+          "Icon": null,
+          "Commands": [
+            "rbinfo",
+            "raidablebasesinfo"
+          ],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidableBases.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "RAIDABLE BASES"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidableBases.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidableBases.Subtitle",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "Command: <color=#ECCA97>/rbinfo</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E2DBD3",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -90.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -60.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidableBases.Description",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>RAIDABLE BASES</b></size></color>",
+                "<color=#E2DBD3>Raidable Bases are event bases. They are not normal player bases, and normal player bases are still protected outside Purge or approved raid events.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>BUY UNLOCKS</b></size></color>",
+                "<color=#E2DBD3>– Easy: 24h after wipe / VIP 12h.</color>",
+                "<color=#E2DBD3>– Medium: 24h after wipe / VIP 12h.</color>",
+                "<color=#E2DBD3>– Hard: 72h after wipe / VIP 48h.</color>",
+                "<color=#E2DBD3>– Expert: 120h after wipe / VIP 96h.</color>",
+                "<color=#E2DBD3>– Nightmare: 168h after wipe / VIP 144h.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>RULES</b></size></color>",
+                "<color=#E2DBD3>– Do not interfere with another player's PvE raid unless event rules allow it.</color>",
+                "<color=#E2DBD3>– PvP raid bases, PvP domes, and Purge are different. Read the warnings.</color>",
+                "<color=#E2DBD3>– If you started it, finish it before the server starts spawning consequences with your name on them.</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        },
+        {
+          "Title": "RAIDBASE BUILDER HELP",
+          "Icon": null,
+          "Commands": [
+            "raidbuilderinfo",
+            "raidbuildinfo",
+            "raidguide"
+          ],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidBuilderHelp.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "RAIDBASE BUILDER HELP"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidBuilderHelp.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidBuilderHelp.Subtitle",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "Command: <color=#ECCA97>/raidbuilderinfo</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E2DBD3",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -90.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -60.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.RaidBuilderHelp.Description",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>RAIDBASE BUILDER HELP</b></size></color>",
+                "<color=#D58D7C>Raidbase builder access is admin-only after vetting. This is not a public toy box.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>WHO THIS IS FOR</b></size></color>",
+                "<color=#E2DBD3>– Players approved to help build/testing raidbase content.</color>",
+                "<color=#E2DBD3>– Permissions are assigned by Admin only after vetting.</color>",
+                "<color=#E2DBD3>– Do not share commands, bases, or access with unapproved players.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>BUILDER COMMANDS</b></size></color>",
+                "<color=#E2DBD3>/raidbasestart – start/setup a player raidbase build session</color>",
+                "<color=#E2DBD3>/raidreadypve – mark the saved raidbase ready for PvE use</color>",
+                "<color=#E2DBD3>/raidreadypvp – mark the saved raidbase ready for PvP use</color>",
+                "<color=#E2DBD3>/raidbaseend – end/clean up the active raidbase session</color>",
+                "",
+                "<color=#ECCA97><size=16><b>BUILDING NOTES</b></size></color>",
+                "<color=#E2DBD3>– Build clean, playable bases with accessible paths and fair loot flow.</color>",
+                "<color=#E2DBD3>– Avoid traps that softlock players, exploit terrain, or create impossible raid paths.</color>",
+                "<color=#E2DBD3>– Ask Admin before making major format changes. We are building content, not a lawsuit with doors.</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        },
+        {
+          "Title": "PVP ZONES",
+          "Icon": null,
+          "Commands": [
+            "pvpinfo",
+            "pvpzonesinfo"
+          ],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.PvpZones.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "PVP ZONES"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.PvpZones.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.PvpZones.Subtitle",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "Command: <color=#ECCA97>/pvpinfo</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E2DBD3",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -90.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -60.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.PvpZones.Description",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>PVP ZONES</b></size></color>",
+                "<color=#D58D7C>Monuments are always PvP. Watch the zone warnings before entering.</color>",
+                "<color=#E2DBD3>Event domes and PvP-marked areas may also allow player combat.</color>",
+                "",
+                "<color=#ECCA97><size=16><b>WHAT TO WATCH FOR</b></size></color>",
+                "<color=#E2DBD3>– Entry and exit messages.</color>",
+                "<color=#E2DBD3>– Dome/warning visuals.</color>",
+                "<color=#E2DBD3>– Purge announcements during the last 2 days of wipe.</color>",
+                "",
+                "<color=#D58D7C>When the server tells you an area is PvP, believe it. Rust loves an educational consequence.</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        }
+      ],
+      "Use Auto-Resize?": false,
+      "Localizations": {
+        "en": {
+          "Text": "EVENT HELP",
+          "Width": 110.0
+        }
+      }
+    },
+    {
+      "ID": 1490211138,
+      "Enabled": true,
+      "Permission": "",
+      "Visible": true,
+      "Title": "VIP",
+      "Icon": "",
+      "Chat Button": false,
+      "Show Pages?": false,
+      "Commands": [
+        "vip",
+        "vipinfo",
+        "donateinfo",
+        "discord",
+        "discordinfo"
+      ],
+      "Pages": [
+        {
+          "Title": "VIP INFO",
+          "Icon": null,
+          "Commands": [],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipInfo.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "VIP INFO"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipInfo.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipInfo.Left",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><b>✈ TRAVEL & CONVENIENCE</b></color>",
+                "<color=#E8DDD5>• 5 /home slots instead of 3</color>",
+                "<color=#E8DDD5>• Free home teleportation — no RP cost per home TP</color>",
+                "<color=#E8DDD5>• Reduced /home cooldowns</color>",
+                "<color=#E8DDD5>• Can set a home on your tugboat</color>",
+                "<color=#E8DDD5>• Can use /tug for VIP tugboat access/spawning</color>",
+                "<color=#E8DDD5>• Queue skip + 5-minute reconnect hold</color>",
+                "",
+                "<color=#ECCA97><b>💰 ECONOMY & REWARDS</b></color>",
+                "<color=#E8DDD5>• 1.1× RP activity multiplier</color>",
+                "<color=#E8DDD5>• HeliSignals VIP reward multiplier: 1.25×</color>",
+                "<color=#E8DDD5>• HeliSignals VIPx reward multiplier: 1.5×</color>",
+                "<color=#E8DDD5>• Bradley signal cooldowns reduced for VIP/VIPx</color>",
+                "<color=#E8DDD5>• ChestStacks: 5 stacks for VIP instead of 3</color>",
+                "<color=#E8DDD5>• VIP shop perks may include claimable tool kits</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 270.0,
+              "OffsetMax (Y)": -70.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipInfo.Divider",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#8B8B8B",
+                "Opacity (0 - 100)": 18.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.5,
+              "AnchorMin (Y)": 0.0,
+              "AnchorMax (X)": 0.5,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": -1.0,
+              "OffsetMin (Y)": 45.0,
+              "OffsetMax (X)": 1.0,
+              "OffsetMax (Y)": -70.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipInfo.Right",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><b>⚙ GAMEPLAY PERKS</b></color>",
+                "<color=#E8DDD5>• Faster hackable crate unlocks</color>",
+                "<color=#E8DDD5>• VIP: hackable crates unlock in 2.5 minutes</color>",
+                "<color=#E8DDD5>• VIPx: hackable crates unlock in 60 seconds</color>",
+                "<color=#E8DDD5>• No decay on personal boats and tugboats</color>",
+                "<color=#E8DDD5>• 4-module car chassis access in the RP shop</color>",
+                "<color=#E8DDD5>• Some cosmetic/building skin perks may be VIP gated</color>",
+                "",
+                "<color=#ECCA97><b>📅 EARLY WIPE ACCESS</b></color>",
+                "<color=#E8DDD5>Higher raid tiers unlock earlier for VIP:</color>",
+                "<color=#AFAFAF>  Medium raids: 12h after wipe (default: 24h)</color>",
+                "<color=#AFAFAF>  Hard raids: 48h after wipe (default: 72h)</color>",
+                "<color=#AFAFAF>  Expert raids: 96h after wipe (default: 120h)</color>",
+                "<color=#AFAFAF>  Nightmare raids: 144h after wipe (default: 168h)</color>",
+                "<color=#E8DDD5>Bradley signal cooldown: 50 min VIP / 30 min VIPx</color>"
+              ],
+              "Font Size": 12,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 0.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 290.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": 540.0,
+              "OffsetMax (Y)": -70.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        },
+        {
+          "Title": "VIP / DONATION HELP",
+          "Icon": null,
+          "Commands": [
+            "viphelp",
+            "donationinfo"
+          ],
+          "Type (Plugin/UI)": "UI",
+          "Plugin Name": "",
+          "Plugin Hook": "",
+          "UI Elements": [
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipDonation.Title",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "VIP / DONATION HELP"
+              ],
+              "Font Size": 22,
+              "Font": 0,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -50.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": 0.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipDonation.AccentLine",
+              "Type (Label/Panel/Button/Image)": "Panel",
+              "Color": {
+                "HEX": "#ECCA97",
+                "Opacity (0 - 100)": 35.0
+              },
+              "Text": [],
+              "Font Size": 14,
+              "Font": 0,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -58.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -56.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipDonation.Subtitle",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "Discord: <color=#ECCA97>discord.gg/dFmeweQmsy</color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "MiddleLeft",
+              "Text Color": {
+                "HEX": "#E2DBD3",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -90.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -60.0
+            },
+            {
+              "Enabled?": true,
+              "Visible": true,
+              "Name": "Page.VipDonation.Description",
+              "Type (Label/Panel/Button/Image)": "Label",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Text": [
+                "<color=#ECCA97><size=16><b>HOW TO GET VIP</b></size></color>",
+                "<color=#E8DDD5>VIP is donation-supported, but it is not fully automatic yet.</color>",
+                "",
+                "<color=#E2DBD3>– Donate through the server store/donation link listed in Discord.</color>",
+                "<color=#E2DBD3>– After donating, ping/post in the donation channel.</color>",
+                "<color=#E2DBD3>– Include your in-game name so an admin can apply the correct role in Rust.</color>",
+                "<color=#E2DBD3>– VIP lasts until map wipe unless otherwise stated. VIPx follows the matching Discord role.</color>",
+                "",
+                "<color=#E8DDD5>Discord: <color=#ECCA97>discord.gg/dFmeweQmsy</color></color>",
+                "<color=#ECCA97>Command: /vip — see this page</color>",
+                "",
+                "<color=#AFAFAF><size=11>VIP is convenience-focused. Core content stays playable for everyone; VIP makes the gremlin treadmill faster, not mandatory.</size></color>"
+              ],
+              "Font Size": 13,
+              "Font": 1,
+              "Align": "UpperLeft",
+              "Text Color": {
+                "HEX": "#E8DDD5",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Command ({user} - user steamid)": "",
+              "Image": "",
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "Sprite": "",
+              "Material": "",
+              "AnchorMin (X)": 0.0,
+              "AnchorMin (Y)": 1.0,
+              "AnchorMax (X)": 1.0,
+              "AnchorMax (Y)": 1.0,
+              "OffsetMin (X)": 20.0,
+              "OffsetMin (Y)": -405.0,
+              "OffsetMax (X)": -20.0,
+              "OffsetMax (Y)": -95.0
+            }
+          ],
+          "Use Auto-Resize?": false,
+          "Localizations": {}
+        }
+      ],
+      "Use Auto-Resize?": false,
+      "Localizations": {
+        "en": {
+          "Text": "VIP",
+          "Width": 80.0
+        }
+      }
+    }
+  ]
+}

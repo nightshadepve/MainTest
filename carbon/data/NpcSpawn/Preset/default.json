@@ -1,0 +1,164 @@
+{
+  "Prefab": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab",
+  "Names": "Scientist",
+  "Gender": 0,
+  "SkinTone": 0,
+  "Underwear": 0,
+  "WearItems": [
+    {
+      "ShortName": "hazmatsuit_scientist",
+      "SkinID": 0
+    }
+  ],
+  "BeltItems": [
+    {
+      "ShortName": "rifle.lr300",
+      "Amount": 1,
+      "SkinID": 0,
+      "Mods": [
+        "weapon.mod.lasersight",
+        "weapon.mod.holosight"
+      ],
+      "Ammo": ""
+    },
+    {
+      "ShortName": "smg.mp5",
+      "Amount": 1,
+      "SkinID": 0,
+      "Mods": [
+        "weapon.mod.flashlight"
+      ],
+      "Ammo": ""
+    },
+    {
+      "ShortName": "pistol.m92",
+      "Amount": 1,
+      "SkinID": 0,
+      "Mods": [],
+      "Ammo": ""
+    },
+    {
+      "ShortName": "knife.combat",
+      "Amount": 1,
+      "SkinID": 0,
+      "Mods": [],
+      "Ammo": ""
+    },
+    {
+      "ShortName": "syringe.medical",
+      "Amount": 5,
+      "SkinID": 0,
+      "Mods": [],
+      "Ammo": ""
+    },
+    {
+      "ShortName": "grenade.f1",
+      "Amount": 5,
+      "SkinID": 0,
+      "Mods": [],
+      "Ammo": ""
+    }
+  ],
+  "Kit": "",
+  "DestroyTrapsOnDeath": false,
+  "Health": 100.0,
+  "InstantDeathIfHitHead": false,
+  "RoamRange": 10.0,
+  "ChaseRange": 80.0,
+  "SenseRange": 40.0,
+  "ListenRange": 20.0,
+  "DamageRange": -1.0,
+  "ShortRange": 10.0,
+  "AttackLengthMaxShortRangeScale": 2.0,
+  "AttackRangeMultiplier": 1.0,
+  "CheckVisionCone": false,
+  "VisionCone": 286.0,
+  "HostileTargetsOnly": false,
+  "DisplaySashTargetsOnly": false,
+  "IgnoreSafeZonePlayers": true,
+  "IgnoreSleepingPlayers": true,
+  "IgnoreWoundedPlayers": true,
+  "NpcAttackMode": 2,
+  "NpcSenseRange": 40.0,
+  "NpcDamageScale": 1.0,
+  "NpcWhitelist": "FrankensteinPet,14922524",
+  "NpcBlacklist": "11162132011012",
+  "AnimalAttackMode": 0,
+  "AnimalSenseRange": 20.0,
+  "AnimalDamageScale": 1.0,
+  "AnimalWhitelist": "",
+  "AnimalBlacklist": "11491311214163",
+  "DamageScale": 0.75,
+  "CanTurretTarget": true,
+  "DamageScaleFromTurret": 0.5,
+  "DamageScaleToTurret": 1.0,
+  "AimConeScale": 2.0,
+  "DisableRadio": false,
+  "CanRunAwayWater": true,
+  "CanSleep": false,
+  "SleepDistance": 100.0,
+  "Speed": 5.0,
+  "AreaMask": 1,
+  "AgentTypeID": -1372625422,
+  "BaseOffSet": 0.0,
+  "HomePosition": "",
+  "MemoryDuration": 10.0,
+  "States": [
+    "RoamState",
+    "ChaseState",
+    "CombatState"
+  ],
+  "LootPreset": "",
+  "LootTable": {
+    "IsAlphaLoot": false,
+    "AlphaLootPreset": "",
+    "IsLoottablePlugin": false,
+    "LoottablePreset": "",
+    "IsCustomLootPlugin": false,
+    "CustomLootPreset": "",
+    "ClearDefaultLoot": true,
+    "PrefabsTable": {
+      "IsEnabled": true,
+      "MinPrefabsAmount": 1,
+      "MaxPrefabsAmount": 1,
+      "Prefabs": [
+        {
+          "PrefabName": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_oilrig.prefab",
+          "Chance": 100.0,
+          "MinAmount": 1,
+          "MaxAmount": 1
+        }
+      ]
+    },
+    "ItemsTable": {
+      "IsEnabled": true,
+      "DisableMinMax": true,
+      "MinItemsAmount": 1,
+      "MaxItemsAmount": 1,
+      "Items": [
+        {
+          "Shortname": "scrap",
+          "Skin": 0,
+          "DisplayName": "",
+          "OwnerName": "",
+          "IsBlueprint": false,
+          "Chance": 50.0,
+          "MinAmount": 5,
+          "MaxAmount": 5
+        }
+      ]
+    }
+  },
+  "CratePrefab": "",
+  "IsRemoveCorpse": true,
+  "GroupAlertEnabled": false,
+  "GroupAlertRadius": 40.0,
+  "GroupAlertReceivers": "",
+  "HeadDamageScale": 1.0,
+  "BodyDamageScale": 1.0,
+  "LegDamageScale": 1.0,
+  "MeleeDamageScale": 0.75,
+  "BarricadeHealthThreshold": 30.0,
+  "BarricadeDistanceThreshold": 12.0,
+  "HealingScale": 1.0
+}

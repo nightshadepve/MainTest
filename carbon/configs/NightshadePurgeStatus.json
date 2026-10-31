@@ -1,0 +1,17 @@
+{
+  "Chat/console command": "purge",
+  "Join message (use {time} for remaining time)": "<color=#FF2D75>[Purge]</color> The purge is <color=#FF3B3B>ACTIVE</color> until end of wipe! <color=#FFAA00>{time}</color> remaining — no mercy.",
+  "Broadcast message on start (use {time} for remaining time)": "<color=#FF2D75>[Purge]</color> The purge has begun! Chaos reigns for the next <color=#FFAA00>{time}</color>.",
+  "Broadcast message on end": "<color=#FF2D75>[Purge]</color> The purge has ended.",
+  "Bar text": "PURGE",
+  "Bar order (position among other AdvancedStatus bars)": 50,
+  "Bar background color": "#000000",
+  "Bar progress fill color": "#8B0000",
+  "Bar text color": "#FF0000",
+  "Bar subtext (countdown) color": "#FF0000",
+  "Bar local image name (blank = use AdvancedStatus default)": "",
+  "Use filling progress bar (false = plain countdown text)": false,
+  "Sync TruePVE default ruleset with purge state": true,
+  "TruePVE ruleset name to switch to when purge starts": "purge",
+  "TruePVE config file path (blank = auto-detect oxide/config/TruePVE.json)": ""
+}

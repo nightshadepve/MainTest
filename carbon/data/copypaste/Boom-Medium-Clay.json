@@ -1,0 +1,3518 @@
+{
+    "default": {
+        "position": {
+            "x": "2025.736",
+            "y": "2.450811",
+            "z": "-2132.874"
+        },
+        "rotationdiff": "3.634903",
+        "rotationy": "340.9822"
+    },
+    "entities": [
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.150331",
+                "y": "1.394107",
+                "z": "1.833019"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "3.381352E-09",
+                "y": "0.2219639",
+                "z": "-9.418258E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.3569508",
+                "y": "1.394107",
+                "z": "0.7000031"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-6.919218E-08",
+                "y": "1.79276",
+                "z": "-1.158452E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.7776608",
+                "y": "1.394107",
+                "z": "2.493773"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.116665E-07",
+                "y": "0.2219634",
+                "z": "4.17306E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.3569508",
+                "y": "-1.605893",
+                "z": "0.7000031"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "1.748455E-07",
+                "y": "-2.919629",
+                "z": "-1.748456E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.358022",
+                "y": "1.494107",
+                "z": "1.695036"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "1.574544E-07",
+                "y": "1.78844",
+                "z": "4.721173E-08"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.240776",
+                "y": "1.394107",
+                "z": "2.82393"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "2.300958E-07",
+                "y": "1.79276",
+                "z": "-1.049038E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.257656",
+                "y": "-1.485693",
+                "z": "3.161242"
+            },
+            "prefabname": "assets/prefabs/deployable/fridge/fridge.deployed.prefab",
+            "rot": {
+                "x": "2.647579E-07",
+                "y": "0.2470961",
+                "z": "2.18162E-07"
+            },
+            "skinid": 1910389253
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.7759001",
+                "y": "-1.605893",
+                "z": "2.493334"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-4.173065E-08",
+                "y": "-2.919628",
+                "z": "1.116665E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.583891",
+                "y": "-1.605893",
+                "z": "2.278072"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "1.748456E-07",
+                "y": "-2.39603",
+                "z": "6.399783E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "IOEntity": {
+                "inputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "niceName": "Power In",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ],
+                "oldID": 91566200,
+                "outputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Has Target",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Low Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "No Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ]
+            },
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.667184",
+                "y": "3.001607",
+                "z": "6.369374"
+            },
+            "prefabname": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+            "rot": {
+                "x": "6.38868E-08",
+                "y": "1.289915",
+                "z": "1.386934E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.571041",
+                "y": "-0.1058924",
+                "z": "1.360757"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.269084E-07",
+                "y": "1.79276",
+                "z": "-5.190074E-09"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.088151",
+                "y": "0.7868147",
+                "z": "0.9237031"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "-2.044439E-05",
+                "y": "-1.348831",
+                "z": "1.570796"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.571041",
+                "y": "1.394107",
+                "z": "1.360757"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.776604E-07",
+                "y": "1.79276",
+                "z": "-6.639301E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.762012",
+                "y": "-1.605892",
+                "z": "0.5152128"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "4.557133E-07",
+                "y": "2.316359",
+                "z": "1.693877E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.761896",
+                "y": "-1.605893",
+                "z": "0.5149978"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-7.644203E-08",
+                "y": "-1.872432",
+                "z": "1.7229E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.571041",
+                "y": "-1.605892",
+                "z": "1.360757"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.269083E-07",
+                "y": "1.79276",
+                "z": "-5.190081E-09"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.571041",
+                "y": "-1.605892",
+                "z": "1.360757"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "2.342468E-08",
+                "y": "-2.919629",
+                "z": "-3.262662E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "IOEntity": {
+                "inputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "niceName": "Power In",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ],
+                "oldID": 91538471,
+                "outputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Has Target",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Low Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "No Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ]
+            },
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.278819",
+                "y": "-1.505892",
+                "z": "2.34639"
+            },
+            "prefabname": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+            "rot": {
+                "x": "2.450603E-07",
+                "y": "0.281564",
+                "z": "2.588099E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.240776",
+                "y": "-1.605893",
+                "z": "2.82393"
+            },
+            "prefabname": "assets/prefabs/building core/foundation/foundation.prefab",
+            "rot": {
+                "x": "-6.399804E-08",
+                "y": "-2.919629",
+                "z": "-2.388435E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.6083784",
+                "y": "2.854107",
+                "z": "1.566946"
+            },
+            "prefabname": "assets/prefabs/deployable/single shot trap/guntrap.deployed.prefab",
+            "rot": {
+                "x": "-2.34017E-07",
+                "y": "0.3038368",
+                "z": "3.141593"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.3569508",
+                "y": "-0.1058929",
+                "z": "0.7000031"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "7.896015E-08",
+                "y": "1.792761",
+                "z": "2.950806E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.166096",
+                "y": "-1.605893",
+                "z": "-0.1457559"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-9.184848E-08",
+                "y": "-1.872431",
+                "z": "2.111015E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.3569508",
+                "y": "-1.605893",
+                "z": "0.7000031"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "9.870018E-08",
+                "y": "1.792761",
+                "z": "3.688507E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1659804",
+                "y": "-1.605893",
+                "z": "-0.1455409"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "2.115285E-07",
+                "y": "2.316359",
+                "z": "2.423396E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.514658",
+                "y": "1.494107",
+                "z": "2.634168"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "2.567224E-07",
+                "y": "1.800075",
+                "z": "8.537543E-08"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.7759001",
+                "y": "-0.1058929",
+                "z": "2.493334"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-3.381363E-09",
+                "y": "-2.919629",
+                "z": "9.418251E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.6872155",
+                "y": "2.894107",
+                "z": "2.163177"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "6.639313E-08",
+                "y": "-2.919628",
+                "z": "-1.776603E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.6872155",
+                "y": "1.394107",
+                "z": "2.163177"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "9.418254E-08",
+                "y": "1.79276",
+                "z": "3.38137E-09"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.03340403",
+                "y": "-1.505893",
+                "z": "3.280763"
+            },
+            "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+            "rot": {
+                "x": "1.340595E-07",
+                "y": "0.3507521",
+                "z": "7.689766E-08"
+            },
+            "skinid": 1233803048
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.8046491",
+                "y": "-1.505893",
+                "z": "2.700309"
+            },
+            "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+            "rot": {
+                "x": "5.941166E-08",
+                "y": "0.2510457",
+                "z": "4.78697E-08"
+            },
+            "skinid": 1233803048
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.150331",
+                "y": "-0.1058927",
+                "z": "1.833019"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "3.381363E-09",
+                "y": "0.2219641",
+                "z": "-9.418251E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.150331",
+                "y": "-1.605893",
+                "z": "1.833019"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "4.173065E-08",
+                "y": "0.2219641",
+                "z": "-1.116665E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.6872155",
+                "y": "-1.605893",
+                "z": "2.163177"
+            },
+            "prefabname": "assets/prefabs/building core/foundation/foundation.prefab",
+            "rot": {
+                "x": "8.742278E-08",
+                "y": "-2.919629",
+                "z": "-8.742278E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.797013",
+                "y": "-1.505892",
+                "z": "2.880712"
+            },
+            "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+            "rot": {
+                "x": "2.130218E-07",
+                "y": "0.08921671",
+                "z": "1.453212E-07"
+            },
+            "skinid": 1233803048
+        },
+        {
+            "flags": {},
+            "IOEntity": {
+                "inputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "niceName": "Power In",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ],
+                "oldID": 91566434,
+                "outputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Has Target",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Low Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "No Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ]
+            },
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.7356638",
+                "y": "3.001607",
+                "z": "2.856465"
+            },
+            "prefabname": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+            "rot": {
+                "x": "5.595312E-08",
+                "y": "-2.908109",
+                "z": "-1.781079E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1843642",
+                "y": "1.494107",
+                "z": "1.959068"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "9.899063E-08",
+                "y": "1.776843",
+                "z": "2.046858E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.995684",
+                "y": "-1.605893",
+                "z": "1.641115"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "7.382414E-08",
+                "y": "-3.443227",
+                "z": "1.129498E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "IOEntity": {
+                "inputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "niceName": "Power In",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ],
+                "oldID": 91565970,
+                "outputs": [
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Has Target",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "Low Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    },
+                    {
+                        "connectedID": 0,
+                        "connectedToSlot": 0,
+                        "linePoints": [],
+                        "niceName": "No Ammo",
+                        "type": 0,
+                        "wireColour": 0
+                    }
+                ]
+            },
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.195692",
+                "y": "3.001608",
+                "z": "7.570101"
+            },
+            "prefabname": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+            "rot": {
+                "x": "6.08776E-07",
+                "y": "-0.8289866",
+                "z": "7.503431E-08"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "-0.1058922",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "-1.819924E-07",
+                "y": "-3.443226",
+                "z": "-2.86953E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.4635722",
+                "y": "3.508801",
+                "z": "3.857885"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "3.993511E-06",
+                "y": "-1.348832",
+                "z": "1.570796"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.02781927",
+                "y": "4.394107",
+                "z": "5.807973"
+            },
+            "prefabname": "assets/prefabs/building/floor.triangle.ladder.hatch/floor.triangle.ladder.hatch.prefab",
+            "rot": {
+                "x": "-1.284122E-07",
+                "y": "-1.348831",
+                "z": "-1.379763E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.048787",
+                "y": "2.994108",
+                "z": "7.460041"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "6.959731E-08",
+                "y": "-2.42446",
+                "z": "-4.410803E-07"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.399384",
+                "y": "3.458424",
+                "z": "6.903334"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "0.0005677343",
+                "y": "0.7455633",
+                "z": "1.570797"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.3191929",
+                "y": "-0.1058919",
+                "z": "7.922889"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "2.743421E-08",
+                "y": "-2.396029",
+                "z": "-3.464674E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {
+                "Open": true
+            },
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "-0.1058922",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "1.819924E-07",
+                "y": "-0.3016336",
+                "z": "2.86953E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.947037",
+                "y": "1.494106",
+                "z": "7.428364"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "1.261245E-07",
+                "y": "-2.381563",
+                "z": "4.898654E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.440592",
+                "y": "-0.1058936",
+                "z": "7.838971"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.497655E-07",
+                "y": "-0.8252337",
+                "z": "1.324888E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.56023",
+                "y": "-0.1058939",
+                "z": "7.754614"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.456955E-07",
+                "y": "-2.396029",
+                "z": "2.319998E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.627132",
+                "y": "0.7006989",
+                "z": "8.912678"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "6.282828",
+                "y": "0.7455633",
+                "z": "1.570796"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.910512",
+                "y": "-0.1058924",
+                "z": "4.287104"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "-2.269084E-07",
+                "y": "1.79276",
+                "z": "5.190074E-09"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.457959",
+                "y": "2.894107",
+                "z": "6.737883"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "3.603927E-07",
+                "y": "-0.8252325",
+                "z": "1.105697E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.56023",
+                "y": "1.394107",
+                "z": "7.754614"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-6.962695E-08",
+                "y": "-2.39603",
+                "z": "-4.156774E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.355879",
+                "y": "4.394108",
+                "z": "5.720217"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-5.301453E-07",
+                "y": "2.316359",
+                "z": "-1.035027E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {
+                "Open": true
+            },
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "2.894108",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "-2.681372E-07",
+                "y": "-0.3016336",
+                "z": "-3.251741E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "2.894108",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "-1.819924E-07",
+                "y": "-0.3016336",
+                "z": "-2.86953E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.4819463",
+                "y": "2.994106",
+                "z": "8.113019"
+            },
+            "prefabname": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+            "rot": {
+                "x": "1.108071E-07",
+                "y": "-2.941146",
+                "z": "-8.811161E-08"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "4.394107",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle.frame/floor.triangle.frame.prefab",
+            "rot": {
+                "x": "-1.523457E-07",
+                "y": "-2.919627",
+                "z": "1.109861E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.415807",
+                "y": "2.994108",
+                "z": "4.953166"
+            },
+            "prefabname": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+            "rot": {
+                "x": "-1.569069E-07",
+                "y": "1.271553",
+                "z": "2.677483E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.02781927",
+                "y": "2.894106",
+                "z": "5.807973"
+            },
+            "prefabname": "assets/prefabs/building/floor.triangle.ladder.hatch/floor.triangle.ladder.hatch.prefab",
+            "rot": {
+                "x": "9.849623E-08",
+                "y": "-1.348831",
+                "z": "-1.431662E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.355879",
+                "y": "2.894108",
+                "z": "5.720217"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-3.603928E-07",
+                "y": "2.316359",
+                "z": "-1.105695E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "2.894106",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle.frame/floor.triangle.frame.prefab",
+            "rot": {
+                "x": "-1.311474E-07",
+                "y": "-2.919627",
+                "z": "-1.06457E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.355879",
+                "y": "2.894108",
+                "z": "5.720217"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.035029E-07",
+                "y": "-2.396029",
+                "z": "-5.301449E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.475708",
+                "y": "1.394106",
+                "z": "5.634926"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.694592E-07",
+                "y": "2.316359",
+                "z": "1.49175E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.355879",
+                "y": "-0.1058922",
+                "z": "5.720217"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "1.105697E-07",
+                "y": "-2.396029",
+                "z": "-3.603927E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.960705",
+                "y": "1.494106",
+                "z": "6.412422"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "1.257795E-07",
+                "y": "-2.403408",
+                "z": "4.036061E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.439425",
+                "y": "1.394106",
+                "z": "7.840153"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.969345E-08",
+                "y": "2.316359",
+                "z": "1.175714E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.355879",
+                "y": "-0.1058922",
+                "z": "5.720217"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "1.105696E-07",
+                "y": "-2.396029",
+                "z": "-3.603926E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.796884",
+                "y": "-1.505893",
+                "z": "6.111778"
+            },
+            "prefabname": "assets/prefabs/deployable/tier 3 workbench/workbench3.deployed.prefab",
+            "rot": {
+                "x": "-4.849306E-07",
+                "y": "2.309243",
+                "z": "1.503556E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-5.197237",
+                "y": "-1.605894",
+                "z": "8.342655"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "2.299165E-07",
+                "y": "-1.872431",
+                "z": "4.113187E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-5.063807",
+                "y": "-1.605893",
+                "z": "4.998027"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-1.6016E-07",
+                "y": "-1.348832",
+                "z": "2.58301E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.458149",
+                "y": "1.394106",
+                "z": "6.736948"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "1.324888E-07",
+                "y": "-2.39603",
+                "z": "2.497654E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-5.197237",
+                "y": "-1.605895",
+                "z": "8.342655"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-1.926184E-07",
+                "y": "0.2219639",
+                "z": "-2.069642E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.160954",
+                "y": "-1.605893",
+                "z": "10.54788"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "4.136135E-07",
+                "y": "-1.872431",
+                "z": "3.690986E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "2.894106",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "4.90442E-08",
+                "y": "1.792762",
+                "z": "-2.516344E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.763661",
+                "y": "2.994108",
+                "z": "3.942158"
+            },
+            "prefabname": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+            "rot": {
+                "x": "3.592236E-07",
+                "y": "-0.7757244",
+                "z": "1.431827E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "2.894106",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "9.829233E-08",
+                "y": "1.792762",
+                "z": "-3.232175E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.694737",
+                "y": "3.538223",
+                "z": "6.161982"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "0.0001228601",
+                "y": "-3.443227",
+                "z": "1.570796"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.3207628",
+                "y": "2.894108",
+                "z": "7.924262"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.658545E-07",
+                "y": "-2.396029",
+                "z": "-5.40589E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.144898",
+                "y": "4.394106",
+                "z": "7.592979"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-1.722898E-07",
+                "y": "-1.87243",
+                "z": "-7.64421E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.144898",
+                "y": "2.894106",
+                "z": "7.592979"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "2.662076E-08",
+                "y": "-1.87243",
+                "z": "-1.668055E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {
+                "Open": true
+            },
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "-0.1058922",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "1.678923E-07",
+                "y": "1.792761",
+                "z": "1.527303E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.3191929",
+                "y": "-0.1058919",
+                "z": "7.922889"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "2.743421E-08",
+                "y": "-2.396029",
+                "z": "-3.464674E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.144898",
+                "y": "-0.1058922",
+                "z": "7.592979"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "1.397724E-07",
+                "y": "-0.3016341",
+                "z": "1.032559E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.211751",
+                "y": "1.494106",
+                "z": "8.836541"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "2.941645E-07",
+                "y": "-2.377718",
+                "z": "2.074197E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.080423",
+                "y": "2.854107",
+                "z": "9.590145"
+            },
+            "prefabname": "assets/prefabs/deployable/single shot trap/guntrap.deployed.prefab",
+            "rot": {
+                "x": "-5.286568E-07",
+                "y": "2.349657",
+                "z": "3.141593"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.318406",
+                "y": "1.494107",
+                "z": "9.780863"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "2.941079E-07",
+                "y": "-2.374822",
+                "z": "2.078456E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.523947",
+                "y": "-0.1058936",
+                "z": "9.95984"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.841157E-07",
+                "y": "-2.396029",
+                "z": "3.787807E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1838973",
+                "y": "-1.605894",
+                "z": "10.68115"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-2.823148E-08",
+                "y": "-0.3016346",
+                "z": "2.936741E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.160954",
+                "y": "-1.605894",
+                "z": "10.54788"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-2.737655E-07",
+                "y": "0.2219639",
+                "z": "1.01762E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.523947",
+                "y": "1.394106",
+                "z": "9.95984"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.911825E-07",
+                "y": "-2.396029",
+                "z": "-2.076304E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.4043094",
+                "y": "1.394107",
+                "z": "10.0442"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "4.481443E-09",
+                "y": "-0.8252327",
+                "z": "-5.144483E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.30775",
+                "y": "2.854107",
+                "z": "7.071348"
+            },
+            "prefabname": "assets/prefabs/deployable/single shot trap/guntrap.deployed.prefab",
+            "rot": {
+                "x": "-4.761606E-08",
+                "y": "-1.82334",
+                "z": "3.141593"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "-0.1058922",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "-1.678923E-07",
+                "y": "-1.348831",
+                "z": "-1.527303E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.421867",
+                "y": "1.394106",
+                "z": "8.942175"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "3.787807E-08",
+                "y": "2.316359",
+                "z": "-2.841157E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.422843",
+                "y": "2.894107",
+                "z": "8.941928"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "-1.105696E-07",
+                "y": "0.7455637",
+                "z": "3.603927E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.9424918",
+                "y": "-1.494893",
+                "z": "8.406038"
+            },
+            "prefabname": "assets/prefabs/deployable/locker/locker.deployed.prefab",
+            "rot": {
+                "x": "-3.697614E-08",
+                "y": "2.325441",
+                "z": "3.110364E-07"
+            },
+            "skinid": 879343887
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.421867",
+                "y": "-1.605893",
+                "z": "8.942175"
+            },
+            "prefabname": "assets/prefabs/building core/foundation/foundation.prefab",
+            "rot": {
+                "x": "1.428465E-07",
+                "y": "-0.8252337",
+                "z": "-2.942675E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.910512",
+                "y": "-0.1058924",
+                "z": "4.287104"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-5.190081E-09",
+                "y": "0.2219641",
+                "z": "-2.269084E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.440592",
+                "y": "-1.605894",
+                "z": "7.838971"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.497655E-07",
+                "y": "-0.8252337",
+                "z": "1.324888E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.13",
+                "y": "-1.605894",
+                "z": "9.472255"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.517208E-07",
+                "y": "-1.872431",
+                "z": "2.41985E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.144898",
+                "y": "-0.1058922",
+                "z": "7.592979"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-1.032559E-07",
+                "y": "-1.872431",
+                "z": "1.397723E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "-1.605893",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.1451E-07",
+                "y": "-0.3016353",
+                "z": "-2.601391E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.908012",
+                "y": "-1.505893",
+                "z": "7.857186"
+            },
+            "prefabname": "assets/prefabs/deployable/mixingtable/mixingtable.deployed.prefab",
+            "rot": {
+                "x": "-3.291628E-07",
+                "y": "-1.863945",
+                "z": "-3.101135E-09"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.56023",
+                "y": "-1.605894",
+                "z": "7.754614"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.492289E-07",
+                "y": "-2.396029",
+                "z": "3.168759E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.356069",
+                "y": "-1.605893",
+                "z": "5.719283"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.388371E-07",
+                "y": "0.7455628",
+                "z": "-3.186166E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "-1.605893",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "5.542373E-08",
+                "y": "-1.872432",
+                "z": "-2.068445E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.56023",
+                "y": "-1.605894",
+                "z": "7.754614"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "3.816901E-07",
+                "y": "-0.8252342",
+                "z": "-2.302696E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.458149",
+                "y": "-1.605893",
+                "z": "6.736948"
+            },
+            "prefabname": "assets/prefabs/building core/foundation/foundation.prefab",
+            "rot": {
+                "x": "2.942674E-07",
+                "y": "-0.8252337",
+                "z": "-1.428467E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.144898",
+                "y": "-0.1058922",
+                "z": "7.592979"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "1.397723E-07",
+                "y": "-0.3016341",
+                "z": "1.032558E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [
+                {
+                    "amount": 50,
+                    "blueprintTarget": 0,
+                    "condition": "0",
+                    "dataInt": 0,
+                    "id": -151838493,
+                    "position": 0,
+                    "skinid": 0
+                }
+            ],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.751413",
+                "y": "-1.505893",
+                "z": "8.025234"
+            },
+            "prefabname": "assets/prefabs/misc/halloween/skull_fire_pit/skull_fire_pit.prefab",
+            "rot": {
+                "x": "3.382324E-07",
+                "y": "1.335861",
+                "z": "8.214433E-08"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1255799",
+                "y": "-1.605893",
+                "z": "6.491396"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "2.068445E-07",
+                "y": "0.2219639",
+                "z": "-5.542392E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.028557",
+                "y": "-1.605894",
+                "z": "10.49054"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "2.302698E-07",
+                "y": "1.79276",
+                "z": "2.708423E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.523947",
+                "y": "-1.605894",
+                "z": "9.95984"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.876492E-07",
+                "y": "-2.396029",
+                "z": "1.227542E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.3197871",
+                "y": "-1.605893",
+                "z": "7.92451"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.876491E-07",
+                "y": "0.7455628",
+                "z": "-1.227542E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1255799",
+                "y": "-1.605893",
+                "z": "6.491396"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-3.988823E-08",
+                "y": "-1.348832",
+                "z": "-3.748565E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.143328",
+                "y": "-1.605893",
+                "z": "7.594352"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "5.533198E-08",
+                "y": "-0.3016348",
+                "z": "-2.641383E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.4043094",
+                "y": "-1.605894",
+                "z": "10.0442"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.614396E-07",
+                "y": "-0.8252337",
+                "z": "2.989991E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.523947",
+                "y": "-1.605894",
+                "z": "9.95984"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "2.302692E-07",
+                "y": "-0.8252342",
+                "z": "-3.816902E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "-0.1058924",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-1.726743E-07",
+                "y": "-0.8252332",
+                "z": "-1.953597E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.4043094",
+                "y": "-0.1058936",
+                "z": "10.0442"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.614396E-07",
+                "y": "-0.8252337",
+                "z": "2.989991E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.13",
+                "y": "-0.1058936",
+                "z": "9.472255"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.597869E-07",
+                "y": "-1.872431",
+                "z": "-5.970836E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "-1.605893",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "8.742279E-08",
+                "y": "-0.8252335",
+                "z": "-8.742285E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.575558",
+                "y": "-1.605893",
+                "z": "8.040075"
+            },
+            "prefabname": "assets/prefabs/building core/foundation/foundation.prefab",
+            "rot": {
+                "x": "2.388436E-07",
+                "y": "1.269161",
+                "z": "6.399788E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.4043094",
+                "y": "-1.605894",
+                "z": "10.0442"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "3.816903E-07",
+                "y": "0.7455623",
+                "z": "5.542361E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.874316",
+                "y": "-1.605895",
+                "z": "10.29969"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-1.665103E-07",
+                "y": "0.7455628",
+                "z": "8.832592E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.835657",
+                "y": "-1.605894",
+                "z": "8.743243"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "6.939617E-08",
+                "y": "0.2219644",
+                "z": "2.958965E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.007787",
+                "y": "-0.1058939",
+                "z": "8.485799"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "3.081282E-08",
+                "y": "-0.3016343",
+                "z": "3.023592E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.007787",
+                "y": "-1.605894",
+                "z": "8.485799"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-5.533202E-08",
+                "y": "-0.3016343",
+                "z": "2.641381E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.007787",
+                "y": "-1.605894",
+                "z": "8.485799"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "3.262663E-07",
+                "y": "1.269161",
+                "z": "-2.342503E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.007787",
+                "y": "1.394107",
+                "z": "8.485799"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.380678E-07",
+                "y": "-0.3016346",
+                "z": "-4.324287E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.022686",
+                "y": "-1.605893",
+                "z": "6.606522"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.000393E-07",
+                "y": "-1.87243",
+                "z": "-1.597476E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.551341",
+                "y": "0.6373439",
+                "z": "7.078864"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "0.001851627",
+                "y": "-3.443226",
+                "z": "1.570796"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.900473",
+                "y": "-1.605893",
+                "z": "5.620066"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "5.362746E-08",
+                "y": "-0.3016336",
+                "z": "6.503479E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.575558",
+                "y": "1.394106",
+                "z": "8.040075"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "-5.97084E-08",
+                "y": "-3.443227",
+                "z": "-2.597869E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "5.728342",
+                "y": "-1.605893",
+                "z": "5.877511"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "2.789556E-07",
+                "y": "0.2219648",
+                "z": "2.167324E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.900473",
+                "y": "-0.1058929",
+                "z": "5.620066"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "8.614487E-08",
+                "y": "-0.3016336",
+                "z": "3.82211E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.468243",
+                "y": "-1.605893",
+                "z": "5.174343"
+            },
+            "prefabname": "assets/prefabs/building core/foundation/foundation.prefab",
+            "rot": {
+                "x": "8.742278E-08",
+                "y": "1.269162",
+                "z": "-8.742279E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.900473",
+                "y": "-1.605893",
+                "z": "5.620066"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "1.748455E-07",
+                "y": "1.269162",
+                "z": "-1.748457E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.022686",
+                "y": "-0.1058927",
+                "z": "6.606522"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.081054E-07",
+                "y": "-1.87243",
+                "z": "-2.436544E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.700787",
+                "y": "-1.505892",
+                "z": "4.879804"
+            },
+            "prefabname": "assets/prefabs/deployable/research table/researchtable_deployed.prefab",
+            "rot": {
+                "x": "-2.3366E-07",
+                "y": "-1.871019",
+                "z": "5.358152E-08"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "5.728227",
+                "y": "-1.605893",
+                "z": "5.877726"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "-9.357971E-08",
+                "y": "2.31636",
+                "z": "-4.842615E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.835541",
+                "y": "-1.605894",
+                "z": "8.743458"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "3.961865E-08",
+                "y": "2.316359",
+                "z": "-2.737239E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.913801",
+                "y": "-1.605893",
+                "z": "3.742163"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "1.748457E-07",
+                "y": "-3.443227",
+                "z": "-6.039613E-14"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.171469",
+                "y": "-1.605893",
+                "z": "2.914136"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "6.993593E-08",
+                "y": "1.792761",
+                "z": "1.533972E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.913801",
+                "y": "-1.605893",
+                "z": "3.742163"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.000393E-07",
+                "y": "1.269162",
+                "z": "1.597476E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.913801",
+                "y": "-0.1058929",
+                "z": "3.742163"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.081055E-07",
+                "y": "1.269162",
+                "z": "2.436544E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.036014",
+                "y": "-0.1058927",
+                "z": "4.72862"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-1.032558E-07",
+                "y": "-1.872431",
+                "z": "1.397724E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.01748",
+                "y": "-0.1058927",
+                "z": "3.62635"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "-1.579203E-07",
+                "y": "1.792761",
+                "z": "-5.901612E-08"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.01748",
+                "y": "-0.1058927",
+                "z": "3.62635"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "-1.776603E-07",
+                "y": "1.792761",
+                "z": "-6.639314E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.036014",
+                "y": "-0.1058927",
+                "z": "4.72862"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "1.397724E-07",
+                "y": "-0.3016346",
+                "z": "1.032558E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.432031",
+                "y": "1.494107",
+                "z": "4.932944"
+            },
+            "prefabname": "assets/prefabs/deployable/repair bench/repairbench_deployed.prefab",
+            "rot": {
+                "x": "2.067772E-07",
+                "y": "-1.873157",
+                "z": "-8.615874E-08"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.036014",
+                "y": "-0.1058927",
+                "z": "4.72862"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "1.397724E-07",
+                "y": "-0.3016346",
+                "z": "1.032558E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.01748",
+                "y": "-1.605893",
+                "z": "3.62635"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-8.89322E-08",
+                "y": "1.79276",
+                "z": "-1.232222E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.036014",
+                "y": "-1.605893",
+                "z": "4.72862"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "0",
+                "y": "-1.872431",
+                "z": "0"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.468243",
+                "y": "2.894107",
+                "z": "5.174343"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "-1.668055E-07",
+                "y": "-3.443226",
+                "z": "-2.662079E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.913801",
+                "y": "1.394107",
+                "z": "3.742163"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.081055E-07",
+                "y": "1.269162",
+                "z": "2.436544E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.569691",
+                "y": "2.994107",
+                "z": "6.367683"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "2.2509E-07",
+                "y": "-0.2899938",
+                "z": "1.427894E-07"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.468243",
+                "y": "1.394107",
+                "z": "5.174343"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "3.82211E-08",
+                "y": "-1.87243",
+                "z": "-8.614485E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.036014",
+                "y": "-1.605893",
+                "z": "4.72862"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.397723E-07",
+                "y": "-0.3016343",
+                "z": "-1.032558E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "4.900473",
+                "y": "1.394107",
+                "z": "5.620066"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-4.22201E-08",
+                "y": "-0.3016336",
+                "z": "-1.836971E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "3.022686",
+                "y": "1.394107",
+                "z": "6.606522"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.66208E-08",
+                "y": "-1.87243",
+                "z": "-1.668055E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.897879",
+                "y": "1.494106",
+                "z": "7.632103"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "1.146051E-07",
+                "y": "-0.2878351",
+                "z": "5.099668E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.577128",
+                "y": "2.894106",
+                "z": "8.038702"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "1.668055E-07",
+                "y": "-0.3016338",
+                "z": "2.662079E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "2.894108",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "2.083169E-10",
+                "y": "-2.396029",
+                "z": "2.563692E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.036014",
+                "y": "2.894107",
+                "z": "4.72862"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.812493E-07",
+                "y": "-0.3016338",
+                "z": "-1.226613E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.01748",
+                "y": "4.394107",
+                "z": "3.62635"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-2.390674E-07",
+                "y": "0.2219648",
+                "z": "1.581243E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "2.894108",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "2.082885E-10",
+                "y": "-2.396029",
+                "z": "2.563692E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {
+                "Open": true
+            },
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "-0.1058924",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building/wall.frame.garagedoor/wall.frame.garagedoor.prefab",
+            "rot": {
+                "x": "-2.083027E-10",
+                "y": "-2.396029",
+                "z": "-2.563691E-07"
+            },
+            "skinid": 3140571248
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "-0.1058924",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "-2.410895E-08",
+                "y": "0.7455633",
+                "z": "1.749744E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.01748",
+                "y": "2.894107",
+                "z": "3.62635"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-6.639308E-08",
+                "y": "0.2219648",
+                "z": "1.776603E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.144898",
+                "y": "2.894106",
+                "z": "7.592979"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "7.644219E-08",
+                "y": "-0.3016336",
+                "z": "-1.722897E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.595659",
+                "y": "1.494106",
+                "z": "8.79098"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "9.179445E-09",
+                "y": "-0.2966626",
+                "z": "3.791217E-07"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "2.13",
+                "y": "1.394106",
+                "z": "9.472255"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.541429E-07",
+                "y": "-1.872431",
+                "z": "-1.091137E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.239016",
+                "y": "2.894106",
+                "z": "2.823491"
+            },
+            "prefabname": "assets/prefabs/building core/floor/floor.prefab",
+            "rot": {
+                "x": "1.776603E-07",
+                "y": "-1.348831",
+                "z": "6.63931E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.549651",
+                "y": "-1.605893",
+                "z": "3.344942"
+            },
+            "prefabname": "assets/prefabs/building core/roof.triangle/roof.triangle.prefab",
+            "rot": {
+                "x": "8.354985E-08",
+                "y": "-2.39603",
+                "z": "3.183979E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.908751",
+                "y": "2.894106",
+                "z": "4.286664"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.186442E-07",
+                "y": "1.792761",
+                "z": "-2.243134E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "1.01748",
+                "y": "2.894107",
+                "z": "3.62635"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-1.581243E-07",
+                "y": "1.792761",
+                "z": "-2.390674E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.910512",
+                "y": "-0.1058924",
+                "z": "4.287104"
+            },
+            "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+            "rot": {
+                "x": "-2.269083E-07",
+                "y": "1.79276",
+                "z": "5.190081E-09"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.6898877",
+                "y": "2.994107",
+                "z": "3.010801"
+            },
+            "prefabname": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+            "rot": {
+                "x": "-2.07176E-07",
+                "y": "1.793978",
+                "z": "1.244105E-08"
+            },
+            "skinid": 899162897
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.703892",
+                "y": "1.394107",
+                "z": "3.154088"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-9.814116E-08",
+                "y": "-2.919629",
+                "z": "-4.184608E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.971163",
+                "y": "1.494107",
+                "z": "2.958732"
+            },
+            "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+            "rot": {
+                "x": "2.564805E-07",
+                "y": "1.794284",
+                "z": "8.463246E-08"
+            },
+            "skinid": 3115118779
+        },
+        {
+            "flags": {},
+            "items": [],
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-2.577171",
+                "y": "-1.505893",
+                "z": "3.477964"
+            },
+            "prefabname": "assets/prefabs/deployable/tool cupboard/cupboard.tool.deployed.prefab",
+            "rot": {
+                "x": "2.597152E-07",
+                "y": "0.2253385",
+                "z": "2.368304E-07"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-1.910512",
+                "y": "-1.605893",
+                "z": "4.287104"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-2.366764E-07",
+                "y": "1.79276",
+                "z": "9.152728E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.475708",
+                "y": "-1.605893",
+                "z": "5.634926"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "-5.542404E-08",
+                "y": "-2.39603",
+                "z": "-3.8169E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.703892",
+                "y": "-0.1058929",
+                "z": "3.154088"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "1.049039E-07",
+                "y": "-2.919629",
+                "z": "2.300957E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.703892",
+                "y": "-1.605893",
+                "z": "3.154088"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "6.655457E-08",
+                "y": "-2.919629",
+                "z": "2.475797E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "-1.605893",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "-8.334383E-08",
+                "y": "0.7455628",
+                "z": "-2.424438E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.475708",
+                "y": "-0.1058931",
+                "z": "5.634926"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.497655E-07",
+                "y": "2.316359",
+                "z": "-1.324888E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-4.475708",
+                "y": "-1.605893",
+                "z": "5.634926"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.497656E-07",
+                "y": "2.316359",
+                "z": "-1.324888E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-3.703892",
+                "y": "-1.605893",
+                "z": "3.154088"
+            },
+            "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+            "rot": {
+                "x": "3.262662E-07",
+                "y": "-1.348833",
+                "z": "-1.514209E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.5719225",
+                "y": "5.894108",
+                "z": "5.058529"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.083453E-10",
+                "y": "0.7455633",
+                "z": "2.563692E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "-0.891978",
+                "y": "5.894108",
+                "z": "5.389373"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "2.681373E-07",
+                "y": "-3.443226",
+                "z": "3.251741E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "7.394106",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+            "rot": {
+                "x": "-2.516344E-07",
+                "y": "-2.919627",
+                "z": "-4.904411E-08"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "grade": 2,
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1263649",
+                "y": "5.894106",
+                "z": "6.490709"
+            },
+            "prefabname": "assets/prefabs/building core/wall.half/wall.half.prefab",
+            "rot": {
+                "x": "4.904419E-08",
+                "y": "-1.34883",
+                "z": "-2.516344E-07"
+            },
+            "skinid": 10220
+        },
+        {
+            "flags": {},
+            "IOEntity": {
+                "inputs": [],
+                "oldID": 91569543,
+                "outputs": []
+            },
+            "ownerid": 76561198152333187,
+            "pos": {
+                "x": "0.1002626",
+                "y": "6.235967",
+                "z": "6.383817"
+            },
+            "prefabname": "assets/prefabs/deployable/signs/sign.pictureframe.landscape.prefab",
+            "rot": {
+                "x": "-2.521556E-07",
+                "y": "-2.919627",
+                "z": "0.008985577"
+            },
+            "sign": {
+                "amount": 1,
+                "locked": false,
+                "texture0": "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"
+            },
+            "skinid": 0
+        },
+        {
+            "flags": {},
+            "IOEntity": {
+                "inputs": [],
+                "oldID": 1706207142,
+                "outputs": []
+            },
+            "ownerid": 76561199185431788,
+            "pos": {
+                "x": 0,
+                "y": -10,
+                "z": 0
+            },
+            "prefabname": "assets/prefabs/deployable/signs/sign.medium.wood.prefab",
+            "rot": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "sign": {
+                "amount": 1,
+                "locked": true,
+                "texture0": "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"
+            },
+            "skinid": 0
+        }
+    ],
+    "protocol": {
+        "items": 2,
+        "version": {
+            "Major": 4,
+            "Minor": 1,
+            "Patch": 37
+        }
+    }
+}

@@ -1,0 +1,1467 @@
+{
+  "TimeZone": "America/New_York",
+  "ChatPrefix": "UltimateLocker",
+  "AllowAdminToBypassCodeLock (Allows admin to bypass Code Lock without using commands). Default False.)": false,
+  "Disable ownership checking on DLC/Skins. (⚠ Only allowed on creative/test servers, otherwise you violate Facepunch's TOS! ⚠) Default false": false,
+  "Chat Command": [
+    "ul",
+    "ultimatelocker"
+  ],
+  "Skin Blacklist Configuration": {
+    "Lock: Block lock for entity with this skin": [],
+    "Door Closer: Block door closer for entity with this skin": []
+  },
+  "Proximity System": {
+    "Show UI when player is near a door with Door Closer. Default false": false,
+    "Show UI when pressing key. Default true": false,
+    "Button to show UI: 1 (MMB - middle mouse button) - 2 (SHIFT + MMB) - 3 (CTRL + MMB). Default 2": 2
+  },
+  "Auto Lock Configuration": {
+    "Chat Command": [
+      "al",
+      "autolock",
+      "codelock"
+    ],
+    "Toggle Auto Lock - Chat Command": "ual",
+    "Add Lock manually - Chat Command": "locker",
+    "Use only Key Lock. [true] to allow only Key Lock. [false] to allow both Key Lock and Code Lock. (Default: FALSE)": false,
+    "RESYNC DEFAULT SETTINGS for all players. If set to [true], resets all player settings to the default settings configured. Once the settings are reset, the parameter will automatically be reset to false. (Default: FALSE)": false,
+    "FORCE SHARE LOCKS WITH CLAN/TEAM MEMBERS. [true] to force all players to share locks with clan/team members. [false] to force all players to NOT share locks with clan/team members. [null] to use the player's default settings by UI. (Default: null)": null,
+    "Auto Lock Category Configuration": {
+      "Is automatic lock enabled on Doors enabled.": true,
+      "Is automatic lock enabled on Windows enabled.": false,
+      "Is automatic lock enabled on Boxes enabled.": true,
+      "Is automatic lock enabled on Storage Container enabled.": true,
+      "Is automatic lock enabled on Lockers enabled.": true,
+      "Is automatic lock enabled on TC (Cupboards) enabled.": true,
+      "Is automatic lock enabled on Vehicles enabled.": true,
+      "Is automatic lock enabled on Naval Deep Sea.": true,
+      "Is automatic lock enabled on Medieval entity enabled.": false,
+      "Is automatic lock enabled on Furnace enabled.": false,
+      "Is automatic lock enabled on Vending Machine enabled.": false,
+      "Is automatic lock enabled on Composter enabled.": false,
+      "Is automatic lock enabled on Mixing Table enabled.": false,
+      "Is automatic lock enabled on Planter enabled.": false,
+      "Is automatic lock enabled on Auto Turret enabled.": false,
+      "Is automatic lock enabled on SAM Site enabled.": false,
+      "Is automatic lock enabled on Traps enabled.": false,
+      "Is automatic lock enabled on Weapon Rack enabled.": false,
+      "Is automatic lock enabled on Stash enabled.": true,
+      "Is automatic lock enabled on Neon Sign enabled.": false,
+      "Is automatic lock enabled on Sign / Drawing.": false,
+      "Is automatic lock enabled on Other Custom Entities enabled.": true,
+      "Is automatic lock enabled on Other Lockable Entities enabled.": true
+    },
+    "Player default settings": {
+      "Allow automatic lock placement by default. (Default: FALSE)": false,
+      "Allow automatic placement of Key Locks if there are no Code Locks in the inventory. (Default: TRUE)": false,
+      "Allow Guest Code by default. (Default: FALSE)": false,
+      "Allow automatic Share locks with clan/team members by default. (Default: TRUE)": true,
+      "Enable streamer mode by default. (Default: FALSE)": false,
+      "Allow automatic lock on Doors by default. (Default: TRUE)": true,
+      "Allow automatic lock on Windows by default. (Default: TRUE)": true,
+      "Allow automatic lock on Boxes by default. (Default: FALSE)": false,
+      "Allow automatic lock on Storage Container by default. (Default: FALSE)": false,
+      "Allow automatic lock on Lockers by default. (Default: TRUE)": true,
+      "Allow automatic lock on TC (Cupboards) by default. (Default: TRUE)": true,
+      "Allow automatic lock on Vehicle by default. (Default: TRUE)": true,
+      "Allow automatic lock on Naval Deep Sea by default. (Default: TRUE)": true,
+      "Allow automatic lock closing when dismount of the vehicle by default. (Default: TRUE)": false,
+      "Allow automatic lock on Medieval entity by default. (Default: FALSE)": false,
+      "Allow automatic lock on Furnace by default. (Default: FALSE)": false,
+      "Allow automatic lock on Vending Machine by default. (Default: FALSE)": false,
+      "Allow automatic lock on Composter by default. (Default: FALSE)": false,
+      "Allow automatic lock on Mixing Table by default. (Default: FALSE)": false,
+      "Allow automatic lock on Planter by default. (Default: FALSE)": false,
+      "Allow automatic lock on Auto Turret by default. (Default: FALSE)": false,
+      "Allow automatic lock on SAM Site by default. (Default: FALSE)": false,
+      "Allow automatic lock on Traps by default. (Default: FALSE)": false,
+      "Allow automatic lock on Weapon Rack by default. (Default: TRUE)": false,
+      "Allow automatic lock on Stash by default. (Default: FALSE)": false,
+      "Allow automatic lock on Neon Sign by default. (Default: FALSE)": false,
+      "Allow automatic lock on Sign / Drawing by default. (Default: FALSE)": false,
+      "Allow automatic lock on Other Lockable Entities by default. (Default: FALSE)": false,
+      "Allow automatic lock on Other Custom Entities by default. (Default: FALSE)": false
+    },
+    "Player Auto Closing default settings": {
+      "Allow automatic closing by default. (Default: FALSE)": false,
+      "Allow automatic closing of Door by default. (Default: FALSE)": false,
+      "Allow automatic closing of Double Door by default. (Default: FALSE)": false,
+      "Allow automatic closing of Window by default. (Default: FALSE)": false,
+      "Allow automatic closing of Garage by default. (Default: FALSE)": false,
+      "Allow automatic closing of Ladder Hatch by default. (Default: FALSE)": false,
+      "Allow automatic closing of External Gate by default. (Default: FALSE)": false,
+      "Allow automatic closing of Fence Gate by default. (Default: FALSE)": false,
+      "Allow automatic closing of Legacy Wood Shelter Door by default. (Default: FALSE)": false
+    }
+  },
+  "Auto Closing Configuration": {
+    "Chat Command": [
+      "ac",
+      "autoclose",
+      "autocloser"
+    ],
+    "Toggle Auto Closer - Chat Command": "uad",
+    "Add Door Closer manually - Chat Command": "closer",
+    "Remove Door Closer manually - Chat Command": "uncloser",
+    "Enable automatic closing of Door. (Default: FALSE)": false,
+    "Enable automatic closing of Double Door. (Default: FALSE)": false,
+    "Enable automatic closing of Window. (Default: FALSE)": false,
+    "Enable automatic closing of Garage. (Default: FALSE)": false,
+    "Enable automatic closing of Ladder Hatch. (Default: FALSE)": false,
+    "Enable automatic closing of External Gate. (Default: FALSE)": false,
+    "Enable automatic closing of Fence Gate. (Default: FALSE)": false,
+    "Enable automatic closing of Legacy Wood Shelter Door. (Default: FALSE)": false,
+    "Minimum Closing Delay Time. (Default: 10 seconds)": 10,
+    "Maximum Closing Delay Time. (Default: 60 seconds)": 60,
+    "Default Closing Delay Time. (Default: 30 seconds)": 30
+  },
+  "Requires Building Privilege to place Code Locks. (Default: TRUE)": true,
+  "Requires Building Privilege to place Code Locks in unowned vehicles. (Default: FALSE)": false,
+  "Allow deployment of Code Lock in vehicles owned by other players. (Default: FALSE)": false,
+  "Allow deployment of Code Lock in unowned vehicles. (Default: TRUE)": true,
+  "Allow pushing vehicles blocked by the Code Lock (Default: TRUE)": true,
+  "Allow pushing vehicles blocked by the Code Lock if present in your Building Privilege. (Default: TRUE)": true,
+  "Auto claim unowned vehicles when deploying locks. (Default: FALSE)": true,
+  "Auto replace vehicle ownership when deploying locks. (Default: FALSE)": true,
+  "Set player as owner when placing a Mining Quarry or Pump Jack (also static). (Default: TRUE)": false,
+  "Enable Lock": {
+    "Vehicles": [
+      {
+        "ItemName": "Minicopter",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/minicopter/minicopter.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Scrap Transport Helicopter",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/scrap heli carrier/scraptransporthelicopter.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Attack Helicopter",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/attackhelicopter/attackhelicopter.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Armored / Hot Air Balloon",
+        "EnableLock": true,
+        "PrefabName": "assets/prefabs/deployable/hot air balloon/hotairballoon.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Kayak",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/boats/kayak/kayak.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Row Boat",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/boats/rowboat/rowboat.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "RHIB",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/boats/rhib/rhib.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Tugboat",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/boats/tugboat/tugboat.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Submarinesolo",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/submarine/submarinesolo.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Submarine Duo",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/submarine/submarineduo.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Horse",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/horse/ridablehorse.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Tomaha Snowmobile",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/snowmobiles/tomahasnowmobile.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Snowmobile",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/snowmobiles/snowmobile.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Sedan",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/sedan_a/sedantest.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "2 Module Car",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/modularcar/2module_car_spawned.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "3 Module Car",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/modularcar/3module_car_spawned.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "4 Module Car",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/modularcar/4module_car_spawned.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Car Chassis 2 Module Car",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/modularcar/car_chassis_2module.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Car Chassis 3 Module Car",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/modularcar/car_chassis_3module.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Car Chassis 4 Module Car",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/modularcar/car_chassis_4module.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Motorbike",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/bikes/motorbike.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Motorbike With Sidecar",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/bikes/motorbike_sidecar.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Pedal Bike",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/bikes/pedalbike.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Pedal Trike",
+        "EnableLock": true,
+        "PrefabName": "assets/content/vehicles/bikes/pedaltrike.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "boatbuildingstation",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boat building platform/boatbuildingstation.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "steeringwheel.boat",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "sail",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boatbuilding/sail/sail.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "smallengine",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boatbuilding/smallengine/smallengine.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "anchor",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boatbuilding/anchor/anchor.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "cannon",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boatbuilding/cannon/cannon.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "small_ramp",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/boatbuilding/small_ramp/small_ramp.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Mounted Ballista",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/siegeweapons/ballista/ballista.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Battering Ram",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/siegeweapons/batteringram/batteringram.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Catapult",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/siegeweapons/catapult/catapult.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Siege Tower",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/siegeweapons/siegetower/siegetower.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Ballista",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      }
+    ],
+    "Deployables": [
+      {
+        "ItemName": "Large Furnace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/furnace.large/furnace.large.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Furnace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/furnace/furnace.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Legacy Furnace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/legacyfurnace/legacy_furnace.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Refinery",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/oil refinery/refinery_small_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Electric Furnace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Stone Fireplace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/fireplace/fireplace.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "BBQ",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/bbq/bbq.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Hobo Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/twitch/hobobarrel/hobobarrel.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Storage Barrel B",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/decor_dlc/storagebarrel/storage_barrel_b.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Storage Barrel C",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/decor_dlc/storagebarrel/storage_barrel_c.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Abyss Horizontal Storage Tank",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/abyss_dlc_large_wood_box/abyss_dlc_storage_horizontal/abyss_barrel_horizontal.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Abyss Vertical Storage Tank",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/abyss_dlc_large_wood_box/abyss_dlc_storage_vertical/abyss_barrel_vertical.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Bamboo Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/jungle_dlc_large_wood_box/jungle_dlc_storage_vertical/bamboo_barrel.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Wicker Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/jungle_dlc_large_wood_box/jungle_dlc_storage_horizontal/wicker_barrel.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Krieg Storage Crates",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/warhammer_dlc_large_wood_box/krieg_storage_horizontal/krieg_storage_horizontal.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Krieg Storage Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/warhammer_dlc_large_wood_box/krieg_storage_vertical/krieg_storage_vertical.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "RHIB Storage",
+        "EnableLock": false,
+        "PrefabName": "assets/content/vehicles/boats/rhib/subents/rhib_storage.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Clothing Mannequin",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/mannequin/mannequin_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Metal Shop Front",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/building/wall.frame.shopfront/wall.frame.shopfront.metal.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Dropbox",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/dropbox/dropbox.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Mail Box",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/mailbox/mailbox.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Vending Machine",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Computer Station",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/computerstation/computerstation.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Twitch Rivals Desk",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/twitch/twitch_rivals_2023_desk/twitchrivals2023_desk.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Mixing Table",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/mixingtable/mixingtable.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Composter",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/composter/composter.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Small Planter Box",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/planters/planter.small.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Large Planter Box",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/planters/planter.large.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Triangle Planter Box",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/planters/planter.triangle.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Minecart Planter",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/decor_dlc/minecart planter/minecart.planter.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Bath Tub Planter",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/decor_dlc/bath tub planter/bathtub.planter.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Rail Road Planter",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/decor_dlc/rail road planter/railroadplanter.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Triangle Rail Road Planter",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/decor_dlc/rail road planter/triangle_railroad_planter.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Single Plant Pot",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/plant pots/plantpot.single.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Beehive",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/beehive/beehive.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Chicken Coop",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/chickencoop/chickencoop.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Hitch & Trough",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/hitch & trough/hitchtrough.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Small Water Catcher",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/water catcher/water_catcher_small.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Large Water Catcher",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/water catcher/water_catcher_large.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Water Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/liquidbarrel/waterbarrel.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Powered Water Purifier",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/poweredwaterpurifier/poweredwaterpurifier.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Fluid Switch & Pump",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/fluidswitch/fluidswitch.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Repair Bench",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/repair bench/repairbench_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Research Table",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/research table/researchtable_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Workbench Level 1",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/tier 1 workbench/workbench1.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Workbench Level 2",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/tier 2 workbench/workbench2.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Workbench Level 3",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/tier 3 workbench/workbench3.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Cooking Workbench",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/cookingworkbench/cookingworkbench.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Engineering Workbench",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/io research table/io.table.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Hopper",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/hopper/hopper.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Button",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/button/button.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Switch",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/simpleswitch/switch.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Smart Switch",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/app/smartswitch/smartswitch.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Timer",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/timers/timer.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Small Generator",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/generators/fuel generator/small_fuel_generator.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "SAM Site",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Auto Turret",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Flame Turret",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Shotgun Trap",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/single shot trap/guntrap.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Modular Car Lift",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Snow Machine",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/xmas/snow_machine/models/snowmachine.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Fogger-3000",
+        "EnableLock": false,
+        "PrefabName": "assets/content/props/fog machine/fogmachine.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Elevator",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/elevator/elevator_lift.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Mining Quarry",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Mining Quarry Static",
+        "EnableLock": false,
+        "PrefabName": "assets/bundled/prefabs/static/miningquarry_static.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Pump Jack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/oil jack/mining.pumpjack.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Pump Jack Static",
+        "EnableLock": false,
+        "PrefabName": "assets/bundled/prefabs/static/pumpjack-static.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Tall Weapon Rack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Horizontal Weapon Rack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Wide Weapon Rack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_wide.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Weapon Rack Stand",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_stand.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Frontier Bolts Single Item Rack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_single1.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Frontier Horseshoe Single Item Rack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_single2.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Frontier Horns Single Item Rack",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/weaponracks/weaponrack_single3.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Small Stash",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/small stash/small_stash_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Chippy Arcade Game",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/chippy arcade/chippyarcademachine.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Strobe Light",
+        "EnableLock": false,
+        "PrefabName": "assets/content/props/strobe light/strobelight.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Laser Light",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/voiceaudio/laserlight/laserlight.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Sound Light",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/voiceaudio/soundlight/soundlight.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Small Neon Sign",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x125.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Medium Neon Sign",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x215.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Large Neon Sign",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Medium Animated Neon Sign",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x215.animated.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Large Animated Neon Sign",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.animated.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "sign.artistcanvas.xs",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/artistscanvases/sign.artistcanvas.xs.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "sign.artistcanvas.m",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/artistscanvases/sign.artistcanvas.m.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "sign.artistcanvas.l",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/artistscanvases/sign.artistcanvas.l.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "sign.artistcanvas.xl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/artistscanvases/sign.artistcanvas.xl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "sign.artistcanvas.xxl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/artistscanvases/sign.artistcanvas.xxl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "lightup.large",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/light-up frame/lightupframe.large.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "lightup.xl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/light-up frame/lightupframe.xl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "lightup.xxl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/light-up frame/lightupframe.xxl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "lightupframe.small",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/light-up frame/lightupframe.small.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "lightupframe.standing",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/light-up frame/lightupframe.standing.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "goldframe.small",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/ornate frame/goldframe.small.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "goldframe.standing",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/ornate frame/goldframe.standing.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "goldframe.large",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/ornate frame/goldframe.large.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "goldframe.xl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/ornate frame/goldframe.xl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "goldframe.xxl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/ornate frame/goldframe.xxl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "scrapframe.small",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/scrap frame/scrapframe.small.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "scrapframe.large",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/scrap frame/scrapframe.large.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "scrapframe.xl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/scrap frame/scrapframe.xl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "scrapframe.xxl",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/scrap frame/scrapframe.xxl.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "window.paintable",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/artist_dlc/paintable window/window.paintable.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "easel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Search Light",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/search light/searchlight.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "CCTV Camera",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/cctvcamera/cctv_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "PTZ CCTV Camera",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/ptz security camera/ptz_cctv_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "RF Broadcaster",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/gates/rfbroadcaster/rfbroadcaster.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "RF Receiver",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/gates/rfreceiver/rfreceiver.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Industrial Conveyor",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/industrialconveyor/industrialconveyor.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Industrial Crafter",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/industrialcrafter/industrialcrafter.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Wheelbarrow Piano",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/instruments/piano/piano.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Junkyard Drum Kit",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/instruments/drumkit/drumkit.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Boom Box",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/voiceaudio/boombox/boombox.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Chinese Lantern",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/chinesenewyear/chineselantern/chineselantern.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Chinese Lantern White",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/chinesenewyear/chineselantern/chineselantern_white.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Tuna Can Lamp",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/tuna can wall lamp/tunalight.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Lantern",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/lantern/lantern.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Camp Fire",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/campfire/campfire.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Cursed Cauldron",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Skull Fire Pit",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/misc/halloween/skull_fire_pit/skull_fire_pit.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Jack O Lantern Angry",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/jack o lantern/jackolantern.angry.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Jack O Lantern Happy",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Wood Shutters",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/building/wall.window.shutter/shutter.wood.a.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Large Industrial Furnace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/furnace.large/skins/industrial_large_furnace/industrial.furnace.large.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Industrial Electric Furnace",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/playerioents/electricfurnace/skins/industrial_electric_furnace/industrial_electric_furnace.deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Industrial Storage Horizontal Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/industrial_dlc/industrial_storage_horizontal/industrial_storage_horizontal.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Industrial Storage Vertical Barrel",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/deployable/large wood storage/skins/industrial_dlc/industrial_storage_vertical/industrial_storage_vertical.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      },
+      {
+        "ItemName": "Industrial Auto Turret",
+        "EnableLock": false,
+        "PrefabName": "assets/prefabs/npc/autoturret/skins/industrial_autoturret/industrial_autoturret_deployed.prefab",
+        "RequiredPermission": [
+          ""
+        ]
+      }
+    ]
+  },
+  "VersionNumber": {
+    "Major": 2,
+    "Minor": 1,
+    "Patch": 5
+  }
+}

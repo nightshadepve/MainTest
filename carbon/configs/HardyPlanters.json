@@ -1,0 +1,80 @@
+{
+  "Planterbox profiles": {
+    "3021062193": {
+      "Drop weight": 100,
+      "Overall quality of the planterbox [responsible for growth speed]": 0.8,
+      "Item display name": "advanced large planter box t1",
+      "Item shortname": "planter.large",
+      "Growth gene multiplier [default: 0.25]": 0.25,
+      "Prevent aging on ripe?": false
+    },
+    "3021062261": {
+      "Drop weight": 50,
+      "Overall quality of the planterbox [responsible for growth speed]": 1.0,
+      "Item display name": "advanced large planter box t2",
+      "Item shortname": "planter.large",
+      "Growth gene multiplier [default: 0.25]": 0.25,
+      "Prevent aging on ripe?": true
+    },
+    "3021062317": {
+      "Drop weight": 20,
+      "Overall quality of the planterbox [responsible for growth speed]": 1.5,
+      "Item display name": "advanced large planter box t3",
+      "Item shortname": "planter.large",
+      "Growth gene multiplier [default: 0.25]": 0.25,
+      "Prevent aging on ripe?": true
+    },
+    "3021062393": {
+      "Drop weight": 100,
+      "Overall quality of the planterbox [responsible for growth speed]": 0.8,
+      "Item display name": "advanced small planter box t1",
+      "Item shortname": "planter.small",
+      "Growth gene multiplier [default: 0.25]": 0.25,
+      "Prevent aging on ripe?": false
+    },
+    "3021062473": {
+      "Drop weight": 50,
+      "Overall quality of the planterbox [responsible for growth speed]": 1.0,
+      "Item display name": "advanced small planter box t2",
+      "Item shortname": "planter.small",
+      "Growth gene multiplier [default: 0.25]": 0.25,
+      "Prevent aging on ripe?": true
+    },
+    "3021062566": {
+      "Drop weight": 20,
+      "Overall quality of the planterbox [responsible for growth speed]": 1.5,
+      "Item display name": "advanced small planter box t3",
+      "Item shortname": "planter.small",
+      "Growth gene multiplier [default: 0.25]": 0.25,
+      "Prevent aging on ripe?": true
+    }
+  },
+  "Loot table": {
+    "crate_elite": {
+      "Drop chance [%]": 35.0,
+      "Minimum quantity": 1,
+      "Maximum quantity": 1
+    },
+    "crate_normal": {
+      "Drop chance [%]": 5.0,
+      "Minimum quantity": 1,
+      "Maximum quantity": 1
+    },
+    "crate_normal_2": {
+      "Drop chance [%]": 5.0,
+      "Minimum quantity": 1,
+      "Maximum quantity": 1
+    },
+    "crate_underwater_advanced": {
+      "Drop chance [%]": 45.0,
+      "Minimum quantity": 1,
+      "Maximum quantity": 1
+    },
+    "crate_underwater_basic": {
+      "Drop chance [%]": 25.0,
+      "Minimum quantity": 1,
+      "Maximum quantity": 1
+    }
+  },
+  "Allow hardy planterboxes to be reskinned [repair bench and SkinBox]": false
+}

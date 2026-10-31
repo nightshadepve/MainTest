@@ -1,0 +1,34 @@
+{
+  "Storm": {
+    "RampTimeSeconds": 120.0,
+    "StormDurationSeconds": 300.0,
+    "RadiationPerTick": 15.0,
+    "DamageTickInterval": 2.0,
+    "RadiationSuitMultiplier": 0.85,
+    "HurtSleepers": false,
+    "OnlyOutside": true,
+    "PeakWind": 1.5,
+    "PeakRain": 1.0,
+    "PeakThunder": 1.0,
+    "PeakFog": 0.8,
+    "RedSkyRayleigh": 0.2,
+    "RedSkyMie": 1.5,
+    "RedSkyBrightness": 0.4,
+    "AutoStart": false,
+    "MinAutoInterval": 3600.0,
+    "MaxAutoInterval": 7200.0
+  },
+  "Bonus": {
+    "GatherRateMultiplier": 1.5,
+    "PickupRateMultiplier": 1.5
+  },
+  "Messages": {
+    "StormIncoming": "<color=#ff4444>A massive radiation storm is rolling in across the entire island! Seek shelter or wear protection!</color>",
+    "StormActive": "<color=#ff0000>THE STORM IS HERE! Whipping winds and deadly radiation engulf the island!</color>",
+    "StormEnding": "<color=#44ff44>The storm is clearing... radiation levels dropping.</color>",
+    "StormEnded": "<color=#00ff00>The island-wide storm has ended. All clear.</color>",
+    "NoPermission": "You don't have permission to control the storm.",
+    "AlreadyActive": "A storm is already active.",
+    "NotActive": "No storm is currently active."
+  }
+}

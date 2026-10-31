@@ -1,0 +1,224 @@
+﻿[2026-10-07 01:53:22] [SERVER CONSOLE] satellite.random
+[2026-10-07 03:53:31] [SERVER CONSOLE] satellite.random
+[2026-10-07 05:28:07] [UNKNOWN] env.time 8
+[2026-10-07 05:53:34] [SERVER CONSOLE] satellite.random
+[2026-10-07 06:36:27] [UNKNOWN] env.time 8
+[2026-10-07 07:53:41] [SERVER CONSOLE] satellite.random
+[2026-10-07 09:53:49] [SERVER CONSOLE] satellite.random
+[2026-10-07 09:55:16] [SERVER CONSOLE] restart
+[2026-10-07 09:55:18] [SERVER CONSOLE] global.cleardroppeditems
+[2026-10-07 10:02:21] [UNKNOWN] relay.cfg_reload
+[2026-10-07 10:02:21] [STARTUP] server.port "28079"
+[2026-10-07 10:02:21] [STARTUP] server.queryport "28081"
+[2026-10-07 10:02:21] [STARTUP] server.identity "rust"
+[2026-10-07 10:02:21] [STARTUP] rcon.port "28080"
+[2026-10-07 10:02:21] [STARTUP] rcon.web "true"
+[2026-10-07 10:02:21] [STARTUP] server.level "Procedural Map"
+[2026-10-07 10:02:21] [STARTUP] server.url "https://discord.gg/T5h3RDXjEX"
+[2026-10-07 10:02:21] [STARTUP] server.maxplayers "75"
+[2026-10-07 10:02:21] [STARTUP] server.saveinterval "600"
+[2026-10-07 10:02:21] [STARTUP] app.port "28082"
+[2026-10-07 10:02:21] [STARTUP] server.levelurl "https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map"
+[2026-10-07 10:02:21] [STARTUP] server.gamemode "1"
+[2026-10-07 10:02:21] [STARTUP] server.logoimage "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+[2026-10-07 10:02:21] [STARTUP] server.headerimage "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+[2026-10-07 10:02:21] [STARTUP] server.ping_region_code_override "us5"
+[2026-10-07 10:02:30] [UNKNOWN] server.hostname "[US] Nightshade [PvPvE | Events | QoL Mods]"
+[2026-10-07 10:02:30] [UNKNOWN] server.description "| Hybrid PvE | Rotating PvP Monuments | Player-Built Raid Bases |\n| NPC Raidable Bases | Dungeons | Heli & Bradley Signals | QoL Mods |\n\nWe are a new-player-friendly PvE server with optional PvP events.\n\nPvE is serverwide by default. No unauthorized raiding.\nBases, loot, storage, and deployables are protected by Team/TC ownership, with optional sharing for trusted players.\n\nPvP is limited to rotating PvP monuments and optional player-defended raid base events.\nWatch the zone warnings — spicy zones mean spicy consequences.\n\nServer Restarts Daily @ 6 AM EST"
+[2026-10-07 10:02:30] [UNKNOWN] server.tags "pve, monthly, events"
+[2026-10-07 10:02:30] [UNKNOWN] decay.scale 0.5
+[2026-10-07 10:02:30] [UNKNOWN] server.respawnresetrange 20
+[2026-10-07 10:02:30] [UNKNOWN] server.tickrate 35
+[2026-10-07 10:02:30] [UNKNOWN] server.entityrate 25
+[2026-10-07 10:02:30] [UNKNOWN] fps.limit 60
+[2026-10-07 10:02:30] [UNKNOWN] server.netlog true
+[2026-10-07 10:02:30] [UNKNOWN] ai.sensetime 2
+[2026-10-07 10:02:30] [UNKNOWN] server.url "https://discord.gg/T5h3RDXjEX"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxplayers 100
+[2026-10-07 10:02:30] [UNKNOWN] server.worldsize 3500
+[2026-10-07 10:02:30] [UNKNOWN] server.saveinterval 900
+[2026-10-07 10:02:30] [UNKNOWN] ioentity.allow_on_boats "True"
+[2026-10-07 10:02:30] [UNKNOWN] ai.frametime "10"
+[2026-10-07 10:02:30] [UNKNOWN] ai.tickrate "10"
+[2026-10-07 10:02:30] [UNKNOWN] aithinkmanager.animalframebudgetms "5"
+[2026-10-07 10:02:30] [UNKNOWN] aithinkmanager.framebudgetms "5"
+[2026-10-07 10:02:30] [UNKNOWN] aimanager.ai_dormant_max_wakeup_per_tick "20"
+[2026-10-07 10:02:30] [UNKNOWN] aimanager.ai_htn_player_junkpile_tick_budget "3"
+[2026-10-07 10:02:30] [UNKNOWN] aimanager.ai_to_player_distance_wakeup_range "140"
+[2026-10-07 10:02:30] [UNKNOWN] aibrainsenses.humanknownplayerslosupdateinterval "0.25"
+[2026-10-07 10:02:30] [UNKNOWN] ai.npc_sensory_system_tick_rate_multiplier "6"
+[2026-10-07 10:02:30] [UNKNOWN] ai.npc_max_junkpile_count "10"
+[2026-10-07 10:02:30] [UNKNOWN] ai.npc_junkpilespawn_chance "0.04"
+[2026-10-07 10:02:30] [UNKNOWN] ai.npc_max_roam_multiplier "2"
+[2026-10-07 10:02:30] [UNKNOWN] ai.npc_max_population_military_tunnels "2"
+[2026-10-07 10:02:30] [UNKNOWN] boatai.avoidance_update_interval "1.0"
+[2026-10-07 10:02:30] [UNKNOWN] boatai.seconds_until_sleep "20"
+[2026-10-07 10:02:30] [UNKNOWN] beeswarmai.think_budget_ms "0.05"
+[2026-10-07 10:02:30] [UNKNOWN] bradley.respawndelayminutes "90"
+[2026-10-07 10:02:30] [UNKNOWN] heli.lifetimeminutes "25"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.completionframebudgetms "3"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.entitymaxdistance "75"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.farplane "200"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.playermaxdistance "25"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.playernamemaxdistance "8"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.renderinterval "0.1"
+[2026-10-07 10:02:30] [UNKNOWN] camerarenderer.samplesperrender "2000"
+[2026-10-07 10:02:30] [UNKNOWN] chat.historysize "500"
+[2026-10-07 10:02:30] [UNKNOWN] decay.tick "900"
+[2026-10-07 10:02:30] [UNKNOWN] growableentity.framebudgetms "0.5"
+[2026-10-07 10:02:30] [UNKNOWN] env.nightlight_brightness "0.018"
+[2026-10-07 10:02:30] [UNKNOWN] env.nightlight_distance "7"
+[2026-10-07 10:02:30] [UNKNOWN] env.nightlight_fadefraction "0.75"
+[2026-10-07 10:02:30] [UNKNOWN] env.redmoon "False"
+[2026-10-07 10:02:30] [UNKNOWN] gc.incremental_enabled "True"
+[2026-10-07 10:02:30] [UNKNOWN] gc.incremental_milliseconds "8"
+[2026-10-07 10:02:30] [UNKNOWN] global.cinematicgingerbreadcorpses "True"
+[2026-10-07 10:02:30] [UNKNOWN] basefirework.maxactivefireworks "15"
+[2026-10-07 10:02:30] [UNKNOWN] basemetaldetector.detectlongrangetick "2"
+[2026-10-07 10:02:30] [UNKNOWN] basemetaldetector.detectminmovementdistance "0.5"
+[2026-10-07 10:02:30] [UNKNOWN] basemission.missionvalidstateworkqueuebudget "0.05"
+[2026-10-07 10:02:30] [UNKNOWN] basemission.missionvalidstateworkqueuecooldown "5"
+[2026-10-07 10:02:30] [UNKNOWN] basenavigator.basenavmovementframeinterval "3"
+[2026-10-07 10:02:30] [UNKNOWN] basepet.movementupdatebudgetms "0.5"
+[2026-10-07 10:02:30] [UNKNOWN] beehive.updatehiveinterval "180"
+[2026-10-07 10:02:30] [UNKNOWN] beehive.updatehivestatsinterval "180"
+[2026-10-07 10:02:30] [UNKNOWN] beeswarmmaster.amounttospawn "2"
+[2026-10-07 10:02:30] [UNKNOWN] beeswarmmaster.secondsbetweenspawns "90"
+[2026-10-07 10:02:30] [UNKNOWN] burieditems.maxburieditems "5"
+[2026-10-07 10:02:30] [UNKNOWN] cargoship.event_duration_minutes "40"
+[2026-10-07 10:02:30] [UNKNOWN] cargoship.loot_rounds "2"
+[2026-10-07 10:02:30] [UNKNOWN] cargoship.loot_round_spacing_minutes "12"
+[2026-10-07 10:02:30] [UNKNOWN] cctv.camera_disable_seconds "180"
+[2026-10-07 10:02:30] [UNKNOWN] cctv.inputbudgetms "0.03"
+[2026-10-07 10:02:30] [UNKNOWN] clothlod.clothloddist "15"
+[2026-10-07 10:02:30] [UNKNOWN] commandblock.log_executions "False"
+[2026-10-07 10:02:30] [UNKNOWN] construct.frameminutes "20"
+[2026-10-07 10:02:30] [UNKNOWN] drone.maxcontrolrange "600"
+[2026-10-07 10:02:30] [UNKNOWN] metaldetectorsource.timeoutduration "3600"
+[2026-10-07 10:02:30] [UNKNOWN] metaldetectorsource.attemptspersubsourcespawn "3"
+[2026-10-07 10:02:30] [UNKNOWN] metaldetectorsource.mindistancebetweensubsources "2"
+[2026-10-07 10:02:30] [UNKNOWN] mlrs.brokendownminutes "60"
+[2026-10-07 10:02:30] [UNKNOWN] rcon.maxconnections "100"
+[2026-10-07 10:02:30] [UNKNOWN] ridablehorse.groundangleupdaterate "0.1"
+[2026-10-07 10:02:30] [UNKNOWN] sensecomponent.maxrefreshintervalseconds "1.5"
+[2026-10-07 10:02:30] [UNKNOWN] sensecomponent.minrefreshintervalseconds "0.35"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.max_density "0.85"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.max_rate "0.85"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.min_density "0.35"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.min_rate "0.35"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.player_base "75"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.player_scale "1.5"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.tick_individuals "450"
+[2026-10-07 10:02:30] [UNKNOWN] spawn.tick_populations "90"
+[2026-10-07 10:02:30] [UNKNOWN] stash.reveal_tick_rate "1"
+[2026-10-07 10:02:30] [UNKNOWN] telephonemanager.maxconcurrentcalls "5"
+[2026-10-07 10:02:30] [UNKNOWN] travellingvendor.attempt_pullovers "False"
+[2026-10-07 10:02:30] [UNKNOWN] tugboat.tugcorpseseconds "3600"
+[2026-10-07 10:02:30] [UNKNOWN] tugboat.tugdecayminutes "1440"
+[2026-10-07 10:02:30] [UNKNOWN] tugboat.tugdecaystartdelayminutes "720"
+[2026-10-07 10:02:30] [UNKNOWN] tutorialisland.spawntutorialislandfornewplayer "False"
+[2026-10-07 10:02:30] [UNKNOWN] vendingmachine.max_history "2500"
+[2026-10-07 10:02:30] [UNKNOWN] vendingmachine.max_processed "2500"
+[2026-10-07 10:02:30] [UNKNOWN] wildlifehazard.clienttickrate "0.2"
+[2026-10-07 10:02:30] [UNKNOWN] wildlifehazard.repositionattempts "3"
+[2026-10-07 10:02:30] [UNKNOWN] treemanager.enabletreestreaming "False"
+[2026-10-07 10:02:30] [UNKNOWN] net.global_networked_bases "True"
+[2026-10-07 10:02:30] [UNKNOWN] physics.groundwatchfails "2"
+[2026-10-07 10:02:30] [UNKNOWN] physics.sleepthreshold "0.005"
+[2026-10-07 10:02:30] [UNKNOWN] physics.solveriterationcount "6"
+[2026-10-07 10:02:30] [UNKNOWN] player.keepteaondeath "True"
+[2026-10-07 10:02:30] [UNKNOWN] player.tickrate_cl "64"
+[2026-10-07 10:02:30] [UNKNOWN] player.tickrate_sv "30"
+[2026-10-07 10:02:30] [UNKNOWN] boar.population "3"
+[2026-10-07 10:02:30] [UNKNOWN] chicken.population "2"
+[2026-10-07 10:02:30] [UNKNOWN] crocodile.population "0.5"
+[2026-10-07 10:02:30] [UNKNOWN] hotairballoon.population "0.5"
+[2026-10-07 10:02:30] [UNKNOWN] metaldetectorsource.population "0"
+[2026-10-07 10:02:30] [UNKNOWN] modularcar.population "2"
+[2026-10-07 10:02:30] [UNKNOWN] panther.population "0.25"
+[2026-10-07 10:02:30] [UNKNOWN] ridablehorse.population "1"
+[2026-10-07 10:02:30] [UNKNOWN] snakehazard.population "3"
+[2026-10-07 10:02:30] [UNKNOWN] stag.population "2"
+[2026-10-07 10:02:30] [UNKNOWN] tiger.population "0.25"
+[2026-10-07 10:02:30] [UNKNOWN] traincar.population "1.5"
+[2026-10-07 10:02:30] [UNKNOWN] wolf2.population "1.25"
+[2026-10-07 10:02:30] [UNKNOWN] server.level "Frosthaven Christmas"
+[2026-10-07 10:02:30] [UNKNOWN] server.bansservertimeout "15"
+[2026-10-07 10:02:30] [UNKNOWN] server.entitybatchtime "1.5"
+[2026-10-07 10:02:30] [UNKNOWN] server.destroytaskbatchcount "256"
+[2026-10-07 10:02:30] [UNKNOWN] server.debrisdespawn "15"
+[2026-10-07 10:02:30] [UNKNOWN] server.foodspoiling "True"
+[2026-10-07 10:02:30] [UNKNOWN] server.http_connection_limit "32"
+[2026-10-07 10:02:30] [UNKNOWN] server.idlekick "45"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxdecryptqueuebytes "524288000"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxdecryptqueuelength "5000"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxdecryptthreadwait "100"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxmainthreadwait "100"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxpacketspersecond "3000"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxpacketspersecond_rpc "400"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxpacketspersecond_rpc_signal "50"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxpacketspersecond_syncvar "300"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxpacketspersecond_tick "800"
+[2026-10-07 10:02:30] [UNKNOWN] server.maxunack "6"
+[2026-10-07 10:02:30] [UNKNOWN] server.netcachesize "67108864"
+[2026-10-07 10:02:30] [UNKNOWN] server.playertimeout "90"
+[2026-10-07 10:02:30] [UNKNOWN] server.savecachesize "790866"
+[2026-10-07 10:02:30] [UNKNOWN] server.saveframebudget "15"
+[2026-10-07 10:02:30] [UNKNOWN] server.snapshottaskbatchcount "128"
+[2026-10-07 10:02:30] [UNKNOWN] server.updatebatch "1024"
+[2026-10-07 10:02:30] [UNKNOWN] server.updatebatchspawn "2048"
+[2026-10-07 10:02:30] [UNKNOWN] stability.collapse "0.01"
+[2026-10-07 10:02:30] [UNKNOWN] wipetimer.wipehourofday "14"
+[2026-10-07 10:02:30] [UNKNOWN] wipetimer.wipetimezone "America/New_York"
+[2026-10-07 11:53:51] [SERVER CONSOLE] satellite.random
+[2026-10-07 13:53:57] [SERVER CONSOLE] satellite.random
+[2026-10-07 15:33:25] [USER 76561198035665693 208.104.60.200:18572] chat.say "/shop"
+[2026-10-07 15:36:26] [USER 76561198035665693 208.104.60.200:18572] chat.say "HI!"
+[2026-10-07 15:36:50] [USER 76561198035665693 208.104.60.200:18572] chat.say "I was jumping on to check the shop. I just fixed some stuff in it"
+[2026-10-07 15:36:53] [USER 76561198035665693 208.104.60.200:18572] chat.say "/shop"
+[2026-10-07 15:39:00] [USER 76561198035665693 208.104.60.200:18572] chat.say "The new shop works so much better lol"
+[2026-10-07 15:39:08] [USER 76561198035665693 208.104.60.200:18572] chat.say "/shop"
+[2026-10-07 15:40:36] [USER 76561198035665693 208.104.60.200:18572] global.AdminUI_FullRefresh
+[2026-10-07 15:40:43] [USER 76561198035665693 208.104.60.200:18572] inventory.giveid "1568388703" "1"
+[2026-10-07 15:40:56] [USER 76561198035665693 208.104.60.200:18572] chat.say "damnit I WANTED THE SHORTNAME NOT THE ITEM"
+[2026-10-07 15:41:00] [USER 76561198035665693 208.104.60.200:18572] chat.say ""
+[2026-10-07 15:41:03] [USER 76561198035665693 208.104.60.200:18572] chat.say ">:("
+[2026-10-07 15:41:11] [USER 76561198035665693 208.104.60.200:18572] chat.say "/padmin"
+[2026-10-07 15:41:58] [USER 76561198035665693 208.104.60.200:18572] chat.say "/admin"
+[2026-10-07 15:42:04] [USER 76561198035665693 208.104.60.200:18572] chat.say "/cp"
+[2026-10-07 15:43:49] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 15:44:52] [USER 76561198035665693 208.104.60.200:18572] chat.say "/shop"
+[2026-10-07 15:47:58] [USER 76561198035665693 208.104.60.200:18572] chat.say "yeah it should work now"
+[2026-10-07 15:48:25] [USER 76561198035665693 208.104.60.200:18572] chat.say "well wait"
+[2026-10-07 15:48:29] [USER 76561198035665693 208.104.60.200:18572] chat.say "I lied"
+[2026-10-07 15:48:40] [USER 76561198035665693 208.104.60.200:18572] chat.say "I just found a bug"
+[2026-10-07 15:48:43] [USER 76561198035665693 208.104.60.200:18572] chat.say "xD"
+[2026-10-07 15:53:18] [USER 76561198035665693 208.104.60.200:18572] chat.say "/em"
+[2026-10-07 15:54:02] [SERVER CONSOLE] satellite.random
+[2026-10-07 15:56:16] [USER 76561198035665693 208.104.60.200:18572] chat.say "hb"
+[2026-10-07 16:04:41] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:04:45] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:04:49] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:04:54] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:05:00] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:07:59] [USER 76561198035665693 208.104.60.200:18572] chat.say "/home 1"
+[2026-10-07 16:08:22] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:09:22] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:09:47] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:09:50] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:09:52] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:09:58] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:11] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:17] [USER 76561198035665693 208.104.60.200:18572] chat.say "/perks daily"
+[2026-10-07 16:10:21] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:28] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:34] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:44] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:53] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 16:10:57] [USER 76561198035665693 208.104.60.200:18572] inventory.endloot
+[2026-10-07 17:11:33] [UNKNOWN] env.time 8
+[2026-10-07 17:54:02] [SERVER CONSOLE] satellite.random
+[2026-10-07 18:19:38] [UNKNOWN] env.time 8
+[2026-10-07 19:54:08] [SERVER CONSOLE] satellite.random
+[2026-10-07 21:54:09] [SERVER CONSOLE] satellite.random
+[2026-10-07 23:54:12] [SERVER CONSOLE] satellite.random

@@ -1,0 +1,107 @@
+{
+  "Fields": [
+    {
+      "Need to update?": false,
+      "Enabled?": true,
+      "Visible": true,
+      "Name": "Header.Field.Avatar",
+      "Type (Label/Panel/Button/Image)": "Image",
+      "Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Text": [],
+      "Font Size": 14,
+      "Font": 0,
+      "Align": "UpperLeft",
+      "Text Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Command ({user} - user steamid)": "",
+      "Image": "{player_avatar}",
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "Sprite": "",
+      "Material": "",
+      "AnchorMin (X)": 0.0,
+      "AnchorMin (Y)": 0.5,
+      "AnchorMax (X)": 0.0,
+      "AnchorMax (Y)": 0.5,
+      "OffsetMin (X)": 5.0,
+      "OffsetMin (Y)": -20.0,
+      "OffsetMax (X)": 45.0,
+      "OffsetMax (Y)": 20.0
+    },
+    {
+      "Need to update?": false,
+      "Enabled?": true,
+      "Visible": true,
+      "Name": "Header.Field.Username",
+      "Type (Label/Panel/Button/Image)": "Label",
+      "Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Text": [
+        "{player_username}"
+      ],
+      "Font Size": 14,
+      "Font": 0,
+      "Align": "LowerLeft",
+      "Text Color": {
+        "HEX": "#E2DBD3",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Command ({user} - user steamid)": "",
+      "Image": "",
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "Sprite": "",
+      "Material": "",
+      "AnchorMin (X)": 0.0,
+      "AnchorMin (Y)": 0.0,
+      "AnchorMax (X)": 1.0,
+      "AnchorMax (Y)": 1.0,
+      "OffsetMin (X)": 50.0,
+      "OffsetMin (Y)": 25.0,
+      "OffsetMax (X)": 0.0,
+      "OffsetMax (Y)": 0.0
+    },
+    {
+      "Need to update?": false,
+      "Enabled?": true,
+      "Visible": true,
+      "Name": "Header.Field.ServerRewards.Balance",
+      "Type (Label/Panel/Button/Image)": "Label",
+      "Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Text": [
+        "<b>{economy_server_rewards}</b> <color=#ECCA97>RP</color>"
+      ],
+      "Font Size": 12,
+      "Font": 1,
+      "Align": "UpperLeft",
+      "Text Color": {
+        "HEX": "#E2DBD3",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Command ({user} - user steamid)": "",
+      "Image": "",
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "Sprite": "",
+      "Material": "",
+      "AnchorMin (X)": 0.0,
+      "AnchorMin (Y)": 0.0,
+      "AnchorMax (X)": 1.0,
+      "AnchorMax (Y)": 1.0,
+      "OffsetMin (X)": 50.0,
+      "OffsetMin (Y)": 0.0,
+      "OffsetMax (X)": 0.0,
+      "OffsetMax (Y)": -25.0
+    }
+  ]
+}

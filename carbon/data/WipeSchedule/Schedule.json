@@ -1,0 +1,164 @@
+[
+  {
+    "ScheduleType": "CustomDate",
+    "EventType": "GlobalWipe",
+    "Enable": true,
+    "Name": "Server Wipe",
+    "DateTimeEvent": "2026-07-02T20:00:00",
+    "CustomDateTimeEvent": {
+      "Mode": "Months",
+      "DaysInterval": 1,
+      "WeeksInterval": 1,
+      "DaysOfWeek": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "Times": {
+        "Hour": 20,
+        "Minute": 0
+      },
+      "MonthRepeatOnDay": false,
+      "MonthRepeatOnDayOfWeek": true
+    },
+    "Descriptions": "Full Server Reset",
+    "UrlIcon": "default",
+    "Color": {
+      "HEX": "#FF0000",
+      "Opacity (0 - 100)": 25.0
+    }
+  },
+  {
+    "ScheduleType": "DateTime",
+    "EventType": "CustomEvent",
+    "Enable": true,
+    "Name": "Hide & Seek",
+    "DateTimeEvent": "2026-06-26T00:00:00",
+    "CustomDateTimeEvent": {
+      "Mode": "Weeks",
+      "DaysInterval": 1,
+      "WeeksInterval": 1,
+      "DaysOfWeek": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "Times": {
+        "Hour": 0,
+        "Minute": 0
+      },
+      "MonthRepeatOnDay": false,
+      "MonthRepeatOnDayOfWeek": false
+    },
+    "Descriptions": "Hide and Seek Server wide Hide and Seek. Corpses will not be lootable. This is",
+    "UrlIcon": "",
+    "Color": {
+      "HEX": "#262BC3",
+      "Opacity (0 - 100)": 15.0
+    }
+  },
+  {
+    "ScheduleType": "DateTime",
+    "EventType": "CustomEvent",
+    "Enable": true,
+    "Name": "Purge Day",
+    "DateTimeEvent": "2026-07-01T00:00:00",
+    "CustomDateTimeEvent": {
+      "Mode": "Months",
+      "DaysInterval": 1,
+      "WeeksInterval": 1,
+      "DaysOfWeek": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "Times": {
+        "Hour": 0,
+        "Minute": 0
+      },
+      "MonthRepeatOnDay": false,
+      "MonthRepeatOnDayOfWeek": true
+    },
+    "Descriptions": "Serverwide Purge. Anything goes. No Admin",
+    "UrlIcon": "",
+    "Color": {
+      "HEX": "#0D52AA",
+      "Opacity (0 - 100)": 15.0
+    }
+  },
+  {
+    "ScheduleType": "DateTime",
+    "EventType": "CustomEvent",
+    "Enable": true,
+    "Name": "Base Builder Event - Start",
+    "DateTimeEvent": "2026-07-02T20:00:00",
+    "CustomDateTimeEvent": {
+      "Mode": "None",
+      "DaysInterval": 1,
+      "WeeksInterval": 1,
+      "DaysOfWeek": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "Times": {
+        "Hour": 20,
+        "Minute": 0
+      },
+      "MonthRepeatOnDay": false,
+      "MonthRepeatOnDayOfWeek": false
+    },
+    "Descriptions": "Build the most festive base you can before July 25th",
+    "UrlIcon": "default",
+    "Color": {
+      "HEX": "#73248D",
+      "Opacity (0 - 100)": 15.0
+    }
+  },
+  {
+    "ScheduleType": "DateTime",
+    "EventType": "CustomEvent",
+    "Enable": true,
+    "Name": "Base Builder Event - End",
+    "DateTimeEvent": "2026-07-25T23:00:00",
+    "CustomDateTimeEvent": {
+      "Mode": "None",
+      "DaysInterval": 1,
+      "WeeksInterval": 1,
+      "DaysOfWeek": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "Times": {
+        "Hour": 23,
+        "Minute": 0
+      },
+      "MonthRepeatOnDay": false,
+      "MonthRepeatOnDayOfWeek": false
+    },
+    "Descriptions": "",
+    "UrlIcon": "",
+    "Color": null
+  }
+]

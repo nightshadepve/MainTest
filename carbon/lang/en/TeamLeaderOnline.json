@@ -1,0 +1,14 @@
+{
+  "Admin.Promote.Fail": "Failed to promote user {0}.",
+  "Admin.Promote.Success": "User {0} now has leader priority.",
+  "Admin.Promote.Syntax": "Syntax: tlo.promote <steamId>",
+  "Admin.Promote.Unnecessary": "User {0} already has leader priority.",
+  "Claim.Fail": "Failed to claim team.",
+  "Claim.LeaderExists": "Your team already has a priority leader.",
+  "Claim.Success": "You now have team leader priority.",
+  "Claim.Suggest": "Claim your team's priority leader position with <color=#AAFF00>/tlo.claim</color> this grants you leader position on login regardless of who currently has it. Only the priority leader can promote another team member to the priority leader position.",
+  "InvalidSteamId": "Invalid SteamId.",
+  "NoActivePlayerFound": "No active player found.",
+  "NoPermission": "You do not have permission.",
+  "NoPlayerTeam": "No player team found."
+}

@@ -1,0 +1,803 @@
+{
+  "Horde Options": {
+    "Amount of zombies to spawn when a new horde is created": 3,
+    "Maximum amount of spawned zombies per horde": 10,
+    "Maximum amount of hordes at any given time": 5,
+    "Amount of time from when a horde is destroyed until a new horde is created (seconds)": 900,
+    "Amount of time before a horde grows in size": 300,
+    "Add a zombie to the horde when a horde member kills a player": true,
+    "Merge hordes together if they collide": true,
+    "Spawn system (SpawnsDatabase, Random)": "Random",
+    "Spawn file (only required when using SpawnsDatabase)": "",
+    "Amount of time a player needs to be outside of a zombies vision before it forgets about them": 10.0,
+    "Default roam speed (Slowest, Slow, Normal, Fast)": "Slow",
+    "Force all hordes to roam locally": false,
+    "Local roam distance": 150.0,
+    "Restrict chase distance for local hordes (1.5x the maximum roam distance for that horde)": false,
+    "Use horde profiles for randomly spawned hordes": false,
+    "Specific horde profiles for randomly spawned hordes": [],
+    "Sense nearby gunshots and explosions": true
+  },
+  "Horde Member Options": {
+    "Can target animals": true,
+    "Can be targeted by turrets": false,
+    "Can be targeted by NPC turrets": true,
+    "Can be targeted by peacekeeper turrets and NPC turrets": true,
+    "Can be targeted by Bradley APC": false,
+    "Can be targeted by other NPCs": true,
+    "Can be targeted by animals": true,
+    "Can target other NPCs": false,
+    "Can target other NPCs that attack zombies": true,
+    "Can target NPCs from HumanNPC": false,
+    "Ignore sleeping players": false,
+    "Give all zombies glowing eyes": true,
+    "Headshots instantly kill zombie": true,
+    "Minimum damage required for a headshot kill": 25.0,
+    "Kill NPCs that are under water": true,
+    "Can zombies swim across water": true,
+    "Enable NPC dormant system. This will put NPCs to sleep when no players are nearby to improve performance": true,
+    "Zombies make zombie sounds": true,
+    "Continue to target players who hide in buildings": true,
+    "Throwable explosive building damage multiplier": 1.0,
+    "Maximum explosive throw range": 20.0,
+    "Despawn dud explosives thrown by Zombies": true,
+    "Make dud explosives thrown by Zombies explode anyway": false,
+    "Don't apply the building damage multiplier if the target is not the owner or authed on the TC": true,
+    "Don't apply building damage if the target is not the owner or authed on the TC": false,
+    "Melee weapon building damage multiplier": 1.0,
+    "Zombies can mount vehicles if target player mounts it": true,
+    "Consume throwable items when using": false,
+    "Make zombies gingerbread men": false,
+    "Corpse despawn time (0 is default behavior)": 0.0,
+    "Loadouts": [
+      {
+        "LoadoutID": "loadout-0",
+        "Potential names for zombies using this loadout (chosen at random)": [
+          "Zombie"
+        ],
+        "Damage multiplier": 1.0,
+        "Aim cone scale (for projectile weapons)": 2.0,
+        "Vitals": {
+          "Health": 200.0
+        },
+        "Movement": {
+          "Speed": 6.2,
+          "Acceleration": 12.0,
+          "Turn speed": 120.0,
+          "Speed multiplier - Slowest": 0.1,
+          "Speed multiplier - Slow": 0.3,
+          "Speed multiplier - Normal": 0.5,
+          "Speed multiplier - Fast": 1.0,
+          "Speed multiplier - Low health": 0.5
+        },
+        "Sensory": {
+          "Attack range multiplier": 1.5,
+          "Sense range": 30.0,
+          "Listen range": 20.0,
+          "Target lost range": 90.0,
+          "Target lost range time (seconds)": 5.0,
+          "Target lost LOS time (seconds)": 5.0,
+          "Ignore sneaking outside of vision range": true,
+          "Vision cone (0 - 180 degrees)": 135.0,
+          "Ignore players in safe zone": true
+        },
+        "BeltItems": [
+          {
+            "Shortname": "knife.butcher",
+            "SkinID": 0,
+            "Amount": 1
+          },
+          {
+            "Shortname": "grenade.beancan",
+            "SkinID": 0,
+            "Amount": 2
+          }
+        ],
+        "MainItems": [],
+        "WearItems": [
+          {
+            "Shortname": "halloween.mummysuit",
+            "SkinID": 0,
+            "Amount": 1
+          }
+        ],
+        "Random loot override (applies to this profile only)": {
+          "Minimum amount of items to spawn": 0,
+          "Maximum amount of items to spawn": 0,
+          "List": []
+        },
+        "AlphaLoot profiles as loot override (applies to this profile only)": []
+      },
+      {
+        "LoadoutID": "loadout-1",
+        "Potential names for zombies using this loadout (chosen at random)": [
+          "Zombie"
+        ],
+        "Damage multiplier": 1.0,
+        "Aim cone scale (for projectile weapons)": 2.0,
+        "Vitals": {
+          "Health": 200.0
+        },
+        "Movement": {
+          "Speed": 6.2,
+          "Acceleration": 12.0,
+          "Turn speed": 120.0,
+          "Speed multiplier - Slowest": 0.1,
+          "Speed multiplier - Slow": 0.3,
+          "Speed multiplier - Normal": 0.5,
+          "Speed multiplier - Fast": 1.0,
+          "Speed multiplier - Low health": 0.5
+        },
+        "Sensory": {
+          "Attack range multiplier": 1.5,
+          "Sense range": 30.0,
+          "Listen range": 20.0,
+          "Target lost range": 90.0,
+          "Target lost range time (seconds)": 5.0,
+          "Target lost LOS time (seconds)": 5.0,
+          "Ignore sneaking outside of vision range": true,
+          "Vision cone (0 - 180 degrees)": 135.0,
+          "Ignore players in safe zone": true
+        },
+        "BeltItems": [
+          {
+            "Shortname": "chainsaw",
+            "SkinID": 0,
+            "Amount": 1
+          },
+          {
+            "Shortname": "grenade.beancan",
+            "SkinID": 0,
+            "Amount": 2
+          }
+        ],
+        "MainItems": [
+          {
+            "Shortname": "lowgradefuel",
+            "SkinID": 0,
+            "Amount": 1
+          }
+        ],
+        "WearItems": [
+          {
+            "Shortname": "scarecrow.suit",
+            "SkinID": 0,
+            "Amount": 1
+          },
+          {
+            "Shortname": "jacket",
+            "SkinID": 0,
+            "Amount": 1
+          }
+        ],
+        "Random loot override (applies to this profile only)": {
+          "Minimum amount of items to spawn": 0,
+          "Maximum amount of items to spawn": 0,
+          "List": []
+        },
+        "AlphaLoot profiles as loot override (applies to this profile only)": []
+      },
+      {
+        "LoadoutID": "loadout-2",
+        "Potential names for zombies using this loadout (chosen at random)": [
+          "Zombie"
+        ],
+        "Damage multiplier": 1.0,
+        "Aim cone scale (for projectile weapons)": 2.0,
+        "Vitals": {
+          "Health": 200.0
+        },
+        "Movement": {
+          "Speed": 6.2,
+          "Acceleration": 12.0,
+          "Turn speed": 120.0,
+          "Speed multiplier - Slowest": 0.1,
+          "Speed multiplier - Slow": 0.3,
+          "Speed multiplier - Normal": 0.5,
+          "Speed multiplier - Fast": 1.0,
+          "Speed multiplier - Low health": 0.5
+        },
+        "Sensory": {
+          "Attack range multiplier": 1.5,
+          "Sense range": 30.0,
+          "Listen range": 20.0,
+          "Target lost range": 90.0,
+          "Target lost range time (seconds)": 5.0,
+          "Target lost LOS time (seconds)": 5.0,
+          "Ignore sneaking outside of vision range": true,
+          "Vision cone (0 - 180 degrees)": 135.0,
+          "Ignore players in safe zone": true
+        },
+        "BeltItems": [
+          {
+            "Shortname": "pitchfork",
+            "SkinID": 0,
+            "Amount": 1
+          },
+          {
+            "Shortname": "grenade.beancan",
+            "SkinID": 0,
+            "Amount": 2
+          }
+        ],
+        "MainItems": [],
+        "WearItems": [
+          {
+            "Shortname": "halloween.mummysuit",
+            "SkinID": 0,
+            "Amount": 1
+          }
+        ],
+        "Random loot override (applies to this profile only)": {
+          "Minimum amount of items to spawn": 0,
+          "Maximum amount of items to spawn": 0,
+          "List": []
+        },
+        "AlphaLoot profiles as loot override (applies to this profile only)": []
+      },
+      {
+        "LoadoutID": "loadout-3",
+        "Potential names for zombies using this loadout (chosen at random)": [
+          "Zombie"
+        ],
+        "Damage multiplier": 1.0,
+        "Aim cone scale (for projectile weapons)": 2.0,
+        "Vitals": {
+          "Health": 200.0
+        },
+        "Movement": {
+          "Speed": 6.2,
+          "Acceleration": 12.0,
+          "Turn speed": 120.0,
+          "Speed multiplier - Slowest": 0.1,
+          "Speed multiplier - Slow": 0.3,
+          "Speed multiplier - Normal": 0.5,
+          "Speed multiplier - Fast": 1.0,
+          "Speed multiplier - Low health": 0.5
+        },
+        "Sensory": {
+          "Attack range multiplier": 1.5,
+          "Sense range": 30.0,
+          "Listen range": 20.0,
+          "Target lost range": 90.0,
+          "Target lost range time (seconds)": 5.0,
+          "Target lost LOS time (seconds)": 5.0,
+          "Ignore sneaking outside of vision range": true,
+          "Vision cone (0 - 180 degrees)": 135.0,
+          "Ignore players in safe zone": true
+        },
+        "BeltItems": [
+          {
+            "Shortname": "sickle",
+            "SkinID": 0,
+            "Amount": 1
+          },
+          {
+            "Shortname": "grenade.beancan",
+            "SkinID": 0,
+            "Amount": 2
+          }
+        ],
+        "MainItems": [],
+        "WearItems": [
+          {
+            "Shortname": "halloween.mummysuit",
+            "SkinID": 0,
+            "Amount": 1
+          }
+        ],
+        "Random loot override (applies to this profile only)": {
+          "Minimum amount of items to spawn": 0,
+          "Maximum amount of items to spawn": 0,
+          "List": []
+        },
+        "AlphaLoot profiles as loot override (applies to this profile only)": []
+      }
+    ]
+  },
+  "Loot Table": {
+    "Drop inventory on death instead of random loot": false,
+    "Drop default murderer loot on death instead of random loot": false,
+    "Drop one of the specified AlphaLoot profiles as loot": [],
+    "Random loot table": {
+      "Minimum amount of items to spawn": 3,
+      "Maximum amount of items to spawn": 9,
+      "List": [
+        {
+          "Shortname": "hazmatsuit",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "sickle",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": -1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "knife.butcher",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "pitchfork",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "chainsaw",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "lowgradefuel",
+          "ItemName": "",
+          "Minimum": 20,
+          "Maximum": 40,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "chocolate",
+          "ItemName": "",
+          "Minimum": 3,
+          "Maximum": 5,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "corn",
+          "ItemName": "",
+          "Minimum": 3,
+          "Maximum": 5,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 1.0,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "wall.graveyard.fence",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 3,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.25,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "spiderweb",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 2,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.25,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "coffin.storage",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.25,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "wall.graveyard.fence",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 3,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.25,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "spiderweb",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 2,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.25,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "coffin.storage",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.25,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "barrelcostume",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "gravestone",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "woodcross",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "scarecrowhead",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "metal.refined",
+          "ItemName": "",
+          "Minimum": 15,
+          "Maximum": 25,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "shotgun.double",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 0,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "ammo.shotgun",
+          "ItemName": "",
+          "Minimum": 5,
+          "Maximum": 0,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "grenade.f1",
+          "ItemName": "",
+          "Minimum": 2,
+          "Maximum": 4,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "cratecostume",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "frankensteinmask",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "mummymask",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        },
+        {
+          "Shortname": "ghostsheet",
+          "ItemName": "",
+          "Minimum": 1,
+          "Maximum": 1,
+          "SkinID": 0,
+          "Spawn as blueprint": false,
+          "Probability (0.0 - 1.0)": 0.5,
+          "Minimum condition (0.0 - 1.0)": 1.0,
+          "Maximum condition (0.0 - 1.0)": 1.0,
+          "Spawn with": null
+        }
+      ]
+    },
+    "Dropped inventory item blacklist (shortnames)": [
+      "exampleitem.shortname1",
+      "exampleitem.shortname2"
+    ]
+  },
+  "Monument Spawn Options": {
+    "ArcticResearch": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 120.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Airfield": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 85.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Dome": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 50.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": null
+    },
+    "Junkyard": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 100.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Ferry": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 90.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "LargeHarbor": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 120.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "GasStation": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 40.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Powerplant": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 120.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "StoneQuarry": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 40.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "SulfurQuarry": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 40.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "HQMQuarry": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 40.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Radtown": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 85.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "LegacyRadtown": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 85.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "LaunchSite": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 140.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Satellite": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 60.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "SmallHarbor": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 85.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Supermarket": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 20.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Trainyard": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 100.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Tunnels": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 90.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Warehouse": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 40.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "WaterTreatment": {
+      "Enable spawns at this monument": false,
+      "Distance that this horde can roam from their initial spawn point": 120.0,
+      "Maximum amount of members in this horde": 10,
+      "Horde profile": ""
+    },
+    "Custom": [
+      {
+        "Location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "IsValid": false
+        },
+        "Enable spawns at this monument": false,
+        "Distance that this horde can roam from their initial spawn point": -1.0,
+        "Maximum amount of members in this horde": 3,
+        "Horde profile": ""
+      },
+      {
+        "Location": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "IsValid": false
+        },
+        "Enable spawns at this monument": false,
+        "Distance that this horde can roam from their initial spawn point": -1.0,
+        "Maximum amount of members in this horde": 3,
+        "Horde profile": ""
+      }
+    ]
+  },
+  "Timed Spawn Options": {
+    "Only allows spawns during the set time period": false,
+    "Despawn hordes outside of the set time period": true,
+    "Start time (0.0 - 24.0)": 18.0,
+    "End time (0.0 - 24.0)": 6.0,
+    "Broadcast notification when hordes start spawning": false,
+    "Broadcast notification when hordes start despawning": false
+  },
+  "Horde Profiles (profile name, list of applicable loadouts)": {
+    "Profile1": [
+      "loadout-1",
+      "loadout-2",
+      "loadout-3"
+    ],
+    "Profile2": [
+      "loadout-2",
+      "loadout-3"
+    ]
+  },
+  "Version": {
+    "Major": 0,
+    "Minor": 6,
+    "Patch": 36
+  }
+}

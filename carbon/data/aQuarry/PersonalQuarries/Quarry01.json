@@ -1,0 +1,210 @@
+{
+  "Enable this quarry?": true,
+  "Quarry custom name": "Personal Quarry Lvl 1",
+  "Quarry SkinID": 3185891808,
+  "Structure": {
+    "Health points": 3000.0,
+    "Protection percentage [0.0-100.0] (100 = immortal)": 10.0
+  },
+  "Remove": {
+    "Enable remove?": true,
+    "Enable refund?": true,
+    "Refund item list": [
+      {
+        "Custom name (empty = default)": "Personal Quarry Lvl 1",
+        "ShortName": "furnace.large",
+        "SkinID": 3185891808,
+        "Amount": 1
+      }
+    ]
+  },
+  "Upgrade": {
+    "SkinID of the upgraded quarry (0 = disable upgrades)": 3185893553,
+    "Upgrade cost": [
+      {
+        "ShortName": "wood",
+        "SkinID": 0,
+        "Amount": 14000
+      },
+      {
+        "ShortName": "stones",
+        "SkinID": 0,
+        "Amount": 7000
+      },
+      {
+        "ShortName": "metal.fragments",
+        "SkinID": 0,
+        "Amount": 1000
+      },
+      {
+        "ShortName": "metal.refined",
+        "SkinID": 0,
+        "Amount": 20
+      },
+      {
+        "ShortName": "leather",
+        "SkinID": 0,
+        "Amount": 200
+      },
+      {
+        "ShortName": "carburetor3",
+        "SkinID": 0,
+        "Amount": 1
+      },
+      {
+        "ShortName": "scrap",
+        "SkinID": 0,
+        "Amount": 800
+      },
+      {
+        "ShortName": "rope",
+        "SkinID": 0,
+        "Amount": 5
+      },
+      {
+        "ShortName": "sheetmetal",
+        "SkinID": 0,
+        "Amount": 5
+      },
+      {
+        "ShortName": "tarp",
+        "SkinID": 0,
+        "Amount": 5
+      }
+    ]
+  },
+  "Inventory": {
+    "Resource container capacity": 12,
+    "Fuel container capacity": 2
+  },
+  "Protection from other players": {
+    "Only owner can toggle?": true,
+    "Only owner can loot?": true,
+    "Only owner can manage?": true,
+    "Include his team?": true
+  },
+  "Repair": {
+    "Allow repair with hammer hit?": true,
+    "Unable to repair X seconds after taking damage": 30.0,
+    "Repair amount for hit": 100.0,
+    "Enable cost?": true,
+    "Repair cost": [
+      {
+        "ShortName": "metal.fragments",
+        "SkinID": 0,
+        "Amount": 500
+      }
+    ]
+  },
+  "Prefab substitution": {
+    "Use prefab substitution?": true,
+    "This is a quarry (true) or pumpjack (false) ?": true,
+    "ShortName of the item from which we create a quarry": "furnace.large",
+    "Minimum distance from player to quarry (when installed)": 3.0,
+    "Minimum distance from quarry to constructions (when installed)": 17.0,
+    "Additional height setting (when installed)": -2.0
+  },
+  "Production": {
+    "List of the fuel used and its production settings": [
+      {
+        "ShortName": "lowgradefuel",
+        "SkinID": 0,
+        "Amount": 50,
+        "How many seconds can quarry work on one consume of this fuel?": 60.0,
+        "Resource production interval on this fuel (seconds)": 60.0,
+        "Gathering resources on this fuel": [
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "stones",
+            "SkinID": 0,
+            "Amount": 110,
+            "Amount max": 110,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "metal.ore",
+            "SkinID": 0,
+            "Amount": 77,
+            "Amount max": 77,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "sulfur.ore",
+            "SkinID": 0,
+            "Amount": 55,
+            "Amount max": 55,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "hq.metal.ore",
+            "SkinID": 0,
+            "Amount": 11,
+            "Amount max": 11,
+            "Probability [0.0-100.0]": 10.0,
+            "Do not use permission rates": false
+          }
+        ]
+      },
+      {
+        "ShortName": "diesel_barrel",
+        "SkinID": 0,
+        "Amount": 1,
+        "How many seconds can quarry work on one consume of this fuel?": 600.0,
+        "Resource production interval on this fuel (seconds)": 120.0,
+        "Gathering resources on this fuel": [
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "stones",
+            "SkinID": 0,
+            "Amount": 440,
+            "Amount max": 440,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "metal.ore",
+            "SkinID": 0,
+            "Amount": 308,
+            "Amount max": 308,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "sulfur.ore",
+            "SkinID": 0,
+            "Amount": 220,
+            "Amount max": 220,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "charcoal",
+            "SkinID": 0,
+            "Amount": 132,
+            "Amount max": 132,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "hq.metal.ore",
+            "SkinID": 0,
+            "Amount": 44,
+            "Amount max": 44,
+            "Probability [0.0-100.0]": 20.0,
+            "Do not use permission rates": false
+          }
+        ]
+      }
+    ]
+  }
+}

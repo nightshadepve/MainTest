@@ -1,0 +1,555 @@
+{
+  "ZonesDome Option": {
+    "Use Zone Domes Spheres over Zones": false,
+    "Enable TruePVE to allow Rule Sets": true,
+    "Enable NextGenPVE to allow Rule Sets": false
+  },
+  "Zone Location Options": {
+    "Monument Options": {
+      "Airfield": {
+        "Enabled": true,
+        "Radius": 200,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Airfield.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Airfield.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Small Harbour": {
+        "Enabled": true,
+        "Radius": 145,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Small Harbour.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Small Harbour.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Large Harbour": {
+        "Enabled": true,
+        "Radius": 150,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Large Harbour.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Large Harbour.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Launch Site": {
+        "Enabled": true,
+        "Radius": 295,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Launch Site.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Launch Site.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Large Oil Rig": {
+        "Enabled": true,
+        "Radius": 165,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Large Oil Rig.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Large Oil Rig.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Small Oil Rig": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Small Oil Rig.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Small Oil Rig.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Power Plant": {
+        "Enabled": true,
+        "Radius": 150,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Power Plant.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Power Plant.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Junk Yard": {
+        "Enabled": true,
+        "Radius": 165,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Junk Yard.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Junk Yard.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Military Tunnels": {
+        "Enabled": true,
+        "Radius": 115,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Military Tunnels.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Military Tunnels.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Train Yard": {
+        "Enabled": true,
+        "Radius": 165,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Train Yard.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Train Yard.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Water Treatment Plant": {
+        "Enabled": true,
+        "Radius": 175,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Water Treatment Plant.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Water Treatment Plant.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Giant Excavator Pit": {
+        "Enabled": true,
+        "Radius": 205,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Giant Excavator Pit.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Giant Excavator Pit.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Satellite Dish": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Satellite Dish.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Satellite Dish.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Sewer Branch": {
+        "Enabled": true,
+        "Radius": 80,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Sewer Branch.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Sewer Branch.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "The Dome": {
+        "Enabled": true,
+        "Radius": 80,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered The Dome.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left The Dome.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Oxum's Gas Station #1": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Oxum's Gas Station #1.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Oxum's Gas Station #1.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Oxum's Gas Station #2": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Oxum's Gas Station #2.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Oxum's Gas Station #2.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Oxum's Gas Station #3": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Oxum's Gas Station #3.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Oxum's Gas Station #3.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Sulfur Quarry": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Sulfur Quarry.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Sulfur Quarry.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Stone Quarry": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Stone Quarry.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Stone Quarry.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "HQM Quarry": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered HQM Quarry.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left HQM Quarry.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Wild Swamp 1": {
+        "Enabled": true,
+        "Radius": 95,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Wild Swamp 1.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Wild Swamp 1.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Wild Swamp 2": {
+        "Enabled": true,
+        "Radius": 80,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Wild Swamp 2.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Wild Swamp 2.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Abandoned Cabins": {
+        "Enabled": true,
+        "Radius": 80,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Cabins.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Cabins.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Light House #1": {
+        "Enabled": true,
+        "Radius": 80,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Light House #1.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Light House #1.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Light House #2": {
+        "Enabled": true,
+        "Radius": 80,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Light House #2.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Light House #2.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Abandoned Supermarket #1": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Supermarket #1.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Supermarket #1.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Abandoned Supermarket #2": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Supermarket #2.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Supermarket #2.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Abandoned Supermarket #3": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Supermarket #3.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Supermarket #3.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Mining Outpost #1": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Mining Outpost #1.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Mining Outpost #1.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Mining Outpost #2": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Mining Outpost #2.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Mining Outpost #2.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Mining Outpost #3": {
+        "Enabled": true,
+        "Radius": 50,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Mining Outpost #3.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Mining Outpost #3.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Fishing Village #1": {
+        "Enabled": false,
+        "Radius": 50,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Fishing Village #2": {
+        "Enabled": false,
+        "Radius": 50,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Fishing Village #3": {
+        "Enabled": false,
+        "Radius": 50,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Outpost": {
+        "Enabled": false,
+        "Radius": 135,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Bandit Camp": {
+        "Enabled": false,
+        "Radius": 100,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Desert Base 1": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 1.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 1.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Desert Base 2": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 2.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 2.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Desert Base 3": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 3.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 3.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Desert Base 4": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 4.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 4.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Stables": {
+        "Enabled": false,
+        "Radius": 100,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Ranch": {
+        "Enabled": false,
+        "Radius": 100,
+        "Enter Zone Message": "",
+        "Leave Zone Message": "",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Artic Research Base": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Artic Research Base.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Artic Research Base.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Nuclear Missile Silo": {
+        "Enabled": true,
+        "Radius": 100,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Nuclear Missile Silo.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Nuclear Missile Silo.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Ferry Terminal": {
+        "Enabled": true,
+        "Radius": 125,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Ferry Terminal.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Ferry Terminal.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Rad Town": {
+        "Enabled": true,
+        "Radius": 85,
+        "Enter Zone Message": "<color=#E0BAF4>PvP Monument:</color> You entered Rad Town.(PvP)",
+        "Leave Zone Message": "<color=#A15FD6>PvE Restored:</color> You left Rad Town.",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "monumentpvp",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": ""
+      },
+      "Jungle Ziggurat": {
+        "Enabled": false,
+        "Radius": 50,
+        "Enter Zone Message": "WARNING: You are now entering a PVP Zone",
+        "Leave Zone Message": "Returning to PVE Area",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "exclude",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": "exclude"
+      },
+      "Apartment Complex": {
+        "Enabled": false,
+        "Radius": 100,
+        "Enter Zone Message": "WARNING: You are now entering a Safe Zone",
+        "Leave Zone Message": "Returning to PVP Area",
+        "Zone Flags": [
+          "autolights"
+        ],
+        "TruePVE RuleSet to use if TruePVE is enabled": "exclude",
+        "NextGenPVE RuleSet to use if NextGenPVE is enabled": "exclude"
+      }
+    }
+  },
+  "Version": {
+    "Major": 1,
+    "Minor": 4,
+    "Patch": 5
+  }
+}

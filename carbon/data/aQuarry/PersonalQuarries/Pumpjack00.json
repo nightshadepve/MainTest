@@ -1,0 +1,147 @@
+{
+  "Enable this quarry?": true,
+  "Quarry custom name": "Personal Pumpjack",
+  "Quarry SkinID": 3188075788,
+  "Structure": {
+    "Health points": 2500.0,
+    "Protection percentage [0.0-100.0] (100 = immortal)": 0.0
+  },
+  "Remove": {
+    "Enable remove?": true,
+    "Enable refund?": true,
+    "Refund item list": [
+      {
+        "Custom name (empty = default)": "Personal Pumpjack",
+        "ShortName": "furnace.large",
+        "SkinID": 3188075788,
+        "Amount": 1
+      }
+    ]
+  },
+  "Upgrade": {
+    "SkinID of the upgraded quarry (0 = disable upgrades)": 3185901475,
+    "Upgrade cost": [
+      {
+        "ShortName": "wood",
+        "SkinID": 0,
+        "Amount": 12000
+      },
+      {
+        "ShortName": "stones",
+        "SkinID": 0,
+        "Amount": 5500
+      },
+      {
+        "ShortName": "metal.fragments",
+        "SkinID": 0,
+        "Amount": 1300
+      },
+      {
+        "ShortName": "metal.refined",
+        "SkinID": 0,
+        "Amount": 65
+      },
+      {
+        "ShortName": "leather",
+        "SkinID": 0,
+        "Amount": 550
+      },
+      {
+        "ShortName": "carburetor3",
+        "SkinID": 0,
+        "Amount": 1
+      },
+      {
+        "ShortName": "scrap",
+        "SkinID": 0,
+        "Amount": 100
+      },
+      {
+        "ShortName": "rope",
+        "SkinID": 0,
+        "Amount": 2
+      },
+      {
+        "ShortName": "sheetmetal",
+        "SkinID": 0,
+        "Amount": 2
+      },
+      {
+        "ShortName": "tarp",
+        "SkinID": 0,
+        "Amount": 2
+      }
+    ]
+  },
+  "Inventory": {
+    "Resource container capacity": 6,
+    "Fuel container capacity": 1
+  },
+  "Protection from other players": {
+    "Only owner can toggle?": true,
+    "Only owner can loot?": true,
+    "Only owner can manage?": true,
+    "Include his team?": true
+  },
+  "Repair": {
+    "Allow repair with hammer hit?": true,
+    "Unable to repair X seconds after taking damage": 30.0,
+    "Repair amount for hit": 100.0,
+    "Enable cost?": true,
+    "Repair cost": [
+      {
+        "ShortName": "metal.fragments",
+        "SkinID": 0,
+        "Amount": 500
+      }
+    ]
+  },
+  "Prefab substitution": {
+    "Use prefab substitution?": true,
+    "This is a quarry (true) or pumpjack (false) ?": false,
+    "ShortName of the item from which we create a quarry": "furnace.large",
+    "Minimum distance from player to quarry (when installed)": 3.0,
+    "Minimum distance from quarry to constructions (when installed)": 17.0,
+    "Additional height setting (when installed)": -1.0
+  },
+  "Production": {
+    "List of the fuel used and its production settings": [
+      {
+        "ShortName": "diesel_barrel",
+        "SkinID": 0,
+        "Amount": 1,
+        "How many seconds can quarry work on one consume of this fuel?": 600.0,
+        "Resource production interval on this fuel (seconds)": 300.0,
+        "Gathering resources on this fuel": [
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "lowgradefuel",
+            "SkinID": 0,
+            "Amount": 110,
+            "Amount max": 110,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "crude.oil",
+            "SkinID": 0,
+            "Amount": 50,
+            "Amount max": 50,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          },
+          {
+            "Custom name (empty = default)": "Top Quality Fuel",
+            "ShortName": "glue",
+            "SkinID": 3188057178,
+            "Amount": 30,
+            "Amount max": 50,
+            "Probability [0.0-100.0]": 5.0,
+            "Do not use permission rates": false
+          }
+        ]
+      }
+    ]
+  }
+}

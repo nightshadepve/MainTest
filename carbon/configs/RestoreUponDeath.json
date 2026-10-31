@@ -1,0 +1,30 @@
+{
+  "Give default items upon respawn if the players is having items restored": false,
+  "Can drop active item on death": false,
+  "Can drop backpack on death": false,
+  "Don't restore items if player commited suicide": true,
+  "Wipe stored data when the map wipes": true,
+  "Purge expired user data after X amount of days": 7,
+  "Percentage of total items lost (Permission Name | Percentage (0 - 100))": {
+    "restoreupondeath.default": {
+      "Belt": 0,
+      "Wear": 100,
+      "Main": 100
+    },
+    "restoreupondeath.beltonly": {
+      "Belt": 0,
+      "Wear": 100,
+      "Main": 100
+    },
+    "restoreupondeath.admin": {
+      "Belt": 0,
+      "Wear": 100,
+      "Main": 100
+    }
+  },
+  "Version": {
+    "Major": 0,
+    "Minor": 6,
+    "Patch": 5
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "Options": {
+    "Use Friends": true,
+    "Use Clans": true,
+    "Use Teams": true,
+    "Plugin sound effects": true,
+    "Show ToolTips": true,
+    "Use Chat Prefix": true,
+    "Chat Prefix": "[Personal Marketplace]: "
+  },
+  "Deploy Settings": {
+    "Building privilege required to deploy": true,
+    "Permission required to deploy": true,
+    "Force deploy on foundation": false,
+    "Players can deploy multiple marketplaces": false,
+    "Add vending machines to Marketplaces": true,
+    "Building privilege required to access vending loot": false,
+    "Block all damage to vending machines": true,
+    "Vending machine drops loot if destroyed": true,
+    "Bypass power grid requirement for player Marketplaces": true
+  },
+  "Delivery Settings": {
+    "Marketplace delivery fee (Default = 20)": 20,
+    "Delivery fee currency item shortname (Default = scrap)": "scrap",
+    "Delivery fee currency custom item skin ID (Default = 0)": 0,
+    "Delivery fee currency custom item display name (Default = blank)": "",
+    "Delivery fee currency custom item.text (Default = blank)": "",
+    "Marketplace owner percentage commission amount (0 = disabled)": 0,
+    "Allow players to withdraw partial balances from commission (remaining stays protected)": true
+  },
+  "Pickup Settings": {
+    "Players can pickup own marketplaces": false,
+    "Building privilege required to pickup own marketplace": true,
+    "Require permission to pickup": true,
+    "Lose condition when players pickup": true,
+    "Initial Marketplace condition": 100.0,
+    "Amount of condition to lose": 20.0
+  },
+  "Craft Settings": {
+    "Players can craft a Marketplace": false,
+    "Require permission to craft": true,
+    "Cost to craft:": {
+      "scrap": 500,
+      "metal.fragments": 2500,
+      "metal.refined": 350,
+      "gears": 20,
+      "techparts": 20,
+      "dropbox": 8,
+      "targeting.computer": 8,
+      "electric.rf.receiver": 1,
+      "electric.rf.broadcaster": 1
+    }
+  },
+  "Destroy Settings": {
+    "Destroy if floor underneath destroyed": true,
+    "Drop marketplace on floor if destroyed": true,
+    "Lose condition when dropped": false
+  },
+  "Version": {
+    "Major": 1,
+    "Minor": 4,
+    "Patch": 1
+  }
+}

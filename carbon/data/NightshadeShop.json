@@ -1,0 +1,295 @@
+{
+  "NextId": 19,
+  "Categories": [
+    {
+      "Name": "Resources",
+      "Icon": "wood",
+      "Items": [
+        {
+          "Id": 1,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "wood",
+          "Skin": 0,
+          "Amount": 1000,
+          "Price": 50,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 2,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "stones",
+          "Skin": 0,
+          "Amount": 1000,
+          "Price": 60,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 3,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "metal.fragments",
+          "Skin": 0,
+          "Amount": 500,
+          "Price": 90,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 4,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "sulfur",
+          "Skin": 0,
+          "Amount": 500,
+          "Price": 120,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 5,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "lowgradefuel",
+          "Skin": 0,
+          "Amount": 100,
+          "Price": 80,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        }
+      ]
+    },
+    {
+      "Name": "Components",
+      "Icon": "gears",
+      "Items": [
+        {
+          "Id": 6,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "gears",
+          "Skin": 0,
+          "Amount": 5,
+          "Price": 75,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 7,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "metalspring",
+          "Skin": 0,
+          "Amount": 5,
+          "Price": 90,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 8,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "techparts",
+          "Skin": 0,
+          "Amount": 3,
+          "Price": 150,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 9,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "rope",
+          "Skin": 0,
+          "Amount": 10,
+          "Price": 40,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        }
+      ]
+    },
+    {
+      "Name": "Medical",
+      "Icon": "syringe.medical",
+      "Items": [
+        {
+          "Id": 10,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "syringe.medical",
+          "Skin": 0,
+          "Amount": 5,
+          "Price": 80,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 11,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "largemedkit",
+          "Skin": 0,
+          "Amount": 2,
+          "Price": 100,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 12,
+          "Type (item, raidable, dungeon, command)": "item",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "",
+          "Shortname": "bandage",
+          "Skin": 0,
+          "Amount": 10,
+          "Price": 30,
+          "Display Name (shop card)": "",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": true,
+          "Commands On Purchase ({steamid} {name})": []
+        }
+      ]
+    },
+    {
+      "Name": "RAIDABLE BASES",
+      "Icon": "",
+      "Items": [
+        {
+          "Id": 17,
+          "Type (item, raidable, dungeon, command)": "raidable",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "0",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "wall.frame.fence.gate",
+          "Shortname": "",
+          "Skin": 0,
+          "Amount": 1,
+          "Price": 100,
+          "Display Name (shop card)": "Easy",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": false,
+          "Commands On Purchase ({steamid} {name})": []
+        },
+        {
+          "Id": 18,
+          "Type (item, raidable, dungeon, command)": "raidable",
+          "Event Argument (raid difficulty 0-4 or dungeon tier name)": "1",
+          "Charged By Event Plugin (true = RaidableBases/DungeonEvents take the RP and refund failures)": true,
+          "Card Icon Shortname (events/commands)": "door.double.hinged.toptier",
+          "Shortname": "",
+          "Skin": 0,
+          "Amount": 1,
+          "Price": 100,
+          "Display Name (shop card)": "Medium",
+          "Custom Item Name (applied to the item)": "",
+          "Blueprint": false,
+          "Give Item (false for command-only rewards)": false,
+          "Commands On Purchase ({steamid} {name})": []
+        }
+      ]
+    }
+  ],
+  "Exchanges": [
+    {
+      "Id": 13,
+      "Input Shortname (rp = Server Rewards points)": "sulfur",
+      "InSkin": 0,
+      "InAmount": 1000,
+      "Output Shortname (rp = Server Rewards points)": "blood",
+      "OutSkin": 0,
+      "OutAmount": 10,
+      "Output Custom Item Name": ""
+    },
+    {
+      "Id": 14,
+      "Input Shortname (rp = Server Rewards points)": "metal.fragments",
+      "InSkin": 0,
+      "InAmount": 1500,
+      "Output Shortname (rp = Server Rewards points)": "blood",
+      "OutSkin": 0,
+      "OutAmount": 10,
+      "Output Custom Item Name": ""
+    },
+    {
+      "Id": 15,
+      "Input Shortname (rp = Server Rewards points)": "scrap",
+      "InSkin": 0,
+      "InAmount": 250,
+      "Output Shortname (rp = Server Rewards points)": "blood",
+      "OutSkin": 0,
+      "OutAmount": 5,
+      "Output Custom Item Name": ""
+    },
+    {
+      "Id": 16,
+      "Input Shortname (rp = Server Rewards points)": "blood",
+      "InSkin": 0,
+      "InAmount": 25,
+      "Output Shortname (rp = Server Rewards points)": "rp",
+      "OutSkin": 0,
+      "OutAmount": 100,
+      "Output Custom Item Name": ""
+    }
+  ]
+}

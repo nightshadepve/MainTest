@@ -1,0 +1,2657 @@
+{
+  "Difficulty": "Medium",
+  "Difficulty Level": 1,
+  "Allow Players To Build": true,
+  "Allow Players To Build (Exclusions)": [],
+  "Enable Profile For Buyable Bases Plugin": false,
+  "Loot Hints": {
+    "Enabled (/rb hint)": false,
+    "Can bypass restrictions (vanish, noclip, raidablebases.canbypass)": true,
+    "Permission Required": "",
+    "Required Loot Percentage To See Loot Left": 85.0,
+    "Draw Time (Seconds)": 15.0,
+    "Max amount of containers to draw (0 = unlimited)": 0,
+    "Show Container Quantity": true,
+    "Show Tool Cupboard In Yellow": true,
+    "Show Tool Cupboard Only": false,
+    "Cooldown (0 = No Cooldown)": 2.0,
+    "Font Size": 32
+  },
+  "Allow Raid Bases In Biomes": {
+    "Arctic": true,
+    "Arid": true,
+    "Temperate": true,
+    "Tundra": true,
+    "Jungle": true
+  },
+  "Blacklisted Commands (PVE)": [
+    "remove",
+    "remover",
+    "removeall",
+    "removeadmin"
+  ],
+  "Blacklisted Commands (PVP)": [
+    "remove",
+    "remover",
+    "removeall",
+    "removeadmin"
+  ],
+  "Commands To Run With Assign Rank After X Completions": {
+    "Commands": [
+      "inventory.giveto {userid} apple 1",
+      "o.usergroup add {userid} specialgroup"
+    ],
+    "Assign To Owner Of Raid Only": false,
+    "Enabled": false
+  },
+  "Commands To Run On Event Completion": {
+    "Commands": [
+      "inventory.giveto {userid} apple 1",
+      "o.usergroup add {userid} specialgroup"
+    ],
+    "Assign To Owner Of Raid Only": false,
+    "Enabled": false
+  },
+  "Permission Required To Enter": {
+    "Buyable Events": "",
+    "Maintained Events": "",
+    "Scheduled Events": ""
+  },
+  "Advanced Protection Radius": {
+    "Buyable Events": 50.0,
+    "Maintained Events": 50.0,
+    "Manual Events": 50.0,
+    "Scheduled Events": 50.0,
+    "Obstruction Distance Check": -1.0
+  },
+  "Advanced Setup Settings": {
+    "Amount Of Entities To Spawn Per Batch": 1,
+    "Amount Of Entities To Despawn Per Batch": 10,
+    "Height Adjustment Applied To This Paste": 0.0,
+    "Force All Bases To Spawn At Height Level (0 = Water)": -1.0,
+    "Enabled (Forced Height Level)": false,
+    "Foundations Immune To Damage When Forced Height Is Applied": false,
+    "Foundations Immune To Damage": false,
+    "Kill These Prefabs After Paste": [
+      "autoturret_deployed",
+      "fireball",
+      "flameturret_fireball",
+      "oilfireball2",
+      "napalm"
+    ],
+    "Marker Name (Override)": ""
+  },
+  "Despawn Options Override": {
+    "Override Global Config With These Options For This Profile": false,
+    "Minutes Until Despawn After Looting (min: 1)": 15,
+    "Minutes Until Despawn After Looting Resets When Damaged": false,
+    "Minutes Until Despawn After Inactive (0 = disabled)": 45,
+    "Minutes Until Despawn After Inactive Resets When Damaged": true,
+    "Wait To Start Despawn Timer When Base Takes Damage From Player": false,
+    "Wait To Start Despawn Timer Until Npc Is Killed By Player": false
+  },
+  "Eject Mounts": {
+    "All Controlled Mounts": false,
+    "All Other Mounts": false,
+    "Attack Helicopters": false,
+    "Bikes": false,
+    "Boats": false,
+    "Campers": true,
+    "Cars (Basic)": false,
+    "Cars (Modular)": false,
+    "Chinook": false,
+    "Drones": false,
+    "RFExplosives Above Dome (experimental)": false,
+    "Flying Carpet": false,
+    "Horses": false,
+    "HotAirBalloon": true,
+    "Invisible Chair": true,
+    "Jetpacks": true,
+    "MiniCopters": false,
+    "Parachutes": false,
+    "Pianos": true,
+    "Siege": false,
+    "Scrap Transport Helicopters": false,
+    "Snowmobiles": false,
+    "Tugboats": false
+  },
+  "Elevators": {
+    "Requires Power Source": false,
+    "Use Static Elevators Only (bmgjet)": false,
+    "Enabled": true,
+    "Anchor Min": "0.406 0.915",
+    "Offset Min": "0 0",
+    "Anchor Max": "0.59 0.949",
+    "Offset Max": "0 0",
+    "Panel Alpha": 0.98,
+    "Required Access Level": 0,
+    "Background Color": "#252121",
+    "Required Access Level Grants Permanent Use": false,
+    "Title Background Color": "#000000",
+    "Required Keycard Skin ID": 2690554489,
+    "Requires Building Permission": false,
+    "Button Health": 1000.0,
+    "Elevator Health": 600.0
+  },
+  "Entities Not Allowed To Be Damaged": [],
+  "Entities Not Allowed To Be Picked Up": [
+    "generator.small",
+    "generator.static",
+    "autoturret_deployed"
+  ],
+  "Entities Allowed To Be Picked Up": [
+    "shutter"
+  ],
+  "Additional Bases": {
+    "fullwipedmed1": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed2": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed3": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed4": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed5": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed6": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed7": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed8": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed9": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed10": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed11": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed12": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed13": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed14": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed15": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed16": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed17": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed18": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed19": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed20": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed21": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed22": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed23": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed24": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed25": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed26": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed27": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed28": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed29": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed30": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed31": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed32": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed33": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed34": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed35": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed36": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed37": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed38": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed39": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed40": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed41": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed42": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed43": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed44": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed45": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed46": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed47": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed48": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed49": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed50": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed51": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed52": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed53": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed54": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed55": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed56": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed57": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed58": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed59": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "fullwipedmed60": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Bricks": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Clay": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Crusader": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Disco": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-FallenAngel": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-HomerHouse": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-OnAir": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Police_v2": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Pyramid": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-SourFarm": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "Boom-Medium-Xipil": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    },
+    "SirSlush-Medium-PoopFarm": {
+      "CopyPaste Options": [
+        {
+          "Option": "stability",
+          "Value": "false"
+        },
+        {
+          "Option": "autoheight",
+          "Value": "false"
+        },
+        {
+          "Option": "height",
+          "Value": "1.0"
+        }
+      ],
+      "Explosive Costs": [
+        {
+          "Item Shortname": "explosive.satchel",
+          "Amount": 16,
+          "Enabled": false
+        },
+        {
+          "Item Shortname": "ammo.rifle.explosive",
+          "Amount": 256,
+          "Enabled": false
+        }
+      ]
+    }
+  },
+  "Paste Options": [],
+  "Arena Walls": {
+    "Enabled": true,
+    "Stacks": 1,
+    "Ignore Stack Limit When Clipping Terrain": true,
+    "Ignore Forced Height Option": true,
+    "Use Stone Walls": true,
+    "Use Iced Walls": true,
+    "Use Frontier Walls": false,
+    "Use Adobe Walls": false,
+    "Use Least Amount Of Walls": true,
+    "Use UFO Walls": false,
+    "Radius": 22.0
+  },
+  "Eco Raiding": {
+    "Allow Eco Raiding Only": false,
+    "Allow Flame Throwers": false,
+    "Allow Bows": true,
+    "Allow Molotov Cocktails": true
+  },
+  "NPC Levels": {
+    "Level 2 - Final Death": false
+  },
+  "NPCs": {
+    "Enabled": true,
+    "Weapon Accuracy (0 - 100)": {
+      "AK47": 15.0,
+      "AK47 ICE": 15.0,
+      "Bolt Rifle": 15.0,
+      "Compound Bow": 15.0,
+      "Crossbow": 15.0,
+      "Double Barrel Shotgun": 15.0,
+      "Eoka": 15.0,
+      "Glock": 15.0,
+      "HMLMG": 15.0,
+      "L96": 15.0,
+      "LR300": 15.0,
+      "M249": 15.0,
+      "Minigun": 15.0,
+      "M39": 15.0,
+      "M92": 15.0,
+      "MP5": 15.0,
+      "Nailgun": 15.0,
+      "Pump Shotgun": 15.0,
+      "Python": 15.0,
+      "Revolver": 15.0,
+      "Semi Auto Pistol": 15.0,
+      "Semi Auto Rifle": 15.0,
+      "Spas12": 15.0,
+      "Speargun": 15.0,
+      "SMG": 15.0,
+      "Snowball Gun": 15.0,
+      "Thompson": 15.0,
+      "Waterpipe Shotgun": 15.0
+    },
+    "Damage Multipliers": {
+      "Explosive Damage Multiplier": 1.0,
+      "Gun Damage Multiplier": 1.0,
+      "Melee Damage Multiplier": 1.0
+    },
+    "Spawn Inside Bases": {
+      "Sleepers": {
+        "Enabled": false,
+        "Unwakeable": true,
+        "Lootable": true,
+        "Spawn Kit In Corpses Inventory": false,
+        "Spawn Loadout In Corpses Inventory": false
+      },
+      "Spawn On Floors": false,
+      "Spawn On Beds": false,
+      "Spawn On Rugs": false,
+      "Spawn On Rugs With Skin Only": 1,
+      "Bed Health Multiplier": 1.0,
+      "Rug Health Multiplier": 1.0,
+      "Spawn Murderers Outside": true,
+      "Spawn Scientists Outside": true,
+      "Minimum Inside (-1 = ignore)": 1,
+      "Maximum Inside (-1 = ignore)": 1
+    },
+    "Add all weapons from Murderer Loadout to belt": false,
+    "Murderer Loadout": {
+      "Helm": [
+        "metal.facemask"
+      ],
+      "Torso": [
+        "metal.plate.torso"
+      ],
+      "Pants": [
+        "pants"
+      ],
+      "Gloves": [
+        "tactical.gloves"
+      ],
+      "Boots": [
+        "boots.frog"
+      ],
+      "Shirt": [
+        "tshirt"
+      ],
+      "Kilts": [],
+      "Weapon": [
+        "machete"
+      ]
+    },
+    "Add all weapons from Scientist Loadout to belt": false,
+    "Scientist Loadout": {
+      "Helm": [],
+      "Torso": [
+        "hazmatsuit_scientist_peacekeeper"
+      ],
+      "Pants": [],
+      "Gloves": [],
+      "Boots": [],
+      "Shirt": [],
+      "Kilts": [],
+      "Weapon": [
+        "rifle.ak"
+      ]
+    },
+    "Murderer Kits": [
+      "murderer_kit_1",
+      "murderer_kit_2"
+    ],
+    "Scientist Kits": [
+      "scientist_kit_1",
+      "scientist_kit_2"
+    ],
+    "Murderer Items Dropped On Death": [
+      {
+        "shortname": "ammo.pistol",
+        "name": null,
+        "text": null,
+        "blueprint": false,
+        "skin": 0,
+        "amount": 30,
+        "amountMin": 1,
+        "probability": 1.0,
+        "stacksize": -1
+      }
+    ],
+    "Scientist Items Dropped On Death": [
+      {
+        "shortname": "ammo.rifle",
+        "name": null,
+        "text": null,
+        "blueprint": false,
+        "skin": 0,
+        "amount": 30,
+        "amountMin": 1,
+        "probability": 1.0,
+        "stacksize": -1
+      }
+    ],
+    "Spawn Alternate Default Scientist Loot": {
+      "Prefab ID List": [
+        "cargo",
+        "turret_any",
+        "ch47_gunner",
+        "excavator",
+        "full_any",
+        "heavy",
+        "junkpile_pistol",
+        "oilrig",
+        "patrol",
+        "peacekeeper",
+        "roam",
+        "roamtethered"
+      ],
+      "Enabled": false,
+      "Disable All Prefab Loot Spawns": false,
+      "Call OnCorpsePopulate Hook (some plugins require this)": false
+    },
+    "Use Random Names": true,
+    "Use Capitalized Names": true,
+    "Random Murderer Names": [],
+    "Random Scientist Names": [],
+    "Amount That Can Throw Weapons": 1,
+    "Amount Of Murderers To Spawn": 2,
+    "Minimum Amount Of Murderers To Spawn": 1,
+    "Spawn Random Amount Of Murderers": true,
+    "Amount Of Scientists To Spawn": 4,
+    "Minimum Amount Of Scientists To Spawn": 2,
+    "Spawn Random Amount Of Scientists": true,
+    "Allow Npcs To Roofcamp": false,
+    "Allow Npcs To Counter Raid": false,
+    "Allow Npcs To Leave Dome When Attacking": false,
+    "Allow Npcs To Shoot Players Outside Of The Dome": false,
+    "Allow Npcs To Play Catch When Equipped With Explosives": false,
+    "Aggression Range": 55.0,
+    "Decrease Damage Linearly From Npcs With A Maximum Effective Range Of": 0.0,
+    "Decrease Damage Linearly From Players With A Maximum Effective Range Of": 0.0,
+    "Block Damage Outside To Npcs When Not Allowed To Leave Dome": false,
+    "Block Damage Outside Of The Dome To Npcs Inside": false,
+    "Spawn Kit In Corpses Inventory": false,
+    "Spawn Loadout In Corpses Inventory": false,
+    "Health For Murderers": 150.0,
+    "Health For Scientists": 150.0,
+    "Kill Underwater Npcs": true,
+    "Kits Are Unique When Applicable": false,
+    "Player Traps And Turrets Ignore Npcs": false,
+    "Event Traps And Turrets Ignore Npcs": true,
+    "Use Dangerous Treasures NPCs": false
+  },
+  "Rewards": {
+    "Custom Currency": {
+      "Plugin": {
+        "Plugin Name": "",
+        "Deposit Method (API)": "",
+        "Withdraw Method (API)": "",
+        "Balance Method (API)": "",
+        "ShoppyStock Shop Name": "",
+        "Currency Name": "",
+        "Amount": 0.0,
+        "Amount Data Type (API) - [ 0 - double | 1 - float | 2 - int ]": 0,
+        "User Data Type (API) - [ 0 - ulong | 1 - string | 2 - player ]": 0
+      },
+      "Enabled": false,
+      "Item Shortname": "scrap",
+      "Item Name": null,
+      "Amount": 0,
+      "Skin": 0
+    },
+    "Economics Money": 0.0,
+    "ServerRewards Points": 1200,
+    "SkillTree XP": 300.0,
+    "XLevels XP": 0.0,
+    "XPerience XP": 0.0,
+    "Do Not Reward Buyable Events": false,
+    "Double Rewards At Night Time Hours": true
+  },
+  "Change Building Material Tier To": {
+    "Exclusions": [],
+    "Additional Rust Shop Building Skins": [
+      {
+        "Name": "Example",
+        "Enabled": false,
+        "Skin": 0,
+        "Grade": 0
+      }
+    ],
+    "Only Apply Skin When Material Is Enabled": false,
+    "Use Adobe Skin": false,
+    "Use Shipping Container Skin": false,
+    "Use Brick Skin": false,
+    "Use Frontier Skin": false,
+    "Use Gingerbread Skin": false,
+    "Use Brutalist Skin": false,
+    "Use Random Colors": false,
+    "Use Identical Colors": false,
+    "Use Random Skin For Whole Base": true,
+    "Use Random Skin On Every Block": false,
+    "Random Building Skin List": [
+      0,
+      2,
+      10220,
+      10221,
+      10223,
+      10225,
+      10232
+    ],
+    "Do not upgrade twig": true,
+    "Wooden": false,
+    "Stone": false,
+    "Metal": false,
+    "HQM": false
+  },
+  "Change Door Type To": {
+    "Wooden": false,
+    "Metal": false,
+    "HQM": false,
+    "Include Garage Doors": false
+  },
+  "Player Damage To Base Multipliers": [
+    {
+      "Type": "Arrow",
+      "Min": 1.0,
+      "Max": 1.0
+    },
+    {
+      "Type": "Blunt",
+      "Min": 1.0,
+      "Max": 1.0
+    },
+    {
+      "Type": "Bullet",
+      "Min": 1.0,
+      "Max": 1.0
+    },
+    {
+      "Type": "Heat",
+      "Min": 1.0,
+      "Max": 1.0
+    },
+    {
+      "Type": "Explosion",
+      "Min": 1.0,
+      "Max": 1.0
+    },
+    {
+      "Type": "Slash",
+      "Min": 1.0,
+      "Max": 1.0
+    },
+    {
+      "Type": "Stab",
+      "Min": 1.0,
+      "Max": 1.0
+    }
+  ],
+  "Siege": {
+    "Allow Siege Raiding Only": false,
+    "Damage Multiplier (Ballista)": 1.0,
+    "Damage Multiplier (Cannon)": 1.0,
+    "Damage Multiplier (Catapult)": 1.0,
+    "Damage Multiplier (Ram)": 1.0
+  },
+  "Player Damage To Tool Cupboard Multiplier": 1.0,
+  "Auto Turrets": {
+    "Aim Cone": 5.0,
+    "Wait To Power On Until Event Starts": true,
+    "Minimum Damage Modifier": 1.0,
+    "Maximum Damage Modifier": 1.0,
+    "Minimum Damage Modifier (NPC)": 1.0,
+    "Maximum Damage Modifier (NPC)": 1.0,
+    "Start Health": 1000.0,
+    "Sight Range": 28.0,
+    "Double Sight Range When Shot": false,
+    "Set Hostile (False = Do Not Set Any Mode)": true,
+    "Requires Power Source": false,
+    "Remove Equipped Weapon": false,
+    "Random Weapons To Use When Unequipped": {
+      "rifle.ak": [
+        0
+      ],
+      "pistol.python": [
+        0
+      ]
+    },
+    "Remove Event Turrets For How Many Hours After Map Wipe": 0.0
+  },
+  "Player Building Restrictions": {
+    "Wooden": false,
+    "Stone": false,
+    "Metal": false,
+    "HQM": false
+  },
+  "Water Settings": {
+    "Allow Bases To Float Above Water": false,
+    "Chance For Underwater Bases To Spawn (0-100) (BETA - WORK IN PROGRESS)": 0.0,
+    "Spawn On The Surface Of Water": false,
+    "Ignore Land Level On Seabed": false,
+    "Prevent Bases From Floating Above Water By Also Checking Surrounding Area": false,
+    "Maximum Water Depth Level Used For Float Above Water Option": 1.0,
+    "Minimum Water Depth Level Used For Seabed Option": -20.0,
+    "Maximum Water Depth Level Used For Seabed Option": -35.0,
+    "Torpedo Damage Multiplier (Min)": 5.0,
+    "Torpedo Damage Multiplier (Max)": 10.0
+  },
+  "Spawns Database": {
+    "Buyable Spawns Database File (Optional)": "none",
+    "Maintained Spawns Database File (Optional)": "none",
+    "Scheduled Spawns Database File (Optional)": "none",
+    "Prevent Building Until Base Spawns": false,
+    "Ignore Safe Checks": false,
+    "Ignore Safe Checks In X Radius Only": 0.0,
+    "Ignore Player Entities At Custom Spawn Locations": false,
+    "Kill Sleeping Bags": true,
+    "Map Prefabs For Buyable Teleport": [],
+    "Time To Accept Buyable Teleport": 60.0
+  },
+  "Radiation": {
+    "Enabled": false,
+    "Damage": 1.0,
+    "Rads": 2.0,
+    "Protection Required": 6.0
+  },
+  "Sam Site": {
+    "Repairs Every X Minutes (0.0 = disabled)": 0.0,
+    "Range (350.0 = Rust default)": 70.0,
+    "Requires Power Source": false,
+    "Minimum Health": 1000.0,
+    "Maximum Health": 1000.0
+  },
+  "Sphere Colors (0 None, 1 Blue, 2 Cyan, 3 Green, 4 Magenta, 5 Purple, 6 Red, 7 Yellow)": {
+    "When Locked": 0,
+    "When Unlocked": 0,
+    "When PVP": 0,
+    "When PVE": 0,
+    "When Active": 6,
+    "When Inactive": 5
+  },
+  "Tesla Coil": {
+    "Requires A Power Source": false,
+    "Max Discharge Self Damage Seconds (0 = None, 120 = Rust default)": 0.0,
+    "Max Damage Output": 35.0,
+    "Health": 250.0
+  },
+  "IQDronePatrol : Setting up for spawn drones on raid bases": {
+    "Use drone support": false,
+    "How many drones will be spawned near the base?": 10,
+    "How many drones can attack simultaneously?": 2,
+    "Drone presets configuration [Drone preset key from the drone config] - chance": {
+      "LITE_DRONE": 100
+    }
+  },
+  "Profile Enabled": true,
+  "Maximum Land Level": 2.5,
+  "Allow Livestock Kills in Own PvE Events After X Seconds": 30.0,
+  "Allow Players To Use MLRS": true,
+  "Allow Third-Party Npc Explosive Damage To Bases": false,
+  "Door Controller Requires Power Source": true,
+  "Add Code Lock To Unlocked Or KeyLocked Doors": true,
+  "Add Key Lock To Unlocked Or CodeLocked Doors": false,
+  "Add Code Lock To Tool Cupboards": true,
+  "Add Key Lock To Tool Cupboards": false,
+  "Add Code Lock To Boxes": true,
+  "Add Key Lock To Boxes": false,
+  "Add Code Lock To Lockers": false,
+  "Add Key Lock To Lockers": false,
+  "Close Open Doors With No Door Controller Installed": true,
+  "Allow Duplicate Items": false,
+  "Allow Players To Pickup Deployables": false,
+  "Allow Players To Deploy A Cupboard": false,
+  "Allow Players To Deploy Barricades": true,
+  "Allow PVP": false,
+  "Allow Self Damage": true,
+  "Allow Friendly Fire (Teams)": false,
+  "Check Lower Probability Once Per Loot Item": false,
+  "Amount Of Items To Spawn For Buyable Events (0 = Use Default Value)": 0,
+  "Minimum Amount Of Items To Spawn (0 = Use Max Value)": 0,
+  "Amount Of Items To Spawn": 95,
+  "Amount Of Items To Spawn Increased By Item Splits": false,
+  "Use Primitive Loot From The Current Era": false,
+  "Flame Turret Health": 300.0,
+  "Gun Trap Health": 300.0,
+  "Items Always Take Condition Loss And Cannot Be Repaired": false,
+  "Block Damage To Players From Player Turrets Deployed Outside Of The Dome": false,
+  "Block Damage Outside Of The Dome To Players Inside": false,
+  "Block Damage Outside Of The Dome To Bases Inside": false,
+  "Block Damage Inside From Npcs To Players Outside": true,
+  "Building Blocks Are Immune To Damage": false,
+  "Building Blocks Are Immune To Damage (Twig Only)": false,
+  "Turrets Can Hurt Event Twig": false,
+  "Boxes Are Invulnerable": false,
+  "Boxes Are Invulnerable Until Cupboard Is Destroyed": false,
+  "Spawn Silently (No Notifcation, No Dome, No Map Marker)": false,
+  "Hide Despawn Time On Map Marker (PVP)": false,
+  "Hide Despawn Time On Map Marker (PVE)": false,
+  "Use Simple Messaging": false,
+  "Despawn Dropped Loot Bags From Raid Boxes When Base Despawns": true,
+  "Despawn Dropped Loot Bags From Npc When Base Despawns": true,
+  "Protect Loot Bags From Raid Boxes For X Seconds After Base Despawns": 60.0,
+  "Divide Loot Into All Containers": true,
+  "Drop Tool Cupboard Loot After Raid Is Completed": false,
+  "Drop Container Loot X Seconds After It Is Looted": 0.0,
+  "Drop Container Loot Applies Only To Boxes And Cupboards": true,
+  "Create Dome Around Event Using Spheres (0 = disabled, recommended = 5)": 0,
+  "Empty All Containers Before Spawning Loot": true,
+  "Empty All Containers (Exclusions)": [
+    "xmas_tree.deployed",
+    "xmas_tree_a.deployed"
+  ],
+  "Eject Corpses From Enemy Raids (Advanced Users Only)": false,
+  "Eject Corpses From PVE Instantly (Advanced Users Only)": false,
+  "Eject Enemies From Purchased PVE Raids": true,
+  "Eject Enemies From Purchased PVP Raids": false,
+  "Eject Enemies From Locked PVE Raids": true,
+  "Eject Enemies From Locked PVP Raids": false,
+  "Eject Tree Radius When Spawning Base": 0.0,
+  "Delete Tree Radius When Spawning Base": 0.0,
+  "Respawn Deleted Trees After Despawning Base": true,
+  "Explosion Damage Modifier (0-999)": 100.0,
+  "Ignore Containers That Spawn With Loot Already": true,
+  "Loot Amount Multiplier": 1.0,
+  "Loot Amount Multiplier (raidablebases.buyable.vip.pve)": 1.5,
+  "Loot Amount Multiplier (raidablebases.buyable.vip.pvp)": 1.5,
+  "Maximum Respawn Npc X Seconds After Death": 0.0,
+  "Minimum Respawn Npc X Seconds After Death": 0.0,
+  "No Item Input For Boxes And TC": false,
+  "Penalize Players On Death In PVE (ZLevels)": false,
+  "Penalize Players On Death In PVP (ZLevels)": false,
+  "Require Cupboard Access To Loot": false,
+  "Require Cupboard Access To Place Ladders": false,
+  "Skip Treasure Loot And Use Loot In Base Only": false,
+  "Use Buoyant Boxes For Dropped Privilege Loot": false,
+  "Use Buoyant Boxes For Dropped Box Loot": false,
+  "Rearm Bear Traps When Damaged": false,
+  "Bear Traps Are Immune To Timed Explosives": false,
+  "Force Time In Dome To (requires raidablebases.time)": -1,
+  "Remove Locks When Event Is Completed": false,
+  "Required Loot Percentage For Rewards": 0.0,
+  "Each Player Must Destroy An Entity For Reward Eligibility": true,
+  "Always Spawn Base Loot Table": true,
+  "Briefly Holster Weapon To Prevent Camping The Entrance Of Events": false
+}

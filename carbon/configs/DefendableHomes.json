@@ -1,0 +1,1129 @@
+{
+  "NPC Configuration - Sledge": {
+    "Worn items": [
+      {
+        "ShortName": "frankensteins.monster.01.head",
+        "SkinID (0 - default)": 0
+      },
+      {
+        "ShortName": "frankensteins.monster.01.torso",
+        "SkinID (0 - default)": 0
+      },
+      {
+        "ShortName": "frankensteins.monster.01.legs",
+        "SkinID (0 - default)": 0
+      }
+    ],
+    "Weapons": [
+      {
+        "ShortName": "paddle",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "spear.stone",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "bone.club",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "knife.combat",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "longsword",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "pitchfork",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "knife.bone",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "mace",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "salvaged.cleaver",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "knife.butcher",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "machete",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "salvaged.sword",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "spear.wooden",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "stone.pickaxe",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "torch",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "axe.salvaged",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "pickaxe",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "hammer.salvaged",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "hatchet",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "stonehatchet",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "icepick.salvaged",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "sickle",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      },
+      {
+        "ShortName": "mace.baseballbat",
+        "SkinID (0 - default)": 0,
+        "Probability Percent [0.0-100.0]": 100.0
+      }
+    ],
+    "The probability of Beancan Grenade appearance": 7.5,
+    "Health Points": 50.0,
+    "Damage Scale": 0.4,
+    "Turret damage scale": 0.25,
+    "Speed": 8.0
+  },
+  "NPC Configuration - Juggernaut": {
+    "Worn items": [
+      {
+        "ShortName": "frankensteins.monster.03.head",
+        "SkinID (0 - default)": 0
+      },
+      {
+        "ShortName": "frankensteins.monster.03.torso",
+        "SkinID (0 - default)": 0
+      },
+      {
+        "ShortName": "frankensteins.monster.03.legs",
+        "SkinID (0 - default)": 0
+      }
+    ],
+    "Weapons": [
+      {
+        "ShortName": "hmlmg",
+        "SkinID (0 - default)": 0,
+        "Mods": [
+          "weapon.mod.holosight",
+          "weapon.mod.flashlight"
+        ],
+        "Ammo": "",
+        "Probability Percent [0.0-100.0]": 100.0,
+        "Damage Scale": 0.2
+      }
+    ],
+    "The probability of Beancan Grenade appearance": 0.0,
+    "Health Points": 300.0,
+    "Turret damage scale": 0.25,
+    "Aim Cone Scale": 1.1,
+    "Speed": 5.0,
+    "Attack Range Multiplier": 1.0
+  },
+  "NPC Configuration - Rocketman": {
+    "Worn items": [
+      {
+        "ShortName": "hazmatsuit.lumberjack",
+        "SkinID (0 - default)": 0
+      }
+    ],
+    "Weapons": [
+      {
+        "ShortName": "rifle.lr300",
+        "SkinID (0 - default)": 0,
+        "Mods": [
+          "weapon.mod.holosight",
+          "weapon.mod.flashlight"
+        ],
+        "Ammo": "",
+        "Probability Percent [0.0-100.0]": 100.0
+      }
+    ],
+    "The probability of F1 Grenade appearance": 15.0,
+    "Health Points": 175.0,
+    "Damage Scale": 0.4,
+    "Turret damage scale": 0.25,
+    "Aim Cone Scale": 1.5,
+    "Speed": 7.5,
+    "Attack Range Multiplier": 0.5
+  },
+  "NPC Configuration - Bomber": {
+    "Worn items": [
+      {
+        "ShortName": "scarecrow.suit",
+        "SkinID (0 - default)": 0
+      },
+      {
+        "ShortName": "metal.plate.torso",
+        "SkinID (0 - default)": 860210174
+      }
+    ],
+    "Health Points": 100.0,
+    "Attack Range Multiplier": 1.0,
+    "Speed": 5.5,
+    "NPC damage to foundation": 150.0,
+    "NPC damage to сonstruction": 150.0,
+    "NPC damage to player": 60.0
+  },
+  "NPC damage multipliers depending on the attacker's weapon": {
+    "grenade.beancan.deployed": 0.5,
+    "grenade.f1.deployed": 0.5,
+    "explosive.satchel.deployed": 0.5,
+    "explosive.timed.deployed": 0.5,
+    "rocket_hv": 0.5,
+    "rocket_basic": 0.5,
+    "40mm_grenade_he": 0.5
+  },
+  "Difficulty levels setting": [
+    {
+      "Name": "EASY",
+      "The maximum number of Auto Turrets in the house to start the event": 4,
+      "The minimum number of foundations in the house to start the event": 4,
+      "The maximum number of foundations in the house to start the event": 30,
+      "Amount of time that a player will have to wait to launch an event at the same level once an event has finished": 21600.0,
+      "The maximum number of events allowed simultaneously for this difficulty": 5,
+      "List of attack waves": [
+        {
+          "Level": 1,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 90,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 2,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 120,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 6
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 3,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 120,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 6
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 75.0,
+                  "Count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Locked crate setting": {
+        "Time to unlock Crates [sec.]": 10.0,
+        "Which loot table should the plugin use? (0 - default; 1 - own; 2 - AlphaLoot; 3 - CustomLoot; 4 - loot table of the Rust objects; 5 - combine the 1 and 4 methods)": 5,
+        "Loot table from prefabs (if the loot table type is 4 or 5)": {
+          "Minimum number of prefabs": 3,
+          "Maximum number of prefabs": 10,
+          "Use minimum and maximum values? [true/false]": true,
+          "List of prefabs": [
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_normal.prefab"
+            }
+          ]
+        },
+        "Own loot table (if the loot table type is 1 or 5)": {
+          "Minimum number of items": 7,
+          "Maximum number of items": 7,
+          "Use minimum and maximum values? [true/false]": false,
+          "List of items": [
+            {
+              "ShortName": "grenade.f1",
+              "Minimum": 5,
+              "Maximum": 10,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "largemedkit",
+              "Minimum": 5,
+              "Maximum": 10,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Minimum": 30,
+              "Maximum": 60,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "ammo.pistol",
+              "Minimum": 500,
+              "Maximum": 750,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "ammo.rifle",
+              "Minimum": 500,
+              "Maximum": 750,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "scrap",
+              "Minimum": 500,
+              "Maximum": 1000,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "flare",
+              "Minimum": 1,
+              "Maximum": 1,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 2888602942,
+              "Text (empty - default)": "",
+              "Name (empty - default)": "Flare for MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "MEDIUM",
+      "The maximum number of Auto Turrets in the house to start the event": 8,
+      "The minimum number of foundations in the house to start the event": 9,
+      "The maximum number of foundations in the house to start the event": 40,
+      "Amount of time that a player will have to wait to launch an event at the same level once an event has finished": 21600.0,
+      "The maximum number of events allowed simultaneously for this difficulty": 3,
+      "List of attack waves": [
+        {
+          "Level": 1,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 90,
+          "Time until appearance of new NPCs [sec.]": 10,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 8
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 2,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 120,
+          "Time until appearance of new NPCs [sec.]": 10,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 8
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 50.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 3,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 120,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 8
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 4,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 150,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 6
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 2
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 50.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 4
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Locked crate setting": {
+        "Time to unlock Crates [sec.]": 10.0,
+        "Which loot table should the plugin use? (0 - default; 1 - own; 2 - AlphaLoot; 3 - CustomLoot; 4 - loot table of the Rust objects; 5 - combine the 1 and 4 methods)": 5,
+        "Loot table from prefabs (if the loot table type is 4 or 5)": {
+          "Minimum number of prefabs": 5,
+          "Maximum number of prefabs": 5,
+          "Use minimum and maximum values? [true/false]": true,
+          "List of prefabs": [
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_elite.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/npc/patrol helicopter/heli_crate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_normal.prefab"
+            }
+          ]
+        },
+        "Own loot table (if the loot table type is 1 or 5)": {
+          "Minimum number of items": 7,
+          "Maximum number of items": 7,
+          "Use minimum and maximum values? [true/false]": false,
+          "List of items": [
+            {
+              "ShortName": "flare",
+              "Minimum": 1,
+              "Maximum": 1,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 2888602942,
+              "Text (empty - default)": "",
+              "Name (empty - default)": "Flare for MEDIUM"
+            },
+            {
+              "ShortName": "grenade.f1",
+              "Minimum": 7,
+              "Maximum": 15,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "largemedkit",
+              "Minimum": 7,
+              "Maximum": 15,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Minimum": 50,
+              "Maximum": 100,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "ammo.rifle",
+              "Minimum": 1000,
+              "Maximum": 2000,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "scrap",
+              "Minimum": 750,
+              "Maximum": 1500,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "flare",
+              "Minimum": 1,
+              "Maximum": 1,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 2888603247,
+              "Text (empty - default)": "",
+              "Name (empty - default)": "Flare for HARD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "HARD",
+      "The maximum number of Auto Turrets in the house to start the event": 12,
+      "The minimum number of foundations in the house to start the event": 16,
+      "The maximum number of foundations in the house to start the event": 75,
+      "Amount of time that a player will have to wait to launch an event at the same level once an event has finished": 21600.0,
+      "The maximum number of events allowed simultaneously for this difficulty": 2,
+      "List of attack waves": [
+        {
+          "Level": 1,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 110,
+          "Time until appearance of new NPCs [sec.]": 10,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 10
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 2,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 140,
+          "Time until appearance of new NPCs [sec.]": 10,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 8
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 50.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 4
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 3,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 150,
+          "Time until appearance of new NPCs [sec.]": 10,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 8
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 6
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 4,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 180,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 10
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 9
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Level": 5,
+          "Preparation time [sec.]": 30,
+          "Duration [sec.]": 180,
+          "Time until appearance of new NPCs [sec.]": 15,
+          "NPC Sets": [
+            {
+              "Type of NPC": "Sledge",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 10
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Juggernaut",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 50.0,
+                  "Count": 1
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 7
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Rocketman",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 50.0,
+                  "Count": 3
+                }
+              ]
+            },
+            {
+              "Type of NPC": "Bomber",
+              "Setting the number of NPCs depending on the probability": [
+                {
+                  "Chance probability [0.0-100.0]": 100.0,
+                  "Count": 3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Locked crate setting": {
+        "Time to unlock Crates [sec.]": 10.0,
+        "Which loot table should the plugin use? (0 - default; 1 - own; 2 - AlphaLoot; 3 - CustomLoot; 4 - loot table of the Rust objects; 5 - combine the 1 and 4 methods)": 5,
+        "Loot table from prefabs (if the loot table type is 4 or 5)": {
+          "Minimum number of prefabs": 21,
+          "Maximum number of prefabs": 21,
+          "Use minimum and maximum values? [true/false]": true,
+          "List of prefabs": [
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_elite.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/misc/supply drop/supply_drop.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/npc/m2bradley/bradley_crate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/npc/patrol helicopter/heli_crate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_normal.prefab"
+            }
+          ]
+        },
+        "Own loot table (if the loot table type is 1 or 5)": {
+          "Minimum number of items": 6,
+          "Maximum number of items": 6,
+          "Use minimum and maximum values? [true/false]": false,
+          "List of items": [
+            {
+              "ShortName": "grenade.f1",
+              "Minimum": 10,
+              "Maximum": 20,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "largemedkit",
+              "Minimum": 10,
+              "Maximum": 20,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Minimum": 100,
+              "Maximum": 200,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "ammo.rifle",
+              "Minimum": 2000,
+              "Maximum": 4000,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "scrap",
+              "Minimum": 1000,
+              "Maximum": 2000,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "flare",
+              "Minimum": 1,
+              "Maximum": 1,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 2888603247,
+              "Text (empty - default)": "",
+              "Name (empty - default)": "Flare for HARD"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Flares setting": [
+    {
+      "Name": "Flare for EASY",
+      "SkinID": 2888602635,
+      "Name of difficulty level": "EASY",
+      "Crate appearance settings": [
+        {
+          "Prefab": "assets/bundled/prefabs/radtown/crate_elite.prefab",
+          "Chance [0.0-100.0]": 10.0
+        },
+        {
+          "Prefab": "assets/prefabs/npc/m2bradley/bradley_crate.prefab",
+          "Chance [0.0-100.0]": 5.0
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+          "Chance [0.0-100.0]": 2.33333
+        },
+        {
+          "Prefab": "assets/prefabs/misc/supply drop/supply_drop.prefab",
+          "Chance [0.0-100.0]": 20.0
+        }
+      ]
+    },
+    {
+      "Name": "Flare for MEDIUM",
+      "SkinID": 2888602942,
+      "Name of difficulty level": "MEDIUM",
+      "Crate appearance settings": []
+    },
+    {
+      "Name": "Flare for HARD",
+      "SkinID": 2888603247,
+      "Name of difficulty level": "HARD",
+      "Crate appearance settings": []
+    }
+  ],
+  "GUI setting": {
+    "Use the GUI? [true/false]": true,
+    "OffsetMin Y": "-56"
+  },
+  "Prefix of chat messages": "[DefendableHomes]",
+  "Do you use global chat? [true/false]": true,
+  "Facepunch Game Tips setting": {
+    "Use Facepunch Game Tips (notification bar above hotbar)? [true/false]": true,
+    "Style (0 - Blue Normal, 1 - Red Normal, 2 - Blue Long, 3 - Blue Short, 4 - Server Event)": 4
+  },
+  "GUI Announcements setting": {
+    "Do you use the GUI Announcements plugin? [true/false]": false,
+    "Banner color": "Orange",
+    "Text color": "White",
+    "Adjust Vertical Position": 0.03
+  },
+  "Notify setting": {
+    "Do you use the Notify plugin? [true/false]": false,
+    "Type": 0
+  },
+  "Rewards settings (total values will be added up and rewarded at the end of the event)": {
+    "Which plugins do you want to use for rewards? (Economics, Server Rewards, IQEconomic, XPerience)": [
+      "Economics",
+      "Server Rewards",
+      "IQEconomic",
+      "XPerience"
+    ],
+    "The minimum value that a player must collect to earn rewards": 0.0,
+    "Killing an Npc": {
+      "Sledge": 0.2,
+      "Juggernaut": 0.8,
+      "Rocketman": 0.8,
+      "Bomber": 0.5
+    },
+    "List of commands that are executed in the console at the end of the event ({steamid} - the player who collected the highest number of points)": []
+  },
+  "Can the non-owner of the event loot the locked crate? [true/false]": false,
+  "Can the non-owner of the event deal damage to the NPC? [true/false]": true,
+  "Can an Npc attack a non-owner of the event? [true/false]": true,
+  "List of prefabs that you can build in the event area": [
+    "assets/prefabs/building/ladder.wall.wood/ladder.wooden.wall.prefab"
+  ],
+  "Allow OnItemSplit hook to work? [true/false]": true,
+  "Time during which a player cannot start an event of any level after completing an event of any level [sec.]": 0.0,
+  "Minimum number of valid sectors around the player's base required to start the event (1-8)": 6,
+  "Chat command name used to validate all foundations of the player's base and available NPC spawn locations around it before starting the event": "checkfoundations",
+  "Should the thrown flare entity be removed after starting the event? [true/false]": false,
+  "Configuration version": {
+    "Major": 1,
+    "Minor": 2,
+    "Patch": 2
+  }
+}

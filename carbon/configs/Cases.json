@@ -1,0 +1,2392 @@
+{
+  "Template": "Fullscreen",
+  "Enable item scrolling?": true,
+  "Work with Notify?": true,
+  "Permission (ex: cases.use)": "",
+  "Amount of items in the roulette": 26,
+  "Commands": [
+    "cases",
+    "opencase"
+  ],
+  "Economy": {
+    "Show Balance": true,
+    "Type (Plugin/Item)": "Plugin",
+    "Plugin name": "ServerRewards",
+    "Balance add hook": "AddPoints",
+    "Balance remove hook": "TakePoints",
+    "Balance show hook": "CheckPoints",
+    "ShortName": "scrap",
+    "Display Name (empty - default)": "",
+    "Skin": 0
+  },
+  "Rarity Colors (chance - color)": {
+    "70": {
+      "HEX": "#8E9B87",
+      "Opacity (0 - 100)": 75.0
+    },
+    "50": {
+      "HEX": "#5E8C47",
+      "Opacity (0 - 100)": 75.0
+    },
+    "45": {
+      "HEX": "#7FBF3F",
+      "Opacity (0 - 100)": 75.0
+    },
+    "35": {
+      "HEX": "#A6D96A",
+      "Opacity (0 - 100)": 75.0
+    },
+    "20": {
+      "HEX": "#3F7F5F",
+      "Opacity (0 - 100)": 75.0
+    },
+    "10": {
+      "HEX": "#D7E0D1",
+      "Opacity (0 - 100)": 75.0
+    },
+    "5": {
+      "HEX": "#A63C3C",
+      "Opacity (0 - 100)": 75.0
+    }
+  },
+  "Playtime Tracker Settings": {
+    "Enabled": true,
+    "Playtime (seconds) - CaseID": {
+      "3600": 1,
+      "14400": 2,
+      "28800": 3,
+      "86400": 4
+    }
+  },
+  "Cases for time settings": {
+    "Enabled": true,
+    "Cooldown (seconds)": 14400.0,
+    "Cases (IDs)": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "Bonus Case": {
+    "Enabled": true,
+    "Cost": 0,
+    "Custom Currency": {
+      "Enabled": false,
+      "Cost Format": "{0} scrap",
+      "Type (Plugin/Item)": "Plugin",
+      "Plugin name": "",
+      "Balance add hook": "",
+      "Balance remove hook": "",
+      "Balance show hook": "",
+      "ShortName": "scrap",
+      "Display Name (empty - default)": "",
+      "Skin": 0
+    },
+    "ID": -1,
+    "Title": "Daily Bonus Case",
+    "Image": "https://i.ibb.co/B5JQns3y/bonus.png",
+    "Permission": "",
+    "Cooldown": 86400.0,
+    "Items": [
+      {
+        "Type": "Item",
+        "ID": 10,
+        "Image": "",
+        "Title": "",
+        "Command (%steamid%)": "",
+        "Plugin": {
+          "Hook": null,
+          "Plugin name": null,
+          "Amount": 0
+        },
+        "Display Name (empty - default)": "",
+        "ShortName": "explosive.timed",
+        "Skin": 0,
+        "Amount": 1,
+        "Chance": 2.0,
+        "Content": {
+          "Enabled": false,
+          "Contents": [
+            {
+              "ShortName": "",
+              "Condition": 100.0,
+              "Amount": 1,
+              "Position": -1
+            }
+          ]
+        },
+        "Weapon": {
+          "Enabled": false,
+          "Ammo Type": "",
+          "Ammo Amount": 1
+        }
+      },
+      {
+        "Type": "Item",
+        "ID": 11,
+        "Image": "",
+        "Title": "",
+        "Command (%steamid%)": "",
+        "Plugin": {
+          "Hook": null,
+          "Plugin name": null,
+          "Amount": 0
+        },
+        "Display Name (empty - default)": "",
+        "ShortName": "ammo.rocket.basic",
+        "Skin": 0,
+        "Amount": 1,
+        "Chance": 5.0,
+        "Content": {
+          "Enabled": false,
+          "Contents": [
+            {
+              "ShortName": "",
+              "Condition": 100.0,
+              "Amount": 1,
+              "Position": -1
+            }
+          ]
+        },
+        "Weapon": {
+          "Enabled": false,
+          "Ammo Type": "",
+          "Ammo Amount": 1
+        }
+      },
+      {
+        "Type": "Item",
+        "ID": 9,
+        "Image": "",
+        "Title": "",
+        "Command (%steamid%)": "",
+        "Plugin": {
+          "Hook": null,
+          "Plugin name": null,
+          "Amount": 0
+        },
+        "Display Name (empty - default)": "",
+        "ShortName": "gunpowder",
+        "Skin": 0,
+        "Amount": 1500,
+        "Chance": 35.0,
+        "Content": {
+          "Enabled": false,
+          "Contents": [
+            {
+              "ShortName": "",
+              "Condition": 100.0,
+              "Amount": 1,
+              "Position": -1
+            }
+          ]
+        },
+        "Weapon": {
+          "Enabled": false,
+          "Ammo Type": "",
+          "Ammo Amount": 1
+        }
+      },
+      {
+        "Type": "Item",
+        "ID": 6,
+        "Image": "",
+        "Title": "",
+        "Command (%steamid%)": "",
+        "Plugin": {
+          "Hook": null,
+          "Plugin name": null,
+          "Amount": 0
+        },
+        "Display Name (empty - default)": "",
+        "ShortName": "metal.fragments",
+        "Skin": 0,
+        "Amount": 2500,
+        "Chance": 50.0,
+        "Content": {
+          "Enabled": false,
+          "Contents": [
+            {
+              "ShortName": "",
+              "Condition": 100.0,
+              "Amount": 1,
+              "Position": -1
+            }
+          ]
+        },
+        "Weapon": {
+          "Enabled": false,
+          "Ammo Type": "",
+          "Ammo Amount": 1
+        }
+      },
+      {
+        "Type": "Item",
+        "ID": 12,
+        "Image": "",
+        "Title": "",
+        "Command (%steamid%)": "",
+        "Plugin": {
+          "Hook": null,
+          "Plugin name": null,
+          "Amount": 0
+        },
+        "Display Name (empty - default)": "",
+        "ShortName": "scrap",
+        "Skin": 0,
+        "Amount": 350,
+        "Chance": 50.0,
+        "Content": {
+          "Enabled": false,
+          "Contents": [
+            {
+              "ShortName": "",
+              "Condition": 100.0,
+              "Amount": 1,
+              "Position": -1
+            }
+          ]
+        },
+        "Weapon": {
+          "Enabled": false,
+          "Ammo Type": "",
+          "Ammo Amount": 1
+        }
+      }
+    ]
+  },
+  "Cases": [
+    {
+      "Cost": 1000,
+      "Custom Currency": {
+        "Enabled": true,
+        "Cost Format": "{0} RP",
+        "Type (Plugin/Item)": "Plugin",
+        "Plugin name": "ServerRewards",
+        "Balance add hook": "AddPoints",
+        "Balance remove hook": "TakePoints",
+        "Balance show hook": "CheckPoints",
+        "ShortName": "scrap",
+        "Display Name (empty - default)": "RP",
+        "Skin": 0
+      },
+      "ID": 1,
+      "Title": "Ashen Crate",
+      "Image": "https://i.ibb.co/tpygW132/ashen.png",
+      "Permission": "",
+      "Cooldown": 3600.0,
+      "Items": [
+        {
+          "Type": "Item",
+          "ID": 22,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "riflebody",
+          "Skin": 0,
+          "Amount": 2,
+          "Chance": 5.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 20,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "semibody",
+          "Skin": 0,
+          "Amount": 2,
+          "Chance": 15.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 18,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "smgbody",
+          "Skin": 0,
+          "Amount": 2,
+          "Chance": 20.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 21,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "techparts",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 25.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 11,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metalblade",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 12,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "sewingkit",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 14,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "roadsigns",
+          "Skin": 0,
+          "Amount": 15,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 15,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metalpipe",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 16,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "gears",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 17,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "smgbody",
+          "Skin": 0,
+          "Amount": 2,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 19,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metal.spring",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        }
+      ]
+    },
+    {
+      "Cost": 4000,
+      "Custom Currency": {
+        "Enabled": true,
+        "Cost Format": "{0} RP",
+        "Type (Plugin/Item)": "Plugin",
+        "Plugin name": "ServerRewards",
+        "Balance add hook": "AddPoints",
+        "Balance remove hook": "TakePoints",
+        "Balance show hook": "CheckPoints",
+        "ShortName": "scrap",
+        "Display Name (empty - default)": "RP",
+        "Skin": 0
+      },
+      "ID": 2,
+      "Title": "Ironfang Case",
+      "Image": "https://i.ibb.co/b8GW5N3/ironfang.png",
+      "Permission": "",
+      "Cooldown": 7200.0,
+      "Items": [
+        {
+          "Type": "Item",
+          "ID": 52,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "lmg.m249",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 5.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 45,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "rifle.ak",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 15.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 46,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "rifle.semiauto",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 20.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 47,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "explosive.timed",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 20.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 43,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "scrap",
+          "Skin": 0,
+          "Amount": 500,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 44,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "gunpowder",
+          "Skin": 0,
+          "Amount": 3500,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 48,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "sulfur.ore",
+          "Skin": 0,
+          "Amount": 5000,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 49,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metal.refined",
+          "Skin": 0,
+          "Amount": 300,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 53,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "ammo.rocket.basic",
+          "Skin": 0,
+          "Amount": 4,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 50,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "stones",
+          "Skin": 0,
+          "Amount": 8000,
+          "Chance": 60.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 51,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "wood",
+          "Skin": 0,
+          "Amount": 8000,
+          "Chance": 60.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        }
+      ]
+    },
+    {
+      "Cost": 2000,
+      "Custom Currency": {
+        "Enabled": true,
+        "Cost Format": "{0} RP",
+        "Type (Plugin/Item)": "Plugin",
+        "Plugin name": "ServerRewards",
+        "Balance add hook": "AddPoints",
+        "Balance remove hook": "TakePoints",
+        "Balance show hook": "CheckPoints",
+        "ShortName": "scrap",
+        "Display Name (empty - default)": "RP",
+        "Skin": 0
+      },
+      "ID": 3,
+      "Title": "Scrapborn Cache",
+      "Image": "https://i.ibb.co/jvGjWP2n/scrapborn.png",
+      "Permission": "",
+      "Cooldown": 7200.0,
+      "Items": [
+        {
+          "Type": "Item",
+          "ID": 30,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "lowgradefuel",
+          "Skin": 0,
+          "Amount": 2500,
+          "Chance": 35.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 54,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "scrap",
+          "Skin": 0,
+          "Amount": 1000,
+          "Chance": 35.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 25,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "diesel_barrel",
+          "Skin": 0,
+          "Amount": 3,
+          "Chance": 15.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 27,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "battery.small",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 30.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 29,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "keycard_red",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 20.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 26,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "keycard_green",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 40.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 28,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "keycard_blue",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 40.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 23,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "scrap",
+          "Skin": 0,
+          "Amount": 100,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 24,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "scrap",
+          "Skin": 0,
+          "Amount": 50,
+          "Chance": 45.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 31,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "scrap",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        }
+      ]
+    },
+    {
+      "Cost": 7000,
+      "Custom Currency": {
+        "Enabled": true,
+        "Cost Format": "{0} RP",
+        "Type (Plugin/Item)": "Plugin",
+        "Plugin name": "ServerRewards",
+        "Balance add hook": "AddPoints",
+        "Balance remove hook": "TakePoints",
+        "Balance show hook": "CheckPoints",
+        "ShortName": "scrap",
+        "Display Name (empty - default)": "RP",
+        "Skin": 0
+      },
+      "ID": 4,
+      "Title": "Voidbound Arsenal",
+      "Image": "https://i.ibb.co/h1FtTS0B/voidbound.png",
+      "Permission": "",
+      "Cooldown": 10800.0,
+      "Items": [
+        {
+          "Type": "Item",
+          "ID": 32,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "explosive.timed",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 45.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 33,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "ammo.rocket.basic",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 45.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 34,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "ammo.rocket.hv",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 45.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 36,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "ammo.rifle.hv",
+          "Skin": 0,
+          "Amount": 250,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 37,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 10
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "cannonball",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 39,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "ammo.rifle.explosive",
+          "Skin": 0,
+          "Amount": 250,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 40,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "grenade.f1",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 42,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "catapult.ammo.explosive",
+          "Skin": 0,
+          "Amount": 2,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 35,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "gunpowder",
+          "Skin": 0,
+          "Amount": 5000,
+          "Chance": 60.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 38,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "explosive.satchel",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 70.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 41,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "grenade.beancan",
+          "Skin": 0,
+          "Amount": 10,
+          "Chance": 75.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        }
+      ]
+    },
+    {
+      "Cost": 10000,
+      "Custom Currency": {
+        "Enabled": true,
+        "Cost Format": "{0} RP",
+        "Type (Plugin/Item)": "Plugin",
+        "Plugin name": "ServerRewards",
+        "Balance add hook": "AddPoints",
+        "Balance remove hook": "TakePoints",
+        "Balance show hook": "CheckPoints",
+        "ShortName": "scrap",
+        "Display Name (empty - default)": "RP",
+        "Skin": 0
+      },
+      "ID": 5,
+      "Title": "Nightshade Relic",
+      "Image": "https://i.ibb.co/cKBNMm1Z/relic.png",
+      "Permission": "",
+      "Cooldown": 21600.0,
+      "Items": [
+        {
+          "Type": "Command",
+          "ID": 208,
+          "Image": "https://i.ibb.co/GvfcN0Q4/bradley-Wave-Hard.png",
+          "Title": "Bradley Drop Wave (Hard)",
+          "Command (%steamid%)": "bdgive HardWave %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 3502926112,
+          "Amount": 1,
+          "Chance": 0.5,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 206,
+          "Image": "https://i.ibb.co/Hfb2j276/nightmare-Drop.png",
+          "Title": "Bradley Drop (Nightmare)",
+          "Command (%steamid%)": "bdgive Nightmare %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 3361674045,
+          "Amount": 1,
+          "Chance": 0.75,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 207,
+          "Image": "https://i.ibb.co/bjhWnVL9/bradley-Wave-Normal.png",
+          "Title": "Bradley Drop Wave (Normal)",
+          "Command (%steamid%)": "bdgive Normal %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 3502926194,
+          "Amount": 1,
+          "Chance": 1.0,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 205,
+          "Image": "https://i.ibb.co/NgvvCgp3/expert-Drop.png",
+          "Title": "Bradley Drop (Expert)",
+          "Command (%steamid%)": "bdgive Expert %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 3361673979,
+          "Amount": 1,
+          "Chance": 1.5,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 204,
+          "Image": "https://i.ibb.co/tpdQ1QgW/elite-Drop.png",
+          "Title": "Bradley Drop (Elite)",
+          "Command (%steamid%)": "bdgive Elite %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 2911864795,
+          "Amount": 1,
+          "Chance": 3.0,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 203,
+          "Image": "https://i.ibb.co/qLmtGWR7/hard-Drop.png",
+          "Title": "Bradley Drop (Hard)",
+          "Command (%steamid%)": "bdgive Hard %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 2905355296,
+          "Amount": 1,
+          "Chance": 5.0,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 202,
+          "Image": "https://i.ibb.co/6JmtX0pb/med-Drop.png",
+          "Title": "Bradley Drop (Medium)",
+          "Command (%steamid%)": "bdgive Medium %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 2905355312,
+          "Amount": 1,
+          "Chance": 7.5,
+          "Content": null,
+          "Weapon": null
+        },
+        {
+          "Type": "Command",
+          "ID": 201,
+          "Image": "https://i.ibb.co/gbtD4wqY/easy-Drop.png",
+          "Title": "Bradley Drop (Easy)",
+          "Command (%steamid%)": "bdgive Easy %steamid% 3",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "",
+          "Skin": 2905355269,
+          "Amount": 1,
+          "Chance": 10.0,
+          "Content": null,
+          "Weapon": null
+        }
+      ]
+    },
+    {
+      "Cost": 0,
+      "Custom Currency": {
+        "Enabled": true,
+        "Cost Format": "{0} RP",
+        "Type (Plugin/Item)": "Plugin",
+        "Plugin name": "ServerRewards",
+        "Balance add hook": "AddPoints",
+        "Balance remove hook": "TakePoints",
+        "Balance show hook": "CheckPoints",
+        "ShortName": "scrap",
+        "Display Name (empty - default)": "RP",
+        "Skin": 0
+      },
+      "ID": 6,
+      "Title": "VIP Daily Case",
+      "Image": "https://i.ibb.co/B5JQns3y/bonus.png",
+      "Permission": "cases.vipdaily",
+      "Cooldown": 86400.0,
+      "Items": [
+        {
+          "Type": "Item",
+          "ID": 301,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "scrap",
+          "Skin": 0,
+          "Amount": 750,
+          "Chance": 45.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 302,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metal.fragments",
+          "Skin": 0,
+          "Amount": 3500,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 303,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "wood",
+          "Skin": 0,
+          "Amount": 5000,
+          "Chance": 50.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 304,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "lowgradefuel",
+          "Skin": 0,
+          "Amount": 1000,
+          "Chance": 30.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 305,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metal.refined",
+          "Skin": 0,
+          "Amount": 200,
+          "Chance": 25.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 306,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "diesel_barrel",
+          "Skin": 0,
+          "Amount": 1,
+          "Chance": 15.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 307,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "techparts",
+          "Skin": 0,
+          "Amount": 5,
+          "Chance": 20.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 308,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "metal.spring",
+          "Skin": 0,
+          "Amount": 3,
+          "Chance": 25.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 309,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "gears",
+          "Skin": 0,
+          "Amount": 4,
+          "Chance": 30.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        },
+        {
+          "Type": "Item",
+          "ID": 310,
+          "Image": "",
+          "Title": "",
+          "Command (%steamid%)": "",
+          "Plugin": {
+            "Hook": null,
+            "Plugin name": null,
+            "Amount": 0
+          },
+          "Display Name (empty - default)": "",
+          "ShortName": "sewingkit",
+          "Skin": 0,
+          "Amount": 8,
+          "Chance": 35.0,
+          "Content": {
+            "Enabled": false,
+            "Contents": [
+              {
+                "ShortName": "",
+                "Condition": 100.0,
+                "Amount": 1,
+                "Position": -1
+              }
+            ]
+          },
+          "Weapon": {
+            "Enabled": false,
+            "Ammo Type": "",
+            "Ammo Amount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "Wipe Settings": {
+    "Wipe Players?": false,
+    "Wipe Cooldowns?": true
+  },
+  "UI Settings": {
+    "Colors": {
+      "Color 1": {
+        "HEX": "#0B0B12",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 2": {
+        "HEX": "#12121A",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 3": {
+        "HEX": "#F1E9FF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 4": {
+        "HEX": "#8B5CF6",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 5": {
+        "HEX": "#A78BFA",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 6": {
+        "HEX": "#8B5CF6",
+        "Opacity (0 - 100)": 35.0
+      },
+      "Color 7": {
+        "HEX": "#6D28D9",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 8": {
+        "HEX": "#E9D5FF",
+        "Opacity (0 - 100)": 55.0
+      },
+      "Color 9": {
+        "HEX": "#14141F",
+        "Opacity (0 - 100)": 99.0
+      },
+      "Color 10": {
+        "HEX": "#14141F",
+        "Opacity (0 - 100)": 85.0
+      },
+      "Color 11": {
+        "HEX": "#C026D3",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 12": {
+        "HEX": "#9333EA",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 13": {
+        "HEX": "#22C55E",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 14 (Panel Background)": {
+        "HEX": "#0F0F17",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 15 (Text)": {
+        "HEX": "#EDE9FE",
+        "Opacity (0 - 100)": 92.0
+      },
+      "Color 16 (Buttons)": {
+        "HEX": "#1F1F2E",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 17 (Active Buttons)": {
+        "HEX": "#8B5CF6",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 18 (Available Status)": {
+        "HEX": "#22C55E",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Color 19 (Inactive Buttons)": {
+        "HEX": "#2A2A3A",
+        "Opacity (0 - 100)": 100.0
+      }
+    }
+  },
+  "Logs Settings": {
+    "Enable logging to the console?": false,
+    "Enable logging to the file?": false,
+    "Discord Logging": {
+      "Enabled?": false,
+      "Webhook URL": "Insert webhook here (tutorial: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)"
+    }
+  },
+  "Version": {
+    "Major": 2,
+    "Minor": 0,
+    "Patch": 1
+  }
+}

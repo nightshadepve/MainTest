@@ -1,0 +1,38 @@
+{
+  "ServerButtons": true,
+  "CustomButtons": true,
+  "ShowButtons": true,
+  "ScreenDeath": true,
+  "ButtonSize": 31.0,
+  "ButtonsSpacing": 2.0,
+  "ButtonsOnPage": 6,
+  "ListButtons": [],
+  "ListButtonsIndividual": [
+    {
+      "Text": "",
+      "Command": "chat.say \"/vq\"",
+      "Color": "0 0 0 0.7",
+      "Font": "robotocondensed-regular.ttf",
+      "Individual": true,
+      "Parent": "Inventory",
+      "Image": "FB_IMAGE_22",
+      "AnchorMinXY": "0 0",
+      "AnchorMaxXY": "0 0",
+      "OffsetMinXY": "625 50",
+      "OffsetMaxXY": "650 75"
+    },
+    {
+      "Text": "",
+      "Command": "chat.say \"/skin\"",
+      "Color": "0 0 0 0.7",
+      "Font": "robotocondensed-regular.ttf",
+      "Individual": true,
+      "Parent": "Inventory",
+      "Image": "SPRAY",
+      "AnchorMinXY": "0.5 0.5",
+      "AnchorMaxXY": "0.5 0.5",
+      "OffsetMinXY": "-228 -338",
+      "OffsetMaxXY": "-203 -315"
+    }
+  ]
+}

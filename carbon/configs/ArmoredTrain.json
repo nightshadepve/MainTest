@@ -1,0 +1,1545 @@
+{
+  "Version": {
+    "Major": 2,
+    "Minor": 0,
+    "Patch": 5
+  },
+  "Prefix of chat messages": "",
+  "Main Setting": {
+    "Enable automatic event holding [true/false]": false,
+    "Minimum time between events [sec]": 7200,
+    "Maximum time between events [sec]": 7200,
+    "The probability of holding an event underground [0 - 100]": 0.0,
+    "The train attacks first [true/false]": true,
+    "The time for which the train becomes aggressive after taking damage [sec]": 180,
+    "The crates can only be opened when the train is stopped [true/false]": false,
+    "It is necessary to kill all the NPCs to loot the crates [true/false]": false,
+    "It is necessary to kill all the Bradleys to loot the crates [true/false]": false,
+    "It is necessary to kill all the Turrets to loot the crates [true/false]": false,
+    "It is necessary to kill the Heli to loot the crates [true/false]": true,
+    "Stop the train after taking damage [true/false]": true,
+    "Restore the stop time when the train receives damage/loot crates [true/false]": true,
+    "Destroy the train after opening all the crates [true/false]": true,
+    "Time to destroy the train after opening all the crates [sec]": 120,
+    "Destroy wagons in front of the train [true/false]": true,
+    "Allow damage to the train driver [true/false]": true,
+    "To revive the train driver if he was killed? [true/false]": true,
+    "Enable logging of the start and end of the event? [true/false]": false,
+    "The turrets of the train will drop loot after destruction? [true/false]": false,
+    "Maximum range for damage to turrets/NPCs/mines (-1 - do not limit)": 85,
+    "Maximum range for damage to heli (-1 - do not limit)": 200,
+    "Allow players to attach wagons to the front of the train [true/false]": true,
+    "Allow players to attach wagons to the back of the train [true/false]": true,
+    "Allow the player to resume the movement of the train using a emergency brake [true/false]": true,
+    "The NPC will jump to the ground when the train stops (above ground)": true,
+    "The NPC will jump to the ground when the train stops (underground)": true,
+    "The event will not end if there are players in the event zone [true/false]": true,
+    "Extend event if remaining time is not enough to unlock a locked crate [true/false]": true,
+    "Setting up custom spawn points": {
+      "Use custom spawn points [true/false]": false,
+      "Custom points for the spawn of the train (/atrainpoint)": []
+    },
+    "Maximum height of the player above the train for dealing damage to Bradleys/NPCs/turrets (protection against attacks from rocks/cliffs/towers) (-1 - do not limit)": -1.0,
+    "Maximum height of a foundation above the ground beneath it, above which damage to the train is blocked (protection against attacking the train from towers that the raiding NPCs cannot reach) (-1 - do not limit)": 5.0,
+    "Player turrets will attack NPCs on the train [true/false]": true,
+    "Player turrets will attack dismounted NPCs [true/false]": true
+  },
+  "Customization Settings": {
+    "Use Halloween customization [true/false]": true,
+    "Use Christmas customization [true/false]": false,
+    "Turn on the electric furnaces (high impact on performance) [true/false]": true,
+    "Turn on the boilers (medium impact on performance) [true/false]": false,
+    "Turn on the fire (medium impact on performance) [true/false]": true,
+    "Turn on the lighting entities only at night [true/false]": false,
+    "Turn on the Neon Signs [true/false]": true,
+    "Setting up the Gift cannon": {
+      "Enable throwing gifts out of the cannon [true/false]": false,
+      "Minimum time between throwing gifts [sec]": 1,
+      "Maximum time between throwing gifts [sec]": 60,
+      "List of gifts": [
+        {
+          "ShortName": "xmas.present.small",
+          "Minimum": 1,
+          "Maximum": 1,
+          "Chance [0.0-100.0]": 80.0,
+          "Is this a blueprint? [true/false]": false,
+          "SkinID (0 - default)": 0,
+          "Name (empty - default)": "",
+          "List of genomes": []
+        },
+        {
+          "ShortName": "xmas.present.medium",
+          "Minimum": 1,
+          "Maximum": 1,
+          "Chance [0.0-100.0]": 15.0,
+          "Is this a blueprint? [true/false]": false,
+          "SkinID (0 - default)": 0,
+          "Name (empty - default)": "",
+          "List of genomes": []
+        },
+        {
+          "ShortName": "xmas.present.large",
+          "Minimum": 1,
+          "Maximum": 1,
+          "Chance [0.0-100.0]": 5.0,
+          "Is this a blueprint? [true/false]": false,
+          "SkinID (0 - default)": 0,
+          "Name (empty - default)": "",
+          "List of genomes": []
+        }
+      ]
+    },
+    "Setting up fireworks": {
+      "Turn on the fireworks [true/false]": true,
+      "The time between fireworks salvos [s]": 60,
+      "The number of shots in a salvo": 5,
+      "Activate fireworks only at night [true/false]": true
+    }
+  },
+  "Train presets": [
+    {
+      "Preset Name": "train_easy",
+      "Train Name": "Small Train",
+      "Event time": 1800,
+      "Allow automatic startup? [true/false]": true,
+      "Probability of a preset [0.0-100.0]": 40.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": 172800,
+      "Radius of the event zone": 70.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 240,
+      "Locomotive Preset": "locomotive_default",
+      "Order of wagons": [
+        "wagon_crate_1"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_normal",
+      "Train Name": "Train",
+      "Event time": 2400,
+      "Allow automatic startup? [true/false]": true,
+      "Probability of a preset [0.0-100.0]": 40.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 10800,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 75.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 240,
+      "Locomotive Preset": "locomotive_turret",
+      "Order of wagons": [
+        "wagon_bradley",
+        "wagon_crate_1",
+        "wagon_samsite"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_hard",
+      "Train Name": "Giant Train",
+      "Event time": 2700,
+      "Allow automatic startup? [true/false]": true,
+      "Probability of a preset [0.0-100.0]": 20.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 36000,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 85.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 240,
+      "Locomotive Preset": "locomotive_new",
+      "Order of wagons": [
+        "wagon_bradley",
+        "wagon_crate_2",
+        "wagon_samsite"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_caboose",
+      "Train Name": "Caboose",
+      "Event time": 3600,
+      "Allow automatic startup? [true/false]": false,
+      "Probability of a preset [0.0-100.0]": 0.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 100.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 0,
+      "Locomotive Preset": "locomotive_default",
+      "Order of wagons": [
+        "caboose_wagon"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_halloween",
+      "Train Name": "Halloween Train",
+      "Event time": 3600,
+      "Allow automatic startup? [true/false]": false,
+      "Probability of a preset [0.0-100.0]": 0.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 100.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 300,
+      "Locomotive Preset": "locomotive_new",
+      "Order of wagons": [
+        "wagon_crate_1",
+        "halloween_wagon",
+        "wagon_samsite"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_xmas_easy",
+      "Train Name": "Small Christmas train",
+      "Event time": 3600,
+      "Allow automatic startup? [true/false]": false,
+      "Probability of a preset [0.0-100.0]": 0.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 100.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 300,
+      "Locomotive Preset": "locomotive_default",
+      "Order of wagons": [
+        "xmas_wagon_1"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_xmas_medium",
+      "Train Name": "Medium Christmas train",
+      "Event time": 3600,
+      "Allow automatic startup? [true/false]": true,
+      "Probability of a preset [0.0-100.0]": 0.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 100.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 300,
+      "Locomotive Preset": "locomotive_turret",
+      "Order of wagons": [
+        "xmas_wagon_1",
+        "xmas_wagon_2"
+      ],
+      "Heli preset": ""
+    },
+    {
+      "Preset Name": "train_xmas_hard",
+      "Train Name": "Big Christmas train",
+      "Event time": 3600,
+      "Allow automatic startup? [true/false]": true,
+      "Probability of a preset [0.0-100.0]": 0.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Radius of the event zone": 100.0,
+      "Train can be spawned underground [true/false]": false,
+      "Train Stop time": 300,
+      "Locomotive Preset": "locomotive_new",
+      "Order of wagons": [
+        "wagon_crate_2",
+        "xmas_wagon_2",
+        "wagon_bradley"
+      ],
+      "Heli preset": ""
+    }
+  ],
+  "Locomotive presets": [
+    {
+      "Preset name": "locomotive_default",
+      "Prefab name": "assets/content/vehicles/trains/workcart/workcart_aboveground.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {},
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {
+        "trainnpc": [
+          {
+            "Position": "(-0.742, 1.458, 4)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.742, 1.458, 2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.742, 1.458, 0)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.742, 1.458, -3.5)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.742, 1.458, -3.5)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {},
+      "Engine force": 250000.0,
+      "Max speed": 11.0,
+      "Driver name": "traindriver",
+      "Setting up the emergency brake": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.097, 2.805, 1.816)",
+          "Rotation": "(0, 180, 0)"
+        }
+      },
+      "Setting up a timer that displays the event time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.097, 2.412, 1.810)",
+          "Rotation": "(0, 180, 0)"
+        }
+      },
+      "Setting up a timer that displays the stop time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.097, 3.012, 1.810)",
+          "Rotation": "(0, 180, 0)"
+        }
+      }
+    },
+    {
+      "Preset name": "locomotive_turret",
+      "Prefab name": "assets/content/vehicles/trains/workcart/workcart_aboveground2.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {
+        "turret_ak": [
+          {
+            "Position": "(0.684, 3.845, 3.683)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ],
+        "turret_m249": [
+          {
+            "Position": "(0.945, 2.627, 0.556)",
+            "Rotation": "(0, 313, 0)"
+          }
+        ]
+      },
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {
+        "trainnpc": [
+          {
+            "Position": "(-0.742, 1.458, 4)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.742, 1.458, 2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.742, 1.458, 0)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.742, 1.458, -3.5)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.742, 1.458, -3.5)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {},
+      "Engine force": 250000.0,
+      "Max speed": 11.0,
+      "Driver name": "traindriver",
+      "Setting up the emergency brake": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.097, 2.805, 1.816)",
+          "Rotation": "(0, 180, 0)"
+        }
+      },
+      "Setting up a timer that displays the event time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.097, 2.412, 1.810)",
+          "Rotation": "(0, 180, 0)"
+        }
+      },
+      "Setting up a timer that displays the stop time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.097, 3.012, 1.810)",
+          "Rotation": "(0, 180, 0)"
+        }
+      }
+    },
+    {
+      "Preset name": "locomotive_new",
+      "Prefab name": "assets/content/vehicles/trains/locomotive/locomotive.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {
+        "turret_m249": [
+          {
+            "Position": "(-0.554, 1.546, -8.849)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(0.554, 1.546, -8.849)",
+            "Rotation": "(0, 180, 0)"
+          }
+        ]
+      },
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {
+        "trainnpc": [
+          {
+            "Position": "(-1.341, 1.546, 2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-1.341, 1.546, -2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-1.341, 1.546, -6)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(1.341, 1.546, 2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(1.341, 1.546, -2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(1.341, 1.546, -6)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {},
+      "Engine force": 500000.0,
+      "Max speed": 12.0,
+      "Driver name": "traindriver",
+      "Setting up the emergency brake": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.270, 2.805, -7.896)",
+          "Rotation": "(0, 145.462, 0)"
+        }
+      },
+      "Setting up a timer that displays the event time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.270, 2.412, -7.896)",
+          "Rotation": "(0, 145.462, 0)"
+        }
+      },
+      "Setting up a timer that displays the stop time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.270, 3.012, -7.896)",
+          "Rotation": "(0, 145.462, 0)"
+        }
+      }
+    },
+    {
+      "Preset name": "locomotive_halloween",
+      "Prefab name": "assets/content/vehicles/trains/locomotive/locomotive.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {},
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {
+        "trainnpc": [
+          {
+            "Position": "(-1.341, 1.546, 2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-1.341, 1.546, -2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-1.341, 1.546, -6)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(1.341, 1.546, 2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(1.341, 1.546, -2)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(1.341, 1.546, -6)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {},
+      "Engine force": 500000.0,
+      "Max speed": 14.0,
+      "Driver name": "traindriver",
+      "Setting up the emergency brake": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.270, 2.805, -7.896)",
+          "Rotation": "(0, 145.462, 0)"
+        }
+      },
+      "Setting up a timer that displays the event time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.270, 2.412, -7.896)",
+          "Rotation": "(0, 145.462, 0)"
+        }
+      },
+      "Setting up a timer that displays the stop time": {
+        "Enable spawn? [true/false]": true,
+        "Location": {
+          "Position": "(0.270, 3.012, -7.896)",
+          "Rotation": "(0, 145.462, 0)"
+        }
+      }
+    }
+  ],
+  "Wagon presets": [
+    {
+      "Preset name": "wagon_crate_1",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonc.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {
+        "turret_ak": [
+          {
+            "Position": "(-0.940, 1.559, -6.811)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.940, 1.559, -6.811)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.940, 1.559, 6.811)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(0.940, 1.559, 6.811)",
+            "Rotation": "(0, 180, 0)"
+          }
+        ]
+      },
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {},
+      "Crate preset - locations": {
+        "chinooklockedcrate_default": [
+          {
+            "Position": "(0, 1.550, 0)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ],
+        "crateelite_default": [
+          {
+            "Position": "(0.7, 1.550, -2.359)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(-0.7, 1.550, -2.359)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.7, 1.550, 2.359)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(-0.7, 1.550, 2.359)",
+            "Rotation": "(0, 180, 0)"
+          }
+        ]
+      },
+      "Decorative prefab - locations": {}
+    },
+    {
+      "Preset name": "wagon_crate_2",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonb.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {},
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {
+        "trainnpc": [
+          {
+            "Position": "(-1.177, 1.458, -2.267)",
+            "Rotation": "(0, 270, 0)"
+          },
+          {
+            "Position": "(-1.177, 1.458, 0.475)",
+            "Rotation": "(0, 270, 0)"
+          },
+          {
+            "Position": "(-1.177, 1.458, 3.202)",
+            "Rotation": "(0, 270, 0)"
+          }
+        ]
+      },
+      "Crate preset - locations": {
+        "chinooklockedcrate_default": [
+          {
+            "Position": "(-0.772, 1.550, 5.693)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(-0.772, 1.550, -5.693)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ],
+        "crateelite_default": [
+          {
+            "Position": "(1.076, 1.550, 1.047)",
+            "Rotation": "(0, 270, 0)"
+          },
+          {
+            "Position": "(1.076, 1.550, -0.609)",
+            "Rotation": "(0, 270, 0)"
+          },
+          {
+            "Position": "(1.076, 1.550, -2.359)",
+            "Rotation": "(0, 270, 0)"
+          }
+        ]
+      },
+      "Decorative prefab - locations": {}
+    },
+    {
+      "Preset name": "wagon_bradley",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonb.entity.prefab",
+      "Bradley preset - locations": {
+        "bradley_default": [
+          {
+            "Position": "(-0.185, 2.206, -3.36)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.185, 2.206, 3.460)",
+            "Rotation": "(0, 180, 0)"
+          }
+        ]
+      },
+      "Turret preset - locations": {},
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {},
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {
+        "assets/content/vehicles/modularcar/module_entities/2module_fuel_tank.prefab": [
+          {
+            "Position": "(-0.772, 3.008, -4.295)",
+            "Rotation": "(0, 0, 90)"
+          },
+          {
+            "Position": "(-0.772, 3.008, -0.232)",
+            "Rotation": "(0, 0, 90)"
+          },
+          {
+            "Position": "(-0.812, 1.659, -3.221)",
+            "Rotation": "(90, 270, 0)"
+          },
+          {
+            "Position": "(0.772, 3.008, 4.295)",
+            "Rotation": "(0, 180, 90)"
+          },
+          {
+            "Position": "(0.772, 3.008, 0.232)",
+            "Rotation": "(0, 180, 90)"
+          },
+          {
+            "Position": "(0.812, 1.659, 3.221)",
+            "Rotation": "(90, 90, 0)"
+          },
+          {
+            "Position": "(-0.757, 1.659, 3.226)",
+            "Rotation": "(90, 270, 0)"
+          },
+          {
+            "Position": "(0.516, 1.7, 5.521)",
+            "Rotation": "(90, 0, 0)"
+          },
+          {
+            "Position": "(-0.516, 1.7, 5.521)",
+            "Rotation": "(90, 0, 0)"
+          },
+          {
+            "Position": "(0.516, 1.7, -5.521)",
+            "Rotation": "(90, 180, 0)"
+          },
+          {
+            "Position": "(-0.516, 1.7, -5.521)",
+            "Rotation": "(90, 180, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "Preset name": "wagon_samsite",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonunloadablefuel.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {
+        "turret_ak": [
+          {
+            "Position": "(0, 4.296, -5.346)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(0, 4.296, 5.346)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "SamSite preset - locations": {
+        "samsite_default": [
+          {
+            "Position": "(0, 4.216, 0)",
+            "Rotation": "(0, 180, 0)"
+          }
+        ]
+      },
+      "NPC preset - locations": {},
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {}
+    },
+    {
+      "Preset name": "caboose_wagon",
+      "Prefab name": "assets/content/vehicles/trains/caboose/traincaboose.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {},
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {},
+      "Crate preset - locations": {},
+      "Decorative prefab - locations": {}
+    },
+    {
+      "Preset name": "halloween_wagon",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonunloadableloot.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {
+        "turret_ak": [
+          {
+            "Position": "(-0.940, 1.559, -6.811)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(0.940, 1.559, -6.811)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(-0.940, 1.559, 6.811)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.940, 1.559, 6.811)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {},
+      "Crate preset - locations": {
+        "crate_normal_default": [
+          {
+            "Position": "(0.407, 2.403, -3.401)",
+            "Rotation": "(303.510, 0, 328.794)"
+          },
+          {
+            "Position": "(-0.374, 2.416, 3.104)",
+            "Rotation": "(21.106, 261.772, 352.540)"
+          }
+        ],
+        "crate_normal2_default": [
+          {
+            "Position": "(-0.095, 1.817, -0.217)",
+            "Rotation": "(19.048, 336.704, 359.624)"
+          }
+        ]
+      },
+      "Decorative prefab - locations": {}
+    },
+    {
+      "Preset name": "xmas_wagon_1",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonunloadableloot.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {
+        "turret_ak": [
+          {
+            "Position": "(-0.940, 1.559, -6.811)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(0.940, 1.559, -6.811)",
+            "Rotation": "(0, 180, 0)"
+          },
+          {
+            "Position": "(-0.940, 1.559, 6.811)",
+            "Rotation": "(0, 0, 0)"
+          },
+          {
+            "Position": "(0.940, 1.559, 6.811)",
+            "Rotation": "(0, 0, 0)"
+          }
+        ]
+      },
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {},
+      "Crate preset - locations": {
+        "xmas_crate": [
+          {
+            "Position": "(-0.148, 2.707, -1.613)",
+            "Rotation": "(72.214, 0, 0)"
+          },
+          {
+            "Position": "(-0.221, 2.478, -2.314)",
+            "Rotation": "(52.555, 180.000, 0)"
+          }
+        ]
+      },
+      "Decorative prefab - locations": {}
+    },
+    {
+      "Preset name": "xmas_wagon_2",
+      "Prefab name": "assets/content/vehicles/trains/wagons/trainwagonunloadable.entity.prefab",
+      "Bradley preset - locations": {},
+      "Turret preset - locations": {},
+      "SamSite preset - locations": {},
+      "NPC preset - locations": {},
+      "Crate preset - locations": {
+        "xmas_crate": [
+          {
+            "Position": "(0.027, 3.276, -3.562)",
+            "Rotation": "(0.361, 355.541, 16.972)"
+          },
+          {
+            "Position": "(0.027, 3.276, 3.897)",
+            "Rotation": "(334.884, 355.419, 352.239)"
+          }
+        ]
+      },
+      "Decorative prefab - locations": {}
+    }
+  ],
+  "Bradley presets": [
+    {
+      "Preset Name": "bradley_default",
+      "HP": 750.0,
+      "Scale damage": 0.3,
+      "The viewing distance": 85.0,
+      "Radius of search": 85.0,
+      "The multiplier of Machine-gun aim cone": 1.1,
+      "The multiplier of Machine-gun fire rate": 1.0,
+      "Amount of Machine-gun burst shots": 7,
+      "The time between shots of the main gun [sec.]": 12.0,
+      "The time between shots of the main gun in a fire rate [sec.]": 0.25,
+      "Number of crates": 0,
+      "Open the crates immediately after spawn": true,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Turrets presets": [
+    {
+      "Preset Name": "turret_ak",
+      "Health": 250.0,
+      "Weapon ShortName": "rifle.ak",
+      "Ammo ShortName": "ammo.rifle",
+      "Number of ammo": 150,
+      "Target detection range (0 - do not change)": 85.0,
+      "Target loss range (0 - do not change)": 0.0
+    },
+    {
+      "Preset Name": "turret_m249",
+      "Health": 300.0,
+      "Weapon ShortName": "lmg.m249",
+      "Ammo ShortName": "ammo.rifle",
+      "Number of ammo": 250,
+      "Target detection range (0 - do not change)": 85.0,
+      "Target loss range (0 - do not change)": 0.0
+    }
+  ],
+  "Samsite presets": [
+    {
+      "Preset Name": "samsite_default",
+      "Health": 1000.0,
+      "Number of ammo": 50
+    }
+  ],
+  "Crate presets": [
+    {
+      "Preset Name": "chinooklockedcrate_default",
+      "Prefab": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab",
+      "Skin": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crateelite_default",
+      "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/crate_elite.prefab",
+      "Skin": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_normal_default",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+      "Skin": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_normal2_default",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_normal_2.prefab",
+      "Skin": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "xmas_crate",
+      "Prefab": "assets/prefabs/missions/portal/proceduraldungeon/xmastunnels/loot/xmastunnellootbox.prefab",
+      "Skin": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Heli presets": [
+    {
+      "Name": "heli_1",
+      "HP": 7000.0,
+      "HP of the main rotor": 550.0,
+      "HP of tail rotor": 275.0,
+      "Flying height": 50.0,
+      "Bullet speed": 250.0,
+      "Bullet Damage": 20.0,
+      "The distance to which the helicopter can move away from the convoy": 200.0,
+      "Speed": 25.0,
+      "The time for which the helicopter can leave the train to attack the target [sec.]": 20.0,
+      "Minimum number of crates the helicopter can drop": 3,
+      "Maximum number of crates the helicopter can drop": 3,
+      "The helicopter will not aim for the nearest monument at death [true/false]": true,
+      "Open the crates immediately after spawn": false,
+      "Lifetime of crates [sec]": 1200.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "NPC presets": [
+    {
+      "Preset Name": "trainnpc",
+      "Name": "TrainNpc",
+      "Health": 200.0,
+      "Wear items": [
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 1988476232
+        },
+        {
+          "ShortName": "riot.helmet",
+          "skinID (0 - default)": 1988478091
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 1582399729
+        },
+        {
+          "ShortName": "tshirt",
+          "skinID (0 - default)": 1582403431
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.lr300",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 5,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "grenade.f1",
+          "Amount": 3,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Attack Range Multiplier": 1.0,
+      "Speed": 4.5,
+      "Roam Range": 10.0,
+      "Chase Range": 70.0,
+      "Sense Range": 40.0,
+      "Memory duration [sec.]": 30.0,
+      "Scale damage": 1.0,
+      "Turret damage scale": 1.0,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Disable radio effects? [true/false]": false,
+      "Kit": "",
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "traindriver",
+      "Name": "TrainDriver",
+      "Health": 200.0,
+      "Wear items": [
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 1988476232
+        },
+        {
+          "ShortName": "riot.helmet",
+          "skinID (0 - default)": 1988478091
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 1582399729
+        },
+        {
+          "ShortName": "tshirt",
+          "skinID (0 - default)": 1582403431
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.lr300",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 5,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "grenade.f1",
+          "Amount": 3,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Attack Range Multiplier": 1.0,
+      "Speed": 4.5,
+      "Roam Range": 10.0,
+      "Chase Range": 70.0,
+      "Sense Range": 40.0,
+      "Memory duration [sec.]": 30.0,
+      "Scale damage": 1.0,
+      "Turret damage scale": 0.0,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Disable radio effects? [true/false]": false,
+      "Kit": "",
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Marker Setting": {
+    "Do you use the Marker? [true/false]": true,
+    "Use a vending marker? [true/false]": true,
+    "Use a circular marker? [true/false]": true,
+    "Radius": 0.18,
+    "Alpha": 0.5,
+    "Marker color": {
+      "r": 0.69,
+      "g": 0.52,
+      "b": 1.0
+    },
+    "Outline color": {
+      "r": 0.47,
+      "g": 0.0,
+      "b": 0.0
+    }
+  },
+  "Zone Setting": {
+    "Create a PVP zone in the convoy isStop zone? (only for those who use the TruePVE plugin)[true/false]": true,
+    "Use the dome? [true/false]": true,
+    "Darkening the dome": 5,
+    "Use a colored border? [true/false]": true,
+    "Border color (0 - blue, 1 - green, 2 - purple, 3 - red)": 2,
+    "Brightness of the color border": 5,
+    "Radius": 100.0
+  },
+  "GUI Setting": {
+    "Use the Countdown GUI? [true/false]": true,
+    "Vertical offset": -56
+  },
+  "Notification Settings": {
+    "The time from the notification to the start of the event [sec]": 0,
+    "Use a chat? [true/false]": false,
+    "The time until the end of the event, when a message is displayed about the time until the end of the event [sec]": [
+      5
+    ],
+    "Facepunch Game Tips setting": {
+      "Use Facepunch Game Tips (notification bar above hotbar)? [true/false]": false,
+      "Style (0 - Blue Normal, 1 - Red Normal, 2 - Blue Long, 3 - Blue Short, 4 - Server Event)": 2
+    }
+  },
+  "Supported Plugins": {
+    "PVE Mode Setting": {
+      "Use the PVE mode of the plugin? [true/false]": false,
+      "Allow administrators to loot crates and cause damage? [true/false]": false,
+      "The owner of the event will be the one who stopped the event? [true/false]": true,
+      "If a player has a cooldown and the event has NO OWNERS, then he will not be able to interact with the event? [true/false]": true,
+      "If a player has a cooldown, and the event HAS AN OWNER, then he will not be able to interact with the event, even if he is on a team with the owner? [true/false]": false,
+      "Allow only the owner or his teammates to loot crates? [true/false]": true,
+      "Show the displayName of the event owner on a marker on the map? [true/false]": true,
+      "The amount of damage that the player has to do to become the Event Owner": 500.0,
+      "Damage coefficients for calculate to become the Event Owner.": {
+        "Npc": 1.0,
+        "Bradley": 2.0,
+        "Helicopter": 2.0,
+        "Turret": 2.0
+      },
+      "Can the non-owner of the event loot the crates? [true/false]": false,
+      "Can the non-owner of the event hack locked crates? [true/false]": false,
+      "Can the non-owner of the event loot NPC corpses? [true/false]": false,
+      "Can an Npc attack a non-owner of the event? [true/false]": false,
+      "Can Bradley attack a non-owner of the event? [true/false]": false,
+      "Can Helicopter attack a non-owner of the event? [true/false]": false,
+      "Can Turret attack a non-owner of the event? [true/false]": false,
+      "Can the non-owner of the event deal damage to the NPC? [true/false]": false,
+      "Can the non-owner of the event do damage to Helicopter? [true/false]": false,
+      "Can the non-owner of the event do damage to Bradley? [true/false]": false,
+      "Can the non-owner of the event do damage to Turret? [true/false]": false,
+      "Allow the non-owner of the event to enter the event zone? [true/false]": false,
+      "Allow a player who has an active cooldown of the Event Owner to enter the event zone? [true/false]": true,
+      "The time that the Event Owner may not be inside the event zone [sec.]": 300,
+      "The time until the end of Event Owner status when it is necessary to warn the player [sec.]": 60,
+      "Prevent the actions of the RestoreUponDeath plugin in the event zone? [true/false]": true,
+      "The time that the player can`t become the Event Owner, after the end of the event and the player was its owner [sec.]": 86400.0,
+      "Darkening the dome (0 - disables the dome)": 12
+    },
+    "Economy Setting": {
+      "Enable economy": true,
+      "Which economy plugins do you want to use? (Economics, Server Rewards, IQEconomic)": [
+        "Server Rewards"
+      ],
+      "The minimum value that a player must collect to get points for the economy": 0.0,
+      "The minimum value that a winner must collect to make the commands work": 0.0,
+      "Looting of crates": {
+        "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab": 0.4
+      },
+      "Killing an NPC": 2.0,
+      "Killing an Bradley": 5.0,
+      "Killing an Turret": 2.0,
+      "Killing an Heli": 5.0,
+      "Hacking a locked crate": 5.0,
+      "List of commands that are executed in the console at the end of the event ({steamid} - the player who collected the highest number of points)": []
+    },
+    "GUI Announcements setting": {
+      "Do you use the GUI Announcements? [true/false]": false,
+      "Banner color": "Grey",
+      "Text color": "White",
+      "Adjust Vertical Position": 0.03
+    },
+    "Notify setting": {
+      "Do you use the Notify? [true/false]": true,
+      "Type": 5
+    },
+    "DiscordMessages setting": {
+      "Do you use the Discord? [true/false]": false,
+      "Webhook URL": "https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks",
+      "Embed Color (DECIMAL)": 13516583,
+      "Keys of required messages": [
+        "PreStartTrain",
+        "PlayerStopTrain",
+        "EndEvent"
+      ]
+    },
+    "BetterNpc setting": {
+      "Allow Npc spawn after destroying Heli": false
+    }
+  }
+}

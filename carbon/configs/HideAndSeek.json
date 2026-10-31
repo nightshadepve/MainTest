@@ -1,0 +1,20 @@
+{
+  "Config Version": 2,
+  "Survival Time (seconds)": 1800,
+  "Grace Period (seconds, prey is invulnerable)": 10,
+  "Auto Start Interval (seconds, 0 = disabled)": 0,
+  "Post-Game Cooldown (seconds, applies to auto-start)": 300,
+  "Minimum Players to Start": 2,
+  "Seeker Reward - ServerRewards Points": 500,
+  "Seeker Reward - Scrap": 200,
+  "Prey Survival Reward - ServerRewards Points": 800,
+  "Prey Survival Reward - Scrap": 300,
+  "Prey Time Bonus - RP per 30 seconds survived (win or loss)": 0.5,
+  "Show Map Markers (all players get a dot)": true,
+  "Map Marker Radius (0.01 - 1.0)": 0.05,
+  "Map Marker Alpha (0.0 - 1.0)": 1.0,
+  "Map Marker Color (R G B, values 0.0 - 1.0)": "1.0 0.0 0.0",
+  "Announce Game Start in Chat": true,
+  "Prey is immune to fall damage": false,
+  "Chat Icon (Steam64 ID, 0 = default)": 0
+}

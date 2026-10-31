@@ -1,0 +1,278 @@
+{
+  "Menu chat command": "chat",
+  "UI accent color": "#8B3FBF",
+  "UI scale (1.0 = full size, 0.75 = compact)": 0.75,
+  "Chat format": {
+    "Layout (placeholders: {level} {tags} {name} {message})": "{level}{tags}{name}: {message}",
+    "Default name color(s)": [
+      "#55AAFF"
+    ],
+    "Default chat color(s)": [
+      "#FFFFFF"
+    ],
+    "Name size (0 = game default)": 0,
+    "Message size (0 = game default)": 0,
+    "Strip rich text from player messages (bypass perm: nightshadechat.richtext)": true,
+    "Relay team chat to Rust+ app": true,
+    "Log chat to server console": true
+  },
+  "System messages": {
+    "Title": "Nightshade",
+    "Title colors (1 = solid, 2+ = gradient)": [
+      "#8B3FBF",
+      "#D17BFF"
+    ],
+    "Title size (0 = game default)": 0,
+    "Message color": "#E6DDF0",
+    "Avatar SteamID (0 = default)": 0
+  },
+  "Max tags a player can show at once": 1,
+  "Group tags [oxide group name] = tag": {
+    "admin": {
+      "Text": "[Admin]",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FF3B3B",
+        "#8B3FBF",
+        "#FF3B3B"
+      ],
+      "Priority (higher = shown first, wins Auto)": 100,
+      "Size (0 = game default)": 0
+    },
+    "vipx": {
+      "Text": "[VIPx]",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FF4FD8",
+        "#8B3FBF"
+      ],
+      "Priority (higher = shown first, wins Auto)": 60,
+      "Size (0 = game default)": 0
+    },
+    "vip": {
+      "Text": "[VIP]",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FF69B4"
+      ],
+      "Priority (higher = shown first, wins Auto)": 50,
+      "Size (0 = game default)": 0
+    },
+    "og": {
+      "Text": "[OG]",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FFD166",
+        "#F77F00"
+      ],
+      "Priority (higher = shown first, wins Auto)": 40,
+      "Size (0 = game default)": 0
+    }
+  },
+  "Name colors": [
+    {
+      "Id (no spaces)": "nightshade",
+      "Display name": "Nightshade",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#8B3FBF"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "vip",
+        "vipx",
+        "admin"
+      ]
+    },
+    {
+      "Id (no spaces)": "rose",
+      "Display name": "Rose",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FF69B4"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "vip",
+        "vipx",
+        "admin"
+      ]
+    },
+    {
+      "Id (no spaces)": "gold",
+      "Display name": "Gold",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FFD166"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "og",
+        "admin"
+      ]
+    },
+    {
+      "Id (no spaces)": "twilight",
+      "Display name": "Twilight",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#8B3FBF",
+        "#FF4FD8"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "vipx",
+        "admin"
+      ]
+    }
+  ],
+  "Chat colors": [
+    {
+      "Id (no spaces)": "lavender",
+      "Display name": "Lavender",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#D9B8FF"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "vip",
+        "vipx",
+        "admin"
+      ]
+    },
+    {
+      "Id (no spaces)": "blush",
+      "Display name": "Blush",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#FFC2E2"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "vip",
+        "vipx",
+        "admin"
+      ]
+    },
+    {
+      "Id (no spaces)": "aurora",
+      "Display name": "Aurora",
+      "Colors (1 = solid, 2+ = gradient)": [
+        "#C77DFF",
+        "#7FDBFF"
+      ],
+      "Groups allowed (empty = everyone)": [
+        "vipx",
+        "admin"
+      ]
+    }
+  ],
+  "Level tag": {
+    "Enabled": true,
+    "Source (SkillTree or XLevels)": "SkillTree",
+    "Format ({0} = level)": "[Lv {0}]",
+    "Colors (1 = solid, 2+ = gradient)": [
+      "#8B3FBF",
+      "#C77DFF"
+    ],
+    "Size (0 = game default)": 0,
+    "Hide when level is 0": true
+  },
+  "Moderation": {
+    "Mute": {
+      "Mute also blocks team chat": true,
+      "Announce mutes/unmutes in global chat": true,
+      "Moderation panel presets (Duration: 30m, 2h, 1d, perm)": [
+        {
+          "Reason": "Spam",
+          "Duration": "15m"
+        },
+        {
+          "Reason": "Caps / flooding",
+          "Duration": "30m"
+        },
+        {
+          "Reason": "Toxicity",
+          "Duration": "1h"
+        },
+        {
+          "Reason": "Advertising",
+          "Duration": "1d"
+        },
+        {
+          "Reason": "Harassment",
+          "Duration": "3d"
+        },
+        {
+          "Reason": "Slurs / hate speech",
+          "Duration": "perm"
+        }
+      ]
+    },
+    "Anti-spam": {
+      "Enabled": true,
+      "Seconds between messages": 1.5,
+      "Repeated identical messages before auto-mute (0 = off)": 3,
+      "Auto-mute minutes for repeats": 5.0,
+      "Caps filter enabled": true,
+      "Max caps percent": 70,
+      "Min letters before caps filter applies": 8
+    },
+    "Word filter": {
+      "Enabled": true,
+      "Replacement (empty = stars)": "",
+      "Match inside other words": false,
+      "Auto-mute on filtered word": false,
+      "Auto-mute minutes": 10.0,
+      "Words": [
+        "examplebadword"
+      ]
+    }
+  },
+  "Auto broadcaster": {
+    "Enabled": true,
+    "Interval (minutes)": 8.0,
+    "Random order (false = sequential)": true,
+    "Messages ({online} = players online)": [
+      "<color=#D9CCF2>Need help getting started? Go to</color> <color=#C77DFF><b>/help</b></color>",
+      "<color=#D9CCF2>Join the</color> <color=#FF8FD8>Nightshade Discord</color><color=#D9CCF2>! Head to</color> <color=#C77DFF><b>/info</b></color> <color=#D9CCF2>and use the QR code to join us :)</color>",
+      "<color=#D9CCF2>Support the server and keep the chaos alive with</color> <color=#C77DFF><b>/donate</b></color>",
+      "<color=#D9CCF2>Questions about wipes, rules, or commands? Check</color> <color=#C77DFF><b>/info</b></color>",
+      "<color=#D9CCF2>Need a hand? Ask in chat or hop into Discord in the</color> <color=#FF8FD8>GeekSquad</color> <color=#D9CCF2>channel</color>",
+      "<color=#D9CCF2>This is a</color> <color=#FF8FD8>Hybrid PvE/PvP</color> <color=#D9CCF2>server. If the map starts yelling at you, pay attention.</color>",
+      "<color=#D9CCF2>Most deployables, vehicles, and storage are protected.</color> <color=#FF8FD8>Unauthorized raiding is not allowed.</color>",
+      "<color=#D9CCF2>Player-built</color> <color=#FF8FD8>Raid Bases</color> <color=#D9CCF2>can be defended for bonus loot and rewards. See</color> <color=#C77DFF><b>/raidbuilder</b></color> <color=#D9CCF2>for info.</color>",
+      "<i><color=#BFB3D6>Helicopters are still emotionally committed to ruining your day.</color></i>",
+      "<color=#D9CCF2>Use</color> <color=#C77DFF><b>/remove</b></color> <color=#D9CCF2>carefully. Future you will appreciate it.</color>",
+      "<color=#D9CCF2>Some monuments rotate into</color> <color=#FF8FD8>PvP zones</color><color=#D9CCF2>. The dome is not decorative.</color>",
+      "<color=#D9CCF2>Supply signals with</color> <color=#FF8FD8>special skins</color> <color=#D9CCF2>may trigger custom events instead of normal drops.</color>",
+      "<color=#D9CCF2>Nightshade uses persistent clans, vehicle protection, and shared ownership systems. Choose your teammates wisely.</color>",
+      "<i><color=#BFB3D6>If something looks cursed, broken, or haunted... tell an admin. Unless it's intentional.</color></i>",
+      "<color=#D9CCF2>You can preview server systems, commands, and progression info using</color> <color=#C77DFF><b>/info</b></color>",
+      "<i><color=#BFB3D6>Event bosses scale in difficulty. Confidence is not a valid armor stat.</color></i>",
+      "<i><color=#BFB3D6>Some events are serverwide. Some are personal. Some are both. Good luck figuring it out.</color></i>",
+      "<i><color=#BFB3D6>Please don't feed the loot goblins.</color></i>",
+      "<i><color=#BFB3D6>The server logs everything. Even your questionable life choices.</color></i>",
+      "<i><color=#BFB3D6>Yes, the helicopters are supposed to sound angry.</color></i>",
+      "<color=#D9CCF2>Reminder: if the giant</color> <color=#FF8FD8>purple dome</color> <color=#D9CCF2>appears, something unfortunate is happening nearby.</color>",
+      "<i><color=#BFB3D6>Your starter base always begins as 'temporary.' We all know you're lying.</color></i>",
+      "<i><color=#BFB3D6>You are never more than 30 seconds away from making a terrible inventory decision.</color></i>"
+    ]
+  },
+  "Custom name colors": {
+    "Enabled": true,
+    "Max gradient colors (perm: nightshadechat.customname.gradient)": 3,
+    "Minimum brightness 0-1 (blocks colors too dark to read)": 0.3,
+    "Palette swatches": [
+      "#8B3FBF",
+      "#9D4EDD",
+      "#C77DFF",
+      "#E0AAFF",
+      "#D9B8FF",
+      "#FF4FD8",
+      "#FF69B4",
+      "#FFC2E2",
+      "#FF3B3B",
+      "#FF7F50",
+      "#F77F00",
+      "#FFD166",
+      "#FFF3B0",
+      "#B8F2A0",
+      "#7CFFB2",
+      "#00F5D4",
+      "#2EC4B6",
+      "#7FDBFF",
+      "#55AAFF",
+      "#3A86FF",
+      "#4361EE",
+      "#FFFFFF",
+      "#CED4DA",
+      "#A0A0A0"
+    ]
+  }
+}

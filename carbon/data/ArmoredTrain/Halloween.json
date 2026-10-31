@@ -1,0 +1,4175 @@
+{
+  "Wagons presets": [
+    {
+      "Short prefab name of the wagon to which customization will be applied": "locomotive.entity",
+      "Presets of wagons that will NOT be customized": ["locomotive_new"],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -8.050033)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836958, 1.584553, -8.047942)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.4282779, 2.728166, -7.906752)",
+          "Rotation": "(0.00, 60.39, 275.53)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2220212, 4.064325, -7.168838)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 3.370847, -7.168838)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.360655, 2.683805, -7.168838)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 1.997046, -7.168838)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385123, 2.305046, -7.156837)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6097353, 4.382675, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1882647, 4.074675, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5759793, 4.052325, -6.860837)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385129, 3.358846, -6.860837)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4373456, 2.671805, -6.860837)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -6.773009)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836958, 1.584553, -6.772643)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3604184, 3.020006, -6.508071)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.684652, -6.451712)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.376652, -6.439712)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4375821, 3.008006, -6.200071)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 2.993077, -5.998495)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 2.685077, -5.986495)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2220212, 4.064325, -5.863235)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 3.370847, -5.863235)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.360655, 2.683805, -5.863235)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 1.997046, -5.863235)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385123, 2.305046, -5.851234)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5759793, 4.052325, -5.555234)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385129, 3.358846, -5.555234)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4373456, 2.671805, -5.555234)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.684652, -5.521078)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.376652, -5.509078)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -5.49684)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836958, 1.584553, -5.495406)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6097353, 4.382675, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1882647, 4.074675, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3546506, 4.064325, -4.517211)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 3.370847, -4.517211)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.360655, 2.683805, -4.517211)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 1.997046, -4.517211)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385123, 2.305046, -4.505211)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -4.270049)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -4.219604)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836958, 1.584553, -4.219237)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4433499, 4.052325, -4.209211)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385129, 3.358846, -4.209211)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4373456, 2.671805, -4.209211)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2495252, 4.064325, -3.849486)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3577329, 2.959107, -3.843276)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4402671, 3.267107, -3.831276)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3584577, 1.997046, -3.825255)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4395423, 2.305046, -3.813255)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5484753, 4.052325, -3.541486)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4829957, 2.313926, -3.258551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6101549, 4.382675, -3.258551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3150042, 2.005926, -3.246551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1878451, 4.074675, -3.246551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836958, 1.584553, -2.952941)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -2.944305)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -2.823852)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.177168, 4.064325, -2.543228)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 3.370847, -2.543228)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.360655, 2.683805, -2.543228)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 1.997046, -2.543228)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385123, 2.305046, -2.531228)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.6208325, 4.052325, -2.235227)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385129, 3.358846, -2.235227)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4373456, 2.671805, -2.235227)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3588926, 1.997046, -1.845336)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4391074, 2.305046, -1.833336)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -1.678008)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836973, 1.584553, -1.677642)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -1.36769)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6101549, 4.382675, -0.9998381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4829957, 2.313926, -0.9998381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1878451, 4.074675, -0.9878381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3150042, 2.005926, -0.9878381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.177168, 4.064325, -0.4609826)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 3.370847, -0.4609826)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.360655, 2.683805, -0.4609826)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 1.997046, -0.4609826)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385123, 2.305046, -0.4489826)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, -0.4018396)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836973, 1.584553, -0.4004052)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.6208325, 4.052325, -0.1529823)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385129, 3.358846, -0.1529823)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4373456, 2.671805, -0.1529823)",
+          "Rotation": "(0.00, 180.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3594877, 1.997046, 0.2356879)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.4385123, 2.305046, 0.2476879)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, 0.5814607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, 0.5814607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, 0.5934607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, 0.5934607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, 0.8753974)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836973, 1.584553, 0.8757636)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4748628, 2.305046, 1.242609)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6373079, 4.382675, 1.24856)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3231372, 1.997046, 1.254609)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1606921, 4.074675, 1.26056)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8085879, 2.500965, 1.70813)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.5301301, 4.382675, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4885347, 3.694204, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2678698, 4.074675, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3094653, 3.386204, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/chinesenewyear/newyeargong/newyeargong.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3480471, 3.613476, 2.122544)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/chinesenewyear/newyeargong/newyeargong.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3586484, 3.613476, 2.122544)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.843645, 1.584553, 2.150696)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.836973, 1.584553, 2.152787)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/scarecrow/scarecrow.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.002794117, 4.852713, 2.253861)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 3.691514)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 3.942688)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 4.99289)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/generators/solar_panels_roof/solarpanel.large.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.305109, 4.408141, 4.44423)",
+          "Rotation": "(0.00, 0.00, 336.09)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.871904, 3.262578, 4.432862)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull_fire_pit/skull_fire_pit.prefab",
+          "Skin": 0,
+          "Position": "(-1.853987, 3.312717, 4.433122)",
+          "Rotation": "(0.00, 0.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.861326, 3.297574, 4.438157)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/generators/solar_panels_roof/solarpanel.large.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.303068, 4.408141, 4.44423)",
+          "Rotation": "(0.00, 180.00, 336.09)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 5.244065)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.02249321, 3.137543, 5.249513)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.001939625, 4.648285, 5.547669)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 6.332932)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6018878, 2.71652, 5.754089)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 6.584107)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.509981, 3.273046, 6.050157)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5265943, 3.273046, 6.050157)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5898877, 1.91852, 6.062089)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.464592, 6.293412)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.44507, 6.305375)",
+          "Rotation": "(0.00, 99.20, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5889453, 1.91852, 6.344422)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6010943, 2.71652, 6.396331)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.624676, 6.558915)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.571982, 6.560166)",
+          "Rotation": "(0.00, 41.56, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.6009453, 2.71652, 6.652422)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5890943, 1.91852, 6.704331)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/medium/medium.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.06213965, 2.078361, 6.77498)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.515392, 6.785874)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.515392, 6.812303)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.589754, 1.91852, 6.986665)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.571982, 7.038011)",
+          "Rotation": "(0.00, 221.56, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.624676, 7.039262)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.44507, 7.292802)",
+          "Rotation": "(0.00, 279.20, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.601754, 2.71652, 7.294665)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.464592, 7.304765)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4937533, 3.273045, 7.431794)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.542822, 3.273045, 7.431794)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.6838819, 2.476985, 7.667069)",
+          "Rotation": "(0.00, 327.47, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/large/large.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1875593, 1.043421, 7.669541)",
+          "Rotation": "(0.00, 232.47, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/large/large.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2724246, 1.043421, 7.682542)",
+          "Rotation": "(0.00, 121.76, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5249499, 3.093118, 7.736314)",
+          "Rotation": "(0.00, 32.96, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7809695, 2.480591, 7.750306)",
+          "Rotation": "(0.00, 29.98, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.473654, 3.086812, 7.76468)",
+          "Rotation": "(0.00, 326.97, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1850527, 3.093118, 7.956635)",
+          "Rotation": "(0.00, 32.96, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.025812, 3.264076, 7.962998)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1663953, 3.086812, 7.964585)",
+          "Rotation": "(0.00, 326.97, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(1.888, 3.869, 4.929)",
+          "Rotation": "(75.719, 136.922, 227.868)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(1.879, 2.169, 4.509)",
+          "Rotation": "(279.858, 249.521, 20.760)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(1.879, 2.427, 4.260)",
+          "Rotation": "(286.239, 214.997, 56.092)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "locomotive.entity",
+      "Presets of wagons that will NOT be customized": ["locomotive_halloween"],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.4282779, 2.728166, -7.906752)",
+          "Rotation": "(0.00, 60.39, 275.53)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6097353, 4.382675, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1882647, 4.074675, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.684652, -6.451712)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.376652, -6.439712)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 2.993077, -5.998495)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 2.685077, -5.986495)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.684652, -5.521078)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.376652, -5.509078)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6097353, 4.382675, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1882647, 4.074675, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -4.270049)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4829957, 2.313926, -3.258551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6101549, 4.382675, -3.258551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3150042, 2.005926, -3.246551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1878451, 4.074675, -3.246551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -2.823852)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -1.36769)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4829957, 2.313926, -0.9998381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6101549, 4.382675, -0.9998381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1878451, 4.074675, -0.9878381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3150042, 2.005926, -0.9878381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, 0.5814607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, 0.5814607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, 0.5934607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, 0.5934607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4748628, 2.305046, 1.242609)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6373079, 4.382675, 1.24856)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3231372, 1.997046, 1.254609)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1606921, 4.074675, 1.26056)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8085879, 2.500965, 1.70813)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.5301301, 4.382675, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4885347, 3.694204, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2678698, 4.074675, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3094653, 3.386204, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/chinesenewyear/newyeargong/newyeargong.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3480471, 3.613476, 2.122544)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/chinesenewyear/newyeargong/newyeargong.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3586484, 3.613476, 2.122544)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/scarecrow/scarecrow.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.002794117, 4.852713, 2.253861)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 3.691514)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 3.942688)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 4.99289)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.871904, 3.262578, 4.432862)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.861326, 3.297574, 4.438157)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 5.244065)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.02249321, 3.137543, 5.249513)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.001939625, 4.648285, 5.547669)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 6.332932)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6018878, 2.71652, 5.754089)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 6.584107)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.509981, 3.273046, 6.050157)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5265943, 3.273046, 6.050157)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5898877, 1.91852, 6.062089)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.44507, 6.305375)",
+          "Rotation": "(0.00, 99.20, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5889453, 1.91852, 6.344422)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6010943, 2.71652, 6.396331)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.624676, 6.558915)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.6009453, 2.71652, 6.652422)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5890943, 1.91852, 6.704331)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/medium/medium.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.06213965, 2.078361, 6.77498)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.589754, 1.91852, 6.986665)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.624676, 7.039262)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.44507, 7.292802)",
+          "Rotation": "(0.00, 279.20, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.601754, 2.71652, 7.294665)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4937533, 3.273045, 7.431794)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.542822, 3.273045, 7.431794)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/large/large.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1875593, 1.043421, 7.669541)",
+          "Rotation": "(0.00, 232.47, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/large/large.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2724246, 1.043421, 7.682542)",
+          "Rotation": "(0.00, 121.76, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5249499, 3.093118, 7.736314)",
+          "Rotation": "(0.00, 32.96, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7809695, 2.480591, 7.750306)",
+          "Rotation": "(0.00, 29.98, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.473654, 3.086812, 7.76468)",
+          "Rotation": "(0.00, 326.97, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1850527, 3.093118, 7.956635)",
+          "Rotation": "(0.00, 32.96, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.025812, 3.264076, 7.962998)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1663953, 3.086812, 7.964585)",
+          "Rotation": "(0.00, 326.97, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(1.888, 3.869, 4.929)",
+          "Rotation": "(75.719, 136.922, 227.868)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(1.879, 2.169, 4.509)",
+          "Rotation": "(279.858, 249.521, 20.760)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(1.879, 2.427, 4.260)",
+          "Rotation": "(286.239, 214.997, 56.092)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonunloadablefuel.entity",
+      "Presets of wagons that will NOT be customized": [],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.047, 4.128, 3.761)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.047, 4.128, -0.007)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.047, 4.128, -3.753)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonb.entity",
+      "Presets of wagons that will NOT be customized": [
+        "wagon_bradley"
+      ],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.514508, 2.661862, -5.741115)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.486773, 2.661862, -5.705775)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2298687, 4.275042, -5.468028)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 2245825475,
+          "Position": "(0.3522999, 1.549569, -5.103389)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.51579, 2.661862, -5.03268)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.485492, 2.661862, -4.99734)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(1.436788, 2.711762, -4.836787)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(1.447797, 2.711762, -2.421077)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2298687, 4.275042, -1.1403)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 871062243,
+          "Position": "(1.570737, 2.637751, -0.2690383)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 871062243,
+          "Position": "(-1.570849, 2.638143, -0.06400597)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(-1.435954, 2.681933, 0.01065528)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(1.447797, 2.711762, 0.633458)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2298687, 4.275042, 3.369893)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 2874326606,
+          "Position": "(0.2871754, 1.549569, 4.981191)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.486773, 2.661862, 4.995397)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.485492, 2.661862, 5.703832)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.516073, 2.661862, 5.727574)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonunloadableloot.entity",
+      "Presets of wagons that will NOT be customized": [],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238032, -5.500636)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, -5.500636)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43869, 1.207226, -5.812403)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434708, 1.207226, -5.812403)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3767623, 1.893873, -5.673914)",
+          "Rotation": "(16.29, 113.33, 342.90)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, -4.963772)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, -4.963772)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4115943, 1.898819, -5.659022)",
+          "Rotation": "(32.45, 184.67, 0.21)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3982238, 1.87111, -5.645258)",
+          "Rotation": "(353.01, 315.74, 13.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2879258, 2.062411, -5.589686)",
+          "Rotation": "(15.64, 171.86, 357.79)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.1349908, 2.521776, -5.1405)",
+          "Rotation": "(336.13, 194.72, 6.01)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4420015, 2.5007, -5.132657)",
+          "Rotation": "(11.43, 110.31, 343.53)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.7559397, 1.839524, -5.046444)",
+          "Rotation": "(355.38, 71.43, 332.24)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238032, -4.199276)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, -4.199276)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.4400405, 2.15629, -4.760159)",
+          "Rotation": "(358.14, 116.61, 340.36)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, -3.662379)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, -3.662379)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8749964, 2.301539, -3.949336)",
+          "Rotation": "(344.59, 117.32, 352.19)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43869, 1.207226, -3.587397)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434708, 1.207226, -3.587397)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238032, -2.859217)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, -2.859217)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3349077, 2.698247, -3.247431)",
+          "Rotation": "(339.31, 32.12, 348.45)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9914892, 2.36806, -3.010462)",
+          "Rotation": "(325.99, 319.93, 343.74)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, -2.322352)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, -2.322352)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9001123, 2.242587, -2.967494)",
+          "Rotation": "(344.59, 153.81, 352.19)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.2238809, 2.633368, -2.574336)",
+          "Rotation": "(336.13, 154.01, 6.01)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4678308, 2.195502, -2.423151)",
+          "Rotation": "(32.45, 79.32, 0.21)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4511567, 2.167793, -2.413935)",
+          "Rotation": "(353.01, 210.38, 13.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4730378, 2.190557, -2.385645)",
+          "Rotation": "(16.29, 7.97, 342.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9914892, 2.316928, -2.309565)",
+          "Rotation": "(325.99, 271.50, 343.74)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238033, -1.454645)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, -1.454645)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.09089675, 2.564011, -2.005976)",
+          "Rotation": "(320.36, 218.65, 334.54)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.312477, 2.534923, -1.435541)",
+          "Rotation": "(323.01, 19.93, 338.18)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, -0.9177802)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, -0.9177802)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2041396, 2.503984, -1.612452)",
+          "Rotation": "(323.01, 123.64, 338.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4220275, 2.002642, -1.601588)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9395788, 2.448623, -1.5581)",
+          "Rotation": "(15.91, 285.89, 10.60)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43869, 1.207226, -1.409357)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434708, 1.207226, -1.409357)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.7447855, 2.116293, -1.219141)",
+          "Rotation": "(44.52, 87.24, 358.07)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6756365, 2.414986, -1.216273)",
+          "Rotation": "(339.77, 191.62, 341.09)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, -0.1532843)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238033, -0.1532843)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.8159178, 2.309757, -0.5983527)",
+          "Rotation": "(332.66, 316.87, 352.69)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, 0.3836076)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, 0.3836076)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9071158, 2.285466, 0.04187557)",
+          "Rotation": "(16.29, 176.55, 342.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.8912199, 2.262703, 0.07385799)",
+          "Rotation": "(353.01, 18.96, 13.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9094008, 2.290412, 0.07968685)",
+          "Rotation": "(32.45, 247.89, 0.21)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238033, 1.186723)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, 1.186723)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, 1.723619)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, 1.723619)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2910231, 2.722977, 1.259538)",
+          "Rotation": "(8.15, 285.64, 10.25)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.047005, 2.171859, 1.321672)",
+          "Rotation": "(344.59, 153.81, 352.19)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.8159178, 2.390074, 1.328233)",
+          "Rotation": "(332.66, 274.80, 352.69)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43869, 1.207226, 1.381609)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434708, 1.207226, 1.381609)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238033, 2.518083)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, 2.518083)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, 3.054979)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, 3.054979)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2873231, 2.59043, 2.515428)",
+          "Rotation": "(5.99, 17.19, 1.65)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.8029173, 2.565785, 2.64055)",
+          "Rotation": "(20.64, 318.65, 20.23)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.003555, 2.199755, 3.013811)",
+          "Rotation": "(340.56, 327.58, 353.39)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3738366, 2.526595, 3.283403)",
+          "Rotation": "(323.01, 19.93, 338.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4821741, 2.495656, 3.106493)",
+          "Rotation": "(323.01, 123.64, 338.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2642862, 1.994314, 3.117387)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238033, 3.819448)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, 3.819448)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9897806, 2.207166, 3.533987)",
+          "Rotation": "(344.59, 117.32, 352.19)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43869, 1.207226, 3.535421)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434708, 1.207226, 3.535421)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, 4.356344)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, 4.356344)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 2.238033, 5.159505)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.136745, 1.6683, 5.159505)",
+          "Rotation": "(81.26, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.03655639, 2.633855, 4.653341)",
+          "Rotation": "(336.13, 11.27, 6.01)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.6931685, 2.166804, 4.816793)",
+          "Rotation": "(5.77, 258.56, 338.15)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 2.176631, 5.696413)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.11628, 1.606895, 5.696413)",
+          "Rotation": "(278.74, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.6218531, 2.025339, 4.988424)",
+          "Rotation": "(15.44, 103.30, 19.07)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03205857, 2.489779, 5.201787)",
+          "Rotation": "(24.83, 16.49, 4.81)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.174713, 1.929024, 5.713502)",
+          "Rotation": "(340.56, 26.96, 353.39)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43869, 1.207226, 5.768404)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434708, 1.207226, 5.768404)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.04191985, 1.681961, 5.948091)",
+          "Rotation": "(1.56, 131.61, 4.49)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.05427184, 1.712177, 5.956361)",
+          "Rotation": "(19.75, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.01842132, 1.710131, 5.96924)",
+          "Rotation": "(11.71, 291.72, 355.12)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonc.entity",
+      "Presets of wagons that will NOT be customized": [],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1809363, 1.870799, -5.916486)",
+          "Rotation": "(0.00, 190.36, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(-0.09983583, 1.526872, -5.929303)",
+          "Rotation": "(0.00, 190.36, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7610155, 1.511868, -5.353162)",
+          "Rotation": "(341.17, 103.02, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/twitch/hobobarrel/hobobarrel.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.02207045, 1.492261, -5.300061)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/scarecrow/scarecrow.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.00688795, 2.429685, -5.297772)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.7537169, 1.939206, -4.495206)",
+          "Rotation": "(358.52, 113.97, 337.29)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.5621324, 2.103809, -4.314786)",
+          "Rotation": "(0.00, 304.61, 325.37)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.4263853, 1.543838, -3.980298)",
+          "Rotation": "(0.00, 40.56, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(-0.9384779, 2.100484, -3.440243)",
+          "Rotation": "(0.00, 275.79, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.888228, 1.543838, 3.737003)",
+          "Rotation": "(0.00, 119.49, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8170457, 1.887765, 3.777835)",
+          "Rotation": "(0.00, 119.49, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.03412386, 2.103809, 3.974383)",
+          "Rotation": "(0.00, 90.00, 325.37)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.1898408, 1.543838, 4.351001)",
+          "Rotation": "(0.00, 335.17, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/scarecrow/scarecrow.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.02207807, 2.429685, 5.10068)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/twitch/hobobarrel/hobobarrel.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.006891765, 1.492261, 5.102969)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.7759985, 1.559427, 5.182132)",
+          "Rotation": "(0.00, 299.93, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(-0.9482321, 2.119547, 5.304568)",
+          "Rotation": "(0.00, 212.98, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(-0.158, 4.197, 6.165)",
+          "Rotation": "(35.264, 163.350, 322.461)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "workcart_aboveground.entity",
+      "Presets of wagons that will NOT be customized": [],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483292, 1.799015, -4.584787)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.506912, 1.799015, -4.578104)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02374208, 1.421776, -3.66839)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483292, 1.799015, -3.519678)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.506912, 1.799015, -2.508783)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02374208, 1.421776, -1.911783)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483292, 1.799015, -0.6744323)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.506912, 1.799015, -0.4356017)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02374208, 1.421776, -0.1715178)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8718656, 1.399799, -0.1677489)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5902924, 2.180296, 0.08852103)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.105192, 1.382296, 0.396521)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6022924, 1.382296, 0.396521)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483292, 1.799015, 0.5058808)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(1.117192, 2.180296, 0.7045211)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5902924, 2.180296, 1.000814)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.929397, 3.288644, 1.106314)",
+          "Rotation": "(0.00, 90.00, 322.02)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.5997881, 2.592915, 1.200705)",
+          "Rotation": "(0.00, 179.02, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.105192, 1.382296, 1.308814)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6022924, 1.382296, 1.308814)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02374208, 1.421776, 1.560812)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.506912, 1.799015, 1.6043)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(1.117192, 2.180296, 1.616814)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.212205, 2.186292, 3.307059)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.212205, 1.757395, 3.361731)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483292, 1.799015, 2.735068)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.496761, 3.683343, 3.117682)",
+          "Rotation": "(322.46, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1123453, 3.683343, 3.117682)",
+          "Rotation": "(322.46, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 2245825475,
+          "Position": "(-0.06761992, 1.421776, 3.751822)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.29363, 2.498878, 4.085593)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7187074, 4.13143, 4.112204)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.7242521, 3.796734, 4.118445)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7107118, 1.403164, 4.483801)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7052492, 1.384907, 4.634665)",
+          "Rotation": "(270.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483292, 1.799015, 4.753684)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(0.594, 5.248, 3.190)",
+          "Rotation": "(40.620, 17.952, 164.168)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "workcart_aboveground2.entity",
+      "Presets of wagons that will NOT be customized": [],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.03301847, 3.434369, -4.617524)",
+          "Rotation": "(13.86, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.437103, 1.518462, -4.451631)",
+          "Rotation": "(8.51, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.438234, 1.453799, -4.444871)",
+          "Rotation": "(6.45, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.487499, 3.801535, -3.76706)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.474113, 3.801535, -3.76706)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02381837, 1.482978, -3.668732)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.1417097, 4.680312, -2.314042)",
+          "Rotation": "(0.00, 131.35, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.465068, 1.474149, -2.308136)",
+          "Rotation": "(5.48, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.432856, 1.528892, -2.298523)",
+          "Rotation": "(8.93, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02381837, 1.482978, -1.912125)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.459103, 1.516911, -0.6842046)",
+          "Rotation": "(7.24, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.450856, 1.453604, -0.4359441)",
+          "Rotation": "(6.89, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(-0.548678, 4.680312, -0.4049993)",
+          "Rotation": "(0.00, 56.86, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.2366623, 5.110917, -0.3636327)",
+          "Rotation": "(0.00, 309.32, 335.08)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02381837, 1.482978, -0.1718603)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8719429, 1.461001, -0.1680914)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5903696, 2.220062, 0.08817866)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6023697, 1.422062, 0.3961787)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.474113, 3.801535, 0.4799189)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.487499, 3.801535, 0.5157008)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.candles.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.459841, 1.512141, 0.9484248)",
+          "Rotation": "(9.08, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.5903696, 2.220062, 1.000471)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.5114149, 2.58553, 1.168243)",
+          "Rotation": "(0.00, 179.02, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6023697, 1.422062, 1.308471)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.504596, 1.423267, 1.55603)",
+          "Rotation": "(11.88, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 3044395173,
+          "Position": "(0.02381837, 1.482978, 1.56047)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/scarecrow/scarecrow.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.07232536, 3.78892, 1.87976)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7378601, 4.13464, 2.16838)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.7243294, 3.805686, 2.208023)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.212281, 2.247494, 3.306716)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.212281, 1.818597, 3.361389)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483215, 1.860217, 2.734725)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.496836, 3.683276, 3.11734)",
+          "Rotation": "(322.46, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1122691, 3.683633, 3.11734)",
+          "Rotation": "(322.46, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 2245825475,
+          "Position": "(-0.06754364, 1.376537, 3.75148)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/trophy skulls/skulltrophy.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.37027, 2.296702, 4.084198)",
+          "Rotation": "(0.00, 255.26, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.2937063, 2.56008, 4.08525)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.stone.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7107891, 1.428532, 4.483459)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7053264, 1.382727, 4.634322)",
+          "Rotation": "(270.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skullspikes.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.483215, 1.860217, 4.753341)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/weapons/halloween/pitchfork/pitchfork.entity.prefab",
+          "Skin": 0,
+          "Position": "(0.594, 5.257, 1.279)",
+          "Rotation": "(40.620, 17.952, 164.168)"
+        }
+      ]
+    },
+    {
+      "Short prefab name of the wagon to which customization will be applied": "locomotive.entity",
+      "Presets of wagons that will NOT be customized": [],
+      "Enable [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/halloween/coffin/coffinstorage.prefab",
+          "Skin": 0,
+          "Position": "(0.4282779, 2.728166, -7.906752)",
+          "Rotation": "(0.00, 60.39, 275.53)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6097353, 4.382675, -7.133184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1882647, 4.074675, -7.121184)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.684652, -6.451712)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.376652, -6.439712)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 2.993077, -5.998495)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 2.685077, -5.986495)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.684652, -5.521078)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.376652, -5.509078)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6097353, 4.382675, -4.858786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1882647, 4.074675, -4.846786)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -4.270049)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -3.934744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -3.922744)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4829957, 2.313926, -3.258551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6101549, 4.382675, -3.258551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3150042, 2.005926, -3.246551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1878451, 4.074675, -3.246551)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -2.823852)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -2.584677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -2.572677)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -1.676031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -1.664031)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/cursed_cauldron/cursedcauldron.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03244606, 3.957449, -1.36769)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4829957, 2.313926, -0.9998381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6101549, 4.382675, -0.9998381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1878451, 4.074675, -0.9878381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3150042, 2.005926, -0.9878381)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6087968, 4.382675, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, -0.3259642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1892031, 4.074675, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, -0.3139642)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735658, 3.694204, 0.5814607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, 0.5814607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244342, 3.386204, 0.5934607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, 0.5934607)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4748628, 2.305046, 1.242609)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6373079, 4.382675, 1.24856)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3231372, 1.997046, 1.254609)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1606921, 4.074675, 1.26056)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_tall.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8085879, 2.500965, 1.70813)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.5301301, 4.382675, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4885347, 3.694204, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4747789, 2.998664, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.4735277, 2.305046, 1.925012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2678698, 4.074675, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3094653, 3.386204, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3232211, 2.690664, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3244723, 1.997046, 1.937012)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/chinesenewyear/newyeargong/newyeargong.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3480471, 3.613476, 2.122544)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/chinesenewyear/newyeargong/newyeargong.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3586484, 3.613476, 2.122544)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/scarecrow/scarecrow.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.002794117, 4.852713, 2.253861)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 3.691514)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 3.942688)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 4.99289)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.871904, 3.262578, 4.432862)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/weaponracks/weaponrack_horizontal.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.861326, 3.297574, 4.438157)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 5.244065)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/candles/largecandleset.prefab",
+          "Skin": 0,
+          "Position": "(0.02249321, 3.137543, 5.249513)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/deployablegravestone/gravestone.wood.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.001939625, 4.648285, 5.547669)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(-1.447264, 1.820956, 6.332932)",
+          "Rotation": "(90.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6018878, 2.71652, 5.754089)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/bundled/prefabs/static/xylophone.deployed.static.prefab",
+          "Skin": 0,
+          "Position": "(1.513582, 1.820956, 6.584107)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.509981, 3.273046, 6.050157)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5265943, 3.273046, 6.050157)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5898877, 1.91852, 6.062089)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.44507, 6.305375)",
+          "Rotation": "(0.00, 99.20, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5889453, 1.91852, 6.344422)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(-0.6010943, 2.71652, 6.396331)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.624676, 6.558915)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.6009453, 2.71652, 6.652422)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5890943, 1.91852, 6.704331)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/medium/medium.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.06213965, 2.078361, 6.77498)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.589754, 1.91852, 6.986665)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8057727, 2.624676, 7.039262)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7491285, 2.44507, 7.292802)",
+          "Rotation": "(0.00, 279.20, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/electricfurnace/electricfurnace.io.prefab",
+          "Skin": 0,
+          "Position": "(0.601754, 2.71652, 7.294665)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4937533, 3.273045, 7.431794)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/teslacoil/teslacoil.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.542822, 3.273045, 7.431794)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/large/large.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1875593, 1.043421, 7.669541)",
+          "Rotation": "(0.00, 232.47, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/playerioents/batteries/large/large.rechargable.battery.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2724246, 1.043421, 7.682542)",
+          "Rotation": "(0.00, 121.76, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5249499, 3.093118, 7.736314)",
+          "Rotation": "(0.00, 32.96, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/halloween/skull spikes/skins/skullspikes.pumpkin.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7809695, 2.480591, 7.750306)",
+          "Rotation": "(0.00, 29.98, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.473654, 3.086812, 7.76468)",
+          "Rotation": "(0.00, 326.97, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1850527, 3.093118, 7.956635)",
+          "Rotation": "(0.00, 32.96, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/jack o lantern/jackolantern.happy.prefab",
+          "Skin": 0,
+          "Position": "(0.025812, 3.264076, 7.962998)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.red.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1663953, 3.086812, 7.964585)",
+          "Rotation": "(0.00, 326.97, 0.00)"
+        }
+      ]
+    }
+  ],
+  "Npc presets": [
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "pumpkin",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "gloweyes",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "SkinID (0 - default)": 2624420786
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "SkinID (0 - default)": 1539570583
+        },
+        {
+          "ShortName": "hoodie",
+          "SkinID (0 - default)": 2963939240
+        },
+        {
+          "ShortName": "pants",
+          "SkinID (0 - default)": 2963934001
+        },
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 3047756539
+        },
+        {
+          "ShortName": "roadsign.gloves",
+          "SkinID (0 - default)": 3044771291
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "metal.facemask",
+          "SkinID (0 - default)": 882453233
+        },
+        {
+          "ShortName": "gloweyes",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "hoodie",
+          "SkinID (0 - default)": 2256109331
+        },
+        {
+          "ShortName": "pants",
+          "SkinID (0 - default)": 2256110716
+        },
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 811633396
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "mask.balaclava",
+          "SkinID (0 - default)": 2873514778
+        },
+        {
+          "ShortName": "gloweyes",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "burlap.trousers",
+          "SkinID (0 - default)": 2873788586
+        },
+        {
+          "ShortName": "burlap.shirt",
+          "SkinID (0 - default)": 2873786685
+        },
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 1644270941
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "frankensteins.monster.01.head",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "gloweyes",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "frankensteins.monster.01.torso",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "frankensteins.monster.01.legs",
+          "SkinID (0 - default)": 0
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "frankensteins.monster.02.head",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "gloweyes",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "frankensteins.monster.02.torso",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "frankensteins.monster.02.legs",
+          "SkinID (0 - default)": 0
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "frankensteins.monster.03.head",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "gloweyes",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "frankensteins.monster.03.torso",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "frankensteins.monster.03.legs",
+          "SkinID (0 - default)": 0
+        }
+      ]
+    }
+  ]
+}

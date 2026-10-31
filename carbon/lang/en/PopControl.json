@@ -1,0 +1,19 @@
+{
+  "PopCooldown": "!pop is on cooldown ({0:0}s).",
+  "LabelFull": "full",
+  "LabelQueued": "queued",
+  "LabelJoining": "joining",
+  "LabelSleeping": "sleeping",
+  "LabelPlayersOnline": "players online",
+  "UsageBotId": "Usage: ep.botid <steamid64|off>",
+  "UsageIconMode": "Usage: ep.iconmode <2|name>",
+  "InsufficientPermission": "Insufficient permission.",
+  "ApplyDone": "[LWPop] applied.",
+  "BotIdDisabled": "[LWPop] BotSteamId disabled (no forced chat icon).",
+  "InvalidSteamId64": "[LWPop] Invalid SteamID64. Example: 76561198000000000",
+  "BotIdSet": "[LWPop] BotSteamId set to {0}. Try: ep.testmsg",
+  "IconModeSet2": "[LWPop] Icon mode set to '2' (chat.add, 2, steamid, message).",
+  "IconModeSetName": "[LWPop] Icon mode set to 'name' (chat.add, steamid, botName, message).",
+  "TestMsgPrefix": "[Test]",
+  "TestMsgSent": "[LWPop] Test message sent to online players."
+}

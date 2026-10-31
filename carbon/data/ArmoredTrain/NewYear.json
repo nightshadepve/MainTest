@@ -1,0 +1,3449 @@
+{
+  "Wagons presets": [
+    {
+      "Preset Name": "Snowmens",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonunloadableloot.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.02474851, 1.145653, -7.50864)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.286086, 1.559505, -6.216862)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.286149, 1.559505, -6.216862)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.08028155, 2.001252, -6.065266)",
+          "Rotation": "(55.98, 2.52, 273.35)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.359029, 1.995252, -6.036106)",
+          "Rotation": "(55.98, 2.52, 273.35)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5791041, 2.205399, -5.909733)",
+          "Rotation": "(72.05, 332.72, 7.81)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.438803, 1.207147, -5.81255)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434595, 1.207147, -5.81255)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.002408, 2.363536, -5.484623)",
+          "Rotation": "(71.27, 326.30, 231.79)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6391742, 2.440231, -5.35648)",
+          "Rotation": "(75.57, 325.47, 0.26)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8293025, 2.205596, -5.301502)",
+          "Rotation": "(315.77, 319.64, 15.25)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.8597577, 2.301449, -5.14719)",
+          "Rotation": "(346.60, 343.13, 22.15)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.530836, 2.487649, -4.984287)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.533744, 2.487649, -4.962605)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.912791, 2.500122, -4.908024)",
+          "Rotation": "(78.21, 316.24, 350.79)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.04143, 2.290013, -4.868183)",
+          "Rotation": "(356.77, 261.14, 103.57)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7637265, 2.656403, -4.680485)",
+          "Rotation": "(63.76, 352.02, 211.17)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.3687159, 2.639628, -4.586735)",
+          "Rotation": "(350.37, 294.44, 344.66)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.358477, -4.503819)",
+          "Rotation": "(32.04, 87.08, 266.20)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3114637, 2.397541, -4.398731)",
+          "Rotation": "(4.81, 216.21, 4.50)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.01368208, 2.670923, -4.198872)",
+          "Rotation": "(84.79, 45.42, 43.93)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8948199, 2.441709, -4.157307)",
+          "Rotation": "(75.57, 325.47, 0.26)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.04143, 2.290013, -3.778843)",
+          "Rotation": "(42.86, 264.27, 86.04)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5608838, 2.849512, -3.739292)",
+          "Rotation": "(63.76, 46.27, 211.17)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9946505, 2.495659, -3.732776)",
+          "Rotation": "(78.21, 316.24, 350.79)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.7602361, 2.523296, -3.593525)",
+          "Rotation": "(27.12, 281.54, 0.11)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.438803, 1.207147, -3.587543)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434595, 1.207147, -3.587543)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.358477, -3.522693)",
+          "Rotation": "(32.04, 87.08, 266.20)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9364535, 2.626869, -3.135868)",
+          "Rotation": "(84.79, 346.34, 43.93)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2216428, 2.777346, -3.020252)",
+          "Rotation": "(82.72, 149.35, 148.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.533744, 2.487649, -2.871601)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.666818, 2.777346, -2.598682)",
+          "Rotation": "(82.72, 320.87, 148.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7288678, 2.680809, -2.531101)",
+          "Rotation": "(82.72, 149.35, 148.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.358477, -2.451389)",
+          "Rotation": "(32.04, 87.08, 266.20)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9110019, 2.61892, -2.406376)",
+          "Rotation": "(84.90, 7.17, 64.85)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.04143, 2.290013, -2.348789)",
+          "Rotation": "(42.86, 264.27, 86.04)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.530836, 2.487649, -2.323002)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.3331019, 2.690702, -2.293598)",
+          "Rotation": "(334.04, 260.41, 8.67)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2726529, 2.777346, -2.148029)",
+          "Rotation": "(82.72, 149.35, 148.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8949305, 2.636456, -1.953174)",
+          "Rotation": "(84.90, 7.17, 64.85)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.358477, -1.425632)",
+          "Rotation": "(32.04, 87.08, 266.20)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.438803, 1.207147, -1.409519)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434595, 1.207147, -1.409519)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9072863, 2.651748, -1.386265)",
+          "Rotation": "(84.68, 33.90, 101.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.7083181, 2.361715, -1.224369)",
+          "Rotation": "(20.47, 259.59, 339.04)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.890569, 2.62735, -1.119037)",
+          "Rotation": "(86.83, 143.23, 64.67)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9336001, 2.607584, -0.908283)",
+          "Rotation": "(84.68, 33.90, 101.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.04143, 2.290013, -0.869312)",
+          "Rotation": "(42.86, 264.27, 86.04)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.890569, 2.48493, -0.6271551)",
+          "Rotation": "(80.39, 105.37, 26.65)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.533744, 2.487649, -0.5829961)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.4931781, 2.616358, -0.4107245)",
+          "Rotation": "(0.17, 322.85, 341.05)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.358477, -0.222782)",
+          "Rotation": "(32.04, 87.08, 266.20)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.890569, 2.48493, 0.1257898)",
+          "Rotation": "(81.62, 130.75, 28.98)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8034999, 2.5654, 0.1303675)",
+          "Rotation": "(84.68, 33.90, 101.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.530836, 2.487649, 0.3486902)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.620519, 2.593985, 0.5422937)",
+          "Rotation": "(16.74, 269.10, 359.75)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.00783, 2.270413, 0.6683619)",
+          "Rotation": "(57.27, 266.17, 84.74)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.358477, 0.7413599)",
+          "Rotation": "(31.78, 84.79, 261.87)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/xmastree/xmas_tree.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.07517882, 2.256014, 1.265911)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6881053, 2.616923, 1.3802)",
+          "Rotation": "(83.17, 268.58, 83.59)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.06906004, 2.616923, 1.3802)",
+          "Rotation": "(83.17, 268.58, 83.59)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5986875, 2.616923, 1.3802)",
+          "Rotation": "(82.61, 292.43, 107.63)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.438803, 1.207147, 1.381466)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434595, 1.207147, 1.381466)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8187739, 2.391728, 1.475247)",
+          "Rotation": "(345.17, 303.44, 343.68)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8273227, 2.704015, 1.758114)",
+          "Rotation": "(84.68, 18.29, 101.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.984965, 2.33885, 1.81654)",
+          "Rotation": "(57.27, 269.69, 84.74)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.106157, 2.442257, 1.886761)",
+          "Rotation": "(31.78, 84.79, 261.87)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.340735, 2.25751, 2.032162)",
+          "Rotation": "(71.27, 256.81, 339.51)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5986875, 2.612284, 2.066677)",
+          "Rotation": "(82.61, 292.43, 107.63)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.533744, 2.487649, 2.180783)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.8273227, 2.704015, 2.270062)",
+          "Rotation": "(84.68, 33.90, 101.18)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.5913633, 2.45769, 2.34985)",
+          "Rotation": "(22.13, 243.42, 342.30)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1940435, 2.612284, 2.549542)",
+          "Rotation": "(82.61, 292.43, 107.63)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.340735, 2.271326, 2.60664)",
+          "Rotation": "(71.27, 256.81, 339.51)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.2359263, 2.875713, 2.679745)",
+          "Rotation": "(359.89, 273.72, 1.33)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.127855, 2.442257, 2.872891)",
+          "Rotation": "(31.78, 84.79, 261.87)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.4329007, 2.736992, 2.947323)",
+          "Rotation": "(359.39, 273.67, 9.06)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.530836, 2.487649, 3.016033)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.5633189, 2.573145, 3.054699)",
+          "Rotation": "(341.78, 304.55, 338.95)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.315104, 2.329714, 3.061321)",
+          "Rotation": "(73.24, 255.28, 337.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5395673, 2.612284, 3.329205)",
+          "Rotation": "(81.85, 302.96, 118.25)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.09618502, 2.727562, 3.403576)",
+          "Rotation": "(352.33, 313.51, 352.75)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.438803, 1.207147, 3.535275)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434595, 1.207147, 3.535275)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.226813, 2.72308, 3.814312)",
+          "Rotation": "(79.71, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.127855, 2.442257, 3.965863)",
+          "Rotation": "(31.78, 84.79, 261.87)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5248693, 2.777346, 4.073635)",
+          "Rotation": "(72.03, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7188556, 2.603787, 4.08514)",
+          "Rotation": "(60.04, 241.58, 243.10)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1311124, 2.659313, 4.120525)",
+          "Rotation": "(84.80, 130.97, 298.20)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.09687548, 2.71531, 4.165707)",
+          "Rotation": "(76.84, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6784655, 2.605402, 4.228405)",
+          "Rotation": "(64.10, 276.25, 81.46)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4969724, 2.632769, 4.28828)",
+          "Rotation": "(60.04, 93.83, 256.91)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.030123, 2.380953, 4.433529)",
+          "Rotation": "(50.55, 250.54, 249.91)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.113337, 2.350072, 4.498577)",
+          "Rotation": "(64.18, 265.61, 69.64)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.676164, 2.296875, 4.655025)",
+          "Rotation": "(21.77, 323.27, 5.31)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8254954, 2.205223, 4.655834)",
+          "Rotation": "(337.10, 247.59, 353.90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.8879369, 2.326712, 4.774837)",
+          "Rotation": "(72.03, 179.57, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.3084552, 2.554773, 4.794643)",
+          "Rotation": "(4.41, 285.01, 335.74)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.533744, 2.487649, 4.956783)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.530836, 2.487649, 4.998638)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.058992, 2.333926, 5.001553)",
+          "Rotation": "(38.32, 92.33, 271.49)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.004239371, 2.1586, 5.422039)",
+          "Rotation": "(13.62, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.438803, 1.207147, 5.768246)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.434595, 1.207147, 5.768246)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.339411, 1.993017, 6.031475)",
+          "Rotation": "(60.05, 171.08, 257.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.041593, 2.072827, 6.245937)",
+          "Rotation": "(81.77, 185.59, 8.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.28609, 1.559505, 6.255062)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.286149, 1.559505, 6.255062)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.268987, 1.86553, 6.26614)",
+          "Rotation": "(50.63, 149.83, 308.73)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.02474851, 1.145653, 7.521435)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        }
+      ],
+      "List of signs": []
+    },
+    {
+      "Preset Name": "Coca Cola",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonunloadable.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(0.001519465, 2.407454, -6.490343)",
+          "Rotation": "(0.00, 270.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(0.001519465, 2.950124, -6.485918)",
+          "Rotation": "(0.00, 270.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, -5.557344)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.497504, 2.913387, -5.293474)",
+          "Rotation": "(311.56, 53.94, 350.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2364896, 4.161301, -5.213319)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2346204, 2.913387, -5.108186)",
+          "Rotation": "(311.56, 3.03, 350.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.524488, 2.929553, -4.997896)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.522443, 2.116927, -4.997896)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.531585, 2.929553, -4.990541)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.528765, 2.116927, -4.990541)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2333133, 4.161301, -4.876009)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2044347, 4.161301, -4.853471)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2985356, 2.913387, -4.772432)",
+          "Rotation": "(311.56, 307.69, 350.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, -4.580827)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7406757, 4.161301, -4.517549)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1862514, 4.161301, -4.382768)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7406757, 4.161301, -4.058336)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.455354, 3.841498, -3.897752)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.522443, 2.116927, -3.847841)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.526422, 2.929553, -3.847841)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.04580567, 3.841498, -3.633683)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.545728, 3.841498, -3.329881)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2565601, 3.841498, -3.265702)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7189128, 3.841498, -3.033693)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1513341, 3.841498, -2.949373)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, -2.94835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.545728, 3.841498, -2.666459)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2565601, 3.841498, -2.651902)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7189128, 3.841498, -2.543123)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1513341, 3.841498, -2.387376)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.528765, 2.116927, -2.04506)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.532122, 2.929553, -2.04506)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4269421, 3.841498, -2.038285)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4617183, 3.841498, -2.038285)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.04580567, 3.841498, -2.006913)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1182239, 3.935845, -1.862413)",
+          "Rotation": "(68.55, 270.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2859714, 3.953604, -1.638398)",
+          "Rotation": "(68.55, 270.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5181949, 3.841498, -1.623536)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2615459, 3.918973, -1.362291)",
+          "Rotation": "(68.55, 270.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.02610519, 4.080243, -1.342515)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4030368, 3.983773, -1.274003)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, -1.273744)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4578526, 3.957213, -1.165101)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5181949, 3.841498, -1.154496)",
+          "Rotation": "(80.08, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.526185, 2.929553, -0.9024975)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.522443, 2.116927, -0.9024975)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.0533664, 4.161301, -0.2187207)",
+          "Rotation": "(13.95, 84.54, 182.47)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1823552, 2.913387, -0.164964)",
+          "Rotation": "(311.56, 271.33, 350.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1284511, 2.9542, -0.164964)",
+          "Rotation": "(315.00, 100.12, 351.81)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, 0.430144)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1169331, 3.934057, 0.4435107)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3123257, 3.960737, 0.8116901)",
+          "Rotation": "(68.55, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1830762, 3.934057, 0.8370807)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.531226, 2.929553, 0.9153736)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.528765, 2.116927, 0.9153736)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3358167, 3.934057, 1.083632)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5545247, 3.960737, 1.312712)",
+          "Rotation": "(68.55, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1293004, 3.935714, 1.312957)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1830762, 3.934057, 1.638366)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6066029, 3.960737, 1.886458)",
+          "Rotation": "(68.55, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1274579, 3.94038, 1.987334)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.527272, 2.929553, 2.057677)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.522443, 2.116927, 2.057677)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, 2.130187)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1830762, 3.934057, 2.295394)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4488805, 4.006912, 2.316725)",
+          "Rotation": "(68.55, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.08752182, 3.939334, 2.624312)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2885463, 3.926402, 2.66693)",
+          "Rotation": "(68.55, 270.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5002682, 4.006912, 2.842849)",
+          "Rotation": "(68.55, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1316249, 3.934057, 2.972869)",
+          "Rotation": "(68.55, 270.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1830762, 3.934057, 3.017882)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1194661, 3.935807, 3.307204)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1273639, 3.934057, 3.366423)",
+          "Rotation": "(68.55, 270.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5534947, 3.924139, 3.650481)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1830762, 3.934057, 3.700774)",
+          "Rotation": "(68.55, 90.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, 3.827788)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.530265, 2.929553, 3.858992)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.528765, 2.116927, 3.858992)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.483279, 3.924139, 3.882079)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1414363, 3.924139, 4.006133)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2286923, 3.924139, 4.109313)",
+          "Rotation": "(68.55, 180.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.526063, 2.929553, 4.998381)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(1.522443, 2.116927, 4.998381)",
+          "Rotation": "(0.00, 0.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.531592, 2.929553, 5.00096)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(-1.528765, 2.116927, 5.00096)",
+          "Rotation": "(0.00, 180.00, 270.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1085269, 2.913387, 5.152846)",
+          "Rotation": "(311.56, 186.12, 350.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1085269, 2.913387, 5.501067)",
+          "Rotation": "(311.56, 292.59, 350.88)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2861545, 3.163098, 5.501067)",
+          "Rotation": "(308.73, 59.94, 349.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.001519465, 3.772553, 5.547881)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(0.001519465, 2.930986, 6.492735)",
+          "Rotation": "(0.00, 90.00, 90.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 1587884106,
+          "Position": "(0.001519465, 2.407454, 6.496321)",
+          "Rotation": "(0.00, 90.00, 90.00)"
+        }
+      ],
+      "List of signs": [
+        {
+          "Image Name": "",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(-1.594352, 1.165027, -4.922456)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "cocacola_1",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(1.584024, 1.165027, -4.803148)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Image Name": "",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(-1.594352, 1.165027, -2.477906)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "cocacola_2",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(1.584024, 1.165027, -2.359468)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Image Name": "cocacola_3",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(-1.594352, 1.165027, -0.02171446)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "cocacola_3",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(1.584024, 1.165027, 0.09693787)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Image Name": "cocacola_2",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(-1.594352, 1.165027, 2.434691)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(1.584024, 1.165027, 2.55313)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Image Name": "cocacola_1",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(-1.594352, 1.165027, 4.878371)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.xl.prefab",
+          "Skin": 0,
+          "Position": "(1.584024, 1.165027, 4.997679)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        }
+      ]
+    },
+    {
+      "Preset Name": "Pillow Bradley",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonb.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [
+        "wagon_bradley"
+      ],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": true,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(0.50564, 3.10252, -6.502734)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-0.5474148, 3.10252, -6.502734)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(0.50564, 1.032886, -6.464037)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(0.50564, 2.246609, -6.464037)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-0.5474148, 2.246609, -6.464037)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-0.5474148, 1.032886, -6.464037)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, -5.707415)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.562586, 3.10252, -5.127001)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 1.032886, -5.127001)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 2.246609, -5.127001)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 1.032886, -5.127001)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 2.246609, -5.127001)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.5594, 3.10252, -5.127001)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, -4.683917)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, -2.999407)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 2.246609, -2.612109)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.562586, 3.10252, -2.612109)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 1.032886, -2.612109)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 2.246609, -2.612109)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.5594, 3.10252, -2.612109)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 1.032886, -2.612109)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, -1.321871)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.562586, 3.10252, -0.03460939)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 1.032886, -0.03460939)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 2.246609, -0.03460939)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 1.032886, -0.03460939)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 2.246609, -0.03460939)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.5594, 3.10252, -0.03460939)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, 0.3610052)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, 2.064329)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.562586, 3.10252, 2.509336)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 2.246609, 2.509336)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 1.032886, 2.509336)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 2.246609, 2.509336)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 1.032886, 2.509336)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.5594, 3.10252, 2.509336)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, 3.776289)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.562586, 3.10252, 5.086835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 1.032886, 5.086835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(1.60129, 2.246609, 5.086835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 1.032886, 5.086835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.520697, 2.246609, 5.086835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-1.5594, 3.10252, 5.086835)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.04529378, 4.316253, 5.475904)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(0.50564, 3.10252, 6.431242)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-0.5474148, 3.10252, 6.431242)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(0.50564, 1.032886, 6.469938)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(0.50564, 2.246609, 6.469938)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-0.5474148, 2.246609, 6.469938)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/barricades/barricade.sandbags.prefab",
+          "Skin": 809144507,
+          "Position": "(-0.5474148, 1.032886, 6.469938)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        }
+      ],
+      "List of signs": []
+    },
+    {
+      "Preset Name": "Armored Workcart",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "workcart_aboveground2.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.008103341, 4.563801, -4.593703)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.008103341, 3.54159, -4.593703)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.008103341, 1.433431, -4.593703)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.006548911, 2.239506, -4.37271)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.03949544, 4.67905, -3.832747)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.487262, 3.801572, -3.76718)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.474351, 3.801572, -3.76718)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02358052, 1.483014, -3.668853)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(1.513773, 1.470392, -3.112624)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.588237, 4.563801, -3.052138)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.546228, 1.198, -3.051818)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.470023, 3.594261, -2.979323)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.470023, 4.371214, -2.974792)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.536272, 1.198, -2.974792)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.523142, 3.55176, -2.963714)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.03949544, 4.67905, -2.112182)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02358052, 1.483014, -1.912246)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(-1.49087, 1.470392, -1.505767)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_tree.prefab",
+          "Skin": 0,
+          "Position": "(1.482811, 1.470392, -1.449721)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.03949544, 4.67905, -0.3888692)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02358052, 1.483014, -0.1719808)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.523142, 3.55176, -0.1081991)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.470023, 4.371214, -0.06611531)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.470023, 3.594261, -0.06611531)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.546228, 1.198, -0.008711755)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.588237, 4.563801, 0.1217814)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.536272, 1.198, 0.1415263)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_tree.prefab",
+          "Skin": 0,
+          "Position": "(-1.49087, 1.470392, 0.1430522)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.8705473, 1.590086, 0.3610545)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(1.310847, 2.076794, 0.3692027)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_house.prefab",
+          "Skin": 0,
+          "Position": "(1.461008, 1.482483, 0.4195262)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.474351, 3.801572, 0.4797984)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02358052, 1.483569, 0.4933329)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.487262, 3.801572, 0.5155803)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.03949544, 4.67905, 0.7677928)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.8705473, 2.076288, 0.8671733)",
+          "Rotation": "(270.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.8705473, 1.590722, 0.8774272)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(1.313442, 2.076288, 0.8824626)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.02413276, 4.547986, 1.605897)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02358052, 1.387572, 2.249558)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(1.036318, 3.817274, 2.26822)",
+          "Rotation": "(0.00, 34.54, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.3836364, 3.817274, 2.819047)",
+          "Rotation": "(0.00, 328.40, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8159332, 4.447274, 3.044892)",
+          "Rotation": "(0.00, 293.75, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.496598, 3.683312, 3.117219)",
+          "Rotation": "(322.46, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1125069, 3.683669, 3.117219)",
+          "Rotation": "(322.46, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.9591274, 3.817274, 3.29886)",
+          "Rotation": "(0.00, 10.03, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(-0.06778148, 1.376573, 3.862809)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02358052, 1.384812, 3.947526)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/doorgarland/doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.6549816, 2.094644, 4.03235)",
+          "Rotation": "(0.00, 270.00, 350.76)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/pookie/pookie_deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.01609233, 2.518062, 4.071931)",
+          "Rotation": "(0.00, 133.27, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9818907, 1.417891, 4.950)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7050886, 1.382763, 4.634202)",
+          "Rotation": "(270.00, 0.00, 0.00)"
+        }
+      ],
+      "List of signs": [
+        {
+          "Image Name": "snowflake",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x215.prefab",
+          "Skin": 0,
+          "Position": "(-1.600929, 1.098308, 2.703065)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "snowflake",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x215.prefab",
+          "Skin": 0,
+          "Position": "(1.613724, 1.098308, 2.997926)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        }
+      ]
+    },
+    {
+      "Preset Name": "Regular Train Car",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "workcart_aboveground.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(-1.02299, 1.330951, -4.613278)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.01643887, 1.115784, -4.58917)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.316724, 1.422088, -4.374097)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.280003, 1.422088, -4.374097)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02380887, 1.422513, -3.712079)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_tree.prefab",
+          "Skin": 0,
+          "Position": "(1.565126, 1.305336, -3.010892)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.536541, 1.215387, -2.8159)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.539102, 1.215387, -2.815427)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02380887, 1.422513, -1.993008)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.321648, 1.422088, -0.6990323)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.324344, 1.422088, -0.4291654)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02380887, 1.422513, -0.2613797)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(0.823089, 1.367029, -0.1931119)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_house.prefab",
+          "Skin": 0,
+          "Position": "(-1.547823, 1.37548, -0.03815889)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.539102, 1.215387, 0.09888029)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.536541, 1.215387, 0.09982634)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.9227995, 2.4306, 0.3230472)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.9227995, 2.439183, 0.3230472)",
+          "Rotation": "(0.00, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.7642111, 2.441313, 0.3239627)",
+          "Rotation": "(0.00, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.7642111, 2.43273, 0.3239627)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8094896, 3.427974, 0.3719974)",
+          "Rotation": "(0.00, 97.95, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_house.prefab",
+          "Skin": 0,
+          "Position": "(1.339069, 1.37548, 0.8407016)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8094896, 4.028956, 0.8549533)",
+          "Rotation": "(0.00, 97.95, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_house.prefab",
+          "Skin": 0,
+          "Position": "(0.2666582, 1.37548, 0.8721957)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_house.prefab",
+          "Skin": 0,
+          "Position": "(-1.543829, 1.37548, 1.016086)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.9227995, 2.439183, 1.317035)",
+          "Rotation": "(0.00, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.9227995, 2.4306, 1.317035)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.7642111, 2.43273, 1.317951)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/wooden_crates/wooden_crate_gingerbread.prefab",
+          "Skin": 0,
+          "Position": "(0.7642111, 2.441313, 1.317951)",
+          "Rotation": "(0.00, 0.00, 180.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.8094896, 3.427974, 1.32764)",
+          "Rotation": "(0.00, 332.58, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02380887, 1.422513, 1.459949)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.530084, 3.773644, 2.062198)",
+          "Rotation": "(0.00, 0.00, 319.38)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.04684123, 3.773644, 2.084278)",
+          "Rotation": "(0.00, 180.00, 319.38)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7400602, 3.869301, 2.331394)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.536541, 1.215387, 3.014133)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.539102, 1.215387, 3.014606)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.484205, 2.091403, 3.020374)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.06317195, 2.091403, 3.020374)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.04684123, 3.773644, 3.092319)",
+          "Rotation": "(0.00, 180.00, 319.38)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.496828, 3.68408, 3.117389)",
+          "Rotation": "(322.46, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1122786, 3.68408, 3.117389)",
+          "Rotation": "(322.46, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.531356, 3.773644, 3.154682)",
+          "Rotation": "(0.00, 0.00, 319.38)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02380887, 1.422513, 3.162082)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.6824087, 1.482977, 3.338886)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(0.6976255, 3.787333, 3.600482)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(0.02380887, 1.422513, 3.685276)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(-0.06755313, 1.422513, 3.864551)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/pookie/pookie_deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.02705327, 2.477723, 4.108158)",
+          "Rotation": "(0.00, 156.90, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/pookie/pookie_deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.43176, 2.477723, 4.108158)",
+          "Rotation": "(0.00, 202.21, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.524023, 3.773644, 4.162723)",
+          "Rotation": "(0.00, 0.00, 319.38)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1388479, 3.773644, 4.184803)",
+          "Rotation": "(0.00, 180.00, 319.38)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/doorgarland/doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7514204, 2.148495, 4.285022)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.280011, 1.399408, 4.42818)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.316715, 1.399408, 4.593616)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.7053159, 1.385644, 4.634372)",
+          "Rotation": "(270.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.01643887, 1.115784, 4.820514)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        }
+      ],
+      "List of signs": []
+    },
+    {
+      "Preset Name": "Platform",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonc.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, -6.364754)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(-0.01829976, 1.534356, -5.932702)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.6755903, 1.542454, -5.878672)",
+          "Rotation": "(0.00, 270.35, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.7253545, 2.153553, -5.876997)",
+          "Rotation": "(0.00, 234.40, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.03498906, 1.543212, -5.632393)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-0.7950751, 1.543212, -5.367074)",
+          "Rotation": "(0.00, 296.08, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, -4.70533)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(-1.066643, 1.543212, -4.640847)",
+          "Rotation": "(0.00, 5.58, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, -2.997048)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, -1.373482)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/advent_calendar/advendcalendar.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3644746, 1.543212, -1.104988)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, 0.3461223)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/advent_calendar/advendcalendar.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.3878676, 1.543212, 1.327049)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, 2.063026)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, 3.790748)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.9183725, 1.506861, 4.774986)",
+          "Rotation": "(0.00, 185.58, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.6882355, 2.117558, 5.217165)",
+          "Rotation": "(0.00, 54.40, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2902669530,
+          "Position": "(-0.02635259, 1.505075, 5.478965)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giftbox/giftbox_loot.prefab",
+          "Skin": 0,
+          "Position": "(0.6467965, 1.506861, 5.501213)",
+          "Rotation": "(0.00, 116.08, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1132895, 1.506861, 5.766532)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(-0.01829976, 1.534356, 6.190849)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        }
+      ],
+      "List of signs": []
+    },
+    {
+      "Preset Name": "Locomotive",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "locomotive.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.633, 1.527721, -9.14642)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.633, 1.527721, -9.14642)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.4020999, 1.56184, -7.888188)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.3954846, 1.560169, -7.888188)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.827707, 1.439995, -7.025067)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.824924, 1.439995, -6.927357)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.9045414, 1.560169, -6.904592)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.9041287, 1.560169, -6.904592)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.09434675, 2.59567, -6.904189)",
+          "Rotation": "(19.57, 299.21, 29.39)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7619625, 3.128828, -6.675649)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7536243, 3.128828, -6.659139)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7609707, 3.128828, -6.164144)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.01852382, 4.637104, -6.036412)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4449548, 4.213, -5.958462)",
+          "Rotation": "(353.52, 197.34, 61.03)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5221711, 3.34791, -5.958462)",
+          "Rotation": "(353.52, 17.34, 61.03)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.768288, 4.573968, -5.936513)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7785259, 4.573968, -5.936513)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7536243, 3.128828, -4.957082)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1946729, 3.172786, -4.6709)",
+          "Rotation": "(31.35, 90.87, 348.14)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1878262, 3.221979, -4.61358)",
+          "Rotation": "(19.57, 313.72, 29.39)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7609707, 3.128828, -4.485448)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.827707, 1.439995, -4.427289)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.824924, 1.439995, -4.074092)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.9045414, 1.560169, -3.954076)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.9041287, 1.560169, -3.954076)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4428106, 1.956477, -3.304041)",
+          "Rotation": "(11.87, 98.01, 355.42)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4524021, 1.749294, -3.304041)",
+          "Rotation": "(15.31, 248.98, 9.53)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7536243, 3.128828, -3.244756)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.01852382, 4.637104, -3.070088)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7609707, 3.128828, -2.783116)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5196052, 3.452164, -2.758277)",
+          "Rotation": "(353.52, 197.34, 61.03)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5221711, 3.425767, -2.625074)",
+          "Rotation": "(353.52, 17.34, 61.03)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.9187618, 4.573968, -1.948003)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.9241108, 4.573968, -1.933797)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.5221711, 3.425767, -1.712416)",
+          "Rotation": "(353.52, 17.34, 61.03)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.827707, 1.439995, -1.671017)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7536243, 3.128828, -1.524541)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.5196052, 3.452164, -1.483178)",
+          "Rotation": "(353.52, 197.34, 61.03)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.824924, 1.439995, -1.295199)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7609707, 3.128828, -1.062917)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.4524022, 1.956477, -1.029297)",
+          "Rotation": "(11.87, 278.01, 355.42)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.4428106, 1.956477, -1.029297)",
+          "Rotation": "(15.31, 68.98, 9.53)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.9045414, 1.560169, -0.9870044)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.9041287, 1.560169, -0.9870044)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.01852382, 4.637104, -0.1629536)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7536243, 3.128828, 0.1777905)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.1946721, 3.221979, 0.3483051)",
+          "Rotation": "(19.57, 133.72, 29.39)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/lollipop_bundle/giantlollipops.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.3791258, 3.764431, 0.3783739)",
+          "Rotation": "(344.62, 190.36, 96.57)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.1878262, 3.172786, 0.4056275)",
+          "Rotation": "(31.35, 270.87, 348.14)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7609707, 3.128828, 0.6494091)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.827707, 1.439995, 1.083236)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.824924, 1.439995, 1.497618)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.768288, 4.573968, 1.781764)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.7785259, 4.573968, 1.820582)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7536243, 3.128828, 1.856486)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.9045414, 1.560169, 1.963511)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.9041287, 1.560169, 1.963511)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.7609707, 3.128828, 2.351466)",
+          "Rotation": "(270.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(0.7546161, 3.128828, 2.367991)",
+          "Rotation": "(270.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.827707, 1.439995, 3.839331)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.824924, 1.439995, 4.288364)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.688499, 2.734873, 4.462413)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.726738, 2.734873, 4.470363)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/pookie/pookie_deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.2618183, 3.407422, 5.598079)",
+          "Rotation": "(0.00, 138.64, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/doorgarland/doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.00453914, 3.223631, 5.615718)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.827707, 1.439995, 6.601491)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.824924, 1.439995, 6.620221)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/icewalls/icewall.prefab",
+          "Skin": 0,
+          "Position": "(0.639603, 1.179103, 7.424815)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/icewalls/icewall.prefab",
+          "Skin": 0,
+          "Position": "(0.09796178, 1.179103, 7.424815)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/icewalls/icewall.prefab",
+          "Skin": 0,
+          "Position": "(-0.5009915, 1.179103, 7.424815)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.606622, 1.538328, 7.890529)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/giant_candy_cane/giantcandycane.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.571777, 1.538328, 7.890529)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.023682, 1.462603, 9.123088)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/snowman/snowman.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.413, 2.012, 6.078)",
+          "Rotation": "(0.00, 180, 0.00)"
+        }
+      ],
+      "List of signs": [
+        {
+          "Image Name": "snowflake",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x215.prefab",
+          "Skin": 0,
+          "Position": "(-1.859176, 1.695785, 4.445796)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Image Name": "snowflake",
+          "Prefab": "assets/prefabs/misc/xmas/neon_sign/sign.neon.125x215.prefab",
+          "Skin": 0,
+          "Position": "(1.88562, 1.621541, 4.486094)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        }
+      ]
+    },
+    {
+      "Preset Name": "Loot wagon",
+      "Enable [true/false]": true,
+      "Short prefab name of the wagon to which customization will be applied": "trainwagonb.entity",
+      "Presets of wagons to which this preset will be applied (leave empty for all presets)": [],
+      "Presets of wagons that will NOT be customized": [],
+      "Presets of trains that will NOT be customized": [],
+      "Disable the basic decoration on the carriage [true/false]": false,
+      "List of decorations": [
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, -6.576767)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(-0.7450823, 1.664942, -6.499908)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.05205216, 2.328173, -6.362839)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.37725, 1.328274, -5.990787)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.377145, 1.328274, -5.565498)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(-1.540965, 1.646142, -5.469086)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2296022, 4.275024, -5.468307)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(0.3525664, 1.549553, -5.103668)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.584042, 3.788445, -5.013046)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.582858, 3.788445, -5.013046)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, -4.85228)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.455241, 2.180896, -3.386261)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_house.prefab",
+          "Skin": 0,
+          "Position": "(1.565778, 1.589999, -3.29039)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.44119, 2.180896, -3.255417)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, -3.157486)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.37725, 1.328274, -3.103192)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.582858, 3.788445, -3.001099)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.377145, 1.328274, -2.672318)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.584042, 3.788445, -2.350495)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, -1.458817)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        }, 
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2296022, 4.275024, -1.140579)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.582858, 3.788445, -0.3398438)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.37725, 1.328274, -0.2060772)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2898698365,
+          "Position": "(1.525487, 2.630701, -0.1774446)",
+          "Rotation": "(0.00, 180, 90)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2898698365,
+          "Position": "(-1.523616, 2.65243, -0.1209307)",
+          "Rotation": "(0.00, 0, 90)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.377145, 1.328274, 0.1874541)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, 0.2435302)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.584042, 3.788445, 0.3118896)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, 1.951874)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.582858, 3.788445, 2.322083)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.37725, 1.328274, 2.668927)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.454173, 2.180896, 2.965134)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.584042, 3.788445, 2.976364)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.377145, 1.328274, 3.063236)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.450711, 2.180896, 3.263779)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/permstore/industriallight/industrial.wall.lamp.green.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-0.2296022, 4.275024, 3.369614)",
+          "Rotation": "(90.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, 3.661377)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.bear.deployed.prefab",
+          "Skin": 91053011,
+          "Position": "(0.2874419, 1.549553, 4.980911)",
+          "Rotation": "(0.00, 180.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.584042, 3.788445, 4.981293)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.582858, 3.788445, 4.989105)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_tree.prefab",
+          "Skin": 0,
+          "Position": "(1.534261, 1.710082, 5.246658)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, 5.36554)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_tree.prefab",
+          "Skin": 0,
+          "Position": "(-1.517322, 1.710082, 5.475388)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(1.37725, 1.328274, 5.560685)",
+          "Rotation": "(0.00, 90.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/christmas_lights/xmas.lightstring.deployed.prefab",
+          "Skin": 0,
+          "Position": "(-1.377145, 1.328274, 5.946696)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/misc/xmas/double_doorgarland/double_doorgarland.deployed.prefab",
+          "Skin": 0,
+          "Position": "(0.05205216, 2.328173, 6.346756)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/content/props/gingerbread_barricades/gingerbread_barricades_snowman.prefab",
+          "Skin": 0,
+          "Position": "(-0.753055, 1.657769, 6.492279)",
+          "Rotation": "(0.00, 0.00, 0.00)"
+        },
+        {
+          "Prefab": "assets/prefabs/deployable/rug/rug.deployed.prefab",
+          "Skin": 2349822120,
+          "Position": "(-0.02844558, 1.536528, 6.645157)",
+          "Rotation": "(0.00, 270.00, 0.00)"
+        }
+      ],
+      "List of signs": []
+    }
+  ],
+  "Npc presets": [
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "burlap.shirt",
+          "SkinID (0 - default)": 1587743344
+        },
+        {
+          "ShortName": "burlap.trousers",
+          "SkinID (0 - default)": 1587746365
+        },
+        {
+          "ShortName": "burlap.gloves",
+          "SkinID (0 - default)": 784676585
+        },
+        {
+          "ShortName": "roadsign.jacket",
+          "SkinID (0 - default)": 1935355816
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "SkinID (0 - default)": 1935355440
+        },
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 2675531117
+        },
+        {
+          "ShortName": "metal.facemask",
+          "SkinID (0 - default)": 1170471712
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "attire.snowman.helmet",
+          "SkinID (0 - default)": 0
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "SkinID (0 - default)": 1934946028
+        },
+        {
+          "ShortName": "pants",
+          "SkinID (0 - default)": 2728153861
+        },
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 1158967113
+        },
+        {
+          "ShortName": "hoodie",
+          "SkinID (0 - default)": 2728150332
+        },
+        {
+          "ShortName": "roadsign.gloves",
+          "SkinID (0 - default)": 2950127861
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "burlap.shirt",
+          "SkinID (0 - default)": 1229561297
+        },
+        {
+          "ShortName": "burlap.trousers",
+          "SkinID (0 - default)": 1229552157
+        },
+        {
+          "ShortName": "burlap.gloves",
+          "SkinID (0 - default)": 784676585
+        },
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 2675531117
+        },
+        {
+          "ShortName": "santahat",
+          "SkinID (0 - default)": 2675531117
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "shoes.boots",
+          "SkinID (0 - default)": 2675531117
+        },
+        {
+          "ShortName": "burlap.gloves",
+          "SkinID (0 - default)": 784676585
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "SkinID (0 - default)": 2320295405
+        },
+        {
+          "ShortName": "pants",
+          "SkinID (0 - default)": 1587846022
+        },
+        {
+          "ShortName": "metal.facemask",
+          "SkinID (0 - default)": 2684259722
+        },
+        {
+          "ShortName": "jacket.snow",
+          "SkinID (0 - default)": 1229047763
+        }
+      ]
+    },
+    {
+      "Enable [true/false]": true,
+      "Wear Items": [
+        {
+          "ShortName": "gingerbreadsuit",
+          "SkinID (0 - default)": 0
+        }
+      ]
+    }
+  ],
+  "Fireworks Presets": [
+    {
+      "Preset Name": "2024",
+      "Enable [true/false]": true,
+      "Color (r, g, b)": "(1, 0, 0)",
+      "Coordinates for the drawing": [
+        "(0.01, 0.85, 0.00)",
+        "(0.00, 1.00, 0.00)",
+        "(0.13, 1.00, 0.00)",
+        "(0.28, 1.00, 0.00)",
+        "(0.43, 1.00, 0.00)",
+        "(0.43, 0.85, 0.00)",
+        "(0.43, 0.71, 0.00)",
+        "(0.33, 0.59, 0.00)",
+        "(0.22, 0.50, 0.00)",
+        "(0.11, 0.41, 0.00)",
+        "(0.04, 0.29, 0.00)",
+        "(0.04, 0.15, 0.00)",
+        "(0.04, 0.02, 0.00)",
+        "(0.19, 0.02, 0.00)",
+        "(0.33, 0.03, 0.00)",
+        "(0.48, 0.04, 0.00)",
+        "(0.74, 0.85, 0.00)",
+        "(0.73, 1.00, 0.00)",
+        "(0.86, 1.00, 0.00)",
+        "(1.01, 1.00, 0.00)",
+        "(1.16, 1.00, 0.00)",
+        "(1.16, 0.85, 0.00)",
+        "(1.17, 0.71, 0.00)",
+        "(0.74, 0.71, 0.00)",
+        "(0.75, 0.56, 0.00)",
+        "(0.76, 0.42, 0.00)",
+        "(0.77, 0.29, 0.00)",
+        "(0.77, 0.15, 0.00)",
+        "(0.77, 0.02, 0.00)",
+        "(0.92, 0.02, 0.00)",
+        "(1.06, 0.03, 0.00)",
+        "(1.19, 0.03, 0.00)",
+        "(1.17, 0.56, 0.00)",
+        "(1.18, 0.41, 0.00)",
+        "(1.19, 0.26, 0.00)",
+        "(1.19, 0.16, 0.00)",
+        "(1.45, 0.85, 0.00)",
+        "(1.44, 1.00, 0.00)",
+        "(1.57, 1.00, 0.00)",
+        "(1.72, 1.00, 0.00)",
+        "(1.87, 1.00, 0.00)",
+        "(1.87, 0.85, 0.00)",
+        "(1.87, 0.71, 0.00)",
+        "(1.77, 0.59, 0.00)",
+        "(1.66, 0.50, 0.00)",
+        "(1.55, 0.41, 0.00)",
+        "(1.48, 0.29, 0.00)",
+        "(1.48, 0.15, 0.00)",
+        "(1.48, 0.02, 0.00)",
+        "(1.63, 0.02, 0.00)",
+        "(1.77, 0.03, 0.00)",
+        "(1.92, 0.04, 0.00)",
+		
+		"(2.23, 0.98, 0.00)",
+		"(2.33, 0.98, 0.00)",
+		"(2.43, 0.98, 0.00)",
+		"(2.53, 0.98, 0.00)",
+		"(2.63, 0.98, 0.00)",
+		
+		"(2.18, 0.9, 0.00)",
+		"(2.18, 0.8, 0.00)",
+		"(2.18, 0.7, 0.00)",
+		"(2.18, 0.6, 0.00)",
+		"(2.18, 0.5, 0.00)",
+		
+		"(2.23, 0.5, 0.00)",
+		"(2.33, 0.5, 0.00)",
+		"(2.43, 0.5, 0.00)",
+		"(2.53, 0.5, 0.00)",
+		"(2.63, 0.5, 0.00)",
+		
+		"(2.63, 0.4, 0.00)",
+		"(2.63, 0.3, 0.00)",
+		"(2.63, 0.2, 0.00)",
+		"(2.63, 0.1, 0.00)",
+		
+		"(2.18, 0.4, 0.00)",
+		"(2.18, 0.3, 0.00)",
+		"(2.18, 0.2, 0.00)",
+		"(2.18, 0.1, 0.00)",
+		
+		"(2.23, 0.04, 0.00)",
+		"(2.33, 0.04, 0.00)",
+		"(2.43, 0.04, 0.00)",
+		"(2.53, 0.04, 0.00)",
+		"(2.63, 0.04, 0.00)",
+      ]
+    }
+  ]
+}

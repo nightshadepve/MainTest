@@ -1,0 +1,41 @@
+{
+  "Enable this quarry?": false,
+  "Inventory": {
+    "Resource container capacity": 18,
+    "Fuel container capacity": 6
+  },
+  "Loot Protection": {
+    "Enable loot protection functionality?": false,
+    "Required permission for activation": "aQuarry.StaticLock",
+    "Type of mining start and lock notifications (0 = disable, 1 = for owner, 2 = for all)": 2,
+    "The type of notifications about the end of mining (0 = disable, 1 = for owner, 2 = for all)": 2,
+    "The type of unlock notifications (0 = disable, 1 = for owner, 2 = for all)": 2,
+    "Unlock after X minutes after the end of mining": 15,
+    "Only owner can toggle?": true,
+    "Only owner can loot?": true,
+    "Only owner can manage?": true,
+    "Include his team?": true
+  },
+  "Production": {
+    "List of the fuel used and its production settings": [
+      {
+        "ShortName": "diesel_barrel",
+        "SkinID": 0,
+        "Amount": 1,
+        "How many seconds can quarry work on one consume of this fuel?": 130.0,
+        "Resource production interval on this fuel (seconds)": 130.0,
+        "Gathering resources on this fuel": [
+          {
+            "Custom name (empty = default)": "",
+            "ShortName": "lowgradefuel",
+            "SkinID": 0,
+            "Amount": 1000,
+            "Amount max": 1000,
+            "Probability [0.0-100.0]": 100.0,
+            "Do not use permission rates": false
+          }
+        ]
+      }
+    ]
+  }
+}

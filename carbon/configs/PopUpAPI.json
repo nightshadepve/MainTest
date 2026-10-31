@@ -1,0 +1,151 @@
+{
+  "PopUp Schematics": {
+    "Legacy": {
+      "Anchor Position": "0.5 1",
+      "Panel Parent": "Hud.Menu",
+      "Panel Family Name": "Legacy",
+      "Text": {
+        "Text Position - Min": "-180 -250",
+        "Text Position - Max": "180 -50",
+        "Font (list available on website)": "RobotoCondensed-Bold.ttf",
+        "Text Display Time Override": -1.0,
+        "Text Font Size Override": -1,
+        "Text Color": "1 1 1 1",
+        "Text Anchor": "MiddleCenter",
+        "Outline - Color": "0 0 0 1",
+        "Outline - Size": "0.7 0.7",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5
+      },
+      "Background": {
+        "Enabled": false,
+        "Background Position - Min": "-180 -250",
+        "Background Position - Max": "180 -50",
+        "Background Color": "1 1 1 1",
+        "Smooth Background": false,
+        "Background Image URL": "",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5,
+        "Background Details": []
+      }
+    },
+    "NoWay": {
+      "Anchor Position": "0.5 1",
+      "Panel Parent": "Hud.Menu",
+      "Panel Family Name": "Legacy",
+      "Text": {
+        "Text Position - Min": "-100 -200",
+        "Text Position - Max": "100 -125",
+        "Font (list available on website)": "RobotoCondensed-Bold.ttf",
+        "Text Display Time Override": -1.0,
+        "Text Font Size Override": -1,
+        "Text Color": "0.91 0.87 0.83 1",
+        "Text Anchor": "MiddleCenter",
+        "Outline - Color": "0 0 0 0",
+        "Outline - Size": "0 0",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5
+      },
+      "Background": {
+        "Enabled": true,
+        "Background Position - Min": "-100 -200",
+        "Background Position - Max": "100 -125",
+        "Background Color": "0.145 0.135 0.12 1",
+        "Smooth Background": false,
+        "Background Image URL": "",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5,
+        "Background Details": [
+          {
+            "Background Position - Min": "4 4",
+            "Background Position - Max": "196 71",
+            "Background Color": "0.185 0.175 0.16 1",
+            "Smooth Background": false,
+            "Background Image URL": ""
+          },
+          {
+            "Background Position - Min": "-100 -120",
+            "Background Position - Max": "300 110",
+            "Background Color": "1 1 1 1",
+            "Smooth Background": false,
+            "Background Image URL": "https://images.pvrust.eu/ui_icons/PopUpAPI/noway_0.png"
+          }
+        ]
+      }
+    },
+    "ChatNations": {
+      "Anchor Position": "1 0.5",
+      "Panel Parent": "Hud.Menu",
+      "Panel Family Name": "Legacy",
+      "Text": {
+        "Text Position - Min": "-110 30",
+        "Text Position - Max": "-390 -30",
+        "Font (list available on website)": "RobotoCondensed-Bold.ttf",
+        "Text Display Time Override": -1.0,
+        "Text Font Size Override": -1,
+        "Text Color": "0.91 0.87 0.83 1",
+        "Text Anchor": "MiddleCenter",
+        "Outline - Color": "0 0 0 0",
+        "Outline - Size": "0 0",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5
+      },
+      "Background": {
+        "Enabled": true,
+        "Background Position - Min": "-100 35",
+        "Background Position - Max": "-400 -35",
+        "Background Color": "0.1855686 0.1723922 0.1444706 1",
+        "Smooth Background": false,
+        "Background Image URL": "",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5,
+        "Background Details": [
+          {
+            "Background Position - Min": "6 6",
+            "Background Position - Max": "294 64",
+            "Background Color": "0.1529412 0.1411765 0.1137255 1",
+            "Smooth Background": false,
+            "Background Image URL": ""
+          }
+        ]
+      }
+    },
+    "MarketV2": {
+      "Anchor Position": "0.5 1",
+      "Panel Parent": "Overall",
+      "Panel Family Name": "Legacy",
+      "Text": {
+        "Text Position - Min": "-170 -64",
+        "Text Position - Max": "170 0",
+        "Font (list available on website)": "RobotoCondensed-Bold.ttf",
+        "Text Display Time Override": -1.0,
+        "Text Font Size Override": -1,
+        "Text Color": "0.969 0.922 0.882 1",
+        "Text Anchor": "MiddleCenter",
+        "Outline - Color": "0 0 0 0",
+        "Outline - Size": "0 0",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5
+      },
+      "Background": {
+        "Enabled": true,
+        "Background Position - Min": "-180 -70",
+        "Background Position - Max": "180 0",
+        "Background Color": "0.153 0.141 0.114 1",
+        "Smooth Background": false,
+        "Background Image URL": "",
+        "Fade In Time (in seconds)": 0.5,
+        "Fade Out Time (in seconds)": 0.5,
+        "Background Details": [
+          {
+            "Background Position - Min": "6 6",
+            "Background Position - Max": "354 70",
+            "Background Color": "0.196 0.18 0.153 1",
+            "Smooth Background": false,
+            "Background Image URL": ""
+          }
+        ]
+      }
+    }
+  }
+}

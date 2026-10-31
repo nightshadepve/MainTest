@@ -1,0 +1,551 @@
+{
+  "definitions": [
+    {
+      "Id": "58746221",
+      "Radius": 65.0,
+      "Location": "-415.142 134.7301 993.8199",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "nightshade_raidbase_pvp_60578657",
+      "Name": "Nightshade Raidbase PvP",
+      "Radius": 60.0,
+      "Location": "-836.5084 24.37188 1072.704",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "nightshade_raidbase_pvp_409682",
+      "Name": "Nightshade Raidbase PvP",
+      "Radius": 60.0,
+      "Location": "-722.6481 21.9247 938.6298",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "nightshade_raidbase_pvp_44457687",
+      "Name": "Nightshade Raidbase PvP",
+      "Radius": 60.0,
+      "Location": "475.9995 11.56177 1341.219",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "nightshade_raidbase_pve_84013955",
+      "Name": "Nightshade Raidbase PvE",
+      "Radius": 60.0,
+      "Location": "495.9424 11.56083 1314.419",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "satellite_dish",
+      "Name": "Satellite Dish",
+      "Radius": 100.0,
+      "Location": "-638.3339 6.635849 -131.2819",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Satellite Dish.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Satellite Dish.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "harbor_1",
+      "Name": "Large Harbor",
+      "Radius": 150.0,
+      "Location": "-614.2314 1.446 700.5028",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Large Harbour.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Large Harbour.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "ferry_terminal_1",
+      "Name": "Ferry Terminal",
+      "Radius": 125.0,
+      "Location": "-1571.59 1.25 -1390.535",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Ferry Terminal.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Ferry Terminal.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "nuclear_missile_Silo",
+      "Name": "Missile Silo",
+      "Radius": 100.0,
+      "Location": "-29.1658 -34.64703 1568.494",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Nuclear Missile Silo.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Nuclear Missile Silo.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "oilrig_2",
+      "Name": "Small Oil Rig",
+      "Radius": 100.0,
+      "Location": "1705.779 0 2078.412",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Small Oil Rig.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Small Oil Rig.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "oilrig_1",
+      "Name": "Large Oil Rig",
+      "Radius": 165.0,
+      "Location": "1423.26 0 -2095.893",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Large Oil Rig.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Large Oil Rig.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "lighthouse_1",
+      "Name": "Lighthouse #1",
+      "Radius": 80.0,
+      "Location": "416.6837 0 1600.136",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Light House #1.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Light House #1.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "lighthouse_2",
+      "Name": "Lighthouse #2",
+      "Radius": 80.0,
+      "Location": "1072.126 0 -1007.95",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Light House #2.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Light House #2.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "supermarket_1",
+      "Name": "Abandoned Supermarket #1",
+      "Radius": 50.0,
+      "Location": "269.7905 4.682129 284.1022",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Supermarket #1.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Supermarket #1.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "gas_station_1",
+      "Name": "Oxum's Gas Station #1",
+      "Radius": 50.0,
+      "Location": "276.2364 -0.6904781 -603.3802",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Oxum's Gas Station #1.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Oxum's Gas Station #1.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "supermarket_2",
+      "Name": "Abandoned Supermarket #2",
+      "Radius": 50.0,
+      "Location": "-1057.428 8.835933 -1120.586",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Supermarket #2.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Supermarket #2.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "sphere_tank",
+      "Name": "The Dome",
+      "Radius": 80.0,
+      "Location": "-653.4623 4.06394 -1353.603",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered The Dome.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left The Dome.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "military_tunnel_1",
+      "Name": "Military Tunnel",
+      "Radius": 115.0,
+      "Location": "1361.181 -59.25 -1013.689",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Military Tunnels.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Military Tunnels.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "arctic_research_base_a",
+      "Name": "Arctic Research Base",
+      "Radius": 100.0,
+      "Location": "-916.2357 24.60495 -537.2891",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Artic Research Base.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Artic Research Base.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "desert_military_base_b",
+      "Name": "Abandoned Military Base #1",
+      "Radius": 100.0,
+      "Location": "-1010.669 22.37999 -1267.898",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 2.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 2.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "junkyard_1",
+      "Name": "Junkyard",
+      "Radius": 165.0,
+      "Location": "-1280.36 12.06712 -321.2499",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Junk Yard.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Junk Yard.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "airfield_1",
+      "Name": "Airfield",
+      "Radius": 200.0,
+      "Location": "-999.4192 3.936 -1891.093",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Airfield.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Airfield.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "water_treatment_plant_1",
+      "Name": "Water Treatment Plant",
+      "Radius": 175.0,
+      "Location": "55.25171 2.49 -797.6535",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Water Treatment Plant.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Water Treatment Plant.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "powerplant_1",
+      "Name": "Power Plant",
+      "Radius": 150.0,
+      "Location": "871.21 2.42 49.37",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Power Plant.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Power Plant.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "excavator",
+      "Name": "Giant Excavator Pit",
+      "Radius": 205.0,
+      "Location": "-1969.12 5.1 40.7",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Giant Excavator Pit.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Giant Excavator Pit.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "launch_site",
+      "Name": "Launch Site",
+      "Radius": 295.0,
+      "Location": "1147.772 9.96 -591.2831",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Launch Site.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Launch Site.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "nightshade_raidbase_pvp_185666011",
+      "Name": "Nightshade Raidbase PvP",
+      "Radius": 60.0,
+      "Location": "-938.3525 8.274355 -558.0829",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "mining_quarry_c",
+      "Name": "HQM Quarry",
+      "Radius": 50.0,
+      "Location": "1562.526 8.767283 -1548.324",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered HQM Quarry.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left HQM Quarry.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "radtown_1",
+      "Name": "Radtown",
+      "Radius": 85.0,
+      "Location": "1064.627 6.795224 -983.006",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Rad Town.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Rad Town.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "gas_station_2",
+      "Name": "Oxum's Gas Station #2",
+      "Radius": 50.0,
+      "Location": "1322.585 5.318868 -956.0338",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Oxum's Gas Station #2.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Oxum's Gas Station #2.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "mining_quarry_a",
+      "Name": "Sulfur Quarry",
+      "Radius": 50.0,
+      "Location": "393.1363 4.228232 -1433.233",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Sulfur Quarry.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Sulfur Quarry.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "mining_quarry_b",
+      "Name": "Stone Quarry",
+      "Radius": 50.0,
+      "Location": "680.4349 3.395402 -77.17028",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Stone Quarry.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Stone Quarry.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "trainyard_1",
+      "Name": "Train Yard",
+      "Radius": 165.0,
+      "Location": "298.9875 8.42 1197.2",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Train Yard.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Train Yard.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "miningoutpost_1",
+      "Name": "Mining Outpost #1",
+      "Radius": 50.0,
+      "Location": "623.8022 5.434113 -762.2675",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Mining Outpost #1.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Mining Outpost #1.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "harbor_2",
+      "Name": "Small Harbor",
+      "Radius": 145.0,
+      "Location": "931.256 0.7300001 -1572.476",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Small Harbour.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Small Harbour.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "miningoutpost_2",
+      "Name": "Mining Outpost #2",
+      "Radius": 50.0,
+      "Location": "41.10066 11.97948 740.6547",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Mining Outpost #2.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Mining Outpost #2.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "radtown_small_3",
+      "Name": "Sewer Branch",
+      "Radius": 80.0,
+      "Location": "-201.8422 1 353.1704",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Sewer Branch.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Sewer Branch.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "swamp_b",
+      "Name": "Wild Swamp #2",
+      "Radius": 80.0,
+      "Location": "320.9306 21.59015 -398.856",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>☠ PvP Monument:</color> You entered Wild Swamp 2. Weapons free. Don't cry to admin.",
+      "LeaveMessage": "<color=#A15FD6>☾ PvE Restored:</color> You left Wild Swamp 2. Cozy crimes may resume.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "swamp_a",
+      "Name": "jungle swamp #1",
+      "Radius": 95.0,
+      "Location": "-427.7274 10.18488 -684.1555",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>☠ PvP Monument:</color> You entered Wild Swamp 1. Weapons free. Don't cry to admin.",
+      "LeaveMessage": "<color=#A15FD6>☾ PvE Restored:</color> You left Wild Swamp 1. Cozy crimes may resume.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "16784486",
+      "Radius": 50.0,
+      "Location": "-164.6088 106.3366 -191.3282",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "4187662",
+      "Radius": 130.0,
+      "Location": "173.1648 56.96822 -71.98268",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "55341009",
+      "Radius": 20.0,
+      "Location": "1260.313 87.19663 -94.7798",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "80362416",
+      "Radius": 200.0,
+      "Location": "1191.584 86.89211 -62.3861",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "3848219",
+      "Radius": 110.0,
+      "Location": "1114.317 23.14625 639.3587",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "29796015",
+      "Radius": 100.0,
+      "Location": "1242.57 4.419563 -1424.983",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "9380964",
+      "Radius": 375.0,
+      "Location": "977.3843 246.0565 -893.1775",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "nightshade_raidbase_pvp_153071235",
+      "Name": "Nightshade Raidbase PvP",
+      "Radius": 60.0,
+      "Location": "-1184.75 22.53901 480.0873",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "Flags": ""
+    },
+    {
+      "Id": "supermarket_3",
+      "Name": "Abandoned Supermarket #3",
+      "Radius": 50.0,
+      "Location": "255.3375 5.687399 -205.3831",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Supermarket #3.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Supermarket #3.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "gas_station_3",
+      "Name": "Oxum's Gas Station #3",
+      "Radius": 50.0,
+      "Location": "-1134.543 5.068841 -789.2282",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Oxum's Gas Station #3.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Oxum's Gas Station #3.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "miningoutpost_3",
+      "Name": "Mining Outpost #3",
+      "Radius": 50.0,
+      "Location": "184.4868 7.778442 -1536.988",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Mining Outpost #3.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Mining Outpost #3.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "swamp_c",
+      "Name": "Abandoned Cabins",
+      "Radius": 80.0,
+      "Location": "-1411.043 3.945892 -1231.244",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Abandoned Cabins.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Abandoned Cabins.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "desert_military_base_a",
+      "Name": "Abandoned Military Base #1",
+      "Radius": 100.0,
+      "Location": "-1176.433 4.724688 -235.8394",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 1.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 1.",
+      "Flags": "AutoLights"
+    },
+    {
+      "Id": "desert_military_base_d",
+      "Name": "Abandoned Military Base #1",
+      "Radius": 100.0,
+      "Location": "232.6702 10.97539 604.576",
+      "Size": "0 0 0",
+      "Rotation": "0 0 0",
+      "EnterMessage": "<color=#E0BAF4>PvP Monument:</color> You entered Desert Base 4.(PvP)",
+      "LeaveMessage": "<color=#A15FD6>PvE Restored:</color> You left Desert Base 4.",
+      "Flags": ""
+    }
+  ]
+}

@@ -1,0 +1,5617 @@
+{
+  "Version": "3.0.6",
+  "Prefix of chat messages": "",
+  "Main Setting": {
+    "Enable automatic event holding [true/false]": false,
+    "Minimum time between events [sec]": 3600,
+    "Maximum time between events [sec]": 3600,
+    "The time between receiving a chat notification and the start of the event [sec.]": 0,
+    "Enable logging of the start and end of the event? [true/false]": true,
+    "The event will not end if there are players nearby [true/false]": true,
+    "The turrets of the сonvoy will drop loot after destruction? [true/false]": true,
+    "Destroy the сonvoy after opening all the crates [true/false]": true,
+    "Time to destroy the сonvoy after opening all the crates [sec]": 120,
+    "Maximum height of the player above the convoy for dealing damage to Bradleys/NPCs/turrets (protection against attacks from rocks/cliffs/towers) (-1 - do not limit)": -1.0,
+    "Maximum height of a foundation above the ground beneath it, above which damage to the convoy is blocked (protection against attacking the convoy from towers that the raiding NPCs cannot reach) (-1 - do not limit)": 5.0
+  },
+  "Behavior Settings": {
+    "The time for which the convoy becomes aggressive after it has been attacked (-1 - is always aggressive)": 80,
+    "The convoy will always remain aggressive while stopped [true/false]": true,
+    "The duration of the stop after the attack": 60,
+    "Player turrets will attack NPCs if the convoy is stopped (false - They won't attack at all) [true/false]": true
+  },
+  "Loot Settings": {
+    "When the car is destroyed, loot falls to the ground [true/false]": true,
+    "Percentage of loot loss when destroying a сar [0.0-1.0]": 0.5,
+    "Prohibit looting crates if the convoy is moving [true/false]": false,
+    "Prohibit looting crates if NPCs are alive [true/false]": true,
+    "Prohibit looting crates if Bradleys are alive [true/false]": true,
+    "Prohibit looting crates if Heli is alive [true/false]": false
+  },
+  "Route Settings": {
+    "Type of routes (0 - standard (fast generation), 1 - experimental (multiple roads are used), 2 - custom)": 1,
+    "Minimum road length": 200,
+    "List of excluded roads (/convoyroadblock)": [],
+    "Setting up the standard route type": {
+      "If there is a ring road on the map, then the convoy will always spawn here": false
+    },
+    "Setting up a experimental type": {
+      "Always choose the longest route? [true/false]": false,
+      "The minimum number of roads in a complex route": 3
+    },
+    "Setting up a custom route type": {
+      "List of presets for custom routes": []
+    }
+  },
+  "Convoy Presets": [
+    {
+      "Name": "easy",
+      "Name displayed on the map (For custom marker)": "Lost Courier (Easy Convoy)",
+      "Automatic startup": true,
+      "Probability of a preset [0.0-100.0]": 40.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Event time": 1800,
+      "Radius of the event zone": 45.0,
+      "Maximum range for damage to Bradleys/NPCs/turrets (-1 - do not limit)": 50,
+      "Maximum range for damage to Heli when the convoy is stopped (-1 - do not limit)": 300,
+      "Order of vehicles": [
+        "motorbike_easy",
+        "motorbike_sidecar_easy",
+        "sedan_easy",
+        "motorbike_sidecar_easy",
+        "motorbike_easy"
+      ],
+      "Enable the helicopter": false,
+      "Heli preset": "",
+      "NPC damage multipliers depending on the attacker's weapon": {
+        "grenade.beancan.deployed": 0.5,
+        "grenade.f1.deployed": 0.5,
+        "explosive.satchel.deployed": 0.5,
+        "explosive.timed.deployed": 0.5,
+        "rocket_hv": 0.5,
+        "rocket_basic": 0.5,
+        "40mm_grenade_he": 0.5
+      }
+    },
+    {
+      "Name": "medium",
+      "Name displayed on the map (For custom marker)": "Medium Convoy",
+      "Automatic startup": true,
+      "Probability of a preset [0.0-100.0]": 30.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Event time": 2400,
+      "Radius of the event zone": 55.0,
+      "Maximum range for damage to Bradleys/NPCs/turrets (-1 - do not limit)": 85,
+      "Maximum range for damage to Heli when the convoy is stopped (-1 - do not limit)": 300,
+      "Order of vehicles": [
+        "motorbike_sidecar_medium",
+        "sedan_medium",
+        "modular_npc_medium",
+        "bradley_medium",
+        "modular_npc_medium",
+        "sedan_medium",
+        "motorbike_sidecar_medium"
+      ],
+      "Enable the helicopter": false,
+      "Heli preset": "",
+      "NPC damage multipliers depending on the attacker's weapon": {
+        "grenade.beancan.deployed": 0.5,
+        "grenade.f1.deployed": 0.5,
+        "explosive.satchel.deployed": 0.5,
+        "explosive.timed.deployed": 0.5,
+        "rocket_hv": 0.5,
+        "rocket_basic": 0.5,
+        "40mm_grenade_he": 0.5
+      }
+    },
+    {
+      "Name": "hard",
+      "Name displayed on the map (For custom marker)": "Reaper Escort (Hard Convoy)",
+      "Automatic startup": true,
+      "Probability of a preset [0.0-100.0]": 20.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Event time": 2700,
+      "Radius of the event zone": 60.0,
+      "Maximum range for damage to Bradleys/NPCs/turrets (-1 - do not limit)": 85,
+      "Maximum range for damage to Heli when the convoy is stopped (-1 - do not limit)": 300,
+      "Order of vehicles": [
+        "sedan_hard",
+        "modular_npc_long_hard",
+        "modular_sniper_hard",
+        "bradley_hard",
+        "vendor_loot_hard",
+        "modular_sniper_hard",
+        "modular_npc_long_hard",
+        "sedan_hard"
+      ],
+      "Enable the helicopter": false,
+      "Heli preset": "",
+      "NPC damage multipliers depending on the attacker's weapon": {
+        "grenade.beancan.deployed": 0.5,
+        "grenade.f1.deployed": 0.5,
+        "explosive.satchel.deployed": 0.5,
+        "explosive.timed.deployed": 0.5,
+        "rocket_hv": 0.5,
+        "rocket_basic": 0.5,
+        "40mm_grenade_he": 0.5
+      }
+    },
+    {
+      "Name": "nightmare",
+      "Name displayed on the map (For custom marker)": "The Last Shipment (Nightmare Convoy)",
+      "Automatic startup": false,
+      "Probability of a preset [0.0-100.0]": 10.0,
+      "The minimum time after the server's wipe when this preset can be selected automatically [sec]": 0,
+      "The maximum time after the server's wipe when this preset can be selected automatically [sec] (-1 - do not use this parameter)": -1,
+      "Event time": 2700,
+      "Radius of the event zone": 75.0,
+      "Maximum range for damage to Bradleys/NPCs/turrets (-1 - do not limit)": 100,
+      "Maximum range for damage to Heli when the convoy is stopped (-1 - do not limit)": 250,
+      "Order of vehicles": [
+        "bradley_samsite_nightmare",
+        "modular_npc_long_nightmare",
+        "vendor_turret_nightmare",
+        "vendor_samsite_nightmare",
+        "sedan_nightmare",
+        "bradley_samsite_nightmare",
+        "modular_npc_long_nightmare",
+        "vendor_turret_nightmare"
+      ],
+      "Enable the helicopter": true,
+      "Heli preset": "heli_nightmare",
+      "NPC damage multipliers depending on the attacker's weapon": {
+        "grenade.beancan.deployed": 0.1,
+        "grenade.f1.deployed": 0.1,
+        "explosive.satchel.deployed": 0.1,
+        "explosive.timed.deployed": 0.1,
+        "rocket_hv": 0.1,
+        "rocket_basic": 0.1,
+        "40mm_grenade_he": 0.1
+      }
+    }
+  ],
+  "Travelling Vendor Configurations": [
+    {
+      "Preset Name": "vendor_loot_hard",
+      "Delete the vendor's map marker?": false,
+      "Add a lock on the Loot Door? [true/false]": true,
+      "Loot Door Health": 250.0,
+      "Loot door SkinID": 934924536,
+      "NPC preset": "",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_minigun_hard",
+          "Position": "(0, 0.85, -1.25)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "frige_safe_hard",
+          "Position": "(0, 0, -1.85)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Turrets": [
+        {
+          "Preset name": "turret_minigun_hard",
+          "Position": "(0, 1.78, 0.818)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "turret_minigun_hard",
+          "Position": "(0, 1.78, -1.707)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "SamSites": []
+    },
+    {
+      "Preset Name": "vendor_samsite_hard",
+      "Delete the vendor's map marker?": false,
+      "Add a lock on the Loot Door? [true/false]": true,
+      "Loot Door Health": 250.0,
+      "Loot door SkinID": 934924536,
+      "NPC preset": "",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_flamethrower_hard",
+          "Position": "(0, 0.85, -1.25)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "frige_safe_hard",
+          "Position": "(0, 0, -1.85)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Turrets": [
+        {
+          "Preset name": "turret_minigun_hard",
+          "Position": "(0, 1.78, 0.818)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "SamSites": [
+        {
+          "Preset name": "samsite_default",
+          "Position": "(0, 1, -1)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "Preset Name": "vendor_turret_nightmare",
+      "Delete the vendor's map marker?": false,
+      "Add a lock on the Loot Door? [true/false]": true,
+      "Loot Door Health": 250.0,
+      "Loot door SkinID": 934924536,
+      "NPC preset": "",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_minigun_hard",
+          "Position": "(0, 0.85, -1.25)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "frige_safe_nightmare",
+          "Position": "(0, 0, -1.85)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Turrets": [
+        {
+          "Preset name": "turret_minigun_nightmare",
+          "Position": "(0, 1.78, 0.818)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "turret_minigun_nightmare",
+          "Position": "(0, 1.78, -1.707)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "SamSites": []
+    },
+    {
+      "Preset Name": "vendor_samsite_nightmare",
+      "Delete the vendor's map marker?": false,
+      "Add a lock on the Loot Door? [true/false]": false,
+      "Loot Door Health": 250.0,
+      "Loot door SkinID": 934924536,
+      "NPC preset": "",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_flamethrower_hard",
+          "Position": "(0.5, 0.85, -1.25)",
+          "Rotation": "(0, 180, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_smoke_nightmare",
+          "Position": "(-0.5, 0.85, -1.25)",
+          "Rotation": "(-1, 180, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "frige_safe_nightmare",
+          "Position": "(0, 0, -1.85)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Turrets": [
+        {
+          "Preset name": "turret_minigun_nightmare",
+          "Position": "(0, 1.78, 0.818)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "SamSites": [
+        {
+          "Preset name": "samsite_default",
+          "Position": "(0, 1, -1)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ]
+    }
+  ],
+  "Modular Configurations": [
+    {
+      "Name": "modular_npc_medium",
+      "Scale damage": 1.0,
+      "Modules": [
+        "vehicle.1mod.engine",
+        "vehicle.1mod.cockpit.with.engine",
+        "vehicle.1mod.storage"
+      ],
+      "NPC preset": "carnpc_lr300_raid_medium",
+      "Number of NPCs": 2,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_lr300_medium",
+          "Position": "(-0.9, 0.85, -1.5)",
+          "Rotation": "(0, 270, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_lr300_medium",
+          "Position": "(0.9, 0.85, -1.5)",
+          "Rotation": "(0, 90, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "crate_invisible_normal_medium",
+          "Position": "(0, 1.5, -1.5)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "modular_sniper_hard",
+      "Scale damage": 1.0,
+      "Modules": [
+        "vehicle.1mod.flatbed",
+        "vehicle.1mod.cockpit.with.engine",
+        "vehicle.1mod.storage"
+      ],
+      "NPC preset": "carnpc_grenadelauncher_hard",
+      "Number of NPCs": 1,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_bolt_hard",
+          "Position": "(-0.9, 0.85, -1.5)",
+          "Rotation": "(0, 270, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_bolt_hard",
+          "Position": "(0.9, 0.85, -1.5)",
+          "Rotation": "(0, 90, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/testseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": false,
+          "NPC preset (Empty - as in a vehicle)": "carnpc_bolt_hard",
+          "Position": "(0, 0.8, 1.5)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "crate_invisible_normal_hard",
+          "Position": "(0, 1.5, -1.5)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "modular_npc_long_hard",
+      "Scale damage": 1.0,
+      "Modules": [
+        "vehicle.1mod.cockpit.with.engine",
+        "vehicle.2mod.passengers",
+        "vehicle.1mod.rear.seats"
+      ],
+      "NPC preset": "carnpc_lr300_raid_hard",
+      "Number of NPCs": 5,
+      "Locations of additional NPCs": [],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "modular_npc_long_nightmare",
+      "Scale damage": 1.0,
+      "Modules": [
+        "vehicle.1mod.cockpit.with.engine",
+        "vehicle.1mod.rear.seats",
+        "vehicle.1mod.rear.seats",
+        "vehicle.1mod.rear.seats"
+      ],
+      "NPC preset": "carnpc_ak_raid_nightmare",
+      "Number of NPCs": 5,
+      "Locations of additional NPCs": [],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "modular_fuel_nightmare",
+      "Scale damage": 1.0,
+      "Modules": [
+        "vehicle.1mod.cockpit.with.engine",
+        "vehicle.1mod.rear.seats",
+        "vehicle.2mod.fuel.tank"
+      ],
+      "NPC preset": "carnpc_ak_raid_nightmare_3",
+      "Number of NPCs": 3,
+      "Locations of additional NPCs": [],
+      "Crates": [
+        {
+          "Preset name": "crate_invisible_normal_hard",
+          "Position": "(0, 0.5, -1.5)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    }
+  ],
+  "Bradley Configurations": [
+    {
+      "Name": "bradley_medium",
+      "HP": 600.0,
+      "Damage multiplier from Bradley to buildings (-1 - do not change)": 0.0,
+      "The viewing distance": 85.0,
+      "Radius of search": 85.0,
+      "The multiplier of Machine-gun aim cone": 1.5,
+      "The multiplier of Machine-gun fire rate": 0.7,
+      "Amount of Machine-gun burst shots": 5,
+      "The time between shots of the main gun [sec.]": 15.0,
+      "The time between shots of the main gun in a fire rate [sec.]": 0.25,
+      "Numbers of crates": 3,
+      "Open the crates immediately after spawn": true,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 3,
+          "Maximum Unique Items": 3,
+          "Item Pool": [
+            {
+              "Shortname": "ammo.rocket.basic",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 10.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.mlrs",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rifle.explosive",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 20,
+              "Maximum Amount": 40
+            },
+            {
+              "Shortname": "ammo.rocket.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.hv",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.seeker",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            }
+          ]
+        }
+      },
+      "NPC preset": "biker_grenadelauncher_medium",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(0.624, 1.4, -3)",
+          "Rotation": "(0, 180, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(-0.624, 1.4, -3)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "bradley_hard",
+      "HP": 600.0,
+      "Damage multiplier from Bradley to buildings (-1 - do not change)": 0.0,
+      "The viewing distance": 90.0,
+      "Radius of search": 90.0,
+      "The multiplier of Machine-gun aim cone": 1.5,
+      "The multiplier of Machine-gun fire rate": 0.7,
+      "Amount of Machine-gun burst shots": 5,
+      "The time between shots of the main gun [sec.]": 15.0,
+      "The time between shots of the main gun in a fire rate [sec.]": 0.25,
+      "Numbers of crates": 3,
+      "Open the crates immediately after spawn": true,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 4,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "explosive.timed",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.grenadelauncher.he",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 15
+            },
+            {
+              "Shortname": "ammo.rocket.basic",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rocket.mlrs",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rifle.explosive",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 40,
+              "Maximum Amount": 60
+            },
+            {
+              "Shortname": "ammo.rocket.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rocket.hv",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            }
+          ]
+        }
+      },
+      "NPC preset": "carnpc_grenadelauncher_hard",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(0.624, 1.4, -3)",
+          "Rotation": "(0, 180, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(-0.624, 1.4, -3)",
+          "Rotation": "(0, 180, 0)"
+        }
+      ],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "bradley_samsite_nightmare",
+      "HP": 1000.0,
+      "Damage multiplier from Bradley to buildings (-1 - do not change)": 0.0,
+      "The viewing distance": 95.0,
+      "Radius of search": 95.0,
+      "The multiplier of Machine-gun aim cone": 1.1,
+      "The multiplier of Machine-gun fire rate": 1.0,
+      "Amount of Machine-gun burst shots": 7,
+      "The time between shots of the main gun [sec.]": 12.0,
+      "The time between shots of the main gun in a fire rate [sec.]": 0.25,
+      "Numbers of crates": 3,
+      "Open the crates immediately after spawn": true,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 4,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "explosive.timed",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.grenadelauncher.he",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 15
+            },
+            {
+              "Shortname": "ammo.rocket.basic",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rocket.mlrs",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rifle.explosive",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 40,
+              "Maximum Amount": 60
+            },
+            {
+              "Shortname": "ammo.rocket.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rocket.hv",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            }
+          ]
+        }
+      },
+      "NPC preset": "carnpc_ak_raid_nightmare_2",
+      "Number of NPCs": 0,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(0.624, 1.4, -3)",
+          "Rotation": "(0, 180, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(-0.624, 1.4, -3)",
+          "Rotation": "(0, 180, 0)"
+        },
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/bikepassengerseat.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "",
+          "Position": "(1.75, 1.234, 1.4)",
+          "Rotation": "(0, 90, 0)"
+        }
+      ],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": [
+        {
+          "Preset name": "samsite_default",
+          "Position": "(0.238, 1.5, -0.29)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ]
+    }
+  ],
+  "Sedan Configurations": [
+    {
+      "Name": "sedan_easy",
+      "HP": 500.0,
+      "NPC preset": "sedan_npc_easy",
+      "Number of NPCs": 1,
+      "Locations of additional NPCs": [],
+      "Crates": [
+        {
+          "Preset name": "crate_normal_weapon_easy",
+          "Position": "(0, 1.734, 0.55)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_normal_weapon_easy",
+          "Position": "(0, 1.734, -0.35)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_normal_explosive_easy",
+          "Position": "(0, 1.229, -1.780)",
+          "Rotation": "(355.691, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(-0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "sedan_medium",
+      "HP": 500.0,
+      "NPC preset": "carnpc_shotgunm4_medium",
+      "Number of NPCs": 2,
+      "Locations of additional NPCs": [],
+      "Crates": [
+        {
+          "Preset name": "crate_elite_explosive_medium",
+          "Position": "(0, 1.734, 0.55)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_elite_weapon_medium",
+          "Position": "(0, 1.734, -0.35)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_normal_explosive_medium",
+          "Position": "(0, 1.229, -1.780)",
+          "Rotation": "(355.691, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(-0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "sedan_hard",
+      "HP": 500.0,
+      "NPC preset": "carnpc_lr300_hard",
+      "Number of NPCs": 2,
+      "Locations of additional NPCs": [],
+      "Crates": [
+        {
+          "Preset name": "crate_elite_explosive_hard",
+          "Position": "(0, 1.734, 0.55)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_elite_weapon_hard",
+          "Position": "(0, 1.734, -0.35)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_normal_explosive_hard",
+          "Position": "(0, 1.229, -1.780)",
+          "Rotation": "(355.691, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(-0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Name": "sedan_nightmare",
+      "HP": 500.0,
+      "NPC preset": "carnpc_ak_raid_nightmare_3",
+      "Number of NPCs": 2,
+      "Locations of additional NPCs": [],
+      "Crates": [
+        {
+          "Preset name": "crate_elite_explosive_hard",
+          "Position": "(0, 1.734, 0.55)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_elite_weapon_hard",
+          "Position": "(0, 1.734, -0.35)",
+          "Rotation": "(0, 0, 0)"
+        },
+        {
+          "Preset name": "crate_normal_explosive_hard",
+          "Position": "(0, 1.229, -1.780)",
+          "Rotation": "(355.691, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        },
+        {
+          "Preset name": "crate_invisible_fuel_easy",
+          "Position": "(-0.833, 1.09, -2.019)",
+          "Rotation": "(85.057, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    }
+  ],
+  "Bike Configurations": [
+    {
+      "Preset Name": "motorbike_easy",
+      "Prefab Name": "assets/content/vehicles/bikes/motorbike.prefab",
+      "HP": 300.0,
+      "NPC preset": "biker_m92_easy_2",
+      "Number of NPCs": 1,
+      "Locations of additional NPCs": [],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Preset Name": "motorbike_sidecar_easy",
+      "Prefab Name": "assets/content/vehicles/bikes/motorbike_sidecar.prefab",
+      "HP": 350.0,
+      "NPC preset": "biker_m92_easy_1",
+      "Number of NPCs": 2,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "biker_spas12_easy",
+          "Position": "(0, 0.45, -0.45)",
+          "Rotation": "(15, 0, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "crate_basic_techparts_easy",
+          "Position": "(0.715, 0.354, -0.712)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    },
+    {
+      "Preset Name": "motorbike_sidecar_medium",
+      "Prefab Name": "assets/content/vehicles/bikes/motorbike_sidecar.prefab",
+      "HP": 350.0,
+      "NPC preset": "biker_mp5_medium",
+      "Number of NPCs": 2,
+      "Locations of additional NPCs": [
+        {
+          "Enable spawn?": true,
+          "Seat prefab": "assets/prefabs/vehicle/seats/attackheligunner.prefab",
+          "Will the NPC dismount when the vehicle stops?": true,
+          "NPC preset (Empty - as in a vehicle)": "biker_grenadelauncher_medium",
+          "Position": "(0, 0.45, -0.45)",
+          "Rotation": "(15, 0, 0)"
+        }
+      ],
+      "Crates": [
+        {
+          "Preset name": "crate_basic_resources_medium",
+          "Position": "(0.715, 0.354, -0.712)",
+          "Rotation": "(0, 0, 0)"
+        }
+      ],
+      "Turrets": [],
+      "SamSites": []
+    }
+  ],
+  "Karuza Car Configurations": [
+    {
+      "Preset Name": "duneBuggie",
+      "Prefab Name": "assets/custom/dunebuggie.prefab",
+      "NPC preset": "biker_m92_easy_2",
+      "Number of NPCs": 1,
+      "Locations of additional NPCs": [],
+      "Crates": [],
+      "Turrets": [],
+      "SamSites": []
+    }
+  ],
+  "Heli Configurations": [
+    {
+      "Name": "heli_hard",
+      "HP": 8000.0,
+      "HP of the main rotor": 600.0,
+      "HP of tail rotor": 300.0,
+      "Numbers of crates": 2,
+      "Flying height": 50.0,
+      "Bullet speed": 250.0,
+      "Bullet Damage": 20.0,
+      "The distance to which the helicopter can move away from the convoy": 250.0,
+      "The time for which the helicopter can leave the convoy to attack the target [sec.]": 30.0,
+      "The helicopter will not aim for the nearest monument at death [true/false]": true,
+      "Open the crates immediately after spawn": true,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "heli_nightmare",
+      "HP": 12000.0,
+      "HP of the main rotor": 1000.0,
+      "HP of tail rotor": 500.0,
+      "Numbers of crates": 3,
+      "Flying height": 50.0,
+      "Bullet speed": 250.0,
+      "Bullet Damage": 20.0,
+      "The distance to which the helicopter can move away from the convoy": 250.0,
+      "The time for which the helicopter can leave the convoy to attack the target [sec.]": 20.0,
+      "The helicopter will not aim for the nearest monument at death [true/false]": true,
+      "Open the crates immediately after spawn": true,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Turret Configurations": [
+    {
+      "Preset Name": "turret_minigun_hard",
+      "Health": 500.0,
+      "Weapon ShortName": "minigun",
+      "Ammo ShortName": "ammo.rifle",
+      "Number of ammo": 500,
+      "Target detection range (0 - do not change)": 100.0,
+      "Target loss range (0 - do not change)": 0.0
+    },
+    {
+      "Preset Name": "turret_minigun_nightmare",
+      "Health": 500.0,
+      "Weapon ShortName": "minigun",
+      "Ammo ShortName": "ammo.rifle",
+      "Number of ammo": 800,
+      "Target detection range (0 - do not change)": 100.0,
+      "Target loss range (0 - do not change)": 0.0
+    }
+  ],
+  "SamSite Configurations": [
+    {
+      "Preset Name": "samsite_default",
+      "Health": 1000.0,
+      "Number of ammo": 100
+    }
+  ],
+  "Crate presets": [
+    {
+      "Preset Name": "crate_normal_weapon_easy",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "smg.2",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "pistol.m92",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "shotgun.spas12",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.thompson",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.semiauto",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_normal_explosive_easy",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 4,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "grenade.f1",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "weapon.mod.silencer",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "weapon.mod.extendedmags",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "grenade.beancan",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "explosive.satchel",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "grenade.molotov",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_basic_techparts_easy",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_basic.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 50,
+              "Maximum Amount": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_invisible_fuel_easy",
+      "Prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_basic.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 2,
+          "Maximum Unique Items": 2,
+          "Item Pool": [
+            {
+              "Shortname": "lowgradefuel",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            },
+            {
+              "Shortname": "crude.oil",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_basic_resources_medium",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_basic.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 9,
+          "Maximum Unique Items": 9,
+          "Item Pool": [
+            {
+              "Shortname": "metal.fragments",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1500,
+              "Maximum Amount": 3000
+            },
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 300
+            },
+            {
+              "Shortname": "diesel_barrel",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "cloth",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 200,
+              "Maximum Amount": 300
+            },
+            {
+              "Shortname": "leather",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 200
+            },
+            {
+              "Shortname": "charcoal",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 2000,
+              "Maximum Amount": 4000
+            },
+            {
+              "Shortname": "gunpowder",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 250,
+              "Maximum Amount": 750
+            },
+            {
+              "Shortname": "sulfur",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 750,
+              "Maximum Amount": 1250
+            },
+            {
+              "Shortname": "metal.refined",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 75,
+              "Maximum Amount": 125
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_normal_explosive_medium",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 4,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "weapon.mod.holosight",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "weapon.mod.silencer",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "weapon.mod.extendedmags",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "grenade.molotov",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "grenade.f1",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "grenade.flashbang",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_elite_weapon_medium",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_elite.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 2,
+          "Maximum Unique Items": 2,
+          "Item Pool": [
+            {
+              "Shortname": "rifle.bolt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.thompson",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.semiauto",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.2",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.lr300",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.mp5",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "hmlmg",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_elite_explosive_medium",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_elite.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 3,
+          "Maximum Unique Items": 3,
+          "Item Pool": [
+            {
+              "Shortname": "ammo.rocket.basic",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.mlrs",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rifle.explosive",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 20,
+              "Maximum Amount": 40
+            },
+            {
+              "Shortname": "ammo.rocket.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.hv",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.seeker",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_invisible_normal_medium",
+      "Prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 6,
+          "Maximum Unique Items": 6,
+          "Item Pool": [
+            {
+              "Shortname": "smg.2",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.mp5",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rifle",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 64,
+              "Maximum Amount": 128
+            },
+            {
+              "Shortname": "roadsign.kilt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 5,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "metal.facemask",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "metal.plate.torso",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.bolt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "hmlmg",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.thompson",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.semiauto",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_invisible_normal_hard",
+      "Prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 9,
+          "Maximum Unique Items": 9,
+          "Item Pool": [
+            {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "lmg.m249",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.l96",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.bolt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.mp5",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.lr300",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "roadsign.kilt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "black.raspberries",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 15
+            },
+            {
+              "Shortname": "metal.facemask",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "metal.plate.torso",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "metal.plate.torso",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rifle",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 128,
+              "Maximum Amount": 256
+            },
+            {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 20
+            },
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 5,
+              "Maximum Amount": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_elite_explosive_hard",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_elite.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 4,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "explosive.timed",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.grenadelauncher.he",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 15
+            },
+            {
+              "Shortname": "ammo.rocket.basic",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rocket.mlrs",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rifle.explosive",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 40,
+              "Maximum Amount": 60
+            },
+            {
+              "Shortname": "ammo.rocket.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "ammo.rocket.hv",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_elite_weapon_hard",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_elite.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 3,
+          "Maximum Unique Items": 3,
+          "Item Pool": [
+            {
+              "Shortname": "rifle.bolt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "lmg.m249",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.l96",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.lr300",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.mp5",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_normal_explosive_hard",
+      "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": 0.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 4,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "weapon.mod.holosight",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "weapon.mod.silencer",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "weapon.mod.extendedmags",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "grenade.molotov",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "grenade.f1",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "grenade.flashbang",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "frige_safe_hard",
+      "Prefab": "assets/prefabs/deployable/fridge/fridge.deployed.prefab",
+      "SkinID (0 - default)": 3005880420,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 9,
+          "Maximum Unique Items": 9,
+          "Item Pool": [
+            {
+              "Shortname": "metal.fragments",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 7500,
+              "Maximum Amount": 15000
+            },
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 500,
+              "Maximum Amount": 1500
+            },
+            {
+              "Shortname": "diesel_barrel",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 5,
+              "Maximum Amount": 10
+            },
+            {
+              "Shortname": "cloth",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1000,
+              "Maximum Amount": 1500
+            },
+            {
+              "Shortname": "leather",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 500,
+              "Maximum Amount": 1000
+            },
+            {
+              "Shortname": "charcoal",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10000,
+              "Maximum Amount": 20000
+            },
+            {
+              "Shortname": "gunpowder",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 2000,
+              "Maximum Amount": 3500
+            },
+            {
+              "Shortname": "sulfur",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 2500,
+              "Maximum Amount": 5000
+            },
+            {
+              "Shortname": "metal.refined",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 350,
+              "Maximum Amount": 500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "crate_invisible_normal_nightmare",
+      "Prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+      "SkinID (0 - default)": 0,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 9,
+          "Maximum Unique Items": 9,
+          "Item Pool": [
+            {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "lmg.m249",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.l96",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.bolt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.mp5",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.lr300",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "roadsign.kilt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "black.raspberries",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 15
+            },
+            {
+              "Shortname": "metal.facemask",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "metal.plate.torso",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "metal.plate.torso",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rifle",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 128,
+              "Maximum Amount": 256
+            },
+            {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 20
+            },
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 5,
+              "Maximum Amount": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "frige_safe_nightmare",
+      "Prefab": "assets/prefabs/deployable/fridge/fridge.deployed.prefab",
+      "SkinID (0 - default)": 3005880420,
+      "Time to unlock the crates (LockedCrate) [sec.]": -1.0,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 9,
+          "Maximum Unique Items": 9,
+          "Item Pool": [
+            {
+              "Shortname": "metal.fragments",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10000,
+              "Maximum Amount": 17500
+            },
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1000,
+              "Maximum Amount": 2000
+            },
+            {
+              "Shortname": "diesel_barrel",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10,
+              "Maximum Amount": 15
+            },
+            {
+              "Shortname": "cloth",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1500,
+              "Maximum Amount": 2500
+            },
+            {
+              "Shortname": "leather",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 750,
+              "Maximum Amount": 1500
+            },
+            {
+              "Shortname": "charcoal",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 15000,
+              "Maximum Amount": 25000
+            },
+            {
+              "Shortname": "gunpowder",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 2500,
+              "Maximum Amount": 4000
+            },
+            {
+              "Shortname": "sulfur",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3000,
+              "Maximum Amount": 6000
+            },
+            {
+              "Shortname": "metal.refined",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 350,
+              "Maximum Amount": 500
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "NPC Configurations": [
+    {
+      "Preset Name": "biker_m92_easy_1",
+      "Name": "Forest Bandit",
+      "Health": 100.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "mask.bandana",
+          "skinID (0 - default)": 3255213783
+        },
+        {
+          "ShortName": "hat.boonie",
+          "skinID (0 - default)": 2557702256
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 1282142258
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2080977144
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "pistol.m92",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight"
+          ],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 60.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.4,
+      "Aim Cone Scale": 1.5,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 2
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "bandage",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "biker_m92_easy_2",
+      "Name": "Road Bandit",
+      "Health": 100.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "coffeecan.helmet",
+          "skinID (0 - default)": 2803024592
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2811533300
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2811533832
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 2816776847
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "pistol.m92",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight"
+          ],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 60.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.4,
+      "Aim Cone Scale": 1.5,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 2,
+              "Maximum Amount": 2
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "bandage",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            },
+            {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "biker_spas12_easy",
+      "Name": "Hunter",
+      "Health": 125.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 961066582
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 961084105
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 961096730
+        },
+        {
+          "ShortName": "burlap.gloves",
+          "skinID (0 - default)": 961103399
+        },
+        {
+          "ShortName": "hat.beenie",
+          "skinID (0 - default)": 594202145
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "shotgun.spas12",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight"
+          ],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 60.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.8,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 2,
+          "Maximum Unique Items": 4,
+          "Item Pool": [
+            {
+              "Shortname": "ammo.shotgun",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 15,
+              "Maximum Amount": 30
+            },
+            {
+              "Shortname": "ammo.shotgun.slug",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 15,
+              "Maximum Amount": 30
+            },
+            {
+              "Shortname": "ammo.rifle",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 60,
+              "Maximum Amount": 80
+            },
+            {
+              "Shortname": "ammo.pistol.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 60,
+              "Maximum Amount": 80
+            },
+            {
+              "Shortname": "ammo.pistol",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 60,
+              "Maximum Amount": 80
+            },
+            {
+              "Shortname": "ammo.shotgun.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 15,
+              "Maximum Amount": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "sedan_npc_easy",
+      "Name": "Armored Bandit",
+      "Health": 150.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "coffeecan.helmet",
+          "skinID (0 - default)": 3312398531
+        },
+        {
+          "ShortName": "roadsign.jacket",
+          "skinID (0 - default)": 3312406908
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 3312413579
+        },
+        {
+          "ShortName": "roadsign.gloves",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 1582399729
+        },
+        {
+          "ShortName": "tshirt",
+          "skinID (0 - default)": 1582403431
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "smg.thompson",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight"
+          ],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 60.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.4,
+      "Aim Cone Scale": 1.3,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": true,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "explosive.timed",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 4.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rocket.basic",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 4.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 4.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rocket.launcher",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 4.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.2",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "pistol.m92",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.thompson",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "shotgun.spas12",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.semiauto",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "biker_grenadelauncher_medium",
+      "Name": "Bomber Man",
+      "Health": 200.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "coffeecan.helmet",
+          "skinID (0 - default)": 2350097716
+        },
+        {
+          "ShortName": "jacket",
+          "skinID (0 - default)": 2395820290
+        },
+        {
+          "ShortName": "tshirt",
+          "skinID (0 - default)": 856391177
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2080977144
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "multiplegrenadelauncher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.2,
+      "Aim Cone Scale": 1.5,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "biker_mp5_medium",
+      "Name": "Armored Road Bandit",
+      "Health": 125.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "coffeecan.helmet",
+          "skinID (0 - default)": 1269589560
+        },
+        {
+          "ShortName": "roadsign.jacket",
+          "skinID (0 - default)": 1706089885
+        },
+        {
+          "ShortName": "roadsign.gloves",
+          "skinID (0 - default)": 2806216923
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2811533300
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2080977144
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "smg.mp5",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 7.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 1.4,
+      "Aim Cone Scale": 0.8,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_shotgunm4_medium",
+      "Name": "Madman",
+      "Health": 170.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "coffeecan.helmet",
+          "skinID (0 - default)": 1624104393
+        },
+        {
+          "ShortName": "roadsign.jacket",
+          "skinID (0 - default)": 1624100124
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 1624102935
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2099705103
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2099701364
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "shotgun.m4",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight"
+          ],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 1.5,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_lr300_medium",
+      "Name": "Radiation Liquidator",
+      "Health": 175.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "hat.gas.mask",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 1740068457
+        },
+        {
+          "ShortName": "roadsign.jacket",
+          "skinID (0 - default)": 1740065674
+        },
+        {
+          "ShortName": "roadsign.gloves",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2649552973
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2649555568
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "diving.tank",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.lr300",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 7.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_lr300_raid_medium",
+      "Name": "Raider",
+      "Health": 175.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "clatter.helmet",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "attire.hide.poncho",
+          "skinID (0 - default)": 2819301476
+        },
+        {
+          "ShortName": "roadsign.gloves",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2984978438
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2080977144
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.lr300",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "rocket.launcher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 7.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_lr300_hard",
+      "Name": "Defender",
+      "Health": 175.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 3274815691
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 3274816373
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 3299983586
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 3322149888
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 3322151159
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 819211835
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.lr300",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 7.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_lr300_raid_hard",
+      "Name": "Armored Raider",
+      "Health": 175.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 1644415525
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 1644419309
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2282815003
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2282817402
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 919261524
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.lr300",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "rocket.launcher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 7.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_grenadelauncher_hard",
+      "Name": "Armored Bomber Man",
+      "Health": 175.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 2810942233
+        },
+        {
+          "ShortName": "jacket",
+          "skinID (0 - default)": 2843424058
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 2823738497
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2814837980
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2814838951
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 919261524
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "multiplegrenadelauncher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.5,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_bolt_hard",
+      "Name": "Sniper",
+      "Health": 175.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "gloweyes",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 2226597543
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 2226598382
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2282815003
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2282817402
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 919261524
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.bolt",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.lasersight",
+            "weapon.mod.8x.scope"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_flamethrower_hard",
+      "Name": "Fire Boss",
+      "Health": 1500.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "scientistsuit_heavy",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "military flamethrower",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 3.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_minigun_hard",
+      "Name": "Boss",
+      "Health": 1500.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "scientistsuit_heavy",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "minigun",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 3.5,
+      "Roam Range": 10.0,
+      "Chase Range": 110.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 110.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 0.7,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_ak_raid_nightmare",
+      "Name": "Armored Raider",
+      "Health": 500.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 3274815691
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 3274816373
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 3299983586
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 3318206106
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 3318207180
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 819211835
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.ak",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "rocket.launcher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 7.5,
+      "Roam Range": 10.0,
+      "Chase Range": 130.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 130.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_1.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_ak_raid_nightmare_2",
+      "Name": "Armored Raider",
+      "Health": 500.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 2810942233
+        },
+        {
+          "ShortName": "jacket",
+          "skinID (0 - default)": 2843424058
+        },
+        {
+          "ShortName": "roadsign.kilt",
+          "skinID (0 - default)": 2823738497
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 2814837980
+        },
+        {
+          "ShortName": "hoodie",
+          "skinID (0 - default)": 2814838951
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 919261524
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.ak",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "rocket.launcher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 130.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 130.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.5,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": false,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": false,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": false,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": true,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_ak_raid_nightmare_3",
+      "Name": "Armored Raider",
+      "Health": 500.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "burlap.shirt",
+          "skinID (0 - default)": 636287439
+        },
+        {
+          "ShortName": "metal.facemask",
+          "skinID (0 - default)": 2703876402
+        },
+        {
+          "ShortName": "tactical.gloves",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "metal.plate.torso",
+          "skinID (0 - default)": 891976364
+        },
+        {
+          "ShortName": "pants",
+          "skinID (0 - default)": 636287180
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 636286960
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "rifle.ak",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [
+            "weapon.mod.flashlight",
+            "weapon.mod.holosight"
+          ],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "rocket.launcher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "grenade.f1",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 130.0,
+      "Attack Range Multiplier": 3.0,
+      "Sense Range": 130.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.4,
+      "Aim Cone Scale": 1.3,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": true,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_smoke_nightmare",
+      "Name": "Smoker",
+      "Health": 500.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "heavy.plate.helmet",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "heavy.plate.jacket",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "heavy.plate.pants",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "tactical.gloves",
+          "skinID (0 - default)": 0
+        },
+        {
+          "ShortName": "shoes.boots",
+          "skinID (0 - default)": 636286960
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "multiplegrenadelauncher",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": "40mm_grenade_smoke"
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "grenade.f1",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 5.0,
+      "Roam Range": 10.0,
+      "Chase Range": 130.0,
+      "Attack Range Multiplier": 3.0,
+      "Sense Range": 130.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.4,
+      "Aim Cone Scale": 1.3,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_flamethrower_nightmare",
+      "Name": "Fire Boss",
+      "Health": 3000.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "scientistsuit_heavy",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "military flamethrower",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 3.5,
+      "Roam Range": 10.0,
+      "Chase Range": 130.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 130.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 1.0,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Preset Name": "carnpc_minigun_nightmare",
+      "Name": "Boss",
+      "Health": 3000.0,
+      "Kit": "",
+      "Wear items": [
+        {
+          "ShortName": "scientistsuit_heavy",
+          "skinID (0 - default)": 0
+        }
+      ],
+      "Belt items": [
+        {
+          "ShortName": "minigun",
+          "Amount": 1,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        },
+        {
+          "ShortName": "syringe.medical",
+          "Amount": 10,
+          "skinID (0 - default)": 0,
+          "Mods": [],
+          "Ammo": ""
+        }
+      ],
+      "Speed": 3.5,
+      "Roam Range": 10.0,
+      "Chase Range": 130.0,
+      "Attack Range Multiplier": 1.0,
+      "Sense Range": 130.0,
+      "Memory duration [sec.]": 10.0,
+      "Scale damage": 0.65,
+      "Aim Cone Scale": 0.7,
+      "Detect the target only in the NPC's viewing vision cone?": false,
+      "Vision Cone": 135.0,
+      "Turret damage scale": 1.0,
+      "Disable radio effects? [true/false]": false,
+      "Should remove the corpse?": true,
+      "Sleep distance (0 - never sleep)": 100.0,
+      "Ignore wounded players? [true/false]": false,
+      "Loot": {
+        "Allow AlphaLoot to Modify Loot": true,
+        "Use AlphaLoot Preset with This Name": "",
+        "Allow LoottableStacksizeGUI to Modify Loot": true,
+        "Use LoottableStacksizeGUI Preset with This Name": "",
+        "Allow CustomLoot to Modify Loot": true,
+        "Use CustomLoot Preset with This Name": "",
+        "Clear the container before adding items/prefabs": false,
+        "Prefabs Table": {
+          "Enabled": false,
+          "Minimum Unique Prefabs": 1,
+          "Maximum Unique Prefabs": 1,
+          "Prefab Pool": [
+            {
+              "Prefab": "assets/bundled/prefabs/radtown/underwater_labs/tech_parts_2.prefab",
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 3
+            }
+          ]
+        },
+        "Items Table": {
+          "Enabled": false,
+          "Use Chance-Based Spawn (Ignore Min/Max Unique Items)": false,
+          "Minimum Unique Items": 1,
+          "Maximum Unique Items": 1,
+          "Item Pool": [
+            {
+              "Shortname": "largemedkit",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Marker Setting": {
+    "Do you use the Marker? [true/false]": true,
+    "Use a shop marker? [true/false]": true,
+    "Use a circular marker? [true/false]": true,
+    "Radius": 0.2,
+    "Alpha": 0.6,
+    "Marker color": {
+      "r": 0.294,
+      "g": 0.0,
+      "b": 0.51
+    },
+    "Outline color": {
+      "r": 0.545,
+      "g": 0.0,
+      "b": 0.0
+    }
+  },
+  "Event zone": {
+    "Create a PVP zone in the convoy stop zone? (only for those who use the TruePVE plugin)[true/false]": true,
+    "Use the dome? [true/false]": true,
+    "Darkening the dome": 5,
+    "Use a colored border? [true/false]": true,
+    "Border color (0 - blue, 1 - green, 2 - purple, 3 - red)": 2,
+    "Brightness of the color border": 5
+  },
+  "Notification Settings": {
+    "Use a chat? [true/false]": false,
+    "The time until the end of the event, when a message is displayed about the time until the end of the event [sec]": [
+      300,
+      60,
+      30,
+      5
+    ],
+    "Facepunch Game Tips setting": {
+      "Use Facepunch Game Tips (notification bar above hotbar)? [true/false]": false,
+      "Style (0 - Blue Normal, 1 - Red Normal, 2 - Blue Long, 3 - Blue Short, 4 - Server Event)": 2
+    }
+  },
+  "GUI": {
+    "Use the Countdown GUI? [true/false]": true,
+    "Vertical offset": -56
+  },
+  "Supported Plugins": {
+    "PVE Mode Setting": {
+      "Use the PVE mode of the plugin? [true/false]": false,
+      "The owner will immediately be the one who stopped the convoy": false,
+      "If a player has a cooldown and the event has NO OWNERS, then he will not be able to interact with the event? [true/false]": false,
+      "If a player has a cooldown, and the event HAS AN OWNER, then he will not be able to interact with the event, even if he is on a team with the owner? [true/false]": false,
+      "Allow only the owner or his teammates to loot crates? [true/false]": true,
+      "Display the name of the event owner on a marker on the map? [true/false]": true,
+      "The amount of damage that the player has to do to become the Event Owner": 500.0,
+      "Damage coefficients for calculate to become the Event Owner.": {
+        "Npc": 1.0,
+        "Bradley": 2.0,
+        "Helicopter": 2.0,
+        "Turret": 1.0
+      },
+      "Can the non-owner of the event loot the crates? [true/false]": false,
+      "Can the non-owner of the event hack locked crates? [true/false]": false,
+      "Can the non-owner of the event loot NPC corpses? [true/false]": false,
+      "Can an Npc attack a non-owner of the event? [true/false]": false,
+      "Can Bradley attack a non-owner of the event? [true/false]": false,
+      "Can Turret attack a non-owner of the event? [true/false]": false,
+      "Can Helicopter attack a non-owner of the event? [true/false]": false,
+      "Can the non-owner of the event do damage to Bradley? [true/false]": false,
+      "Can the non-owner of the event deal damage to the NPC? [true/false]": false,
+      "Can the non-owner of the event do damage to Helicopter? [true/false]": false,
+      "Can the non-owner of the event do damage to Turret? [true/false]": false,
+      "Allow the non-owner of the event to enter the event zone? [true/false]": false,
+      "Allow a player who has an active cooldown of the Event Owner to enter the event zone? [true/false]": true,
+      "The time that the Event Owner may not be inside the event zone [sec.]": 300,
+      "The time until the end of Event Owner status when it is necessary to warn the player [sec.]": 60,
+      "Prevent the actions of the RestoreUponDeath plugin in the event zone? [true/false]": true,
+      "The time that the player can`t become the Event Owner, after the end of the event and the player was its owner [sec.]": 86400.0
+    },
+    "Economy Setting": {
+      "Enable economy": true,
+      "Which economy plugins do you want to use? (Economics, Server Rewards, IQEconomic)": [
+        "Economics",
+        "Server Rewards",
+        "IQEconomic"
+      ],
+      "The minimum value that a player must collect to get points for the economy": 0.0,
+      "The minimum value that a winner must collect to make the commands work": 0.0,
+      "Looting of crates": {
+        "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab": 0.4
+      },
+      "Killing an NPC": 1.0,
+      "Killing an Bradley": 5.0,
+      "Killing an Heli": 5.0,
+      "Killing an sedan": 0.0,
+      "Killing an mpdular Car": 0.0,
+      "Killing a turret": 1.0,
+      "Killing a Samsite": 0.0,
+      "Hacking a locked crate": 1.0,
+      "List of commands that are executed in the console at the end of the event ({steamid} - the player who collected the highest number of points)": []
+    },
+    "BetterNpc Setting": {
+      "Allow Npc spawn after destroying Bradley": false,
+      "Allow Npc spawn after destroying Heli": false
+    },
+    "GUI Announcements setting": {
+      "Do you use the GUI Announcements? [true/false]": false,
+      "Banner color": "Grey",
+      "Text color": "White",
+      "Adjust Vertical Position": 0.03
+    },
+    "Notify setting": {
+      "Do you use the Notify? [true/false]": true,
+      "Type": 13
+    },
+    "DiscordMessages setting": {
+      "Webhook URL": "https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks",
+      "Do you use the Discord? [true/false]": false,
+      "Embed Color (DECIMAL)": 13516583,
+      "Keys of required messages": [
+        "PreStart",
+        "EventStart",
+        "PreFinish",
+        "Finish",
+        "StartHackCrate"
+      ]
+    },
+    "LifeSupport setting": {
+      "Disable the LifeSupport plugin in the event zone? [true/false]": false
+    }
+  }
+}

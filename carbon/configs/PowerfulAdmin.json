@@ -1,0 +1,76 @@
+{
+  "Storage": "Sqlite",
+  "MySql": {
+    "Host": "127.0.0.1",
+    "Port": 3306,
+    "Database": "powerfuladmin",
+    "User": "root",
+    "Password": ""
+  },
+  "LastStorage": "sqlite",
+  "Settings": {
+    "Global toggle states": {},
+    "Global text inputs": {},
+    "Global dropdown selections": {
+      "n.provider": "off"
+    },
+    "Global slider values": {}
+  },
+  "SetupDone": false,
+  "PanelOpened": true,
+  "QuickButtons": [
+    {
+      "Id": "warn",
+      "Name": "Warning",
+      "Target": "Player",
+      "Command": "/pm %STEAM_ID% Follow the server rules",
+      "Icon": "assets/icons/warning_2.png",
+      "Color": "0.839 0.698 0.416 1",
+      "Permission": "",
+      "Confirm": false,
+      "Places": "Popup, Map",
+      "Order": 0,
+      "Enabled": true
+    },
+    {
+      "Id": "tphere",
+      "Name": "Teleport to Me",
+      "Target": "Player",
+      "Command": "teleport.topos %STEAM_ID% %ADMIN_X% %ADMIN_Y% %ADMIN_Z%",
+      "Icon": "assets/icons/pet_move.png",
+      "Color": "0.494 0.612 0.769 1",
+      "Permission": "",
+      "Confirm": false,
+      "Places": "Map",
+      "Order": 1,
+      "Enabled": true
+    },
+    {
+      "Id": "airdrop",
+      "Name": "Airdrop",
+      "Target": "Player",
+      "Command": "spawn cargo_plane",
+      "Icon": "assets/icons/descend.png",
+      "Color": "0.482 0.682 0.557 1",
+      "Permission": "",
+      "Confirm": true,
+      "Places": "Widget, Dashboard",
+      "Order": 2,
+      "Enabled": true
+    }
+  ],
+  "MapActions": [
+    "tp",
+    "inv",
+    "spectate",
+    "kick",
+    "freeze",
+    "heal",
+    "perms"
+  ],
+  "Version": {
+    "Major": 1,
+    "Minor": 2,
+    "Patch": 7
+  }
+}

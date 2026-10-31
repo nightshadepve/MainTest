@@ -1,0 +1,164 @@
+{
+  "General plugin settings": {
+    "Log player actions to file (true = yes / false = no)": false,
+    "Use sound effects (true = yes / false = no)": true,
+    "Use GameTip messages instead of chat (true = yes / false = no)": false,
+    "Wake the player immediately after teleport (otherwise they remain 'sleeping') (true = yes / false = no)": true,
+    "List of monuments where teleportation is forbidden (applies to home points / teleport-to-player / warps)": [],
+    "IQChat settings": {
+      "IQChat : Custom prefix in the chat": "[Mr. Universe]",
+      "IQChat : Custom avatar in the chat (Steam64ID) (If required)": "0"
+    },
+    "SimpleStatus settings": {
+      "SimpleStatus: Enable plugin support": true,
+      "SimpleStatus: UI settings for teleportation": {
+        "SimpleStatus: Background panel color": "0.3 0.3 0.3 0.5",
+        "SimpleStatus: Prefix translations [LanguageKey] = Text": {
+          "ru": "Телепортация",
+          "en": "Teleporation"
+        },
+        "SimpleStatus: Prefix color": "0.5647059 0.5490196 0.5333334 1",
+        "SimpleStatus: UI sprite": "assets/icons/stopwatch.png",
+        "SimpleStatus: Sprite color": "0.5647059 0.5490196 0.5333334 1"
+      }
+    }
+  },
+  "Teleport-to-player settings": {
+    "Teleport request settings": {
+      "Offer to accept teleport requests in the UI (true = yes / false = no)": false,
+      "Teleportation mode: true - teleport the player to the position where the request was accepted; false - teleport the player to the other player regardless of where it was accepted": false,
+      "Allow players to send teleport requests via G-Map (true = yes / false = no)": false,
+      "Use instant teleport to a point via G-Map (true = yes / false = no) (requires admin rights or the iqteleportation.gmap permission)": false,
+      "Disable teleportation features on the server (tpr and tpa will be unavailable) (true = yes / false = no)": true,
+      "Forbid sending and accepting teleport requests while the player is in a vehicle (true); otherwise teleport directly into the vehicle if a seat is free (false)": true,
+      "Block sending and accepting teleport requests in a safe zone (true = yes / false = no)": false,
+      "Block sending and accepting teleport requests during raid block (true = yes / false = no)": true,
+      "Block sending and accepting teleport requests while the player is in the subway (train tunnels) (true = yes / false = no)": false,
+      "Block sending and accepting teleport requests while the player is in the Underwater Lab (true = yes / false = no)": true,
+      "Block sending and accepting teleport requests while the player is on the Cargo Ship (true = yes / false = no)": false,
+      "Block sending and accepting teleport requests while the player is in a hot air balloon (true = yes / false = no)": true,
+      "Block sending and accepting teleport requests while the player is cold (freezing) (true = yes / false = no)": false,
+      "Block sending and accepting teleport requests while the player is swimming (true = yes / false = no)": true,
+      "Block sending and accepting teleport requests while the player is under radiation (true = yes / false = no)": false,
+      "Block sending and accepting teleport requests while the player is bleeding (true = yes / false = no)": false,
+      "Block sending and accepting teleport requests while the player is in another player's building privilege area (building blocked) (true = yes / false = no)": true,
+      "Allow teleportation only to friends (true = yes / false = no)": false
+    },
+    "Teleport-to-player cooldown settings": {
+      "Default count for players without permissions": 60,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 10,
+        "iqteleportation.premium": 5,
+        "iqteleportation.gold": 0
+      }
+    },
+    "Teleport-to-player countdown settings": {
+      "Default count for players without permissions": 20,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 5,
+        "iqteleportation.premium": 5,
+        "iqteleportation.gold": 2
+      }
+    },
+    "Teleport-to-player limit settings": {
+      "Use player teleport-to-player limits (true = yes / false = no)": false,
+      "Hours until player limits are reset": 24,
+      "Player teleport limit settings": {
+        "Default count for players without permissions": 15,
+        "Count overrides for players with permissions [Permission] = Count": {
+          "iqteleportation.vip": 20,
+          "iqteleportation.premium": 25,
+          "iqteleportation.gold": 30
+        }
+      }
+    }
+  },
+  "Home points settings": {
+    "Allow teleporting to a friend's home point (true = yes / false = no)": true,
+    "Enable UI with recent home points on G-Map (true = yes / false = no)": true,
+    "Offer setting a home point in the UI after placing a bed or sleeping bag (true = yes / false = no)": false,
+    "Allow players to teleport to a home point via G-Map (true = yes / false = no)": true,
+    "Block home teleports in a safe zone (true = yes / false = no)": false,
+    "Add a visual ping effect to the home point after it’s set (true = yes / false = no)": true,
+    "Add a marker on the player’s G-Map after setting a home (true = yes / false = no)": true,
+    "Permissions for setting home points": {
+      "Block setting a home point during raid block (true = yes / false = no)": true,
+      "Allow setting home points on tugboats (true = yes / false = no)": true,
+      "Allow setting home points on homemade boats (true - yes / false - no)": true,
+      "Allow setting home points in apartments (true = yes / false = no)": false,
+      "Allow setting home points only when building privilege is present (true = yes / false = no)": true,
+      "Allow setting home points only when authorized in the building privilege area (true = yes / false = no)": true
+    },
+    "Home point count settings": {
+      "Default count for players without permissions": 3,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 3,
+        "iqteleportation.premium": 4,
+        "iqteleportation.gold": 5
+      }
+    },
+    "Home teleport cooldown settings": {
+      "Default count for players without permissions": 10,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 5,
+        "iqteleportation.premium": 5,
+        "iqteleportation.gold": 0
+      }
+    },
+    "Home teleport countdown settings": {
+      "Default count for players without permissions": 10,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 5,
+        "iqteleportation.premium": 5,
+        "iqteleportation.gold": 0
+      }
+    },
+    "Home teleport limit settings": {
+      "Use player home-teleport limits (true = yes / false = no)": false,
+      "Hours until player limits are reset": 12,
+      "Home teleport limit settings": {
+        "Default count for players without permissions": 15,
+        "Count overrides for players with permissions [Permission] = Count": {
+          "iqteleportation.vip": 20,
+          "iqteleportation.premium": 25,
+          "iqteleportation.gold": 30
+        }
+      }
+    }
+  },
+  "Warp system settings": {
+    "Enable warp support (true = yes / false = no)": true,
+    "Block teleport to a warp if the player is hostile (safe-zone aggression) (true = yes / false = no)": true,
+    "Teleport-to-warp cooldown settings": {
+      "Default count for players without permissions": 20,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 10,
+        "iqteleportation.premium": 5,
+        "iqteleportation.gold": 0
+      }
+    },
+    "Teleport-to-warp countdown settings": {
+      "Default count for players without permissions": 30,
+      "Count overrides for players with permissions [Permission] = Count": {
+        "iqteleportation.vip": 0,
+        "iqteleportation.premium": 0,
+        "iqteleportation.gold": 0
+      }
+    },
+    "Permissions for teleporting to specific warps: [WarpKey] = Permission (otherwise available to everyone)": {
+      "warpName": "iqteleportation.warpPermission"
+    },
+    "Teleport-to-warp limit settings": {
+      "Use player teleport-to-warp limits (true = yes / false = no)": false,
+      "Hours until player limits are reset": 6,
+      "Teleport-to-warp limit settings": {
+        "Default count for players without permissions": 15,
+        "Count overrides for players with permissions [Permission] = Count": {
+          "iqteleportation.vip": 20,
+          "iqteleportation.premium": 25,
+          "iqteleportation.gold": 30
+        }
+      }
+    }
+  }
+}

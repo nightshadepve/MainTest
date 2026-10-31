@@ -1,0 +1,36 @@
+{
+  "Default Discord Webhook URL": "https://discord.com/api/webhooks/1512408041075507311/EPR-Xe41aW6oGK5nJ_VJJU4LJhRQnSNjE9vWQyL6anus8fjiXaIjSYd4M7GV7duj_9Lh",
+  "Embed Title": "Player Report Received",
+  "Embed Description": "A new report has been submitted",
+  "Embed Color (Decimal)": 15158332,
+  "Show Server Name In Embed": true,
+  "Include Timestamp": true,
+  "Show Player IP Addresses": false,
+  "Report Type Webhooks (leave empty to use default)": {
+    "racism_sexism_abusive": {
+      "Webhook URL (empty = use default)": "",
+      "Custom Embed Title (empty = use default)": "Abusive Behavior Report",
+      "Custom Embed Color (0 = use default)": 15158332
+    },
+    "cheating": {
+      "Webhook URL (empty = use default)": "",
+      "Custom Embed Title (empty = use default)": "Cheating Report",
+      "Custom Embed Color (0 = use default)": 16711680
+    },
+    "spamming": {
+      "Webhook URL (empty = use default)": "",
+      "Custom Embed Title (empty = use default)": "Spamming Report",
+      "Custom Embed Color (0 = use default)": 16776960
+    },
+    "offensive_name": {
+      "Webhook URL (empty = use default)": "",
+      "Custom Embed Title (empty = use default)": "Offensive Name Report",
+      "Custom Embed Color (0 = use default)": 16744272
+    },
+    "break_server_rules": {
+      "Webhook URL (empty = use default)": "",
+      "Custom Embed Title (empty = use default)": "Server Rules Violation Report",
+      "Custom Embed Color (0 = use default)": 16098851
+    }
+  }
+}

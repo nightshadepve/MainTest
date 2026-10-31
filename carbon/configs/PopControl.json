@@ -1,0 +1,22 @@
+{
+  "MaxPlayersOffset": 1,
+  "CooldownPeriodSeconds": 10.0,
+  "MaximumPopulation": 100,
+  "MinimumPopulation": 50,
+  "ConsoleMessagesEnabled": true,
+  "NeverBelowOnline": true,
+  "IncludeJoiningInScaling": true,
+  "IncludeQueuedInScaling": true,
+  "QueuedWeight": 1.0,
+  "QueueBuffer": 0,
+  "EnableChatCommands": true,
+  "EnablePeriodicBroadcasts": false,
+  "BroadcastIntervalSeconds": 300.0,
+  "PopCommandCooldownSeconds": 10.0,
+  "ShowPopCooldownFeedback": true,
+  "ColorLabel": "#ff2E36",
+  "ColorNumber": "#FFFFFF",
+  "BotName": "Population Bot",
+  "BotSteamId": 76561199680521298,
+  "UseMode2ForIcon": true
+}

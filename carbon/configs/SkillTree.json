@@ -1,0 +1,4607 @@
+{
+  "General settings": {
+    "Skill points per level": 2,
+    "Modified skill points per level based on permissions [must be higher than default]": {
+      "skilltree.points.vip": 3
+    },
+    "Maximum points a player can spend [default]": 200,
+    "Modified max skill points based on permissions [must be higher than default]": {
+      "skilltree.vip": 40
+    },
+    "Maximum level a player can get to": 100,
+    "Settings for respecing skill points [Disabled, All, Tree]": "All",
+    "Cost per point to respec [default]": 30.0,
+    "Cost per point to respec based on permissions [must be lower than default]": {
+      "skilltree.vip": 15.0
+    },
+    "Respec cost cap [0 = no limit]": 0.0,
+    "Permission based level requirement override": {},
+    "Permission based point requirement override": {},
+    "Currency type to respec [scrap, economics, srp, shoppystock, custom]": "scrap",
+    "ShoppyStock currency info [if currency type is set to shoppystock]": {
+      "Shop name": null
+    },
+    "If currency is set to custom, what are the details of the item": {
+      "displayName": "",
+      "shortname": "",
+      "skin": 0
+    },
+    "Multiplier increase after each respec [0.2 = a 20% increase in the cost to respec each time. 0 = no increase] [resets on wipe or data reset]": 0.0,
+    "Maximum value that the respec multiplier can get to [0 = no limit]": 0.0,
+    "List of rewards the player receives based on level": {},
+    "Require players to have specific tree permissions to open them": false,
+    "Show the quick navigation buttons to the player": true,
+    "Drop bag on death": true,
+    "XP pump bar settings": {
+      "Enable the xp bar?": true,
+      "Default xp bar offset - this is for any new player connecting to the server": {
+        "min_x": -365.713,
+        "min_y": 20.0,
+        "max_x": -233.287,
+        "max_y": 42.0
+      },
+      "Anchor points": {
+        "anchor_min": "1 0",
+        "anchor_max": "1 0"
+      },
+      "Colour of the pump bar": "0.5471698 0.3533202 0 0.6078432",
+      "Colour of the pump bar when in xp debt": "0.8 0 0 0.6078432",
+      "Font set for the pump bar": "robotocondensed-regular.ttf",
+      "Font size for the pump bar": 10,
+      "Pump bar formatting [1= (CurrentXP)/(TotalXP)] [2= (LevelCurrentXP)/(LevelTotalXP)] [3= (XPLeft) (%)]": 2,
+      "Display the prestige image next to the pump bar?": false
+    },
+    "Redownload all images when the plugin reloads if using URL?": false,
+    "Use skin id for extra pockets icon? [true = skin, false = url]": true,
+    "Node display settings": {
+      "Show nodes that require a higher prestige level than the player has?": true,
+      "Show nodes that require a higher level than the player has?": true,
+      "Show nodes that require a certain permission that the player does not have?": true
+    }
+  },
+  "Base yield settings": {
+    "Allow Skill Tree to adjust the base amount of resource received? Buffs will base their modifiers off of the amended base amount.": false,
+    "Yield types multipliers [1.0 = vanilla]": {
+      "Wood": 1.0,
+      "Stone": 1.0,
+      "Metal": 1.0,
+      "HQM": 1.0,
+      "Sulfur": 1.0,
+      "Corn": 1.0,
+      "Potato": 1.0,
+      "Pumpkin": 1.0,
+      "Cloth": 1.0,
+      "Diesel": 1.0,
+      "AnimalFat": 1.0,
+      "Bones": 1.0,
+      "Leather": 1.0,
+      "Fish": 1.0,
+      "Seed": 1.0,
+      "Mushroom": 1.0,
+      "Berry": 1.0,
+      "Meat": 1.0,
+      "Wheat": 1.0,
+      "Sunflower": 1.0,
+      "Orchid": 1.0,
+      "Rose": 1.0
+    }
+  },
+  "Buff settings": {
+    "Should we remove permissions from permission buffs when the player disconnects from the server or the plugin unloads? [Recommended]": true,
+    "Should yield bonus skills be additive [if true, yields will modify the item.amount value, rather than giving additional items]": true,
+    "Minimum components for the component perk": 1,
+    "Maximum components for the component perk": 1,
+    "Minimum electrical components for the electrical component perk": 1,
+    "Maximum electrical components for the electrical component perk": 1,
+    "Minimum additional scrap to be added to crates and barrels": 1,
+    "Maximum additional scrap to be added to crates and barrels": 2,
+    "PVP Buff Critical damage modifier. Picks a random value between 0 and the declared value, and += the damage% onto the hit": 0.3,
+    "Should the LootPickup buff only work with melee weapons?": false,
+    "Should we have a maximum distance for the loot pickup buff [0 = unlimited]?": 0.0,
+    "Allow the LootPickup buff to work with road-side signs?": false,
+    "Allow the Barrel Smasher buff to work with road-side signs?": false,
+    "List of animals for animal resist ability": [],
+    "Delay for HealthRegen perk after taking damage": 5.0,
+    "Delay between attempts at tracking animals": 10.0,
+    "Exclude critters (rabbits, squirrels, frogs, crabs, sea turtles, jellyfish) from animal tracking": true,
+    "List of skins that the rationer perk will not refund": [],
+    "Bag cooldown time": 10.0,
+    "Bag prefab": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+    "Allow the Harvest Grown Yield to increase the amount of clones a player receives?": true,
+    "Primitive weapons for the primitive weapons ability": [],
+    "Harvesting yield blacklist [items listed here will not be affected by the harvesting yield perks]": [],
+    "List of items that the Durability perk will not work with": [
+      "keycard_blue",
+      "keycard_red",
+      "keycard_green"
+    ],
+    "Force all modified extended weapons to unload their ammo when the plugin unloads/hook all users with the buff log off?": false,
+    "Prevent flyhack kicks when a player lands?": false,
+    "Automatically apply the boat turbo when a player mounts the boat? [Disables the turbo command]": false,
+    "Distance in front of player for nodes to spawn when the Node_Spawn_Chance buff procs?": 2.0,
+    "Allow the Node_Spawn_Chance buff to proc on nodes that were spawned by a skill or perk?": true,
+    "Cooldown between hits for the vehicle mechanic buff? [0 = no cooldown]": 0.0,
+    "Forager settings": {
+      "Command to use the ability": "forage",
+      "Distance to search for map collectibles": 100.0,
+      "Time that the locations are displayed on the screen": 60.0,
+      "Usage cooldown": 60.0,
+      "Black list of shortnames for collecibles that won't be displayed": [],
+      "Display colours": {
+        "hemp-collectable": [
+          0.0965,
+          0.55,
+          0.0165
+        ],
+        "corn-collectable": [
+          0.906,
+          0.92,
+          0.101
+        ],
+        "pumpkin-collectable": [
+          0.84,
+          0.547,
+          0.042
+        ],
+        "potato-collectable": [
+          0.36,
+          0.245,
+          0.0468
+        ],
+        "berry-blue-collectable": [
+          0.067,
+          0.6,
+          0.67
+        ],
+        "berry-green-collectable": [
+          0.0315,
+          0.45,
+          0.0385
+        ],
+        "berry-yellow-collectable": [
+          0.71,
+          0.699,
+          0.0355
+        ],
+        "berry-red-collectable": [
+          0.72,
+          0.036,
+          0.253
+        ],
+        "berry-white-collectable": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "diesel_collectable": [
+          0.94,
+          0.681,
+          0.423
+        ],
+        "mushroom-cluster-5": [
+          0.53,
+          0.265,
+          0.349
+        ],
+        "mushroom-cluster-6": [
+          0.53,
+          0.265,
+          0.349
+        ],
+        "sulfur-collectable": [
+          0.63,
+          0.515,
+          0.101
+        ],
+        "metal-collectable": [
+          0.32,
+          0.314,
+          0.294
+        ],
+        "stone-collectable": [
+          0.44,
+          0.435,
+          0.418
+        ],
+        "wood-collectable": [
+          0.25,
+          0.225,
+          0.135
+        ],
+        "orchid-collectable": [
+          0.25,
+          0.225,
+          0.135
+        ],
+        "rose-collectable": [
+          0.25,
+          0.225,
+          0.135
+        ],
+        "sunflower-collectable": [
+          0.25,
+          0.225,
+          0.135
+        ],
+        "hqm-collectable": [
+          0.25,
+          0.225,
+          0.135
+        ]
+      },
+      "Show distance?": false
+    },
+    "Tea looter settings": {
+      "Minimum stack of tea that the player will receive when the Tea Looter buff procs?": 1,
+      "Maximum stack of tea that the player will receive when the Tea Looter buff procs?": 1,
+      "Tea looter table [shortname : drop weight]": {
+        "radiationresisttea": 100,
+        "radiationresisttea.advanced": 100,
+        "radiationresisttea.pure": 100,
+        "healingtea": 100,
+        "healingtea.advanced": 100,
+        "healingtea.pure": 100,
+        "maxhealthtea": 100,
+        "maxhealthtea.advanced": 100,
+        "maxhealthtea.pure": 100,
+        "oretea": 100,
+        "oretea.advanced": 100,
+        "oretea.pure": 100,
+        "radiationremovetea": 100,
+        "radiationremovetea.advanced": 100,
+        "radiationremovetea.pure": 100,
+        "scraptea": 100,
+        "scraptea.advanced": 100,
+        "scraptea.pure": 100,
+        "woodtea": 100,
+        "woodtea.advanced": 100,
+        "woodtea.pure": 100
+      },
+      "Containers that tea can be found in": [
+        "crate_normal_2_food",
+        "invisible_crate_normal_2_food",
+        "crate_food_1",
+        "crate_food_2",
+        "wagon_crate_normal_2_food",
+        "foodbox",
+        "invisible_foodbox",
+        "dmfood"
+      ]
+    },
+    "Sonar settings": {
+      "Command to use the ability": "sonar",
+      "Distance to search for underwater entities": 300.0,
+      "Time that the locations are displayed on the screen": 10.0,
+      "Usage cooldown": 10.0,
+      "show_tugboats": true,
+      "show_dive_sites": true,
+      "show_sharks": true,
+      "show_scientists": true,
+      "show_players": false,
+      "Show distance?": false
+    },
+    "Raid perk settings": {
+      "Automatically pass raidable base checks if the plugin is unloaded?": true,
+      "Settings for trap_damage_reduction": {
+        "Traps blacklist - will ignore the buff": [],
+        "Only allow this buff to work with raidable base traps": false
+      },
+      "Settings for trap_damage_increase": {
+        "Traps blacklist - will ignore the buff": [],
+        "Only allow this buff to work with raidable base traps": false
+      },
+      "Settings for Personal_Explosive_Reduction": {
+        "Prefabs blacklist - will ignore the buff": [],
+        "Work with fire explosives such as molotov's and incin rockets?": true
+      },
+      "Settings for Double_Explosion_chance": {
+        "Prefabs black - will not trigger with items listed here": [],
+        "Only allow this buff to work with raidable base?": false
+      },
+      "Settings for Explosion_Radius": {
+        "Prefabs blacklist - will ignore the buff": [],
+        "Add the difference to the minimum explosion radius": true,
+        "Only allow this buff to work with raidable base?": false
+      },
+      "Settings for Lock_Picker": {
+        "Command required for the player to activate their lockpick ability": "picklock",
+        "Time after the command has been used before the ability use expires [seconds]": 30.0,
+        "Delay before the Lock_Picker ability can be used again [seconds]": 600.0,
+        "Only allow this buff to work with raidable base?": false,
+        "Damage the player receives when they fail an attempt": 0.0,
+        "Show the pick lock timer when activating the ability": true,
+        "How often should the timer update": 1,
+        "Set the lock to unlocked when successfully picking a lock? [false will open the entity but keep it locked]": false
+      },
+      "Settings for Dudless_Explosive": {
+        "Only allow this buff to work with raidable base?": false
+      },
+      "Settings for Trap_Spotter": {
+        "Max distance from the player to search for traps": 20.0,
+        "Cooldown between uses [seconds]": 60.0,
+        "Time that the traps will be displayed for [seconds]": 60.0,
+        "Show the names of each trap prefab": true,
+        "Command to perform the search": "traps",
+        "Only allow this buff to work with raidable base?": false,
+        "Colours that the traps will be displayed in": {
+          "flameturret.deployed": [
+            0.851,
+            0.514,
+            0.055
+          ],
+          "autoturret_deployed": [
+            0.463,
+            0.506,
+            0.522
+          ],
+          "spikes.floor": [
+            0.741,
+            0.592,
+            0.604
+          ],
+          "teslacoil.deployed": [
+            0.165,
+            0.675,
+            0.741
+          ],
+          "beartrap": [
+            0.835,
+            0.902,
+            0.173
+          ],
+          "landmine": [
+            0.969,
+            0.286,
+            0.847
+          ],
+          "guntrap.deployed": [
+            0.357,
+            0.969,
+            0.286
+          ]
+        }
+      },
+      "Settings for Loot_Spotter": {
+        "Cooldown between uses [seconds]": 60.0,
+        "Time that the traps will be displayed for [seconds]": 60.0,
+        "Text colour": {
+          "Item1": 1.0,
+          "Item2": 0.0,
+          "Item3": 0.0
+        },
+        "Show the names of each container prefab": true,
+        "Command to perform the search": "crates",
+        "Only allow this buff to work with raidable base?": true
+      }
+    },
+    "Settings for the Armor_Slot": {
+      "Allow the perk to exceed the maximum armor slot amounts?": false
+    },
+    "Underwater Breathing settings": {
+      "anchor_min": "1 1",
+      "anchor_max": "1 1",
+      "offset_min": "-48 -48",
+      "offset_max": "-12 -12"
+    },
+    "Allow the UnderwaterDamageBonus to function in PVP": true,
+    "Base the crafting xp on the time it takes to craft the item? [false will use blueprint craft time]": true,
+    "Purge mode - buffs that are disabled for all players while purge mode is on [toggle with the sttogglepurge console command. Not saved between reloads]": [],
+    "Comfort settings": {
+      "How often should we update comfort levels for nearby team members [seconds]": 5.0,
+      "Distance that team members receive comfort from": 10.0
+    },
+    "Mobile Workbench settings": {
+      "How often should we run the update cycle for workbenches [seconds]": 5.0,
+      "Distance that team members can access workbench from": 10.0,
+      "Position in the map where the workbenches spawn [default 0,0,0]": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      }
+    },
+    "Tea Share settings": {
+      "Distance that team members can receive tea buffs from": 10.0
+    },
+    "Metabolism Share settings": {
+      "Distance that team members can receive calory and hydration from": 10.0
+    },
+    "Heal Share settings": {
+      "Distance that team members can receive healing from": 10.0
+    },
+    "XP Share settings": {
+      "Distance that team members can receive xp from": 10.0,
+      "Base the percentage using modified xp [true] or the base xp amount [false]": false
+    },
+    "Double Bandage Heal Cooldown [seconds]": 0.0,
+    "Wounded Resist Cooldown [seconds]": 0.0,
+    "Harvesting luck settings": {
+      "Allow the harvesting luck buff to work with player grown collectibles [uses its own drop table]?": true,
+      "List of entities that won't trigger the buff": []
+    },
+    "Awareness settings": {
+      "How often should awareness update?": 5.0,
+      "Show corpse locations?": true,
+      "Show bag locations?": true,
+      "Show dropped item locations?": true,
+      "Show animal locations?": true,
+      "Show Human Npc locations?": true,
+      "Blacklist of item shortnames that will not show up": []
+    },
+    "SharkSkinner blacklist [item shortname]": [],
+    "ShieldReflect Settings": {
+      "Maximum distance the buff will work from [-1 = no max]": -1.0,
+      "Bullet damage reflection modifier [1 = 100%]": 1.0,
+      "Arrow damage reflection modifier [1 = 100%]": 1.0
+    },
+    "MaxRepair settings": {
+      "Cooldown [0 = no cooldown]": 0.0
+    }
+  },
+  "Chat command settings": {
+    "Use mouse 3 to toggle the boat turbo (performance heavy on high pop servers). Set false to use a chat command instead": false,
+    "Chat command for turbo": "turbo",
+    "Chat commands to open the skill tree": [
+      "st",
+      "skilltree",
+      "skills"
+    ],
+    "Chat/console commands to open the score board": [
+      "score",
+      "scoreboard"
+    ],
+    "Chat command for tracking an animal with the AnimalTracker buff": "track"
+  },
+  "XP settings": {
+    "XP Loss settings": {
+      "Allow players to lose xp when they die?": true,
+      "Allow players to go into xp debt if they lose more xp than their level would allow?": true,
+      "Xp loss type [PercentageOfCurrentLevel, PercentageOfTotalXp, XpValue]": "PercentageOfCurrentLevel",
+      "Death penalty grace period - players won't lose xp if they die again within the specified time [seconds]": 0.0,
+      "XP loss values [if percentage, 1.0 = 100%. If XpValue, 100.0 = 100xp]": {
+        "PVP": 0.1,
+        "Heli": 0.2,
+        "Bradley": 0.2,
+        "Scientist": 0.2,
+        "Animal": 0.2,
+        "Suicide": 0.2,
+        "Fire": 0.2,
+        "Cold": 0.2,
+        "Fall": 0.2,
+        "Traps": 0.2,
+        "Codelock": 0.2,
+        "Drowned": 0.2,
+        "Radiation": 0.2,
+        "Hunger": 0.2,
+        "Thirst": 0.2
+      },
+      "Prevent xp loss when a player is offline?": true,
+      "Permission based modifiers [1.0 = no reduced amount]": {
+        "skilltree.vip": 0.5
+      }
+    },
+    "Permissions to adjust xp gain modifiers (skilltree.<perm>) [1.0 is default modifier]": {
+      "skilltree.vip": 1.5
+    },
+    "How long should the xp be displayed for": 1.0,
+    "Colour of the xp text when unmodified": "FFFFFF",
+    "Colour of the xp text when modified": "00b6ff",
+    "Colour of the xp text when modified by Skill Tree: XP Event": "c900ff",
+    "Prevent XP loss when dying at an event hosted by EventManager": true,
+    "Enable xp drop hud for players by default": true,
+    "Restrict XP gain to the tools listed in their respective tools list?": false,
+    "Require grown plants to be ripe to provide xp": true,
+    "Give xp for crafting ingredients? [Requires Cooking.cs]": false,
+    "Whitelist - List of items to award crafting xp": [],
+    "Blacklist - List of items that will not award crafting xp": [],
+    "Blacklist - corpse prefabs that will not award skinning xp [short prefab name]": [],
+    "Use LootDefender to handle the XP for BradleyAPC": true,
+    "Allow players with god mode to receive xp?": true,
+    "Cooldown for awarding xp after using a swipe card": 0.0,
+    "Decimal places for the xp to be rounded to": 2,
+    "Maximum amount of pending xp a player can accumulate [0 = no limit]": 0,
+    "List of meals that will not provide xp [Requires Cooking.cs]": [],
+    "Dictionary of ingredient modifiers [0 = no xp] [Requires Cooking.cs]": {},
+    "Scale the xp based on the scale of the entity?": true,
+    "Allow players to get xp from their turrets?": false,
+    "Experience sources - Set xp value to 0 to disable for that type": {
+      "NodeHit": 12.0,
+      "NodeHitFinal": 50.0,
+      "TreeHit": 8.0,
+      "TreeHitFinal": 40.0,
+      "SkinHit": 10.0,
+      "SkinHitFinal": 50.0,
+      "CollectWildPlant": 30.0,
+      "CollectGrownPlant": 5.0,
+      "BuildingBlockDeployed": 0.0,
+      "CatchCatfish": 100.0,
+      "CatchOrangeRoughy": 100.0,
+      "CatchSalmon": 100.0,
+      "CatchSmallShark": 100.0,
+      "CatchSmallTrout": 100.0,
+      "CatchYellowPerch": 100.0,
+      "CatchAnchovy": 100.0,
+      "CatchHerring": 100.0,
+      "CatchSardine": 100.0,
+      "CatchTrash": 50.0,
+      "Crafting": 0.25,
+      "ScientistNormal": 150.0,
+      "Scientist2": 150.0,
+      "ScientistHeavy2": 300.0,
+      "TunnelDweller": 125.0,
+      "UnderwaterDweller": 125.0,
+      "ScientistHeavy": 300.0,
+      "SmallAnimal": 20.0,
+      "MediumAnimal": 50.0,
+      "LargeAnimal": 100.0,
+      "LargeProduceAnimal": 75.0,
+      "MediumProduceAnimal": 35.0,
+      "LandCritter": 25.0,
+      "SeaCritter": 50.0,
+      "RoadSign": 10.0,
+      "Barrel": 20.0,
+      "Scarecrow": 100.0,
+      "Mission": 1000.0,
+      "BradleyAPC": 1000.0,
+      "PatrolHelicopter": 3000.0,
+      "LootHackedCrate": 200.0,
+      "LootHeliCrate": 250.0,
+      "LootBradleyCrate": 50.0,
+      "CookingMealXP": 10.0,
+      "RaidableBaseCompletion_Easy": 100.0,
+      "RaidableBaseCompletion_Medium": 200.0,
+      "RaidableBaseCompletion_Hard": 300.0,
+      "RaidableBaseCompletion_Expert": 400.0,
+      "RaidableBaseCompletion_Nightmare": 500.0,
+      "Win_HungerGames": 2000.0,
+      "Win_ScubaArena": 2000.0,
+      "Win_Skirmish": 2000.0,
+      "Gut_Fish": 10.0,
+      "default_botrespawn": 100.0,
+      "crate_basic": 0.0,
+      "crate_elite": 50.0,
+      "crate_mine": 0.0,
+      "crate_normal": 0.0,
+      "crate_normal_2": 0.0,
+      "crate_normal_2_food": 0.0,
+      "crate_normal_2_medical": 0.0,
+      "crate_tools": 0.0,
+      "crate_underwater_advanced": 100.0,
+      "crate_underwater_basic": 25.0,
+      "crate_ammunition": 0.0,
+      "crate_food_1": 0.0,
+      "crate_food_2": 0.0,
+      "crate_fuel": 0.0,
+      "crate_medical": 0.0,
+      "supply_drop": 500.0,
+      "detect_diggable": 100.0,
+      "Harbor_Event_Winner": 2000.0,
+      "Junkyard_Event_Winner": 2000.0,
+      "PowerPlant_Event_Winner": 2000.0,
+      "Satellite_Event_Winner": 2000.0,
+      "Water_Event_Winner": 2000.0,
+      "Air_Event_Winner": 2000.0,
+      "Armored_Train_Winner": 2000.0,
+      "Convoy_Winner": 2000.0,
+      "SurvivalArena_Winner": 2000.0,
+      "swipe_card_level_1": 50.0,
+      "swipe_card_level_2": 100.0,
+      "swipe_card_level_3": 250.0,
+      "boss_monster": 1000.0,
+      "Zombie": 100.0,
+      "Raider": 100.0,
+      "JetPilot": 100.0,
+      "ArcticBaseEvent_Winner": 2000.0,
+      "GasStationEvent_Winner": 2000.0,
+      "SputnikEvent_Winner": 2000.0,
+      "ShipWreckEvent_Winner": 2000.0,
+      "Triangulation_Winner": 2000.0,
+      "Caravan_Winner": 2000.0,
+      "SupermarketEvent_Winner": 2000.0,
+      "GingerbreadNPC": 100.0,
+      "PVP": 0.0,
+      "AutoTurret": 0.0
+    },
+    "Night time settings": {
+      "Modifier for xp gained at night [1.0 = standard]": 1.0,
+      "Modifier for woodcutting yield at night [1.0 = standard]": 1.0,
+      "Modifier for mining yield at night [1.0 = standard]": 1.0,
+      "Modifier for skinning yield at night [1.0 = standard]": 1.0,
+      "Modifier for harvesting yield at night [1.0 = standard]": 1.0,
+      "Should the harvesting yield increase include player-grown plants?": false,
+      "Send all players a gametip when night time bonuses start?": false,
+      "How many seconds should we show the gametip for?": 8.0
+    },
+    "Allow players to move their XP bar?": true,
+    "Force the cursor to appear when moving the XP bar?": true,
+    "Should the givesp console command search for offline players as well?": false,
+    "Should the givexpdebt console command search for offline players as well?": false,
+    "XP Cap Settings": {
+      "Daily xp cap [0 = no cap]": 0.0,
+      "What time should the cap reset each day [hh:mm AM/PM]": "06:00 AM"
+    }
+  },
+  "Prestige settings": {
+    "Allow players to reset their progresss and gain Prestige levels?": false,
+    "Ignore the level reward bonuses if the player has prestige levels?": false,
+    "Remove players from lower level prestige groups?": false,
+    "Run reset commands for level rewards when the player prestiges?": false,
+    "Show the prestige button before the player achieves the level? (they won't be able to accept the rank up until max level)": true,
+    "Should the player keep excess skill points outside of what they received from leveling/starting points?": false,
+    "Should we apply the xp bonus multiplicatively? [false = additively]": false,
+    "Prestige levels": {
+      "1": {
+        "Permissions [name : perm]": {
+          "Your perm title": "yourperm.use"
+        },
+        "Commands to run when the player prestiges ({id} = userid. {name} = player name) [description : command]": null,
+        "Commands to run after the player prestiges ({id} = userid. {name} = player name) [description : command]": null,
+        "Additional benefits descriptions": [],
+        "Format for BetterChat title showing the prestige level. {0} is the colour value and {1} is the player prestige value": "<color=#{0}>[Pr.{1}]</color>",
+        "Colour for BetterChat xp titles": "d109ec",
+        "Skin ID that will be displayed when ranking up": 3165843865,
+        "Rank title": "Prestige Rank 1",
+        "XP modifier": 1.0,
+        "Bonus starting skill points granted at this rank": 0,
+        "Bonus maximum skill points that can be spent at this rank": 0
+      },
+      "2": {
+        "Permissions [name : perm]": {
+          "Your perm title": "yourperm.use"
+        },
+        "Commands to run when the player prestiges ({id} = userid. {name} = player name) [description : command]": null,
+        "Commands to run after the player prestiges ({id} = userid. {name} = player name) [description : command]": null,
+        "Additional benefits descriptions": [],
+        "Format for BetterChat title showing the prestige level. {0} is the colour value and {1} is the player prestige value": "<color=#{0}>[Pr.{1}]</color>",
+        "Colour for BetterChat xp titles": "d109ec",
+        "Skin ID that will be displayed when ranking up": 3165843987,
+        "Rank title": "Prestige Rank 2",
+        "XP modifier": 1.0,
+        "Bonus starting skill points granted at this rank": 0,
+        "Bonus maximum skill points that can be spent at this rank": 0
+      },
+      "3": {
+        "Permissions [name : perm]": {
+          "Your perm title": "yourperm.use"
+        },
+        "Commands to run when the player prestiges ({id} = userid. {name} = player name) [description : command]": null,
+        "Commands to run after the player prestiges ({id} = userid. {name} = player name) [description : command]": null,
+        "Additional benefits descriptions": [],
+        "Format for BetterChat title showing the prestige level. {0} is the colour value and {1} is the player prestige value": "<color=#{0}>[Pr.{1}]</color>",
+        "Colour for BetterChat xp titles": "d109ec",
+        "Skin ID that will be displayed when ranking up": 3165844049,
+        "Rank title": "Prestige Rank 3",
+        "XP modifier": 1.0,
+        "Bonus starting skill points granted at this rank": 0,
+        "Bonus maximum skill points that can be spent at this rank": 0
+      }
+    }
+  },
+  "Wipe and plugin update settings": {
+    "Automatically wipe player data after x days if they have not logged in? [0 = off] [only checks on wipe]": 0,
+    "Manual wipe settings": {
+      "Wipe all player data files [setting true will ignore all below settings that handle data reset]?": false,
+      "How should we handle xp, levels and skills when the server wipes [None, Reset, Refund]?": "Refund",
+      "Should we wipe prestige levels?": false,
+      "Wipe xp debt?": true,
+      "Wipe respec multiplier?": true,
+      "Reset pending xp pools on wipe?": true,
+      "Erase ExtraPockets storage on wipe": true,
+      "Give the player with the highest xp bonus skill points next wipe": false,
+      "How many skill points should they receive for winning?": 5
+    },
+    "Forced wipe settings": {
+      "Wipe all player data files [setting true will ignore all below settings that handle data reset]?": false,
+      "How should we handle xp, levels and skills when the server wipes [None, Reset, Refund]?": "Refund",
+      "Should we wipe prestige levels?": false,
+      "Wipe xp debt?": true,
+      "Wipe respec multiplier?": true,
+      "Reset pending xp pools on wipe?": true,
+      "Erase ExtraPockets storage on wipe": true,
+      "Give the player with the highest xp bonus skill points next wipe": false,
+      "How many skill points should they receive for winning?": 5
+    },
+    "Automatically add new trees from the default config?": true,
+    "Automatically add new nodes from the default config?": true,
+    "Starting skill points": 0,
+    "Dictionary of permission based overrides for starting skill points": {
+      "skilltree.vip.starting.points": 5
+    }
+  },
+  "Rested XP Settings": {
+    "Give players who have been offline a bonus to xp gain when they log in next?": true,
+    "Rested xp pool to accumulate per hour offline": 1000.0,
+    "Bonus xp rate while rested (until the rested xp pool is depleted) [0.25 = 25% bonus]": 0.25,
+    "Maximum xp a player can have in their rested pool [0 = no limit]": 25000.0,
+    "Reset rested xp pools on wipe?": false,
+    "Modifiers based on permissions to adjust the rested xp value [1.0 = 100% increase. 0.0 = no increase]": {
+      "skilltree.restedxp.10": 0.1
+    }
+  },
+  "Tools and Black list/White list settings": {
+    "Global black list - these items will not gain xp and benefits at all": [],
+    "Electrical and component luck settings": {
+      "Black listed parts for component and electrical luck abilities": [
+        "command.block"
+      ],
+      "Electrical custom loot override [use addelectricaloverride console command to add example to config]": [],
+      "Component list custom loot override [use addcomponentoverride console command to add example to config]": []
+    },
+    "Power tool modifiers (chainsaw and jackhammer). 1 = full xp/buffs. 0 = off. 0.5 = half xp/buffs.": {
+      "Yield modifier when using a jackhammer to mine": 0.25,
+      "Yield modifier when using a chainsaw to chop wood": 0.25,
+      "Yield modifier when using a power tool to skin": 0.25,
+      "XP modifier when using a jackhammer to mine": 0.25,
+      "XP modifier when using a chainsaw to chop wood": 0.25,
+      "XP modifier when using a power tool to skin": 0.25,
+      "Luck modifier when using a jackhammer to mine": 0.25,
+      "Luck modifier when using a chainsaw to chop wood": 0.25,
+      "Luck modifier when using a power tool to skin": 0.25
+    },
+    "Extra Pockets black list - disallows items that match": [],
+    "Extra Pockets white list - will only allow items that match": [],
+    "Extra pockets button anchor settings": {
+      "anchorMin": "0.5 0",
+      "anchorMax": "0.5 0",
+      "offsetMin": "185.4 25.4",
+      "offsetMax": "227.4 67.4"
+    },
+    "A black list of items that will not be refunded when using the thrifty tinkerer buff": [],
+    "A black list of items that will not be duplicated while using the thirfty duplicator buff": [],
+    "Woodcutting tools - Tools that meet whitelist requirements and work with the reduced durability ability": [],
+    "Mining tools - Tools that meet whitelist requirements and work with the reduced durability ability": [],
+    "Skinning tools - Tools that meet whitelist requirements and work with the reduced durability ability": [],
+    "Blacklist of weapon prefab shortnames that cannot benefit from the Extended Mag buff": [
+      "mini_crossbow.entity"
+    ],
+    "Blacklist of ammo item shortnames that cannot benefit from the Extended Mag buff": [],
+    "Blacklist of item shortnames that will not trigger the max repair buff": []
+  },
+  "Effect settings": {
+    "Instant repair effect": "assets/bundled/prefabs/fx/build/repair_full_metal.prefab",
+    "Level up effect": "assets/prefabs/misc/halloween/lootbag/effects/gold_open.prefab",
+    "Node unlock effect": "assets/prefabs/misc/halloween/lootbag/effects/loot_bag_upgrade.prefab",
+    "Node level effect": "assets/prefabs/misc/easter/painted eggs/effects/eggpickup.prefab",
+    "Lock pick fail attempt": "assets/prefabs/deployable/bear trap/effects/bear-trap-deploy.prefab",
+    "Lock pick success attempt": "assets/prefabs/deployable/locker/effects/locker-deploy.prefab"
+  },
+  "Better Chat settings": {
+    "Format for BetterChat title showing the playeres level. Set to null to disable. {0} is the colour value and {1} is the player level value": "<color=#{0}>[Lv.{1}]</color>",
+    "Default colour for BetterChat xp titles": "0cb072",
+    "Colour for BetterChat xp titles for players who are max level": "32ff00"
+  },
+  "Loot settings": {
+    "Mining luck loot table": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Woodcutting luck loot table": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Skinning luck loot table": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Fishing luck loot table": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Metal detector luck loot table": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Harvesting luck loot table [Wild]": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Harvesting luck loot table [Grown]": [
+      {
+        "shortname": "keycard_blue",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_green",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "keycard_red",
+        "min": 1,
+        "max": 1,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      },
+      {
+        "shortname": "lowgradefuel",
+        "min": 1,
+        "max": 10,
+        "dropWeight": 100,
+        "displayName": null,
+        "skin": 0
+      }
+    ],
+    "Whitelist of loot crates to trigger the spawn chance for components, electronics and scrap. Set to null to not use the whitelist.": []
+  },
+  "Ultimate settings": {
+    "Background colour for the ultimate node": "1 0.8741453 0 1",
+    "Ultimate settings for woodcutting": {
+      "Award xp for each tree that the perk cuts down?": false,
+      "Distance from the player (radius) that trees will be cut down?": 10.0,
+      "Cooldown between uses [seconds]": 0.0
+    },
+    "Ultimate settings for mining": {
+      "Distance from the player (radius) that nodes will appear (radius)": 200.0,
+      "Cooldown time on the ability (seconds)": 60.0,
+      "How many seconds should the marked ores appear on the players hud?": 60.0,
+      "Text size": 12,
+      "Chat command to find the nodes.": "locatenodes",
+      "Automatically trigger the mining ultimate when the player equips a pickaxe (still abides by the cooldown time)": false,
+      "UI Colour for sulfur nodes [0:red, 1:green, 2:blue, 3:white, 4:black, 5:yellow, 6:cyan, 7:magenta]": 5,
+      "UI Colour for metal nodes [0:red, 1:green, 2:blue, 3:white, 4:black, 5:yellow, 6:cyan, 7:magenta]": 0,
+      "UI Colour for stone nodes [0:red, 1:green, 2:blue, 3:white, 4:black, 5:yellow, 6:cyan, 7:magenta]": 6,
+      "UI Colour for hqm nodes [0:red, 1:green, 2:blue, 3:white, 4:black, 5:yellow, 6:cyan, 7:magenta]": 7,
+      "Show the player the distance of the node?": true,
+      "List of tools to trigger the ultimate": []
+    },
+    "Ultimate settings for vehicle": {
+      "Prevent damage from samsites?": true
+    },
+    "Ultimate settings for medical": {
+      "Chance for the player to resurrect [out of 100]": 50.0,
+      "Delay between resurrections after a successful resurrection [seconds]": 1200.0,
+      "Prevent the button being sent when a player kills themselves or is the aggressor of their own death?": true,
+      "Allow this skill to function if the player died in pvp?": true
+    },
+    "Ultimate settings for harvesting": {
+      "Chat command that players can use to set their plant genes": "setgenes",
+      "Cooldown between ultimate triggers. Set to 0 if you want all plants to have their genes adjusted [seconds]": 0.0,
+      "Notify a player in chat when they go on cooldown (recommended for longer cooldowns)": true,
+      "List of item shortnames to blacklist [example: seed.hemp]": []
+    },
+    "Ultimate settings for scavenger": {
+      "List of items that you dont want the perk to recycle": [],
+      "Scrap items that have a unique name?": false,
+      "Scrap items that have a unique text field?": false,
+      "Scrap items that have a non-default skin?": false
+    },
+    "Ultimate settings for combat": {
+      "What scale of damage should the player receive as health [1.0 = 100%]": 0.01,
+      "Should the healing effect of the ultimate work against players": true,
+      "Should the healing effect of the ultimate work against animals": true,
+      "Should the healing effect of the ultimate work against scientists": true,
+      "List of weapon prefabs (not items) that will not trigger the heal": [],
+      "Allow fire based damage to heal players?": false
+    },
+    "Ultimate settings for skinning": {
+      "How long should each buff last for [0 = off]?": {
+        "Bear": 120.0,
+        "Chicken": 600.0,
+        "Boar": 1200.0,
+        "Stag": 300.0,
+        "Wolf": 600.0,
+        "PolarBear": 600.0
+      },
+      "Wolf perk: what health scale bonus should the player receive per team member near by [1.0 is 100%]?": 0.25,
+      "Wolf perk: How close do teammates need to be in order to contribute to the perk [radius]?": 30.0,
+      "Bear perk: Maximum health of the overshield": 50.0,
+      "Stag perk: Maximum distance that the perk can detect dangerous entities from [radius]": 30.0,
+      "Stag perk: Time between procs [seconds]": 10.0,
+      "Stag perk: Draw the enemy location?": true,
+      "Boar perk: Blacklist of components for the boar buff": [],
+      "Boar perk: Chance when collecting mushrooms and berries that a player [%]": 2.0,
+      "Boar perk: Minimum quantity to give": 1,
+      "Boar perk: Maximum quantity to give": 4,
+      "Anchor points for the stag danger UI icon": {
+        "anchorMin": "0.5 0",
+        "anchorMax": "0.5 0",
+        "offsetMin": "-201.4 87.6",
+        "offsetMax": "33.4 107.6"
+      },
+      "Anchor points for the bear overshield UI": {
+        "anchorMin": "0.5 0",
+        "anchorMax": "0.5 0",
+        "offsetMin": "-201.4 87.6",
+        "offsetMax": "-97.4 107.6"
+      }
+    },
+    "Ultimate settings for build craft": {
+      "Chance that a card with lower access will successfully unlock the door (the card is damaged regardless) [%]": 100,
+      "Notify the player when their ultimate failed": true
+    },
+    "Ultimate settings for raiding": {
+      "Command to call in MLRS strike": "strike",
+      "Use the actual MLRS entity to fire the payload?": false,
+      "Maximum duration that the Raiding Ultimate can be active for [seconds]": 30.0,
+      "Cooldown between uses [minutes]": 360.0,
+      "How long between each update tick when targeting [seconds]": 1.0,
+      "How many ticks are required for the targeting to be successful": 5,
+      "How many rockets should be fired when the ultimate is successful": 6,
+      "Effect to run when the target is successfully acquired [leave blank for no effect]": "assets/prefabs/building/wall.frame.shopfront/effects/metal_transaction_complete.prefab",
+      "Effect to run each time a valid position is ticked up [leave blank for no effect]": "assets/prefabs/gamemodes/objects/capturepoint/effects/capturepoint_progress_beep.prefab",
+      "Delay between each rocket when the barrage starts": 0.5,
+      "Allow the Double_Explosion_chance buff to trigger with this ultimate?": false,
+      "Reset the MLRS strike cool down on respec?": false,
+      "Only allow the ultimate to work in RaidableBase Zones?": false,
+      "Blacklist of raidable base tier that the ultimate will not work in": [],
+      "Prevent multiple players using the MLRS ability at the same location?": true,
+      "Radius from the strike centre point that will disallow additional strikes": 60.0,
+      "Time that strikes will be prevented in that location [seconds]": 1800.0,
+      "Require the player to have MLRS rockets in their inventory in order to use the ultimate?": false,
+      "Show time remaining to launch a strike": true,
+      "How long after a server is wiped should we prevent the MLRS ultimate from being used? [Hours]": 2.0
+    },
+    "Ultimate settings for cooking": {
+      "Command to activate the buff": "teatime",
+      "Cooldown between uses [minutes]": 240.0,
+      "Apply modifiers even if the player has an existing buff of the same type with a higher modifier?": false,
+      "Apply modifiers even if the player has an existing buff of the same type with a longer duration?": true,
+      "Modifiers that the player will receive when the buff is used": {
+        "Max_Health": {
+          "Duration [seconds]": 3600.0,
+          "Modifier [1.0 = 100%]": 0.2
+        },
+        "Ore_Yield": {
+          "Duration [seconds]": 3600.0,
+          "Modifier [1.0 = 100%]": 0.5
+        },
+        "Radiation_Exposure_Resistance": {
+          "Duration [seconds]": 3600.0,
+          "Modifier [1.0 = 100%]": 0.5
+        },
+        "Radiation_Resistance": {
+          "Duration [seconds]": 3600.0,
+          "Modifier [1.0 = 100%]": 0.5
+        },
+        "Scrap_Yield": {
+          "Duration [seconds]": 3600.0,
+          "Modifier [1.0 = 100%]": 4.0
+        },
+        "Wood_Yield": {
+          "Duration [seconds]": 3600.0,
+          "Modifier [1.0 = 100%]": 2.0
+        }
+      }
+    }
+  },
+  "Misc settings": {
+    "UI Settings": {
+      "Node UI Settings": {
+        "Node panel width": 310.0,
+        "Space between each node in the UI": 10.0,
+        "Size of each node in the UI": 58.0,
+        "Width of the vertical scroll bar on the nodes panel [0 = no bar]": 2.0,
+        "Width of the horizontal scroll bar on the nodes panel [0 = no bar]": 2.0
+      },
+      "Buff Info Settings": {
+        "Width of the vertical scroll bar on the active buff info panel [0 = no bar]": 2.0
+      }
+    },
+    "BotRespawn settings": {
+      "Should we consider the BotRespawn NPCs as regular NPCs when calculating buffs?": true,
+      "Enable botrespawn profile tracking and xp": true,
+      "BotReSpawn profile and xp list": {}
+    },
+    "Human NPC's name that can be used to open the skill tree": "",
+    "Should we add a button to the pump bar to open SkillTree?": true,
+    "Should SkillTree call out to other plugins before it starts modifying the value of the items? [required for plugins that need pre-modified item amounts]": false,
+    "Log all xp that players gain [Will create a very large log file]?": false,
+    "Allow the rationer perk to work with cooking meals?": true,
+    "Steam64 ID to use when sending a message to a player [0 is the default rust icon]": 76561199514393612,
+    "Anchor points for time left UI": {
+      "anchorMin": "0.5 0",
+      "anchorMax": "0.5 0",
+      "offsetMin": "-69.664 87.1",
+      "offsetMax": "70.336 103.1"
+    },
+    "Update skin IDs from the default config if they are set to 0?": false,
+    "Prevent tea bonuses when handling yields? [skilltree.teabonus bypasses this]": false,
+    "ZoneManager settings": {
+      "List of zone ids that will prevent xp loss": [],
+      "List of zone ids that will prevent player skills from functioning": []
+    },
+    "Scoreboard settings": {
+      "How many offline score files should we attempt to read per game-tick?": 10,
+      "How often (seconds) should the scoreboard check for updates [online players only]?": 60.0,
+      "How many decimal places should the xp be rounded to?": 2,
+      "Maximum scores to display": 250
+    },
+    "List of buffs that you do not want players to disable from the buff settings menu": [],
+    "Skill tree preset settings": {
+      "Allow players to create skill presets (profiles)?": true,
+      "Allow players to change presets anywhere?": true,
+      "Allow players to change presets in TC range?": true,
+      "Allow players to change presets in safe zones?": true,
+      "Maximum presets a player can setup [0 = no limit]": 3,
+      "Maximum presets overrides [must be higher than default]": {
+        "skilltree.maxpresets.10": 10
+      },
+      "Cost settings for creating a new preset": {
+        "Should we charge the player their standard respec cost when adding a new profile?": true,
+        "Economics cost to setup a new preset": 0.0,
+        "Server rewards cost to setup a new preset": 0,
+        "ShoppyStock cost to setup a new preset": 0,
+        "Items cost to setup a new preset": []
+      },
+      "Cost settings for swapping to a preset": {
+        "Should we charge the player their standard respec cost when swapping profiles?": true,
+        "Additional Economics cost to swap [requires: Economics]": 0.0,
+        "Additional Server rewards cost to swap [requires: ServerRewards]": 0,
+        "Additional ShoppyStock cost to swap [requires: ServerRewards]": 0,
+        "Additional item costs to swap": []
+      }
+    },
+    "Message settings": {
+      "Message type when a node is levelled successfully [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUISuccess",
+      "Message type when the player tries to level up a node without points [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they are at max total points [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when the skill is maxed [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they do not have the minimum level [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they do not have the minimum points spent [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they do not have the prestige level required [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a specific node when they do not have a high enough level [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they do not have prerequisite skill [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they have an excluded skill [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up a node when they do not have the prestige level required for the tree [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player successfully respecs [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUINormal",
+      "Message type when the player fails to respec [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "Message type when the player tries to level up an inaccessible node [None, Chat, CUISuccess, CUIWarn, CUINormal]": "CUIWarn",
+      "CUI colours for CUIWarn, CUISuccess and CUINormal": {
+        "CUISuccess": "0.056 0.481 0.065 1",
+        "CUIWarn": "0.528 0.175 0.137 1",
+        "CUINormal": "0.051 0.392 0.478 1"
+      },
+      "Time before a message is sent before it's removed": 3.0,
+      "Should we expand the height of the CUI to accomodate messages with multiple lines?": true
+    },
+    "Enable video previous for skills": true,
+    "Urls for demo videos": {
+      "Woodcutting_Ultimate": "https://files.catbox.moe/ahtv9q.mp4",
+      "Instant_Mine": "https://files.catbox.moe/kmjmw3.mp4",
+      "Mining_Ultimate": "https://files.catbox.moe/wm6ps4.mp4",
+      "Mining_Hotspot": "https://files.catbox.moe/fq96lp.mp4",
+      "Node_Spawn_Chance": "https://files.catbox.moe/chtktm.mp4",
+      "Regrowth": "https://files.catbox.moe/azp0wq.mp4",
+      "Instant_Chop": "https://files.catbox.moe/wz15hz.mp4",
+      "Woodcutting_Hotspot": "https://files.catbox.moe/8yrygo.mp4",
+      "AnimalTracker": "https://files.catbox.moe/4jmrhj.mp4",
+      "Instant_Skin": "https://files.catbox.moe/j2jyxx.mp4",
+      "Bite_Speed": "https://files.catbox.moe/0dga8w.mp4",
+      "Rod_Tension_Bonus": "https://files.catbox.moe/o6dqrj.mp4",
+      "Forager": "https://files.catbox.moe/tlkiel.mp4",
+      "Wounded_Resist": "https://files.catbox.moe/5gsb1w.mp4",
+      "Harvester_Ultimate": "https://files.catbox.moe/w2cxt2.mp4",
+      "Medical_Ultimate": "https://files.catbox.moe/y5ly4j.mp4",
+      "Awareness": "https://files.catbox.moe/bmclck.mp4",
+      "Loot_Pickup": "https://files.catbox.moe/t11plq.mp4",
+      "Build_Craft_Ultimate": "https://files.catbox.moe/evxtd1.mp4",
+      "Barrel_Smasher": "https://files.catbox.moe/doiqvg.mp4",
+      "Magnetic_Digger": "https://files.catbox.moe/q2dcdz.mp4",
+      "Efficient_Digger": "https://files.catbox.moe/eui0ud.mp4",
+      "Scavengers_Ultimate": "https://files.catbox.moe/68k7td.mp4",
+      "Riding_Speed": "https://files.catbox.moe/8nnif6.mp4",
+      "Boat_Speed": "https://files.catbox.moe/yf631x.mp4",
+      "Heli_Speed": "https://files.catbox.moe/0gcq3m.mp4",
+      "Vehicle_Mechanic": "https://files.catbox.moe/po2m1o.mp4",
+      "BikeEnginePower": "https://files.catbox.moe/kf9upt.mp4",
+      "Cooking_Ultimate": "https://files.catbox.moe/t961aq.mp4",
+      "WaterBreathing": "https://files.catbox.moe/obw3da.mp4",
+      "Rationer": "https://files.catbox.moe/lg70s7.mp4",
+      "Sonar": "https://files.catbox.moe/cp8m9m.mp4",
+      "Vehicle_Ultimate": "https://files.catbox.moe/hg5zk3.mp4",
+      "InstantUntie": "https://files.catbox.moe/t1vntn.mp4",
+      "Dudless_Explosive": "https://files.catbox.moe/cq5vbq.mp4",
+      "Double_Explosion_Chance": "https://files.catbox.moe/ual4ai.mp4",
+      "Explosion_Radius": "https://files.catbox.moe/jsmslv.mp4",
+      "Trap_Spotter": "https://files.catbox.moe/bt7z17.mp4",
+      "Raiding_Ultimate": "https://files.catbox.moe/3h4qwd.mp4",
+      "Human_Workbench": "https://files.catbox.moe/ujlesy.mp4",
+      "Lock_Picker": "https://files.catbox.moe/ixodix.mp4"
+    },
+    "Enable debug": true,
+    "Time after the server saves that SkillTree will save it's data": 0.0
+  },
+  "NpcSpawn (by KpucTaji) settings": {
+    "Dictionary of NPC names and the value that they provide": {}
+  },
+  "Boss Monster (by KpucTaji) settings": {
+    "Dictionary of boss names and the damage modifier for the MLRS ultimate [Name:Damage multiplier]": {}
+  },
+  "Skill tree": {
+    "Mining": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Amature Miner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Mining_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/dajctapqtv8bt4z/Amature_Miner.png?dl=1",
+          "skin": 2873965665,
+          "permissions": null
+        },
+        "Stroke of luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Node_Spawn_Chance",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/ym4bktn12jr6t4p/Stroke_of_Luck.png?dl=1",
+          "skin": 2873042230,
+          "permissions": null
+        },
+        "Adept Miner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.075,
+          "buff_info": {
+            "Key": "Mining_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/pon14r7e6bvn2kd/Adept_Miner.png?dl=1",
+          "skin": 2873042840,
+          "permissions": null
+        },
+        "Instant Mining": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Instant_Mine",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/x3awxx2vkfun2io/Instant_Mining.png?dl=1",
+          "skin": 2873042968,
+          "permissions": null
+        },
+        "Mining Luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.01,
+          "buff_info": {
+            "Key": "Mining_Luck",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/uk7oix7ojnsqyjh/Mining_Luck.png?dl=1",
+          "skin": 2873043145,
+          "permissions": null
+        },
+        "Expert Miner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Mining_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/rgoj7fey7xvzrgk/Expert_Miner.png?dl=1",
+          "skin": 2873043244,
+          "permissions": null
+        },
+        "Refiner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Smelt_On_Mine",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/wbsgo1egl10dwcx/Refiner.png?dl=1",
+          "skin": 2873043347,
+          "permissions": null
+        },
+        "Robust pickaxe": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Mining_Tool_Durability",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/j4nnel0lzonhu9b/Robust_pickaxe.png?dl=1",
+          "skin": 2873043495,
+          "permissions": null
+        },
+        "Stone Sense": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Mining_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/kkge1vpuptc37z4/Stone_Sense.png?dl=1",
+          "skin": 2873043666,
+          "permissions": null
+        },
+        "Efficient Miner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 2,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Mining_Hotspot",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/xgyvuu1x28u22js/Mining_Hotspot.v1.png?dl=1",
+          "skin": 2987629553,
+          "permissions": null
+        }
+      }
+    },
+    "Woodcutting": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Amature Woodcutter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Woodcutting_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/2s89vo3bmqyefux/Amature_Woodcutter.png?dl=1",
+          "skin": 2873043851,
+          "permissions": null
+        },
+        "Bee Keeper": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 1,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "No_Bee_Damage",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/8j1ugd1fgosfrt1p7y0t2/No_Bee_Damage.v1.png?rlkey=4oawcphej4bafl4plg3dceyvy&st=o9f0yhoz&dl=1",
+          "skin": 3766254643,
+          "permissions": null
+        },
+        "Adept Woodcutter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.075,
+          "buff_info": {
+            "Key": "Woodcutting_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/nf9reuenek59a6y/Adept_Woodcutter.png?dl=1",
+          "skin": 2873043965,
+          "permissions": null
+        },
+        "Instant Woodcutting": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Instant_Chop",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/7vut5y0vub9e05c/Instant_Woodcutting.png?dl=1",
+          "skin": 2873044070,
+          "permissions": null
+        },
+        "Woodcutting Luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.01,
+          "buff_info": {
+            "Key": "Woodcutting_Luck",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/6acfo7hlj0sxviq/Woodcutters_Luck.png?dl=1",
+          "skin": 2873044171,
+          "permissions": null
+        },
+        "Efficient Lumberjack": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 2,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Woodcutting_Hotspot",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/8zmb3b99qqqfc7p/Woodcutting_Hotspot.v1.png?dl=1",
+          "skin": 2987395716,
+          "permissions": null
+        },
+        "Expert Woodcutter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Woodcutting_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/tzlbixc5ufbxqjs/Expert_Woodcutter.png?dl=1",
+          "skin": 2873044270,
+          "permissions": null
+        },
+        "Chimney": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Woodcutting_Coal",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/d8ovy2trv5tuipw/Chimney.png?dl=1",
+          "skin": 2873044493,
+          "permissions": null
+        },
+        "Tree Regrowth": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.025,
+          "buff_info": {
+            "Key": "Regrowth",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/kbyk4nhzu7akmhb/Tree_Regrowth.png?dl=1",
+          "skin": 2874292571,
+          "permissions": null
+        },
+        "Robust Axe": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Woodcutting_Tool_Durability",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/4p5gqo7fbfaw9jz/Robust_Axe.png?dl=1",
+          "skin": 2873044601,
+          "permissions": null
+        },
+        "Deforestation": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Woodcutting_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/tww0gg1pwh90qbb/Deforestation.png?dl=1",
+          "skin": 2873044743,
+          "permissions": null
+        }
+      }
+    },
+    "Skinning": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Amature Skinner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Skinning_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/dxrecqcjlsaqskm/Amature_Skinner.png?dl=1",
+          "skin": 2873044870,
+          "permissions": null
+        },
+        "Skilled Tracker": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 1,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "AnimalTracker",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/mai6z52eiqqqrwx/Skilled_Tracker.png?dl=1",
+          "skin": 2873044977,
+          "permissions": null
+        },
+        "Adept Skinner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.075,
+          "buff_info": {
+            "Key": "Skinning_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/cy3eo6mr6r4gbeb/Adept_Skinner.png?dl=1",
+          "skin": 2873045152,
+          "permissions": null
+        },
+        "Instant Skinner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Instant_Skin",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/wgic15j3uecdegl/Instant_Skinner.png?dl=1",
+          "skin": 2873045291,
+          "permissions": null
+        },
+        "Robust Knife": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Skinning_Tool_Durability",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/j8fkg0xu1cfz7wd/Robust_Knife.png?dl=1",
+          "skin": 2873045413,
+          "permissions": null
+        },
+        "Expert Skinner": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Skinning_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/fs66l8mad4uci9p/Expert_Skinner.png?dl=1",
+          "skin": 2873045569,
+          "permissions": null
+        },
+        "Survival Chef": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Skin_Cook",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/eahszj2z8lppx66/Survival_Chef.png?dl=1",
+          "skin": 2873046097,
+          "permissions": null
+        },
+        "Steel Knife": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Skinning_Tool_Durability",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/0c8kf86a43rmo5r/Steel_Knife.png?dl=1",
+          "skin": 2873046697,
+          "permissions": null
+        },
+        "Skilled Hunter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Animal_NPC_Damage",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/asrhyvazu2ilkqx/Skilled_Hunter.png?dl=1",
+          "skin": 2873046221,
+          "permissions": null
+        },
+        "Primal Identity": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Skinning_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/ba8gmtvr62rek6q/Primal_Identity.png?dl=1",
+          "skin": 2873046423,
+          "permissions": null
+        },
+        "Skinning Luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.03,
+          "buff_info": {
+            "Key": "Skinning_Luck",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/mpqadgqy1h6uj38/Shamanskill_09_nobg.v1.png?dl=1",
+          "skin": 2912885514,
+          "permissions": null
+        }
+      }
+    },
+    "Harvesting": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Amature Harvester": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Harvest_Wild_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/kpvo6cniebzgvdx/Amature_Harvester.png?dl=1",
+          "skin": 2873046943,
+          "permissions": null
+        },
+        "Hobbiest Harvester": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.15,
+          "buff_info": {
+            "Key": "Harvest_Wild_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/s5slqgk7sxdd1w3/Hobbiest_Harvester.png?dl=1",
+          "skin": 2873047153,
+          "permissions": null
+        },
+        "Amature Farmer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.075,
+          "buff_info": {
+            "Key": "Harvest_Grown_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/sqpubic88t7oyaw/Amature_Farmer.png?dl=1",
+          "skin": 2873047337,
+          "permissions": null
+        },
+        "Extra pockets": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 2.0,
+          "buff_info": {
+            "Key": "ExtraPockets",
+            "Value": "Slots"
+          },
+          "icon_url": "https://www.dropbox.com/s/damaguptw7r54r5/Extra_pockets.png?dl=1",
+          "skin": 2873047443,
+          "permissions": null
+        },
+        "Expert Harvester": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Harvest_Wild_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/t8xms1jaxgoissj/Expert_Harvester.png?dl=1",
+          "skin": 2873047547,
+          "permissions": null
+        },
+        "Expert Farmer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Harvest_Grown_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/s1z0p2z80r6bkpn/Expert_Farmer.png?dl=1",
+          "skin": 2873047644,
+          "permissions": null
+        },
+        "Fisherman": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Extra_Fish",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/ohvnyq50bmt46ok/Fisherman.png?dl=1",
+          "skin": 2873047745,
+          "permissions": null
+        },
+        "Botanist": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Harvester_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/8fylvtokuhcj24u/Botanist.png?dl=1",
+          "skin": 2873047865,
+          "permissions": null
+        },
+        "Fishing Luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.03,
+          "buff_info": {
+            "Key": "Fishing_Luck",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/lrwsqmsyx7a8653/Shamanskill_14_nobg.v1.png?dl=1",
+          "skin": 2912896627,
+          "permissions": null
+        },
+        "Ichthyologist": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Bite_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/o60v2xmswg9nb91/Archerskill_09_nobg.v2.png?dl=1",
+          "skin": 3006635760,
+          "permissions": null
+        },
+        "Foragers Intuition": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Forager",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/y2k9s25terdic5p/Druideskill_10_nobg.v1.png?dl=1",
+          "skin": 3010448075,
+          "permissions": null
+        },
+        "Braided Line": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.07,
+          "buff_info": {
+            "Key": "Rod_Tension_Bonus",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/p3rkfmoay0tglpz/Warriorskill_38_nobg.v1.png?dl=1",
+          "skin": 3012306483,
+          "permissions": null
+        },
+        "Lucky forager": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.01,
+          "buff_info": {
+            "Key": "Harvesting_Luck",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/kzvv6m81kt8mkpva3zx8y/Priestskill_44_nobg.v1.png?rlkey=e2ilpig2rmw8fuz5enkdmgt6l&st=20qs3eya&dl=1",
+          "skin": 3305668585,
+          "permissions": null
+        },
+        "Replenish": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Collectible_Respawn",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/otxqf6pl3yhk566897w07/Druideskill_05_nobg.v1.png?rlkey=5t8yi3v8dj4t0pmcrwkh26v76&st=vt02643r&dl=1",
+          "skin": 3768243493,
+          "permissions": null
+        }
+      }
+    },
+    "Medical": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Bandage Expert": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 1,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Double_Bandage_Heal",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/p1wlvzz5vtyvd24/Bandage_Expert.png?dl=1",
+          "skin": 2873048071,
+          "permissions": null
+        },
+        "Radiation Expert": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Radiation_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/g18h9sv1q5wi1t7/Radiation_Expert.png?dl=1",
+          "skin": 2873965334,
+          "permissions": null
+        },
+        "Revitalization": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "HealthRegen",
+            "Value": "PerSecond"
+          },
+          "icon_url": "https://www.dropbox.com/s/9neapkjx2ntpclm/Revitalization.png?dl=1",
+          "skin": 2873048224,
+          "permissions": null
+        },
+        "Flame Retardant": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Fire_Damage_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/mmvn40hp81niuc5/Flame_Retardant.png?dl=1",
+          "skin": 2873048354,
+          "permissions": null
+        },
+        "Accident Evasion": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Fall_Damage_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/1n69ohui470smxj/Accident_Evasion.png?dl=1",
+          "skin": 2873048450,
+          "permissions": null
+        },
+        "Battle Medic": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Reviver",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/opmy93244kmtj7j/Battle_Medic.png?dl=1",
+          "skin": 2873048560,
+          "permissions": null
+        },
+        "Exposed Radiation": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "RadiationBaseValue",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/orz96x04gin3wwcu255sf/Warriorskill_30_nobg.v1.png?rlkey=u8pw2vu444594syp4hszf3bx4&st=8u6gqv64&dl=1",
+          "skin": 3263581628,
+          "permissions": null
+        },
+        "Rugged Up": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "No_Cold_Damage",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/l9hmad91yyb8v3x/Rugged_Up.png?dl=1",
+          "skin": 2873048673,
+          "permissions": null
+        },
+        "Perfect Balance": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Fall_Damage_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/vn5rf6prsaviblj/Perfect_Balance.png?dl=1",
+          "skin": 2873048757,
+          "permissions": null
+        },
+        "Second Wind": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Wounded_Resist",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/zh9wcs2alr4uzlm/Second_Wind.png?dl=1",
+          "skin": 2873048855,
+          "permissions": null
+        },
+        "Fresh Spawn": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Spawn_Health",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/241p09h1vhv7v0anqfz91/Priestskill_27_nobg.v1.png?rlkey=vqt9cl274qcxkq050mzqhdhcs&dl=1",
+          "skin": 3036169025,
+          "permissions": null
+        },
+        "Lead Lined": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "RadiationResistModifier",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/v6tmo0swqgatqswygwr7g/Warriorskill_30_nobg.v1_purple.png?rlkey=x6f26fk8ouvfu6jlk2clo3dvs&st=se4rah7b&dl=1",
+          "skin": 3263581772,
+          "permissions": null
+        },
+        "Messiah": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Medical_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/qz76ogz9tayfgwb/Messiah.png?dl=1",
+          "skin": 2873048963,
+          "permissions": null
+        }
+      }
+    },
+    "Combat": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Animal Tamer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Animal_Damage_Resist",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/5wgfza2h6d1nxpd/Animal_Tamer.png?dl=1",
+          "skin": 2873049142,
+          "permissions": null
+        },
+        "Defence Research": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Human_NPC_Defence",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/rs66cu2qrawjfjw/Defence_Research.png?dl=1",
+          "skin": 2873049362,
+          "permissions": null
+        },
+        "Resourceful": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Free_Bullet_Chance",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/1vmyged7iu3j9fi/Resourceful.png?dl=1",
+          "skin": 2873049496,
+          "permissions": null
+        },
+        "Scientific Breakthrough": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Human_NPC_Damage",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/910bdsqaon9ja22/Scientific_Breakthrough.png?dl=1",
+          "skin": 2873049588,
+          "permissions": null
+        },
+        "Duelist": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Melee_Resist",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/619ww8i1fu7a28e/Duelist.png?dl=1",
+          "skin": 2873049666,
+          "permissions": null
+        },
+        "Lucky Shot": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.01,
+          "buff_info": {
+            "Key": "PVP_Critical",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/iezzpbs15qbmt1u/Lucky_Shot.png?dl=1",
+          "skin": 2873049731,
+          "permissions": null
+        },
+        "Assassin": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.01,
+          "buff_info": {
+            "Key": "PVP_Damage",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/i39yhkrdvwti1dn/Assassin.png?dl=1",
+          "skin": 2873049790,
+          "permissions": null
+        },
+        "Guarded": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "PVP_Shield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/yufh2ieo4kysb5g/Guarded.png?dl=1",
+          "skin": 2873049899,
+          "permissions": null
+        },
+        "Drum Mag": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Extended_Mag",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/2zil9t4brndzgd7/Extended_Mag.v1.png?dl=1",
+          "skin": 2995245729,
+          "permissions": null
+        },
+        "Vampiric Tendencies": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Combat_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/3brv8bohuk75npj/Vampiric_Tendencies.png?dl=1",
+          "skin": 2873050024,
+          "permissions": null
+        },
+        "Maintenance": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Durability",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/b1bgfqdxe2wunr0/Maintenance.png?dl=1",
+          "skin": 2873050116,
+          "permissions": null
+        },
+        "Sixth Sense": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 5.0,
+          "buff_info": {
+            "Key": "Awareness",
+            "Value": "Distance"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/zybvoa859xxdlj99sjb3u/Archerskill_14_nobg.v1.png?rlkey=v7npg3s5bghc3z7egkmr43bz7&st=u9c43a91&dl=1",
+          "skin": 3393706448,
+          "permissions": null
+        },
+        "Supersonic Thrust": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Rocket_Velocity",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/wnxbqcr3tf1skr86c5n6x/Archerskill_05_nobg.v1.png?rlkey=534ipsyv0zasw3mlclyf2eido&st=s4cnj9ly&dl=1",
+          "skin": 3470847198,
+          "permissions": null
+        },
+        "Ricochet": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Shield_Reflect",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/by0ecvqo94p275odes6ph/Assassinskill_17_nobg.v1.png?rlkey=by53d2j3tfoizrn02vr7ekax1&st=7u0bo2jw&dl=1",
+          "skin": 3475613624,
+          "permissions": null
+        },
+        "Tank Buster": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Bradley_Damage_Bonus",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/w73higanxue1n5jjlxgte/Engineerskill_27_nobg.v1.png?rlkey=khmvqdixsby2x6bncyzohz10q&st=3c34eha6&dl=1",
+          "skin": 3538449981,
+          "permissions": null
+        },
+        "Skybane": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Heli_Damage_Bonus",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/7ywy7mfqgy9e9pjdlfv5q/Engineerskill_12_nobg.v1.png?rlkey=p6g6m826bx8jzwj0ox6drgf2d&st=ja0y2c6m&dl=1",
+          "skin": 3538450199,
+          "permissions": null
+        }
+      }
+    },
+    "Build_Craft": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Amature Tinkerer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Craft_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/4hw98tpjmsohf9n/Amature_Tinkerer.png?dl=1",
+          "skin": 2873050271,
+          "permissions": null
+        },
+        "Thrifty Renovator": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Upgrade_Refund",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/36274c1xkjjtb0f/Thirfty_Renovator.png?dl=1",
+          "skin": 2873050381,
+          "permissions": null
+        },
+        "Adept Tinkerer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Craft_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/mikhmlqfx5y7fvl/Adept_Tinkerer.png?dl=1",
+          "skin": 2873050490,
+          "permissions": null
+        },
+        "Thrifty Tinkerer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Craft_Refund",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/yp73p3ruy4l4oh2/Thrifty_Tinkerer.png?dl=1",
+          "skin": 2873050600,
+          "permissions": null
+        },
+        "Researcher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Research_Refund",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/armldhxjctbg67w/Research.png?dl=1",
+          "skin": 2873050672,
+          "permissions": null
+        },
+        "Expert Tinkerer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Craft_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/8ibntd9n1033dh4/Expert_Tinkerer.png?dl=1",
+          "skin": 2873050815,
+          "permissions": null
+        },
+        "Blast Furnace": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Smelt_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/p0i3ef8mq4mug05/Blast_Furnace.png?dl=1",
+          "skin": 2873050908,
+          "permissions": null
+        },
+        "Primitive Expert": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 1,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Primitive_Expert",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/gvy0dreisfvd9t5/Primitive_Expert.png?dl=1",
+          "skin": 2873051010,
+          "permissions": null
+        },
+        "Thrifty Duplicator": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.03,
+          "buff_info": {
+            "Key": "Craft_Duplicate",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/lzd1p3l8q5t7rx2/Thrifty_Duplicator.png?dl=1",
+          "skin": 2873051123,
+          "permissions": null
+        },
+        "Access Granted": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Build_Craft_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/58hmrgytnntn314/Access_Granted.png?dl=1",
+          "skin": 2873051221,
+          "permissions": null
+        },
+        "Blacksmith": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "MaxRepair",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/b4k6p03u77x9d7t/Blacksmith.png?dl=1",
+          "skin": 2873051294,
+          "permissions": null
+        },
+        "Quality Crafter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 3,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Armor_Slots",
+            "Value": "Slots"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/2g68c63roneqxo38evfv7/Engineerskill_18_nobg.v1.png?rlkey=w1glrclf04vyvbc6hntgdkmhu&st=lwv432tp&dl=1",
+          "skin": 3475570774,
+          "permissions": null
+        },
+        "MacGyver": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 2,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Free_Repairs",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/fcha2r1mqcmlo3ab23hvu/Mageskill_14_nobg.v1.png?rlkey=81z810i63wkeqik2xmhj96x8z&st=t63ib277&dl=1",
+          "skin": 3521517428,
+          "permissions": null
+        }
+      }
+    },
+    "Scavenging": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Looter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Extra_Scrap_Barrel",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/y1cmvfjafenh1du/Looter.png?dl=1",
+          "skin": 2873051741,
+          "permissions": null
+        },
+        "Barrel Smasher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 1,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Barrel_Smasher",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/sebu0m6s5v2sual/Barrel_Smasher.png?dl=1",
+          "skin": 2873051884,
+          "permissions": null
+        },
+        "Loot Magnet": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Loot_Pickup",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/hqthffkbbm73krh/Loot_Magnet.png?dl=1",
+          "skin": 2873965904,
+          "permissions": null
+        },
+        "Digger": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Efficient_Digger",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/p4sckiln8e7au5f16z4vi/Warriorskill_11_nobg.v1.png?rlkey=p2zzuwfd5xeoc2kg53t3epa0h&st=kd4g27re&dl=1",
+          "skin": 3245028577,
+          "permissions": null
+        },
+        "Magnetic Digger": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 2,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Magnetic_Digger",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/1a0hwynzstfe20sa25jbg/Shamanskill_24_nobg.v1.png?rlkey=3xe8m2vie59wjapk7jnljedsy&st=ebtv0qsm&dl=1",
+          "skin": 3250636327,
+          "permissions": null
+        },
+        "Lucky Looter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Extra_Scrap_Crate",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/wpo449q9tinohgh/Lucky_Looter.png?dl=1",
+          "skin": 2873052061,
+          "permissions": null
+        },
+        "Electronics Luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Electronic_Chest",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/zshx9nme86dqrhm/Electronics_Luck.png?dl=1",
+          "skin": 2873052180,
+          "permissions": null
+        },
+        "Component Luck": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Component_Chest",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/vlz5kic6d0qw5df/Components_Luck.png?dl=1",
+          "skin": 2873052277,
+          "permissions": null
+        },
+        "Luck Detective": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Metal_Detector_Luck",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/f096z1u46rj1iv4wekwir/Mageskill_04_nobg.v1.png?rlkey=p9051jj6jletrapq0szc1kw68&st=5nhahqgf&dl=1",
+          "skin": 3244936873,
+          "permissions": null
+        },
+        "Component Salvager": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Component_Barrel",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/b4xu8xxe7zjwrwj/Component_Salvager.png?dl=1",
+          "skin": 2873052390,
+          "permissions": null
+        },
+        "Electronics Salvager": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Electronic_Barrel",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/jcgwgqzvoxw8y9e/Electronics_Salvager.png?dl=1",
+          "skin": 2873052471,
+          "permissions": null
+        },
+        "Optimized Recycling": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.5,
+          "buff_info": {
+            "Key": "Recycler_Speed",
+            "Value": "Seconds"
+          },
+          "icon_url": "https://www.dropbox.com/s/3mq7xdj8zmdltp7/Optimized_Recycling.png?dl=1",
+          "skin": 2873052554,
+          "permissions": null
+        },
+        "Efficient Recycling": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Recycler_Efficiency",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/scv3574g4cqks05ckrn1x/RecyclerEfficiency.png?rlkey=qljou4kcu1rdpysfr11k3ihy3&st=i1t4soa7&dl=1",
+          "skin": 3237995572,
+          "permissions": null
+        },
+        "Shredder": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Scavengers_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/xib7ax3gwo6gg97/Shredder.png?dl=1",
+          "skin": 2873052624,
+          "permissions": null
+        }
+      }
+    },
+    "Vehicles": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Amature Rider": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Riding_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/9lj4colvhioznl1/Amature_Rider.png?dl=1",
+          "skin": 2873052721,
+          "permissions": null
+        },
+        "Adept Rider": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Riding_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/javi1k9ys88iwxg/Adept_Rider.png?dl=1",
+          "skin": 2873053592,
+          "permissions": null
+        },
+        "Expert Rider": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Riding_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/oxfeh3b1xvqqo7t/Expert_Rider.png?dl=1",
+          "skin": 2873053752,
+          "permissions": null
+        },
+        "Economical Pilot": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.03,
+          "buff_info": {
+            "Key": "Heli_Fuel_Rate",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/0h1hq0nco5dimtv/Economical_Pilot.png?dl=1",
+          "skin": 2873054261,
+          "permissions": null
+        },
+        "Hybrid Pilot": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.07,
+          "buff_info": {
+            "Key": "Heli_Fuel_Rate",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/wgjms949cdlzegm/Hybrid_Pilot.png?dl=1",
+          "skin": 2873054373,
+          "permissions": null
+        },
+        "Yachtman": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Boat_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/86096soadnsy2qh/Yachtman.png?dl=1",
+          "skin": 2873054539,
+          "permissions": null
+        },
+        "Economical Captain": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.15,
+          "buff_info": {
+            "Key": "Boat_Fuel_Rate",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/5f4agk38f2y1ch4/Economical_Captain.png?dl=1",
+          "skin": 2873054654,
+          "permissions": null
+        },
+        "Mechanic": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Vehicle_Mechanic",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/pdpum3gj4sfiowy/Mechanic.png?dl=1",
+          "skin": 2873054766,
+          "permissions": null
+        },
+        "Tank": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Vehicle_Ultimate",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/xdcl74d0e82e32l/Tank.png?dl=1",
+          "skin": 2873054991,
+          "permissions": null
+        },
+        "Jet Engine": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.3,
+          "buff_info": {
+            "Key": "Heli_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/9948qp5tv7oc6l9/Shamanskill_42_nobg.v1.png?dl=1",
+          "skin": 3009474256,
+          "permissions": null
+        },
+        "Supercharged": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "BikeEnginePower",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/es3bzvvda9i6d4hpwvyno/Priestskill_33_nobg.v1.png?rlkey=pz2r6h1zf19afem50eyxxu5xe&st=s71u9p0n&dl=1",
+          "skin": 3283818174,
+          "permissions": null
+        },
+        "Airbags": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 2,
+          "tier": 2,
+          "value_per_buff": 0.5,
+          "buff_info": {
+            "Key": "DriverCollisionResistance",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/24ytza9zomxv2eas6lqjx/Paladinskill_13_nobg.v1.png?rlkey=mp9nauo14unbttbptrvhu20bp&st=3wjgqq9j&dl=1",
+          "skin": 3287404627,
+          "permissions": null
+        },
+        "Wind Catcher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Sailing_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/apu0imuvsrvurz5q1ghzq/Pirate_Ship.v1.png?rlkey=3yeznkx5e8ouxn6outs7tncl7&st=56ph7w0f&dl=1",
+          "skin": 3768215772,
+          "permissions": null
+        },
+        "Frugal Wrighter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.15,
+          "buff_info": {
+            "Key": "Boat_Refund",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/2jh50s7gjbs1tn258lwpx/Wheel_Hammers.v1.png?rlkey=er8bmeffdksnnf8ya9f0evu8x&st=u2zsoeqc&dl=1",
+          "skin": 3768228074,
+          "permissions": null
+        },
+        "Heated Shot": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.25,
+          "buff_info": {
+            "Key": "Cannon_Damage",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/g6k4qrqwriuwjaex4qswp/Hot_Cannonballs.v1.png?rlkey=n5yboalhvbiey8whrvtxjhagj&st=budrvtij&dl=1",
+          "skin": 3768238199,
+          "permissions": null
+        }
+      }
+    },
+    "Cooking": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Easily satisfied": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Extra_Food_Water",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/473rrrfjnt9huij/Easily_Satisfied.png?dl=1",
+          "skin": 2873055105,
+          "permissions": null
+        },
+        "Iron Stomach": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 2,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Iron_Stomach",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/221dsnnubpa2825/Iron_Stomach.png?dl=1",
+          "skin": 2873055201,
+          "permissions": null
+        },
+        "Glutton": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Metabolism_Boost",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/t0r4pttz6b7663c/Glutton.png?dl=1",
+          "skin": 2873055301,
+          "permissions": null
+        },
+        "Fruggal Rationer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Rationer",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/azdltk7o99y7mpk/Fruggal_Rationer.png?dl=1",
+          "skin": 2873055400,
+          "permissions": null
+        },
+        "Tea Party": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Extended_Tea_Duration",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/himcda9ukseslvf/TeTime.png?dl=1",
+          "skin": 3005685932,
+          "permissions": null
+        },
+        "Tea Connoisseur": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Tea_Looter",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/htpiwo9aeqildv8/Archerskill_38_nobg.v1.png?dl=1",
+          "skin": 3006539324,
+          "permissions": null
+        },
+        "Burst Of Energy": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Cooking_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/jjhk0ug4ydajdqa/Assassinskill_12_nobg.v1.png?dl=1",
+          "skin": 3011025470,
+          "permissions": null
+        },
+        "Fry Cook": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.19,
+          "buff_info": {
+            "Key": "Cooking_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/a0ihdbfkga5kbrfnv16gb/Shamanskill_07_nobg.v1.png?rlkey=vhf56q0p5bk2dw2qcxqatitid&st=5p793xdv&dl=1",
+          "skin": 3464633815,
+          "permissions": null
+        }
+      }
+    },
+    "Husbandry": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10
+      },
+      "nodes": {
+        "Clever Incubator": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 2,
+          "tier": 1,
+          "value_per_buff": 0.5,
+          "buff_info": {
+            "Key": "Hatch_Speed",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/b82m8yeh5tbpxrpe9xu8k/Chick_Hatching.v1.png?rlkey=ya5t983zo822kdzx6391blc29&st=819hhnf6&dl=1",
+          "skin": 3768214445,
+          "permissions": null
+        },
+        "Soft Touch": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 2,
+          "tier": 2,
+          "value_per_buff": 0.5,
+          "buff_info": {
+            "Key": "Pet_Effectiveness",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/7gvefyih3k37rzzfbq8pm/Happy_Chicken.v1.png?rlkey=urc4i0zq9wzegdahwk920qndy&st=v4hqvznl&dl=1",
+          "skin": 3768214912,
+          "permissions": null
+        },
+        "Factory Farmer": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 4,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Coop_Capacity",
+            "Value": "Slots"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/j7cqpeimal1worbcen793/Packed_Coop.v1.png?rlkey=y0vi2lp5ur16k00bswi7qbtpv&st=3pso2vzw&dl=1",
+          "skin": 3768215328,
+          "permissions": null
+        },
+        "Soul mates": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Livestock_Handling",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/bv5wu6shziras047x48x6/Livestock_Handling.png?rlkey=jmpqcrzwqc5d9l9zzna9iwyu3&st=rcenk3dr&dl=1",
+          "skin": 3809571177,
+          "permissions": null
+        },
+        "Calming Presence": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 1,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Livestock_Calm",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/3yrau4osvmv8yuudonf8x/Livestock_Calm.png?rlkey=ep46l7qp7p1iovdcwd3rjuspp&st=fkglhn1p&dl=1",
+          "skin": 3809571045,
+          "permissions": null
+        },
+        "Amateur Rancher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.05,
+          "buff_info": {
+            "Key": "Husbandry_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/dkeu7txdudqpb3qxke916/Amateur-Rancher.png?rlkey=akjvaau70tb3r5krvxo4zbzn4&st=8hialkv2&dl=1",
+          "skin": 3809570891,
+          "permissions": null
+        },
+        "Adept Rancher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": "Amateur Rancher",
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.075,
+          "buff_info": {
+            "Key": "Husbandry_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/vbvohovluor584sn481at/Adept-Rancher.png?rlkey=k917hq0fxe9p8iqg5gloclfdl&st=ux5q8qrf&dl=1",
+          "skin": 3809570737,
+          "permissions": null
+        },
+        "Expert Rancher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": "Adept Rancher",
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Husbandry_Yield",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/xubjb187yw9egjos0oh9p/Expert-Rancher.png?rlkey=6df01tzz9gbjrdwhnx1d4wkol&st=kwcxvsch&dl=1",
+          "skin": 3809570614,
+          "permissions": null
+        },
+        "Impatient Rancher": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Husbandry_Cooldown",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/gtpsnov1ui2mn944aqpb7/Impatient-Rancher.png?rlkey=psf9ypv0at1muhomcg5269az4&st=ils0gq44&dl=1",
+          "skin": 3809570488,
+          "permissions": null
+        },
+        "Patient Negotiator": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Livestock_Offers",
+            "Value": "Offer"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/vilqt2vk3kqg1zvvvzgrz/Patient-Negotiator.png?rlkey=6dha63vshwij9p1yjdowbysyv&st=vng6v7xw&dl=1",
+          "skin": 3809570341,
+          "permissions": null
+        },
+        "Silver Tongue": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.03,
+          "buff_info": {
+            "Key": "Livestock_Sale_Value",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/a5o2cllmdijfovin0w33r/Silver-Tongue.png?rlkey=47wm9fcz71f5bsc0jojqmwcvc&st=xodddxf0&dl=1",
+          "skin": 3809569857,
+          "permissions": null
+        }
+      }
+    },
+    "Underwater": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10
+      },
+      "nodes": {
+        "Cage Diver": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "SharkResistance",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/hti5v35qh45lj94/Cage_Diver.png?dl=1",
+          "skin": 2873055798,
+          "permissions": null
+        },
+        "Gilled": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 60.0,
+          "buff_info": {
+            "Key": "WaterBreathing",
+            "Value": "Seconds"
+          },
+          "icon_url": "https://www.dropbox.com/s/e48z07x10qkmh4s/Gilled.png?dl=1",
+          "skin": 2873055882,
+          "permissions": null
+        },
+        "Reckless Diver": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "SharkResistance",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/k204yk4b6upj0r4/Reckless_Diver.png?dl=1",
+          "skin": 2873056389,
+          "permissions": null
+        },
+        "Shark Veterinarian": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "SharkSkinner",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/zjiqshz9tzpgh82/Shark_Veterinarian.png?dl=1",
+          "skin": 2873056528,
+          "permissions": null
+        },
+        "Treasure Hunter": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "DeepSeaLooter",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/po3zsz763hopkjc/Treasure_Hunter.png?dl=1",
+          "skin": 2873056606,
+          "permissions": null
+        },
+        "Nimble Fingers": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "InstantUntie",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/3m853nqxq2qmoih/Nimble_Fingers.png?dl=1",
+          "skin": 2873056697,
+          "permissions": null
+        },
+        "Aquatic Combatant": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "UnderwaterDamageBonus",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/683npn5fwvkbtni/Aquatic_Combatant.png?dl=1",
+          "skin": 2873056786,
+          "permissions": null
+        },
+        "Sonar Pulse": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 2,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Sonar",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/rthqet410byv4bpj80hgl/Priestskill_42_nobg.v1.png?rlkey=67h0gyem1x08nh7idb19zvtds&dl=1",
+          "skin": 3111209702,
+          "permissions": null
+        },
+        "Chum Master": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Bait_Value_Bonus",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/9a59g5x8lqwpivkmzrsic/Chum_Master.v1.png?rlkey=03mvhl958t7ez2eswseqjyc6t&st=o4erh44w&dl=1",
+          "skin": 3766254409,
+          "permissions": null
+        }
+      }
+    },
+    "Raiding": {
+      "enabled": true,
+      "Minimum level to unlock": 0,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10,
+        "100": 25
+      },
+      "nodes": {
+        "Trap Evader": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Trap_Damage_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/lr88azap541gn7s/Trappingly%20Challenged.v1.png?dl=1",
+          "skin": 2928072989,
+          "permissions": null
+        },
+        "Mine Sweeper": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Trap_Damage_Increase",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/j35nvrjiyg7wadl/Trap_Damage_Increase.v1.png?dl=1",
+          "skin": 2928093322,
+          "permissions": null
+        },
+        "Blast Suit": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Personal_Explosive_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/szg0pp5ow0fi11r/Personal_Explosive_Reduction.v1.png?dl=1",
+          "skin": 2928111784,
+          "permissions": null
+        },
+        "Demolition": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Double_Explosion_Chance",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/wk8xom6d7ab09jw/Double_Explosion_chance.v1.png?dl=1",
+          "skin": 2928137975,
+          "permissions": null
+        },
+        "Pressed Explosive": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Explosion_Radius",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/nk89h8chtl4svx1/Explosion_Radius.v1.png?dl=1",
+          "skin": 2928169093,
+          "permissions": null
+        },
+        "Master Thief": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "Lock_Picker",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/pcuy6jo1q567p9b/Lock_Picker.png?dl=1",
+          "skin": 2928793256,
+          "permissions": null
+        },
+        "Rain hellfire": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 1,
+          "tier": 100,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Raiding_Ultimate",
+            "Value": "IO"
+          },
+          "icon_url": "https://www.dropbox.com/s/tfn326c3pnhyri4/Raiding_Ultimate.v1.png?dl=1",
+          "skin": 2929679053,
+          "permissions": null
+        },
+        "Reliable Explosive": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Dudless_Explosive",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/rrxxt78hu2r0vb4/Dudless_Explosive.png?dl=1",
+          "skin": 2930484526,
+          "permissions": null
+        },
+        "Perceptive": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Trap_Spotter",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/s/as74z7rjlfiwy98/Druideskill_27_nobg.v1.png?dl=1",
+          "skin": 3012262421,
+          "permissions": null
+        },
+        "Scavenger's Instinct": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 5.0,
+          "buff_info": {
+            "Key": "Loot_Spotter",
+            "Value": "Distance"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/hmzmcxp11vjngivq96vy8/Paladinskill_46_nobg.v1.png?rlkey=1r93hrv402wc6fw1xwhn35i7c&st=pgajkxyi&dl=1",
+          "skin": 3566102972,
+          "permissions": null
+        },
+        "Strategist": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Siege_Damage",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/lrffgfi4hfghp7dlx3khf/Catapult.v1.png?rlkey=o1u5sbyi2ryax1k8zaynttfh7&st=a8l9rmdj&dl=1",
+          "skin": 3768218411,
+          "permissions": null
+        }
+      }
+    },
+    "Team": {
+      "enabled": true,
+      "Minimum level to unlock": 30,
+      "Minimum points to unlock": 0,
+      "Minimum prestige level to unlock": 0,
+      "Points required to unlock skills [tier: points required] [tier 100 = ultimate]": {
+        "1": 0,
+        "2": 5,
+        "3": 10
+      },
+      "nodes": {
+        "Comforting Aura": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Comfort",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/203ir1w3pr9gd0xya60iu/Comfort.v1.png?rlkey=nfvtp3c63jch4zqqaxy1q8moo&dl=1",
+          "skin": 3215096322,
+          "permissions": null
+        },
+        "Medic": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Heal_Share",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/3l01pud44z0gtqt6oea8n/HealShare.v1.png?rlkey=eyj5p55byk3y3m4b5hsu5rvrk&dl=1",
+          "skin": 3215096612,
+          "permissions": null
+        },
+        "Guidance": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 3,
+          "value_per_buff": 0.02,
+          "buff_info": {
+            "Key": "XP_Share",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/lg80ela2owff2bk4vxd1h/XPShare.v1.png?rlkey=gcxehwk7hker0xybzzyf01gfj&dl=1",
+          "skin": 3215096872,
+          "permissions": null
+        },
+        "Brewed Bonding": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.1,
+          "buff_info": {
+            "Key": "Tea_Share",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/ncgao45ozfx3vzxifwj17/TeaShare.v1.png?rlkey=ptdmj34xfszq7ifgzichia3h7&dl=1",
+          "skin": 3215097253,
+          "permissions": null
+        },
+        "Feast Fellows": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 1,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Metabolism_Share",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/z987oj7ruyg9xczbnqx8z/MetabolismShare.v1.png?rlkey=z3bqgxl3oaavw5fs1d5f9f840&dl=1",
+          "skin": 3215097568,
+          "permissions": null
+        },
+        "Craftman's Aura": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 3,
+          "tier": 3,
+          "value_per_buff": 1.0,
+          "buff_info": {
+            "Key": "Human_Workbench",
+            "Value": "Level"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/507mjkg53sptvpf3bqz7t/MobileWorkbench.v1.png?rlkey=o4whleu473331n691p3gb4vzn&dl=1",
+          "skin": 3215097928,
+          "permissions": null
+        },
+        "Friendly Fire": {
+          "Permission required to show this node": null,
+          "Minimum prestige required to unlock this node": 0,
+          "Minimum player level required to unlock this node": 0,
+          "Skill required to unlock node [Requires max level]": null,
+          "Skill that if unlocked, will prevent this node from unlocking": null,
+          "enabled": true,
+          "max_level": 5,
+          "tier": 2,
+          "value_per_buff": 0.2,
+          "buff_info": {
+            "Key": "Friendly_Fire_Reduction",
+            "Value": "Percentage"
+          },
+          "icon_url": "https://www.dropbox.com/scl/fi/her8qle652wkczdlkd3rw/Holding_Hands.v1.png?rlkey=uhlu65js7xibfpdz4szhxer2y&st=irr68xu2&dl=1",
+          "skin": 3768218597,
+          "permissions": null
+        }
+      }
+    }
+  },
+  "Leveling information. Y value must be set to 2 or 3": {
+    "x": 0.07,
+    "y": 2.0,
+    "xp_table": {
+      "0": 0.0,
+      "1": 204.0,
+      "2": 816.0,
+      "3": 1836.0,
+      "4": 3265.0,
+      "5": 5102.0,
+      "6": 7346.0,
+      "7": 9999.0,
+      "8": 13061.0,
+      "9": 16530.0,
+      "10": 20408.0,
+      "11": 24693.0,
+      "12": 29387.0,
+      "13": 34489.0,
+      "14": 39999.0,
+      "15": 45918.0,
+      "16": 52244.0,
+      "17": 58979.0,
+      "18": 66122.0,
+      "19": 73673.0,
+      "20": 81632.0,
+      "21": 89999.0,
+      "22": 98775.0,
+      "23": 107959.0,
+      "24": 117551.0,
+      "25": 127551.0,
+      "26": 137959.0,
+      "27": 148775.0,
+      "28": 159999.0,
+      "29": 171632.0,
+      "30": 183673.0,
+      "31": 196122.0,
+      "32": 208979.0,
+      "33": 222244.0,
+      "34": 235918.0,
+      "35": 249999.0,
+      "36": 264489.0,
+      "37": 279387.0,
+      "38": 294693.0,
+      "39": 310408.0,
+      "40": 326530.0,
+      "41": 343061.0,
+      "42": 359999.0,
+      "43": 377346.0,
+      "44": 395102.0,
+      "45": 413265.0,
+      "46": 431836.0,
+      "47": 450816.0,
+      "48": 470204.0,
+      "49": 489999.0,
+      "50": 510204.0,
+      "51": 530816.0,
+      "52": 551836.0,
+      "53": 573265.0,
+      "54": 595102.0,
+      "55": 617346.0,
+      "56": 639999.0,
+      "57": 663061.0,
+      "58": 686530.0,
+      "59": 710408.0,
+      "60": 734693.0,
+      "61": 759387.0,
+      "62": 784489.0,
+      "63": 809999.0,
+      "64": 835918.0,
+      "65": 862244.0,
+      "66": 888979.0,
+      "67": 916122.0,
+      "68": 943673.0,
+      "69": 971632.0,
+      "70": 999999.0,
+      "71": 1028775.0,
+      "72": 1057959.0,
+      "73": 1087551.0,
+      "74": 1117551.0,
+      "75": 1147959.0,
+      "76": 1178775.0,
+      "77": 1210000.0,
+      "78": 1241632.0,
+      "79": 1273673.0,
+      "80": 1306122.0,
+      "81": 1338979.0,
+      "82": 1372244.0,
+      "83": 1405918.0,
+      "84": 1439999.0,
+      "85": 1474489.0,
+      "86": 1509387.0,
+      "87": 1544693.0,
+      "88": 1580408.0,
+      "89": 1616530.0,
+      "90": 1653061.0,
+      "91": 1689999.0,
+      "92": 1727346.0,
+      "93": 1765102.0,
+      "94": 1803265.0,
+      "95": 1841836.0,
+      "96": 1880816.0,
+      "97": 1920204.0,
+      "98": 1959999.0,
+      "99": 2000204.0,
+      "100": 2040816.0
+    }
+  },
+  "Notification settings": {
+    "Settings for Notify plugin": {
+      "Language key and message type to display when a player gains a level": {
+        "Key": "NotifyLevelGained",
+        "Value": 0
+      }
+    },
+    "Settings for NotificationSystem plugin": {
+      "Icon to show on the message": 3008683897,
+      "Send a notification when a player levels up?": true,
+      "Send a notification when a player hits max level?": true,
+      "Send a notification when a player receives increases their prestige level?": true
+    },
+    "Settings for Discord plugin": {
+      "Webhook URL": null,
+      "Send a discord notification when a player levels up?": true,
+      "Send a discord notification when a player increases their prestige level?": true
+    },
+    "Settings chat notifications": {
+      "Send a message when the Woodcutting ultimate goes on cooldown?": true,
+      "Send a message when the Double Bandage Heal skill goes on cooldown?": true,
+      "Send a message when the Wounded Resist skill goes on cooldown?": true,
+      "Send a message when the Rationed skill procs?": true,
+      "Send a message when Skinning Luck procs?": true,
+      "Send a message when Mining Luck procs?": true,
+      "Send a message when Woodcutting Luck procs?": true,
+      "Send a message when Fishing Luck procs?": true,
+      "Send a message when Harvesting Luck procs?": true,
+      "Send a message when the Regrowth skill procs?": true,
+      "Send a message when receiving extra fish?": true,
+      "Send a message when Crafting Refund procs?": true,
+      "Send a message when Crafting Duplicate procs?": true,
+      "Send a message when Node Respawn procs?": true,
+      "Send a message when Iron Stomach procs?": true,
+      "Send a message when Free Upgrade procs?": true,
+      "Send a message when Research Refund procs?": true,
+      "Send a message when Recycler Efficiency procs?": true,
+      "Send notifications to players when the tea share skill procs?": true,
+      "Send notifications to players when the metabolism share skill procs?": true,
+      "Send notifications to players when the metal_detector_luck skill procs?": true
+    }
+  },
+  "Third-party plugin settings": {
+    "SurvivalArena Settings": {
+      "Disable the skinning ultimate buff when the player joins the game?": true
+    },
+    "Paintball Settings": {
+      "Disable the skinning ultimate buff when the player joins the game?": true
+    }
+  },
+  "Roguelike settings": {
+    "Roguelike - Completely wipe a players progress when they die?": false,
+    "Require the player to have the skilltree.roguelike permission in order to participate?": true,
+    "Require the player to be connected to the service when they die and lose XP?": true,
+    "Death type settings [true = wipes when killed by this source]": {
+      "Animal": true,
+      "Bradley": true,
+      "Cold": true,
+      "Drowned": true,
+      "ElectricShock": true,
+      "Fall": true,
+      "Heat": true,
+      "HumanNpc": true,
+      "Hunger": true,
+      "PatrolHeli": true,
+      "Pvp": true,
+      "Radiation": true,
+      "Suicide": true,
+      "Thirst": true,
+      "Traps": true
+    }
+  }
+}

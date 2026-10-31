@@ -1,0 +1,1630 @@
+{
+  "default": {
+    "position": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "rotationdiff": 0.0,
+    "rotationy": 0.0
+  },
+  "entities": [
+    {
+      "items": [],
+      "pos": {
+        "x": "-1.702557",
+        "y": "3.113032",
+        "z": "-0.1913383"
+      },
+      "prefabname": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "rot": {
+        "x": "-1.952533E-05",
+        "y": "2.599426",
+        "z": "-2.890616E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-2.008211",
+        "y": "3.113032",
+        "z": "-1.6239"
+      },
+      "prefabname": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "rot": {
+        "x": "-1.910877E-05",
+        "y": "1.557236",
+        "z": "-2.89076E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "2.60854",
+        "y": "3.113032",
+        "z": "1.429261"
+      },
+      "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+      "rot": {
+        "x": "3.150286E-05",
+        "y": "4.308573",
+        "z": "-1.54791E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "1.600774",
+        "y": "3.113032",
+        "z": "1.093089"
+      },
+      "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+      "rot": {
+        "x": "3.084903E-05",
+        "y": "4.265597",
+        "z": "-1.684451E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "0.4164925",
+        "y": "3.113031",
+        "z": "0.4493886"
+      },
+      "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+      "rot": {
+        "x": "2.880129E-05",
+        "y": "4.316308",
+        "z": "1.963682E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-0.5967264",
+        "y": "3.113031",
+        "z": "-0.0627079"
+      },
+      "prefabname": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+      "rot": {
+        "x": "-3.096859E-05",
+        "y": "1.159089",
+        "z": "1.567085E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 1,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "0.1456551",
+        "y": "5.97289",
+        "z": "-2.841548"
+      },
+      "prefabname": "assets/prefabs/deployable/ceiling light/ceilinglight.deployed.prefab",
+      "rot": {
+        "x": "-1.604886E-05",
+        "y": "3.676402",
+        "z": "3.106419E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "3.666377",
+        "y": "3.113032",
+        "z": "1.439087"
+      },
+      "prefabname": "assets/prefabs/deployable/tool cupboard/cupboard.tool.deployed.prefab",
+      "rot": {
+        "x": "2.847756E-05",
+        "y": "4.332777",
+        "z": "2.010428E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "1.266684",
+        "y": "2.254797",
+        "z": "-3.63342"
+      },
+      "prefabname": "assets/prefabs/deployable/dropbox/dropbox.deployed.prefab",
+      "rot": {
+        "x": "1.903126E-07",
+        "y": "2.641754",
+        "z": "-7.105427E-15"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "1.986709",
+        "y": "0.1130837",
+        "z": "-1.890088"
+      },
+      "prefabname": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+      "rot": {
+        "x": "1.99788E-07",
+        "y": "4.262828",
+        "z": "5.833599E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "3.371167",
+        "y": "0.1130837",
+        "z": "1.571727"
+      },
+      "prefabname": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+      "rot": {
+        "x": "8.10449E-08",
+        "y": "2.68249",
+        "z": "1.321521E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.913493",
+        "y": "6.012979",
+        "z": "0.6574832"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "3.849682E-07",
+        "y": "2.641757",
+        "z": "-1.715669E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.56129",
+        "y": "6.012891",
+        "z": "-1.560791"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-1.117297E-07",
+        "y": "1.59456",
+        "z": "-4.577786E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.632826",
+        "y": "6.012893",
+        "z": "1.437978"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-1.117295E-07",
+        "y": "1.59456",
+        "z": "-4.577785E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.280671",
+        "y": "6.012891",
+        "z": "-0.7804282"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-3.405831E-07",
+        "y": "5.78335",
+        "z": "3.256499E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.24493",
+        "y": "6.01289",
+        "z": "-2.279875"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-4.523127E-07",
+        "y": "0.5473619",
+        "z": "-1.321284E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.352149",
+        "y": "6.012888",
+        "z": "-2.218342"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-3.405831E-07",
+        "y": "5.78335",
+        "z": "3.256499E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-0.0001947207",
+        "y": "6.012891",
+        "z": "0.0002049126"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "1.117294E-07",
+        "y": "4.736152",
+        "z": "4.577785E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.38789",
+        "y": "6.012888",
+        "z": "-3.717789"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-4.523127E-07",
+        "y": "0.5473609",
+        "z": "-1.321282E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.316415",
+        "y": "6.012892",
+        "z": "0.7190192"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-4.523125E-07",
+        "y": "0.5473619",
+        "z": "-1.321286E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.24493",
+        "y": "1.513111",
+        "z": "-2.279875"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "4.720268E-07",
+        "y": "0.5473585",
+        "z": "-1.370228E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.949235",
+        "y": "3.013036",
+        "z": "2.156932"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-2.427249E-07",
+        "y": "3.688952",
+        "z": "-1.101767E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.632826",
+        "y": "3.013036",
+        "z": "1.437978"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-2.594666E-08",
+        "y": "4.73615",
+        "z": "-2.652943E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.576135E-06",
+        "y": "3.013036",
+        "z": "6.329759E-05"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-2.594652E-08",
+        "y": "4.73615",
+        "z": "-2.652943E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.316415",
+        "y": "3.013036",
+        "z": "0.7190192"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-2.427249E-07",
+        "y": "3.688952",
+        "z": "-1.101768E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.316407",
+        "y": "3.013036",
+        "z": "-0.7188931"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-2.427248E-07",
+        "y": "3.688953",
+        "z": "-1.101769E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-0.07128197",
+        "y": "3.013037",
+        "z": "-2.998974"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "2.594615E-08",
+        "y": "1.594559",
+        "z": "2.652943E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.352149",
+        "y": "3.013037",
+        "z": "-2.218342"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-2.167785E-07",
+        "y": "2.641756",
+        "z": "1.551173E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-0.07148027",
+        "y": "6.012888",
+        "z": "-2.998832"
+      },
+      "prefabname": "assets/prefabs/building core/floor.triangle/floor.triangle.prefab",
+      "rot": {
+        "x": "-1.117299E-07",
+        "y": "1.594559",
+        "z": "-4.577783E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.877961",
+        "y": "0.0131852",
+        "z": "-0.842173"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "3.199899E-08",
+        "y": "3.688952",
+        "z": "1.194218E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.913616",
+        "y": "0.01318538",
+        "z": "0.657342"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "1.194218E-07",
+        "y": "2.641755",
+        "z": "3.199893E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.24493",
+        "y": "0.01318538",
+        "z": "-2.279875"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "2.942672E-07",
+        "y": "3.688951",
+        "z": "-1.428468E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.632826",
+        "y": "0.01318556",
+        "z": "1.437978"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "8.742276E-08",
+        "y": "1.594557",
+        "z": "-8.742283E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 3,
+      "pos": {
+        "x": "1.316415",
+        "y": "0.01318556",
+        "z": "0.7190192"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "0",
+        "y": "0.5473596",
+        "z": "0"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.576135E-06",
+        "y": "0.01318538",
+        "z": "6.329759E-05"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "2.068445E-07",
+        "y": "4.73615",
+        "z": "-5.542392E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.280671",
+        "y": "0.01318556",
+        "z": "-0.7804282"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "5.54237E-08",
+        "y": "2.641754",
+        "z": "-2.068445E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 3,
+      "pos": {
+        "x": "1.316415",
+        "y": "0.01318556",
+        "z": "0.7190192"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "8.742278E-08",
+        "y": "3.688952",
+        "z": "-8.74228E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.316407",
+        "y": "0.0131852",
+        "z": "-0.7188931"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "1.428464E-07",
+        "y": "3.688951",
+        "z": "-2.942674E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-0.07148027",
+        "y": "0.01318485",
+        "z": "-2.998832"
+      },
+      "prefabname": "assets/prefabs/building core/foundation.triangle/foundation.triangle.prefab",
+      "rot": {
+        "x": "3.582654E-07",
+        "y": "4.736149",
+        "z": "9.599661E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-1.966392",
+        "y": "0.113181",
+        "z": "-0.3944384"
+      },
+      "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+      "rot": {
+        "x": "-2.967301E-09",
+        "y": "2.09257",
+        "z": "-5.465796E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "1.399914",
+        "y": "0.1131808",
+        "z": "-3.047497"
+      },
+      "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+      "rot": {
+        "x": "3.742149E-07",
+        "y": "5.073229",
+        "z": "2.70519E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-2.078329",
+        "y": "0.1131808",
+        "z": "-1.427248"
+      },
+      "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+      "rot": {
+        "x": "-9.106574E-08",
+        "y": "1.527101",
+        "z": "2.293246E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-2.004715",
+        "y": "0.1131806",
+        "z": "-2.533114"
+      },
+      "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+      "rot": {
+        "x": "-1.601052E-07",
+        "y": "1.431779",
+        "z": "8.61648E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "0.4510694",
+        "y": "0.1131805",
+        "z": "-3.555306"
+      },
+      "prefabname": "assets/prefabs/deployable/furnace/furnace.prefab",
+      "rot": {
+        "x": "1.395108E-07",
+        "y": "5.519063",
+        "z": "3.147612E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "2.016279",
+        "y": "3.115935",
+        "z": "-2.981992"
+      },
+      "prefabname": "assets/prefabs/deployable/lantern/lantern.deployed.prefab",
+      "rot": {
+        "x": "2.238547E-07",
+        "y": "0.9807962",
+        "z": "1.923323E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "3.641688",
+        "y": "5.006666",
+        "z": "1.31773"
+      },
+      "prefabname": "assets/prefabs/deployable/lantern/lantern.deployed.prefab",
+      "rot": {
+        "x": "-3.47786E-05",
+        "y": "0.6035781",
+        "z": "-9.859514E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-0.2576246",
+        "y": "3.113032",
+        "z": "-3.194582"
+      },
+      "prefabname": "assets/prefabs/deployable/planters/planter.small.deployed.prefab",
+      "rot": {
+        "x": "-2.921423E-05",
+        "y": "0.07941198",
+        "z": "-1.842474E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 2,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          },
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          },
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "-1.672595",
+        "y": "6.115787",
+        "z": "-1.238125"
+      },
+      "prefabname": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+      "rot": {
+        "x": "3.612525E-08",
+        "y": "4.820935",
+        "z": "2.620715E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 3,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          },
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          },
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "3.334006",
+        "y": "6.115789",
+        "z": "-0.6902784"
+      },
+      "prefabname": "assets/prefabs/npc/autoturret/autoturret_deployed.prefab",
+      "rot": {
+        "x": "0",
+        "y": "1.906236",
+        "z": "0"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "1.420425",
+        "y": "0.1131806",
+        "z": "-1.221312"
+      },
+      "prefabname": "assets/prefabs/deployable/single shot trap/guntrap.deployed.prefab",
+      "rot": {
+        "x": "4.008511E-07",
+        "y": "4.219468",
+        "z": "5.382373E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-0.763466",
+        "y": "3.113032",
+        "z": "-1.962443"
+      },
+      "prefabname": "assets/prefabs/deployable/sleeping bag/sleepingbag_leather_deployed.prefab",
+      "rot": {
+        "x": "9.886419E-06",
+        "y": "1.371845",
+        "z": "-3.342237E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "1.194501",
+        "y": "5.173948",
+        "z": "2.018119"
+      },
+      "prefabname": "assets/prefabs/deployable/tuna can wall lamp/tunalight.deployed.prefab",
+      "rot": {
+        "x": "-4.469204E-08",
+        "y": "2.641757",
+        "z": "-1.865175E-14"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "2.66234",
+        "y": "2.103574",
+        "z": "-1.549531"
+      },
+      "prefabname": "assets/prefabs/deployable/tuna can wall lamp/tunalight.deployed.prefab",
+      "rot": {
+        "x": "3.905389E-07",
+        "y": "1.594557",
+        "z": "1.563194E-13"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.913493",
+        "y": "3.013037",
+        "z": "0.6574844"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "-1.715669E-07",
+        "y": "1.07096",
+        "z": "-3.849681E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.949235",
+        "y": "0.01318556",
+        "z": "2.156932"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "1.101767E-07",
+        "y": "5.259749",
+        "z": "-2.427249E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.351956",
+        "y": "3.013036",
+        "z": "2.21861"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "1.831113E-07",
+        "y": "4.212553",
+        "z": "-4.469201E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.949235",
+        "y": "3.013036",
+        "z": "2.156932"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "-1.101767E-07",
+        "y": "5.259748",
+        "z": "2.427248E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.280863",
+        "y": "3.013036",
+        "z": "0.7806972"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "1.643658E-07",
+        "y": "4.212553",
+        "z": "3.749096E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.352156",
+        "y": "0.01318556",
+        "z": "2.218468"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "-2.414629E-08",
+        "y": "4.212553",
+        "z": "-1.78425E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.280671",
+        "y": "0.01318556",
+        "z": "-0.7804282"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "-2.09058E-07",
+        "y": "1.070958",
+        "z": "-2.206021E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.561538",
+        "y": "0.01318556",
+        "z": "-1.561064"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "1.220696E-07",
+        "y": "0.0237608",
+        "z": "-3.905389E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.561538",
+        "y": "3.013036",
+        "z": "-1.561064"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "1.019333E-07",
+        "y": "0.0237608",
+        "z": "-3.843245E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.280863",
+        "y": "0.0131852",
+        "z": "0.7806972"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "-1.438202E-07",
+        "y": "4.212552",
+        "z": "-3.280451E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-2.632818",
+        "y": "0.01318467",
+        "z": "-1.437852"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "2.957862E-08",
+        "y": "3.165353",
+        "z": "1.673048E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.38789",
+        "y": "0.01318449",
+        "z": "-3.717789"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "2.427249E-07",
+        "y": "2.118156",
+        "z": "1.101766E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.209189",
+        "y": "0.0131852",
+        "z": "-3.779323"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "3.027851E-07",
+        "y": "1.070958",
+        "z": "-1.903125E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-2.632818",
+        "y": "3.013036",
+        "z": "-1.437852"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "2.771873E-07",
+        "y": "3.165355",
+        "z": "-1.737605E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.38789",
+        "y": "3.013037",
+        "z": "-3.717789"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "1.321284E-07",
+        "y": "2.118158",
+        "z": "-4.523125E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.209585",
+        "y": "3.013037",
+        "z": "-3.779607"
+      },
+      "prefabname": "assets/prefabs/building core/wall/wall.prefab",
+      "rot": {
+        "x": "-1.510209E-07",
+        "y": "1.070961",
+        "z": "-3.802818E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "2.632826",
+        "y": "0.01318556",
+        "z": "1.437978"
+      },
+      "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+      "rot": {
+        "x": "-7.457239E-08",
+        "y": "3.165353",
+        "z": "-2.416357E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.913691",
+        "y": "0.01318538",
+        "z": "0.6573427"
+      },
+      "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+      "rot": {
+        "x": "-2.234604E-08",
+        "y": "1.070958",
+        "z": "-9.155567E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "1.316415",
+        "y": "0.01318556",
+        "z": "0.7190192"
+      },
+      "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+      "rot": {
+        "x": "-3.984853E-08",
+        "y": "5.259748",
+        "z": "-2.669134E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "3.576135E-06",
+        "y": "0.01318538",
+        "z": "6.329759E-05"
+      },
+      "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+      "rot": {
+        "x": "-3.902094E-08",
+        "y": "0.0237608",
+        "z": "-3.40824E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "grade": 2,
+      "pos": {
+        "x": "-1.352347",
+        "y": "0.01318449",
+        "z": "-2.218199"
+      },
+      "prefabname": "assets/prefabs/building core/wall.frame/wall.frame.prefab",
+      "rot": {
+        "x": "-3.492776E-07",
+        "y": "1.070958",
+        "z": "-7.966804E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 6,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 4,
+        "outputs": [
+          {
+            "connectedID": 5,
+            "connectedToSlot": 0,
+            "linePoints": [
+              {
+                "x": 2.33411884,
+                "y": 1.07171464,
+                "z": 1.278472
+              },
+              {
+                "x": -4.19898424E-06,
+                "y": 1.09945035,
+                "z": 0.5298264
+              }
+            ],
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "-2.023791",
+        "y": "3.113032",
+        "z": "-1.584473"
+      },
+      "prefabname": "assets/prefabs/deployable/liquidbarrel/waterbarrel.prefab",
+      "rot": {
+        "x": "-1.895795E-05",
+        "y": "1.562122",
+        "z": "-2.898078E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 7,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 6,
+        "outputs": [
+          {
+            "connectedID": 4,
+            "connectedToSlot": 0,
+            "linePoints": [
+              {
+                "x": 1.59393191,
+                "y": -0.969481468,
+                "z": -0.6536304
+              },
+              {
+                "x": 2.19941139E-05,
+                "y": 0.289854884,
+                "z": 0.589627147
+              }
+            ],
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "-0.8823111",
+        "y": "6.112886",
+        "z": "-0.3032358"
+      },
+      "prefabname": "assets/prefabs/deployable/water catcher/water_catcher_small.prefab",
+      "rot": {
+        "x": "-3.335995E-05",
+        "y": "1.905546",
+        "z": "-1.037887E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 7,
+        "outputs": [
+          {
+            "connectedID": 6,
+            "connectedToSlot": 0,
+            "linePoints": [
+              {
+                "x": -0.9157158,
+                "y": 0.5996945,
+                "z": -1.26454246
+              },
+              {
+                "x": 6.044749E-05,
+                "y": 0.289852977,
+                "z": 0.589698136
+              }
+            ],
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "0.2971267",
+        "y": "6.112886",
+        "z": "-1.530468"
+      },
+      "prefabname": "assets/prefabs/deployable/water catcher/water_catcher_small.prefab",
+      "rot": {
+        "x": "2.041214E-05",
+        "y": "1.519024",
+        "z": "2.794112E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "flags": {},
+      "pos": {
+        "x": "3.913691",
+        "y": "0.0131852",
+        "z": "0.6573427"
+      },
+      "prefabname": "assets/prefabs/building/door.double.hinged/door.double.hinged.metal.prefab",
+      "rot": {
+        "x": "2.234598E-08",
+        "y": "4.212554",
+        "z": "9.155569E-08"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "flags": {},
+      "pos": {
+        "x": "2.632826",
+        "y": "0.01318556",
+        "z": "1.437978"
+      },
+      "prefabname": "assets/prefabs/building/door.double.hinged/door.double.hinged.metal.prefab",
+      "rot": {
+        "x": "-7.457219E-08",
+        "y": "3.165354",
+        "z": "-2.416357E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "flags": {},
+      "pos": {
+        "x": "1.316415",
+        "y": "0.01318556",
+        "z": "0.7190192"
+      },
+      "prefabname": "assets/prefabs/building/door.double.hinged/door.double.hinged.metal.prefab",
+      "rot": {
+        "x": "-3.984834E-08",
+        "y": "5.259748",
+        "z": "-2.669134E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "flags": {},
+      "pos": {
+        "x": "3.576135E-06",
+        "y": "0.0131852",
+        "z": "6.329759E-05"
+      },
+      "prefabname": "assets/prefabs/building/door.double.hinged/door.double.hinged.metal.prefab",
+      "rot": {
+        "x": "-5.915694E-08",
+        "y": "0.02376167",
+        "z": "-3.346096E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "pos": {
+        "x": "-0.9280388",
+        "y": "0.1131799",
+        "z": "-3.352918"
+      },
+      "prefabname": "assets/prefabs/deployable/tier 1 workbench/workbench1.deployed.prefab",
+      "rot": {
+        "x": "-3.597298E-08",
+        "y": "0.5977947",
+        "z": "3.303718E-07"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [],
+        "oldID": 8,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "-0.3193222",
+        "y": "6.115787",
+        "z": "-3.218544"
+      },
+      "prefabname": "assets/prefabs/deployable/playerioents/generators/solar_panels_roof/solarpanel.large.deployed.prefab",
+      "rot": {
+        "x": "0",
+        "y": "2.03672",
+        "z": "0"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [],
+        "oldID": 9,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "0.7948024",
+        "y": "6.115789",
+        "z": "1.059226"
+      },
+      "prefabname": "assets/prefabs/deployable/playerioents/generators/solar_panels_roof/solarpanel.large.deployed.prefab",
+      "rot": {
+        "x": "0",
+        "y": "3.782049",
+        "z": "0"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [],
+        "oldID": 10,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "1.548126",
+        "y": "6.133884",
+        "z": "0.5285537"
+      },
+      "prefabname": "assets/prefabs/deployable/playerioents/generators/solar_panels_roof/solarpanel.large.deployed.prefab",
+      "rot": {
+        "x": "1.511522E-05",
+        "y": "0.6337023",
+        "z": "3.092685E-05"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 5,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 11,
+        "outputs": [
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "linePoints": [],
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "0.801434",
+        "y": "4.446528",
+        "z": "-3.888611"
+      },
+      "prefabname": "assets/prefabs/deployable/playerioents/sprinkler/electric.sprinkler.deployed.prefab",
+      "rot": {
+        "x": "1.570796",
+        "y": "5.78335",
+        "z": "0"
+      },
+      "skinid": 0
+    },
+    {
+      "items": [],
+      "IOEntity": {
+        "inputs": [
+          {
+            "connectedID": 4,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          },
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          },
+          {
+            "connectedID": 0,
+            "connectedToSlot": 0,
+            "niceName": "",
+            "type": 0,
+            "wireColour": 0
+          }
+        ],
+        "oldID": 5,
+        "outputs": [
+          {
+            "connectedID": 11,
+            "connectedToSlot": 0,
+            "linePoints": [
+              {
+                "x": 1.40916991,
+                "y": 0.26122278,
+                "z": 1.07214451
+              },
+              {
+                "x": -0.09004934,
+                "y": -1.77751147E-11,
+                "z": 4.442758E-05
+              }
+            ],
+            "niceName": "",
+            "type": 1,
+            "wireColour": 0
+          }
+        ]
+      },
+      "pos": {
+        "x": "-0.784343",
+        "y": "4.185185",
+        "z": "-3.872048"
+      },
+      "prefabname": "assets/prefabs/deployable/playerioents/fluidswitch/fluidswitch.prefab",
+      "rot": {
+        "x": "-4.001585E-07",
+        "y": "0.5473619",
+        "z": "2.131628E-14"
+      },
+      "skinid": 0
+    }
+  ]
+}

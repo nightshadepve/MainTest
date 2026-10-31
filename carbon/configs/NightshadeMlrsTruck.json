@@ -1,0 +1,20 @@
+{
+  "Chat Prefix": "<color=#C8A2FF>[Nightshade MLRS]</color>",
+  "Placement item shortname": "box.repair.bench",
+  "Placement item display name": "MLRS Truck",
+  "Placement item skin ID - use a unique skin to avoid converting normal repair benches": 3442989910,
+  "Require matching skin ID to convert": true,
+  "MLRS prefab path": "assets/content/vehicles/mlrs/mlrs.entity.prefab",
+  "Only players with use permission can place MLRS truck": true,
+  "Refund placement item if player lacks permission": true,
+  "Set MLRS owner to player": true,
+  "Make MLRS persistent across normal server saves": true,
+  "Spawn vertical offset": 0.0,
+  "Spawn forward offset": 3.0,
+  "Invert spawn direction": true,
+  "Refresh MLRS network after spawn": true,
+  "Network refresh delay": 0.25,
+  "Chat message on successful placement": "MLRS Truck placed.",
+  "Chat message when missing permission": "You do not have permission to place an MLRS Truck.",
+  "Chat message when spawn fails": "MLRS placement failed. Please contact an admin."
+}

@@ -1,0 +1,734 @@
+{
+  "Screen background color": {
+    "HEX": "#191919",
+    "Opacity (0 - 100)": 90.0
+  },
+  "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+  "Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+  "Button Close": {
+    "Background Button Close": {
+      "Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+      "Material": null,
+      "Image": "",
+      "Color": {
+        "HEX": "#E44028",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "AnchorMin": "1 1",
+      "AnchorMax": "1 1",
+      "OffsetMin": "-40 -40",
+      "OffsetMax": "0 0"
+    },
+    "Color Button Close": {
+      "HEX": "#FFFFFF",
+      "Opacity (0 - 100)": 100.0
+    },
+    "Sprite Button Close": "assets/icons/close.png",
+    "Material Button Close": null,
+    "AnchorMin": "0.5 0.5",
+    "AnchorMax": "0.5 0.5",
+    "OffsetMin": "-9 -9",
+    "OffsetMax": "9 9"
+  },
+  "Main panel": {
+    "Sprite": null,
+    "Material": "assets/content/ui/uibackgroundblur.mat",
+    "Image": "",
+    "Color": {
+      "HEX": "#191919",
+      "Opacity (0 - 100)": 50.0
+    },
+    "Cursor Enabled": false,
+    "Keyboard Enabled": false,
+    "AnchorMin": "0.5 0.5",
+    "AnchorMax": "0.5 0.5",
+    "OffsetMin": "-500 -255",
+    "OffsetMax": "500 255"
+  },
+  "Header": {
+    "Background": {
+      "Sprite": "assets/content/ui/UI.Background.Transparent.LinearLTR.tga",
+      "Material": null,
+      "Image": "",
+      "Color": {
+        "HEX": "#494949",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "AnchorMin": "0 1",
+      "AnchorMax": "1 1",
+      "OffsetMin": "0 -40",
+      "OffsetMax": "-40 0"
+    },
+    "Show the title?": true,
+    "Title": {
+      "AnchorMin": "0 0",
+      "AnchorMax": "1 1",
+      "OffsetMin": "20 0",
+      "OffsetMax": "0 0",
+      "Font Size": 18,
+      "Is Bold?": true,
+      "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleLeft",
+      "Color": {
+        "HEX": "#E2DBD3",
+        "Opacity (0 - 100)": 100.0
+      }
+    },
+    "Show Line?": false,
+    "Line": {
+      "Sprite": null,
+      "Material": null,
+      "Image": "",
+      "Color": {
+        "HEX": "#373737",
+        "Opacity (0 - 100)": 50.0
+      },
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "AnchorMin": "0 0",
+      "AnchorMax": "1 0",
+      "OffsetMin": "0 -2",
+      "OffsetMax": "0 0"
+    }
+  },
+  "Schedule change button": {
+    "Button Color": {
+      "HEX": "#252525",
+      "Opacity (0 - 100)": 100.0
+    },
+    "Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+    "Material": "",
+    "Image": "",
+    "Image Color": {
+      "HEX": "#FFFFFF",
+      "Opacity (0 - 100)": 100.0
+    },
+    "Use custom image position settings?": false,
+    "Custom image position settings": {
+      "AnchorMin": "0 0",
+      "AnchorMax": "1 1",
+      "OffsetMin": "0 0",
+      "OffsetMax": "0 0"
+    },
+    "AnchorMin": "0 0",
+    "AnchorMax": "0 0",
+    "OffsetMin": "20 10",
+    "OffsetMax": "180 40",
+    "Font Size": 14,
+    "Is Bold?": true,
+    "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleCenter",
+    "Color": {
+      "HEX": "#e0d9d1",
+      "Opacity (0 - 100)": 60.0
+    }
+  },
+  "Calendar": {
+    "Background": {
+      "Sprite": null,
+      "Material": null,
+      "Image": "",
+      "Color": {
+        "HEX": "#ffffff",
+        "Opacity (0 - 100)": 0.0
+      },
+      "Cursor Enabled": false,
+      "Keyboard Enabled": false,
+      "AnchorMin": "0 0",
+      "AnchorMax": "1 1",
+      "OffsetMin": "20 50",
+      "OffsetMax": "-20 -60"
+    },
+    "Day Of Week": {
+      "Background": {
+        "Sprite": "assets/content/ui/ui.background.tile.psd",
+        "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+        "Image": "",
+        "Color": {
+          "HEX": "#696969",
+          "Opacity (0 - 100)": 20.0
+        },
+        "Cursor Enabled": false,
+        "Keyboard Enabled": false,
+        "AnchorMin": "0 1",
+        "AnchorMax": "1 1",
+        "OffsetMin": "0 -38",
+        "OffsetMax": "-366 0"
+      },
+      "Title": {
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 1",
+        "OffsetMin": "0 0",
+        "OffsetMax": "0 0",
+        "Font Size": 13,
+        "Is Bold?": true,
+        "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleCenter",
+        "Color": {
+          "HEX": "#e0d9d1",
+          "Opacity (0 - 100)": 100.0
+        }
+      }
+    },
+    "Table of days": {
+      "Background": {
+        "Sprite": null,
+        "Material": null,
+        "Image": "",
+        "Color": {
+          "HEX": "#ffffff",
+          "Opacity (0 - 100)": 0.0
+        },
+        "Cursor Enabled": false,
+        "Keyboard Enabled": false,
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 1",
+        "OffsetMin": "0 0",
+        "OffsetMax": "-366 -48"
+      },
+      "Horizontal margins (%)": 1.5,
+      "Vertical margins (%)": 2.0,
+      "Background of the day in the current month table": {
+        "Button Color": {
+          "HEX": "#696969",
+          "Opacity (0 - 100)": 15.0
+        },
+        "Sprite": "assets/content/ui/ui.background.tile.psd",
+        "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+        "Image": "",
+        "Image Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "Use custom image position settings?": false,
+        "Custom image position settings": {
+          "AnchorMin": "0 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "0 0",
+          "OffsetMax": "0 0"
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 1",
+        "OffsetMin": "0 0",
+        "OffsetMax": "0 0",
+        "Font Size": 35,
+        "Is Bold?": true,
+        "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleCenter",
+        "Color": {
+          "HEX": "#e0d9d1",
+          "Opacity (0 - 100)": 100.0
+        }
+      },
+      "The background of the day in the table outside the current month": {
+        "Button Color": {
+          "HEX": "#696969",
+          "Opacity (0 - 100)": 5.0
+        },
+        "Sprite": "assets/content/ui/ui.background.tile.psd",
+        "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+        "Image": "",
+        "Image Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "Use custom image position settings?": false,
+        "Custom image position settings": {
+          "AnchorMin": "0 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "0 0",
+          "OffsetMax": "0 0"
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 1",
+        "OffsetMin": "0 0",
+        "OffsetMax": "0 0",
+        "Font Size": 25,
+        "Is Bold?": true,
+        "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleCenter",
+        "Color": {
+          "HEX": "#e0d9d1",
+          "Opacity (0 - 100)": 20.0
+        }
+      }
+    },
+    "Schedule": {
+      "Background of the month panel": {
+        "Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+        "Material": null,
+        "Image": "",
+        "Color": {
+          "HEX": "#696969",
+          "Opacity (0 - 100)": 60.0
+        },
+        "Cursor Enabled": false,
+        "Keyboard Enabled": false,
+        "AnchorMin": "1 1",
+        "AnchorMax": "1 1",
+        "OffsetMin": "-346 -38",
+        "OffsetMax": "0 0"
+      },
+      "Title of the month": {
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 1",
+        "OffsetMin": "0 0",
+        "OffsetMax": "0 0",
+        "Font Size": 22,
+        "Is Bold?": true,
+        "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleCenter",
+        "Color": {
+          "HEX": "#e0d9d1",
+          "Opacity (0 - 100)": 100.0
+        }
+      },
+      "The button of the previous month": {
+        "Button Color": {
+          "HEX": "#ffffff",
+          "Opacity (0 - 100)": 0.0
+        },
+        "Sprite": "",
+        "Material": "",
+        "Image": "https://i.ibb.co/F5cBPDm/be9d0d8d0f86.png",
+        "Image Color": {
+          "HEX": "#ffffff",
+          "Opacity (0 - 100)": 100.0
+        },
+        "Use custom image position settings?": false,
+        "Custom image position settings": {
+          "AnchorMin": "0 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "0 0",
+          "OffsetMax": "0 0"
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "10 -8",
+        "OffsetMax": "23 8",
+        "Font Size": 12,
+        "Is Bold?": false,
+        "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "UpperLeft",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        }
+      },
+      "Next Month's button": {
+        "Button Color": {
+          "HEX": "#ffffff",
+          "Opacity (0 - 100)": 0.0
+        },
+        "Sprite": "",
+        "Material": "",
+        "Image": "https://i.ibb.co/3Tz8KmF/5f96eeaf05fa.png",
+        "Image Color": {
+          "HEX": "#ffffff",
+          "Opacity (0 - 100)": 100.0
+        },
+        "Use custom image position settings?": false,
+        "Custom image position settings": {
+          "AnchorMin": "0 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "0 0",
+          "OffsetMax": "0 0"
+        },
+        "AnchorMin": "1 0.5",
+        "AnchorMax": "1 0.5",
+        "OffsetMin": "-23 -8",
+        "OffsetMax": "-10 8",
+        "Font Size": 12,
+        "Is Bold?": false,
+        "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "UpperLeft",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        }
+      },
+      "The schedule panel of the day": {
+        "Background": {
+          "Sprite": null,
+          "Material": null,
+          "Image": "",
+          "Color": {
+            "HEX": "#ffffff",
+            "Opacity (0 - 100)": 0.0
+          },
+          "Cursor Enabled": false,
+          "Keyboard Enabled": false,
+          "AnchorMin": "1 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "-346 110",
+          "OffsetMax": "0 -48"
+        },
+        "Header": {
+          "Background": {
+            "Sprite": null,
+            "Material": null,
+            "Image": "https://i.ibb.co/8gHqy9p/banner.png",
+            "Color": {
+              "HEX": "#ffffff",
+              "Opacity (0 - 100)": 50.0
+            },
+            "Cursor Enabled": false,
+            "Keyboard Enabled": false,
+            "AnchorMin": "0 1",
+            "AnchorMax": "1 1",
+            "OffsetMin": "0 -60",
+            "OffsetMax": "0 -3"
+          },
+          "Title": {
+            "AnchorMin": "0.5 0.5",
+            "AnchorMax": "0.5 0.5",
+            "OffsetMin": "-142.5 -40",
+            "OffsetMax": "-30 40",
+            "Font Size": 56,
+            "Is Bold?": true,
+            "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleRight",
+            "Color": {
+              "HEX": "#e34026",
+              "Opacity (0 - 100)": 100.0
+            }
+          },
+          "Month": {
+            "AnchorMin": "0.5 0.5",
+            "AnchorMax": "0.5 0.5",
+            "OffsetMin": "-20 0",
+            "OffsetMax": "120 40",
+            "Font Size": 20,
+            "Is Bold?": true,
+            "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "LowerLeft",
+            "Color": {
+              "HEX": "#e34026",
+              "Opacity (0 - 100)": 100.0
+            }
+          },
+          "Day of the week": {
+            "AnchorMin": "0.5 0.5",
+            "AnchorMax": "0.5 0.5",
+            "OffsetMin": "-20 -20",
+            "OffsetMax": "120 0",
+            "Font Size": 14,
+            "Is Bold?": false,
+            "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "UpperLeft",
+            "Color": {
+              "HEX": "#e0d9d1",
+              "Opacity (0 - 100)": 50.0
+            }
+          },
+          "Show Line?": true,
+          "Line": {
+            "Sprite": null,
+            "Material": null,
+            "Image": "",
+            "Color": {
+              "HEX": "#D74933",
+              "Opacity (0 - 100)": 100.0
+            },
+            "Cursor Enabled": false,
+            "Keyboard Enabled": false,
+            "AnchorMin": "0 1",
+            "AnchorMax": "1 1",
+            "OffsetMin": "0 0",
+            "OffsetMax": "0 3"
+          }
+        },
+        "Event Scroll panel": {
+          "Background": {
+            "Sprite": null,
+            "Material": null,
+            "Image": "",
+            "Color": {
+              "HEX": "#ffffff",
+              "Opacity (0 - 100)": 0.0
+            },
+            "Cursor Enabled": false,
+            "Keyboard Enabled": false,
+            "AnchorMin": "0 0",
+            "AnchorMax": "1 1",
+            "OffsetMin": "0 0",
+            "OffsetMax": "0 -66"
+          },
+          "Scroll view": {
+            "Scroll Type (Horizontal, Vertical)": "Vertical",
+            "Movement Type (Unrestricted, Elastic, Clamped)": "Clamped",
+            "Elasticity": 0.1,
+            "Deceleration Rate": 1.0,
+            "Scroll Sensitivity": 10.0,
+            "Minimal Height": 0.0,
+            "Additional Height": 0.0,
+            "Scrollbar Settings": {
+              "Invert": false,
+              "Auto Hide": true,
+              "Handle Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+              "Size": 3.0,
+              "Handle Color": {
+                "HEX": "#D74933",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Highlight Color": {
+                "HEX": "#D74933",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Pressed Color": {
+                "HEX": "#D74933",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Track Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+              "Track Color": {
+                "HEX": "#38393F",
+                "Opacity (0 - 100)": 40.0
+              }
+            }
+          },
+          "Scroll Content": {
+            "Margins": {
+              "Left - right": 0.0,
+              "Between the elements": 5.0
+            },
+            "Scrolling element background": {
+              "Sprite": "assets/content/ui/UI.Background.Transparent.LinearLTR.tga",
+              "Material": null,
+              "Image": "",
+              "Color": {
+                "HEX": "#696969",
+                "Opacity (0 - 100)": 30.0
+              },
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "AnchorMin": "0 0",
+              "AnchorMax": "1 1",
+              "OffsetMin": "0 0",
+              "OffsetMax": "0 0"
+            },
+            "The height of the element in the scroll": 40.0,
+            "The position of the icon in the element": {
+              "AnchorMin": "0 0.5",
+              "AnchorMax": "0 0.5",
+              "OffsetMin": "10 -10",
+              "OffsetMax": "30 10"
+            },
+            "Time of the event": {
+              "AnchorMin": "0 1",
+              "AnchorMax": "1 1",
+              "OffsetMin": "40 -18",
+              "OffsetMax": "-40 0",
+              "Font Size": 11,
+              "Is Bold?": true,
+              "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "LowerLeft",
+              "Color": {
+                "HEX": "#e0d9d1",
+                "Opacity (0 - 100)": 100.0
+              }
+            },
+            "Name of the event type": {
+              "AnchorMin": "0 0",
+              "AnchorMax": "1 0",
+              "OffsetMin": "40 0",
+              "OffsetMax": "-40 24",
+              "Font Size": 14,
+              "Is Bold?": true,
+              "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "UpperLeft",
+              "Color": {
+                "HEX": "#e0d9d1",
+                "Opacity (0 - 100)": 50.0
+              }
+            },
+            "Event Information button": {
+              "Button Color": {
+                "HEX": "#ffffff",
+                "Opacity (0 - 100)": 0.0
+              },
+              "Sprite": "",
+              "Material": "",
+              "Image": "https://i.ibb.co/M1zPJbp/5e3c035f6001.png",
+              "Image Color": {
+                "HEX": "#ffffff",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Use custom image position settings?": false,
+              "Custom image position settings": {
+                "AnchorMin": "0 0",
+                "AnchorMax": "1 1",
+                "OffsetMin": "0 0",
+                "OffsetMax": "0 0"
+              },
+              "AnchorMin": "1 0.5",
+              "AnchorMax": "1 0.5",
+              "OffsetMin": "-30 -10",
+              "OffsetMax": "-10 10",
+              "Font Size": 12,
+              "Is Bold?": false,
+              "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "UpperLeft",
+              "Color": {
+                "HEX": "#FFFFFF",
+                "Opacity (0 - 100)": 100.0
+              }
+            },
+            "The shading color of the schedule when opening the description": {
+              "HEX": "#000000",
+              "Opacity (0 - 100)": 50.0
+            },
+            "Description Panel length": 250.0,
+            "Description panel height": 120.0,
+            "Description panel title background": {
+              "Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+              "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+              "Image": "",
+              "Color": {
+                "HEX": "#64A1CF",
+                "Opacity (0 - 100)": 100.0
+              },
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "AnchorMin": "0 1",
+              "AnchorMax": "1 1",
+              "OffsetMin": "0 -20",
+              "OffsetMax": "2 0"
+            },
+            "Event title": {
+              "AnchorMin": "0 0",
+              "AnchorMax": "1 1",
+              "OffsetMin": "5 0",
+              "OffsetMax": "0 0",
+              "Font Size": 14,
+              "Is Bold?": true,
+              "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleLeft",
+              "Color": {
+                "HEX": "#ffffff",
+                "Opacity (0 - 100)": 100.0
+              }
+            },
+            "Description panel background description panel": {
+              "Sprite": "assets/content/ui/UI.Background.TileTex.psd",
+              "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+              "Image": "",
+              "Color": {
+                "HEX": "#696969",
+                "Opacity (0 - 100)": 50.0
+              },
+              "Cursor Enabled": false,
+              "Keyboard Enabled": false,
+              "AnchorMin": "0 0",
+              "AnchorMax": "1 1",
+              "OffsetMin": "0 0",
+              "OffsetMax": "0 -20"
+            },
+            "Description of the event": {
+              "AnchorMin": "0 0",
+              "AnchorMax": "1 1",
+              "OffsetMin": "5 5",
+              "OffsetMax": "-5 -5",
+              "Font Size": 11,
+              "Is Bold?": true,
+              "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "UpperLeft",
+              "Color": {
+                "HEX": "#999694",
+                "Opacity (0 - 100)": 100.0
+              }
+            }
+          }
+        }
+      },
+      "The Annotation panel": {
+        "Show panel with /info command and event color markers?": true,
+        "Background": {
+          "Sprite": null,
+          "Material": null,
+          "Image": "",
+          "Color": {
+            "HEX": "#ffffff",
+            "Opacity (0 - 100)": 0.0
+          },
+          "Cursor Enabled": false,
+          "Keyboard Enabled": false,
+          "AnchorMin": "1 0",
+          "AnchorMax": "1 0",
+          "OffsetMin": "-346 0",
+          "OffsetMax": "0 100"
+        },
+        "Information Panel": {
+          "Sprite": "assets/content/ui/ui.background.tile.psd",
+          "Material": "assets/content/ui/uibackgroundblur-ingamemenu.mat",
+          "Image": "",
+          "Color": {
+            "HEX": "#71B8ED",
+            "Opacity (0 - 100)": 5.0
+          },
+          "Cursor Enabled": false,
+          "Keyboard Enabled": false,
+          "AnchorMin": "0 1",
+          "AnchorMax": "1 1",
+          "OffsetMin": "0 -38",
+          "OffsetMax": "0 0"
+        },
+        "Icon": {
+          "Sprite": null,
+          "Material": null,
+          "Image": "https://i.ibb.co/rHBx0pN/icon-info-panel.png",
+          "Color": {
+            "HEX": "#ffffff",
+            "Opacity (0 - 100)": 100.0
+          },
+          "Cursor Enabled": false,
+          "Keyboard Enabled": false,
+          "AnchorMin": "0 0",
+          "AnchorMax": "0 1",
+          "OffsetMin": "0 0",
+          "OffsetMax": "38 0"
+        },
+        "The text of the information": {
+          "AnchorMin": "0 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "50 0",
+          "OffsetMax": "0 0",
+          "Font Size": 11,
+          "Is Bold?": false,
+          "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleLeft",
+          "Color": {
+            "HEX": "#64A1CF",
+            "Opacity (0 - 100)": 50.0
+          }
+        },
+        "Background of the annotation panel": {
+          "Sprite": null,
+          "Material": null,
+          "Image": "",
+          "Color": {
+            "HEX": "#ffffff",
+            "Opacity (0 - 100)": 0.0
+          },
+          "Cursor Enabled": false,
+          "Keyboard Enabled": false,
+          "AnchorMin": "0 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "0 0",
+          "OffsetMax": "0 -38"
+        },
+        "The size of the event color marker": {
+          "x": 14.0,
+          "y": 14.0,
+          "normalized": {
+            "x": 0.707106769,
+            "y": 0.707106769,
+            "magnitude": 1.0,
+            "sqrMagnitude": 0.99999994
+          },
+          "magnitude": 19.79899,
+          "sqrMagnitude": 392.0
+        },
+        "Event color Annotation": {
+          "AnchorMin": "1 0",
+          "AnchorMax": "1 1",
+          "OffsetMin": "5 -3",
+          "OffsetMax": "150 3",
+          "Font Size": 12,
+          "Is Bold?": true,
+          "Align (UpperLeft, UpperCenter, UpperRight, MiddleLeft, MiddleCenter, MiddleRight, LowerLeft, LowerCenter, LowerRight)": "MiddleLeft",
+          "Color": {
+            "HEX": "#999694",
+            "Opacity (0 - 100)": 100.0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1531 @@
+{
+  "Enable Purchases": false,
+  "Use Notify Plugin": true,
+  "Enable Debug Logs": false,
+  "Enable Warning Logs": true,
+  "NPC Max Move Distance": 15.0,
+  "NPC Attack Distance": 5.0,
+  "NPC Seconds Shooting Before Move (0 = disabled)": 2.0,
+  "Enable Toast Messages": false,
+  "Enable Dungeon Lights": true,
+  "Reset NPCs And Animals When The Last Player Dies Or Leaves The Dungeon": true,
+  "Dungeon Light Spacing": 30.0,
+  "Prevent Drop Backpack": true,
+  "Teleport Player To Outside On Death": true,
+  "Spawn Point Configuration": {
+    "Avoid Terrain Topology": true,
+    "Enable Physics Overlap Check": true,
+    "Enable Entity Proximity Check": true,
+    "Avoid ZoneManager Zones": true,
+    "Avoid Duelist Territory": true,
+    "Avoid Raidable Bases Territory": true,
+    "Avoid Abandoned Bases Territory": true
+  },
+  "Custom Portal Spawn Locations": {
+    "Enable Custom Portal Spawn Locations": true,
+    "Fallback To Random Auto Spawn Location If No Custom Location Is Available": false,
+    "Fallback To Random Buy Location If No Custom Location Is Available": false,
+    "Auto Spawn Locations": [],
+    "Buy Locations": []
+  },
+  "Place Sphere on Dungeon Portal": true,
+  "Minimum Distance Between Portals": 50.0,
+  "Enable Portal Protection Bubble": true,
+  "Portal Protection Bubble Radius": 10.0,
+  "Allow Owner And Allies To Build In Portal Protection Bubble": true,
+  "Allow Owner And Allies To Deploy In Portal Protection Bubble": true,
+  "Block Damage From Outside To Owner And Allies Inside Portal Protection Bubble": true,
+  "Block Damage From Owner And Allies Inside Portal Protection Bubble To Outside": true,
+  "Protect Owner And Allies Vehicles Inside Portal Protection Bubble": true,
+  "NightVision Plugin Time On Leaving Dungeon(-1 for no override)": 12,
+  "Lock dungeon for first player": true,
+  "Economy Plugin (1 - Economics, 2 - ServerRewards, 3 - Custom)": 2,
+  "Custom Economy Item Name": "scrap",
+  "Custom Economy Item Skin ID": 0,
+  "Custom Economy Display Name": "Scrap",
+  "Economics Display Name": "RP",
+  "ServerRewards Display Name": "RP",
+  "Enable SkillTree XP Team Sharing": true,
+  "SkillTree XP Share Mode (0 = Split total between players, 1 = Give full amount to each player)": 0,
+  "Allow team members": true,
+  "Allow friends": true,
+  "Performance Settings": {
+    "Building - Room Cells Per Batch": 8,
+    "Building - Door Frame Cells Per Batch": 8,
+    "Building - Wall Foundations Per Batch": 12,
+    "Building - Delay Between Batches (seconds)": 0.03,
+    "NPCs, Animals, Turrets And Loot - Spawns Per Batch": 5,
+    "NPCs, Animals, Turrets And Loot - Delay Between Batches (seconds)": 0.1,
+    "Cleanup - Entities Removed Per Batch": 25,
+    "Cleanup - Delay Between Batches (seconds)": 0.05,
+    "Auto Spawn - Delay After Cleanup Finishes (seconds)": 15.0,
+    "Location Search - Attempts Per Batch": 250,
+    "Location Search - Delay Between Batches (seconds)": 0.02
+  },
+  "Dungeon Settings": {
+    "Enable Auto Spawn": false,
+    "Map Marker Radius": 0.2,
+    "Create Map Markers for Purchased Dungeons": true,
+    "Create Map Markers for Auto-Spawned Dungeons": true,
+    "Max Active Dungeons Auto Spawn (It is not recommended to exceed 10)": 6,
+    "Max Active Dungeons Buy (It is not recommended to exceed 10": 6,
+    "Dungeon Buy Cooldown (in seconds)": 600,
+    "Auto Spawn Delay (in seconds)": 120,
+    "Dungeon Height (0 = terrain, negative = underground, max 700)": -180.0,
+    "Dungeon Removal": {
+      "Remove only if all NPCs are dead": true,
+      "Remove only if all boxes are destroyed": true,
+      "Remove only if all turrets are destroyed": true,
+      "Removal timer after they are destroyed (in seconds)": 120
+    },
+    "Show Dungeon Spawn Announcement": true,
+    "Show Purchase Announcement To Owner Only": false
+  },
+  "Blocked commands inside a dungeon": [
+    "/remove",
+    "/tpa",
+    "remove.toggle"
+  ],
+  "Tiers": [
+    {
+      "Tier Name": "Easy",
+      "Map Name": "Dungeon: Easy",
+      "Marker Color Hex": "#3cd834",
+      "Enable Auto Spawn": true,
+      "Enable Buy": true,
+      "Require Permission": false,
+      "Minutes After Wipe To Activate": 0,
+      "Max Auto Spawn (0 to Unlimited)": 2,
+      "Max Buy (0 to Unlimited)": 3,
+      "Building Grade - 1(Wood) 2(Legacy Wood) 3(Gingerbread) 4(Stone) 5(Adobe) 6(Brick) 7(Brutalist) 8(Metal) 9(Container) 10(TopTier) 11(Jungle) 12(Crypt) 13(Space Station)": 9,
+      "Container Color - 1(Light Blue) 2(Light Green) 3(Purple) 4(Dark Red) 5(Orange) 6(White) 7(Black) 8(Brown) 9(Dark Blue) 10(Dark Green) 11(Red) 12(Light Orange) 13(Yellow) 14(Dark Gray) 15(Cyan) 16(Light Gray)": 3,
+      "Garage Door Skin ID": 3501204453,
+      "Dungeon Time of Day Override(-1 for no override)": 0,
+      "Dungeon Rooms (1 - 6)": 1,
+      "Dungeon Room Size (5 - 10)": 5,
+      "Buy Cost": 0,
+      "Per-Tier Buy Cooldown (seconds, 0 = use global)": 0,
+      "Max Unentered Lifetime (in seconds)": 1800,
+      "Max Time (in seconds) to Keep Dungeon Alive": 1800,
+      "Entity Spawn Limits": {
+        "NPC Count": 9,
+        "Boss Count": 1,
+        "Animal Count": 2,
+        "Turret Count": 0,
+        "Loot Box Count": 5
+      },
+      "NPC Config": {
+        "NPC Name": "Wild Scavenger",
+        "NPC Health": 100,
+        "Damage Scale": 0.35,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "tshirt.long",
+              "SkinID": 10118
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 949616124
+            },
+            {
+              "ShortName": "attire.snowman.helmet",
+              "SkinID": 0
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 2352962213
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 2380731293
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "pistol.revolver",
+              "Amount": 1,
+              "SkinID": 3140577175,
+              "Mods": []
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Boss NPC Config": {
+        "NPC Name": "Easy Dungeon Boss",
+        "NPC Health": 1000,
+        "Damage Scale": 1.05,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "riot.helmet",
+              "SkinID": 1087995729
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1087990973
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1087998101
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 1087992342
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1088000573
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "rifle.ak",
+              "Amount": 1,
+              "SkinID": 3368362976,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Animal Config": {
+        "Enabled": true,
+        "Damage": 12.0,
+        "Move Speed": 4.0,
+        "Sense Range": 30.0,
+        "Max Distance From Spawn Point": 30.0,
+        "Animals": [
+          {
+            "Animal": "Boar",
+            "Enabled": false,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Wolf",
+            "Enabled": false,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Stag",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Chicken",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Panther",
+            "Enabled": false,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Tiger",
+            "Enabled": false,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Crocodile",
+            "Enabled": false,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bear",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bull",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Cow",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Calf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "CalfMale",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Sheep",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Lamb",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          }
+        ]
+      },
+      "Loot Box Prefab Path": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "Loot Box Skin ID": 2998755525,
+      "Max Items Per Box": 3,
+      "Max Items Per NPC": 3,
+      "Max Items Per Boss NPC": 3,
+      "Auto Turret Config": {
+        "Health": 300.0,
+        "Weapon Short Name": "pistol.revolver"
+      },
+      "Reward Config": {
+        "NPC Economics Reward": 300,
+        "Turret Economics Reward": 200,
+        "Box Economics Reward": 100,
+        "NPC ServerRewards Points": 300,
+        "Turret ServerRewards Points": 200,
+        "Box ServerRewards Points": 100,
+        "Dungeon Clear Economics Reward": 500,
+        "Dungeon Clear ServerRewards Points": 500,
+        "Dungeon Clear Skill Tree XP Reward": 500.0
+      }
+    },
+    {
+      "Tier Name": "Normal",
+      "Map Name": "Dungeon: Normal",
+      "Marker Color Hex": "#e7c50a",
+      "Enable Auto Spawn": true,
+      "Enable Buy": true,
+      "Require Permission": false,
+      "Minutes After Wipe To Activate": 0,
+      "Max Auto Spawn (0 to Unlimited)": 2,
+      "Max Buy (0 to Unlimited)": 2,
+      "Building Grade - 1(Wood) 2(Legacy Wood) 3(Gingerbread) 4(Stone) 5(Adobe) 6(Brick) 7(Brutalist) 8(Metal) 9(Container) 10(TopTier) 11(Jungle) 12(Crypt) 13(Space Station)": 2,
+      "Container Color - 1(Light Blue) 2(Light Green) 3(Purple) 4(Dark Red) 5(Orange) 6(White) 7(Black) 8(Brown) 9(Dark Blue) 10(Dark Green) 11(Red) 12(Light Orange) 13(Yellow) 14(Dark Gray) 15(Cyan) 16(Light Gray)": 0,
+      "Garage Door Skin ID": 3639558387,
+      "Dungeon Time of Day Override(-1 for no override)": 0,
+      "Dungeon Rooms (1 - 6)": 2,
+      "Dungeon Room Size (5 - 10)": 5,
+      "Buy Cost": 600,
+      "Per-Tier Buy Cooldown (seconds, 0 = use global)": 0,
+      "Max Unentered Lifetime (in seconds)": 1800,
+      "Max Time (in seconds) to Keep Dungeon Alive": 1800,
+      "Entity Spawn Limits": {
+        "NPC Count": 16,
+        "Boss Count": 2,
+        "Animal Count": 2,
+        "Turret Count": 0,
+        "Loot Box Count": 10
+      },
+      "NPC Config": {
+        "NPC Name": "Battle Forager",
+        "NPC Health": 150,
+        "Damage Scale": 0.56,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "bucket.helmet",
+              "SkinID": 1073904216
+            },
+            {
+              "ShortName": "jacket",
+              "SkinID": 2350426469
+            },
+            {
+              "ShortName": "tshirt",
+              "SkinID": 10039
+            },
+            {
+              "ShortName": "burlap.gloves.new",
+              "SkinID": 0
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 1441311938
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 2075527039
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "smg.2",
+              "Amount": 1,
+              "SkinID": 2386688842,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Boss NPC Config": {
+        "NPC Name": "Normal Dungeon Boss",
+        "NPC Health": 1500,
+        "Damage Scale": 1.1,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "riot.helmet",
+              "SkinID": 1087995729
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1087990973
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1087998101
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 1087992342
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1088000573
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Animal Config": {
+        "Enabled": true,
+        "Damage": 12.0,
+        "Move Speed": 4.0,
+        "Sense Range": 30.0,
+        "Max Distance From Spawn Point": 30.0,
+        "Animals": [
+          {
+            "Animal": "Boar",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Wolf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Stag",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Chicken",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Panther",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Tiger",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Crocodile",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bear",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bull",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Cow",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Calf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "CalfMale",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Sheep",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Lamb",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          }
+        ]
+      },
+      "Loot Box Prefab Path": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "Loot Box Skin ID": 2998755525,
+      "Max Items Per Box": 4,
+      "Max Items Per NPC": 4,
+      "Max Items Per Boss NPC": 4,
+      "Auto Turret Config": {
+        "Health": 400.0,
+        "Weapon Short Name": "pistol.revolver"
+      },
+      "Reward Config": {
+        "NPC Economics Reward": 375,
+        "Turret Economics Reward": 250,
+        "Box Economics Reward": 125,
+        "NPC ServerRewards Points": 375,
+        "Turret ServerRewards Points": 250,
+        "Box ServerRewards Points": 125,
+        "Dungeon Clear Economics Reward": 750,
+        "Dungeon Clear ServerRewards Points": 750,
+        "Dungeon Clear Skill Tree XP Reward": 750.0
+      }
+    },
+    {
+      "Tier Name": "Medium",
+      "Map Name": "Dungeon: Medium",
+      "Marker Color Hex": "#e57109",
+      "Enable Auto Spawn": true,
+      "Enable Buy": true,
+      "Require Permission": false,
+      "Minutes After Wipe To Activate": 0,
+      "Max Auto Spawn (0 to Unlimited)": 2,
+      "Max Buy (0 to Unlimited)": 2,
+      "Building Grade - 1(Wood) 2(Legacy Wood) 3(Gingerbread) 4(Stone) 5(Adobe) 6(Brick) 7(Brutalist) 8(Metal) 9(Container) 10(TopTier) 11(Jungle) 12(Crypt) 13(Space Station)": 6,
+      "Container Color - 1(Light Blue) 2(Light Green) 3(Purple) 4(Dark Red) 5(Orange) 6(White) 7(Black) 8(Brown) 9(Dark Blue) 10(Dark Green) 11(Red) 12(Light Orange) 13(Yellow) 14(Dark Gray) 15(Cyan) 16(Light Gray)": 0,
+      "Garage Door Skin ID": 2427605919,
+      "Dungeon Time of Day Override(-1 for no override)": 0,
+      "Dungeon Rooms (1 - 6)": 3,
+      "Dungeon Room Size (5 - 10)": 5,
+      "Buy Cost": 0,
+      "Per-Tier Buy Cooldown (seconds, 0 = use global)": 0,
+      "Max Unentered Lifetime (in seconds)": 1800,
+      "Max Time (in seconds) to Keep Dungeon Alive": 2100,
+      "Entity Spawn Limits": {
+        "NPC Count": 22,
+        "Boss Count": 4,
+        "Animal Count": 2,
+        "Turret Count": 12,
+        "Loot Box Count": 14
+      },
+      "NPC Config": {
+        "NPC Name": "Crimson Raider",
+        "NPC Health": 200,
+        "Damage Scale": 0.77,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "coffeecan.helmet",
+              "SkinID": 1727561127
+            },
+            {
+              "ShortName": "roadsign.jacket",
+              "SkinID": 1727562915
+            },
+            {
+              "ShortName": "roadsign.gloves",
+              "SkinID": 2799639349
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 2814837980
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1839313604
+            },
+            {
+              "ShortName": "tshirt.long",
+              "SkinID": 566893368
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "rifle.semiauto",
+              "Amount": 1,
+              "SkinID": 2617680693,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Amount": 10,
+              "SkinID": 0,
+              "Mods": []
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Boss NPC Config": {
+        "NPC Name": "Medium Dungeon Boss",
+        "NPC Health": 2000,
+        "Damage Scale": 1.15,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "riot.helmet",
+              "SkinID": 1087995729
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1087990973
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1087998101
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 1087992342
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1088000573
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Animal Config": {
+        "Enabled": true,
+        "Damage": 12.0,
+        "Move Speed": 4.0,
+        "Sense Range": 30.0,
+        "Max Distance From Spawn Point": 30.0,
+        "Animals": [
+          {
+            "Animal": "Boar",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Wolf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Stag",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Chicken",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Panther",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Tiger",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Crocodile",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bear",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bull",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Cow",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Calf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "CalfMale",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Sheep",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Lamb",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          }
+        ]
+      },
+      "Loot Box Prefab Path": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "Loot Box Skin ID": 2998755525,
+      "Max Items Per Box": 5,
+      "Max Items Per NPC": 5,
+      "Max Items Per Boss NPC": 5,
+      "Auto Turret Config": {
+        "Health": 600.0,
+        "Weapon Short Name": "rifle.ak"
+      },
+      "Reward Config": {
+        "NPC Economics Reward": 450,
+        "Turret Economics Reward": 300,
+        "Box Economics Reward": 150,
+        "NPC ServerRewards Points": 450,
+        "Turret ServerRewards Points": 300,
+        "Box ServerRewards Points": 150,
+        "Dungeon Clear Economics Reward": 1000,
+        "Dungeon Clear ServerRewards Points": 1000,
+        "Dungeon Clear Skill Tree XP Reward": 1000.0
+      }
+    },
+    {
+      "Tier Name": "Hard",
+      "Map Name": "Dungeon: Hard",
+      "Marker Color Hex": "#9c1825",
+      "Enable Auto Spawn": true,
+      "Enable Buy": true,
+      "Require Permission": false,
+      "Minutes After Wipe To Activate": 0,
+      "Max Auto Spawn (0 to Unlimited)": 2,
+      "Max Buy (0 to Unlimited)": 2,
+      "Building Grade - 1(Wood) 2(Legacy Wood) 3(Gingerbread) 4(Stone) 5(Adobe) 6(Brick) 7(Brutalist) 8(Metal) 9(Container) 10(TopTier) 11(Jungle) 12(Crypt) 13(Space Station)": 8,
+      "Container Color - 1(Light Blue) 2(Light Green) 3(Purple) 4(Dark Red) 5(Orange) 6(White) 7(Black) 8(Brown) 9(Dark Blue) 10(Dark Green) 11(Red) 12(Light Orange) 13(Yellow) 14(Dark Gray) 15(Cyan) 16(Light Gray)": 5,
+      "Garage Door Skin ID": 2427605919,
+      "Dungeon Time of Day Override(-1 for no override)": 0,
+      "Dungeon Rooms (1 - 6)": 4,
+      "Dungeon Room Size (5 - 10)": 5,
+      "Buy Cost": 1400,
+      "Per-Tier Buy Cooldown (seconds, 0 = use global)": 0,
+      "Max Unentered Lifetime (in seconds)": 1800,
+      "Max Time (in seconds) to Keep Dungeon Alive": 2400,
+      "Entity Spawn Limits": {
+        "NPC Count": 26,
+        "Boss Count": 6,
+        "Animal Count": 2,
+        "Turret Count": 16,
+        "Loot Box Count": 20
+      },
+      "NPC Config": {
+        "NPC Name": "Elite Outlaw",
+        "NPC Health": 250,
+        "Damage Scale": 0.91,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "metal.facemask",
+              "SkinID": 3284864766
+            },
+            {
+              "ShortName": "metal.plate.torso",
+              "SkinID": 2105505757
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 2090790324
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 2080975449
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 10023
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 2080977144
+            },
+            {
+              "ShortName": "roadsign.kilt",
+              "SkinID": 2120628865
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "rifle.ak",
+              "Amount": 1,
+              "SkinID": 3190379864,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Amount": 20,
+              "SkinID": 0,
+              "Mods": []
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Boss NPC Config": {
+        "NPC Name": "Hard Dungeon Boss",
+        "NPC Health": 3000,
+        "Damage Scale": 1.2,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "riot.helmet",
+              "SkinID": 1087995729
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1087990973
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1087998101
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 1087992342
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1088000573
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Animal Config": {
+        "Enabled": true,
+        "Damage": 12.0,
+        "Move Speed": 4.0,
+        "Sense Range": 30.0,
+        "Max Distance From Spawn Point": 30.0,
+        "Animals": [
+          {
+            "Animal": "Boar",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Wolf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Stag",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Chicken",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Panther",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Tiger",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Crocodile",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bear",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bull",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Cow",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Calf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "CalfMale",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Sheep",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Lamb",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          }
+        ]
+      },
+      "Loot Box Prefab Path": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "Loot Box Skin ID": 2998755525,
+      "Max Items Per Box": 6,
+      "Max Items Per NPC": 6,
+      "Max Items Per Boss NPC": 6,
+      "Auto Turret Config": {
+        "Health": 800.0,
+        "Weapon Short Name": "rifle.ak"
+      },
+      "Reward Config": {
+        "NPC Economics Reward": 600,
+        "Turret Economics Reward": 400,
+        "Box Economics Reward": 200,
+        "NPC ServerRewards Points": 600,
+        "Turret ServerRewards Points": 400,
+        "Box ServerRewards Points": 200,
+        "Dungeon Clear Economics Reward": 1500,
+        "Dungeon Clear ServerRewards Points": 1500,
+        "Dungeon Clear Skill Tree XP Reward": 1500.0
+      }
+    },
+    {
+      "Tier Name": "Nightmare",
+      "Map Name": "Dungeon: Nightmare",
+      "Marker Color Hex": "#9236f5",
+      "Enable Auto Spawn": true,
+      "Enable Buy": true,
+      "Require Permission": false,
+      "Minutes After Wipe To Activate": 0,
+      "Max Auto Spawn (0 to Unlimited)": 2,
+      "Max Buy (0 to Unlimited)": 2,
+      "Building Grade - 1(Wood) 2(Legacy Wood) 3(Gingerbread) 4(Stone) 5(Adobe) 6(Brick) 7(Brutalist) 8(Metal) 9(Container) 10(TopTier) 11(Jungle) 12(Crypt) 13(Space Station)": 10,
+      "Container Color - 1(Light Blue) 2(Light Green) 3(Purple) 4(Dark Red) 5(Orange) 6(White) 7(Black) 8(Brown) 9(Dark Blue) 10(Dark Green) 11(Red) 12(Light Orange) 13(Yellow) 14(Dark Gray) 15(Cyan) 16(Light Gray)": 0,
+      "Garage Door Skin ID": 2427605919,
+      "Dungeon Time of Day Override(-1 for no override)": 0,
+      "Dungeon Rooms (1 - 6)": 5,
+      "Dungeon Room Size (5 - 10)": 5,
+      "Buy Cost": 0,
+      "Per-Tier Buy Cooldown (seconds, 0 = use global)": 1800,
+      "Max Unentered Lifetime (in seconds)": 1800,
+      "Max Time (in seconds) to Keep Dungeon Alive": 2700,
+      "Entity Spawn Limits": {
+        "NPC Count": 28,
+        "Boss Count": 8,
+        "Animal Count": 2,
+        "Turret Count": 18,
+        "Loot Box Count": 24
+      },
+      "NPC Config": {
+        "NPC Name": "Nightmare Hunter",
+        "NPC Health": 300,
+        "Damage Scale": 1.05,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "metal.facemask",
+              "SkinID": 3343860599
+            },
+            {
+              "ShortName": "metal.plate.torso",
+              "SkinID": 3343861569
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1369835131
+            },
+            {
+              "ShortName": "roadsign.kilt",
+              "SkinID": 1727564168
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1210780157
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 810745264
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1210771348
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Amount": 50,
+              "SkinID": 0,
+              "Mods": []
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Boss NPC Config": {
+        "NPC Name": "Nightmare Dungeon Boss",
+        "NPC Health": 5000,
+        "Damage Scale": 1.25,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "riot.helmet",
+              "SkinID": 1087995729
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1087990973
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1087998101
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 1087992342
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1088000573
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Animal Config": {
+        "Enabled": true,
+        "Damage": 12.0,
+        "Move Speed": 4.0,
+        "Sense Range": 30.0,
+        "Max Distance From Spawn Point": 30.0,
+        "Animals": [
+          {
+            "Animal": "Boar",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Wolf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Stag",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Chicken",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Panther",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Tiger",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Crocodile",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bear",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bull",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Cow",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Calf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "CalfMale",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Sheep",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Lamb",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          }
+        ]
+      },
+      "Loot Box Prefab Path": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "Loot Box Skin ID": 2998755525,
+      "Max Items Per Box": 7,
+      "Max Items Per NPC": 3,
+      "Max Items Per Boss NPC": 7,
+      "Auto Turret Config": {
+        "Health": 1000.0,
+        "Weapon Short Name": "rifle.ak"
+      },
+      "Reward Config": {
+        "NPC Economics Reward": 750,
+        "Turret Economics Reward": 500,
+        "Box Economics Reward": 250,
+        "NPC ServerRewards Points": 750,
+        "Turret ServerRewards Points": 500,
+        "Box ServerRewards Points": 250,
+        "Dungeon Clear Economics Reward": 2500,
+        "Dungeon Clear ServerRewards Points": 2500,
+        "Dungeon Clear Skill Tree XP Reward": 2500.0
+      }
+    },
+    {
+      "Tier Name": "Impossible",
+      "Map Name": "Dungeon: Impossible",
+      "Marker Color Hex": "#1a1412",
+      "Enable Auto Spawn": true,
+      "Enable Buy": true,
+      "Require Permission": false,
+      "Minutes After Wipe To Activate": 0,
+      "Max Auto Spawn (0 to Unlimited)": 2,
+      "Max Buy (0 to Unlimited)": 2,
+      "Building Grade - 1(Wood) 2(Legacy Wood) 3(Gingerbread) 4(Stone) 5(Adobe) 6(Brick) 7(Brutalist) 8(Metal) 9(Container) 10(TopTier) 11(Jungle) 12(Crypt) 13(Space Station)": 10,
+      "Container Color - 1(Light Blue) 2(Light Green) 3(Purple) 4(Dark Red) 5(Orange) 6(White) 7(Black) 8(Brown) 9(Dark Blue) 10(Dark Green) 11(Red) 12(Light Orange) 13(Yellow) 14(Dark Gray) 15(Cyan) 16(Light Gray)": 4,
+      "Garage Door Skin ID": 2427605919,
+      "Dungeon Time of Day Override(-1 for no override)": 0,
+      "Dungeon Rooms (1 - 6)": 6,
+      "Dungeon Room Size (5 - 10)": 6,
+      "Buy Cost": 0,
+      "Per-Tier Buy Cooldown (seconds, 0 = use global)": 3600,
+      "Max Unentered Lifetime (in seconds)": 1800,
+      "Max Time (in seconds) to Keep Dungeon Alive": 3000,
+      "Entity Spawn Limits": {
+        "NPC Count": 20,
+        "Boss Count": 10,
+        "Animal Count": 2,
+        "Turret Count": 16,
+        "Loot Box Count": 20
+      },
+      "NPC Config": {
+        "NPC Name": "Impossible Hunter",
+        "NPC Health": 300,
+        "Damage Scale": 1.05,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "metal.facemask",
+              "SkinID": 3343860599
+            },
+            {
+              "ShortName": "metal.plate.torso",
+              "SkinID": 3343861569
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 1369835131
+            },
+            {
+              "ShortName": "roadsign.kilt",
+              "SkinID": 1727564168
+            },
+            {
+              "ShortName": "burlap.gloves",
+              "SkinID": 1210780157
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 810745264
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 1210771348
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Amount": 50,
+              "SkinID": 0,
+              "Mods": []
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Boss NPC Config": {
+        "NPC Name": "Impossible Dungeon Boss",
+        "NPC Health": 5000,
+        "Damage Scale": 1.3,
+        "Wear Items": {
+          "Items": [
+            {
+              "ShortName": "riot.helmet",
+              "SkinID": 871867116
+            },
+            {
+              "ShortName": "hoodie",
+              "SkinID": 3308083017
+            },
+            {
+              "ShortName": "pants",
+              "SkinID": 3269772521
+            },
+            {
+              "ShortName": "shoes.boots",
+              "SkinID": 3332536449
+            }
+          ]
+        },
+        "Belt Items": {
+          "Items": [
+            {
+              "ShortName": "lmg.m249",
+              "Amount": 1,
+              "SkinID": 1883947256,
+              "Mods": [
+                "weapon.mod.flashlight"
+              ]
+            }
+          ]
+        },
+        "Disable Radio": false,
+        "Damage Taken From Explosion Multiplier": 1.0
+      },
+      "Animal Config": {
+        "Enabled": true,
+        "Damage": 12.0,
+        "Move Speed": 4.0,
+        "Sense Range": 30.0,
+        "Max Distance From Spawn Point": 30.0,
+        "Animals": [
+          {
+            "Animal": "Boar",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Wolf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Stag",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Chicken",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Panther",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Tiger",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Crocodile",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bear",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Bull",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Cow",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Calf",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "CalfMale",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Sheep",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          },
+          {
+            "Animal": "Lamb",
+            "Enabled": true,
+            "Spawn Weight": 100.0,
+            "HP": 300.0
+          }
+        ]
+      },
+      "Loot Box Prefab Path": "assets/prefabs/deployable/woodenbox/woodbox_deployed.prefab",
+      "Loot Box Skin ID": 2998755525,
+      "Max Items Per Box": 8,
+      "Max Items Per NPC": 8,
+      "Max Items Per Boss NPC": 8,
+      "Auto Turret Config": {
+        "Health": 1500.0,
+        "Weapon Short Name": "rifle.ak"
+      },
+      "Reward Config": {
+        "NPC Economics Reward": 900,
+        "Turret Economics Reward": 600,
+        "Box Economics Reward": 300,
+        "NPC ServerRewards Points": 900,
+        "Turret ServerRewards Points": 600,
+        "Box ServerRewards Points": 300,
+        "Dungeon Clear Economics Reward": 4000,
+        "Dungeon Clear ServerRewards Points": 4000,
+        "Dungeon Clear Skill Tree XP Reward": 4000.0
+      }
+    }
+  ],
+  "Chat Commands": {
+    "Buy Dungeon": "buydungeon",
+    "Create Dungeon": "createdungeon",
+    "Reload Config": "de.reloadconfig",
+    "Toggle Purchases": "de.toggle",
+    "Remove Inactive Dungeons": "removeinactivedungeons",
+    "Remove All Dungeons": "removealldungeons",
+    "Remove Nearest Dungeon": "de.removenearest",
+    "Remove Own Dungeon": "removedungeon",
+    "Force Remove All Dungeons": "forceremovealldungeons",
+    "Add Auto Portal Spawn Location": "de.addautospawn",
+    "Add Buy Portal Spawn Location": "de.addbuyspawn",
+    "Remove Nearest Custom Portal Spawn Location": "de.removespawn",
+    "List Custom Portal Spawn Locations": "de.listspawns",
+    "List Active Dungeons": "dungeons"
+  },
+  "Console Commands": {
+    "Buy Dungeon": "buydungeon",
+    "Spawn Random Dungeon": "spawnrandomdungeon",
+    "Spawn Fixed Dungeon": "spawnfixeddungeon",
+    "Reload Config": "de.reloadconfig",
+    "List Active Dungeons": "dungeons"
+  },
+  "Version": {
+    "Major": 3,
+    "Minor": 11,
+    "Patch": 1
+  }
+}

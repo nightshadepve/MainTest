@@ -1,0 +1,62 @@
+{
+  "outpost": [
+    {
+      "position": {
+        "x": -18.1759033,
+        "y": 0.1388936,
+        "z": -16.1777039,
+        "normalized": {
+          "x": -0.7469614,
+          "y": 0.00570800574,
+          "z": -0.6648429,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 24.3331223,
+        "sqrMagnitude": 592.1008
+      },
+      "monumentParent": "assets/bundled/prefabs/autospawn/monument/medium/compound.prefab",
+      "hideWarp": false
+    }
+  ],
+  "bandit": [
+    {
+      "position": {
+        "x": 29.6942139,
+        "y": 1.87177181,
+        "z": -13.5491943,
+        "normalized": {
+          "x": 0.908275068,
+          "y": 0.05725303,
+          "z": -0.4144375,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 32.6929741,
+        "sqrMagnitude": 1068.83057
+      },
+      "monumentParent": "assets/bundled/prefabs/autospawn/monument/medium/bandit_town.prefab",
+      "hideWarp": false
+    }
+  ],
+  "apartments": [
+    {
+      "position": {
+        "x": -18.5446224,
+        "y": 0.28242898,
+        "z": 43.5515137,
+        "normalized": {
+          "x": -0.391764,
+          "y": 0.00596644636,
+          "z": 0.920046449,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 47.3362122,
+        "sqrMagnitude": 2240.717
+      },
+      "monumentParent": "assets/bundled/prefabs/autospawn/monument/medium/apartments_complex_1.prefab",
+      "hideWarp": false
+    }
+  ]
+}

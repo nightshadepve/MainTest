@@ -1,0 +1,35 @@
+{
+  "Commands": [
+    "em"
+  ],
+  "Auto events": {
+    "Enable Patrol Helicopter auto event": false,
+    "Enable Airdrop auto event": false,
+    "Enable Chinook (CH47) auto event": false,
+    "Enable Cargo Ship auto event": false,
+    "Enable Road Bradley APC auto event": false,
+    "Enable Santa Sleigh auto event": false,
+    "Enable Deep Sea auto event": false,
+    "Enable Egg Hunt auto event": true,
+    "Enable Traveling Vendor auto event": false,
+    "Enable Christmas Event auto event": false,
+    "Enable F15e auto event": true,
+    "Enable Travelling Vendor auto event": false,
+    "Enable Christmas Refill auto event": false,
+    "Enable Satellite Crash auto event": true,
+    "Enable Halloween auto event": true
+  },
+  "Enable event logging to file": false,
+  "Work with Notify?": true,
+  "Discord Settings": {
+    "Webhook URL": "https://discord.com/api/webhooks/1498629133087805541/b9MatImMiiHdbFFaYNfZxThZC1uoOk3cWVfe_4yVSXLYtvjQwfjfcIn5E_dRp7045bpF",
+    "Embed title": "Event Manager",
+    "Embed color (hex, e.g. #1F8B4C)": "#1F8B4C",
+    "Footer icon URL": "https://gitlab.com/TheMevent/PluginsStorage/raw/main/Images/EventManager/schedule-icon.png"
+  },
+  "Version": {
+    "Major": 4,
+    "Minor": 2,
+    "Patch": 2
+  }
+}

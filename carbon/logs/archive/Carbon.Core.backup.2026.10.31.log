@@ -1,0 +1,1475 @@
+[2026.10.30 10:02:38] [WARN] Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+[2026.10.30 10:02:38] [INFO] Carbon 2.0.262.0 [2026.10.01.0] 8a81d70 on Linux 
+[2026.10.30 10:02:38] [INFO]        raul on production (2026-10-02 11:07:29 +0200)
+[2026.10.30 10:02:38] [INFO] Rust   134/2635.289.1 on release (22/10/2026 17:30:56) 168909
+[2026.10.30 10:02:39] [INFO] Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 347ms
+[2026.10.30 10:02:39] [INFO] Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 94ms
+[2026.10.30 10:02:39] [INFO] Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 272ms
+[2026.10.30 10:02:40] [INFO] Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 181ms
+[2026.10.30 10:02:46] [INFO] Preloaded plugin Chaos Commands v1.0.65 by k1lly0u
+[2026.10.30 10:02:46] [INFO] Preloaded plugin Chaos Plugin Interface v1.0.65 by k1lly0u
+[2026.10.30 10:02:46] [INFO] Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.30 10:02:46] [INFO] Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.30 10:02:46] [INFO] [DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+[2026.10.30 10:02:47] [INFO] Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [ERRO] Failed to load plugin Yu2jdJ!Mza^HIl}zUSa_wwKL$ in oxide extension Oxide.Ext.RustEdit: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].FindEntry (TKey key) [0x00008] in <e605204d165a49d89ae7579f3d894429>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryGetValue (TKey key, TValue& value) [0x00000] in <e605204d165a49d89ae7579f3d894429>:0 
+  at Carbon.Core.ModLoader.GetCompilationResult (System.String file, System.Boolean clear) [0x00000] in /home/runner/work/Carbon/Carbon/src/Carbon.Components/Carbon.Common/src/Carbon/Modding/ModLoader.cs:25 
+  at Carbon.Core.ModLoader.InitializePlugin (System.Type type, Oxide.Plugins.RustPlugin& plugin, Carbon.Core.ModLoader+Package package, System.Action`1[T] preInit, System.Boolean precompiled) [0x00101] in /home/runner/work/Carbon/Carbon/src/Carbon.Components/Carbon.Common/src/Carbon/Modding/ModLoader.cs:266 
+  at Carbon.Compat.Lib.OxideCompat.RegisterPluginLoader (Oxide.Core.Extensions.ExtensionManager self, Oxide.Core.Plugins.PluginLoader loader, Oxide.Core.Extensions.Extension oxideExt) [0x000e8] in /home/runner/work/Carbon/Carbon/src/Carbon.Components/Carbon.Compat/src/Lib/OxideCompat.cs:49 
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.30 10:02:47] [INFO] Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+[2026.10.30 10:02:48] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [664ms]
+[2026.10.30 10:03:03] [INFO] Loaded plugin Image Library v2.0.67 by Absolut & K1lly0u [449ms]
+[2026.10.30 10:03:04] [INFO] Loaded plugin Monument Finder v3.1.5 by WhiteThunder [182ms]
+[2026.10.30 10:03:04] [INFO] Loaded plugin Player DLC API v1.6.2 by k1lly0u [54ms]
+[2026.10.30 10:03:04] [INFO] Loaded plugin Discord Status (Webhook) v6.1.0 by AhmadAkal [37ms]
+[2026.10.30 10:03:04] [INFO] Loaded plugin MedioReports v2.2.1 by MediocratyItself [45ms]
+[2026.10.30 10:03:04] [INFO] [NightshadeConsoleFilter] Loaded. Active filters: 1125. Suppressing selected Unity/Rust log spam after plugin load.
+[2026.10.30 10:03:04] [INFO] Loaded plugin NightshadeConsoleFilter v1.0.1 by Nightshade [43ms]
+[2026.10.30 10:03:04] [INFO] Loaded plugin PopControl v1.7.0 by Papa [115ms]
+[2026.10.30 10:03:05] [INFO] Loaded plugin Queue Holder v1.0.2 by Tryhard [44ms]
+[2026.10.30 10:03:05] [INFO] Loaded plugin Monuments Watcher v0.1.12 by IIIaKa [318ms]
+[2026.10.30 10:03:06] [INFO] Loaded plugin Nightshade Purge Status v1.0.0 by Nightshade [130ms]
+[2026.10.30 10:03:07] [INFO] Loaded plugin TruePVE v2.4.4 by nivex [630ms]
+[2026.10.30 10:03:08] [INFO] Loaded plugin ZoneDomes v2.0.2 by k1lly0u [78ms]
+[2026.10.30 10:03:08] [INFO] Loaded plugin Zone Manager v3.1.14 by k1lly0u [330ms]
+[2026.10.30 10:03:09] [INFO] Loaded plugin Zone Manager Auto Zones v1.4.5 by FastBurst [265ms]
+[2026.10.30 10:03:09] [INFO] Loaded plugin NightshadeRaidProtection v1.0.4 by Nightshade [111ms]
+[2026.10.30 10:03:09] [INFO] Loaded plugin NightshadeShieldStatus v1.0.0 by Nightshade [49ms]
+[2026.10.30 10:03:10] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Loaded share data: 0 entries. Known players: 137.
+[2026.10.30 10:03:10] [INFO] Loaded plugin UnifiedLootProtection v1.1.1 by Nightshade [181ms]
+[2026.10.30 10:03:10] [INFO] Loaded plugin BetterTC v1.7.1 by ninco90 [547ms]
+[2026.10.30 10:03:10] [INFO] Loaded plugin Bodies to Bags v2.0.0 by Ryan [90ms]
+[2026.10.30 10:03:11] [INFO] Loaded plugin Chest Stacks v1.4.7 by supreme [131ms]
+[2026.10.30 10:03:11] [INFO] Loaded plugin CustomC4RocketTiers v1.1.0 by Blackmatic [302ms]
+[2026.10.30 10:03:11] [INFO] Loaded plugin Hardy Planters v1.0.12 by imthenewguy [122ms]
+[2026.10.30 10:03:12] [INFO] Loaded plugin NightshadeCrateEjector v1.0.0 by Nightshade [81ms]
+[2026.10.30 10:03:12] [INFO] Loaded plugin Remover Tool v4.3.48 by Reneb/Fuji/Arainrr/Tryhard [254ms]
+[2026.10.30 10:03:13] [INFO] Loaded plugin Restore Upon Death v0.6.5 by k1lly0u [135ms]
+[2026.10.30 10:03:13] [INFO] Loaded plugin WirelessPower v1.2.9 by RickySpanish [272ms]
+[2026.10.30 10:03:13] [INFO] Loaded plugin aQuarry v2.0.6 by AvG Лаймон [208ms]
+[2026.10.30 10:03:14] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.OnStorageItemTransferEnd_Patch1' (IndustrialStorageOnStorageItemTransferEnd) method [AfterPluginInit].
+[2026.10.30 10:03:14] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.get_Container_Patch1' (IndustrialStorageAdaptorPatch) method [AfterPluginInit].
+[2026.10.30 10:03:14] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.InputSlotRange_Patch1' (IndustrialStorageAdaptor_InputSlotRange) method [AfterPluginInit].
+[2026.10.30 10:03:14] [INFO] [extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.OutputSlotRange_Patch1' (IndustrialStorageAdaptor_OutputSlotRange) method [AfterPluginInit].
+[2026.10.30 10:03:14] [INFO] Loaded plugin extendedindustrial v1.2.6 by bmgjet [112ms]
+[2026.10.30 10:03:14] [ERRO] Failed compiling 'Backpacks.cs':
+[2026.10.30 10:03:14] [ERRO]   1. Cannot implicitly convert type 'System.Action<Item, bool>' to 'System.Action<Item, bool, BasePlayer>' [CS0029]
+     (Backpacks 74 line 6055)
+[2026.10.30 10:03:15] [INFO] Loaded plugin IQTeleportation v1.37.7 by Mercury [353ms]
+[2026.10.30 10:03:18] [INFO] Loaded plugin PlayerRanks v2.3.4 by Steenamaroo [402ms]
+[2026.10.30 10:03:18] [INFO] Loaded plugin Sign Artist v1.4.6 by Whispers88 [231ms]
+[2026.10.30 10:03:19] [INFO] Loaded plugin Skinner v3.2.1 by Whispers88 [247ms]
+[2026.10.30 10:03:20] [INFO] Loaded plugin UltimateLocker v2.1.5 by Scalbox [967ms]
+[2026.10.30 10:03:21] [INFO] Loaded plugin VIPPerks v1.2.1 by Nightshade [114ms]
+[2026.10.30 10:03:21] [INFO] Loaded plugin Cases v2.0.1 by Mevent [324ms]
+[2026.10.30 10:03:22] [INFO] Loaded plugin NightshadeRecycler v3.2.1 by Nightshade [86ms]
+[2026.10.30 10:03:22] [INFO] Loaded plugin NightshadeShop v1.5.0 by Nightshade [363ms]
+[2026.10.30 10:03:23] [INFO] Loaded plugin Personal Marketplace v1.4.1 by ZEODE [133ms]
+[2026.10.30 10:03:23] [INFO] Loaded plugin Server Rewards v2.0.8 by k1lly0u [358ms]
+[2026.10.30 10:03:23] [INFO] Loaded plugin Server Rewards Wipe v2.0.2 by ZEODE [69ms]
+[2026.10.30 10:03:23] [INFO] Loaded plugin Super Card v1.0.7 by Mevent [54ms]
+[2026.10.30 10:03:23] [ERRO] Failed compiling 'VirtualQuarries.cs':
+[2026.10.30 10:03:23] [ERRO]   1. Delegate 'Action<Item, bool, BasePlayer>' does not take 2 arguments [CS1593]
+     (VirtualQuarries 70 line 852)
+[2026.10.30 10:03:42] [INFO] Loaded plugin Activity Rewards v0.1.9 by IIIaKa [163ms]
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Shield.ServerSideAttack_Patch1' (Shield_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'ChickenCoop.SubmitEggForHatching_Patch1' (ChickenCoop_SubmitEggForHatching_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'FarmableAnimal.ServerPetChicken_Patch1' (FarmableAnimal_ServerPetChicken_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.LivestockAnimal.AddFamiliarity_Patch1' (LivestockAnimal_AddFamiliarity_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.LivestockAnimal.HandlingCreditFor_Patch1' (LivestockAnimal_HandlingCreditFor_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Cow.TryMilk_Patch1' (Cow_TryMilk_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Sheep.GiveShearItems_Patch1' (Sheep_GiveShearItems_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Sheep.Shear_Patch1' (Sheep_Shear_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.Server_SelectAnimal_Patch1' (LivestockVendor_Server_SelectAnimal_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.Server_SelectWool_Patch1' (LivestockVendor_Server_SelectWool_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.RollOffers_Patch1' (LivestockVendor_RollOffers_AddOffers_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'LivestockVendor.RollOffers_Patch2' (LivestockVendor_RollOffers_ScaleOffers_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'FishLookup.GetFish_Patch1' (FishLookup_GetFish_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'MetalDetectorSource.CreateFlag_Patch1' (Item_SplitItem_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'MetalDetectorFlag.OnFullyDug_Patch1' (OnFullyDug_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'BaseFishingRod.Server_RequestCast_Patch1' (FishingRod_Cast_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Recycler.StopRecycling_Patch1' (StopRecycling_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'Recycler.GetRecyclerStats_Patch2' (Recycler_GetRecyclerStats_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'BasePlayer.RadiationProtection_Patch1' (RadiationProtection_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] [SkillTree] Automatically Harmony patched 'ItemModContainerArmorSlot.CreateForPlayer_Patch1' (ItemModContainerArmorSlot_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:43] [INFO] Loaded plugin Skill Tree v1.8.0 by imthenewguy [1583ms]
+[2026.10.30 10:03:44] [INFO] Loaded plugin SkillTreeXPEvent v1.0.15 by imthenewguy [180ms]
+[2026.10.30 10:03:44] [INFO] Loaded plugin BuyableTugboats v1.0.9 by imthenewguy [137ms]
+[2026.10.30 10:03:44] [INFO] Loaded plugin Claim Vehicle v1.8.1 by WhiteThunder [142ms]
+[2026.10.30 10:03:44] [INFO] Loaded plugin Craft Car Chassis v1.2.5 by WhiteThunder [130ms]
+[2026.10.30 10:03:45] [INFO] Loaded plugin Nightshade MLRS Truck v1.0.8 by Nightshade [106ms]
+[2026.10.30 10:03:47] [INFO] Loaded plugin Vehicle Decay Protection v2.9.0 by WhiteThunder [187ms]
+[2026.10.30 10:03:48] [INFO] Loaded plugin Vehicle Licence v1.9.2 by Mabel [1021ms]
+[2026.10.30 10:03:49] [INFO] Loaded plugin ArmoredTrain v2.0.5 by Adem [496ms]
+[2026.10.30 10:03:50] [INFO] Loaded plugin Bradley Drops v1.4.1 by ZEODE [402ms]
+[2026.10.30 10:03:52] [INFO] Loaded plugin Convoy v3.0.6 by Adem [808ms]
+[2026.10.30 10:03:53] [INFO] [DungeonEvents] Automatically Harmony patched 'ScientistNPC.get_displayName_Patch1' (ScientistNPC_DisplayName_Patch) method [AfterPluginInit].
+[2026.10.30 10:03:53] [INFO] Loaded plugin Dungeon Events v3.11.1 by Martian [742ms]
+[2026.10.30 10:03:53] [INFO] Loaded plugin EventsManager v4.2.2 by Mevent & Qbis [531ms]
+[2026.10.30 10:03:54] [INFO] Loaded plugin EventsManagerNotifier v1.0.11 by Mevent & M&B-Studios [62ms]
+[2026.10.30 10:03:54] [INFO] Loaded plugin Heli Signals v1.4.1 by ZEODE [400ms]
+[2026.10.30 10:03:54] [INFO] Loaded plugin HideAndSeek v1.1.0 by Nightshade [127ms]
+[2026.10.30 10:03:54] [INFO] Loaded plugin NightshadeAnnouncer v1.3.1 by Nightshade [141ms]
+[2026.10.30 10:03:55] [INFO] Loaded plugin NightshadeVoteDay v1.2.0 by Nightshade [77ms]
+[2026.10.30 10:03:56] [INFO] Loaded plugin Copy Paste v4.3.0 by misticos [459ms]
+[2026.10.30 10:03:56] [INFO] Loaded plugin DefendableHomes v1.2.2 by KpucTaJl [299ms]
+[2026.10.30 10:04:06] [INFO] Loaded plugin NightshadeRaidbase v1.0.16 by Nightshade [241ms]
+[2026.10.30 10:04:07] [INFO] Loaded plugin Raidable Bases v3.2.2 by nivex [2337ms]
+[2026.10.30 10:04:08] [INFO] Loaded plugin NpcSpawn v3.4.1 by KpucTaJl [1065ms]
+[2026.10.30 10:04:08] [INFO] Loaded plugin Spawns v2.0.36 by Reneb / k1lly0u [106ms]
+[2026.10.30 10:04:09] [INFO] [ZombieHorde] Automatically Harmony patched 'TravellingVendor.IsInvalidPlayer_Patch1' (TravellingVendorIsInvalidPlayerPatch) method [AfterPluginInit].
+[2026.10.30 10:04:09] [INFO] Loaded plugin ZombieHorde v0.6.36 by k1lly0u [177ms]
+[2026.10.30 10:04:09] [INFO] Loaded plugin Advanced Status v0.1.26 by IIIaKa [381ms]
+[2026.10.30 10:04:09] [INFO] Loaded plugin Hud v3.5.2 by ahigao [162ms]
+[2026.10.30 10:04:10] [INFO] Loaded plugin NPC Health Bar v1.0.10 by Chris [169ms]
+[2026.10.30 10:04:10] [INFO] Loaded plugin NightshadeChat v1.0.0 by Rustonauts & Nightshade [248ms]
+[2026.10.30 10:04:10] [INFO] Loaded plugin Notify v1.0.15 by Mevent [130ms]
+[2026.10.30 10:04:10] [INFO] Loaded plugin PopUpAPI v2.0.4 by ThePitereq [72ms]
+[2026.10.30 10:04:12] [INFO] Loaded plugin Restart Status v0.1.1 by IIIaKa [154ms]
+[2026.10.30 10:04:12] [INFO] Loaded plugin ServerPanel v2.0.25 by Mevent [669ms]
+[2026.10.30 10:04:13] [INFO] [ServerPanel Migrations] Loaded 6 migrations
+[2026.10.30 10:04:13] [INFO] Loaded plugin ServerPanel Migrations v2.0.25 by Mevent [308ms]
+[2026.10.30 10:04:13] [INFO] Loaded plugin ServerPanel Pop Ups v2.0.25 by Mevent [587ms]
+[2026.10.30 10:04:13] [INFO] Loaded plugin Sort Button v2.7.0 by WhiteThunder, MON@H [123ms]
+[2026.10.30 10:04:14] [INFO] Loaded plugin Teleport Status v0.1.2 by IIIaKa [130ms]
+[2026.10.30 10:04:14] [INFO] Loaded plugin Wipe Schedule v2.0.22 by Mevent [263ms]
+[2026.10.30 10:04:15] [INFO] Loaded plugin XFastButtons v1.1.0 by Monster [176ms]
+[2026.10.30 10:04:18] [INFO] Loaded plugin AdminMenu v1.4.10 by 0xF // dsc.gg/0xf-plugins [700ms]
+[2026.10.30 10:04:19] [INFO] Loaded plugin PowerfulAdmin v1.2.7 by codeboy [1910ms]
+[2026.10.30 10:04:19] [INFO] [PowerfulAdmin Discord] Discord bot is disabled in PowerfulAdmin settings - bot idle.
+[2026.10.30 10:04:19] [INFO] Loaded plugin PowerfulAdmin Discord v1.1.0 by codeboy [151ms]
+[2026.10.30 10:04:19] [INFO] Loaded plugin Telekinesis v3.3.1 by WhiteThunder [118ms]
+[2026.10.30 10:04:19] [INFO] Loaded plugin ServerPanel Installer v2.0.25 by Mevent [131ms]
+[2026.10.30 10:04:24] [INFO] [RustEdit] - IO data loaded and ready to be processed!
+[2026.10.30 10:04:24] [INFO] [RustEdit] - Vending data loaded and ready to be processed!
+[2026.10.30 10:04:24] [WARN] [RustEdit] - No loot data found in map file
+[2026.10.30 10:04:24] [INFO] [RustEdit] - APC path data loaded and ready to be processed!
+[2026.10.30 10:04:24] [WARN] [RustEdit] - No vehicle data found in map file
+[2026.10.30 10:04:24] [INFO] [RustEdit] - NPC data loaded and ready to be processed!
+[2026.10.30 10:04:31] [WARN] [RustEdit] - No ocean patrol path data found in map file
+[2026.10.30 10:04:44] [INFO] [NightshadeAnnouncer] Announcement sent: [Nightshade] A portal tears open at sea… Deep Sea has spawned (North).
+[2026.10.30 10:04:44] [INFO] [NightshadeAnnouncer] NightshadeAnnouncer: Deep Sea portal fired at (0.00, 0.00, 2500.00) (North)
+[2026.10.30 10:05:03] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.30 10:05:03] [WARN] Requested 'PhysgunRGT' for compilation
+[2026.10.30 10:05:04] [INFO] [Admin] Invalidated uMod database. Fetching...
+[2026.10.30 10:05:04] [INFO] [uMod] Caching plugin metadata for displaying plugins in the Admin module -> Plugins tab. This might take a while..
+[2026.10.30 10:05:04] [INFO] [Discord Status (Webhook)] The plugin will attempt to edit the message with ID: 1512407393131171985
+[2026.10.30 10:05:04] [INFO] [PopControl] [LWPop] Captured original maxplayers value: 100
+[2026.10.30 10:05:04] [INFO] [PopControl] [LWPop] maxplayers -> 50 (online=0, joining=0, queued=0, offset=1, bounds=50-100)
+[2026.10.30 10:05:04] [WARN]  Zone Manager Auto Zones v1.4.5 by FastBurst hook 'OnServerInitialized' took longer than 100ms [146ms]
+[2026.10.30 10:05:04] [INFO] [BetterTC] Harmony Patched: RPC_PickupWallpaperStart_Patch
+[2026.10.30 10:05:04] [INFO] [BetterTC] Harmony Patched: HasClothForPlacement_Patch
+[2026.10.30 10:05:04] [INFO] [BetterTC] Harmony Patched: CheckWallpaper_Patch
+[2026.10.30 10:05:04] [INFO] [BetterTC] Harmony Patched (Force both sides wallpapers: true)
+[2026.10.30 10:05:04] [INFO] [Hardy Planters] Found and setup: 40 planter boxes.
+[2026.10.30 10:05:04] [INFO] [IQTeleportation] Automatic cleaning of user settings. 4 users and their settings were deleted due to absence from the server for more than 7 days
+[2026.10.30 10:05:04] [INFO] [IQTeleportation] Received information about 56 monuments on the map
+[2026.10.30 10:05:04] [INFO] [IQTeleportation] Saved 0 tugboats and 0 player boats for setting players' home points.
+
+[2026.10.30 10:05:04] [INFO] [IQTeleportation] Saved 62 apartment rooms for setting players' home points
+[2026.10.30 10:05:04] [INFO] [IQTeleportation] Initialized 3 warps; reserved commands: outpost, bandit, apartments
+[2026.10.30 10:05:04] [WARN] [PlayerRanks] Clans is not installed and will not be used.
+[2026.10.30 10:05:04] [WARN] [PlayerRanks] Rust:IO is not installed and will not be used.
+[2026.10.30 10:05:04] [WARN] [PlayerRanks] PlayTime Tracker is not installed and will not be used.
+[2026.10.30 10:05:04] [WARN] [PlayerRanks] Economics is not installed and will not be used.
+[2026.10.30 10:05:04] [WARN] [Sign Artist] Waiting for Steamworks to update item definitions....
+[2026.10.30 10:05:04] [INFO] [Skinner] Waiting for Steamworks to update skin item definitions
+[2026.10.30 10:05:04] [INFO] [Skinner] Loading skins from 2 collections...
+[2026.10.30 10:05:04] [INFO] [UltimateLocker] Waiting for Steam Workshop to update item definitions....
+[2026.10.30 10:05:04] [INFO] [UltimateLocker] Skinner Patch applied successfully.
+[2026.10.30 10:05:04] [ERRO] [Cases] Items with the same ID found 11
+[2026.10.30 10:05:04] [ERRO] [Cases] Items with the same ID found 12
+[2026.10.30 10:05:04] [INFO] [NightshadeShop] NightshadeShop v1.5.0 loaded: 14 categories, 125 listings, 9 Admin Shop categories, 64 trades.
+[2026.10.30 10:05:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: Marketplace_Server_CanAcceptOrder_Patch
+[2026.10.30 10:05:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: MarketTerminal_Server_SetMarketplaceHasPower_Patch
+[2026.10.30 10:05:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: Marketplace_ChargeFraction_Patch
+[2026.10.30 10:05:04] [INFO] [Personal Marketplace] INFO: Harmony patch applied: Marketplace_Server_RefreshChargeState_Patch
+[2026.10.30 10:05:04] [WARN] [Activity Rewards] MonumentsWatcher plugin not found! MonumentsWatcher is required to work with monuments!
+* https://codefling.com/plugins/monuments-watcher
+[2026.10.30 10:05:04] [WARN] [Activity Rewards] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Blueprint count: 667
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Spawned: workbench1.deployed
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Spawned: workbench2.deployed
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Spawned: workbench3.deployed
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Loading 9 images into ImageLibrary
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Loaded all images for SkillTree.
+[2026.10.30 10:05:04] [INFO] [Skill Tree] Tracking 2 required nodes.
+[2026.10.30 10:05:04] [INFO] [Convoy] Route caching has started!
+[2026.10.30 10:05:04] [INFO] [RaidableBases] Allowed spawn points in 0 zones.
+[2026.10.30 10:05:04] [INFO] [RaidableBases] Blocked spawn points in 53 zones.
+[2026.10.30 10:05:05] [INFO] [NpcSpawn] Loading custom navigation mesh files...
+[2026.10.30 10:05:05] [INFO] [NpcSpawn] All custom navigation mesh files have loaded successfully!
+[2026.10.30 10:05:05] [WARN]  NpcSpawn v3.4.1 by KpucTaJl hook 'OnServerInitialized' took longer than 100ms [570ms]
+[2026.10.30 10:05:05] [INFO] [ZombieHorde] Validating horde profiles...
+[2026.10.30 10:05:05] [WARN]  ZombieHorde v0.6.36 by k1lly0u hook 'ChaosNPC_PreSpawn' took longer than 100ms [428ms]
+[2026.10.30 10:05:06] [WARN] [Restart Status] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[2026.10.30 10:05:06] [WARN] Command 'help' already exists.
+[2026.10.30 10:05:06] [WARN] Command 'help' already exists.
+[2026.10.30 10:05:06] [WARN] [Teleport Status] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[2026.10.30 10:05:06] [WARN]  Wipe Schedule v2.0.22 by Mevent hook 'OnServerInitialized' took longer than 100ms [124ms] [GC]
+[2026.10.30 10:05:06] [WARN] [XFastButtons] 
+-----------------------------
+     Author - Monster
+     VK - vk.com/idannopol
+     Discord - Monster#4837
+-----------------------------
+[2026.10.30 10:05:06] [INFO] [RustEdit] - Checking for updates...
+[2026.10.30 10:05:06] [INFO]  Batch completed! OSI on 110 plugins.
+[2026.10.30 10:05:22] [INFO] [Codefling] Failed fetching vendor. Error code 404!
+[2026.10.30 10:05:22] [INFO] [BetterTC] CheckUpdate: No new items found in remote data.
+[2026.10.30 10:05:22] [INFO] [ServerPanel Installer] Server Panel data loaded successfully!
+[2026.10.30 10:05:22] [INFO] [WirelessPower] Initialization progress: 25%
+[2026.10.30 10:05:22] [INFO] [NightshadeAnnouncer] NightshadeAnnouncer: DeepSeaManager component cached successfully.
+[2026.10.30 10:05:22] [INFO] [NightshadeAnnouncer] NightshadeAnnouncer: Deep Sea portal found on init scan (cached position).
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] List of biome positions: Arid = 0, Temperate = 0, Tundra = 0, Arctic = 0, Jungle = 0
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] List of road positions: ExtraWide = 679, Standard = 1655, ExtraNarrow = 0
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] 1677 railway positions found
+[2026.10.30 10:05:22] [INFO] [Skinner] Found - 22 in 2 collections.
+[2026.10.30 10:05:22] [INFO] [Skinner] Finished processing workshop skin imports. Total processed: 0/0
+[2026.10.30 10:05:22] [INFO] [Skinner] Saved Workshop Skins
+[2026.10.30 10:05:22] [INFO] [Skinner] Saved Workshop Skins
+[2026.10.30 10:05:22] [INFO] [Skinner] Finished Updating Custom Skins
+[2026.10.30 10:05:22] [INFO] [RustEdit] - The RustEdit extension is up to date!
+[2026.10.30 10:05:22] [INFO] [DefendableHomes] Image Tab_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] Image Preset_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [DefendableHomes] Image Clock_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] Image Find_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [DefendableHomes] Image Npc_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] Image Delete_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [DefendableHomes] Image Foundation_KpucTaJl download is complete
+[2026.10.30 10:05:22] [INFO] [NpcSpawn] Image Indicator_KpucTaJl download is complete
+[2026.10.30 10:05:25] [INFO] [UltimateLocker] ########## Restored 0 lock scale sizes in 0.00 seconds ##########
+[2026.10.30 10:05:26] [INFO] Caching plugin metadata page 0 out of 157
+[2026.10.30 10:05:26] [INFO] [WirelessPower] Initialization progress: 50%
+[2026.10.30 10:05:26] [INFO] [NpcSpawn] Image Back_KpucTaJl download is complete
+[2026.10.30 10:05:29] [INFO] [NpcSpawn] Image Copy_KpucTaJl download is complete
+[2026.10.30 10:05:29] [INFO] [WirelessPower] Initialization progress: 75%
+[2026.10.30 10:05:29] [INFO] [NpcSpawn] Image coconut-underwear download is complete
+[2026.10.30 10:05:29] [INFO] [WirelessPower] Initialized 23 power grids (excluded 1 in raid zones)
+[2026.10.30 10:05:29] [INFO] [NpcSpawn] Image femaleunderwear_mummywraps.icon download is complete
+[2026.10.30 10:05:29] [INFO] [NpcSpawn] Image maleunderwear_mummywraps.icon download is complete
+[2026.10.30 10:05:29] [INFO] [NpcSpawn] Image pink_bikini download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image rapido_male download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image swimwear_gradient_female download is complete
+[2026.10.30 10:05:30] [INFO] Loaded plugin PhysgunRGT v1.0.0 by Physgun [148ms]
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image swimwear_gradient_male download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image swimwear_palmleaves_female download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image swimwear_palmleaves_male download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image swimwear_scribble_female download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image swimwear_scribble_male download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image twitchunderwear_female download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image twitchunderwear_male download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image underwear_default_female download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image underwear_default_male download is complete
+[2026.10.30 10:05:30] [INFO] [NpcSpawn] Image grassskirt-underwear-female download is complete
+[2026.10.30 10:05:31] [INFO] [NpcSpawn] Image grassskirt-underwear-male download is complete
+[2026.10.30 10:05:31] [WARN] [Convoy] Route caching has ended! The number of routes: 5
+[2026.10.30 10:05:32] [INFO] [RustEdit] - Processing 207 IO entities
+[2026.10.30 10:05:32] [INFO] -
+Loaded 170 items from RaidableBases/Base_Loot/Easy Bases
+Loaded 182 items from RaidableBases/Base_Loot/Medium Bases
+Loaded 180 items from RaidableBases/Base_Loot/Hard Bases
+Loaded 171 items from RaidableBases/Base_Loot/Expert Bases
+Loaded 164 items from RaidableBases/Base_Loot/Nightmare Bases
+
+[2026.10.30 10:05:33] [INFO] [Image Library] Starting order Notify
+[2026.10.30 10:05:36] [INFO] [RustEdit] - Successfully connected 207 IO links
+[2026.10.30 10:05:36] [INFO] [RustEdit] - Generating 1 APC paths from map file
+[2026.10.30 10:05:36] [INFO] [RustEdit] - 1 APC patrol paths successfully processed!
+[2026.10.30 10:05:36] [INFO] [RustEdit] - No custom vending machines found in map
+[2026.10.30 10:05:36] [INFO] [RustEdit] - 525 loot containers processed!
+[2026.10.30 10:05:36] [INFO] [RustEdit] - Created 7 keycard desk respawners
+[2026.10.30 10:05:36] [INFO] [RustEdit] - 28 resource entities processed!
+[2026.10.30 10:05:36] [INFO] [RustEdit] - 5 junkpiles processed!
+[2026.10.30 10:05:36] [INFO] [RustEdit] - Created 208 NPC spawn handlers!
+[2026.10.30 10:05:36] [INFO] [RustEdit] - Connected 18 shopkeepers to vending machines
+[2026.10.30 10:05:39] [INFO] [RustEdit] - BradleyAPC Spawned at :(13.39, 9.25, 18.83)
+[2026.10.30 10:05:42] [INFO] [Skinner] Steamworks Updated, Updating Skins
+[2026.10.30 10:05:43] [INFO] [Skinner] Configuration changes saved to Skinner.json
+[2026.10.30 10:05:43] [INFO] [Skinner] 7948 Workshop skins were indexed.. Checking for imported skins and collections
+[2026.10.30 10:05:43] [INFO] [Skinner] Saved Workshop Skins
+[2026.10.30 10:05:43] [INFO] [UltimateLocker] Processing Steam Workshop definitions...
+[2026.10.30 10:05:43] [INFO] [Copy Paste] Skin detection initialized: 6728 official skins, 385 DLC items. Processing 0 queued paste(s).
+[2026.10.30 10:05:49] [INFO] [RaidableBases] 25% loaded (223 potential points)
+[2026.10.30 10:06:00] [INFO] [RaidableBases] 50% loaded (447 potential points)
+[2026.10.30 10:06:12] [INFO] [RaidableBases] 75% loaded (675 potential points)
+[2026.10.30 10:06:24] [INFO] [RaidableBases] 100% loaded (736 potential points)
+[2026.10.30 10:06:24] [INFO] [RaidableBases] Grid initialization completed in 53 seconds and 489 milliseconds on a 3500 size map with 736 potential points.
+[2026.10.30 10:08:43] [INFO] Caching plugin metadata page 39 out of 157
+[2026.10.30 10:12:02] [INFO] Caching plugin metadata page 78 out of 157
+[2026.10.30 10:15:20] [INFO] Caching plugin metadata page 117 out of 157
+[2026.10.30 10:17:01] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 10:17:01] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 10:17:01] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 10:18:39] [INFO] Caching plugin metadata page 156 out of 157
+[2026.10.30 10:18:50] [INFO] [Admin] Stored uMod plugin metadata cache to file.
+[2026.10.30 10:32:09] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 10:32:09] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 10:32:09] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 10:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 10:47:12] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 10:47:12] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 10:47:12] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 11:02:18] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 11:02:18] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 11:02:18] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 11:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 11:17:19] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 11:17:19] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 11:17:19] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 11:32:22] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 11:32:22] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 11:32:22] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 11:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 11:47:25] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 11:47:25] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 11:47:25] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 12:02:30] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 12:02:30] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 12:02:30] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 12:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 12:17:32] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 12:17:32] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 12:17:32] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 12:32:36] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 12:32:36] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 12:32:36] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 12:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 12:47:38] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 12:47:38] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 12:47:38] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 13:02:44] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 13:02:44] [WARN]  NightshadeShop v1.5.0 by Nightshade hook 'OnServerSave' took longer than 100ms [109ms]
+[2026.10.30 13:02:44] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 13:02:44] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 13:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 13:17:45] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 13:17:45] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 13:17:45] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 13:32:50] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 13:32:50] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 13:32:50] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 13:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 13:47:52] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 13:47:52] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 13:47:52] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 14:02:57] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 14:02:58] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 14:02:58] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 14:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 14:17:59] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 14:18:00] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 14:18:00] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 14:33:10] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 14:33:11] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 14:33:11] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 14:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 14:48:12] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 14:48:13] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 14:48:13] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 14:55:57] [WARN]  Dungeon Events v3.11.1 by Martian hook 'CanEntityTakeDamage' took longer than 100ms [169ms]
+[2026.10.30 14:55:57] [WARN]  TruePVE v2.4.4 by nivex hook 'OnEntityTakeDamage' took longer than 100ms [195ms]
+[2026.10.30 14:56:05] [WARN]  Bradley Drops v1.4.1 by ZEODE hook 'OnLootSpawn' took longer than 100ms [202ms]
+[2026.10.30 15:00:22] [WARN]  Chest Stacks v1.4.7 by supreme hook 'OnPlayerConnected' took longer than 100ms [200ms]
+[2026.10.30 15:00:22] [WARN]  PowerfulAdmin v1.2.7 by codeboy hook 'OnPlayerConnected' took longer than 100ms [103ms]
+[2026.10.30 15:00:36] [INFO] You've successfully pasted the structure: fullwipednight4
+[2026.10.30 15:01:23] [INFO] [RaidableBases] fullwipednight4 @ C10 (-1,374.89 149.67) : 125 items
+[2026.10.30 15:03:18] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 15:03:19] [WARN]  NightshadeShop v1.5.0 by Nightshade hook 'OnServerSave' took longer than 100ms [121ms]
+[2026.10.30 15:03:19] [INFO] [Skill Tree] Saving player data for 1 players.
+[2026.10.30 15:03:19] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 15:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 15:18:19] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 15:18:19] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 15:18:19] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 15:33:27] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 15:33:27] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 15:33:27] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 15:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 15:48:29] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 15:48:29] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 15:48:29] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 16:03:35] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 16:03:35] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 16:03:35] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 16:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 16:18:36] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 16:18:37] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 16:18:37] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 16:33:43] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 16:33:43] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 16:33:43] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 16:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 16:48:45] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 16:48:45] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 16:48:45] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 17:03:53] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 17:03:53] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 17:03:53] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 17:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 17:18:55] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 17:18:55] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 17:18:55] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 17:34:02] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 17:34:02] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 17:34:02] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 17:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 17:49:04] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 17:49:05] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 17:49:05] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 18:04:10] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 18:04:10] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 18:04:10] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 18:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 18:19:14] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 18:19:14] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 18:19:14] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 18:34:21] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 18:34:21] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 18:34:21] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 18:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 18:49:23] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 18:49:23] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 18:49:23] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 18:49:57] [WARN]  Raidable Bases v3.2.2 by nivex hook 'OnSamSiteTargetScan' took longer than 100ms [135ms]
+[2026.10.30 19:04:32] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 19:04:32] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 19:04:32] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 19:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 19:19:34] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 19:19:35] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 19:19:35] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 19:34:42] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 19:34:42] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 19:34:42] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 19:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 19:49:44] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 19:49:44] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 19:49:44] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 20:04:45] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 20:04:45] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 20:04:45] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 20:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 20:19:46] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 20:19:46] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 20:19:46] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 20:34:48] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 20:34:48] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 20:34:48] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 20:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 20:49:50] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 20:49:50] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 20:49:50] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 21:04:52] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 21:04:52] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 21:04:52] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 21:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 21:19:55] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 21:19:55] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 21:19:55] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 21:34:56] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 21:34:56] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 21:34:56] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 21:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 21:49:58] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 21:49:58] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 21:49:58] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 22:05:00] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 22:05:00] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 22:05:00] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 22:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 22:20:01] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 22:20:01] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 22:20:01] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 22:31:43] [ERRO] Unhandled error occurred (NullReferenceException: Object reference not set to an instance of an object)
+  at AIBrainSenses.IsTargetInVision (BaseEntity target) (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at AIBrainSenses.AiCaresAbout (BaseEntity entity) (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at Spatial.Grid`1[T].Query (System.Single x, System.Single y, System.Single radius, T[] result, System.Func`2[T,TResult] filter) (at <f80ed44ae1f5428d8b503b2368b2f9bd>:0)
+  at BaseEntity+Query+EntityTree.GetPlayersInSphereFast (UnityEngine.Vector3 position, System.Single distance, BasePlayer[] results, System.Func`2[T,TResult] filter) (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at AIBrainSenses.SensePlayers () (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at AIBrainSenses.UpdateSenses () (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at AIBrainSenses.Update () (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at BaseAIBrain.Think (System.Single delta) (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at BaseAIBrain.DoThink () (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at ScarecrowNPC.ServerThink (System.Single delta) (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at NPCPlayer.ServerThink_Internal () (at <ee42652ca91d4d5db107b9e8ee60adc3>:0)
+  at Physgun.Rust.Metrics.HarmonyPatches.Delayed.InvokeHandlerBase_DoTick_Patch.InvokeWrapper (InvokeAction invokeAction) (at <4b49992447984e8cbc74a8939d480b03>:0)
+  at (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition.InvokeHandlerBase`1[[InvokeHandler, Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]].DoTick_Patch1(InvokeHandlerBase`1<InvokeHandler>)
+  at InvokeHandlerBase`1[T].LateUpdate () (at <e20f1ea987c64acc90acda1f0338afd3>:0)
+[2026.10.30 22:33:37] [WARN]  Skinner v3.2.1 by Whispers88 hook 'OnPlayerConnected' took longer than 100ms [191ms]
+[2026.10.30 22:35:03] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 22:35:03] [INFO] [Skill Tree] Saving player data for 1 players.
+[2026.10.30 22:35:03] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 22:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 22:46:48] [INFO] Unloaded plugin TruePVE v2.4.4 by nivex
+[2026.10.30 22:46:48] [INFO] Loaded plugin TruePVE v2.4.4 by nivex [630ms]
+[2026.10.30 22:50:04] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 22:50:04] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 22:50:04] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 23:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 23:05:07] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 23:05:07] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 23:05:07] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 23:20:09] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 23:20:09] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 23:20:09] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 23:22:36] [WARN]  Dungeon Events v3.11.1 by Martian hook 'CanEntityTakeDamage' took longer than 100ms [119ms]
+[2026.10.30 23:22:36] [WARN]  TruePVE v2.4.4 by nivex hook 'OnEntityTakeDamage' took longer than 100ms [122ms]
+[2026.10.30 23:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.30 23:35:11] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 23:35:11] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 23:35:11] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.30 23:50:13] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.30 23:50:13] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.30 23:50:13] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 00:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 00:05:15] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 00:05:15] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 00:05:15] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 00:20:16] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 00:20:16] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 00:20:16] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 00:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 00:35:17] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 00:35:17] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 00:35:17] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 00:50:19] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 00:50:19] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 00:50:19] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 01:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 01:05:20] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 01:05:20] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 01:05:20] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 01:20:21] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 01:20:21] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 01:20:21] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 01:21:08] [WARN]  NightshadeRaidProtection v1.0.4 by Nightshade hook 'OnEntityTakeDamage' took longer than 100ms [129ms]
+[2026.10.31 01:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 01:35:23] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 01:35:23] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 01:35:23] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 01:50:24] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 01:50:24] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 01:50:24] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 02:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 02:05:28] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 02:05:28] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 02:05:28] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 02:20:30] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 02:20:30] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 02:20:30] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 02:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 02:35:31] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 02:35:32] [WARN]  NightshadeShop v1.5.0 by Nightshade hook 'OnServerSave' took longer than 100ms [152ms]
+[2026.10.31 02:35:32] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 02:35:32] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 02:50:37] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 02:50:37] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 02:50:37] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 02:54:53] [INFO] You've successfully pasted the structure: Boom-Expert-Squaw
+[2026.10.31 02:55:46] [INFO] [RaidableBases] Boom-Expert-Squaw @ D21 (-1,237.49 -1,574.44) : 110 items
+[2026.10.31 02:56:54] [INFO] You've successfully pasted the structure: fullwipedhard54
+[2026.10.31 02:57:17] [INFO] [RaidableBases] fullwipedhard54 @ P8 (537.00 475.15) : 105 items
+[2026.10.31 02:58:33] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): alright. time to see if it works
+[2026.10.31 02:58:47] [INFO] [NightshadeChat] [Global] RunaObscura (76561198035665693): everything switched on schedule
+[2026.10.31 03:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 03:05:38] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 03:05:38] [INFO] [Skill Tree] Saving player data for 2 players.
+[2026.10.31 03:05:38] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 03:11:35] [INFO] [NightshadeRaidProtection] Redeemed 24h for TC 136719113 by 76561198035665693
+[2026.10.31 03:16:21] [WARN]  CustomC4RocketTiers v1.1.0 by Blackmatic hook 'OnEntitySpawned' took longer than 100ms [206ms]
+[2026.10.31 03:20:39] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 03:20:39] [INFO] [Skill Tree] Saving player data for 2 players.
+[2026.10.31 03:20:39] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 03:24:46] [WARN]  DefendableHomes v1.2.2 by KpucTaJl hook 'OnExplosiveThrown' took longer than 100ms [381ms]
+[2026.10.31 03:24:51] [WARN]  UltimateLocker v2.1.5 by Scalbox hook 'OnModularCarLockRemoved' took longer than 100ms [153ms]
+[2026.10.31 03:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 03:35:39] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 03:35:39] [INFO] [Skill Tree] Saving player data for 2 players.
+[2026.10.31 03:35:39] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 03:50:40] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 03:50:40] [INFO] [Skill Tree] Saving player data for 2 players.
+[2026.10.31 03:50:40] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 04:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 04:05:41] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 04:05:41] [INFO] [Skill Tree] Saving player data for 1 players.
+[2026.10.31 04:05:41] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 04:16:44] [ERRO] Failed compiling 'IslandStorm.cs':
+[2026.10.31 04:16:44] [ERRO]   1. Argument 2: cannot convert from 'Facepunch.StringView[]' to 'string[]' [CS1503]
+     (IslandStorm 38 line 155)
+[2026.10.31 04:18:14] [INFO] Loaded plugin IslandStorm v1.0.0 by Grok [225ms]
+[2026.10.31 04:20:41] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 04:20:41] [INFO] [Skill Tree] Saving player data for 1 players.
+[2026.10.31 04:20:41] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 04:23:19] [INFO] Unloaded plugin IslandStorm v1.0.0 by Grok
+[2026.10.31 04:23:23] [INFO] Loaded plugin IslandStorm v1.0.0 by Grok [127ms]
+[2026.10.31 04:26:36] [INFO] Unloaded plugin IslandStorm v1.0.0 by Grok
+[2026.10.31 04:26:40] [INFO] [IslandStorm] IslandStorm loaded. Use /storm start (requires islandstorm.admin permission).
+[2026.10.31 04:26:40] [INFO] Loaded plugin IslandStorm v1.0.0 by Grok [100ms]
+[2026.10.31 04:26:40] [INFO] [IslandStorm] IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin
+[2026.10.31 04:26:53] [INFO] [IslandStorm] Island-wide storm starting!
+[2026.10.31 04:26:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.load storm
+[2026.10.31 04:26:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 04:26:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 04:26:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 04:26:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 04:26:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.50
+[2026.10.31 04:26:53] [INFO] [IslandStorm] Storm started.
+[2026.10.31 04:26:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.38
+[2026.10.31 04:26:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.25
+[2026.10.31 04:26:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+[2026.10.31 04:26:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.20
+[2026.10.31 04:26:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.25
+[2026.10.31 04:27:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.45
+[2026.10.31 04:27:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.30
+[2026.10.31 04:27:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+[2026.10.31 04:27:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.24
+[2026.10.31 04:27:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.30
+[2026.10.31 04:27:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.53
+[2026.10.31 04:27:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.35
+[2026.10.31 04:27:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+[2026.10.31 04:27:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.28
+[2026.10.31 04:27:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.35
+[2026.10.31 04:27:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.60
+[2026.10.31 04:27:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.40
+[2026.10.31 04:27:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+[2026.10.31 04:27:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.32
+[2026.10.31 04:27:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.40
+[2026.10.31 04:27:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.68
+[2026.10.31 04:27:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.45
+[2026.10.31 04:27:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+[2026.10.31 04:27:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.36
+[2026.10.31 04:27:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.45
+[2026.10.31 04:27:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 04:27:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 04:27:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 04:27:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 04:27:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.50
+[2026.10.31 04:27:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.83
+[2026.10.31 04:27:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.55
+[2026.10.31 04:27:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+[2026.10.31 04:27:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.44
+[2026.10.31 04:27:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.55
+[2026.10.31 04:27:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.90
+[2026.10.31 04:27:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.60
+[2026.10.31 04:27:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+[2026.10.31 04:27:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.48
+[2026.10.31 04:27:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.60
+[2026.10.31 04:27:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.98
+[2026.10.31 04:27:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.65
+[2026.10.31 04:27:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+[2026.10.31 04:27:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.52
+[2026.10.31 04:27:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.65
+[2026.10.31 04:27:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.05
+[2026.10.31 04:27:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.70
+[2026.10.31 04:27:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+[2026.10.31 04:27:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.56
+[2026.10.31 04:27:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.70
+[2026.10.31 04:27:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.13
+[2026.10.31 04:27:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.75
+[2026.10.31 04:27:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+[2026.10.31 04:27:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.60
+[2026.10.31 04:27:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.75
+[2026.10.31 04:28:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.20
+[2026.10.31 04:28:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.80
+[2026.10.31 04:28:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+[2026.10.31 04:28:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.64
+[2026.10.31 04:28:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.80
+[2026.10.31 04:28:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.28
+[2026.10.31 04:28:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.85
+[2026.10.31 04:28:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+[2026.10.31 04:28:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.68
+[2026.10.31 04:28:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.85
+[2026.10.31 04:28:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.35
+[2026.10.31 04:28:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.90
+[2026.10.31 04:28:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+[2026.10.31 04:28:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.72
+[2026.10.31 04:28:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.90
+[2026.10.31 04:28:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.43
+[2026.10.31 04:28:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.95
+[2026.10.31 04:28:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+[2026.10.31 04:28:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.76
+[2026.10.31 04:28:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.95
+[2026.10.31 04:28:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.50
+[2026.10.31 04:28:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 1.00
+[2026.10.31 04:28:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 1.00
+[2026.10.31 04:28:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.80
+[2026.10.31 04:28:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 1.00
+[2026.10.31 04:28:29] [INFO] [IslandStorm] Storm peaked - applying radiation and extreme weather.
+[2026.10.31 04:33:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.43
+[2026.10.31 04:33:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.95
+[2026.10.31 04:33:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+[2026.10.31 04:33:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.76
+[2026.10.31 04:33:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.95
+[2026.10.31 04:33:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.35
+[2026.10.31 04:33:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.90
+[2026.10.31 04:33:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+[2026.10.31 04:33:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.72
+[2026.10.31 04:33:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.90
+[2026.10.31 04:33:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.28
+[2026.10.31 04:33:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.85
+[2026.10.31 04:33:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+[2026.10.31 04:33:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.68
+[2026.10.31 04:33:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.85
+[2026.10.31 04:33:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.20
+[2026.10.31 04:33:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.80
+[2026.10.31 04:33:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+[2026.10.31 04:33:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.64
+[2026.10.31 04:33:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.80
+[2026.10.31 04:33:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.13
+[2026.10.31 04:33:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.75
+[2026.10.31 04:33:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+[2026.10.31 04:33:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.60
+[2026.10.31 04:33:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.75
+[2026.10.31 04:34:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.05
+[2026.10.31 04:34:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.70
+[2026.10.31 04:34:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+[2026.10.31 04:34:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.56
+[2026.10.31 04:34:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.70
+[2026.10.31 04:34:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.97
+[2026.10.31 04:34:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.65
+[2026.10.31 04:34:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+[2026.10.31 04:34:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.52
+[2026.10.31 04:34:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.65
+[2026.10.31 04:34:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.90
+[2026.10.31 04:34:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.60
+[2026.10.31 04:34:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+[2026.10.31 04:34:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.48
+[2026.10.31 04:34:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.60
+[2026.10.31 04:34:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.82
+[2026.10.31 04:34:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.55
+[2026.10.31 04:34:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+[2026.10.31 04:34:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.44
+[2026.10.31 04:34:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.55
+[2026.10.31 04:34:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 04:34:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 04:34:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 04:34:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 04:34:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.50
+[2026.10.31 04:34:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.67
+[2026.10.31 04:34:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.45
+[2026.10.31 04:34:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+[2026.10.31 04:34:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.36
+[2026.10.31 04:34:35] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.45
+[2026.10.31 04:34:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.60
+[2026.10.31 04:34:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.40
+[2026.10.31 04:34:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+[2026.10.31 04:34:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.32
+[2026.10.31 04:34:41] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.40
+[2026.10.31 04:34:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.52
+[2026.10.31 04:34:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.35
+[2026.10.31 04:34:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+[2026.10.31 04:34:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.28
+[2026.10.31 04:34:47] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.35
+[2026.10.31 04:34:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.45
+[2026.10.31 04:34:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.30
+[2026.10.31 04:34:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+[2026.10.31 04:34:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.24
+[2026.10.31 04:34:53] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.30
+[2026.10.31 04:34:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.37
+[2026.10.31 04:34:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.25
+[2026.10.31 04:34:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+[2026.10.31 04:34:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.20
+[2026.10.31 04:34:59] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.25
+[2026.10.31 04:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 04:35:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.30
+[2026.10.31 04:35:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.20
+[2026.10.31 04:35:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.20
+[2026.10.31 04:35:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.16
+[2026.10.31 04:35:05] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.20
+[2026.10.31 04:35:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.22
+[2026.10.31 04:35:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.15
+[2026.10.31 04:35:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.15
+[2026.10.31 04:35:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.12
+[2026.10.31 04:35:11] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.15
+[2026.10.31 04:35:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.15
+[2026.10.31 04:35:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.10
+[2026.10.31 04:35:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.10
+[2026.10.31 04:35:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.08
+[2026.10.31 04:35:17] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.10
+[2026.10.31 04:35:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.07
+[2026.10.31 04:35:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.05
+[2026.10.31 04:35:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.05
+[2026.10.31 04:35:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.04
+[2026.10.31 04:35:23] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.05
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds 0.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.reset 
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind -1.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain -1.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder -1.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog -1.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] [IslandStorm] Running: weather.clouds -1.00
+[2026.10.31 04:35:29] [INFO] [IslandStorm] Storm fully ended.
+[2026.10.31 04:35:42] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 04:35:42] [INFO] [Skill Tree] Saving player data for 1 players.
+[2026.10.31 04:35:42] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 04:37:56] [INFO] Unloaded plugin IslandStorm v1.0.0 by Grok
+[2026.10.31 04:38:00] [INFO] [IslandStorm] IslandStorm loaded. Use /storm start (requires islandstorm.admin permission).
+[2026.10.31 04:38:00] [INFO] Loaded plugin IslandStorm v1.0.0 by Grok [111ms]
+[2026.10.31 04:38:00] [INFO] [IslandStorm] IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin
+[2026.10.31 04:39:19] [INFO] [IslandStorm] Island-wide storm starting!
+[2026.10.31 04:39:19] [INFO] [IslandStorm] [IslandStorm] Running: weather.load storm
+[2026.10.31 04:39:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 04:39:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 04:39:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 04:39:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 04:39:20] [INFO] [IslandStorm] Storm started.
+[2026.10.31 04:39:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.38
+[2026.10.31 04:39:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.25
+[2026.10.31 04:39:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+[2026.10.31 04:39:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.20
+[2026.10.31 04:39:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.45
+[2026.10.31 04:39:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.30
+[2026.10.31 04:39:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+[2026.10.31 04:39:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.24
+[2026.10.31 04:39:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.53
+[2026.10.31 04:39:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.35
+[2026.10.31 04:39:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+[2026.10.31 04:39:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.28
+[2026.10.31 04:39:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.60
+[2026.10.31 04:39:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.40
+[2026.10.31 04:39:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+[2026.10.31 04:39:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.32
+[2026.10.31 04:39:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.68
+[2026.10.31 04:39:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.45
+[2026.10.31 04:39:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+[2026.10.31 04:39:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.36
+[2026.10.31 04:39:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 04:39:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 04:39:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 04:39:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 04:40:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.83
+[2026.10.31 04:40:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.55
+[2026.10.31 04:40:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+[2026.10.31 04:40:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.44
+[2026.10.31 04:40:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.90
+[2026.10.31 04:40:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.60
+[2026.10.31 04:40:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+[2026.10.31 04:40:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.48
+[2026.10.31 04:40:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.98
+[2026.10.31 04:40:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.65
+[2026.10.31 04:40:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+[2026.10.31 04:40:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.52
+[2026.10.31 04:40:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.05
+[2026.10.31 04:40:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.70
+[2026.10.31 04:40:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+[2026.10.31 04:40:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.56
+[2026.10.31 04:40:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.13
+[2026.10.31 04:40:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.75
+[2026.10.31 04:40:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+[2026.10.31 04:40:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.60
+[2026.10.31 04:40:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.20
+[2026.10.31 04:40:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.80
+[2026.10.31 04:40:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+[2026.10.31 04:40:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.64
+[2026.10.31 04:40:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.28
+[2026.10.31 04:40:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.85
+[2026.10.31 04:40:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+[2026.10.31 04:40:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.68
+[2026.10.31 04:40:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.35
+[2026.10.31 04:40:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.90
+[2026.10.31 04:40:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+[2026.10.31 04:40:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.72
+[2026.10.31 04:40:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.43
+[2026.10.31 04:40:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.95
+[2026.10.31 04:40:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+[2026.10.31 04:40:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.76
+[2026.10.31 04:40:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.50
+[2026.10.31 04:40:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 1.00
+[2026.10.31 04:40:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 1.00
+[2026.10.31 04:40:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.80
+[2026.10.31 04:40:56] [INFO] [IslandStorm] Storm peaked - applying radiation and extreme weather.
+[2026.10.31 04:46:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.43
+[2026.10.31 04:46:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.95
+[2026.10.31 04:46:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+[2026.10.31 04:46:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.76
+[2026.10.31 04:46:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.35
+[2026.10.31 04:46:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.90
+[2026.10.31 04:46:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+[2026.10.31 04:46:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.72
+[2026.10.31 04:46:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.28
+[2026.10.31 04:46:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.85
+[2026.10.31 04:46:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+[2026.10.31 04:46:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.68
+[2026.10.31 04:46:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.20
+[2026.10.31 04:46:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.80
+[2026.10.31 04:46:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+[2026.10.31 04:46:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.64
+[2026.10.31 04:46:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.13
+[2026.10.31 04:46:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.75
+[2026.10.31 04:46:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+[2026.10.31 04:46:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.60
+[2026.10.31 04:46:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.05
+[2026.10.31 04:46:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.70
+[2026.10.31 04:46:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+[2026.10.31 04:46:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.56
+[2026.10.31 04:46:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.97
+[2026.10.31 04:46:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.65
+[2026.10.31 04:46:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+[2026.10.31 04:46:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.52
+[2026.10.31 04:46:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.90
+[2026.10.31 04:46:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.60
+[2026.10.31 04:46:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+[2026.10.31 04:46:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.48
+[2026.10.31 04:46:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.82
+[2026.10.31 04:46:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.55
+[2026.10.31 04:46:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+[2026.10.31 04:46:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.44
+[2026.10.31 04:46:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 04:46:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 04:46:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 04:46:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 04:47:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.67
+[2026.10.31 04:47:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.45
+[2026.10.31 04:47:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+[2026.10.31 04:47:02] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.36
+[2026.10.31 04:47:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.60
+[2026.10.31 04:47:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.40
+[2026.10.31 04:47:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+[2026.10.31 04:47:08] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.32
+[2026.10.31 04:47:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.52
+[2026.10.31 04:47:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.35
+[2026.10.31 04:47:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+[2026.10.31 04:47:14] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.28
+[2026.10.31 04:47:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.45
+[2026.10.31 04:47:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.30
+[2026.10.31 04:47:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+[2026.10.31 04:47:20] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.24
+[2026.10.31 04:47:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.37
+[2026.10.31 04:47:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.25
+[2026.10.31 04:47:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+[2026.10.31 04:47:26] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.20
+[2026.10.31 04:47:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.30
+[2026.10.31 04:47:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.20
+[2026.10.31 04:47:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.20
+[2026.10.31 04:47:32] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.16
+[2026.10.31 04:47:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.22
+[2026.10.31 04:47:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.15
+[2026.10.31 04:47:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.15
+[2026.10.31 04:47:38] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.12
+[2026.10.31 04:47:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.15
+[2026.10.31 04:47:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.10
+[2026.10.31 04:47:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.10
+[2026.10.31 04:47:44] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.08
+[2026.10.31 04:47:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.07
+[2026.10.31 04:47:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.05
+[2026.10.31 04:47:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.05
+[2026.10.31 04:47:50] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.04
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.reset 
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind -1.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain -1.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder -1.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog -1.00
+[2026.10.31 04:47:56] [INFO] [IslandStorm] Storm fully ended.
+[2026.10.31 04:50:43] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 04:50:43] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 04:50:43] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 05:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 05:05:46] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 05:05:46] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 05:05:46] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 05:09:49] [INFO] Unloaded plugin IslandStorm v1.0.0 by Grok
+[2026.10.31 05:11:51] [INFO] [IslandStorm] IslandStorm loaded. Use /storm start (requires islandstorm.admin permission).
+[2026.10.31 05:11:51] [INFO] Loaded plugin IslandStorm v1.0.0 by Grok [463ms]
+[2026.10.31 05:11:51] [INFO] [IslandStorm] IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin
+[2026.10.31 05:18:34] [INFO] [IslandStorm] Island-wide storm starting!
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.load storm
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+[2026.10.31 05:18:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+[2026.10.31 05:18:34] [INFO] [IslandStorm] Storm started.
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.38
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.25
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.20
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.70
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.38
+[2026.10.31 05:18:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.65
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.45
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.30
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.24
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.64
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.25
+[2026.10.31 05:18:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.58
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.53
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.35
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.28
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.58
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.12
+[2026.10.31 05:18:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.51
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.60
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.40
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.32
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.52
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.00
+[2026.10.31 05:18:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.44
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.68
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.45
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.36
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.46
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.13
+[2026.10.31 05:19:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.37
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+[2026.10.31 05:19:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.83
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.55
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.44
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.34
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.38
+[2026.10.31 05:19:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.23
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.90
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.60
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.48
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.28
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.50
+[2026.10.31 05:19:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.16
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.98
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.65
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.52
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.22
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.63
+[2026.10.31 05:19:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.09
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.05
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.70
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.56
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.16
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.75
+[2026.10.31 05:19:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.02
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.13
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.75
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.60
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.10
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.88
+[2026.10.31 05:19:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.05
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.20
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.80
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.64
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.04
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.00
+[2026.10.31 05:19:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.12
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.28
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.85
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.68
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.02
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.13
+[2026.10.31 05:19:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.19
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.35
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.90
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.72
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.08
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.25
+[2026.10.31 05:19:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.26
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.43
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.95
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.76
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.14
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.38
+[2026.10.31 05:20:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.33
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.50
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 1.00
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 1.00
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.80
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.20
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.50
+[2026.10.31 05:20:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.40
+[2026.10.31 05:20:10] [INFO] [IslandStorm] Storm peaked - extreme weather and peak radiation.
+[2026.10.31 05:20:47] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 05:20:47] [INFO] [Skill Tree] Saving player data for 1 players.
+[2026.10.31 05:20:47] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.43
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.95
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.76
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.14
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.38
+[2026.10.31 05:25:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.33
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.35
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.90
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.72
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.08
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.25
+[2026.10.31 05:25:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.26
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.28
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.85
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.68
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.02
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.13
+[2026.10.31 05:25:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.19
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.20
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.80
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.64
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.04
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.00
+[2026.10.31 05:25:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.12
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.13
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.75
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.60
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.10
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.87
+[2026.10.31 05:25:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.05
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 1.05
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.70
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.56
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.16
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.75
+[2026.10.31 05:25:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.02
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.97
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.65
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.52
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.22
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.62
+[2026.10.31 05:25:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.09
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.90
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.60
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.48
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.28
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.50
+[2026.10.31 05:25:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.16
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.82
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.55
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.44
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.34
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.37
+[2026.10.31 05:26:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.23
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.75
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.50
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.40
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+[2026.10.31 05:26:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.67
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.45
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.36
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.46
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.12
+[2026.10.31 05:26:16] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.37
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.60
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.40
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.32
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.52
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.00
+[2026.10.31 05:26:22] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.44
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.52
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.35
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.28
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.58
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.13
+[2026.10.31 05:26:28] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.51
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.45
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.30
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.24
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.64
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.25
+[2026.10.31 05:26:34] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.58
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.37
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.25
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.20
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.70
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.38
+[2026.10.31 05:26:40] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.65
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.30
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.20
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.20
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.16
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.76
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.50
+[2026.10.31 05:26:46] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.72
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.22
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.15
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.15
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.12
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.82
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.63
+[2026.10.31 05:26:52] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.79
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.15
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.10
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.10
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.08
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.88
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.75
+[2026.10.31 05:26:58] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.86
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.07
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.05
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.05
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.04
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.94
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.88
+[2026.10.31 05:27:04] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.93
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind 0.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain 0.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder 0.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog 0.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.reset 
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.wind -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.rain -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.thunder -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.fog -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -1.00
+[2026.10.31 05:27:10] [INFO] [IslandStorm] Storm fully ended.
+[2026.10.31 05:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 05:35:48] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 05:35:48] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 05:35:48] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 05:50:50] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 05:50:50] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 05:50:50] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 06:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 06:05:51] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 06:05:51] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 06:05:51] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 06:20:53] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 06:20:53] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 06:20:53] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 06:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 06:35:55] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 06:35:55] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 06:35:55] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 06:50:56] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 06:50:56] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 06:50:56] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 07:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 07:05:58] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 07:05:59] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 07:05:59] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 07:21:00] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 07:21:01] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 07:21:01] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 07:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 07:36:14] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 07:36:14] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 07:36:14] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 07:51:18] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 07:51:18] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 07:51:18] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 08:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 08:06:20] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 08:06:20] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 08:06:20] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 08:21:22] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 08:21:22] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 08:21:22] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 08:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 08:36:24] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 08:36:24] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 08:36:24] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 08:51:26] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 08:51:26] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 08:51:26] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 09:05:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 09:06:27] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 09:06:27] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 09:06:27] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 09:21:30] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 09:21:30] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 09:21:30] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 09:35:04] [WARN] [PlayerRanks] PlayerRanks local database was saved.
+[2026.10.31 09:36:31] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 09:36:31] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 09:36:31] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 09:51:34] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 09:51:34] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 09:51:34] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 09:55:03] [WARN]  Restart Status v0.1.1 by IIIaKa hook 'OnServerRestart' took longer than 100ms [112ms]
+[2026.10.31 10:00:12] [INFO] Saving plugin configuration and data..
+[2026.10.31 10:00:13] [INFO] [UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[2026.10.31 10:00:13] [INFO] [Skill Tree] Saving player data for 0 players.
+[2026.10.31 10:00:13] [INFO] [Skill Tree] Finished saving player data.
+[2026.10.31 10:00:13] [INFO] Shutting down Carbon..
+[2026.10.31 10:00:14] [INFO] Unloaded plugin Image Library v2.0.67 by Absolut & K1lly0u
+[2026.10.31 10:00:14] [INFO] Unloaded plugin Monument Finder v3.1.5 by WhiteThunder
+[2026.10.31 10:00:15] [INFO] Unloaded plugin Player DLC API v1.6.2 by k1lly0u
+[2026.10.31 10:00:16] [INFO] Unloaded plugin Discord Status (Webhook) v6.1.0 by AhmadAkal
+[2026.10.31 10:00:16] [INFO] Unloaded plugin MedioReports v2.2.1 by MediocratyItself
+[2026.10.31 10:00:18] [WARN]  NightshadeConsoleFilter v1.0.1 by Nightshade hook 'Unload' took longer than 100ms [1206ms]
+[2026.10.31 10:00:18] [INFO] Unloaded plugin NightshadeConsoleFilter v1.0.1 by Nightshade
+[2026.10.31 10:00:18] [INFO] [PopControl] [LWPop] Restored maxplayers to original value: 100
+[2026.10.31 10:00:18] [INFO] Unloaded plugin PopControl v1.7.0 by Papa
+[2026.10.31 10:00:18] [INFO] Unloaded plugin Queue Holder v1.0.2 by Tryhard
+[2026.10.31 10:00:18] [WARN]  Monuments Watcher v0.1.12 by IIIaKa hook 'Unload' took longer than 100ms [158ms]
+[2026.10.31 10:00:18] [INFO] Unloaded plugin Monuments Watcher v0.1.12 by IIIaKa
+[2026.10.31 10:00:18] [INFO] Unloaded plugin Nightshade Purge Status v1.0.0 by Nightshade
+[2026.10.31 10:00:18] [INFO] Unloaded plugin ZoneDomes v2.0.2 by k1lly0u
+[2026.10.31 10:00:19] [WARN]  Zone Manager v3.1.14 by k1lly0u hook 'OnEntityExitZone' took longer than 100ms [108ms]
+[2026.10.31 10:00:21] [INFO] Unloaded plugin Zone Manager v3.1.14 by k1lly0u
+[2026.10.31 10:00:23] [INFO] Unloaded plugin Zone Manager Auto Zones v1.4.5 by FastBurst
+[2026.10.31 10:00:28] [INFO] Unloaded plugin NightshadeRaidProtection v1.0.4 by Nightshade
+[2026.10.31 10:00:44] [INFO] Unloaded plugin NightshadeShieldStatus v1.0.0 by Nightshade
+[2026.10.31 10:00:45] [INFO] Unloaded plugin UnifiedLootProtection v1.1.1 by Nightshade
+[2026.10.31 10:00:47] [INFO] Unloaded plugin BetterTC v1.7.1 by ninco90
+[2026.10.31 10:00:48] [INFO] Unloaded plugin Bodies to Bags v2.0.0 by Ryan
+[2026.10.31 10:00:49] [WARN]  Chest Stacks v1.4.7 by supreme hook 'Unload' took longer than 100ms [259ms]
+[2026.10.31 10:00:49] [INFO] Unloaded plugin Chest Stacks v1.4.7 by supreme
+[2026.10.31 10:00:50] [INFO] Unloaded plugin CustomC4RocketTiers v1.1.0 by Blackmatic
+[2026.10.31 10:00:51] [INFO] Unloaded plugin Hardy Planters v1.0.12 by imthenewguy
+[2026.10.31 10:00:52] [INFO] Unloaded plugin NightshadeCrateEjector v1.0.0 by Nightshade
+[2026.10.31 10:00:53] [INFO] Unloaded plugin Remover Tool v4.3.48 by Reneb/Fuji/Arainrr/Tryhard
+[2026.10.31 10:00:53] [INFO] Unloaded plugin Restore Upon Death v0.6.5 by k1lly0u
+[2026.10.31 10:00:53] [INFO] [WirelessPower] Depowered 295 devices.
+[2026.10.31 10:00:54] [INFO] Unloaded plugin WirelessPower v1.2.9 by RickySpanish
+[2026.10.31 10:00:54] [INFO] Unloaded plugin aQuarry v2.0.6 by AvG Лаймон
+[2026.10.31 10:00:54] [INFO] Unloaded plugin extendedindustrial v1.2.6 by bmgjet
+[2026.10.31 10:00:54] [INFO] Unloaded plugin IQTeleportation v1.37.7 by Mercury
+[2026.10.31 10:00:54] [WARN]  PlayerRanks v2.3.4 by Steenamaroo hook 'Unload' took longer than 100ms [172ms]
+[2026.10.31 10:00:54] [INFO] Unloaded plugin PlayerRanks v2.3.4 by Steenamaroo
+[2026.10.31 10:00:55] [INFO] Unloaded plugin Sign Artist v1.4.6 by Whispers88
+[2026.10.31 10:00:55] [INFO] [Skinner] DataSaved
+[2026.10.31 10:00:56] [WARN]  Skinner v3.2.1 by Whispers88 hook 'Unload' took longer than 100ms [552ms]
+[2026.10.31 10:00:56] [INFO] Unloaded plugin Skinner v3.2.1 by Whispers88
+[2026.10.31 10:00:57] [WARN]  UltimateLocker v2.1.5 by Scalbox hook 'Unload' took longer than 100ms [1089ms]
+[2026.10.31 10:00:57] [INFO] Unloaded plugin UltimateLocker v2.1.5 by Scalbox
+[2026.10.31 10:00:57] [INFO] Unloaded plugin VIPPerks v1.2.1 by Nightshade
+[2026.10.31 10:00:57] [INFO] Unloaded plugin Cases v2.0.1 by Mevent
+[2026.10.31 10:00:58] [INFO] Unloaded plugin NightshadeRecycler v3.2.1 by Nightshade
+[2026.10.31 10:00:58] [INFO] Unloaded plugin NightshadeShop v1.5.0 by Nightshade
+[2026.10.31 10:01:16] [WARN]  Personal Marketplace v1.4.1 by ZEODE hook 'Unload' took longer than 100ms [17416ms] [GC]
+[2026.10.31 10:01:16] [INFO] Unloaded plugin Personal Marketplace v1.4.1 by ZEODE
+[2026.10.31 10:01:16] [INFO] Unloaded plugin Server Rewards v2.0.8 by k1lly0u
+[2026.10.31 10:01:16] [INFO] Unloaded plugin Server Rewards Wipe v2.0.2 by ZEODE
+[2026.10.31 10:01:16] [INFO] Unloaded plugin Super Card v1.0.7 by Mevent
+[2026.10.31 10:01:16] [INFO] Unloaded plugin Activity Rewards v0.1.9 by IIIaKa
+[2026.10.31 10:01:19] [WARN]  Skill Tree v1.8.0 by imthenewguy hook 'OnEntityKill' took longer than 100ms [2066ms]
+[2026.10.31 10:01:19] [INFO] Unloaded plugin Skill Tree v1.8.0 by imthenewguy
+[2026.10.31 10:01:19] [INFO] Unloaded plugin SkillTreeXPEvent v1.0.15 by imthenewguy
+[2026.10.31 10:01:19] [INFO] Unloaded plugin BuyableTugboats v1.0.9 by imthenewguy
+[2026.10.31 10:01:20] [INFO] Unloaded plugin Claim Vehicle v1.8.1 by WhiteThunder
+[2026.10.31 10:01:20] [INFO] Unloaded plugin Craft Car Chassis v1.2.5 by WhiteThunder
+[2026.10.31 10:01:20] [INFO] Unloaded plugin Nightshade MLRS Truck v1.0.8 by Nightshade
+[2026.10.31 10:01:20] [INFO] Unloaded plugin Vehicle Decay Protection v2.9.0 by WhiteThunder
+[2026.10.31 10:01:20] [INFO] Unloaded plugin Vehicle Licence v1.9.2 by Mabel
+[2026.10.31 10:01:20] [INFO] Unloaded plugin ArmoredTrain v2.0.5 by Adem
+[2026.10.31 10:01:20] [WARN] [Bradley Drops] WARN: INFO: Harmony patches removed and cache cleared successfully!
+[2026.10.31 10:01:20] [INFO] Unloaded plugin Bradley Drops v1.4.1 by ZEODE
+[2026.10.31 10:01:21] [INFO] Unloaded plugin Convoy v3.0.6 by Adem
+[2026.10.31 10:01:21] [INFO] Unloaded plugin Dungeon Events v3.11.1 by Martian
+[2026.10.31 10:01:21] [INFO] Unloaded plugin EventsManager v4.2.2 by Mevent & Qbis
+[2026.10.31 10:01:21] [INFO] Unloaded plugin EventsManagerNotifier v1.0.11 by Mevent & M&B-Studios
+[2026.10.31 10:01:22] [INFO] [Heli Signals] INFO: Harmony patches removed and cache cleared successfully!
+[2026.10.31 10:01:22] [INFO] Unloaded plugin Heli Signals v1.4.1 by ZEODE
+[2026.10.31 10:01:22] [INFO] Unloaded plugin HideAndSeek v1.1.0 by Nightshade
+[2026.10.31 10:01:22] [INFO] Unloaded plugin NightshadeAnnouncer v1.3.1 by Nightshade
+[2026.10.31 10:01:22] [INFO] Unloaded plugin NightshadeVoteDay v1.2.0 by Nightshade
+[2026.10.31 10:01:22] [INFO] Unloaded plugin Copy Paste v4.3.0 by misticos
+[2026.10.31 10:01:23] [INFO] Unloaded plugin DefendableHomes v1.2.2 by KpucTaJl
+[2026.10.31 10:01:23] [INFO] [NightshadeRaidbase] Raid turret interference max restored to 12.
+[2026.10.31 10:01:23] [INFO] Unloaded plugin NightshadeRaidbase v1.0.16 by Nightshade
+[2026.10.31 10:01:23] [INFO] Unloaded plugin Raidable Bases v3.2.2 by nivex
+[2026.10.31 10:01:23] [INFO] Unloaded plugin NpcSpawn v3.4.1 by KpucTaJl
+[2026.10.31 10:01:23] [INFO] Unloaded plugin Spawns v2.0.36 by Reneb / k1lly0u
+[2026.10.31 10:01:24] [INFO] Unloaded plugin ZombieHorde v0.6.36 by k1lly0u
+[2026.10.31 10:01:24] [WARN]  Advanced Status v0.1.26 by IIIaKa hook 'Unload' took longer than 100ms [262ms]
+[2026.10.31 10:01:24] [INFO] Unloaded plugin Advanced Status v0.1.26 by IIIaKa
+[2026.10.31 10:01:24] [INFO] Unloaded plugin Hud v3.5.2 by ahigao
+[2026.10.31 10:01:25] [INFO] Unloaded plugin NPC Health Bar v1.0.10 by Chris
+[2026.10.31 10:01:25] [INFO] Unloaded plugin NightshadeChat v1.0.0 by Rustonauts & Nightshade
+[2026.10.31 10:01:25] [INFO] Unloaded plugin Notify v1.0.15 by Mevent
+[2026.10.31 10:01:25] [INFO] Unloaded plugin PopUpAPI v2.0.4 by ThePitereq
+[2026.10.31 10:01:25] [INFO] Unloaded plugin Restart Status v0.1.1 by IIIaKa
+[2026.10.31 10:01:26] [WARN]  [ServerPanel] Unloading 'ServerPanel Installer v2.0.25 by Mevent' because parent 'ServerPanel v2.0.25 by Mevent' has been unloaded.
+[2026.10.31 10:01:26] [INFO] Unloaded plugin ServerPanel Installer v2.0.25 by Mevent
+[2026.10.31 10:01:26] [INFO] Unloaded plugin ServerPanel v2.0.25 by Mevent
+[2026.10.31 10:01:26] [INFO] Unloaded plugin ServerPanel Migrations v2.0.25 by Mevent
+[2026.10.31 10:01:26] [INFO] Unloaded plugin ServerPanel Pop Ups v2.0.25 by Mevent
+[2026.10.31 10:01:26] [INFO] Unloaded plugin Sort Button v2.7.0 by WhiteThunder, MON@H
+[2026.10.31 10:01:26] [INFO] Unloaded plugin Teleport Status v0.1.2 by IIIaKa
+[2026.10.31 10:01:27] [INFO] Unloaded plugin Wipe Schedule v2.0.22 by Mevent
+[2026.10.31 10:01:27] [INFO] Unloaded plugin XFastButtons v1.1.0 by Monster
+[2026.10.31 10:01:27] [INFO] Unloaded plugin AdminMenu v1.4.10 by 0xF // dsc.gg/0xf-plugins
+[2026.10.31 10:01:27] [WARN]  PowerfulAdmin v1.2.7 by codeboy hook 'Unload' took longer than 100ms [189ms]
+[2026.10.31 10:01:27] [INFO] Unloaded plugin PowerfulAdmin v1.2.7 by codeboy
+[2026.10.31 10:01:27] [INFO] Unloaded plugin PowerfulAdmin Discord v1.1.0 by codeboy
+[2026.10.31 10:01:28] [INFO] Unloaded plugin Telekinesis v3.3.1 by WhiteThunder
+[2026.10.31 10:01:28] [INFO] Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+[2026.10.31 10:01:28] [INFO] Unloaded plugin TruePVE v2.4.4 by nivex
+[2026.10.31 10:01:28] [INFO] Unloaded plugin IslandStorm v1.0.0 by Grok
+[2026.10.31 10:01:28] [INFO] Unloaded plugin Chaos Commands v1.0.65 by k1lly0u
+[2026.10.31 10:01:28] [INFO] Unloaded plugin Chaos Plugin Interface v1.0.65 by k1lly0u
+[2026.10.31 10:01:28] [INFO] Unloaded plugin ChaosNPC v3.0.45 by k1lly0u
+[2026.10.31 10:01:28] [INFO] Unloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[2026.10.31 10:01:29] [INFO] Unloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+[2026.10.31 10:01:29] [INFO] Unloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+[2026.10.31 10:01:29] [INFO] Unloaded plugin RustEdit Core v1.0.1 by Chaos
+[2026.10.31 10:01:29] [INFO] Unloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+[2026.10.31 10:01:29] [INFO] Unloaded plugin RustEdit IO Core v1.0.1 by Chaos
+[2026.10.31 10:01:29] [INFO] Unloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+[2026.10.31 10:01:30] [INFO] Unloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+[2026.10.31 10:01:31] [INFO] Unloaded plugin RustEdit APC Core v1.0.1 by Chaos
+[2026.10.31 10:01:31] [INFO] Unloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+[2026.10.31 10:01:31] [INFO] Unloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+[2026.10.31 10:01:31] [INFO] Unloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+[2026.10.31 10:01:31] [INFO] Unloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+[2026.10.31 10:01:31] [INFO] Unloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos

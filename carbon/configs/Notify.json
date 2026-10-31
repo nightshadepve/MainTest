@@ -1,0 +1,791 @@
+{
+  "Display type (Overlay/Hud)": "OverlayNonScaled",
+  "Height": 52.0,
+  "Width": 300.0,
+  "X Margin": 15.0,
+  "Y Margin": 6.0,
+  "Y Indent": -40.0,
+  "Display notifications on the top right?": true,
+  "Notify Cooldown": 10.0,
+  "Max Notifications On Screen": 6,
+  "Send text message to chat if player doesn't have notification permission": false,
+  "Notifications (type - settings)": {
+    "0": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#000000",
+        "Opacity (0 - 100)": 92.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#4B68FF",
+        "Opacity (0 - 100)": 25.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "Assets/Icons/IconMaterial.mat",
+      "Icon Color": {
+        "HEX": "#4B68FF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "!",
+      "Title Key (lang)": "Notification",
+      "Fade Out": 1.0,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": {
+        "Enabled": false,
+        "Image": "",
+        "AnchorMin": "0 0",
+        "AnchorMax": "0 0",
+        "OffsetMin": "12.5 12.5",
+        "OffsetMax": "37.5 37.5"
+      },
+      "Use custom width": false,
+      "Custom width": 0.0,
+      "Use custom height": false,
+      "Custom height": 0.0,
+      "Use command": false,
+      "Command": "",
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 12,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -12.5",
+        "OffsetMax": "37.5 12.5"
+      },
+      "Title Settings": {
+        "fontSize": 12,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 75.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "1 1",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.5",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-8 0"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "1": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#000000",
+        "Opacity (0 - 100)": 92.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#FF6060",
+        "Opacity (0 - 100)": 25.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "Assets/Icons/IconMaterial.mat",
+      "Icon Color": {
+        "HEX": "#FF6060",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "X",
+      "Title Key (lang)": "Error",
+      "Fade Out": 1.0,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": {
+        "Enabled": false,
+        "Image": "",
+        "AnchorMin": "0 0",
+        "AnchorMax": "0 0",
+        "OffsetMin": "12.5 12.5",
+        "OffsetMax": "37.5 37.5"
+      },
+      "Use custom width": false,
+      "Custom width": 0.0,
+      "Use custom height": false,
+      "Custom height": 0.0,
+      "Use command": false,
+      "Command": "",
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 12,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#4B68FF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -12.5",
+        "OffsetMax": "37.5 12.5"
+      },
+      "Title Settings": {
+        "fontSize": 12,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 75.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "1 1",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.5",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-8 0"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "5": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#050309",
+        "Opacity (0 - 100)": 78.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#C59BFF",
+        "Opacity (0 - 100)": 18.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#C59BFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "✦",
+      "Title Key (lang)": "ArmoredTrain",
+      "Fade Out": 1.0,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": {
+        "Enabled": false,
+        "Image": "",
+        "AnchorMin": "0 0",
+        "AnchorMax": "0 0",
+        "OffsetMin": "12.5 12.5",
+        "OffsetMax": "37.5 37.5"
+      },
+      "Use custom width": true,
+      "Custom width": 330.0,
+      "Use custom height": true,
+      "Custom height": 58.0,
+      "Use command": false,
+      "Command": "",
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 15,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#F4E8FF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12 -13",
+        "OffsetMax": "38 13"
+      },
+      "Title Settings": {
+        "fontSize": 13,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#C59BFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.56",
+        "AnchorMax": "1 1",
+        "OffsetMin": "48 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#F3EEFF",
+          "Opacity (0 - 100)": 96.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.56",
+        "OffsetMin": "48 2",
+        "OffsetMax": "-8 -2"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "10": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#050309",
+        "Opacity (0 - 100)": 78.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#C59BFF",
+        "Opacity (0 - 100)": 18.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#C59BFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "✦",
+      "Title Key (lang)": "Nightshade PvP",
+      "Fade Out": 1.2,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": null,
+      "Use custom width": true,
+      "Custom width": 330.0,
+      "Use custom height": true,
+      "Custom height": 58.0,
+      "Use command": false,
+      "Command": null,
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 15,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#F4E8FF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12 -13",
+        "OffsetMax": "38 13"
+      },
+      "Title Settings": {
+        "fontSize": 13,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#C59BFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.56",
+        "AnchorMax": "1 1",
+        "OffsetMin": "48 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#F3EEFF",
+          "Opacity (0 - 100)": 96.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.56",
+        "OffsetMin": "48 2",
+        "OffsetMax": "-8 -2"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "11": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#050309",
+        "Opacity (0 - 100)": 78.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#FFB347",
+        "Opacity (0 - 100)": 18.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#FFB347",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "✧",
+      "Title Key (lang)": "Nightshade Warning",
+      "Fade Out": 1.2,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": null,
+      "Use custom width": true,
+      "Custom width": 330.0,
+      "Use custom height": true,
+      "Custom height": 58.0,
+      "Use command": false,
+      "Command": null,
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 15,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#FFF4E2",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12 -13",
+        "OffsetMax": "38 13"
+      },
+      "Title Settings": {
+        "fontSize": 13,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#FFB347",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.56",
+        "AnchorMax": "1 1",
+        "OffsetMin": "48 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#FFF5E8",
+          "Opacity (0 - 100)": 96.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.56",
+        "OffsetMin": "48 2",
+        "OffsetMax": "-8 -2"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "12": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#050309",
+        "Opacity (0 - 100)": 78.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#A29BFE",
+        "Opacity (0 - 100)": 18.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#A29BFE",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "✦",
+      "Title Key (lang)": "Nightshade",
+      "Fade Out": 1.2,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "",
+      "Image Settings": null,
+      "Use custom width": true,
+      "Custom width": 330.0,
+      "Use custom height": true,
+      "Custom height": 58.0,
+      "Use command": false,
+      "Command": null,
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 15,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#F4E8FF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12 -13",
+        "OffsetMax": "38 13"
+      },
+      "Title Settings": {
+        "fontSize": 13,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#A29BFE",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.56",
+        "AnchorMax": "1 1",
+        "OffsetMin": "48 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#ECE8FF",
+          "Opacity (0 - 100)": 96.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.56",
+        "OffsetMin": "48 2",
+        "OffsetMax": "-8 -2"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "13": {
+      "Enabled": true,
+      "Background Image": "",
+      "Background Color": {
+        "HEX": "#050309",
+        "Opacity (0 - 100)": 78.0
+      },
+      "Enable Gradient?": true,
+      "Gradient Color": {
+        "HEX": "#A29BFE",
+        "Opacity (0 - 100)": 18.0
+      },
+      "Sprite": "assets/content/ui/ui.background.transparent.linearltr.tga",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#A29BFE",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "✦",
+      "Title Key (lang)": "Convoy",
+      "Fade Out": 1.2,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "",
+      "Image Settings": null,
+      "Use custom width": true,
+      "Custom width": 330.0,
+      "Use custom height": true,
+      "Custom height": 58.0,
+      "Use command": false,
+      "Command": null,
+      "Close after using the command?": false,
+      "Icon Settings": {
+        "fontSize": 15,
+        "Is Bold?": true,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#F4E8FF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12 -13",
+        "OffsetMax": "38 13"
+      },
+      "Title Settings": {
+        "fontSize": 13,
+        "Is Bold?": true,
+        "Align": "LowerLeft",
+        "Color": {
+          "HEX": "#A29BFE",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.56",
+        "AnchorMax": "1 1",
+        "OffsetMin": "48 0",
+        "OffsetMax": "-8 0"
+      },
+      "Text Settings": {
+        "fontSize": 10,
+        "Is Bold?": false,
+        "Align": "UpperLeft",
+        "Color": {
+          "HEX": "#ECE8FF",
+          "Opacity (0 - 100)": 96.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.56",
+        "OffsetMin": "48 2",
+        "OffsetMax": "-8 -2"
+      },
+      "Use custom cooldown": false,
+      "Cooldown": 0.0
+    },
+    "2130354": {
+      "Enabled": true,
+      "Background Image": "https://i.ibb.co/x1npBZr/image.png",
+      "Background Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Enable Gradient?": false,
+      "Gradient Color": {
+        "HEX": "#202224",
+        "Opacity (0 - 100)": 80.0
+      },
+      "Sprite": "",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#EF5125",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "!",
+      "Title Key (lang)": "AwardAvailable",
+      "Fade Out": 1.0,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": {
+        "Enabled": true,
+        "Image": "https://i.ibb.co/xLsSknw/image.png",
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -16",
+        "OffsetMax": "44.5 16"
+      },
+      "Use custom width": true,
+      "Custom width": 280.0,
+      "Use custom height": true,
+      "Custom height": 60.0,
+      "Use command": true,
+      "Command": "daily",
+      "Close after using the command?": true,
+      "Icon Settings": {
+        "fontSize": 16,
+        "Is Bold?": false,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -16",
+        "OffsetMax": "44.5 16"
+      },
+      "Title Settings": {
+        "fontSize": 18,
+        "Is Bold?": true,
+        "Align": "LowerRight",
+        "Color": {
+          "HEX": "#DCDCDC",
+          "Opacity (0 - 100)": 50.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "1 1",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-20 0"
+      },
+      "Text Settings": {
+        "fontSize": 14,
+        "Is Bold?": true,
+        "Align": "UpperRight",
+        "Color": {
+          "HEX": "#DCDCDC",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.5",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-20 0"
+      },
+      "Use custom cooldown": true,
+      "Cooldown": 60.0
+    },
+    "2130355": {
+      "Enabled": true,
+      "Background Image": "https://i.ibb.co/x1npBZr/image.png",
+      "Background Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Enable Gradient?": false,
+      "Gradient Color": {
+        "HEX": "#202224",
+        "Opacity (0 - 100)": 80.0
+      },
+      "Sprite": "",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#EF5125",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "!",
+      "Title Key (lang)": "AwardCooldown",
+      "Fade Out": 1.0,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": {
+        "Enabled": false,
+        "Image": "",
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -12.5",
+        "OffsetMax": "37.5 12.5"
+      },
+      "Use custom width": true,
+      "Custom width": 280.0,
+      "Use custom height": true,
+      "Custom height": 60.0,
+      "Use command": true,
+      "Command": "daily",
+      "Close after using the command?": true,
+      "Icon Settings": {
+        "fontSize": 16,
+        "Is Bold?": false,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -16",
+        "OffsetMax": "44.5 16"
+      },
+      "Title Settings": {
+        "fontSize": 18,
+        "Is Bold?": true,
+        "Align": "LowerRight",
+        "Color": {
+          "HEX": "#DCDCDC",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "1 1",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-20 0"
+      },
+      "Text Settings": {
+        "fontSize": 14,
+        "Is Bold?": true,
+        "Align": "UpperRight",
+        "Color": {
+          "HEX": "#DCDCDC",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.5",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-20 0"
+      },
+      "Use custom cooldown": true,
+      "Cooldown": 0.9
+    },
+    "2130356": {
+      "Enabled": true,
+      "Background Image": "https://i.ibb.co/x1npBZr/image.png",
+      "Background Color": {
+        "HEX": "#FFFFFF",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Enable Gradient?": false,
+      "Gradient Color": {
+        "HEX": "#202224",
+        "Opacity (0 - 100)": 80.0
+      },
+      "Sprite": "",
+      "Material": "",
+      "Icon Color": {
+        "HEX": "#EF5125",
+        "Opacity (0 - 100)": 100.0
+      },
+      "Icon Text": "!",
+      "Title Key (lang)": "AwardReceived",
+      "Fade Out": 1.0,
+      "Fade In": 0.1,
+      "Sound Effect (empty - disable)": "assets/bundled/prefabs/fx/notice/item.select.fx.prefab",
+      "Image Settings": {
+        "Enabled": false,
+        "Image": "",
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -12.5",
+        "OffsetMax": "37.5 12.5"
+      },
+      "Use custom width": true,
+      "Custom width": 280.0,
+      "Use custom height": true,
+      "Custom height": 60.0,
+      "Use command": true,
+      "Command": "daily",
+      "Close after using the command?": true,
+      "Icon Settings": {
+        "fontSize": 16,
+        "Is Bold?": false,
+        "Align": "MiddleCenter",
+        "Color": {
+          "HEX": "#FFFFFF",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "0 0.5",
+        "OffsetMin": "12.5 -16",
+        "OffsetMax": "44.5 16"
+      },
+      "Title Settings": {
+        "fontSize": 18,
+        "Is Bold?": true,
+        "Align": "LowerRight",
+        "Color": {
+          "HEX": "#DCDCDC",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0.5",
+        "AnchorMax": "1 1",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-20 0"
+      },
+      "Text Settings": {
+        "fontSize": 14,
+        "Is Bold?": true,
+        "Align": "UpperRight",
+        "Color": {
+          "HEX": "#DCDCDC",
+          "Opacity (0 - 100)": 100.0
+        },
+        "AnchorMin": "0 0",
+        "AnchorMax": "1 0.5",
+        "OffsetMin": "47.5 0",
+        "OffsetMax": "-20 0"
+      },
+      "Use custom cooldown": true,
+      "Cooldown": 60.0
+    }
+  },
+  "Version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 15
+  }
+}

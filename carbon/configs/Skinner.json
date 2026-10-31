@@ -1,0 +1,123 @@
+{
+  "Skin Request Notification Discord Webhook": "",
+  "Remove player data after inactivity (days)": 14,
+  "Use on itemcraft hook (skin items after crafting - not required when using skinauto)": false,
+  "Apply workshop names to skins": true,
+  "Override spraycan behaviour": false,
+  "Use spraycan effect when holding spraycan and skinning deployables": false,
+  "Periodic Data Saving (minutes 0 - on unload only)": 0.0,
+  "Debug Skin Imports": true,
+  "Blacklisted Skins (skinID)": [],
+  "Blacklisted Items (itemID)": [],
+  "Import Skin collections (steam workshop ID)": [
+    2494803343,
+    3607800188
+  ],
+  "Command based cooldowns ('permission' : 'command' seconds": {
+    "Default30CD": {
+      "skin": 30.0,
+      "skinitem": 30.0,
+      "skincraft": 30.0,
+      "skincon": 30.0,
+      "skininv": 30.0,
+      "skinteam": 30.0,
+      "skinbase": 60.0,
+      "skinall": 60.0
+    }
+  },
+  "Skin Import Settings": {
+    "Dev Mode - unlocks all skins": false,
+    "Cache player skins (Better for performance, requires relogging to update skins list": true,
+    "Auto Remove DLC and Paid Skins from Imports": true,
+    "Allow Owned Skins": true,
+    "Allows skin sharing for teams": false
+  },
+  "UI Settings": {
+    "Disable Skin Sets and Options UI": false,
+    "Add Search Bar UI": true,
+    "Custom Page Change UI Positon anchor/offset 'min x, min y', 'max x', max y'": [
+      "0.5 0.0",
+      "0.5 0.0",
+      "198 60",
+      "400 97"
+    ],
+    "Custom Search Menu UI Positon anchor/offset 'min x, min y', 'max x', max y'": [
+      "0.5 0.0",
+      "0.5 0.0",
+      "240 635",
+      "572 660"
+    ],
+    "Custom Set Selection UI Positon anchor/offset 'min x, min y', 'max x', max y'": [
+      "0.5 0.0",
+      "0.5 0.0",
+      "250 610",
+      "573 633"
+    ]
+  },
+  "Command Settings": {
+    "Skin Commands (skin items in you inventory": [
+      "skin",
+      "s",
+      "skinbox",
+      "sb"
+    ],
+    "Skin Items Commands (skin items you have already placed": [
+      "skinitem",
+      "si",
+      "skindeployed",
+      "sd"
+    ],
+    "Set default items to be skinned": [
+      "skincraft",
+      "sc"
+    ],
+    "Automatically set all items in you inventory to your default skins": [
+      "skininv",
+      "sinv"
+    ],
+    "Automatically set all items a container to your default skins": [
+      "skincon",
+      "scon"
+    ],
+    "Automatically skin all deployables in your base": [
+      "skinbase",
+      "skinbuilding"
+    ],
+    "Automatically skin all items in your base": [
+      "skinall",
+      "sall"
+    ],
+    "Automatically skin all items that are moved into you inventory": [
+      "skinauto",
+      "sauto"
+    ],
+    "Skin your teams inventories with your skin set": [
+      "skinteam",
+      "stm"
+    ],
+    "Request workshop skins via workshop ID": [
+      "skinrequest",
+      "sr"
+    ],
+    "Approve workshop skin requests": [
+      "skinrequests",
+      "srs"
+    ],
+    "Set your selected skin set": [
+      "skinset",
+      "ss"
+    ],
+    "Import Custom Skins": [
+      "skinimport",
+      "sip"
+    ],
+    "Remove Custom Skins": [
+      "skinremove"
+    ],
+    "Import Workshop Collection Command": [
+      "colimport",
+      "cip"
+    ]
+  },
+  "Imported Skins List": {}
+}

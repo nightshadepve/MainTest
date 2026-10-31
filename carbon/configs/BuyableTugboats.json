@@ -1,0 +1,238 @@
+{
+  "How long should the tugboat be unmountable by other players for? [This will also repossess the tugboat if the player has not claimed it]": 600.0,
+  "Should the boat be removed if the player does not claim it within the safe time?": true,
+  "How much fuel should the tugboar spawn with?": 500,
+  "Draw on the players hud after puchasing the boat, to show its spawn location?": true,
+  "Limit the amount of boats a player can purchase during a wipe? [0 = no limit]": 1,
+  "Prevent the purchase of tugboats if the spawned amount exceeds the following [0 = no limit]": 12,
+  "Items required to purchase the tugboat": [
+    {
+      "shortname": "scrap",
+      "skin": 0,
+      "amount": 10000
+    },
+    {
+      "shortname": "wood",
+      "skin": 0,
+      "amount": 5000
+    },
+    {
+      "shortname": "metal.fragments",
+      "skin": 0,
+      "amount": 10000
+    },
+    {
+      "shortname": "metal.refined",
+      "skin": 0,
+      "amount": 500
+    }
+  ],
+  "Local spawn positions": {
+    "LargeFishingVillage": [
+      {
+        "x": 17.8,
+        "y": 1.9,
+        "z": 33.4,
+        "normalized": {
+          "x": 0.4697224,
+          "y": 0.05013891,
+          "z": 0.88138926,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 37.894722,
+        "sqrMagnitude": 1436.01013
+      },
+      {
+        "x": -6.1,
+        "y": 1.9,
+        "z": 38.8,
+        "normalized": {
+          "x": -0.155127421,
+          "y": 0.0483183749,
+          "z": 0.9867121,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 39.3225136,
+        "sqrMagnitude": 1546.25989
+      },
+      {
+        "x": -44.6,
+        "y": 1.9,
+        "z": 20.5,
+        "normalized": {
+          "x": -0.907934248,
+          "y": 0.0386788137,
+          "z": 0.417324066,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 49.1224976,
+        "sqrMagnitude": 2413.01978
+      },
+      {
+        "x": 50.7,
+        "y": 1.9,
+        "z": 11.1,
+        "normalized": {
+          "x": 0.9762084,
+          "y": 0.036583744,
+          "z": 0.213726088,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 51.9356346,
+        "sqrMagnitude": 2697.31
+      },
+      {
+        "x": 52.3,
+        "y": 1.9,
+        "z": -6.2,
+        "normalized": {
+          "x": 0.992400944,
+          "y": 0.03605281,
+          "z": -0.117645994,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 52.7004738,
+        "sqrMagnitude": 2777.33984
+      },
+      {
+        "x": 34.4,
+        "y": 1.9,
+        "z": 31.5,
+        "normalized": {
+          "x": 0.7368989,
+          "y": 0.04070081,
+          "z": 0.6747766,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 46.6821175,
+        "sqrMagnitude": 2179.22021
+      },
+      {
+        "x": -28.8,
+        "y": 1.9,
+        "z": 40.0,
+        "normalized": {
+          "x": -0.5838711,
+          "y": 0.0385192744,
+          "z": 0.8109321,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 49.3259544,
+        "sqrMagnitude": 2433.05
+      },
+      {
+        "x": -50.8,
+        "y": 1.9,
+        "z": 3.2,
+        "normalized": {
+          "x": -0.9973273,
+          "y": 0.0373016149,
+          "z": 0.06282377,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 50.9361343,
+        "sqrMagnitude": 2594.49
+      }
+    ],
+    "SmallFishingVillage": [
+      {
+        "x": 6.9,
+        "y": 1.9,
+        "z": 51.2,
+        "normalized": {
+          "x": 0.133468017,
+          "y": 0.0367520638,
+          "z": 0.9903714,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 51.6977768,
+        "sqrMagnitude": 2672.66016
+      },
+      {
+        "x": 26.8,
+        "y": 1.9,
+        "z": 25.3,
+        "normalized": {
+          "x": 0.7261993,
+          "y": 0.05148428,
+          "z": 0.6855538,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 36.90447,
+        "sqrMagnitude": 1361.94
+      },
+      {
+        "x": -37.8,
+        "y": 1.9,
+        "z": -6.6,
+        "normalized": {
+          "x": -0.9838913,
+          "y": 0.0494548567,
+          "z": -0.171790555,
+          "normalized": {
+            "x": -0.983891368,
+            "y": 0.04945486,
+            "z": -0.17179057,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 38.4188766,
+        "sqrMagnitude": 1476.00989
+      },
+      {
+        "x": -39.1,
+        "y": 1.9,
+        "z": 25.4,
+        "normalized": {
+          "x": -0.837895155,
+          "y": 0.040716134,
+          "z": 0.544310451,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 46.664547,
+        "sqrMagnitude": 2177.57983
+      },
+      {
+        "x": 35.0,
+        "y": 1.9,
+        "z": -1.3,
+        "normalized": {
+          "x": 0.9978437,
+          "y": 0.0541686565,
+          "z": -0.0370627642,
+          "normalized": {
+            "x": 0.997843742,
+            "y": 0.05416866,
+            "z": -0.0370627679,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 35.075634,
+        "sqrMagnitude": 1230.3
+      }
+    ]
+  },
+  "Chat option ui position": {
+    "anchorMin": "0.5 0.5",
+    "anchorMax": "0.5 0.5",
+    "offsetMin": "150.8 35.5",
+    "offsetMax": "411 55.5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "VoteStart": "It's {time}! Type /day to vote for daytime. Need {threshold}% ({needed} votes) • {duration}s to vote.",
+  "VoteStartBuyHint": "Can't wait? Use /buyday to force day instantly!",
+  "VoteRegistered": "Vote registered! {current}/{needed} needed.",
+  "VoteProgress": "{current}/{needed} votes ({percent}%). Type /day!",
+  "AlreadyVoted": "You've already voted.",
+  "VotePassed": "Vote Day PASSED — {votes}/{pop} voted ({percent}%). Time set to {daytime}!",
+  "VoteFailed": "Vote Day FAILED — {votes}/{pop} voted ({percent}%). Needed {needed}. See you tomorrow night!",
+  "NoVoteYet": "No active vote. The window opens at {time} (~{hours} game hour(s) away).",
+  "NoVoteAtTime": "No active vote right now.",
+  "VoteAlreadyDone": "The vote already happened tonight. Check back tomorrow at {time}.",
+  "BuyDayInfo": "Force it to {daytime} immediately for {cost}. Use /buyday confirm to purchase.",
+  "BuyDayUsage": "Usage: /buyday confirm",
+  "BuyDayDaytime": "It's already daytime — nothing to buy!",
+  "BuyDayClosed": "The vote window for tonight has already closed.",
+  "BuyDayPurchased": "{player} spent {cost} to skip the night. Time set to {daytime}!",
+  "NotEnoughRP": "Not enough RP. Need {need} RP, you have {have}.",
+  "NotEnoughEco": "Not enough coins. Need {need}, you have {have}.",
+  "CurrencyInvalid": "Invalid currency config. Must be ServerRewards or Economics. Contact an admin.",
+  "PluginMissingRP": "ServerRewards plugin not found. Contact an admin.",
+  "PluginMissingEco": "Economics plugin not found. Contact an admin."
+}

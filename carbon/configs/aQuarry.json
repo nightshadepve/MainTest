@@ -1,0 +1,78 @@
+{
+  "Optimization": {
+    "Disable loot protection from other players": false,
+    "Disable limits": false,
+    "Disable distance checks during installing": true,
+    "Disable quarry repair with hammer": false,
+    "Disable permissions": false,
+    "Anouther attempt to give quarry to player if his inventory is full in X seconds": 15
+  },
+  "Compatibility with other plugins": {
+    "Enable aHomeManager support? (see the documentation)": false
+  },
+  "Avatar SteamID for chat": 0,
+  "Format of the resources amount in the UI where they can be randomized": "x{0}-{1}",
+  "Log the quarries received by players?": false,
+  "Limits": {
+    "Sum up the limits from all players permissions?": false,
+    "Limits by permissions": {
+      "aQuarry.default": {
+        "Priority": 1,
+        "Quarries": 1,
+        "Pumpjacks": 1
+      },
+      "aQuarry.vip": {
+        "Priority": 1,
+        "Quarries": 2,
+        "Pumpjacks": 2
+      },
+      "aQuarry.admin": {
+        "Priority": 999,
+        "Quarries": 2,
+        "Pumpjacks": 2
+      }
+    }
+  },
+  "Rates": {
+    "Sum up the rates from all player's permissions?": true,
+    "Rates by permissions (1.0 = +100%)": {
+      "aQuarry.vip": 0.2,
+      "aQuarry.admin": 1.0
+    }
+  },
+  "Default protection settings for personal quarries (edit at your own risk)": {
+    "Generic": 0.9,
+    "Hunger": 0.0,
+    "Thirst": 0.0,
+    "Cold": 0.0,
+    "Drowned": 0.0,
+    "Heat": 0.95,
+    "Bleeding": 0.0,
+    "Poison": 0.0,
+    "Suicide": 0.0,
+    "Bullet": 0.99,
+    "Slash": 0.99,
+    "Blunt": 0.99,
+    "Fall": 0.0,
+    "Radiation": 1.0,
+    "Bite": 1.0,
+    "Stab": 0.99,
+    "Explosion": 0.5,
+    "RadiationExposure": 0.0,
+    "ColdExposure": 0.0,
+    "Decay": 0.0,
+    "ElectricShock": 0.0,
+    "Arrow": 1.0,
+    "AntiVehicle": 1.0,
+    "Collision": 1.0,
+    "Fun_Water": 0.0,
+    "BeeSting": 0.0,
+    "Paintball": 1.0,
+    "Cannon": 1.0
+  },
+  "Plugin Version": {
+    "Major": 2,
+    "Minor": 0,
+    "Patch": 6
+  }
+}
