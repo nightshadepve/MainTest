@@ -11,8 +11,8 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.9")]
-    [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
+    [Info("NightshadeHud", "Nightshade", "1.1.0")]
+    [Description("Text HUD on the top-right or under the missions bar: clock, PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
         private const string Root = "NightshadeHud";
@@ -47,6 +47,9 @@ namespace Oxide.Plugins
         private Coroutine convoyRoutine;
 
         private readonly Dictionary<ulong, string> mode = new Dictionary<ulong, string>();
+        private readonly Dictionary<ulong, float> dragStartX = new Dictionary<ulong, float>();
+        private readonly Dictionary<ulong, float> dragLastX = new Dictionary<ulong, float>();
+        private readonly Dictionary<ulong, float> ignoreCycleUntil = new Dictionary<ulong, float>();
         private readonly Dictionary<ulong, string> shown = new Dictionary<ulong, string>();
         private readonly HashSet<ulong> station = new HashSet<ulong>();
         private readonly Dictionary<ulong, string> shieldCache = new Dictionary<ulong, string>();
@@ -87,6 +90,7 @@ namespace Oxide.Plugins
             [JsonProperty("Default state for new players (minimized, half, full)")] public string DefaultState = "full";
             [JsonProperty("Layer (Overlay shows in the inventory)")] public string Layer = "Overlay";
             [JsonProperty("Anchor")] public string Anchor = "1 1";
+            [JsonProperty("Left anchor (under the missions bar)")] public string LeftAnchor = "0.008 0.905";
             [JsonProperty("Inset from the right (px)")] public float Right = 16f;
             [JsonProperty("Inset from the top (px)")] public float Top = 58f;
             [JsonProperty("Width (px)")] public float Width = 252f;
@@ -148,6 +152,7 @@ namespace Oxide.Plugins
         private class Stored
         {
             public Dictionary<string, string> Players = new Dictionary<string, string>(StringComparer.Ordinal);
+            public Dictionary<string, string> Sides = new Dictionary<string, string>(StringComparer.Ordinal);
         }
 
         protected override void LoadDefaultConfig()
@@ -175,6 +180,7 @@ namespace Oxide.Plugins
                 config.NameColor = "#A267D3";
             if (config.TagText == null) config.TagText = "Solo/Duo";
             if (string.IsNullOrEmpty(config.TagColor)) config.TagColor = "#C4A6E0";
+            if (string.IsNullOrEmpty(config.LeftAnchor)) config.LeftAnchor = "0.008 0.905";
             if (string.IsNullOrEmpty(config.HeliLabel)) config.HeliLabel = "KAREN";
             if (string.IsNullOrEmpty(config.HeliActiveColor)) config.HeliActiveColor = "#FF4D4D";
             if (string.IsNullOrEmpty(config.BradleyLabel)) config.BradleyLabel = "BRAD";
@@ -208,6 +214,7 @@ namespace Oxide.Plugins
             try { stored = Interface.Oxide.DataFileSystem.ReadObject<Stored>(DataPath) ?? new Stored(); }
             catch { stored = new Stored(); }
             if (stored.Players == null) stored.Players = new Dictionary<string, string>(StringComparer.Ordinal);
+            if (stored.Sides == null) stored.Sides = new Dictionary<string, string>(StringComparer.Ordinal);
             zone = ResolveZone(config.TimeZoneId, out zoneFallback);
         }
 
@@ -255,6 +262,9 @@ namespace Oxide.Plugins
             shown.Remove(player.userID);
             station.Remove(player.userID);
             shieldCache.Remove(player.userID);
+            dragStartX.Remove(player.userID);
+            dragLastX.Remove(player.userID);
+            ignoreCycleUntil.Remove(player.userID);
             MarkPop();
         }
 
@@ -291,9 +301,20 @@ namespace Oxide.Plugins
                 return;
             }
             string requested = args == null || args.Length == 0 ? "cycle" : Normalize(args[0]);
+            if (requested == "left" || requested == "right" || requested == "side")
+            {
+                SetSide(player, requested);
+                return;
+            }
+            if (requested == "cycle")
+            {
+                float until;
+                if (ignoreCycleUntil.TryGetValue(player.userID, out until) && Time.realtimeSinceStartup < until)
+                    return;
+            }
             if (requested == null)
             {
-                player.ChatMessage("<color=#b084ff>[Nightshade]</color> /" + config.Command + " min | half | full | cycle");
+                player.ChatMessage("<color=#b084ff>[Nightshade]</color> /" + config.Command + " min | half | full | cycle | left | right | side");
                 return;
             }
             SetState(player, requested == "cycle" ? Cycle(StateOf(player)) : requested);
@@ -356,6 +377,9 @@ namespace Oxide.Plugins
                 case "all":
                 case "3": return "full";
                 case "cycle": return "cycle";
+                case "left": return "left";
+                case "right": return "right";
+                case "side": return "side";
                 default: return null;
             }
         }
@@ -373,7 +397,7 @@ namespace Oxide.Plugins
             }
             string state = StateOf(player);
             var container = new CuiElementContainer();
-            AddRoot(container, state);
+            AddRoot(container, player, state);
             if (state != "minimized")
             {
                 AddBackground(container);
@@ -425,8 +449,9 @@ namespace Oxide.Plugins
             if (to != "minimized") shieldCache[player.userID] = ShieldSignature(player);
         }
 
-        private void AddRoot(CuiElementContainer container, string state)
+        private void AddRoot(CuiElementContainer container, BasePlayer player, string state)
         {
+            string anchor = AnchorOf(player);
             container.Add(new CuiElement
             {
                 Name = Root,
@@ -435,7 +460,7 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiImageComponent { Color = "0 0 0 0" },
-                    new CuiRectTransformComponent { AnchorMin = config.Anchor, AnchorMax = config.Anchor, OffsetMin = OffsetMin(state), OffsetMax = OffsetMax() }
+                    new CuiRectTransformComponent { AnchorMin = anchor, AnchorMax = anchor, OffsetMin = OffsetMin(player, state), OffsetMax = OffsetMax(player, state) }
                 }
             });
         }
@@ -486,7 +511,8 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(hitLeft, hitBottom), OffsetMax = Px(hitRight, hitTop) }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(hitLeft, hitBottom), OffsetMax = Px(hitRight, hitTop) },
+                    IconDrag()
                 }
             });
             CuiHelper.AddUi(player, container);
@@ -570,9 +596,30 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) },
+                    IconDrag()
                 }
             });
+        }
+
+        private static CuiDraggableComponent IconDrag()
+        {
+            return new CuiDraggableComponent
+            {
+                LimitToParent = false,
+                MaxDistance = -1f,
+                AllowSwapping = false,
+                DropAnywhere = true,
+                DragAlpha = 0.9f,
+                ParentLimitIndex = 1,
+                ParentPadding = "0 0",
+                AnchorOffset = "0 0",
+                KeepOnTop = true,
+                PositionRPC = CommunityEntity.DraggablePositionSendType.NormalizedScreen,
+                MoveToAnchor = false,
+                RebuildAnchor = false,
+                Enabled = true
+            };
         }
 
         private static string BadgeWord(string text, string fallback)
@@ -765,7 +812,7 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiImageComponent { Color = "0 0 0 0" },
-                    new CuiRectTransformComponent { AnchorMin = config.Anchor, AnchorMax = config.Anchor, OffsetMin = OffsetMin(state), OffsetMax = OffsetMax() }
+                    new CuiRectTransformComponent { AnchorMin = AnchorOf(player), AnchorMax = AnchorOf(player), OffsetMin = OffsetMin(player, state), OffsetMax = OffsetMax(player, state) }
                 }
             });
             CuiHelper.AddUi(player, container);
@@ -799,13 +846,71 @@ namespace Oxide.Plugins
             return sum / 1000f * fontSize;
         }
 
-        private string OffsetMax() => Px(-config.Right, -config.Top);
-
-        private string OffsetMin(string state)
+        private string OffsetMax(BasePlayer player, string state)
         {
+            if (!OnLeft(player)) return Px(-config.Right, -config.Top);
             float width = state == "minimized" ? config.IconSize : config.Width;
+            return Px(width, 0f);
+        }
+
+        private string OffsetMin(BasePlayer player, string state)
+        {
             float height = PanelHeight(state);
-            return Px(-config.Right - width, -config.Top - height);
+            if (!OnLeft(player))
+            {
+                float width = state == "minimized" ? config.IconSize : config.Width;
+                return Px(-config.Right - width, -config.Top - height);
+            }
+            return Px(0f, -height);
+        }
+
+        private string AnchorOf(BasePlayer player)
+        {
+            return OnLeft(player) ? config.LeftAnchor : (string.IsNullOrEmpty(config.Anchor) ? "1 1" : config.Anchor);
+        }
+
+        private bool OnLeft(BasePlayer player)
+        {
+            string side;
+            if (player == null || stored == null || stored.Sides == null) return false;
+            return stored.Sides.TryGetValue(player.UserIDString, out side) && side == "left";
+        }
+
+        private void SetSide(BasePlayer player, string word)
+        {
+            if (player == null) return;
+            bool left = word == "side" ? !OnLeft(player) : word == "left";
+            if (stored.Sides == null) stored.Sides = new Dictionary<string, string>(StringComparer.Ordinal);
+            stored.Sides[player.UserIDString] = left ? "left" : "right";
+            SaveData();
+            string state;
+            if (!shown.TryGetValue(player.userID, out state)) return;
+            Show(player);
+        }
+
+        private void OnCuiDraggableDrag(BasePlayer player, string name, Vector3 position, CommunityEntity.DraggablePositionSendType type)
+        {
+            if (player == null || name != IconHit || type != CommunityEntity.DraggablePositionSendType.NormalizedScreen) return;
+            if (float.IsNaN(position.x) || float.IsInfinity(position.x)) return;
+            float start;
+            if (!dragStartX.TryGetValue(player.userID, out start))
+                dragStartX[player.userID] = position.x;
+            dragLastX[player.userID] = position.x;
+            if (dragStartX.TryGetValue(player.userID, out start) && Mathf.Abs(position.x - start) >= 0.03f)
+                ignoreCycleUntil[player.userID] = Time.realtimeSinceStartup + 0.6f;
+        }
+
+        private void OnCuiDraggableDrop(BasePlayer player, string draggedName, string draggedSlot, string swappedName, string swappedSlot)
+        {
+            if (player == null || draggedName != IconHit) return;
+            float start = 0f;
+            float last = 0f;
+            bool moved = dragStartX.TryGetValue(player.userID, out start) && dragLastX.TryGetValue(player.userID, out last) && Mathf.Abs(last - start) >= 0.03f;
+            dragStartX.Remove(player.userID);
+            dragLastX.Remove(player.userID);
+            if (!moved) return;
+            ignoreCycleUntil[player.userID] = Time.realtimeSinceStartup + 0.6f;
+            SetSide(player, last < 0.5f ? "left" : "right");
         }
 
         private float HalfHeight()
