@@ -84,6 +84,10 @@
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
+                  "Text": "Monuments and events are always PvP. A dome only appears over an event.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
                   "Text": "Vanilla gathering on resources, components, and food.",
                   "Tone (body, accent, warn, muted)": "body"
                 },
@@ -112,6 +116,15 @@
           ],
           "Rules title": "SERVER RULES",
           "Rules": [
+            {
+              "Heading": "TEAMS",
+              "Lines": [
+                {
+                  "Text": "Solo/duo only. Max team size is 2.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                }
+              ]
+            },
             {
               "Heading": "BASES & BUILDING",
               "Lines": [
@@ -427,7 +440,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "/tug and /tugboat are the VIPx vehicle license. Buying a tugboat with resources is available to the default group, so it is not VIP-only.",
+                      "Text": "/tug and /tugboat are the VIPx license.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -843,76 +856,58 @@
             {
               "Blocks": [
                 {
-                  "Heading": "TRAVEL",
+                  "Heading": "VIP",
                   "Lines": [
                     {
-                      "Text": "VIP: 4 homes. Default is 3. Home cooldown and countdown are 5 seconds, down from 10.",
+                      "Text": "Permanent — one donation",
+                      "Tone (body, accent, warn, muted)": "accent"
+                    },
+                    {
+                      "Text": "Kept unless you break the rules.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "VIPx: 5 homes, with no home cooldown or countdown.",
+                      "Text": "4 /home slots instead of 3. Cooldown 5 seconds (default is 10).",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Home teleports do not cost RP for anyone. VIP is not a waived fee.",
+                      "Text": "Home teleport has no RP cost.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Homes on tugboats are allowed for everyone.",
+                      "Text": "Can set a home on your tugboat.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "VIPx can use /tug and /tugboat with a free vehicle license. A resource-bought tugboat is not VIP-only.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    }
-                  ]
-                },
-                {
-                  "Heading": "QUEUE & KITS",
-                  "Lines": [
-                    {
-                      "Text": "VIP gets a reconnect grace. VIPx gets the queue skip. They are not the same perk.",
+                      "Text": "Queue skip and a 5-minute reconnect hold.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "/perks shows crate time and kit status. /perks daily and /perks 4day claim the kits.",
+                      "Text": "1.1× RP activity multiplier.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Kits stay locked for 48 hours after wipe.",
+                      "Text": "HeliSignals reward multiplier: 1.25×.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Hackable crates: 2.5 minutes for VIP, 60 seconds for VIPx.",
+                      "Text": "Bradley signal cooldown: 50 min.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "/afk is VIP and VIPx only.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    }
-                  ]
-                },
-                {
-                  "Heading": "ECONOMY & REWARDS",
-                  "Lines": [
-                    {
-                      "Text": "Heli signal rewards: 1.25× for VIP, 1.5× for VIPx.",
+                      "Text": "ChestStacks: 5 stacks instead of 3.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "A 1.1× activity-reward multiplier exists, but that permission is not on the VIP group.",
+                      "Text": "Hackable crates unlock in 2.5 minutes.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Bradley cooldown cuts are configured for permissions the VIP groups do not have, and Bradley RP rewards are disabled. Do not count on a shorter Bradley cooldown.",
+                      "Text": "No decay on personal boats and tugboats.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Chest stacks: 2 small and 3 large by default, 5 and 5 for VIP.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "The VIP shop category has claimable tools: iron axe and pickaxe for VIP, salvaged axe and pickaxe for VIPx, plus a one-per-wipe 4-socket chassis for 7000 RP.",
+                      "Text": "Medium raids 12h, Hard 48h, Expert 96h, Nightmare 144h after wipe.",
                       "Tone (body, accent, warn, muted)": "body"
                     }
                   ]
@@ -922,31 +917,62 @@
             {
               "Blocks": [
                 {
-                  "Heading": "GAMEPLAY",
+                  "Heading": "VIPx",
                   "Lines": [
                     {
-                      "Text": "No decay on personal boats and tugboats for VIP.",
+                      "Text": "Monthly",
+                      "Tone (body, accent, warn, muted)": "accent"
+                    },
+                    {
+                      "Text": "A monthly subscription.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Some cosmetic and building skin perks are VIP gated.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    }
-                  ]
-                },
-                {
-                  "Heading": "EARLY WIPE ACCESS",
-                  "Lines": [
-                    {
-                      "Text": "Easy raids are immediate for everyone.",
+                      "Text": "5 /home slots instead of 3. No /home cooldown.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Default unlocks: Medium 24h, Hard 72h, Expert 120h, Nightmare 168h.",
+                      "Text": "Home teleport has no RP cost.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Shorter times (12h, 48h, 96h, 144h) are configured, and those permissions are not on the VIP group. VIP alone does not unlock them early.",
+                      "Text": "Can set a home on your tugboat.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/tug and /tugboat, free license.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Queue skip and a 5-minute reconnect hold.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "1.1× RP activity multiplier.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "HeliSignals reward multiplier: 1.5×.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Bradley signal cooldown: 30 min.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "ChestStacks: 5 stacks instead of 3.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Hackable crates unlock in 60 seconds.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "No decay on personal boats and tugboats.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Same early raids as VIP: Medium 12h, Hard 48h, Expert 96h, Nightmare 144h.",
                       "Tone (body, accent, warn, muted)": "body"
                     }
                   ]

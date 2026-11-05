@@ -178,11 +178,12 @@ namespace Oxide.Plugins
             public string ModeValue;
             public string ModeDetail;
             public string ModeColor;
-            public string PvpLabel;
             public string PvpValue;
-            public string PurgeLabel;
+            public string PvpDetail;
             public string PurgeValue;
-            public string Secondary;
+            public string PurgeDetail;
+            public string Online;
+            public string PlayersDetail;
         }
 
         protected override void LoadDefaultConfig()
@@ -588,27 +589,24 @@ namespace Oxide.Plugins
         private void DrawStatus(CuiElementContainer container, string parent, BasePlayer player, float width, ref float y)
         {
             Snap snap = ReadStatus(player);
-            float banner = 58f;
-            Box(container, "NightshadeInfo.St.Mode", parent, Hex("#FFFFFF", 0.05f), "0 1", "0 1", Px(0f, -(y + banner)), Px(width, -y), null);
-            Box(container, "NightshadeInfo.St.Mode.Bar", "NightshadeInfo.St.Mode", Hex(snap.ModeColor), "0 0", "0 1", "0 10", "6 -10", null);
-            Label(container, "NightshadeInfo.St.Mode.V", "NightshadeInfo.St.Mode", snap.ModeValue, Hex(snap.ModeColor), 26, TextAnchor.MiddleLeft, true, "0 1", "1 1", "16 -36", "-12 -4");
-            Label(container, "NightshadeInfo.St.Mode.D", "NightshadeInfo.St.Mode", snap.ModeDetail, Hex(settings.TextColor), 12, TextAnchor.UpperLeft, false, "0 1", "1 1", "16 -54", "-12 -34");
-            y += banner + 8f;
-
-            DrawTimer(container, parent, "Pvp", 0f, y, width, snap.PvpLabel, snap.PvpValue);
-            y += 38f;
-            DrawTimer(container, parent, "Purge", 0f, y, width, snap.PurgeLabel, snap.PurgeValue);
-            y += 38f;
-            Label(container, "NightshadeInfo.St.Meta", parent, snap.Secondary, Hex(settings.MutedColor), 12, TextAnchor.MiddleLeft, false, "0 1", "0 1", Px(2f, -(y + 22f)), Px(width, -y));
-            y += 36f;
+            float gap = 6f;
+            float cardW = (width - gap * 3f) / 4f;
+            float cardH = 96f;
+            DrawCard(container, parent, "Mode", 0f, y, cardW, cardH, snap.ModeColor, "MODE", snap.ModeValue, snap.ModeDetail, snap.ModeColor);
+            DrawCard(container, parent, "Pvp", cardW + gap, y, cardW, cardH, settings.PvpColor, "PVP WEEKEND", snap.PvpValue, snap.PvpDetail, "#F4F1EA");
+            DrawCard(container, parent, "Purge", (cardW + gap) * 2f, y, cardW, cardH, settings.Purge != null ? settings.Purge.Color : "#FF8C1A", "PURGE", snap.PurgeValue, snap.PurgeDetail, "#F4F1EA");
+            DrawCard(container, parent, "Pop", (cardW + gap) * 3f, y, cardW, cardH, settings.Accent, "PLAYERS", snap.Online, snap.PlayersDetail, "#F4F1EA");
+            y += cardH + 12f;
         }
 
-        private void DrawTimer(CuiElementContainer container, string parent, string key, float x, float y, float width, string label, string value)
+        private void DrawCard(CuiElementContainer container, string parent, string key, float x, float y, float w, float h, string bar, string title, string value, string detail, string valueColor)
         {
             string name = "NightshadeInfo.St." + key;
-            Box(container, name, parent, Hex("#FFFFFF", 0.035f), "0 1", "0 1", Px(x, -(y + 32f)), Px(x + width, -y), null);
-            Label(container, name + ".K", name, label ?? string.Empty, Hex(settings.TextColor), 14, TextAnchor.MiddleLeft, false, "0 0", "1 1", "14 0", "-150 0");
-            Label(container, name + ".V", name, value ?? string.Empty, Hex("#F4F1EA"), 16, TextAnchor.MiddleRight, true, "0 0", "1 1", "0 0", "-14 0");
+            Box(container, name, parent, Hex("#FFFFFF", 0.05f), "0 1", "0 1", Px(x, -(y + h)), Px(x + w, -y), null);
+            Box(container, name + ".Bar", name, Hex(bar), "0 0", "0 1", "0 6", "3 -6", null);
+            Label(container, name + ".K", name, title ?? string.Empty, Hex(settings.MutedColor), 9, TextAnchor.UpperLeft, true, "0 1", "1 1", "8 -16", "-4 -3");
+            Label(container, name + ".V", name, value ?? string.Empty, Hex(valueColor), 13, TextAnchor.UpperLeft, true, "0 1", "1 1", "8 -36", "-4 -16");
+            Label(container, name + ".D", name, detail ?? string.Empty, Hex(settings.TextColor), 10, TextAnchor.UpperLeft, false, "0 1", "1 1", "8 -90", "-4 -36");
         }
 
         private void DrawHeading(CuiElementContainer container, string parent, string text, float x, float width, ref float y)
@@ -666,14 +664,14 @@ namespace Oxide.Plugins
         {
             Snap snap = ReadStatus(player);
             var container = new CuiElementContainer();
-            UpdateText(container, "NightshadeInfo.St.Mode.V", snap.ModeValue, Hex(snap.ModeColor), 32, true, TextAnchor.MiddleLeft);
-            UpdateText(container, "NightshadeInfo.St.Mode.D", snap.ModeDetail, Hex(settings.TextColor), 13, false, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Mode.V", snap.ModeValue, Hex(snap.ModeColor), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Mode.D", snap.ModeDetail, Hex(settings.TextColor), 10, false, TextAnchor.UpperLeft);
             UpdateImage(container, "NightshadeInfo.St.Mode.Bar", Hex(snap.ModeColor));
-            UpdateText(container, "NightshadeInfo.St.Pvp.K", snap.PvpLabel, Hex(settings.TextColor), 14, false, TextAnchor.MiddleLeft);
-            UpdateText(container, "NightshadeInfo.St.Pvp.V", snap.PvpValue, Hex("#F4F1EA"), 16, true, TextAnchor.MiddleRight);
-            UpdateText(container, "NightshadeInfo.St.Purge.K", snap.PurgeLabel, Hex(settings.TextColor), 14, false, TextAnchor.MiddleLeft);
-            UpdateText(container, "NightshadeInfo.St.Purge.V", snap.PurgeValue, Hex("#F4F1EA"), 16, true, TextAnchor.MiddleRight);
-            UpdateText(container, "NightshadeInfo.St.Meta", snap.Secondary, Hex(settings.MutedColor), 12, false, TextAnchor.MiddleLeft);
+            UpdateText(container, "NightshadeInfo.St.Pvp.V", snap.PvpValue, Hex("#F4F1EA"), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Purge.V", snap.PurgeValue, Hex("#F4F1EA"), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Purge.D", snap.PurgeDetail, Hex(settings.TextColor), 10, false, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Pop.V", snap.Online, Hex("#F4F1EA"), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Pop.D", snap.PlayersDetail, Hex(settings.TextColor), 10, false, TextAnchor.UpperLeft);
             CuiHelper.AddUi(player, container);
         }
 
@@ -701,24 +699,24 @@ namespace Oxide.Plugins
             {
                 snap.ModeValue = labels.PurgeName;
                 snap.ModeColor = purgeColor;
-                snap.ModeDetail = (manual || rulesetPurge) && !scheduled ? labels.ManualPurgeDetail : labels.PurgeDetail;
+                snap.ModeDetail = "Until the wipe";
             }
             else if (weekend)
             {
                 snap.ModeValue = labels.PvpName;
                 snap.ModeColor = settings.PvpColor;
-                snap.ModeDetail = labels.PvpDetail;
+                snap.ModeDetail = "Weekend window";
             }
             else
             {
                 snap.ModeValue = labels.PveName;
                 snap.ModeColor = settings.PveColor;
-                snap.ModeDetail = labels.PveDetail;
+                snap.ModeDetail = "Weekday";
             }
 
-            snap.PvpLabel = weekend ? labels.PvpActive : labels.PvpWaiting;
-            snap.PvpValue = FormatDur(weekendSeconds);
-            snap.PurgeLabel = purge ? labels.PurgeActive : labels.PurgeWaiting;
+            snap.PvpDetail = "Fri 8 PM - Mon 3 AM ET";
+            snap.PvpValue = (weekend ? "Ends in " : "Starts in ") + FormatDur(weekendSeconds);
+            double purgeSeconds;
             if (purge)
             {
                 DateTime end = wipe;
@@ -728,12 +726,13 @@ namespace Oxide.Plugins
                     if (TryUnix(manualEnd, out manualAt) && manualAt > now && (!scheduled || manualAt > wipe))
                         end = manualAt;
                 }
-                snap.PurgeValue = FormatDur((end - now).TotalSeconds);
+                purgeSeconds = (end - now).TotalSeconds;
             }
-            else snap.PurgeValue = FormatDur((purgeStart - now).TotalSeconds);
+            else purgeSeconds = (purgeStart - now).TotalSeconds;
+            snap.PurgeValue = (purge ? "Ends in " : "Starts in ") + FormatDur(purgeSeconds);
 
-            string wipeIn = (labels.WipeIn ?? "in {time}").Replace("{time}", FormatDur((wipe - now).TotalSeconds));
             string wipeLabel = settings.Wipe == null || string.IsNullOrEmpty(settings.Wipe.Label) ? "First Thursday · 2:00 PM Eastern" : settings.Wipe.Label;
+            snap.PurgeDetail = "Tue of wipe week - Thu 2 PM wipe\n" + wipeLabel;
             int online = 0;
             foreach (BasePlayer other in BasePlayer.activePlayerList)
             {
@@ -745,7 +744,8 @@ namespace Oxide.Plugins
             string onlineText = labels.Online.Replace("{online}", online.ToString(CultureInfo.InvariantCulture));
             string sleeperText = labels.Sleepers.Replace("{sleepers}", sleepers.ToString(CultureInfo.InvariantCulture));
             string points = labels.RewardPoints.Replace("{amount}", RewardPoints(player));
-            snap.Secondary = labels.WipeTitle + "   " + wipeLabel + "   " + wipeIn + "      " + onlineText + "   ·   " + sleeperText + "   ·   " + points;
+            snap.Online = onlineText;
+            snap.PlayersDetail = sleeperText + "\n" + points;
             if (!statusLogged)
             {
                 statusLogged = true;
@@ -1397,7 +1397,7 @@ namespace Oxide.Plugins
                                     L("• /hordehelp — Hordes help"),
                                     L("• /checkfoundations — Defendable Homes foundations"),
                                     L("• /raidbuilderinfo — vetted raidbase builder help"),
-                                    L("• /tug or /tugboat — VIP tugboat license")))
+                                    L("• /tug or /tugboat — VIPx tugboat license")))
                         }
                     }
                 }
@@ -1589,7 +1589,6 @@ namespace Oxide.Plugins
                                 L("• Reduced /home cooldown: 5 seconds, down from 10."),
                                 L("• Home teleport has no RP cost."),
                                 L("• Can set a home on your tugboat."),
-                                L("• Can use /tug for VIP tugboat access."),
                                 L("• Queue skip and a 5-minute reconnect hold."),
                                 L("• 1.1× RP activity multiplier."),
                                 L("• HeliSignals reward multiplier: 1.25×."),
