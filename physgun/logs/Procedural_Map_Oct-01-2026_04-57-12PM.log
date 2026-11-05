@@ -1,0 +1,787 @@
+[PhysgunEntry] Updating Rust server via DepotDownloader...
+Physgun · Steam Content Updater (DepotDownloader v3.4.0+fa811d0af8196ae39cadccfac7cfd3b22d4dee74)
+› Downloading directly from Steam CDN
+› No username given. Using anonymous account with dedicated server subscription.
+› Connecting to Steam
+✓ Connected to Steam
+› Logging in to Steam (anonymous)
+✓ Logged in to Steam
+› Rust Dedicated Server (app 258550, branch public)
+
+› Preparing download
+› Fetching manifest for depot 258552
+› Fetching manifest for depot 258554
+› Checking existing files for depot 258552
+› Checking existing files for depot 258554
+✓ Up to date — verified 5.47 GB in 3s (build 25454815)
+[PhysgunEntry] Starting Physgun Rust Server with Command - ./RustDedicated -batchmode +server.port 28079 +server.queryport 28081 +server.identity "rust" +rcon.port 28080 +rcon.web true +server.level "Procedural Map" +server.url "https://discord.gg/T5h3RDXjEX" +server.maxplayers 75 +rcon.password "t1ZtOm6B6gWwICKR" +server.saveinterval 600 +app.port 28082 +server.worldsize "5000" +server.seed "1337" -logfile - +server.gamemode "" +server.logoimage "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png" +server.headerimage "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png" +server.level Custom Map +server.ping_region_code_override us5 -job-worker-count 3 -noconsole
+[PhysgunEntry] Mirroring server console to /home/container/physgun/logs/Procedural_Map_Oct-01-2026_04-57-12PM.log
+[PhysgunEntry] Updating Carbon...
+[PhysgunEntry] Carbon update complete!
+[PhysgunEntry] Updated Oxide.Ext.Discord.dll
+[PhysgunEntry] Updated Oxide.Ext.RustEdit.dll
+[PhysgunEntry] Updated Oxide.Ext.Chaos.dll
+[PhysgunEntry] Updated Oxide.Ext.ChaosNPC.dll
+[Physgun] Bootstrapping for game Rust
+[Physgun] Loaded config from physgun.toml
+[Physgun] Loading utils...
+[Physgun] Exiting bootstrapper...
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=4194304"
+    "memorysetup-bucket-allocator-block-count=1"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=4194304"
+    "memorysetup-profiler-bucket-allocator-block-count=1"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=4194304"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Processor: AMD Ryzen 9 9950X 16-Core Processor, 32 core(s) @ 5413 MHz 
+Available Memory: 190862 MB 
+Linux Kernel and distribution: Linux 6.8 Debian GNU/Linux 13 64bit
+System Language: en
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to system scope bus via local transport: Host is down
+Keyboard Layout: default
+Mono path[0] = '/home/container/RustDedicated_Data/Managed'
+Mono config path = '/home/container/RustDedicated_Data/MonoBleedingEdge/etc'
+[Physgun] Bootstrapping Assembly-CSharp
+ Carbon Release is up to date, no self-updating necessary. Running Production build [2.0.259] on tag 'production_build'.
+ Initialized Carbon.Startup 2.0.259.0
+ Preloaded 0Harmony 2.4.2.0
+ Preloaded Ben.Demystifier 0.4.0.0
+ Preloaded ZstdSharp 0.8.0.0
+ Preloaded SharpCompress 0.32.2.0
+ Preloaded Carbon.Compat 2.0.259.0
+ Preloaded protobuf-net 3.0.0.0
+ Preloaded protobuf-net.Core 3.0.0.0
+ Preloaded System.Collections.Immutable 9.0.0.0
+ Preloaded System.Diagnostics.DiagnosticSource 7.0.0.2
+ Loading patched assembly 'Assembly-CSharp.dll' 
+ Loading patched assembly 'Facepunch.Console.dll' 
+ Loading patched assembly 'Facepunch.Network.dll' 
+ Loading patched assembly 'Facepunch.Nexus.dll' 
+ Loading patched assembly 'Facepunch.Ping.dll' 
+ Loading patched assembly 'Facepunch.Rcon.dll' 
+ Loading patched assembly 'Facepunch.Unity.dll' 
+ Loading patched assembly 'Fleck.dll' 
+ Loading patched assembly 'Rust.Clans.Local.dll' 
+ Loading patched assembly 'Rust.Data.dll' 
+ Loading patched assembly 'Rust.FileSystem.dll' 
+ Loading patched assembly 'Rust.Global.dll' 
+ Loading patched assembly 'Rust.Harmony.dll' 
+ Loading patched assembly 'Rust.Localization.dll' 
+Shutdown handler: initialize.
+Failed to open plugin: /home/container/RustDedicated_Data/Plugins/libdiscord_partner_sdk.so
+JobSystem: Creating JobQueue using job-worker-count value 3
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.15x1-11 (d4a0e1288074)
+[Subsystems] Discovering subsystems at path /home/container/RustDedicated_Data/UnitySubsystems
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.038 seconds
+- Finished resetting the current domain, in  0.001 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+[Physgun] Waiting for game to start...
+Shader 'Soft Mask/TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Profiler Disabled!
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+UnloadTime: 1.446473 ms
+Set managed directory to '/home/container/RustDedicated_Data/Managed'
+Set harmony directory to '/home/container/RustDedicated_Data/../HarmonyMods'
+[HarmonyLoader] Couldn't unload mod 'Physgun.Rust.MapUploader': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.MapUploader] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.Rust.MapUploader.dll
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.MapUploader] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.Rust.MapUploader'
+[HarmonyLoader] Couldn't unload mod 'Physgun.Rust.Metrics': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.Metrics] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.Rust.Metrics.dll
+Note: Cannot patch any time warnings yet. We will patch it upon server start.
+Note: Cannot patch BaseEntity_Spawn_Metrics_Patch yet. We will patch it upon server start.
+Note: Cannot patch BaseNetworkable_Kill_Metrics_Patch yet. We will patch it upon server start.
+Note: Cannot patch ConsoleSystem_Internal_Patch yet. We will patch it upon server start.
+Note: Cannot patch InvokeHandlerBase_DoTick_Patch yet. We will patch it upon server start.
+Note: Cannot patch ObjectWorkQueue_RunJob_Patch yet. We will patch it upon server start.
+Note: Cannot patch RPCServer_Attribute_Method_Patch yet. We will patch it upon server start.
+Note: Cannot patch ServerMgr_Metrics_Patches yet. We will patch it upon server start.
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.Metrics] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.Rust.Metrics'
+[HarmonyLoader] Couldn't unload mod 'Physgun.RustNativeStdio': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.RustNativeStdio] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.RustNativeStdio.dll
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.RustNativeStdio] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.RustNativeStdio'
+gpath.c:115: assertion 'filename != NULL' failed
+
+3D Noise requires higher shader capabilities (Shader Model 3.5 / OpenGL ES 3.0), which are not available on the current platform: graphicsShaderLevel (current/required) = 30 / 35
+Bootstrap Startup
+[Bootstrap] Opening Bundles
+Loading maps/maps.bundle
+Loading shared/assetscenes.bundle
+Loading shared/content.bundle
+Loading shared/content.private.bundle
+Loading shared/items.preload.bundle
+Loading shared/monuments.bundle
+Loading shared/skinnables.preload.bundle
+[Bootstrap] Opening Bundles done in 0.61s
+[Bootstrap] Loading Menu Prefabs
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script on this Behaviour (Game Object 'assets/bundled/prefabs/system/input_redirector.prefab') is missing!
+System
+	Name: e7d68b63-c566-4cd4-b1ca-684edf5393a4
+	OS:   Linux 6.8 Debian GNU/Linux 13 64bit
+
+CPU
+	Model:  AMD Ryzen 9 9950X 16-Core Processor
+	Cores:  32
+	Memory: 190862 MB
+
+GPU
+	Model:  Null Device
+	API:    NULL 1.0 [1.0]
+	Memory: 128 MB
+	SM:     30
+
+Process
+	Memory:   0 MB
+
+Mono
+	Collects: 115
+	Memory:   155 MB
+
+
+[Bootstrap] Loading Menu Prefabs done in 2.85s
+[Bootstrap] Loading Game Manifest
+Manifest Metadata Loaded
+	41375 pooled strings
+	17140 prefab properties
+	430 effect categories
+	2378 entity names
+[Bootstrap] Loading Game Manifest done in 0.20s
+[Bootstrap] DONE!
+[Bootstrap] DONE! done in 0.01s
+[Bootstrap] Running Self Check
+[Bootstrap] Running Self Check done in 0.01s
+[Bootstrap] Bootstrap Tier0
+[Physgun] OnLoaded
+[Physgun] Init
+[Physgun] v0.28.10 7e627def9eaecea78ee56f0e58d02a14d9ab1603
+[Physgun] Collected 87 permissions
+[Physgun] Carbon detected! Setting up permissions bridge...
+[Physgun] The server crashed the last time it tried to launch. Physgun Utils optimizations will not load to prevent potential crash loops. If you're seeing this regularly, let us know!
+Protocol: 2633.288.1
+Build Date: 09/22/2026 07:48:10
+Unity Version: 6000.3.15x1-11
+Changeset: 165217
+Branch: release
+Command Line: "./RustDedicated" "-batchmode" "+server.port" "28079" "+server.queryport" "28081" "+server.identity" "rust" "+rcon.port" "28080" "+rcon.web" "true" "+server.level" "Procedural Map" "+server.url" "https://discord.gg/T5h3RDXjEX" "+server.maxplayers" "75" "+rcon.password" "******" "+server.saveinterval" "600" "+app.port" "28082" "+server.worldsize" "5000" "+server.seed" "1337" "-logfile" "-" "+server.gamemode" "" "+server.logoimage" "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png" "+server.headerimage" "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png" "+server.level" "Custom" "Map" "+server.ping_region_code_override" "us5" "-job-worker-count" "3" "-noconsole" 
+Setup unity update hooks
+Command 'batchmode' not found
+server.port: "28079"
+server.queryport: "28081"
+server.identity: "rust"
+rcon.port: "28080"
+rcon.web: "True"
+server.level: "Procedural Map"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "75"
+Command 'rcon.password' not found
+server.saveinterval: "600"
+app.port: "28082"
+server.worldsize: "5000"
+server.seed: "1337"
+Command 'logfile' not found
+Command '' not found
+Couldn't find gamemode: 1
+server.gamemode: "1"
+server.logoimage: "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+server.headerimage: "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+server.ping_region_code_override: "us5"
+Command 'job-worker-count' not found
+Command 'noconsole' not found
+[Bootstrap] Bootstrap Tier0 done in 1.98s
+[Bootstrap] Bootstrap Systems
+[Bootstrap] Bootstrap Systems done in 0.04s
+[Bootstrap] Bootstrap Config
+Command 'batchmode' not found
+server.port: "28079"
+server.queryport: "28081"
+server.identity: "rust"
+rcon.port: "28080"
+rcon.web: "True"
+server.level: "Procedural Map"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "75"
+Command 'rcon.password' not found
+server.saveinterval: "600"
+app.port: "28082"
+server.worldsize: "5000"
+server.seed: "1337"
+Command 'logfile' not found
+Command '' not found
+Couldn't find gamemode: 1
+server.gamemode: "1"
+server.logoimage: "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+server.headerimage: "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+server.ping_region_code_override: "us5"
+Command 'job-worker-count' not found
+Command 'noconsole' not found
+Cannot set gc.incremental as it is read only
+Server Config Loaded
+Running server/rust/cfg/users.cfg
+Command 'batchmode' not found
+server.port: "28079"
+server.queryport: "28081"
+server.identity: "rust"
+rcon.port: "28080"
+rcon.web: "True"
+server.level: "Procedural Map"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "75"
+Command 'rcon.password' not found
+server.saveinterval: "600"
+app.port: "28082"
+server.worldsize: "5000"
+server.seed: "1337"
+Command 'logfile' not found
+Command '' not found
+Couldn't find gamemode: 1
+server.gamemode: "1"
+server.logoimage: "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+server.headerimage: "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+server.ping_region_code_override: "us5"
+Command 'job-worker-count' not found
+Command 'noconsole' not found
+[Bootstrap] Bootstrap Config done in 0.03s
+[Bootstrap] Loading Items
+Skinnable Warmup
+Manifest Assets Loaded
+161 skinnable objects
+Initializing Nexus
+Nexus endpoint and/or secret key is not set, not starting nexus connection
+Loading Scene
+Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+Carbon 2.0.259.0 [2026.09.03.0] 21063e8 on Linux 
+       raul on production (2026-09-06 15:39:42 +0200)
+Rust   107/2633.288.1 on release (22/09/2026 08:48:10) 165217
+Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 380ms
+Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 62ms
+Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 298ms
+Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 172ms
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+HDR Render Texture not supported, disabling HDR on reflection probe.
+The shader Hidden/Time of Day/Scattering (UnityEngine.Shader) on effect Main Camera (TOD_Scattering) is not supported on this platform!
+Missing shader in Main Camera (TOD_Scattering)
+Missing shader in Main Camera (TOD_Scattering)
+server.hostname: "[US] Nightshade [PvPvE | Events | QoL Mods]"
+server.description: "| Hybrid PvE | Rotating PvP Monuments | Player-Built Raid Bases |\n| NPC Raidable Bases | Dungeons | Heli & Bradley Signals | QoL Mods |\n\nWe are a new-player-friendly PvE server with optional PvP events.\n\nPvE is serverwide by default. No unauthorized raiding.\nBases, loot, storage, and deployables are protected by Team/TC ownership, with optional sharing for trusted players.\n\nPvP is limited to rotating PvP monuments and optional player-defended raid base events.\nWatch the zone warnings — spicy zones mean spicy consequences.\n\nServer Restarts Daily @ 6 AM EST"
+server.tags: "monthly,pve"
+decay.scale: "0.5"
+server.respawnresetrange: "20"
+server.tickrate: "35"
+server.entityrate: "25"
+fps.limit: "60"
+server.netlog: "True"
+ai.sensetime: "2"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "100"
+server.worldsize: "3500"
+server.saveinterval: "900"
+ioentity.allow_on_boats: "True"
+ai.frametime: "10"
+ai.tickrate: "10"
+aithinkmanager.animalframebudgetms: "5"
+aithinkmanager.framebudgetms: "5"
+aimanager.ai_dormant_max_wakeup_per_tick: "20"
+aimanager.ai_htn_player_junkpile_tick_budget: "3"
+aimanager.ai_to_player_distance_wakeup_range: "140"
+aibrainsenses.humanknownplayerslosupdateinterval: "0.25"
+ai.npc_sensory_system_tick_rate_multiplier: "6"
+ai.npc_max_junkpile_count: "10"
+ai.npc_junkpilespawn_chance: "0.04"
+ai.npc_max_roam_multiplier: "2"
+ai.npc_max_population_military_tunnels: "2"
+boatai.avoidance_update_interval: "1"
+boatai.seconds_until_sleep: "20"
+beeswarmai.think_budget_ms: "0.05"
+bradley.respawndelayminutes: "90"
+heli.lifetimeminutes: "25"
+camerarenderer.completionframebudgetms: "3"
+camerarenderer.entitymaxdistance: "75"
+camerarenderer.farplane: "200"
+camerarenderer.playermaxdistance: "25"
+camerarenderer.playernamemaxdistance: "8"
+camerarenderer.renderinterval: "0.1"
+camerarenderer.samplesperrender: "2000"
+chat.historysize: "500"
+decay.tick: "900"
+growableentity.framebudgetms: "0.5"
+env.nightlight_brightness: "0.018"
+env.nightlight_distance: "7"
+env.nightlight_fadefraction: "0.75"
+env.redmoon: "False"
+Cannot set gc.incremental as it is read only
+gc.incremental_enabled: "True"
+gc.incremental_milliseconds: "8"
+global.cinematicgingerbreadcorpses: "True"
+basefirework.maxactivefireworks: "15"
+basemetaldetector.detectlongrangetick: "2"
+basemetaldetector.detectminmovementdistance: "0.5"
+basemission.missionvalidstateworkqueuebudget: "0.05"
+basemission.missionvalidstateworkqueuecooldown: "5"
+basenavigator.basenavmovementframeinterval: "3"
+basepet.movementupdatebudgetms: "0.5"
+beehive.updatehiveinterval: "180"
+beehive.updatehivestatsinterval: "180"
+beeswarmmaster.amounttospawn: "2"
+beeswarmmaster.secondsbetweenspawns: "90"
+burieditems.maxburieditems: "5"
+cargoship.event_duration_minutes: "40"
+cargoship.loot_rounds: "2"
+cargoship.loot_round_spacing_minutes: "12"
+cctv.camera_disable_seconds: "180"
+cctv.inputbudgetms: "0.03"
+clothlod.clothloddist: "15"
+commandblock.log_executions: "False"
+construct.frameminutes: "20"
+drone.maxcontrolrange: "600"
+metaldetectorsource.timeoutduration: "3600"
+metaldetectorsource.attemptspersubsourcespawn: "3"
+metaldetectorsource.mindistancebetweensubsources: "2"
+mlrs.brokendownminutes: "60"
+rcon.maxconnections: "100"
+ridablehorse.groundangleupdaterate: "0.1"
+sensecomponent.maxrefreshintervalseconds: "1.5"
+sensecomponent.minrefreshintervalseconds: "0.35"
+spawn.max_density: "0.85"
+spawn.max_rate: "0.85"
+spawn.min_density: "0.35"
+spawn.min_rate: "0.35"
+spawn.player_base: "75"
+spawn.player_scale: "1.5"
+spawn.tick_individuals: "450"
+spawn.tick_populations: "90"
+stash.reveal_tick_rate: "1"
+telephonemanager.maxconcurrentcalls: "5"
+travellingvendor.attempt_pullovers: "False"
+tugboat.tugcorpseseconds: "3600"
+tugboat.tugdecayminutes: "1440"
+tugboat.tugdecaystartdelayminutes: "720"
+tutorialisland.spawntutorialislandfornewplayer: "False"
+vendingmachine.max_history: "2500"
+vendingmachine.max_processed: "2500"
+wildlifehazard.clienttickrate: "0.2"
+wildlifehazard.repositionattempts: "3"
+treemanager.enabletreestreaming: "False"
+net.global_networked_bases: "True"
+physics.groundwatchfails: "2"
+physics.sleepthreshold: "0.005"
+physics.solveriterationcount: "6"
+player.keepteaondeath: "True"
+player.tickrate_cl: "64"
+player.tickrate_sv: "30"
+boar.population: "3"
+chicken.population: "2"
+crocodile.population: "0.5"
+hotairballoon.population: "0.5"
+metaldetectorsource.population: "0"
+modularcar.population: "2"
+panther.population: "0.25"
+ridablehorse.population: "1"
+snakehazard.population: "3"
+stag.population: "2"
+tiger.population: "0.25"
+traincar.population: "1.5"
+wolf2.population: "1.25"
+server.level: "Frosthaven Christmas"
+server.bansservertimeout: "15"
+server.entitybatchtime: "1.5"
+server.destroytaskbatchcount: "256"
+server.debrisdespawn: "15"
+server.foodspoiling: "True"
+server.http_connection_limit: "32"
+server.idlekick: "45"
+server.maxdecryptqueuebytes: "524288000"
+server.maxdecryptqueuelength: "5000"
+server.maxdecryptthreadwait: "100"
+server.maxmainthreadwait: "100"
+server.maxpacketspersecond: "3000"
+server.maxpacketspersecond_rpc: "400"
+server.maxpacketspersecond_rpc_signal: "50"
+server.maxpacketspersecond_syncvar: "300"
+server.maxpacketspersecond_tick: "800"
+server.maxunack: "6"
+server.netcachesize: "67108864"
+server.playertimeout: "90"
+server.savecachesize: "790866"
+server.saveframebudget: "15"
+server.snapshottaskbatchcount: "128"
+server.updatebatch: "1024"
+server.updatebatchspawn: "2048"
+stability.collapse: "0.01"
+wipetimer.wipehourofday: "14"
+wipetimer.wipetimezone: "America/New_York"
+Preloaded plugin Chaos Commands v1.0.64 by k1lly0u
+Preloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+Preloaded plugin RustEdit Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+Asset Warmup (1/8849)
+Asset Warmup (8849/8849)
+[0.6s] asset_warmup
+gpath.c:115: assertion 'filename != NULL' failed
+
+WebSocket RCON Started on :28080
+Generating procedural map of size 5000 with seed 1337
+Shader 'TextMeshPro/Distance Field - Depth Offset': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field NoZTest': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+[2.4s] Loading Monument Prefabs
+[3.6s] Height Map
+[0.3s] Biome Map
+[0.4s] Topology Map
+[RustEdit] - No IO data found in map file
+[RustEdit] - No vending data found in map file
+[RustEdit] - No loot data found in map file
+[RustEdit] - No APC path data found in map file
+[RustEdit] - No vehicle data found in map file
+[RustEdit] - No NPC data found in map file
+[0.3s] Canyons
+[0.5s] Lakes
+[123.1s] Terrain Erosion
+[4.5s] River Layout
+[0.7s] River Terrain
+[0.6s] Harbors
+[9.1s] Main Monuments
+[1.9s] Tunnel Entrances
+[1.6s] Rail Ring
+[3.4s] Tunnels
+[12.0s] Rail Layout
+[2.0s] Rail Branching
+[0.5s] Rail Siding
+[7.6s] Rail Terrain
+[1.6s] Tiny Monuments
+[0.6s] Jungle Ruins
+[0.7s] Swamps
+[1.5s] Ice Lakes
+[2.2s] Road Ring
+[1.8s] Road Layout
+[7.1s] Trail Layout
+[0.9s] Road Monuments
+[4.5s] Road Terrain
+[4.0s] Power Line Layout
+[0.9s] Caves
+[8.8s] Underwater Labs
+[0.4s] Ocean Topology
+[0.8s] Cliff Topology
+[18.5s] Coastal Cliffs
+[0.6s] Coastal Cliffs Small
+[36.8s] Cliffs Hills
+[26.0s] Cliffs Hills Small
+[13.4s] Coastal Rocks
+[0.9s] Small Rock Formations Arctic
+[0.9s] Small Rock Formations Arid
+[0.9s] Small Rock Formations Jungle
+[2.0s] Terrain Erosion splatting
+[0.4s] Icesheets
+[0.6s] Terrain Mesh
+[3.3s] Rail Meshes
+[2.3s] Procedural Objects
+[0.4s] Ocean Topology
+[0.7s] Cliff Topology
+[2.0s] Train Track Collation
+[325.9s] Processing World
+[5.6s] Saving World
+[RustEdit] - No ocean patrol path data found in map file
+Generated ocean patrol path with node count: 493
+[11.6s] Ocean Patrol Paths
+[1.6s] Finalizing World
+[Chaos] - Checking for updates...
+[ChaosNPC] - Checking for updates...
+[Chaos] - Latest version is 1.0.64
+[Chaos] - The extension is up to date!
+Unloading 5 Unused Serialized files (Serialized files now loaded: 129)
+[0.6s] Cleaning Up
+Unloading 44926 unused Assets to reduce memory usage. Loaded Objects now: 1970421.
+Total: 589.131914 ms (FindLiveObjects: 164.897908 ms CreateObjectMapping: 21.587139 ms MarkObjects: 382.081053 ms  DeleteObjects: 20.564852 ms)
+
+[ChaosNPC] - Latest version is 3.0.45
+[ChaosNPC] - The extension is up to date!
+Couldn't load server/rust/proceduralmap.5000.1337.288.sav - file doesn't exist
+Spawning 4880 entities from map
+	done.
+Postprocessing 4880 entities from map
+	done.
+Missing EnvSync - creating
+Missing CommunityEntity - creating
+Missing ResourceDepositManager - creating
+Missing RelationshipManager - creating
+Missing ClanManager - creating
+Clan manager will use backend type: local
+Missing TreeManager - creating
+Missing GlobalNetworkHandler - creating
+Starting to load entities into GlobalNetworkHandler...
+Took 18ms to load entities into GlobalNetworkHandler
+Missing CopyPasteEntity - creating
+Missing BuriedItems - creating
+Missing PowergridManager - creating
+Missing DeepSeaManager - creating
+[RustNav] No navmesh loaded from save, building navmesh now
+[RustNav] Dropped 50020 of 219961 tiles for sitting more than 100m out to sea.
+Initializing 111931 entity links
+	done.
+Initializing 947 stability supports
+	done.
+Initializing 99916 entity save caches
+	done.
+Gamemode Convar :1
+Prefab 'assets/prefabs/gamemodes/1.prefab' not found in any asset scenes.
+Couldn't find prefab "assets/prefabs/gamemodes/1.prefab"
+Failed to create gamemode : 1
+Preparing Occlusion Grid (2500, 100, 2500)
+Processing 1704 batches(218064 broadphase cells total)...
+Initialized 625000000 occlusion sub-chunks - took 29.1112514s
+[Rust.MapCache] Map uploaded to backend: https://files.facepunch.com/rust/maps/80acfc0d215502c6f671910259b8869fedc11c116322d95282745b0325d9f84f/proceduralmap.5000.0.288_80acfc0d215502c6f671910259b8869f.map
+[Physgun] Carbon detected! Setting up permissions bridge...
+[Physgun] Oxide permission bridge initialized successfully
+Requested 'PhysgunRGT' for compilation
+[S_API] SteamAPI_Init(): Loaded local 'steamclient.so' OK.
+Setting breakpad minidump AppID = 252490
+SteamInternal_SetMinidumpSteamID:  Caching Steam ID:  76561197960265728 [API loaded no]
+[S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
+SteamServer Initialized
+[ImageDatabase] The server identifier has changed. Wiping old image database. [old 0, new 121943]
+[RustEdit] - Checking for updates...
+ Batch completed! OSI on 24 plugins.
+[ServerMetrics]: Applying Startup Patches
+[ServerMetrics]: Applied Startup Patch: BaseEntity_Spawn_Metrics_Patch
+[ServerMetrics]: Applied Startup Patch: BaseNetworkable_Kill_Metrics_Patch
+[ServerMetrics]: Applied Startup Patch: ConsoleSystem_Internal_Patch
+[ServerMetrics]: Applied Startup Patch: InvokeHandlerBase_DoTick_Patch
+Note: Skipping work queue 'PowergridStageChangeWorkQueue', it declares no RunJob.
+[ServerMetrics]: Applied Startup Patch: ObjectWorkQueue_RunJob_Patch
+[ServerMetrics]: Applied Startup Patch: RPCServer_Attribute_Method_Patch
+[ServerMetrics]: Applied Startup Patch: ServerMgr_Metrics_Patches
+Server startup complete
+[Bootstrap] completed in 452.90s
+[Codefling] Failed fetching vendor. Error code 404!
+[Physgun] Game server successfully started
+[Physgun] Loaded Physgun Utils v2.0.0
+[Physgun] Welcome! There is currently no Physgun Utils commands available.
+[Physgun] You can edit the config file located in the root of your file manager. "physgun.toml"
+[RustEdit] - The RustEdit extension is up to date!
+SteamServer Connected
+[Rust.MapCache-Images] Image uploaded to backend: https://files.facepunch.com/rust/map-images/5f14439b5b21c2680e22286b23c295fa54b7e9df50efbc4a62a50a2a8535141c/proceduralmap.5000.0.288_5f14439b5b21c2680e22286b23c295fa.jpg
+[Physgun.MapExtractor] Generating shore map...
+[Physgun.MapExtractor] Extracting terrain data...
+[RustEdit] - No custom vending machines found in map
+[RustEdit] - 0 loot containers processed!
+[RustEdit] - 0 resource entities processed!
+[RustEdit] - 0 junkpiles processed!
+[RustEdit] - Connected 27 shopkeepers to vending machines
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+[Physgun] World setup complete
+Loaded plugin PhysgunRGT v1.0.0 by Physgun [1113ms]
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/underwater_lab/underwater_lab_b.prefab' is now fully built in 100.15 seconds (4 tiles).
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_1.prefab' is now fully built in 100.39 seconds (289 tiles).
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_2.prefab' is now fully built in 100.49 seconds (324 tiles).
+BradleyAPC Spawned at :(112.05, 41.82, -655.09)
+Checking for new Steam Item Definitions..
+[RustNav] Navmesh 'default' is now fully built in 210.54 seconds (219961 tiles).
+[RustNav] Saving navmesh to path: server/rust/proceduralmap.5000.1337.288.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 231.6168 ms
+Saved 100,994 ents, cache(0.08), write(0.05), disk(0.01).
+Saving complete
+Transitioning to dead state from Patrol: scientist2 suicided on AI failure at (-31.41, 22.72, -2835.76) in Q36
+FlipNeroo with steamid 76561199389941588 joined from ip 69.141.121.143:54494 with platform windows
+	NetworkId 76561199389941588 is 146229 (FlipNeroo)
+PlayerState was from old protocol or different seed, or not from a loaded save. Clearing player state
+FlipNeroo[76561199389941588] has spawned
+[Global] FlipNeroo : hey when server wipe all the tp and shop are gone
+69.141.121.143:54494/76561199389941588/FlipNeroo disconnecting: disconnect
+[Physgun] Unity 6 crash fix applied
+[RustNav] Saving navmesh to path: server/rust/proceduralmap.5000.1337.288.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 2737.4663 ms
+Saved 101,056 ents, cache(0.04), write(0.05), disk(0.09).
+Saving complete
+> quit
+Saving plugin configuration and data..
+Shutting down Carbon..
+Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+Unloaded plugin Chaos Commands v1.0.64 by k1lly0u
+Unloaded plugin Chaos Plugin Interface v1.0.64 by k1lly0u
+Unloaded plugin ChaosNPC v3.0.45 by k1lly0u
+Unloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+Unloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+Unloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+Unloaded plugin RustEdit Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+Unloaded plugin RustEdit IO Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+Unloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+Unloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+Unloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+Unloaded plugin RustEdit APC Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+Unloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+Unloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+Unloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+Unloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+Invalidate Network Cache took 0.03 seconds
+[RustNav] Saving navmesh to path: server/rust/proceduralmap.5000.1337.288.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 3304.0018 ms
+Saved 101,052 ents, cache(0.35), write(0.04), disk(0.08).
+Saving complete
+Config Saved
+[Raknet] Server Shutting Down (quit)
+/entrypoint.sh: line 220:    91 Killed                  ./RustDedicated -batchmode +server.port 28079 +server.queryport 28081 +server.identity "rust" +rcon.port 28080 +rcon.web true +server.level "Procedural Map" +server.url "https://discord.gg/T5h3RDXjEX" +server.maxplayers 75 +rcon.password "t1ZtOm6B6gWwICKR" +server.saveinterval 600 +app.port 28082 +server.worldsize "5000" +server.seed "1337" -logfile - +server.gamemode "" +server.logoimage "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png" +server.headerimage "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png" +server.level Custom Map +server.ping_region_code_override us5 -job-worker-count 3 -noconsole
