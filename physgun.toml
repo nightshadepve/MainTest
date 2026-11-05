@@ -1,0 +1,33 @@
+experimental_optimizations = false
+god_tools = true
+god_tools_external_staff_access = true
+god_tools_external_api_access = false
+god_tools_player_traces_seconds = 600
+vm_optimizations = true
+save_loading_optimizations = true
+memory_optimizations = false
+loot_spawning_optimizations = true
+navmesh_source_caching = false
+navmesh_build_caching = false
+deep_sea_navmesh_caching = false
+fix_buried_item_null_ownership_shares = true
+prevent_console_spam_crashes = true
+orphaned_entity_cleanup = false
+horse_optimizations = true
+async_save_game_disk_writes = true
+async_navmesh_saves = true
+transform_tick_optimizations = false
+pve_disable_server_occlusion = true
+fix_invalid_a_star_paths = true
+hide_rcon_connection_spam = true
+
+[packet_flooding_kick_prevention]
+enabled = true
+sustained_flood_kick_seconds = 4.0
+minimum_connections = 3
+mass_reconnect_window = 1.0
+mass_reconnect_kicks_percentage_threshold = 0.1
+mass_reconnect_kicks_threshold = 2
+lag_spike_kick_prevention = true
+lag_spike_threshold = 2.0
+lag_spike_grace_period = 5.0

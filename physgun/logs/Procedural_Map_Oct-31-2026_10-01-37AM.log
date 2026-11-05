@@ -1,0 +1,2730 @@
+[PhysgunEntry] Updating Rust server via DepotDownloader...
+Physgun · Steam Content Updater (DepotDownloader v3.4.0)
+› Downloading directly from Steam CDN
+› No username given. Using anonymous account with dedicated server subscription.
+› Connecting to Steam
+✓ Connected to Steam
+› Logging in to Steam (anonymous)
+✓ Logged in to Steam
+› Rust Dedicated Server (app 258550, branch public)
+
+› Preparing download
+› Fetching manifest for depot 258552
+› Fetching manifest for depot 258554
+› Checking existing files for depot 258552
+› Downloading depot 258552
+› Checking existing files for depot 258554
+  100%  8.84 MB / 8.84 MB
+✓ Updated (build 26139947) — downloaded 3.36 MB in 1s
+[PhysgunEntry] Starting Physgun Rust Server with Command - ./RustDedicated -batchmode +server.port 28079 +server.queryport 28081 +server.identity "rust" +rcon.port 28080 +rcon.web true +server.level "Procedural Map" +server.url "https://discord.gg/T5h3RDXjEX" +server.maxplayers 75 +rcon.password "***" +server.saveinterval 600 +app.port 28082 +server.levelurl "https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map" -logfile - +server.gamemode "" +server.logoimage "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png" +server.headerimage "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png" +server.level Custom Map +server.ping_region_code_override us5 -job-worker-count 3 -noconsole
+[PhysgunEntry] Mirroring server console to /home/container/physgun/logs/Procedural_Map_Oct-31-2026_10-01-37AM.log
+[PhysgunEntry] Updating Carbon...
+[PhysgunEntry] Carbon update complete!
+[PhysgunEntry] Updated Oxide.Ext.Discord.dll
+[PhysgunEntry] Updated Oxide.Ext.RustEdit.dll
+[PhysgunEntry] Updated Oxide.Ext.Chaos.dll
+[PhysgunEntry] Updated Oxide.Ext.ChaosNPC.dll
+[Physgun] Bootstrapping for game Rust
+[Physgun] Loaded config from physgun.toml
+[Physgun] Loading utils...
+[Physgun] Exiting bootstrapper...
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=4194304"
+    "memorysetup-bucket-allocator-block-count=1"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=4194304"
+    "memorysetup-profiler-bucket-allocator-block-count=1"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=4194304"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Processor: AMD Ryzen 9 9950X 16-Core Processor, 32 core(s) @ 5448 MHz 
+Available Memory: 190862 MB 
+Linux Kernel and distribution: Linux 6.8 Debian GNU/Linux 13 64bit
+System Language: C
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to system scope bus via local transport: Host is down
+Keyboard Layout: default
+Mono path[0] = '/home/container/RustDedicated_Data/Managed'
+Mono config path = '/home/container/RustDedicated_Data/MonoBleedingEdge/etc'
+[Physgun] Bootstrapping Assembly-CSharp
+ Carbon Release is up to date, no self-updating necessary. Running Production build [2.0.262] on tag 'production_build'.
+ Initialized Carbon.Startup 2.0.262.0
+ Preloaded 0Harmony 2.4.2.0
+ Preloaded Ben.Demystifier 0.4.0.0
+ Preloaded ZstdSharp 0.8.0.0
+ Preloaded SharpCompress 0.32.2.0
+ Preloaded Carbon.Compat 2.0.262.0
+ Preloaded protobuf-net 3.0.0.0
+ Preloaded protobuf-net.Core 3.0.0.0
+ Preloaded System.Collections.Immutable 9.0.0.0
+ Preloaded System.Diagnostics.DiagnosticSource 7.0.0.2
+ Loading patched assembly 'Assembly-CSharp.dll' 
+ Loading patched assembly 'Facepunch.Console.dll' 
+ Loading patched assembly 'Facepunch.Network.dll' 
+ Loading patched assembly 'Facepunch.Nexus.dll' 
+ Loading patched assembly 'Facepunch.Ping.dll' 
+ Loading patched assembly 'Facepunch.Rcon.dll' 
+ Loading patched assembly 'Facepunch.Unity.dll' 
+ Loading patched assembly 'Fleck.dll' 
+ Loading patched assembly 'Rust.Clans.Local.dll' 
+ Loading patched assembly 'Rust.Data.dll' 
+ Loading patched assembly 'Rust.FileSystem.dll' 
+ Loading patched assembly 'Rust.Global.dll' 
+ Loading patched assembly 'Rust.Harmony.dll' 
+ Loading patched assembly 'Rust.Localization.dll' 
+ Removed 'Microsoft.CodeAnalysis.CSharp.dll'
+ Removed 'Microsoft.CodeAnalysis.dll'
+ Removed 'System.Collections.Immutable.dll'
+Shutdown handler: initialize.
+JobSystem: Creating JobQueue using job-worker-count value 3
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.15x1-13 (a91cf34396ee)
+[Subsystems] Discovering subsystems at path /home/container/RustDedicated_Data/UnitySubsystems
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.216 seconds
+- Finished resetting the current domain, in  0.001 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Shader 'Soft Mask/TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+[Physgun] Waiting for game to start...
+Profiler Disabled!
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+UnloadTime: 1.072782 ms
+Set managed directory to '/home/container/RustDedicated_Data/Managed'
+Set harmony directory to '/home/container/RustDedicated_Data/../HarmonyMods'
+[HarmonyLoader] Couldn't unload mod 'Physgun.Rust.MapUploader': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.MapUploader] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.Rust.MapUploader.dll
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.MapUploader] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.Rust.MapUploader'
+[HarmonyLoader] Couldn't unload mod 'Physgun.Rust.Metrics': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.Metrics] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.Rust.Metrics.dll
+Note: Cannot patch any time warnings yet. We will patch it upon server start.
+Note: Cannot patch BaseEntity_Spawn_Metrics_Patch yet. We will patch it upon server start.
+Note: Cannot patch BaseNetworkable_Kill_Metrics_Patch yet. We will patch it upon server start.
+Note: Cannot patch ConsoleSystem_Internal_Patch yet. We will patch it upon server start.
+Note: Cannot patch InvokeHandlerBase_DoTick_Patch yet. We will patch it upon server start.
+Note: Cannot patch ObjectWorkQueue_RunJob_Patch yet. We will patch it upon server start.
+Note: Cannot patch RPCServer_Attribute_Method_Patch yet. We will patch it upon server start.
+Note: Cannot patch ServerMgr_Metrics_Patches yet. We will patch it upon server start.
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.Metrics] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.Rust.Metrics'
+[HarmonyLoader] Couldn't unload mod 'Physgun.Rust.Permissions': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.Permissions] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.Rust.Permissions.dll
+[Physgun.Rust.Permissions] Loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.Rust.Permissions] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.Rust.Permissions'
+[HarmonyLoader] Couldn't unload mod 'Physgun.RustNativeStdio': not loaded
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.RustNativeStdio] Loading from /home/container/RustDedicated_Data/../HarmonyMods/Physgun.RustNativeStdio.dll
+[HarmonyLoader com.facepunch.rust_dedicated.Physgun.RustNativeStdio] Loaded harmony mod 'com.facepunch.rust_dedicated.Physgun.RustNativeStdio'
+gpath.c:115: assertion 'filename != NULL' failed
+
+3D Noise requires higher shader capabilities (Shader Model 3.5 / OpenGL ES 3.0), which are not available on the current platform: graphicsShaderLevel (current/required) = 30 / 35
+Bootstrap Startup
+[CrashSessionMarker]{"SessionStartUtc":"2026-10-31T10:01:46.862356Z","Release":"release#168909","UserId":null,"UserName":null,"Tags":{"memory":"186gb","operatingSystem":"Linux 6.8 Debian GNU/Linux 13 64bit","batteryStatus":"Unknown","deviceModel":"PC","processorType":"AMD Ryzen 9 9950X 16-Core Processor","graphicsDeviceName":"Null Device","graphicsMemorySize":"0gb","scene":"Bootstrap","qualitylevel":"0","realm":"SERVER","official":"false","modded":"true","mod_framework":"carbon"},"LastServerDisconnectUtc":null}
+[Bootstrap] Opening Bundles
+Loading maps/maps.bundle
+Loading shared/assetscenes.bundle
+Loading shared/content.bundle
+Loading shared/content.excluded.bundle
+Loading shared/content.private.bundle
+Loading shared/items.preload.bundle
+Loading shared/monuments.bundle
+Loading shared/skinnables.preload.bundle
+[Bootstrap] Opening Bundles done in 1.01s
+[Bootstrap] Loading Menu Prefabs
+System
+	Name: e7d68b63-c566-4cd4-b1ca-684edf5393a4
+	OS:   Linux 6.8 Debian GNU/Linux 13 64bit
+
+CPU
+	Model:  AMD Ryzen 9 9950X 16-Core Processor
+	Cores:  32
+	Memory: 190862 MB
+
+GPU
+	Model:  Null Device
+	API:    NULL 1.0 [1.0]
+	Memory: 128 MB
+	SM:     30
+
+Process
+	Memory:   0 MB
+
+Mono
+	Collects: 98
+	Memory:   131 MB
+
+
+[Bootstrap] Loading Menu Prefabs done in 3.46s
+[Bootstrap] Loading Game Manifest
+Manifest Metadata Loaded
+	42150 pooled strings
+	17332 prefab properties
+	430 effect categories
+	2412 entity names
+[Bootstrap] Loading Game Manifest done in 0.09s
+[Bootstrap] DONE!
+[Bootstrap] DONE! done in 0.00s
+[Bootstrap] Running Self Check
+[Bootstrap] Running Self Check done in 0.00s
+[Bootstrap] Bootstrap Tier0
+[Physgun] OnLoaded
+[Physgun] Init
+[Physgun] rust-build-26139947 b0649be95c256328bb434a6c4c2f1964aba89939
+[Physgun] Collected 87 permissions
+[Physgun] Carbon detected! Setting up permissions bridge...
+[Physgun.Optimizations] OnLoaded
+[Physgun.Optimizations] rust-build-26139947 6b2903f555bf1687e094f9a92b7a17d978185d65
+Protocol: 2635.289.1
+Build Date: 10/22/2026 16:30:56
+Unity Version: 6000.3.15x1-13
+Changeset: 168909
+Branch: release
+Command Line: "./RustDedicated" "-batchmode" "+server.port" "28079" "+server.queryport" "28081" "+server.identity" "rust" "+rcon.port" "28080" "+rcon.web" "true" "+server.level" "Procedural Map" "+server.url" "https://discord.gg/T5h3RDXjEX" "+server.maxplayers" "75" "+rcon.password" "******" "+server.saveinterval" "600" "+app.port" "28082" "+server.levelurl" "https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map" "-logfile" "-" "+server.gamemode" "" "+server.logoimage" "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png" "+server.headerimage" "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png" "+server.level" "Custom" "Map" "+server.ping_region_code_override" "us5" "-job-worker-count" "3" "-noconsole" 
+Setup unity update hooks
+Command 'batchmode' not found
+server.port: "28079"
+server.queryport: "28081"
+server.identity: "rust"
+rcon.port: "28080"
+rcon.web: "True"
+server.level: "Procedural Map"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "75"
+Command 'rcon.password' not found
+server.saveinterval: "600"
+app.port: "28082"
+server.levelurl: "https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map"
+Command 'logfile' not found
+Command '' not found
+HDR Render Texture not supported, disabling HDR on reflection probe.
+Couldn't find gamemode: 1
+server.gamemode: "1"
+server.logoimage: "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+server.headerimage: "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+server.ping_region_code_override: "us5"
+Command 'job-worker-count' not found
+Command 'noconsole' not found
+[Bootstrap] Bootstrap Tier0 done in 4.34s
+[Bootstrap] Bootstrap Systems
+[Bootstrap] Bootstrap Systems done in 0.10s
+[Bootstrap] Bootstrap Config
+Command 'batchmode' not found
+server.port: "28079"
+server.queryport: "28081"
+server.identity: "rust"
+rcon.port: "28080"
+rcon.web: "True"
+server.level: "Procedural Map"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "75"
+Command 'rcon.password' not found
+server.saveinterval: "600"
+app.port: "28082"
+server.levelurl: "https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map"
+Command 'logfile' not found
+Command '' not found
+Couldn't find gamemode: 1
+server.gamemode: "1"
+server.logoimage: "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+server.headerimage: "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+server.ping_region_code_override: "us5"
+Command 'job-worker-count' not found
+Command 'noconsole' not found
+Cannot set gc.incremental as it is read only
+Server Config Loaded
+Running server/rust/cfg/users.cfg
+Command 'batchmode' not found
+server.port: "28079"
+server.queryport: "28081"
+server.identity: "rust"
+rcon.port: "28080"
+rcon.web: "True"
+server.level: "Procedural Map"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "75"
+Command 'rcon.password' not found
+server.saveinterval: "600"
+app.port: "28082"
+server.levelurl: "https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map"
+Command 'logfile' not found
+Command '' not found
+Couldn't find gamemode: 1
+server.gamemode: "1"
+server.logoimage: "https://rust-server-images.physgun.com/56d63dcade2ce8722a2427daace23c0f9e359e9d1f757298aa9e5ca821dbaa43.png"
+server.headerimage: "https://rust-server-images.physgun.com/2c2055245a17b2f7a99dd7e7c08286c70438f3d968836ab174b2d331c595a348.png"
+server.ping_region_code_override: "us5"
+Command 'job-worker-count' not found
+Command 'noconsole' not found
+[Bootstrap] Bootstrap Config done in 0.09s
+[Bootstrap] Loading Items
+Skinnable Warmup
+Manifest Assets Loaded
+166 skinnable objects
+Initializing Nexus
+Nexus endpoint and/or secret key is not set, not starting nexus connection
+Loading Scene
+Carbon Analytics are ON. They're entirely anonymous and help us to further improve.
+Carbon 2.0.262.0 [2026.10.01.0] 8a81d70 on Linux 
+       raul on production (2026-10-02 11:07:29 +0200)
+Rust   134/2635.289.1 on release (22/10/2026 17:30:56) 168909
+[CrashSessionMarker]{"SessionStartUtc":"2026-10-31T10:01:46.862356Z","Release":"release#168909","UserId":null,"UserName":null,"Tags":{"memory":"186gb","operatingSystem":"Linux 6.8 Debian GNU/Linux 13 64bit","batteryStatus":"Unknown","deviceModel":"PC","processorType":"AMD Ryzen 9 9950X 16-Core Processor","graphicsDeviceName":"Null Device","graphicsMemorySize":"0gb","scene":"AssetScene-bootstrap","qualitylevel":"0","realm":"SERVER","official":"false","modded":"true","mod_framework":"carbon"},"LastServerDisconnectUtc":null}
+Oxide assembly conversion for 'Oxide.Ext.Chaos.dll' took 404ms
+Oxide assembly conversion for 'Oxide.Ext.ChaosNPC.dll' took 51ms
+Oxide assembly conversion for 'Oxide.Ext.Discord.dll' took 291ms
+Oxide assembly conversion for 'Oxide.Ext.RustEdit.dll' took 143ms
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+AsyncResourceUpload failed.
+HDR Render Texture not supported, disabling HDR on reflection probe.
+The shader Hidden/Time of Day/Scattering (UnityEngine.Shader) on effect Main Camera (TOD_Scattering) is not supported on this platform!
+Missing shader in Main Camera (TOD_Scattering)
+Missing shader in Main Camera (TOD_Scattering)
+[CrashSessionMarker]{"SessionStartUtc":"2026-10-31T10:01:46.862356Z","Release":"release#168909","UserId":null,"UserName":null,"Tags":{"memory":"186gb","operatingSystem":"Linux 6.8 Debian GNU/Linux 13 64bit","batteryStatus":"Unknown","deviceModel":"PC","processorType":"AMD Ryzen 9 9950X 16-Core Processor","graphicsDeviceName":"Null Device","graphicsMemorySize":"0gb","scene":"Procedural Map","qualitylevel":"0","realm":"SERVER","official":"false","modded":"true","mod_framework":"carbon"},"LastServerDisconnectUtc":null}
+server.hostname: "[US] Nightshade [PvPvE | Events | QoL Mods]"
+server.description: "| Hybrid PvE | Rotating PvP Monuments | Player-Built Raid Bases |\n| NPC Raidable Bases | Dungeons | Heli & Bradley Signals | QoL Mods |\n\nWe are a new-player-friendly PvE server with optional PvP events.\n\nPvE is serverwide by default. No unauthorized raiding.\nBases, loot, storage, and deployables are protected by Team/TC ownership, with optional sharing for trusted players.\n\nPvP is limited to rotating PvP monuments and optional player-defended raid base events.\nWatch the zone warnings — spicy zones mean spicy consequences.\n\nServer Restarts Daily @ 6 AM EST"
+server.tags: "monthly,pve"
+decay.scale: "0.5"
+server.respawnresetrange: "20"
+server.tickrate: "35"
+server.entityrate: "25"
+fps.limit: "60"
+server.netlog: "True"
+ai.sensetime: "2"
+server.url: "https://discord.gg/T5h3RDXjEX"
+server.maxplayers: "100"
+server.worldsize: "3500"
+server.saveinterval: "900"
+ioentity.allow_on_boats: "True"
+ai.frametime: "10"
+ai.tickrate: "10"
+aithinkmanager.animalframebudgetms: "5"
+aithinkmanager.framebudgetms: "5"
+aimanager.ai_dormant_max_wakeup_per_tick: "20"
+aimanager.ai_htn_player_junkpile_tick_budget: "3"
+aimanager.ai_to_player_distance_wakeup_range: "140"
+aibrainsenses.humanknownplayerslosupdateinterval: "0.25"
+ai.npc_sensory_system_tick_rate_multiplier: "6"
+ai.npc_max_junkpile_count: "10"
+ai.npc_junkpilespawn_chance: "0.04"
+ai.npc_max_roam_multiplier: "2"
+ai.npc_max_population_military_tunnels: "2"
+boatai.avoidance_update_interval: "1"
+boatai.seconds_until_sleep: "20"
+beeswarmai.think_budget_ms: "0.05"
+bradley.respawndelayminutes: "90"
+heli.lifetimeminutes: "25"
+camerarenderer.completionframebudgetms: "3"
+camerarenderer.entitymaxdistance: "75"
+camerarenderer.farplane: "200"
+camerarenderer.playermaxdistance: "25"
+camerarenderer.playernamemaxdistance: "8"
+camerarenderer.renderinterval: "0.1"
+camerarenderer.samplesperrender: "2000"
+chat.historysize: "500"
+decay.tick: "900"
+growableentity.framebudgetms: "0.5"
+env.nightlight_brightness: "0.018"
+env.nightlight_distance: "7"
+env.nightlight_fadefraction: "0.75"
+env.redmoon: "False"
+Cannot set gc.incremental as it is read only
+gc.incremental_enabled: "True"
+gc.incremental_milliseconds: "8"
+global.cinematicgingerbreadcorpses: "True"
+basefirework.maxactivefireworks: "15"
+basemetaldetector.detectlongrangetick: "2"
+basemetaldetector.detectminmovementdistance: "0.5"
+basemission.missionvalidstateworkqueuebudget: "0.05"
+basemission.missionvalidstateworkqueuecooldown: "5"
+basenavigator.basenavmovementframeinterval: "3"
+basepet.movementupdatebudgetms: "0.5"
+beehive.updatehiveinterval: "180"
+beehive.updatehivestatsinterval: "180"
+beeswarmmaster.amounttospawn: "2"
+beeswarmmaster.secondsbetweenspawns: "90"
+burieditems.maxburieditems: "5"
+cargoship.event_duration_minutes: "40"
+cargoship.loot_rounds: "2"
+cargoship.loot_round_spacing_minutes: "12"
+cctv.camera_disable_seconds: "180"
+cctv.inputbudgetms: "0.03"
+clothlod.clothloddist: "15"
+commandblock.log_executions: "False"
+construct.frameminutes: "20"
+drone.maxcontrolrange: "600"
+metaldetectorsource.timeoutduration: "3600"
+metaldetectorsource.attemptspersubsourcespawn: "3"
+metaldetectorsource.mindistancebetweensubsources: "2"
+mlrs.brokendownminutes: "60"
+rcon.maxconnections: "100"
+ridablehorse.groundangleupdaterate: "0.1"
+sensecomponent.maxrefreshintervalseconds: "1.5"
+sensecomponent.minrefreshintervalseconds: "0.35"
+spawn.max_density: "0.85"
+spawn.max_rate: "0.85"
+spawn.min_density: "0.35"
+spawn.min_rate: "0.35"
+spawn.player_base: "75"
+spawn.player_scale: "1.5"
+spawn.tick_individuals: "450"
+spawn.tick_populations: "90"
+stash.reveal_tick_rate: "1"
+telephonemanager.maxconcurrentcalls: "5"
+travellingvendor.attempt_pullovers: "False"
+tugboat.tugcorpseseconds: "3600"
+tugboat.tugdecayminutes: "1440"
+tugboat.tugdecaystartdelayminutes: "720"
+tutorialisland.spawntutorialislandfornewplayer: "False"
+vendingmachine.max_history: "2500"
+vendingmachine.max_processed: "2500"
+wildlifehazard.clienttickrate: "0.2"
+wildlifehazard.repositionattempts: "3"
+treemanager.enabletreestreaming: "False"
+net.global_networked_bases: "True"
+physics.groundwatchfails: "2"
+physics.sleepthreshold: "0.005"
+physics.solveriterationcount: "6"
+player.keepteaondeath: "True"
+player.tickrate_cl: "64"
+player.tickrate_sv: "30"
+boar.population: "3"
+chicken.population: "2"
+crocodile.population: "0.5"
+hotairballoon.population: "0.5"
+metaldetectorsource.population: "0"
+modularcar.population: "2"
+panther.population: "0.25"
+ridablehorse.population: "1"
+snakehazard.population: "3"
+stag.population: "2"
+tiger.population: "0.25"
+traincar.population: "1.5"
+wolf2.population: "1.25"
+server.level: "Frosthaven Christmas"
+server.bansservertimeout: "15"
+server.entitybatchtime: "1.5"
+server.destroytaskbatchcount: "256"
+server.debrisdespawn: "15"
+server.foodspoiling: "True"
+server.http_connection_limit: "32"
+server.idlekick: "45"
+server.maxdecryptqueuebytes: "524288000"
+server.maxdecryptqueuelength: "5000"
+server.maxdecryptthreadwait: "100"
+server.maxmainthreadwait: "100"
+server.maxpacketspersecond: "3000"
+server.maxpacketspersecond_rpc: "400"
+server.maxpacketspersecond_rpc_signal: "50"
+server.maxpacketspersecond_syncvar: "300"
+server.maxpacketspersecond_tick: "800"
+server.maxunack: "6"
+server.netcachesize: "67108864"
+server.playertimeout: "90"
+server.savecachesize: "790866"
+server.saveframebudget: "15"
+server.snapshottaskbatchcount: "128"
+server.updatebatch: "1024"
+server.updatebatchspawn: "2048"
+stability.collapse: "0.01"
+wipetimer.wipehourofday: "14"
+wipetimer.wipetimezone: "America/New_York"
+Preloaded plugin Chaos Commands v1.0.65 by k1lly0u
+Preloaded plugin Chaos Plugin Interface v1.0.65 by k1lly0u
+Preloaded plugin ChaosNPC v3.0.45 by k1lly0u
+Preloaded plugin ChaosNPC Commands v3.0.45 by k1lly0u
+[DiscordExtension] [Info]: Using Discord Extension Version: 3.1.7
+Preloaded plugin Discord Extension v3.1.7 by PsychoTea & DylanSMR & Tricky & Kirollos & MJSU
+Preloaded plugin RustEdit Automatic Updater v1.0.1 by Chaos
+Preloaded plugin RustEdit Core v1.0.1 by Chaos
+Failed to load plugin Yu2jdJ!Mza^HIl}zUSa_wwKL$ in oxide extension Oxide.Ext.RustEdit: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].FindEntry (TKey key) [0x00008] in <e605204d165a49d89ae7579f3d894429>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryGetValue (TKey key, TValue& value) [0x00000] in <e605204d165a49d89ae7579f3d894429>:0 
+  at Carbon.Core.ModLoader.GetCompilationResult (System.String file, System.Boolean clear) [0x00000] in /home/runner/work/Carbon/Carbon/src/Carbon.Components/Carbon.Common/src/Carbon/Modding/ModLoader.cs:25 
+  at Carbon.Core.ModLoader.InitializePlugin (System.Type type, Oxide.Plugins.RustPlugin& plugin, Carbon.Core.ModLoader+Package package, System.Action`1[T] preInit, System.Boolean precompiled) [0x00101] in /home/runner/work/Carbon/Carbon/src/Carbon.Components/Carbon.Common/src/Carbon/Modding/ModLoader.cs:266 
+  at Carbon.Compat.Lib.OxideCompat.RegisterPluginLoader (Oxide.Core.Extensions.ExtensionManager self, Oxide.Core.Plugins.PluginLoader loader, Oxide.Core.Extensions.Extension oxideExt) [0x000e8] in /home/runner/work/Carbon/Carbon/src/Carbon.Components/Carbon.Compat/src/Lib/OxideCompat.cs:49 
+Preloaded plugin RustEdit Deployable Core v1.0.1 by Chaos
+Preloaded plugin RustEdit IO Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Vending Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Loot Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Diesel Collectable Spawner v1.0.1 by Chaos
+Preloaded plugin RustEdit Desk Keycard Spawner v1.0.1 by Chaos
+Preloaded plugin RustEdit Resource Core v1.0.1 by Chaos
+Preloaded plugin RustEdit JunkPile Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Spawn Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Ocean Path v1.0.1 by Chaos
+Preloaded plugin RustEdit APC Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Vehicle Core v1.0.1 by Chaos
+Preloaded plugin RustEdit NPC Core v1.0.1 by Chaos
+Preloaded plugin RustEdit Excavator Rotation Correction v1.0.1 by Chaos
+Preloaded plugin RustEdit Custom Topology Layers v1.0.1 by Chaos
+Preloaded plugin RustEdit Shop Keepers v1.0.1 by Chaos
+Loaded plugin PhysgunRGT v1.0.0 by Physgun [709ms]
+Loaded plugin Image Library v2.0.67 by Absolut & K1lly0u [432ms]
+Loaded plugin Monument Finder v3.1.5 by WhiteThunder [195ms]
+Loaded plugin Player DLC API v1.6.2 by k1lly0u [56ms]
+Loaded plugin Discord Status (Webhook) v6.1.0 by AhmadAkal [49ms]
+Loaded plugin MedioReports v2.2.1 by MediocratyItself [60ms]
+[NightshadeConsoleFilter] Loaded. Active filters: 1133. Suppressing selected Unity/Rust log spam after plugin load.
+Loaded plugin NightshadeConsoleFilter v1.0.1 by Nightshade [36ms]
+Loaded plugin PopControl v1.7.0 by Papa [141ms]
+Loaded plugin Queue Holder v1.0.2 by Tryhard [36ms]
+Loaded plugin Monuments Watcher v0.1.12 by IIIaKa [282ms]
+Loaded plugin Nightshade Purge Status v1.0.0 by Nightshade [111ms]
+Loaded plugin TruePVE v2.4.4 by nivex [637ms]
+Loaded plugin ZoneDomes v2.0.2 by k1lly0u [51ms]
+Loaded plugin Zone Manager v3.1.14 by k1lly0u [405ms]
+Loaded plugin Zone Manager Auto Zones v1.4.5 by FastBurst [220ms]
+Loaded plugin NightshadeRaidProtection v1.0.4 by Nightshade [88ms]
+Loaded plugin NightshadeShieldStatus v1.0.0 by Nightshade [73ms]
+[UnifiedLootProtection] [UnifiedLootProtection] Loaded share data: 0 entries. Known players: 137.
+Loaded plugin UnifiedLootProtection v1.1.1 by Nightshade [151ms]
+Loaded plugin BetterTC v1.7.1 by ninco90 [408ms]
+Loaded plugin Bodies to Bags v2.0.0 by Ryan [68ms]
+Loaded plugin Chest Stacks v1.4.7 by supreme [150ms]
+Loaded plugin CustomC4RocketTiers v1.1.0 by Blackmatic [326ms]
+Loaded plugin Hardy Planters v1.0.12 by imthenewguy [106ms]
+Loaded plugin NightshadeCrateEjector v1.0.0 by Nightshade [69ms]
+Loaded plugin Remover Tool v4.3.48 by Reneb/Fuji/Arainrr/Tryhard [407ms]
+Loaded plugin Restore Upon Death v0.6.5 by k1lly0u [110ms]
+Loaded plugin WirelessPower v1.2.9 by RickySpanish [273ms]
+Loaded plugin aQuarry v2.0.6 by AvG Лаймон [283ms]
+[extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.OnStorageItemTransferEnd_Patch1' (IndustrialStorageOnStorageItemTransferEnd) method [AfterPluginInit].
+[extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.get_Container_Patch1' (IndustrialStorageAdaptorPatch) method [AfterPluginInit].
+[extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.InputSlotRange_Patch1' (IndustrialStorageAdaptor_InputSlotRange) method [AfterPluginInit].
+[extendedindustrial] Automatically Harmony patched 'IndustrialStorageAdaptor.OutputSlotRange_Patch1' (IndustrialStorageAdaptor_OutputSlotRange) method [AfterPluginInit].
+Loaded plugin extendedindustrial v1.2.6 by bmgjet [147ms]
+Failed compiling 'Backpacks.cs':
+  1. Cannot implicitly convert type 'System.Action<Item, bool>' to 'System.Action<Item, bool, BasePlayer>' [CS0029]
+     (Backpacks 53 line 5698)
+Loaded plugin IQTeleportation v1.37.7 by Mercury [343ms]
+Loaded plugin PlayerRanks v2.3.4 by Steenamaroo [365ms]
+Loaded plugin Sign Artist v1.4.6 by Whispers88 [182ms]
+Loaded plugin Skinner v3.2.1 by Whispers88 [385ms]
+Loaded plugin UltimateLocker v2.1.5 by Scalbox [1093ms]
+Loaded plugin VIPPerks v1.2.1 by Nightshade [98ms]
+Loaded plugin Cases v2.0.1 by Mevent [336ms]
+Loaded plugin NightshadeRecycler v3.2.1 by Nightshade [141ms]
+Loaded plugin NightshadeShop v1.5.0 by Nightshade [338ms]
+Loaded plugin Personal Marketplace v1.4.1 by ZEODE [143ms]
+Loaded plugin Server Rewards v2.0.8 by k1lly0u [512ms]
+Loaded plugin Server Rewards Wipe v2.0.2 by ZEODE [42ms]
+Loaded plugin Super Card v1.0.7 by Mevent [38ms]
+Failed compiling 'VirtualQuarries.cs':
+  1. Delegate 'Action<Item, bool, BasePlayer>' does not take 2 arguments [CS1593]
+     (VirtualQuarries 70 line 852)
+Loaded plugin Activity Rewards v0.1.9 by IIIaKa [162ms]
+[SkillTree] Automatically Harmony patched 'Shield.ServerSideAttack_Patch1' (Shield_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'ChickenCoop.SubmitEggForHatching_Patch1' (ChickenCoop_SubmitEggForHatching_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'FarmableAnimal.ServerPetChicken_Patch1' (FarmableAnimal_ServerPetChicken_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.LivestockAnimal.AddFamiliarity_Patch1' (LivestockAnimal_AddFamiliarity_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.LivestockAnimal.HandlingCreditFor_Patch1' (LivestockAnimal_HandlingCreditFor_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Cow.TryMilk_Patch1' (Cow_TryMilk_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Sheep.GiveShearItems_Patch1' (Sheep_GiveShearItems_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Rust.Ai.Gen2.Sheep.Shear_Patch1' (Sheep_Shear_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'LivestockVendor.Server_SelectAnimal_Patch1' (LivestockVendor_Server_SelectAnimal_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'LivestockVendor.Server_SelectWool_Patch1' (LivestockVendor_Server_SelectWool_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'LivestockVendor.RollOffers_Patch1' (LivestockVendor_RollOffers_AddOffers_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'LivestockVendor.RollOffers_Patch2' (LivestockVendor_RollOffers_ScaleOffers_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'FishLookup.GetFish_Patch1' (FishLookup_GetFish_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'MetalDetectorSource.CreateFlag_Patch1' (Item_SplitItem_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'MetalDetectorFlag.OnFullyDug_Patch1' (OnFullyDug_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'BaseFishingRod.Server_RequestCast_Patch1' (FishingRod_Cast_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Recycler.StopRecycling_Patch1' (StopRecycling_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'Recycler.GetRecyclerStats_Patch2' (Recycler_GetRecyclerStats_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'BasePlayer.RadiationProtection_Patch1' (RadiationProtection_Patch) method [AfterPluginInit].
+[SkillTree] Automatically Harmony patched 'ItemModContainerArmorSlot.CreateForPlayer_Patch1' (ItemModContainerArmorSlot_Patch) method [AfterPluginInit].
+Loaded plugin Skill Tree v1.8.0 by imthenewguy [1954ms]
+Loaded plugin SkillTreeXPEvent v1.0.15 by imthenewguy [163ms]
+Loaded plugin BuyableTugboats v1.0.9 by imthenewguy [112ms]
+Loaded plugin Claim Vehicle v1.8.1 by WhiteThunder [107ms]
+Loaded plugin Craft Car Chassis v1.2.5 by WhiteThunder [113ms]
+Loaded plugin Nightshade MLRS Truck v1.0.8 by Nightshade [89ms]
+Loaded plugin Vehicle Decay Protection v2.9.0 by WhiteThunder [149ms]
+Loaded plugin Vehicle Licence v1.9.2 by Mabel [963ms]
+Loaded plugin ArmoredTrain v2.0.5 by Adem [705ms]
+Loaded plugin Bradley Drops v1.4.1 by ZEODE [423ms]
+Loaded plugin Convoy v3.0.6 by Adem [634ms]
+[DungeonEvents] Automatically Harmony patched 'ScientistNPC.get_displayName_Patch1' (ScientistNPC_DisplayName_Patch) method [AfterPluginInit].
+Loaded plugin Dungeon Events v3.11.1 by Martian [1088ms]
+Loaded plugin EventsManager v4.2.2 by Mevent & Qbis [388ms]
+Loaded plugin EventsManagerNotifier v1.0.11 by Mevent & M&B-Studios [39ms]
+Loaded plugin Heli Signals v1.4.1 by ZEODE [550ms]
+Loaded plugin HideAndSeek v1.1.0 by Nightshade [197ms]
+[IslandStorm] IslandStorm loaded. Use /storm start (requires islandstorm.admin permission).
+Loaded plugin IslandStorm v1.0.0 by Grok [145ms]
+Loaded plugin NightshadeAnnouncer v1.3.1 by Nightshade [101ms]
+Loaded plugin NightshadeVoteDay v1.2.0 by Nightshade [46ms]
+Loaded plugin Copy Paste v4.3.0 by misticos [429ms]
+Loaded plugin DefendableHomes v1.2.2 by KpucTaJl [559ms]
+Loaded plugin NightshadeRaidbase v1.0.16 by Nightshade [222ms]
+Loaded plugin Raidable Bases v3.2.2 by nivex [2238ms]
+Loaded plugin NpcSpawn v3.4.1 by KpucTaJl [1139ms]
+Loaded plugin Spawns v2.0.36 by Reneb / k1lly0u [94ms]
+[ZombieHorde] Automatically Harmony patched 'TravellingVendor.IsInvalidPlayer_Patch1' (TravellingVendorIsInvalidPlayerPatch) method [AfterPluginInit].
+Loaded plugin ZombieHorde v0.6.36 by k1lly0u [338ms]
+Loaded plugin Advanced Status v0.1.26 by IIIaKa [209ms]
+Loaded plugin Hud v3.5.2 by ahigao [179ms]
+Loaded plugin NPC Health Bar v1.0.10 by Chris [166ms]
+Loaded plugin NightshadeChat v1.0.0 by Rustonauts & Nightshade [245ms]
+Loaded plugin Notify v1.0.15 by Mevent [140ms]
+Loaded plugin PopUpAPI v2.0.4 by ThePitereq [58ms]
+Loaded plugin Restart Status v0.1.1 by IIIaKa [151ms]
+Loaded plugin ServerPanel v2.0.25 by Mevent [718ms]
+[ServerPanel Migrations] Loaded 6 migrations
+Loaded plugin ServerPanel Migrations v2.0.25 by Mevent [290ms]
+Loaded plugin ServerPanel Pop Ups v2.0.25 by Mevent [413ms]
+Loaded plugin Sort Button v2.7.0 by WhiteThunder, MON@H [217ms]
+Loaded plugin Teleport Status v0.1.2 by IIIaKa [231ms]
+Loaded plugin Wipe Schedule v2.0.22 by Mevent [263ms]
+Loaded plugin XFastButtons v1.1.0 by Monster [147ms]
+Loaded plugin AdminMenu v1.4.10 by 0xF // dsc.gg/0xf-plugins [652ms]
+Loaded plugin PowerfulAdmin v1.2.7 by codeboy [1843ms]
+[PowerfulAdmin Discord] Discord bot is disabled in PowerfulAdmin settings - bot idle.
+Loaded plugin PowerfulAdmin Discord v1.1.0 by codeboy [189ms]
+Loaded plugin Telekinesis v3.3.1 by WhiteThunder [167ms]
+Loaded plugin ServerPanel Installer v2.0.25 by Mevent [230ms]
+Asset Warmup (1/9010)
+Asset Warmup (9010/9010)
+[0.6s] asset_warmup
+gpath.c:115: assertion 'filename != NULL' failed
+
+WebSocket RCON Started on :28080
+Loading custom map from https://PHYSGUN_CUSTOM_MAP_URL/TheLostIsland_1.2.6.map
+Shader 'TextMeshPro/Distance Field - Depth Offset': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field NoZTest': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+[0.3s] Loading World
+[RustEdit] - IO data loaded and ready to be processed!
+[RustEdit] - Vending data loaded and ready to be processed!
+[RustEdit] - No loot data found in map file
+[RustEdit] - APC path data loaded and ready to be processed!
+[RustEdit] - No vehicle data found in map file
+[RustEdit] - NPC data loaded and ready to be processed!
+[8.1s] Spawning World
+[2.0s] Rail Meshes
+[0.9s] Train Track Collation
+[3.7s] Processing World
+[RustEdit] - No ocean patrol path data found in map file
+Generated ocean patrol path with node count: 365
+[4.5s] Ocean Patrol Paths
+[0.6s] Finalizing World
+[Chaos] - Checking for updates...
+[ChaosNPC] - Checking for updates...
+[Chaos] - Latest version is 1.0.65
+[Chaos] - The extension is up to date!
+Unloading 5 Unused Serialized files (Serialized files now loaded: 129)
+[0.5s] Cleaning Up
+Unloading 48942 unused Assets to reduce memory usage. Loaded Objects now: 1955385.
+Total: 784.191043 ms (FindLiveObjects: 154.053698 ms CreateObjectMapping: 21.086310 ms MarkObjects: 585.930549 ms  DeleteObjects: 23.119563 ms)
+
+[ChaosNPC] - Latest version is 3.0.45
+[ChaosNPC] - The extension is up to date!
+[Physgun.Optimizations] Accelerating save loading! 🚀
+Destroying 5178 old entities
+	done.
+Spawning 32 entities from map
+	done.
+Spawning 43747 entities from save
+TrainSignal found no nearby track. Disabling lights.
+	35319 / 43747
+[NightshadeAnnouncer] Announcement sent: [Nightshade] A portal tears open at sea… Deep Sea has spawned (North).
+[NightshadeAnnouncer] NightshadeAnnouncer: Deep Sea portal fired at (0.00, 0.00, 2500.00) (North)
+	done.
+Postprocessing 32 entities from map
+	done.
+Postprocessing 32 entities from save
+Starting to load entities into GlobalNetworkHandler...
+Took 15ms to load entities into GlobalNetworkHandler
+Calling kill - but already IsDestroyed!? rhibaidriver
+Calling kill - but already IsDestroyed!? rhibaidriver
+Calling kill - but already IsDestroyed!? rhibaidriver
+	done.
+[RustNav] Loading navmesh from path: server/rust/TheLostIsland_1.2.6.289.navmesh (synchronous: False)...
+[RustNav] Navmesh save and load threads: 4 (Environment.ProcessorCount 32, SystemInfo.processorCount 32, rustnav.savethreads 0)
+[RustNav] DLL Log: LoadNavMesh: applied 6 delta segment(s) to 'server/rust/TheLostIsland_1.2.6.289.navmesh', 66383 tiles after the merge.
+[RustNav] Navmesh 'unnamed' is now fully built in 145.03 seconds (108241 tiles).
+[RustNav] Successfully loaded navmesh with 66383 tiles in 522.7842 ms
+Enforcing SpawnPopulation Limits
+traincars.population (ConvarControlledSpawnPopulationRail) has 19 objects, but max allowed is 16
+ - deleting 3 objects
+	done.
+[RustNav] Disposing navmesh...
+Initializing 43888 entity links
+	done.
+Initializing 3654 stability supports
+	done.
+Initializing 2452 conditional models
+	done.
+Initializing 43693 entity save caches
+	done.
+Gamemode Convar :1
+Prefab 'assets/prefabs/gamemodes/1.prefab' not found in any asset scenes.
+Couldn't find prefab "assets/prefabs/gamemodes/1.prefab"
+Failed to create gamemode : 1
+Loaded 623493 occlusion sub-chunks from file - took 0.0801953 seconds
+[Physgun.Rust.Maps] Uploading custom map to backend...
+[Physgun.Rust.Maps] Map uploaded to backend!
+[Physgun] Carbon detected! Setting up permissions bridge...
+[Physgun] Oxide permission bridge initialized successfully
+Unloaded plugin PhysgunRGT v1.0.0 by Physgun
+Requested 'PhysgunRGT' for compilation
+
+    ██████████████
+  ████▓▓▓▓▓▓▓▓▓▓████           ____  __
+ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓███         / __ \/ /_  __  ___________ ___  ______
+███▓▓▓▓▓▓▓▓  ▓▓  ▓▓███       / /_/ / __ \/ / / / ___/ __ `/ / / / __ \
+██▓▓▓▓▓▓▓▓▓  ▓▓  ▓▓▓██      / ____/ / / / /_/ (__  ) /_/ / /_/ / / / /
+██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██     /_/   /_/ /_/\__, /____/\__, /\__,_/_/ /_/
+██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                /____/     /____/
+███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███
+ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓███        Rust server accelerated by Physgun Utils
+  ████▓▓▓▓▓▓▓▓▓▓████          Need help? https://discord.gg/physgun
+    ██████████████
+
+[S_API] SteamAPI_Init(): Loaded local 'steamclient.so' OK.
+Setting breakpad minidump AppID = 252490
+SteamInternal_SetMinidumpSteamID:  Caching Steam ID:  76561197960265728 [API loaded no]
+[S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
+SteamServer Initialized
+[Admin] Loaded uMod plugin metadata cache from file.
+Loading inbuilt skin manifest from GitHub...
+[PlayerDLCAPI] - Waiting for Steam inventory definitions to be updated. Total wait time : 17.4s
+[Discord Status (Webhook)] The plugin will attempt to edit the message with ID: 1512407393131171985
+[PopControl] [LWPop] Captured original maxplayers value: 100
+[PopControl] [LWPop] maxplayers -> 50 (online=0, joining=0, queued=0, offset=1, bounds=50-100)
+ Zone Manager Auto Zones v1.4.5 by FastBurst hook 'OnServerInitialized' took longer than 100ms [147ms]
+[BetterTC] Harmony Patched: RPC_PickupWallpaperStart_Patch
+[BetterTC] Harmony Patched: HasClothForPlacement_Patch
+[BetterTC] Harmony Patched: CheckWallpaper_Patch
+[BetterTC] Harmony Patched (Force both sides wallpapers: true)
+[Hardy Planters] Found and setup: 40 planter boxes.
+[RestoreUponDeath] Purged 0 expired user data entries
+[IQTeleportation] Automatic cleaning of user settings. 1 users and their settings were deleted due to absence from the server for more than 7 days
+[IQTeleportation] Received information about 56 monuments on the map
+[IQTeleportation] Saved 0 tugboats and 0 player boats for setting players' home points.
+[IQTeleportation] Saved 62 apartment rooms for setting players' home points
+[IQTeleportation] Initialized 3 warps; reserved commands: outpost, bandit, apartments
+[PlayerRanks] Clans is not installed and will not be used.
+[PlayerRanks] Rust:IO is not installed and will not be used.
+[PlayerRanks] PlayTime Tracker is not installed and will not be used.
+[PlayerRanks] Economics is not installed and will not be used.
+[Sign Artist] Waiting for Steamworks to update item definitions....
+[Skinner] Waiting for Steamworks to update skin item definitions
+[Skinner] Loading skins from 2 collections...
+[UltimateLocker] Waiting for Steam Workshop to update item definitions....
+[UltimateLocker] Skinner Patch applied successfully.
+[Cases] Items with the same ID found 11
+[Cases] Items with the same ID found 12
+[NightshadeShop] NightshadeShop v1.5.0 loaded: 14 categories, 125 listings, 9 Admin Shop categories, 64 trades.
+[Personal Marketplace] INFO: Harmony patch applied: Marketplace_Server_CanAcceptOrder_Patch
+[Personal Marketplace] INFO: Harmony patch applied: MarketTerminal_Server_SetMarketplaceHasPower_Patch
+[Personal Marketplace] INFO: Harmony patch applied: Marketplace_ChargeFraction_Patch
+[Personal Marketplace] INFO: Harmony patch applied: Marketplace_Server_RefreshChargeState_Patch
+[Activity Rewards] MonumentsWatcher plugin not found! MonumentsWatcher is required to work with monuments!
+* https://codefling.com/plugins/monuments-watcher
+[Activity Rewards] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[Skill Tree] Blueprint count: 667
+[Skill Tree] Spawned: workbench1.deployed
+[Skill Tree] Spawned: workbench2.deployed
+[Skill Tree] Spawned: workbench3.deployed
+[Skill Tree] Loading 9 images into ImageLibrary
+[Skill Tree] Loaded all images for SkillTree.
+[Skill Tree] Tracking 2 required nodes.
+[Convoy] Route caching has started!
+[IslandStorm] IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin
+[RaidableBases] Allowed spawn points in 0 zones.
+[RaidableBases] Blocked spawn points in 53 zones.
+[NpcSpawn] Loading custom navigation mesh files...
+[NpcSpawn] All custom navigation mesh files have loaded successfully!
+ NpcSpawn v3.4.1 by KpucTaJl hook 'OnServerInitialized' took longer than 100ms [572ms]
+[ZombieHorde] Validating horde profiles...
+ ZombieHorde v0.6.36 by k1lly0u hook 'ChaosNPC_PreSpawn' took longer than 100ms [295ms]
+[Restart Status] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+Command 'help' already exists.
+Command 'help' already exists.
+ ServerPanel Pop Ups v2.0.25 by Mevent hook 'OnServerInitialized' took longer than 100ms [201ms]
+[Teleport Status] AdvancedStatus plugin found, but not ready yet. Waiting for it to load...
+[XFastButtons] 
+-----------------------------
+     Author - Monster
+     VK - vk.com/idannopol
+     Discord - Monster#4837
+-----------------------------
+[RustEdit] - Checking for updates...
+ Batch completed! OSI on 111 plugins.
+[ServerMetrics]: Applying Startup Patches
+[ServerMetrics]: Applied Startup Patch: BaseEntity_Spawn_Metrics_Patch
+[ServerMetrics]: Applied Startup Patch: BaseNetworkable_Kill_Metrics_Patch
+[ServerMetrics]: Applied Startup Patch: ConsoleSystem_Internal_Patch
+[ServerMetrics]: Applied Startup Patch: InvokeHandlerBase_DoTick_Patch
+Note: Skipping work queue 'PowergridStageChangeWorkQueue', it declares no RunJob.
+[ServerMetrics]: Applied Startup Patch: ObjectWorkQueue_RunJob_Patch
+[ServerMetrics]: Applied Startup Patch: RPCServer_Attribute_Method_Patch
+[ServerMetrics]: Applied Startup Patch: ServerMgr_Metrics_Patches
+[ServerMetrics]: Carbon detected, reporting plugin and module hook times
+Server startup complete
+[Bootstrap] completed in 184.14s
+[Codefling] Failed fetching vendor. Error code 404!
+Skin manifest imported successfully
+[BetterTC] CheckUpdate: No new items found in remote data.
+[ServerPanel Installer] Server Panel data loaded successfully!
+[Physgun] Game server successfully started
+[Physgun] Loaded Physgun Utils v2.0.0
+[Physgun] Welcome! There is currently no Physgun Utils commands available.
+[Physgun] You can edit the config file located in the root of your file manager. "physgun.toml"
+[PlayerDLCAPI] - Waiting for Steam inventory definitions to be updated. Total wait time : 17.4s
+[WirelessPower] Initialization progress: 25%
+[NightshadeAnnouncer] NightshadeAnnouncer: DeepSeaManager component cached successfully.
+[NightshadeAnnouncer] NightshadeAnnouncer: Deep Sea portal found on init scan (cached position).
+[NpcSpawn] List of biome positions: Arid = 0, Temperate = 0, Tundra = 0, Arctic = 0, Jungle = 0
+[NpcSpawn] List of road positions: ExtraWide = 679, Standard = 1655, ExtraNarrow = 0
+[NpcSpawn] 1677 railway positions found
+[Skinner] Found - 22 in 2 collections.
+[Skinner] Finished processing workshop skin imports. Total processed: 0/0
+[Skinner] Saved Workshop Skins
+[Skinner] Saved Workshop Skins
+[Skinner] Finished Updating Custom Skins
+[RustEdit] - The RustEdit extension is up to date!
+[DefendableHomes] Image Tab_KpucTaJl download is complete
+[NpcSpawn] Image Preset_KpucTaJl download is complete
+[DefendableHomes] Image Clock_KpucTaJl download is complete
+[NpcSpawn] Image Find_KpucTaJl download is complete
+[DefendableHomes] Image Npc_KpucTaJl download is complete
+[NpcSpawn] Image Delete_KpucTaJl download is complete
+[DefendableHomes] Image Foundation_KpucTaJl download is complete
+[NpcSpawn] Image Indicator_KpucTaJl download is complete
+[UltimateLocker] ########## Restored 0 lock scale sizes in 0.03 seconds ##########
+SteamServer Connected
+[Rust.MapCache-Images] Image uploaded to backend: https://files.facepunch.com/rust/map-images/53a61a1113d05aeeb987873a15b6ecc4c0a969b5119c459a95aa0d53ce9799f4/thelostisland_1.2.6.3500.1788794387587.289_53a61a1113d05aeeb987873a15b6ecc4.jpg
+[Physgun.MapExtractor] Generating shore map...
+[Physgun.MapExtractor] Extracting terrain data...
+[WirelessPower] Initialization progress: 50%
+[NpcSpawn] Image Back_KpucTaJl download is complete
+Prefab 'assets/bundled/prefabs/autospawn/monument/medium/bandit_town.prefab' requires asset scene 'AssetScene-monument.10' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/medium/bandit_town.prefab' requires asset scene 'AssetScene-monument.10' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/supermarket_1.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/supermarket_1.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/small/power_sub_small_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/small/power_sub_small_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/small/power_sub_small_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/small/power_sub_small_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_a.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_a.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_b.prefab' requires asset scene 'AssetScene-monument.22' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_b.prefab' requires asset scene 'AssetScene-monument.22' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_c.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_c.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_e.prefab' requires asset scene 'AssetScene-monument.22' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_e.prefab' requires asset scene 'AssetScene-monument.22' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_d.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_d.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ziggurat_a.prefab' requires asset scene 'AssetScene-monument.19' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ziggurat_a.prefab' requires asset scene 'AssetScene-monument.19' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/warehouse.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/warehouse.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/gas_station_1.prefab' requires asset scene 'AssetScene-monument.19' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/gas_station_1.prefab' requires asset scene 'AssetScene-monument.19' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/radtown_1.prefab' requires asset scene 'AssetScene-monument.14' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/radtown_1.prefab' requires asset scene 'AssetScene-monument.14' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/supermarket_1.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_2.prefab' requires asset scene 'AssetScene-monument.17' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_2.prefab' requires asset scene 'AssetScene-monument.17' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_1.prefab' requires asset scene 'AssetScene-monument.14' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_1.prefab' requires asset scene 'AssetScene-monument.14' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/warehouse.prefab' requires asset scene 'AssetScene-monument.23' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/roadside/supermarket_1.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_a.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_a.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_b.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_b.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_c.prefab' requires asset scene 'AssetScene-monument.21' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_c.prefab' requires asset scene 'AssetScene-monument.21' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_a.prefab' requires asset scene 'AssetScene-monument.20' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/small/mining_quarry_c.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/monument/small/mining_quarry_c.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_1.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+Prefab 'assets/bundled/prefabs/autospawn/power substations/big/power_sub_big_2.prefab' requires asset scene 'AssetScene-monument.24' to be loaded first.
+[Physgun.MapExtractor] MeshCollider on rockingchair (2) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on rockingchair (2)
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on ring1
+[Physgun.MapExtractor] MeshCollider on cursedcauldron_on.static has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on cursedcauldron_on.static
+[Physgun.MapExtractor] MeshCollider on cursedcauldron.deployed has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on cursedcauldron.deployed
+[Physgun.MapExtractor] MeshCollider on largegenericcan has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on largegenericcan
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun.MapExtractor] MeshCollider on Ring1 (1) has no sharedMesh
+[Physgun.MapExtractor] Unsupported prefab mesh collider type MeshCollider on Ring1 (1)
+[Physgun] World setup complete
+[WirelessPower] Initialization progress: 75%
+[NpcSpawn] Image Copy_KpucTaJl download is complete
+[NpcSpawn] Image coconut-underwear download is complete
+[WirelessPower] Initialized 18 power grids (excluded 1 in raid zones)
+[NpcSpawn] Image femaleunderwear_mummywraps.icon download is complete
+[NpcSpawn] Image maleunderwear_mummywraps.icon download is complete
+[NpcSpawn] Image pink_bikini download is complete
+[NpcSpawn] Image rapido_male download is complete
+[NpcSpawn] Image swimwear_gradient_female download is complete
+Loaded plugin PhysgunRGT v1.0.0 by Physgun [80ms]
+[NpcSpawn] Image swimwear_gradient_male download is complete
+[NpcSpawn] Image swimwear_palmleaves_female download is complete
+[NpcSpawn] Image swimwear_palmleaves_male download is complete
+[NpcSpawn] Image swimwear_scribble_female download is complete
+[NpcSpawn] Image swimwear_scribble_male download is complete
+[NpcSpawn] Image twitchunderwear_female download is complete
+[NpcSpawn] Image twitchunderwear_male download is complete
+[NpcSpawn] Image underwear_default_female download is complete
+[NpcSpawn] Image underwear_default_male download is complete
+[NpcSpawn] Image grassskirt-underwear-female download is complete
+[NpcSpawn] Image grassskirt-underwear-male download is complete
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_2.prefab' is now fully built in 57.55 seconds (289 tiles).
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/offshore/oilrig_1.prefab' is now fully built in 57.57 seconds (289 tiles).
+[CrashSessionMarker]{
+  "SessionStartUtc": "2026-10-31T10:01:46.862356Z",
+  "Release": "release#168909",
+  "UserId": null,
+  "UserName": null,
+  "Tags": {
+    "memory": "186gb",
+    "operatingSystem": "Linux 6.8 Debian GNU/Linux 13 64bit",
+    "batteryStatus": "Unknown",
+    "deviceModel": "PC",
+    "processorType": "AMD Ryzen 9 9950X 16-Core Processor",
+    "graphicsDeviceName": "Null Device",
+    "graphicsMemorySize": "0gb",
+    "scene": "Procedural Map",
+    "qualitylevel": "0",
+    "realm": "SERVER",
+    "official": "false",
+    "modded": "true",
+    "mod_framework": "carbon"
+  },
+  "LastServerDisconnectUtc": null
+}
+[Convoy] Route caching has ended! The number of routes: 5
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/underwater_lab/underwater_lab_a.prefab' is now fully built in 58.42 seconds (35 tiles).
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/underwater_lab/underwater_lab_b.prefab' is now fully built in 58.53 seconds (48 tiles).
+[RustEdit] - Processing 207 IO entities
+BradleyAPC Spawned at :(1258.08, 14.82, -398.50)
+[RustNav] Navmesh 'assets/bundled/prefabs/autospawn/monument/underwater_lab/underwater_lab_c.prefab' is now fully built in 58.71 seconds (49 tiles).
+-
+Loaded 170 items from RaidableBases/Base_Loot/Easy Bases
+Loaded 182 items from RaidableBases/Base_Loot/Medium Bases
+Loaded 180 items from RaidableBases/Base_Loot/Hard Bases
+Loaded 171 items from RaidableBases/Base_Loot/Expert Bases
+Loaded 164 items from RaidableBases/Base_Loot/Nightmare Bases
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.38 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.40 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.38 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.40 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.40 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.41 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.44 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.41 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 51.42 seconds (64 tiles).
+[Image Library] Starting order Notify
+Image batch (Notify) has been stored successfully
+[FileSystem] Not Found: assets/localization/af/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/ar/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/ca/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/cs/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/da/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/de/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/el/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/en/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/en-pt/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/es-es/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/fi/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/fr/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/he/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/hu/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/it/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/ja/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/ko/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/nl/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/no/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/pl/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/pt-br/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/pt-pt/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/ro/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/ru/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/sr/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/sv-se/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/tr/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/uk/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/vi/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/zh-cn/phrases.json (UnityEngine.TextAsset)
+[FileSystem] Not Found: assets/localization/zh-tw/phrases.json (UnityEngine.TextAsset)
+[RustEdit] - Successfully connected 207 IO links
+[RustEdit] - Generating 1 APC paths from map file
+[RustEdit] - 1 APC patrol paths successfully processed!
+[RustEdit] - No custom vending machines found in map
+[RustEdit] - 525 loot containers processed!
+[RustEdit] - Created 7 keycard desk respawners
+[RustEdit] - 28 resource entities processed!
+[RustEdit] - 5 junkpiles processed!
+[RustEdit] - Created 208 NPC spawn handlers!
+[RustEdit] - Connected 18 shopkeepers to vending machines
+Checking for new Steam Item Definitions..
+[RustEdit] - BradleyAPC Spawned at :(20.73, 9.25, 51.22)
+[Skinner] Steamworks Updated, Updating Skins
+[Skinner] Configuration changes saved to Skinner.json
+[Skinner] 7948 Workshop skins were indexed.. Checking for imported skins and collections
+[Skinner] Saved Workshop Skins
+[UltimateLocker] Processing Steam Workshop definitions...
+[Copy Paste] Skin detection initialized: 6728 official skins, 385 DLC items. Processing 0 queued paste(s).
+508[508] was killed by Scientist[519] at (63.00, 5.45, -217.67)
+[RaidableBases] 25% loaded (223 potential points)
+608[608] was killed by Scientist[427] at (67.45, 5.78, -146.58)
+537[537] was killed by Scientist[538] at (9.46, 9.12, -22.21)
+[RaidableBases] 50% loaded (448 potential points)
+Image failed to download! Error: HTTP/1.1 503 Service Unavailable - Image Name: FB_IMAGE_15_0 - Image URL: https://i.ibb.co/9qG5rgv/15.png
+[RaidableBases] 75% loaded (676 potential points)
+[RaidableBases] 100% loaded (737 potential points)
+[RaidableBases] Grid initialization completed in 53 seconds and 793 milliseconds on a 3500 size map with 737 potential points.
+531[531] was killed by Scientist[533] at (10.86, 9.11, 30.03)
+437[437] was killed by Scientist[541] at (20.24, 9.11, 64.93)
+Image failed to download! Error: HTTP/1.1 503 Service Unavailable - Image Name: FB_IMAGE_30_0 - Image URL: https://i.ibb.co/BGDgjkT/30.png
+552[552] was killed by Scientist[427] at (66.60, 5.78, -146.40)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+483[483] was killed by Scientist[427] at (67.73, 5.78, -147.02)
+Image failed to download! Error: HTTP/1.1 503 Service Unavailable - Image Name: FB_IMAGE_52_0 - Image URL: https://i.ibb.co/xhKHVvX/52.png
+654[654] was killed by Scientist[536] at (-68.94, 9.11, -14.46)
+529[529] was killed by Scientist[533] at (10.56, 9.11, 30.30)
+Image failed to download! Error: HTTP/1.1 503 Service Unavailable - Image Name: FB_IMAGE_59_0 - Image URL: https://i.ibb.co/gFnGRbQ/59.png
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 18.30 seconds (64 tiles).
+Transitioning to dead state from DiveRoam: crocodile suicided on AI failure at (-275.67, 8.67, 183.49) in J10
+[RustNav] Disposing navmesh...
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,833 ents, cache(2.60), write(0.17), disk(0.12), navmesh(0.01).
+Saving complete
+[RustNav] Successfully saved navmesh (0 pending tiles) in 636.6 ms, full, main 6.7 ms, thread 590.3 ms (id 161), replace 39.6 ms (Replace), phases gather 368.7 / compress 154.4 / write 35.7 / flush 0.4 ms, 64057291 bytes on disk, appended 0 of a 64057291 byte base (budget 0.5), 0 pending tiles, 0 tiles dirty since the last save (version delta 10599)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.22 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.21 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.24 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (2 pending tiles) in 8.2 ms, delta, main 2.1 ms, thread 6.0 ms (id 163), appended in place, phases gather 0.1 / compress 2.7 / write 0.3 / flush 0.0 ms, 65077291 bytes on disk, appended 1020000 of a 64057291 byte base (budget 0.5), 2 pending tiles, 350 tiles dirty since the last save (version delta 382)
+[RustNav] navmesh save catch up: 2 parked, 2 distinct tiles applied, 0 superseded, drain 0 ms
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,914 ents, cache(0.21), write(0.14), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.24 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.21 seconds (64 tiles).
+Transitioning to dead state from Patrol: scientist2 suicided on AI failure at (1702.28, 22.58, 2052.24) in W-2
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Disposing navmesh...
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (16 pending tiles) in 82.1 ms, delta, main 9.7 ms, thread 72.4 ms (id 165), appended in place, phases gather 3.4 / compress 32.6 / write 4.1 / flush 0.0 ms, 76078275 bytes on disk, appended 12020984 of a 64057291 byte base (budget 0.5), 16 pending tiles, 10983 tiles dirty since the last save (version delta 19961)
+[RustNav] navmesh save catch up: 16 parked, 16 distinct tiles applied, 0 superseded, drain 0 ms
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,814 ents, cache(3.96), write(0.19), disk(0.14), navmesh(0.01).
+Saving complete
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.22 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 5.9 ms, delta, main 0.6 ms, thread 5.3 ms (id 167), appended in place, phases gather 0.4 / compress 3.0 / write 0.3 / flush 0.0 ms, 76905065 bytes on disk, appended 12847774 of a 64057291 byte base (budget 0.5), 0 pending tiles, 891 tiles dirty since the last save (version delta 963)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,811 ents, cache(0.20), write(0.13), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.35 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+Checking for new Steam Item Definitions..
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 6.59 seconds (64 tiles).
+Random satellite crash triggered at (1071, -1, 58), mass 2000kg
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (1621 pending tiles) in 52.8 ms, delta, main 3.4 ms, thread 49.3 ms (id 169), appended in place, phases gather 3.6 / compress 28.0 / write 3.0 / flush 0.0 ms, 86010045 bytes on disk, appended 21952754 of a 64057291 byte base (budget 0.5), 1621 pending tiles, 9826 tiles dirty since the last save (version delta 17151)
+[RustNav] navmesh save catch up: 23 parked, 23 distinct tiles applied, 0 superseded, drain 0 ms
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,766 ents, cache(0.41), write(0.18), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.24 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 12.2 ms, delta, main 0.3 ms, thread 11.9 ms (id 171), appended in place, phases gather 0.7 / compress 7.5 / write 1.0 / flush 0.0 ms, 89173680 bytes on disk, appended 25116389 of a 64057291 byte base (budget 0.5), 0 pending tiles, 3259 tiles dirty since the last save (version delta 3737)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,790 ents, cache(0.11), write(0.13), disk(0.13), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.48 seconds (64 tiles).
+Transitioning to dead state from Patrol: scientist2 suicided on AI failure at (1699.47, 26.46, 2050.96) in W-2
+[RustNav] Disposing navmesh...
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 65.6 ms, delta, main 3.0 ms, thread 62.6 ms (id 174), appended in place, phases gather 3.6 / compress 26.9 / write 3.0 / flush 0.0 ms, 97141395 bytes on disk, appended 33084104 of a 64057291 byte base (budget 0.5), 0 pending tiles, 8936 tiles dirty since the last save (version delta 14625)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,802 ents, cache(0.48), write(0.18), disk(0.13), navmesh(0.00).
+Saving complete
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.34 seconds (64 tiles).
+Calling kill - but already IsDestroyed!? satellite_crate_3.entity
+EntityTimedDestroy failed, baseEntity was already null!
+EntityTimedDestroy failed, baseEntity was already null!
+EntityTimedDestroy failed, baseEntity was already null!
+Calling kill - but already IsDestroyed!? satellite_crate_1.entity
+ Heli Signals v1.4.1 by ZEODE hook 'OnEventTrigger' took longer than 100ms [151ms]
+[event] assets/prefabs/misc/halloween/halloweenhunt.prefab
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,817 ents, cache(0.12), write(0.13), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Successfully saved navmesh (0 pending tiles) in 571.9 ms, full, main 0.5 ms, thread 515.3 ms (id 176), replace 56.1 ms (Replace), phases gather 289.9 / compress 140.5 / write 39.2 / flush 0.1 ms, 63199017 bytes on disk, appended 0 of a 63199017 byte base (budget 0.5), 0 pending tiles, 4547 tiles dirty since the last save (version delta 5824)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.24 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+Checking for new Steam Item Definitions..
+Transitioning to dead state from Patrol: scientist2 suicided on AI failure at (1428.91, 18.17, -2111.67) in U25
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 10.09 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 54.9 ms, delta, main 2.4 ms, thread 52.5 ms (id 178), appended in place, phases gather 2.9 / compress 22.7 / write 2.4 / flush 0.0 ms, 69874466 bytes on disk, appended 6675449 of a 63199017 byte base (budget 0.5), 0 pending tiles, 7356 tiles dirty since the last save (version delta 10910)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,818 ents, cache(0.47), write(0.17), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 1.35 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.24 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 26.2 ms, delta, main 0.8 ms, thread 25.4 ms (id 180), appended in place, phases gather 1.4 / compress 12.9 / write 2.1 / flush 0.0 ms, 74926859 bytes on disk, appended 11727842 of a 63199017 byte base (budget 0.5), 0 pending tiles, 6571 tiles dirty since the last save (version delta 9547)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,761 ents, cache(1.04), write(0.13), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 40.4 ms, delta, main 2.7 ms, thread 37.7 ms (id 182), appended in place, phases gather 2.4 / compress 17.0 / write 2.1 / flush 0.0 ms, 80108493 bytes on disk, appended 16909476 of a 63199017 byte base (budget 0.5), 0 pending tiles, 5463 tiles dirty since the last save (version delta 7337)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,758 ents, cache(0.82), write(0.17), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 2.09 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+ NightshadeShop v1.5.0 by Nightshade hook 'OnServerSave' took longer than 100ms [187ms]
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 56.7 ms, delta, main 26.0 ms, thread 30.7 ms (id 184), appended in place, phases gather 2.0 / compress 15.9 / write 2.3 / flush 0.0 ms, 86439962 bytes on disk, appended 23240945 of a 63199017 byte base (budget 0.5), 0 pending tiles, 8139 tiles dirty since the last save (version delta 13018)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,802 ents, cache(3.31), write(0.16), disk(0.16), navmesh(0.03).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.36 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+Checking for new Steam Item Definitions..
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.22 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 7.87 seconds (64 tiles).
+Random satellite crash triggered at (1057, 7, -744), mass 2000kg
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (371 pending tiles) in 26.6 ms, delta, main 2.0 ms, thread 24.5 ms (id 187), appended in place, phases gather 1.7 / compress 14.1 / write 1.6 / flush 0.0 ms, 90516876 bytes on disk, appended 27317859 of a 63199017 byte base (budget 0.5), 371 pending tiles, 3739 tiles dirty since the last save (version delta 4740)
+[RustNav] navmesh save catch up: 1 parked, 1 distinct tiles applied, 0 superseded, drain 0 ms
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,807 ents, cache(0.73), write(0.16), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 4.35 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.48 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 31.0 ms, delta, main 1.3 ms, thread 29.7 ms (id 189), appended in place, phases gather 1.9 / compress 18.9 / write 2.3 / flush 0.0 ms, 97391914 bytes on disk, appended 34192897 of a 63199017 byte base (budget 0.5), 0 pending tiles, 9090 tiles dirty since the last save (version delta 15684)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,824 ents, cache(0.48), write(0.14), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[event] assets/prefabs/misc/halloween/halloweenhunt.prefab
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,782 ents, cache(1.07), write(0.18), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Successfully saved navmesh (4 pending tiles) in 1384.5 ms, full, main 2.4 ms, thread 1327.9 ms (id 191), replace 54.2 ms (Replace), phases gather 955.7 / compress 300.1 / write 37.9 / flush 0.1 ms, 63102794 bytes on disk, appended 0 of a 63102794 byte base (budget 0.5), 4 pending tiles, 2095 tiles dirty since the last save (version delta 2480)
+[RustNav] navmesh save catch up: 34 parked, 34 distinct tiles applied, 0 superseded, drain 0 ms
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 2.09 seconds (64 tiles).
+EntityTimedDestroy failed, baseEntity was already null!
+EntityTimedDestroy failed, baseEntity was already null!
+Calling kill - but already IsDestroyed!? satellite_crate_1.entity
+Calling kill - but already IsDestroyed!? satellite_crate_2.entity
+EntityTimedDestroy failed, baseEntity was already null!
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 0 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 33.6 ms, delta, main 1.3 ms, thread 32.3 ms (id 193), appended in place, phases gather 2.2 / compress 18.7 / write 2.5 / flush 0.0 ms, 70327442 bytes on disk, appended 7224648 of a 63102794 byte base (budget 0.5), 0 pending tiles, 9625 tiles dirty since the last save (version delta 17919)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,776 ents, cache(0.33), write(0.13), disk(0.12), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+[PlayerRanks] PlayerRanks local database was saved.
+Checking for new Steam Item Definitions..
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.23 seconds (64 tiles).
+695[695] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+Scientist[427] was killed by 693[693] at (66.81, 6.00, -147.37)
+475[475] was killed by Scientist[588] at (330.16, 5.78, -39.57)
+DuskyGopher with steamid 76561199866337898 joined from ip 24.254.68.228:55161 with platform windows
+	NetworkId 76561199866337898 is 139177613 (DuskyGopher)
+DuskyGopher[76561199866337898] has spawned
+DuskyGopher[76561199866337898] has spawned
+697[697] was killed by Scientist[538] at (9.44, 9.12, -22.25)
+[event] assets/content/vehicles/boats/cargoship/cargoshiptest.prefab
+fuel_storage[139177655] changed its network group to null
+rhib_storage_drybox[139177657] changed its network group to null
+[event] assets/prefabs/npc/patrol helicopter/patrolhelicopter.prefab
+[event] assets/prefabs/npc/cargo plane/cargo_plane.prefab
+530[530] was killed by Scientist[533] at (10.38, 9.11, 30.52)
+You've successfully pasted the structure: fullwipedhard39
+696[696] was killed by Scientist[538] at (9.29, 9.12, -22.44)
+[RustNav] Disposing navmesh...
+[RaidableBases] fullwipedhard39 @ G10 (-700.17 124.93) : 105 items
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+You've successfully pasted the structure: Boom-Nightmare-Souffle
+[RaidableBases] Boom-Nightmare-Souffle @ O8 (512.91 436.87) : 125 items
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 1 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 12.1 ms, delta, main 0.8 ms, thread 11.3 ms (id 206), appended in place, phases gather 0.4 / compress 6.4 / write 0.7 / flush 0.0 ms, 72592709 bytes on disk, appended 9489915 of a 63102794 byte base (budget 0.5), 0 pending tiles, 1100 tiles dirty since the last save (version delta 2138)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 43,929 ents, cache(0.07), write(0.04), disk(0.02), navmesh(0.00).
+Saving complete
+Scientist[538] was killed by 698[698] at (10.14, 9.33, -22.88)
+You've successfully pasted the structure: Boom-Expert-Psychodelic
+[RaidableBases] Boom-Expert-Psychodelic @ O22 (424.96 -1,649.94) : 110 items
+698[698] was killed by Scientist[533] at (10.85, 9.11, 30.13)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+592[592] was killed by Scientist[407] at (333.48, 5.47, -103.56)
+[RustNav] Disposing navmesh...
+478[478] was killed by Scientist[587] at (363.00, 5.70, -95.70)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+596[596] was killed by Scientist[587] at (363.02, 5.70, -95.72)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+601[601] was killed by Scientist[587] at (362.97, 5.70, -95.67)
+584[584] was killed by Scientist[579] at (185.93, 5.57, -94.03)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+498[498] was killed by Scientist[580] at (201.50, 5.53, -119.26)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 1 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,078 ents, cache(0.05), write(0.03), disk(0.02), navmesh(0.00).
+[RustNav] Successfully saved navmesh (0 pending tiles) in 31.8 ms, delta, main 0.6 ms, thread 31.2 ms (id 208), appended in place, phases gather 2.3 / compress 18.9 / write 3.0 / flush 0.0 ms, 80076648 bytes on disk, appended 16973854 of a 63102794 byte base (budget 0.5), 0 pending tiles, 10052 tiles dirty since the last save (version delta 21495)
+Saving complete
+[RustNav] Disposing navmesh...
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+218[218] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+482[482] was killed by Scientist[498] at (67.39, 5.78, -147.35)
+685[685] was killed by Scientist[540] at (61.66, 12.30, -8.08)
+563[563] was killed by Scientist[406] at (291.45, 5.48, -100.89)
+699[699] was killed by Scientist[577] at (188.97, 5.65, -73.14)
+476[476] was killed by Scientist[498] at (67.41, 5.78, -147.25)
+502[502] was killed by Scientist[404] at (235.48, 10.95, 557.75)
+242[242] was killed by Scientist[502] at (11.40, 9.11, -21.09)
+576[576] was killed by DuskyGopher[76561199866337898] at (203.26, 0.81, -820.35)
+489[489] was killed by Scientist[536] at (-67.31, 9.11, -15.02)
+590[590] was killed by Scientist[580] at (201.96, 5.53, -118.96)
+Scientist[498] was killed by 607[607] at (66.45, 6.00, -147.44)
+498[498] was killed by Scientist[502] at (10.89, 9.11, -21.40)
+498[498] was killed by Scientist[502] at (10.85, 9.11, -21.46)
+514[514] was killed by DuskyGopher[76561199866337898] at (-75.07, 4.17, -900.80)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 1 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 7.7 ms, delta, main 0.3 ms, thread 7.4 ms (id 210), appended in place, phases gather 0.2 / compress 4.8 / write 0.7 / flush 0.0 ms, 81949241 bytes on disk, appended 18846447 of a 63102794 byte base (budget 0.5), 0 pending tiles, 690 tiles dirty since the last save (version delta 982)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,074 ents, cache(0.04), write(0.03), disk(0.03), navmesh(0.00).
+Saving complete
+242[242] was killed by Scientist[535] at (-82.97, 9.11, 52.31)
+611[611] was killed by DuskyGopher[76561199866337898] at (-201.97, 5.49, -219.60)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+476[476] was killed by Scientist[577] at (188.97, 5.65, -73.14)
+664[664] was killed by DuskyGopher[76561199866337898] at (120.31, 4.65, 177.67)
+[Physgun] Unity 6 crash fix applied
+590[590] was killed by Scientist[407] at (332.43, 5.47, -103.54)
+663[663] was killed by DuskyGopher[76561199866337898] at (117.90, 4.90, 179.70)
+477[477] was killed by DuskyGopher[76561199866337898] at (114.87, 5.12, 181.63)
+693[693] was killed by Scientist[577] at (187.16, 5.67, -73.77)
+509[509] was killed by Scientist[476] at (847.12, 7.63, -314.55)
+613[613] was killed by Scientist[407] at (332.32, 5.47, -103.64)
+Scientist[664] was killed by DuskyGopher[76561199866337898] at (64.21, 7.12, 239.37)
+274[274] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+693[693] was killed by Scientist[533] at (12.21, 9.11, 31.15)
+477[477] was killed by Scientist[536] at (-67.32, 9.11, -15.26)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 1 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 30.6 ms, delta, main 0.6 ms, thread 30.0 ms (id 212), appended in place, phases gather 2.3 / compress 18.7 / write 2.6 / flush 0.0 ms, 89260777 bytes on disk, appended 26157983 of a 63102794 byte base (budget 0.5), 0 pending tiles, 10015 tiles dirty since the last save (version delta 20595)
+Saved 44,093 ents, cache(0.03), write(0.03), disk(0.03), navmesh(0.00).
+Saving complete
+477[477] was killed by Scientist[590] at (66.11, 5.78, -146.71)
+Scientist[580] was killed by 488[488] at (201.19, 5.75, -118.35)
+[RustNav] Disposing navmesh...
+[PlayerRanks] PlayerRanks local database was saved.
+488[488] was killed by Scientist[579] at (187.47, 5.56, -94.95)
+515[515] was killed by sentry.bandit.static (entity) at (-461.72, 9.92, -535.61)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Checking for new Steam Item Definitions..
+Scientist[577] was killed by 655[655] at (188.15, 5.87, -73.62)
+[event] assets/prefabs/misc/halloween/halloweenhunt.prefab
+Scientist[502] was killed by 680[680] at (11.65, 9.33, -22.03)
+boneReference is null on Skeleton.Boar
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Scientist[533] was killed by 240[240] at (11.23, 9.33, 31.03)
+215[215] was killed by Scientist[536] at (-67.40, 9.11, -14.74)
+593[593] was killed by Scientist[407] at (332.35, 5.47, -103.67)
+504[504] was killed by DuskyGopher[76561199866337898] at (139.62, 2.04, 198.06)
+723[723] was killed by Scientist[540] at (61.66, 12.30, -8.09)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Random satellite crash triggered at (-1370, -30, 1232), mass 2000kg
+659[659] was killed by Scientist[60] at (-883.28, 27.45, -570.31)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 1 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 9.5 ms, delta, main 0.6 ms, thread 8.9 ms (id 214), appended in place, phases gather 0.3 / compress 5.4 / write 0.6 / flush 0.0 ms, 91116476 bytes on disk, appended 28013682 of a 63102794 byte base (budget 0.5), 0 pending tiles, 763 tiles dirty since the last save (version delta 1182)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,074 ents, cache(0.04), write(0.05), disk(0.03), navmesh(0.00).
+Saving complete
+482[482] was killed by 643[643] at (268.30, 7.19, 736.86)
+240[240] was killed by Scientist[542] at (-0.01, 9.11, 91.24)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+664[664] was killed by DuskyGopher[76561199866337898] at (122.88, 4.14, 213.78)
+578[578] was killed by Scientist[406] at (290.95, 5.49, -101.12)
+670[670] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+[RustNav] Disposing navmesh...
+131[131] was killed by Scientist[579] at (187.53, 5.56, -94.93)
+507[507] was killed by Scientist[407] at (332.33, 5.47, -103.61)
+255[255] was killed by Scientist[406] at (290.96, 5.49, -101.16)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+680[680] was killed by Scientist[536] at (-60.55, 9.23, -13.09)
+Scientist[579] was killed by 581[581] at (186.88, 5.79, -94.18)
+611[611] was killed by Scientist[431] at (316.14, 5.45, -63.79)
+591[591] was killed by Scientist[585] at (363.00, 5.70, -95.70)
+662[662] was killed by sentry.bandit.static (entity) at (-443.66, 8.76, -513.43)
+> startstorm start
+[IslandStorm] Island-wide storm starting!
+[IslandStorm] [IslandStorm] Running: weather.load storm
+[IslandStorm] [IslandStorm] Running: weather.wind 0.75
+weather.wind: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.50
+weather.rain: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+weather.thunder: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.40
+weather.fog: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+weather.atmosphere_rayleigh: "-0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+weather.atmosphere_mie: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+weather.atmosphere_brightness: "-0.3"
+[IslandStorm] Storm started.
+[RustNav] Disposing navmesh...
+[IslandStorm] [IslandStorm] Running: weather.wind 0.38
+weather.wind: "0.38"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.25
+weather.rain: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+weather.thunder: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.20
+weather.fog: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.70
+weather.atmosphere_rayleigh: "-0.7"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.38
+weather.atmosphere_mie: "-0.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.65
+weather.atmosphere_brightness: "-0.65"
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+[IslandStorm] [IslandStorm] Running: weather.wind 0.45
+weather.wind: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.30
+weather.rain: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+weather.thunder: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.24
+weather.fog: "0.24"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.64
+weather.atmosphere_rayleigh: "-0.64"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.25
+weather.atmosphere_mie: "-0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.58
+weather.atmosphere_brightness: "-0.58"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.53
+weather.wind: "0.53"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.35
+weather.rain: "0.35"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+weather.thunder: "0.35"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.28
+weather.fog: "0.28"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.58
+weather.atmosphere_rayleigh: "-0.58"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.12
+weather.atmosphere_mie: "-0.12"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.51
+weather.atmosphere_brightness: "-0.51"
+> stopstorm stop
+Command 'stopstorm stop' not found
+[IslandStorm] [IslandStorm] Running: weather.wind 0.60
+weather.wind: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.40
+weather.rain: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+weather.thunder: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.32
+weather.fog: "0.32"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.52
+weather.atmosphere_rayleigh: "-0.52"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.00
+weather.atmosphere_mie: "0"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.44
+weather.atmosphere_brightness: "-0.44"
+> stop storm
+Player not found
+[IslandStorm] [IslandStorm] Running: weather.wind 0.68
+weather.wind: "0.68"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.45
+weather.rain: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+weather.thunder: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.36
+weather.fog: "0.36"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.46
+weather.atmosphere_rayleigh: "-0.46"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.13
+weather.atmosphere_mie: "0.13"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.37
+weather.atmosphere_brightness: "-0.37"
+> stopstorm
+Command 'stopstorm' not found
+[IslandStorm] [IslandStorm] Running: weather.wind 0.75
+weather.wind: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.50
+weather.rain: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+weather.thunder: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.40
+weather.fog: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+weather.atmosphere_rayleigh: "-0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+weather.atmosphere_mie: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+weather.atmosphere_brightness: "-0.3"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.83
+weather.wind: "0.83"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.55
+weather.rain: "0.55"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+weather.thunder: "0.55"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.44
+weather.fog: "0.44"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.34
+weather.atmosphere_rayleigh: "-0.34"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.38
+weather.atmosphere_mie: "0.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.23
+weather.atmosphere_brightness: "-0.23"
+599[599] was killed by Scientist[337] at (204.13, 5.57, -117.38)
+[IslandStorm] [IslandStorm] Running: weather.wind 0.90
+weather.wind: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.60
+weather.rain: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+weather.thunder: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.48
+weather.fog: "0.48"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.28
+weather.atmosphere_rayleigh: "-0.28"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.50
+weather.atmosphere_mie: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.16
+weather.atmosphere_brightness: "-0.16"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.98
+weather.wind: "0.98"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.65
+weather.rain: "0.65"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+weather.thunder: "0.65"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.52
+weather.fog: "0.52"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.22
+weather.atmosphere_rayleigh: "-0.22"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.63
+weather.atmosphere_mie: "0.63"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.09
+weather.atmosphere_brightness: "-0.09"
+501[501] was killed by Scientist[404] at (227.82, 10.79, 561.56)
+[IslandStorm] [IslandStorm] Running: weather.wind 1.05
+weather.wind: "1.05"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.70
+weather.rain: "0.7"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+weather.thunder: "0.7"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.56
+weather.fog: "0.56"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.16
+weather.atmosphere_rayleigh: "-0.16"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.75
+weather.atmosphere_mie: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.02
+weather.atmosphere_brightness: "-0.02"
+[RustNav] Disposing navmesh...
+[IslandStorm] [IslandStorm] Running: weather.wind 1.13
+weather.wind: "1.13"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.75
+weather.rain: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+weather.thunder: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.60
+weather.fog: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.10
+weather.atmosphere_rayleigh: "-0.1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.88
+weather.atmosphere_mie: "0.88"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.05
+weather.atmosphere_brightness: "0.05"
+655[655] was killed by Scientist[125] at (183.64, 6.02, -70.27)
+[IslandStorm] [IslandStorm] Running: weather.wind 1.20
+weather.wind: "1.2"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.80
+weather.rain: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+weather.thunder: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.64
+weather.fog: "0.64"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.04
+weather.atmosphere_rayleigh: "-0.04"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.00
+weather.atmosphere_mie: "1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.12
+weather.atmosphere_brightness: "0.12"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.28
+weather.wind: "1.28"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.85
+weather.rain: "0.85"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+weather.thunder: "0.85"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.68
+weather.fog: "0.68"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.02
+weather.atmosphere_rayleigh: "0.02"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.13
+weather.atmosphere_mie: "1.13"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.19
+weather.atmosphere_brightness: "0.19"
+DuskyGopher[76561199866337898] was killed by Radiation at (109.48, 5.63, 212.51)
+[IslandStorm] [IslandStorm] Running: weather.wind 1.35
+weather.wind: "1.35"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.90
+weather.rain: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+weather.thunder: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.72
+weather.fog: "0.72"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.08
+weather.atmosphere_rayleigh: "0.08"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.25
+weather.atmosphere_mie: "1.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.26
+weather.atmosphere_brightness: "0.26"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.43
+weather.wind: "1.43"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.95
+weather.rain: "0.95"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+weather.thunder: "0.95"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.76
+weather.fog: "0.76"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.14
+weather.atmosphere_rayleigh: "0.14"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.38
+weather.atmosphere_mie: "1.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.33
+weather.atmosphere_brightness: "0.33"
+DuskyGopher[76561199866337898] has spawned
+[IslandStorm] [IslandStorm] Running: weather.wind 1.50
+weather.wind: "1.5"
+[IslandStorm] [IslandStorm] Running: weather.rain 1.00
+weather.rain: "1"
+[IslandStorm] [IslandStorm] Running: weather.thunder 1.00
+weather.thunder: "1"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.80
+weather.fog: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.20
+weather.atmosphere_rayleigh: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.50
+weather.atmosphere_mie: "1.5"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.40
+weather.atmosphere_brightness: "0.4"
+[IslandStorm] Storm peaked - extreme weather and peak radiation.
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+600[600] was killed by Scientist[590] at (66.68, 5.78, -146.55)
+665[665] was killed by Scientist[579] at (1018.29, 6.82, -871.12)
+581[581] was killed by Scientist[337] at (204.29, 5.58, -117.32)
+[IslandStorm] [IslandStorm] Running: weather.reset 
+[IslandStorm] [IslandStorm] Running: weather.wind -1.00
+weather.wind: "-1"
+[IslandStorm] [IslandStorm] Running: weather.rain -1.00
+weather.rain: "-1"
+[IslandStorm] [IslandStorm] Running: weather.thunder -1.00
+weather.thunder: "-1"
+[IslandStorm] [IslandStorm] Running: weather.fog -1.00
+weather.fog: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -1.00
+weather.atmosphere_rayleigh: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -1.00
+weather.atmosphere_mie: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -1.00
+weather.atmosphere_brightness: "-1"
+Unloaded plugin IslandStorm v1.0.0 by Grok
+[IslandStorm] IslandStorm loaded. Use /storm start (requires islandstorm.admin permission).
+Loaded plugin IslandStorm v1.0.0 by Grok [385ms]
+[IslandStorm] IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin
+DuskyGopher[76561199866337898] was killed by Radiation at (374.15, 1.17, -917.23)
+655[655] was killed by Scientist[581] at (10.45, 9.11, -20.49)
+DuskyGopher[76561199866337898] has spawned
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 1 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 31.2 ms, delta, main 0.6 ms, thread 30.7 ms (id 226), appended in place, phases gather 2.1 / compress 18.3 / write 3.2 / flush 0.0 ms, 98363743 bytes on disk, appended 35260949 of a 63102794 byte base (budget 0.5), 0 pending tiles, 9943 tiles dirty since the last save (version delta 19853)
+Saved 44,142 ents, cache(0.04), write(0.04), disk(0.04), navmesh(0.00).
+Saving complete
+> c.reload islandstorm
+Unloaded plugin IslandStorm v1.0.0 by Grok
+[IslandStorm] IslandStorm loaded. Use /storm start (requires islandstorm.admin permission).
+Loaded plugin IslandStorm v1.0.0 by Grok [385ms]
+[IslandStorm] IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin
+591[591] was killed by Scientist[655] at (10.53, 9.11, 31.22)
+Scientist[697] died (Generic)
+Invalid Position: scientist_corpse[139250440] (-3911.49, 10.17, 4000.19) (destroying)
+Invalid Position: item_drop_backpack[139250446] (-3911.49, 10.14, 4000.19) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo_turret_lr300.prefab (NPCPlayerNavigator) (-3916.11, 22.91, 4000.28) (destroying)
+Invalid Position: harbor_dynamic_container[139211730] (-3908.50, 12.40, 4000.27) (destroying)
+Invalid Position: harbor_dynamic_container[139211736] (-3905.32, 12.40, 4000.24) (destroying)
+Scientist[669] died (Generic)
+Invalid Position: scientist_corpse[139250459] (-3918.68, 10.14, 4000.19) (destroying)
+Invalid Position: item_drop_backpack[139250465] (-3918.68, 10.11, 4000.19) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo.prefab (NPCPlayerNavigator) (-3930.09, 6.18, 4000.16) (destroying)
+Invalid Position: harbor_dynamic_container[139211733] (-3905.49, 12.40, 4000.42) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo.prefab (NPCPlayerNavigator) (-3901.40, 6.18, 4000.30) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo.prefab (NPCPlayerNavigator) (-3901.62, 3.14, 4000.12) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo.prefab (NPCPlayerNavigator) (-3928.69, 3.14, 4000.24) (destroying)
+Scientist[667] died (Generic)
+Invalid Position: scientist_corpse[139250476] (-3911.62, 10.17, 4000.29) (destroying)
+Invalid Position: item_drop_backpack[139250482] (-3911.96, 10.17, 4000.65) (destroying)
+Invalid Position: harbor_dynamic_container[139211739] (-3906.19, 12.40, 4000.43) (destroying)
+Invalid Position: harbor_dynamic_container[139211742] (-3900.89, 12.40, 4000.38) (destroying)
+Scientist[176] died (Generic)
+Invalid Position: scientist_corpse[139250501] (-3923.64, 10.14, 4000.25) (destroying)
+Invalid Position: item_drop_backpack[139250504] (-3923.83, 10.07, 4000.44) (destroying)
+Scientist[163] died (Generic)
+Invalid Position: scientist_corpse[139250511] (-3913.64, 7.05, 4000.03) (destroying)
+Invalid Position: item_drop_backpack[139250515] (-3913.96, 7.11, 4000.39) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo_turret_lr300.prefab (NPCPlayerNavigator) (-3900.66, 27.26, 4000.06) (destroying)
+Scientist[247] died (Generic)
+Invalid Position: scientist_corpse[139250538] (-3913.61, 19.13, 4000.14) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo.prefab (NPCPlayerNavigator) (-3919.74, 9.27, 4000.56) (destroying)
+Invalid Position: item_drop_backpack[139250542] (-3913.95, 19.08, 4000.52) (destroying)
+Scientist[622] died (Generic)
+Invalid Position: scientist_corpse[139250546] (-3916.60, 25.32, 4000.19) (destroying)
+Invalid Position: item_drop_backpack[139250552] (-3916.62, 25.21, 4000.21) (destroying)
+Invalid NavAgent Position: assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_cargo_turret_lr300.prefab (NPCPlayerNavigator) (-3930.59, 27.26, 4000.17) (destroying)
+Invalid Position: rhib[139177654] (-3914.90, 9.23, 4000.10) (destroying)
+[RustNav] Disposing navmesh...
+208.104.61.68:45182/76561198035665693/RunaObscura has auth level 2
+Transitioning to dead state from Patrol: scientist2 suicided on AI failure at (1699.50, 26.43, 2051.02) in W-2
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[TruePVE] monumentpvp, monumentpvp
+Scientist[536] was killed by 730[730] at (-68.29, 9.33, -15.17)
+533[533] was killed by Scientist[337] at (203.31, 5.53, -115.60)
+[TruePVE] monumentpvp, monumentpvp
+[TruePVE] monumentpvp, monumentpvp
+[event] assets/prefabs/npc/patrol helicopter/patrolhelicopter.prefab
+[TruePVE] monumentpvp, monumentpvp
+[RustNav] Disposing navmesh...
+208.104.61.68:45182/76561198035665693/RunaObscura joined [windows/76561198035665693]
+RunaObscura[76561198035665693] has spawned
+[event] assets/prefabs/npc/ch47/ch47scientists.entity.prefab
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+47.152.31.50:62145/76561199069700597/Blue has auth level 1
+499[499] was killed by Scientist[407] at (332.58, 5.46, -103.78)
+47.152.31.50:62145/76561199069700597/Blue joined [windows/76561199069700597]
+Blue[76561199069700597] has spawned
+607[607] was killed by DuskyGopher[76561199866337898] at (62.60, 0.45, -354.98)
+boneReference is null on Skeleton.Stag
+395[395] was killed by Scientist[337] at (204.26, 5.57, -117.25)
+boneReference is null on Skeleton.Wolf
+[NightshadeChat] [Global] RunaObscura (76561198035665693): I fixed it
+ NightshadeChat v1.0.0 by Rustonauts & Nightshade hook 'OnPlayerChat' took longer than 100ms [151ms]
+[NightshadeChat] [Global] RunaObscura (76561198035665693): sorta
+[NightshadeChat] [Global] RunaObscura (76561198035665693): anyways good luck everybody
+517[517] was killed by autoturret_deployed (entity) at (-346.00, 2.03, -71.26)
+[NightshadeChat] [Global] DuskyGopher (76561199866337898): What was broke
+[NightshadeChat] [Global] RunaObscura (76561198035665693): myhopes and dreams
+[NightshadeChat] [Global] DuskyGopher (76561199866337898): i hear you
+[NightshadeChat] [Global] RunaObscura (76561198035665693): brb though I need to go make my sister breakfast
+220[220] was killed by Scientist[586] at (375.58, 5.78, -75.95)
+Scientist[337] was killed by 605[605] at (203.89, 5.78, -116.40)
+605[605] was killed by Explosion at (204.36, 5.58, -117.50)
+494[494] was killed by Scientist[542] at (1.61, 9.14, 93.86)
+Scientist[218] died (Generic)
+Scientist[136] died (Generic)
+Invalid Position: scientist_corpse[139259031] (1047.75, 102.87, -4000.01) (destroying)
+Scientist[194] died (Generic)
+Scientist[629] died (Generic)
+Invalid Position: item_drop_backpack[139259044] (1047.75, 102.77, -4000.01) (destroying)
+Invalid Position: scientist_corpse[139259048] (1048.25, 102.88, -4001.71) (destroying)
+Invalid Position: scientist_corpse[139259055] (1053.08, 102.86, -4001.26) (destroying)
+Invalid Position: item_drop_backpack[139259060] (1048.25, 102.77, -4001.71) (destroying)
+Invalid Position: item_drop_backpack[139259062] (1053.08, 102.76, -4001.26) (destroying)
+Scientist[533] died (Generic)
+Invalid Position: scientist_corpse[139259038] (1052.24, 100.96, -4000.03) (destroying)
+Invalid Position: scientist_corpse[139259066] (1047.42, 105.19, -4001.32) (destroying)
+Invalid Position: item_drop_backpack[139259072] (1047.42, 105.09, -4001.32) (destroying)
+Invalid Position: item_drop_backpack[139259070] (1052.24, 100.85, -4000.03) (destroying)
+[event] assets/prefabs/npc/cargo plane/cargo_plane.prefab
+Scientist[590] was killed by 496[496] at (66.73, 6.00, -147.48)
+Scientist[407] was killed by 477[477] at (332.88, 5.69, -102.83)
+68.118.70.143:59601/76561198017547177/RKFISHHH joined [windows/76561198017547177]
+RKFISHHH[76561198017547177] has spawned
+477[477] was killed by Scientist[585] at (367.03, 5.73, -99.91)
+313[313] was killed by DuskyGopher[76561199866337898] at (-21.89, 14.05, 229.40)
+664[664] was killed by Scientist[587] at (363.01, 5.70, -95.71)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 4 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,042 ents, cache(0.04), write(0.04), disk(0.03), navmesh(0.00).
+Saving complete
+[RustNav] Successfully saved navmesh (0 pending tiles) in 263.9 ms, full, main 0.2 ms, thread 204.5 ms (id 228), replace 59.2 ms (Replace), phases gather 64.4 / compress 75.4 / write 35.1 / flush 0.1 ms, 63185534 bytes on disk, appended 0 of a 63185534 byte base (budget 0.5), 0 pending tiles, 1587 tiles dirty since the last save (version delta 2141)
+RKFISHHH[76561198017547177] has spawned
+590[590] was killed by Scientist[610] at (331.88, 0.65, 43.28)
+533[533] was killed by Scientist[655] at (8.91, 9.11, 30.31)
+220[220] was killed by Scientist[403] at (243.58, 10.80, 630.21)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+242[242] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+Calling kill - but already IsDestroyed!? satellite_crate_3.entity
+Calling kill - but already IsDestroyed!? satellite_crate_3.entity
+EntityTimedDestroy failed, baseEntity was already null!
+EntityTimedDestroy failed, baseEntity was already null!
+EntityTimedDestroy failed, baseEntity was already null!
+Invalid Position: servergibs_patrolhelicopter[139263161] (1034.09, -501.09, -1153.75) (destroying)
+Invalid Position: servergibs_patrolhelicopter[139263159] (1008.79, -503.00, -1135.26) (destroying)
+Invalid Position: servergibs_patrolhelicopter[139263158] (992.29, -502.10, -1121.67) (destroying)
+Invalid Position: servergibs_patrolhelicopter[139263152] (994.99, -503.92, -1130.68) (destroying)
+Scientist[611] was killed by RKFISHHH[76561198017547177] at (-54.06, 3.89, -976.55)
+313[313] was killed by Scientist[541] at (20.28, 9.11, 65.15)
+683[683] was killed by Scientist[540] at (61.65, 12.30, -8.09)
+555[555] was killed by Explosion at (-251.77, 3.15, -481.53)
+242[242] was killed by Scientist[581] at (10.58, 9.11, -19.70)
+194[194] was killed by Scientist[686] at (-68.22, 9.11, -16.63)
+Scientist[406] was killed by 484[484] at (290.74, 5.69, -100.19)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 4 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 31.5 ms, delta, main 0.6 ms, thread 30.9 ms (id 230), appended in place, phases gather 3.5 / compress 18.6 / write 2.3 / flush 0.0 ms, 70435324 bytes on disk, appended 7249790 of a 63185534 byte base (budget 0.5), 0 pending tiles, 9779 tiles dirty since the last save (version delta 19353)
+Saved 44,091 ents, cache(0.06), write(0.04), disk(0.03), navmesh(0.00).
+Saving complete
+484[484] was killed by Scientist[431] at (317.99, 5.52, -69.13)
+[PlayerRanks] PlayerRanks local database was saved.
+485[485] was killed by Scientist[727] at (66.21, 5.78, -147.16)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Checking for new Steam Item Definitions..
+664[664] was killed by Scientist[125] at (185.47, 5.92, -71.23)
+Scientist[218] was killed by RKFISHHH[76561198017547177] at (349.09, 1.76, -798.96)
+RKFISHHH[76561198017547177] was killed by Explosion at (382.13, 18.21, -788.70)
+RKFISHHH[76561198017547177] has spawned
+242[242] was killed by Scientist[241] at (186.88, 5.55, -95.71)
+193[193] was killed by Scientist[541] at (20.27, 9.11, 64.96)
+710[710] was killed by Scientist[581] at (10.59, 9.11, -19.75)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+Scientist[153] was killed by RKFISHHH[76561198017547177] at (356.50, 2.86, -786.43)
+Invalid Position: Bradley Drop (Elite) (369.71, -501.87, -793.99) (destroying)
+Invalid Position: Bradley Drop (Elite) (345.42, -505.88, -801.89) (destroying)
+210[210] was killed by Scientist[136] at (202.33, 5.54, -117.16)
+Scientist[242] was killed by RKFISHHH[76561198017547177] at (350.12, 1.44, -806.70)
+Invalid Position: Bradley Drop (Elite) (368.85, -500.99, -791.58) (destroying)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Scientist[296] was killed by RKFISHHH[76561198017547177] at (361.61, 1.59, -805.35)
+Scientist[193] was killed by RKFISHHH[76561198017547177] at (354.02, 2.01, -798.80)
+24.254.68.228:55161/76561199866337898/DuskyGopher disconnecting: disconnect
+Scientist[325] was killed by RKFISHHH[76561198017547177] at (359.44, 3.00, -782.78)
+Scientist[664] was killed by RKFISHHH[76561198017547177] at (335.13, 3.18, -776.89)
+[event] assets/content/vehicles/boats/cargoship/cargoshiptest.prefab
+fuel_storage[139285588] changed its network group to null
+rhib_storage_drybox[139285590] changed its network group to null
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Scientist[218] was killed by RKFISHHH[76561198017547177] at (368.84, 3.07, -772.11)
+Scientist[681] was killed by RKFISHHH[76561198017547177] at (368.90, 3.17, -770.95)
+Scientist[338] was killed by RKFISHHH[76561198017547177] at (360.17, 3.00, -770.48)
+Scientist[720] was killed by RKFISHHH[76561198017547177] at (352.21, 3.00, -771.26)
+Scientist[581] was killed by 696[696] at (11.39, 9.33, -20.27)
+Scientist[712] was killed by RKFISHHH[76561198017547177] at (351.76, 3.00, -767.42)
+712[712] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 16.2 ms, delta, main 1.2 ms, thread 15.1 ms (id 232), appended in place, phases gather 0.6 / compress 7.8 / write 1.1 / flush 0.0 ms, 73209290 bytes on disk, appended 10023756 of a 63185534 byte base (budget 0.5), 0 pending tiles, 1961 tiles dirty since the last save (version delta 2960)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,309 ents, cache(0.07), write(0.03), disk(0.03), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Transitioning to dead state from DiveRoam: crocodile suicided on AI failure at (-271.68, 8.50, 166.25) in J10
+Blue[76561199069700597] has spawned
+658[658] was killed by autoturret_deployed (entity) at (-320.44, 1.92, -52.14)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+726[726] was killed by Scientist[727] at (66.22, 5.78, -147.15)
+Scientist[727] was killed by 507[507] at (66.63, 6.00, -148.04)
+629[629] was killed by Scientist[686] at (-67.88, 9.11, -17.12)
+Zombie[33] was killed by RKFISHHH[76561198017547177] at (546.35, 5.03, -620.14)
+[RustNav] Disposing navmesh...
+[RustNav] Disposing navmesh...
+RunaObscura[76561198035665693] has spawned
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.13 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.09 seconds (64 tiles).
+509[509] was killed by RKFISHHH[76561198017547177] at (314.09, 0.88, -818.31)
+[NightshadeRecycler] [NightshadeRecycler] RunaObscura (76561198035665693) picked up recycler at (-1263.30, -14.85, -1263.14)
+RunaObscura[76561198035665693] has spawned
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 32.0 ms, delta, main 0.5 ms, thread 31.5 ms (id 234), appended in place, phases gather 2.9 / compress 18.2 / write 3.5 / flush 0.0 ms, 79661960 bytes on disk, appended 16476426 of a 63185534 byte base (budget 0.5), 0 pending tiles, 8959 tiles dirty since the last save (version delta 17111)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,310 ents, cache(0.10), write(0.05), disk(0.03), navmesh(0.00).
+Saving complete
+511[511] was killed by RKFISHHH[76561198017547177] at (470.68, 2.81, -778.59)
+[RustNav] Disposing navmesh...
+Blue[76561199069700597] has spawned
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[NightshadeRecycler] [NightshadeRecycler] Converted placed item into recycler for RunaObscura (76561198035665693)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Scientist[664] was killed by Blue[76561199069700597] at (-665.05, 9.27, 634.15)
+Scientist[270] was killed by Blue[76561199069700597] at (-679.79, 27.26, 733.77)
+Scientist[607] was killed by Blue[76561199069700597] at (-700.16, 27.26, 727.62)
+Scientist[247] was killed by Blue[76561199069700597] at (-664.53, 9.27, 656.51)
+Scientist[337] was killed by Blue[76561199069700597] at (-658.73, 22.91, 628.93)
+Scientist[212] was killed by Blue[76561199069700597] at (-660.59, 3.14, 668.06)
+Scientist[134] was killed by Blue[76561199069700597] at (-690.27, 3.14, 700.25)
+270[270] was killed by Scientist[292] at (10.17, 9.11, -22.13)
+612[612] was killed by autoturret_deployed (entity) at (-283.90, 2.69, -99.09)
+682[682] was killed by RKFISHHH[76561198017547177] at (253.07, 2.28, -822.20)
+194[194] was killed by Scientist[612] at (66.85, 5.78, -146.81)
+Scientist[325] was killed by Blue[76561199069700597] at (-667.41, 6.18, 646.69)
+Scientist[193] was killed by Blue[76561199069700597] at (-665.14, 6.18, 617.16)
+Scientist[724] was killed by Blue[76561199069700597] at (-651.24, 9.27, 606.27)
+507[507] was killed by Scientist[612] at (66.47, 5.78, -146.50)
+Scientist[186] was killed by Blue[76561199069700597] at (-643.55, 9.27, 572.46)
+710[710] was killed by Scientist[612] at (66.44, 5.78, -146.50)
+Scientist[668] was killed by Blue[76561199069700597] at (-634.26, 9.27, 569.15)
+Scientist[296] was killed by Blue[76561199069700597] at (-624.91, 6.18, 532.03)
+533[533] was killed by Scientist[125] at (185.46, 5.92, -71.21)
+533[533] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+692[692] was killed by Scientist[686] at (-68.15, 9.11, -15.22)
+693[693] was killed by Scientist[540] at (61.64, 12.30, -8.10)
+Scientist[297] was killed by Blue[76561199069700597] at (-1430.77, 18.16, 429.12)
+Scientist[277] was killed by Blue[76561199069700597] at (-1514.08, 24.34, 299.75)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 16.4 ms, delta, main 0.4 ms, thread 16.0 ms (id 236), appended in place, phases gather 1.2 / compress 10.0 / write 1.3 / flush 0.0 ms, 83472193 bytes on disk, appended 20286659 of a 63185534 byte base (budget 0.5), 0 pending tiles, 3460 tiles dirty since the last save (version delta 4767)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,330 ents, cache(0.05), write(0.05), disk(0.03), navmesh(0.00).
+Saving complete
+277[277] was killed by Scientist[292] at (10.29, 9.11, -21.99)
+496[496] was killed by Scientist[612] at (67.13, 5.78, -147.37)
+[RustNav] Disposing navmesh...
+Scientist[587] was killed by 485[485] at (362.34, 5.92, -94.99)
+485[485] was killed by Scientist[585] at (363.59, 5.70, -96.34)
+Scientist[612] was killed by 153[153] at (66.09, 6.00, -147.39)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+183[183] was killed by Scientist[618] at (288.86, 5.49, -100.41)
+Transitioning to dead state from DiveRoam: crocodile suicided on AI failure at (-276.71, 8.82, 186.03) in J10
+657[657] was killed by sentry.bandit.static (entity) at (247.84, 5.28, 930.79)
+215[215] was killed by Scientist[610] at (332.11, 0.48, 42.45)
+[event] assets/prefabs/npc/patrol helicopter/patrolhelicopter.prefab
+517[517] was killed by Scientist[655] at (10.57, 9.11, 30.99)
+Invalid Position: servergibs_patrolhelicopter[139322375] (941.79, -503.95, -1044.14) (destroying)
+Invalid Position: servergibs_patrolhelicopter[139322368] (960.28, -502.17, -1065.43) (destroying)
+Invalid Position: servergibs_patrolhelicopter[139322374] (960.46, -503.53, -1022.97) (destroying)
+Invalid Position: servergibs_patrolhelicopter[139322376] (964.55, -503.56, -1034.91) (destroying)
+Zombie[37] was killed by RKFISHHH[76561198017547177] at (497.92, 5.28, -681.88)
+Zombie[38] was killed by RKFISHHH[76561198017547177] at (497.79, 5.21, -680.82)
+Zombie[39] was killed by RKFISHHH[76561198017547177] at (497.66, 5.15, -679.74)
+Zombie[511] was killed by RKFISHHH[76561198017547177] at (497.65, 5.15, -679.71)
+Zombie[38] was killed by RKFISHHH[76561198017547177] at (497.66, 5.15, -679.74)
+39[39] was killed by Scientist[292] at (10.25, 9.11, -21.98)
+Transitioning to dead state from DiveRoam: crocodile suicided on AI failure at (-275.16, 8.60, 186.13) in J10
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 30.1 ms, delta, main 0.5 ms, thread 29.6 ms (id 238), appended in place, phases gather 3.2 / compress 17.2 / write 3.2 / flush 0.0 ms, 89949583 bytes on disk, appended 26764049 of a 63185534 byte base (budget 0.5), 0 pending tiles, 8582 tiles dirty since the last save (version delta 16046)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,397 ents, cache(0.05), write(0.04), disk(0.03), navmesh(0.00).
+Saving complete
+Blue[76561199069700597] was killed by RKFISHHH[76561198017547177] at (549.19, 5.44, -643.60)
+Blue[76561199069700597] has spawned
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Disposing navmesh...
+606[606] was killed by RKFISHHH[76561198017547177] at (375.20, 1.20, -554.42)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+37[37] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+RKFISHHH[76561198017547177] was killed by Blue[76561199069700597] at (423.10, 3.94, -685.42)
+RKFISHHH[76561198017547177] has spawned
+121[121] was killed by Scientist[224] at (67.84, 5.78, -147.79)
+Checking for new Steam Item Definitions..
+Zombie[596] was killed by Blue[76561199069700597] at (544.80, 5.01, -619.81)
+Zombie[611] was killed by Blue[76561199069700597] at (544.87, 5.05, -620.79)
+Zombie[33] was killed by Blue[76561199069700597] at (544.59, 5.33, -625.32)
+Zombie[20] was killed by Blue[76561199069700597] at (544.23, 5.54, -628.47)
+Zombie[32] was killed by Blue[76561199069700597] at (542.56, 5.64, -632.66)
+696[696] was killed by Scientist[224] at (66.09, 5.78, -147.43)
+> startstorm start
+[IslandStorm] Island-wide storm starting!
+[IslandStorm] [IslandStorm] Running: weather.load storm
+[IslandStorm] [IslandStorm] Running: weather.wind 0.75
+weather.wind: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.50
+weather.rain: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+weather.thunder: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.40
+weather.fog: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+weather.atmosphere_rayleigh: "-0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+weather.atmosphere_mie: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+weather.atmosphere_brightness: "-0.3"
+[IslandStorm] Storm started.
+[IslandStorm] [IslandStorm] Running: weather.wind 0.38
+weather.wind: "0.38"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.25
+weather.rain: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+weather.thunder: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.20
+weather.fog: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.70
+weather.atmosphere_rayleigh: "-0.7"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.38
+weather.atmosphere_mie: "-0.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.65
+weather.atmosphere_brightness: "-0.65"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.45
+weather.wind: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.30
+weather.rain: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+weather.thunder: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.24
+weather.fog: "0.24"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.64
+weather.atmosphere_rayleigh: "-0.64"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.25
+weather.atmosphere_mie: "-0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.58
+weather.atmosphere_brightness: "-0.58"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.53
+weather.wind: "0.53"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.35
+weather.rain: "0.35"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+weather.thunder: "0.35"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.28
+weather.fog: "0.28"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.58
+weather.atmosphere_rayleigh: "-0.58"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.12
+weather.atmosphere_mie: "-0.12"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.51
+weather.atmosphere_brightness: "-0.51"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.60
+weather.wind: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.40
+weather.rain: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+weather.thunder: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.32
+weather.fog: "0.32"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.52
+weather.atmosphere_rayleigh: "-0.52"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.00
+weather.atmosphere_mie: "0"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.44
+weather.atmosphere_brightness: "-0.44"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.68
+weather.wind: "0.68"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.45
+weather.rain: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+weather.thunder: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.36
+weather.fog: "0.36"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.46
+weather.atmosphere_rayleigh: "-0.46"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.13
+weather.atmosphere_mie: "0.13"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.37
+weather.atmosphere_brightness: "-0.37"
+313[313] was killed by Scientist[224] at (67.78, 5.78, -147.84)
+[IslandStorm] [IslandStorm] Running: weather.wind 0.75
+weather.wind: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.50
+weather.rain: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+weather.thunder: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.40
+weather.fog: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+weather.atmosphere_rayleigh: "-0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+weather.atmosphere_mie: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+weather.atmosphere_brightness: "-0.3"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.83
+weather.wind: "0.83"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.55
+weather.rain: "0.55"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+weather.thunder: "0.55"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.44
+weather.fog: "0.44"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.34
+weather.atmosphere_rayleigh: "-0.34"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.38
+weather.atmosphere_mie: "0.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.23
+weather.atmosphere_brightness: "-0.23"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.90
+weather.wind: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.60
+weather.rain: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+weather.thunder: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.48
+weather.fog: "0.48"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.28
+weather.atmosphere_rayleigh: "-0.28"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.50
+weather.atmosphere_mie: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.16
+weather.atmosphere_brightness: "-0.16"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.98
+weather.wind: "0.98"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.65
+weather.rain: "0.65"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+weather.thunder: "0.65"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.52
+weather.fog: "0.52"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.22
+weather.atmosphere_rayleigh: "-0.22"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.63
+weather.atmosphere_mie: "0.63"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.09
+weather.atmosphere_brightness: "-0.09"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.05
+weather.wind: "1.05"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.70
+weather.rain: "0.7"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+weather.thunder: "0.7"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.56
+weather.fog: "0.56"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.16
+weather.atmosphere_rayleigh: "-0.16"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.75
+weather.atmosphere_mie: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.02
+weather.atmosphere_brightness: "-0.02"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.13
+weather.wind: "1.13"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.75
+weather.rain: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+weather.thunder: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.60
+weather.fog: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.10
+weather.atmosphere_rayleigh: "-0.1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.88
+weather.atmosphere_mie: "0.88"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.05
+weather.atmosphere_brightness: "0.05"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.20
+weather.wind: "1.2"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.80
+weather.rain: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+weather.thunder: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.64
+weather.fog: "0.64"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.04
+weather.atmosphere_rayleigh: "-0.04"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.00
+weather.atmosphere_mie: "1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.12
+weather.atmosphere_brightness: "0.12"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.28
+weather.wind: "1.28"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.85
+weather.rain: "0.85"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+weather.thunder: "0.85"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.68
+weather.fog: "0.68"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.02
+weather.atmosphere_rayleigh: "0.02"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.13
+weather.atmosphere_mie: "1.13"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.19
+weather.atmosphere_brightness: "0.19"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.35
+weather.wind: "1.35"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.90
+weather.rain: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+weather.thunder: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.72
+weather.fog: "0.72"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.08
+weather.atmosphere_rayleigh: "0.08"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.25
+weather.atmosphere_mie: "1.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.26
+weather.atmosphere_brightness: "0.26"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.43
+weather.wind: "1.43"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.95
+weather.rain: "0.95"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+weather.thunder: "0.95"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.76
+weather.fog: "0.76"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.14
+weather.atmosphere_rayleigh: "0.14"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.38
+weather.atmosphere_mie: "1.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.33
+weather.atmosphere_brightness: "0.33"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.50
+weather.wind: "1.5"
+[IslandStorm] [IslandStorm] Running: weather.rain 1.00
+weather.rain: "1"
+[IslandStorm] [IslandStorm] Running: weather.thunder 1.00
+weather.thunder: "1"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.80
+weather.fog: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.20
+weather.atmosphere_rayleigh: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.50
+weather.atmosphere_mie: "1.5"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.40
+weather.atmosphere_brightness: "0.4"
+[IslandStorm] Storm peaked - extreme weather and peak radiation.
+Blue[76561199069700597] has spawned
+Blue[76561199069700597] has spawned
+[RustNav] Disposing navmesh...
+259[259] was killed by Scientist[541] at (20.30, 9.11, 65.01)
+552[552] was killed by Scientist[725] at (361.51, 5.70, -93.95)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Scientist[292] was killed by 313[313] at (11.02, 9.33, -22.59)
+[event] assets/prefabs/npc/cargo plane/cargo_plane.prefab
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[IslandStorm] [IslandStorm] Running: weather.wind 1.43
+weather.wind: "1.43"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.95
+weather.rain: "0.95"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.95
+weather.thunder: "0.95"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.76
+weather.fog: "0.76"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.14
+weather.atmosphere_rayleigh: "0.14"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.38
+weather.atmosphere_mie: "1.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.33
+weather.atmosphere_brightness: "0.33"
+Random satellite crash triggered at (-598, 8, -374), mass 2000kg
+[IslandStorm] [IslandStorm] Running: weather.wind 1.35
+weather.wind: "1.35"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.90
+weather.rain: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.90
+weather.thunder: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.72
+weather.fog: "0.72"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.08
+weather.atmosphere_rayleigh: "0.08"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.25
+weather.atmosphere_mie: "1.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.26
+weather.atmosphere_brightness: "0.26"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.28
+weather.wind: "1.28"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.85
+weather.rain: "0.85"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.85
+weather.thunder: "0.85"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.68
+weather.fog: "0.68"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh 0.02
+weather.atmosphere_rayleigh: "0.02"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.13
+weather.atmosphere_mie: "1.13"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.19
+weather.atmosphere_brightness: "0.19"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.20
+weather.wind: "1.2"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.80
+weather.rain: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.80
+weather.thunder: "0.8"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.64
+weather.fog: "0.64"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.04
+weather.atmosphere_rayleigh: "-0.04"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 1.00
+weather.atmosphere_mie: "1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.12
+weather.atmosphere_brightness: "0.12"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.13
+weather.wind: "1.13"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.75
+weather.rain: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.75
+weather.thunder: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.60
+weather.fog: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.10
+weather.atmosphere_rayleigh: "-0.1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.87
+weather.atmosphere_mie: "0.87"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness 0.05
+weather.atmosphere_brightness: "0.05"
+[IslandStorm] [IslandStorm] Running: weather.wind 1.05
+weather.wind: "1.05"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.70
+weather.rain: "0.7"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.70
+weather.thunder: "0.7"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.56
+weather.fog: "0.56"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.16
+weather.atmosphere_rayleigh: "-0.16"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.75
+weather.atmosphere_mie: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.02
+weather.atmosphere_brightness: "-0.02"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.97
+weather.wind: "0.97"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.65
+weather.rain: "0.65"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.65
+weather.thunder: "0.65"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.52
+weather.fog: "0.52"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.22
+weather.atmosphere_rayleigh: "-0.22"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.62
+weather.atmosphere_mie: "0.62"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.09
+weather.atmosphere_brightness: "-0.09"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.90
+weather.wind: "0.9"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.60
+weather.rain: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.60
+weather.thunder: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.48
+weather.fog: "0.48"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.28
+weather.atmosphere_rayleigh: "-0.28"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.50
+weather.atmosphere_mie: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.16
+weather.atmosphere_brightness: "-0.16"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.82
+weather.wind: "0.82"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.55
+weather.rain: "0.55"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.55
+weather.thunder: "0.55"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.44
+weather.fog: "0.44"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.34
+weather.atmosphere_rayleigh: "-0.34"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.37
+weather.atmosphere_mie: "0.37"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.23
+weather.atmosphere_brightness: "-0.23"
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 20.2 ms, delta, main 0.7 ms, thread 19.5 ms (id 240), appended in place, phases gather 1.0 / compress 10.9 / write 1.3 / flush 0.0 ms, 94242336 bytes on disk, appended 31056802 of a 63185534 byte base (budget 0.5), 0 pending tiles, 4073 tiles dirty since the last save (version delta 5669)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,374 ents, cache(0.07), write(0.03), disk(0.03), navmesh(0.00).
+Saving complete
+[IslandStorm] [IslandStorm] Running: weather.wind 0.75
+weather.wind: "0.75"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.50
+weather.rain: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.50
+weather.thunder: "0.5"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.40
+weather.fog: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.40
+weather.atmosphere_rayleigh: "-0.4"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.25
+weather.atmosphere_mie: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.30
+weather.atmosphere_brightness: "-0.3"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.67
+weather.wind: "0.67"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.45
+weather.rain: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.45
+weather.thunder: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.36
+weather.fog: "0.36"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.46
+weather.atmosphere_rayleigh: "-0.46"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.12
+weather.atmosphere_mie: "0.12"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.37
+weather.atmosphere_brightness: "-0.37"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.60
+weather.wind: "0.6"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.40
+weather.rain: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.40
+weather.thunder: "0.4"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.32
+weather.fog: "0.32"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.52
+weather.atmosphere_rayleigh: "-0.52"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie 0.00
+weather.atmosphere_mie: "0"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.44
+weather.atmosphere_brightness: "-0.44"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.52
+weather.wind: "0.52"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.35
+weather.rain: "0.35"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.35
+weather.thunder: "0.35"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.28
+weather.fog: "0.28"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.58
+weather.atmosphere_rayleigh: "-0.58"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.13
+weather.atmosphere_mie: "-0.13"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.51
+weather.atmosphere_brightness: "-0.51"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.45
+weather.wind: "0.45"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.30
+weather.rain: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.30
+weather.thunder: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.24
+weather.fog: "0.24"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.64
+weather.atmosphere_rayleigh: "-0.64"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.25
+weather.atmosphere_mie: "-0.25"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.58
+weather.atmosphere_brightness: "-0.58"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.37
+weather.wind: "0.37"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.25
+weather.rain: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.25
+weather.thunder: "0.25"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.20
+weather.fog: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.70
+weather.atmosphere_rayleigh: "-0.7"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.38
+weather.atmosphere_mie: "-0.38"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.65
+weather.atmosphere_brightness: "-0.65"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.30
+weather.wind: "0.3"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.20
+weather.rain: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.20
+weather.thunder: "0.2"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.16
+weather.fog: "0.16"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.76
+weather.atmosphere_rayleigh: "-0.76"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.50
+weather.atmosphere_mie: "-0.5"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.72
+weather.atmosphere_brightness: "-0.72"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.22
+weather.wind: "0.22"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.15
+weather.rain: "0.15"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.15
+weather.thunder: "0.15"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.12
+weather.fog: "0.12"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.82
+weather.atmosphere_rayleigh: "-0.82"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.63
+weather.atmosphere_mie: "-0.63"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.79
+weather.atmosphere_brightness: "-0.79"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.15
+weather.wind: "0.15"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.10
+weather.rain: "0.1"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.10
+weather.thunder: "0.1"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.08
+weather.fog: "0.08"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.88
+weather.atmosphere_rayleigh: "-0.88"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.75
+weather.atmosphere_mie: "-0.75"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.86
+weather.atmosphere_brightness: "-0.86"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.07
+weather.wind: "0.07"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.05
+weather.rain: "0.05"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.05
+weather.thunder: "0.05"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.04
+weather.fog: "0.04"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -0.94
+weather.atmosphere_rayleigh: "-0.94"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -0.88
+weather.atmosphere_mie: "-0.88"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -0.93
+weather.atmosphere_brightness: "-0.93"
+[IslandStorm] [IslandStorm] Running: weather.wind 0.00
+weather.wind: "0"
+[IslandStorm] [IslandStorm] Running: weather.rain 0.00
+weather.rain: "0"
+[IslandStorm] [IslandStorm] Running: weather.thunder 0.00
+weather.thunder: "0"
+[IslandStorm] [IslandStorm] Running: weather.fog 0.00
+weather.fog: "0"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -1.00
+weather.atmosphere_rayleigh: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -1.00
+weather.atmosphere_mie: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -1.00
+weather.atmosphere_brightness: "-1"
+[IslandStorm] [IslandStorm] Running: weather.reset 
+[IslandStorm] [IslandStorm] Running: weather.wind -1.00
+weather.wind: "-1"
+[IslandStorm] [IslandStorm] Running: weather.rain -1.00
+weather.rain: "-1"
+[IslandStorm] [IslandStorm] Running: weather.thunder -1.00
+weather.thunder: "-1"
+[IslandStorm] [IslandStorm] Running: weather.fog -1.00
+weather.fog: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_rayleigh -1.00
+weather.atmosphere_rayleigh: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_mie -1.00
+weather.atmosphere_mie: "-1"
+[IslandStorm] [IslandStorm] Running: weather.atmosphere_brightness -1.00
+weather.atmosphere_brightness: "-1"
+[IslandStorm] Storm fully ended.
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+Blue[76561199069700597] has spawned
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+547[547] was killed by RKFISHHH[76561198017547177] at (240.95, 2.36, -841.42)
+480[480] was killed by Scientist[540] at (83.83, 9.11, 9.35)
+Scientist[224] was killed by 517[517] at (66.91, 6.00, -148.11)
+478[478] was killed by Scientist[655] at (10.48, 9.11, 30.55)
+Scientist[540] was killed by 260[260] at (60.97, 12.50, -8.79)
+[RustNav] Disposing navmesh...
+[RustNav] Disposing navmesh...
+272[272] was killed by Scientist[411] at (63.00, 5.45, -217.67)
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.03 seconds (64 tiles).
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[RustNav] Successfully saved navmesh (0 pending tiles) in 23.8 ms, delta, main 0.4 ms, thread 23.4 ms (id 242), appended in place, phases gather 1.6 / compress 14.7 / write 1.8 / flush 0.0 ms, 100203395 bytes on disk, appended 37017861 of a 63185534 byte base (budget 0.5), 0 pending tiles, 7953 tiles dirty since the last save (version delta 13861)
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,474 ents, cache(0.05), write(0.04), disk(0.03), navmesh(0.00).
+Saving complete
+[RustNav] Disposing navmesh...
+Scientist[655] was killed by 260[260] at (9.59, 9.33, 31.00)
+[PlayerRanks] PlayerRanks local database was saved.
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+[RustNav] Disposing navmesh...
+673[673] was killed by RKFISHHH[76561198017547177] at (-1237.98, 12.03, -326.77)
+[event] assets/prefabs/npc/ch47/ch47scientists.entity.prefab
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+260[260] was killed by Scientist[541] at (17.96, 9.11, 63.72)
+406[406] was killed by Scientist[241] at (187.30, 5.54, -96.25)
+[event] assets/prefabs/misc/halloween/halloweenhunt.prefab
+Invalid Position: generic_world[139312536] metal.facemask (world) (-3904.88, 0.19, 4000.33) (destroying)
+Invalid Position: generic_world[139312528] door.hinged.toptier (world) (-3904.50, 0.15, 4000.34) (destroying)
+Invalid Position: generic_world[139312537] rifle.lr300 (world) (-3905.02, 0.19, 4000.57) (destroying)
+Invalid Position: harbor_dynamic_container[139320377] (-3905.31, 12.40, 4000.25) (destroying)
+Invalid Position: harbor_dynamic_container[139320374] (-3905.14, 12.40, 4000.07) (destroying)
+Invalid Position: generic_world[139310770] shotgun.spas12 (world) (-3914.55, 0.25, 4000.07) (destroying)
+Invalid Position: generic_world[139312019] metal.plate.torso (world) (-3915.76, 9.32, 4000.59) (destroying)
+Invalid Position: generic_world[139312012] rifle.lr300 (world) (-3915.60, 9.19, 4000.16) (destroying)
+Invalid Position: harbor_dynamic_container[139320380] (-3905.84, 12.40, 4000.07) (destroying)
+Invalid Position: generic_world[139311885] metal.facemask (world) (-3916.81, 9.20, 4000.21) (destroying)
+Invalid Position: generic_world[139311913] ballistic.helmet (world) (-3918.09, 9.34, 4000.02) (destroying)
+Invalid Position: harbor_dynamic_container[139320383] (-3900.54, 12.40, 4000.03) (destroying)
+Invalid Position: generic_world[139313182] fuse.highgrade (world) (-3926.24, 27.23, 4000.23) (destroying)
+Invalid Position: rhib[139285587] (-3914.90, 9.23, 4000.10) (destroying)
+513[513] was killed by Blue[76561199069700597] at (597.40, 5.27, -1206.90)
+245[245] was killed by Scientist[728] at (694.03, 3.77, -150.49)
+[TruePVE] monumentpvp, monumentpvp
+517[517] was killed by Scientist[125] at (185.47, 5.92, -71.21)
+Invalid Position: chicken.corpse[139365618] (-85.22, -500.67, -1251.01) (destroying)
+Invalid Position: chicken.corpse[139365918] (-61.49, -501.01, -1250.25) (destroying)
+239[239] was killed by Scientist[535] at (-83.69, 9.11, 52.60)
+[UnifiedLootProtection] [UnifiedLootProtection] Cleaned 0 expired ownership records. Active: 0
+[Skill Tree] Saving player data for 3 players.
+[Skill Tree] Finished saving player data.
+[RustNav] Saving navmesh to path: server/rust/TheLostIsland_1.2.6.289.navmesh...
+[Physgun.Optimizations] Writing save to disk in the background...
+Saved 44,488 ents, cache(0.04), write(0.05), disk(0.03), navmesh(0.00).
+Saving complete
+[RustNav] Successfully saved navmesh (0 pending tiles) in 173.8 ms, full, main 0.3 ms, thread 112.4 ms (id 244), replace 61.2 ms (Replace), phases gather 7.9 / compress 56.7 / write 28.8 / flush 0.1 ms, 63169669 bytes on disk, appended 0 of a 63169669 byte base (budget 0.5), 0 pending tiles, 5732 tiles dirty since the last save (version delta 8862)
+Scientist[404] was killed by 594[594] at (232.23, 11.00, 558.71)
+[VIPPerks] [VIPPerks] Kit refused for RKFISHHH: needs 9 slots, free=1 (main cap=24, items=23; belt cap=6, items=6)
+Scientist[673] died (Generic)
+Scientist[606] died (Generic)
+Invalid Position: scientist_corpse[139367011] (4000.87, 102.87, 2158.58) (destroying)
+Scientist[655] died (Generic)
+Scientist[484] died (Generic)
+Invalid Position: item_drop_backpack[139367022] (4000.87, 102.76, 2158.58) (destroying)
+Invalid Position: scientist_corpse[139367026] (4002.38, 102.97, 2159.62) (destroying)
+Invalid Position: scientist_corpse[139367031] (4000.41, 102.96, 2164.00) (destroying)
+Invalid Position: item_drop_backpack[139367035] (4002.38, 102.86, 2159.62) (destroying)
+Invalid Position: item_drop_backpack[139367039] (4000.41, 102.86, 2164.00) (destroying)
+Scientist[728] died (Generic)
+Invalid Position: scientist_corpse[139367045] (4001.47, 105.21, 2158.19) (destroying)
+Invalid Position: item_drop_backpack[139367050] (4001.47, 105.11, 2158.19) (destroying)
+609[609] was killed by Scientist[136] at (202.28, 5.54, -117.18)
+[RustNav] Disposing navmesh...
+[RustNav] Navmesh 'assets/prefabs/missions/portal/minedungeon.prefab' is now fully built in 0.02 seconds (64 tiles).
+239[239] was killed by Scientist[260] at (10.12, 9.11, -19.59)
+EntityTimedDestroy failed, baseEntity was already null!
+Calling kill - but already IsDestroyed!? satellite_crate_2.entity
+EntityTimedDestroy failed, baseEntity was already null!
+Calling kill - but already IsDestroyed!? satellite_crate_3.entity
+EntityTimedDestroy failed, baseEntity was already null!
+24.254.68.228:60803/76561199866337898/DuskyGopher joined [windows/76561199866337898]
+DuskyGopher[76561199866337898] has spawned
+68.118.70.143:59601/76561198017547177/RKFISHHH disconnecting: disconnect
+Blue[76561199069700597] has spawned
+[NightshadeAnnouncer] Announcement sent: [Nightshade] Supply signal thrown by DuskyGopher
+47.152.31.50:62145/76561199069700597/Blue disconnecting: closing
+343[343] was killed by Scientist[552] at (69.79, 5.78, -147.54)
+547[547] was killed by Scientist[411] at (63.00, 5.45, -217.67)
