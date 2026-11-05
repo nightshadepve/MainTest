@@ -21,7 +21,7 @@ namespace Oxide.Plugins
         private const string IconHit = "NightshadeHud.IconHit";
         private const string Half = "NightshadeHud.Half";
         private const string Events = "NightshadeHud.Events";
-        private const string DataPath = "NightshadeHud/State";
+        private const string DataPath = "Nightshade/NightshadeHud/State";
         private const float Pad = 6f;
         private const float Line = 15f;
 
@@ -795,7 +795,7 @@ namespace Oxide.Plugins
             }
             int sleepers = BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count;
             if (config.ShowOnline && config.ShowSleepers)
-                return "Online " + online + "  ·  Sleepers " + sleepers;
+                return "Online " + online + "  \u00B7  Sleepers " + sleepers;
             if (config.ShowOnline) return "Online " + online;
             return "Sleepers " + sleepers;
         }
@@ -816,7 +816,7 @@ namespace Oxide.Plugins
             }
             bool active = CallBool(NightshadeRaidProtection, "API_IsPvPActive");
             double seconds = ToDouble(NightshadeRaidProtection.Call("API_SecondsUntilPvPChange"));
-            text = active ? "PVP · ends in " + FormatDur(seconds) : "PvP in " + FormatDur(seconds);
+            text = active ? "PVP \u00B7 ends in " + FormatDur(seconds) : "PvP in " + FormatDur(seconds);
             color = Hex(active ? config.CountdownActive : config.CountdownIdle);
         }
 
@@ -836,7 +836,7 @@ namespace Oxide.Plugins
             }
             if (player == null || NightshadeRaidProtection == null || !NightshadeRaidProtection.IsLoaded)
             {
-                text = "Shield: —";
+                text = "Shield: \u2014";
                 color = Hex(config.MutedColor, config.InactiveAlpha);
                 return;
             }
@@ -1051,7 +1051,7 @@ namespace Oxide.Plugins
             if (BasePlayer.activePlayerList != null)
                 foreach (var connected in BasePlayer.activePlayerList)
                     if (connected != null) players.Add(connected);
-            for (int i = 0; i < players.Length; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 var player = players[i];
                 if (player != null && player.IsConnected) Show(player);

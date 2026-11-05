@@ -1973,7 +1973,7 @@ namespace Oxide.Plugins
                     // One-time migration for older builds that stored data at the root data file location.
                     try
                     {
-                        _data = Interface.Oxide.DataFileSystem.ReadObject<PluginData>(Name) ?? new PluginData();
+                        _data = Interface.Oxide.DataFileSystem.ReadObject<PluginData>("Nightshade/" + Name) ?? new PluginData();
                     }
                     catch
                     {
@@ -2497,7 +2497,7 @@ namespace Oxide.Plugins
                 PrintWarning(message);
         }
 
-        // SaveRaidbaseCopy was removed — it was dead code superseded by BeginCopyThenPrepare,
+        // SaveRaidbaseCopy was removed \u2014 it was dead code superseded by BeginCopyThenPrepare,
         // which uses the chat.say fallback poll approach instead of the synchronous TryCopyFromSteamId API.
 
         private string[] BuildCopyPasteArgs()
@@ -2604,9 +2604,9 @@ namespace Oxide.Plugins
 
             try
             {
-                Directory.CreateDirectory(GetDataSubDirectory(_config.NightshadeRaidbaseDataRootFolder, "NightshadeRaidbases"));
-                Directory.CreateDirectory(GetDataSubDirectory(_config.RaidableBasesLootFolder, "NightshadeRaidbases/Loot Tables"));
-                Directory.CreateDirectory(GetDataSubDirectory(_config.SavedRaidbaseArchiveFolderUnderOxideData, "NightshadeRaidbases/Player Raidbases"));
+                Directory.CreateDirectory(GetNightshadeDataDirectory(_config.NightshadeRaidbaseDataRootFolder, "Nightshade/NightshadeRaidbases"));
+                Directory.CreateDirectory(GetNightshadeDataDirectory(_config.RaidableBasesLootFolder, "Nightshade/NightshadeRaidbases/Loot Tables"));
+                Directory.CreateDirectory(GetNightshadeDataDirectory(_config.SavedRaidbaseArchiveFolderUnderOxideData, "Nightshade/NightshadeRaidbases/Player Raidbases"));
 
                 if (_config.CreateDefaultLootTableIfMissing)
                     EnsureDefaultLootTableFile();
@@ -2619,7 +2619,7 @@ namespace Oxide.Plugins
 
         private string GetPluginDataPath()
         {
-            string dataFolder = GetDataSubDirectory(_config?.NightshadeRaidbaseDataRootFolder, "NightshadeRaidbases");
+            string dataFolder = GetNightshadeDataDirectory(_config?.NightshadeRaidbaseDataRootFolder, "Nightshade/NightshadeRaidbases");
             string fileName = _config?.PluginStateDataFileName;
 
             if (string.IsNullOrWhiteSpace(fileName)) fileName = "Nightshade_Raidbase_Data.json";
@@ -2661,6 +2661,26 @@ namespace Oxide.Plugins
             return Path.Combine(Interface.Oxide.DataDirectory, cleaned);
         }
 
+        // Nightshade plugin data lives under carbon/data/Nightshade/<plugin folder>.
+        // Existing configs still store the old relative folder, so prefix it here.
+        private string NormalizeNightshadeDataRelative(string relativePath, string fallback)
+        {
+            if (string.IsNullOrWhiteSpace(relativePath)) relativePath = fallback;
+            if (string.IsNullOrWhiteSpace(relativePath)) relativePath = "Nightshade/NightshadeRaidbases";
+
+            string cleaned = relativePath.Trim().Replace('\\', '/').Trim('/');
+            if (!cleaned.StartsWith("Nightshade/", StringComparison.OrdinalIgnoreCase))
+                cleaned = "Nightshade/" + cleaned;
+            return cleaned;
+        }
+
+        private string GetNightshadeDataDirectory(string relativePath, string fallback)
+        {
+            string cleaned = NormalizeNightshadeDataRelative(relativePath, fallback)
+                .Replace('/', Path.DirectorySeparatorChar);
+            return Path.Combine(Interface.Oxide.DataDirectory, cleaned);
+        }
+
         private void ArchiveSavedRaidbaseCopy(string copyName, BasePlayer player, string playerName)
         {
             if (!_config.ArchiveSavedRaidbaseCopy) return;
@@ -2675,10 +2695,9 @@ namespace Oxide.Plugins
                 return;
             }
 
-            string archiveFolder = _config.SavedRaidbaseArchiveFolderUnderOxideData;
-            if (string.IsNullOrWhiteSpace(archiveFolder)) archiveFolder = "NightshadeRaidbases/Player Raidbases";
+            string archiveFolder = NormalizeNightshadeDataRelative(_config.SavedRaidbaseArchiveFolderUnderOxideData, "Nightshade/NightshadeRaidbases/Player Raidbases");
 
-            string destinationDir = GetDataSubDirectory(archiveFolder, "NightshadeRaidbases/Player Raidbases");
+            string destinationDir = GetNightshadeDataDirectory(archiveFolder, "Nightshade/NightshadeRaidbases/Player Raidbases");
             string destinationPath = Path.Combine(destinationDir, Path.GetFileName(sourcePath));
 
             try
@@ -4024,9 +4043,7 @@ namespace Oxide.Plugins
         private string GetLootFilePath(string profileName)
         {
             string safeName = profileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase) ? profileName : profileName + ".json";
-            string relativeLootFolder = _config.RaidableBasesLootFolder ?? "NightshadeRaidbases/Loot Tables";
-            relativeLootFolder = relativeLootFolder
-                .Replace('\\', Path.DirectorySeparatorChar)
+            string relativeLootFolder = NormalizeNightshadeDataRelative(_config.RaidableBasesLootFolder, "Nightshade/NightshadeRaidbases/Loot Tables")
                 .Replace('/', Path.DirectorySeparatorChar);
 
             return Path.Combine(Interface.Oxide.DataDirectory, relativeLootFolder, safeName);
@@ -4126,7 +4143,7 @@ namespace Oxide.Plugins
             RemoveMapMarkers();
 
             string mode = pvp ? "PvP" : "PvE";
-            string label = $"{ownerName} • {mode} Raidbase";
+            string label = $"{ownerName} \u2022 {mode} Raidbase";
 
             try
             {
@@ -4477,7 +4494,7 @@ namespace Oxide.Plugins
             public bool CopyRaidbaseOnReady = true;
 
             [JsonProperty("Nightshade raidbase data root folder under Carbon/Oxide data folder")]
-            public string NightshadeRaidbaseDataRootFolder = "NightshadeRaidbases";
+            public string NightshadeRaidbaseDataRootFolder = "Nightshade/NightshadeRaidbases";
 
             [JsonProperty("Plugin state data file name inside Nightshade raidbase data root folder")]
             public string PluginStateDataFileName = "Nightshade_Raidbase_Data.json";
@@ -4501,7 +4518,7 @@ namespace Oxide.Plugins
             public string CopyPasteDataFolderUnderOxideData = "copypaste";
 
             [JsonProperty("Archive saved raidbase copies under data folder")]
-            public string SavedRaidbaseArchiveFolderUnderOxideData = "NightshadeRaidbases/Player Raidbases";
+            public string SavedRaidbaseArchiveFolderUnderOxideData = "Nightshade/NightshadeRaidbases/Player Raidbases";
 
             [JsonProperty("Archive CopyPaste save into NightshadeRaidbases data folder after successful copy")]
             public bool ArchiveSavedRaidbaseCopy = true;
@@ -4528,7 +4545,7 @@ namespace Oxide.Plugins
             public bool VerifyCopyPasteFileCreated = true;
 
             [JsonProperty("Raidbase loot table folder under data folder")]
-            public string RaidableBasesLootFolder = "NightshadeRaidbases/Loot Tables";
+            public string RaidableBasesLootFolder = "Nightshade/NightshadeRaidbases/Loot Tables";
 
             [JsonProperty("Default PvE Loot Profile")]
             public string DefaultPveLootProfile = "raidbase_loot";
@@ -4672,7 +4689,7 @@ namespace Oxide.Plugins
             public bool UseAdvancedStatusCleanupBar = true;
 
             [JsonProperty("AdvancedStatus cleanup text")]
-            public string AdvancedStatusCleanupText = "TC DOWN • Cleanup";
+            public string AdvancedStatusCleanupText = "TC DOWN \u2022 Cleanup";
 
             [JsonProperty("AdvancedStatus cleanup order")]
             public int AdvancedStatusCleanupOrder = 21;
@@ -4753,7 +4770,7 @@ namespace Oxide.Plugins
             public int CleanupTimerFontSize = 13;
 
             [JsonProperty("Cleanup GUI text format")]
-            public string CleanupTimerText = "TC DOWN • Cleanup in {0}";
+            public string CleanupTimerText = "TC DOWN \u2022 Cleanup in {0}";
 
             [JsonProperty("Map marker PvE fill color (hex)")]
             public string MapMarkerPveFillColor = "#B084FF";
@@ -4820,7 +4837,7 @@ namespace Oxide.Plugins
 
             public void Sanitize()
             {
-                if (string.IsNullOrWhiteSpace(NightshadeRaidbaseDataRootFolder)) NightshadeRaidbaseDataRootFolder = "NightshadeRaidbases";
+                if (string.IsNullOrWhiteSpace(NightshadeRaidbaseDataRootFolder)) NightshadeRaidbaseDataRootFolder = "Nightshade/NightshadeRaidbases";
                 NightshadeRaidbaseDataRootFolder = NightshadeRaidbaseDataRootFolder.Trim().Trim('\\', '/');
                 if (string.IsNullOrWhiteSpace(PluginStateDataFileName)) PluginStateDataFileName = "Nightshade_Raidbase_Data.json";
                 if (!PluginStateDataFileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) PluginStateDataFileName += ".json";
@@ -4832,11 +4849,11 @@ namespace Oxide.Plugins
                 if (CopyPasteNumberPadding > 8) CopyPasteNumberPadding = 8;
                 if (CopyPasteMaxFilenameLength < 12) CopyPasteMaxFilenameLength = 48;
                 if (string.IsNullOrWhiteSpace(CopyPasteDataFolderUnderOxideData)) CopyPasteDataFolderUnderOxideData = "copypaste";
-                if (string.IsNullOrWhiteSpace(SavedRaidbaseArchiveFolderUnderOxideData)) SavedRaidbaseArchiveFolderUnderOxideData = "NightshadeRaidbases/Player Raidbases";
+                if (string.IsNullOrWhiteSpace(SavedRaidbaseArchiveFolderUnderOxideData)) SavedRaidbaseArchiveFolderUnderOxideData = "Nightshade/NightshadeRaidbases/Player Raidbases";
                 if (CopyPasteRadius < 0f) CopyPasteRadius = 0f;
                 if (string.IsNullOrWhiteSpace(CopyPasteMethod)) CopyPasteMethod = "building";
                 CopyPasteMethod = CopyPasteMethod.Equals("proximity", StringComparison.OrdinalIgnoreCase) ? "proximity" : "building";
-                if (string.IsNullOrWhiteSpace(RaidableBasesLootFolder) || RaidableBasesLootFolder.Equals("RaidableBases/Base_Loot", StringComparison.OrdinalIgnoreCase)) RaidableBasesLootFolder = "NightshadeRaidbases/Loot Tables";
+                if (string.IsNullOrWhiteSpace(RaidableBasesLootFolder) || RaidableBasesLootFolder.Equals("RaidableBases/Base_Loot", StringComparison.OrdinalIgnoreCase)) RaidableBasesLootFolder = "Nightshade/NightshadeRaidbases/Loot Tables";
                 if (string.IsNullOrWhiteSpace(DefaultPveLootProfile)) DefaultPveLootProfile = "raidbase_loot";
                 if (string.IsNullOrWhiteSpace(DefaultPvpLootProfile)) DefaultPvpLootProfile = "raidbase_loot";
                 if (DefaultTcRadius <= 0f) DefaultTcRadius = 30f;
@@ -4853,7 +4870,7 @@ namespace Oxide.Plugins
                 if (string.IsNullOrWhiteSpace(CleanupTimerAnchorMax)) CleanupTimerAnchorMax = "0.62 0.185";
                 if (string.IsNullOrWhiteSpace(CleanupTimerBackgroundColor)) CleanupTimerBackgroundColor = "0.05 0.04 0.08 0.78";
                 if (string.IsNullOrWhiteSpace(CleanupTimerTextColor)) CleanupTimerTextColor = "0.83 0.70 1.00 1.00";
-                if (string.IsNullOrWhiteSpace(CleanupTimerText)) CleanupTimerText = "TC DOWN • Cleanup in {0}";
+                if (string.IsNullOrWhiteSpace(CleanupTimerText)) CleanupTimerText = "TC DOWN \u2022 Cleanup in {0}";
                 if (CleanupPrefabWhitelistContains == null) CleanupPrefabWhitelistContains = new List<string>();
                 if (CleanupPrefabBlacklistContains == null) CleanupPrefabBlacklistContains = new List<string>();
                 if (WhitelistedLootContainerPrefabContains == null) WhitelistedLootContainerPrefabContains = new List<string>();

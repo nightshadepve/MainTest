@@ -28,14 +28,14 @@ namespace Oxide.Plugins
 
         private PurchaseData purchases;
 
-        // Data files live in oxide/data/Nightshade/Shop/ (carbon/data/Nightshade/Shop/ on Carbon).
-        private const string DataShop = "Nightshade/Shop/Shop";
-        private const string DataPurchases = "Nightshade/Shop/Purchases";
+        // Data files live in oxide/data/Nightshade/NightshadeShop/ (carbon/data/Nightshade/NightshadeShop/ on Carbon).
+        private const string DataShop = "Nightshade/NightshadeShop/Shop";
+        private const string DataPurchases = "Nightshade/NightshadeShop/Purchases";
 
         private List<ItemDefinition> pickList;
         private bool unloading;
         private bool serverReady;
-        private const string DataRefunds = "Nightshade/Shop/Refunds";
+        private const string DataRefunds = "Nightshade/NightshadeShop/Refunds";
         private readonly List<PendingRefund> pendingRefunds = new List<PendingRefund>();
 
         private class PendingRefund
@@ -244,46 +244,46 @@ namespace Oxide.Plugins
 
         private static Dictionary<string, string> DefaultDescriptions() => new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
-                { "perk_nightshaderecycler", "A personal recycler bound to your will. Because walking to Outpost is for people with patience — and we don’t do that here. 2 per wipe. Place responsibly" },
+                { "perk_nightshaderecycler", "A personal recycler bound to your will. Because walking to Outpost is for people with patience \u2014 and we don\u2019t do that here. 2 per wipe. Place responsibly" },
                 { "casino_cardtable", "Ante up. Bluff hard. Lose everything. A proper Nightshade evening starts with bad bets and worse decisions." },
                 { "casino_slotmachine", "Pull the lever and let fate decide. Warning: the machine feeds on hope and pays out in disappointment." },
                 { "vipperk_supercard", "Think: 5th Element Multi-Pass, but for puzzle rooms" },
                 { "perk_supercard", "Think: 5th Element Multi-Pass, but for puzzle rooms" },
-                { "helisignal_easy", "A light tap on Karen’s shoulder. Single patrol heli with manageable pressure. Recommended: Solo / Duo. Good warm-up… or confidence boost." },
-                { "helisignal_medium", "Karen heard you. Increased aggression and damage output. Recommended: Solo / Duo. Bring meds and don’t stand still." },
+                { "helisignal_easy", "A light tap on Karen\u2019s shoulder. Single patrol heli with manageable pressure. Recommended: Solo / Duo. Good warm-up\u2026 or confidence boost." },
+                { "helisignal_medium", "Karen heard you. Increased aggression and damage output. Recommended: Solo / Duo. Bring meds and don\u2019t stand still." },
                 { "helisignal_hard", "Karen is now actively upset. Sustained fire, heavier damage, and less room for mistakes. Recommended: Duo / Small Team. Cover matters." },
-                { "helisignal_elite", "Karen filed a complaint. High pressure, aggressive targeting, and serious damage output. Recommended: Small Team (2–3). You will feel this one." },
-                { "multiheli_easy", "You called Karen… and her friend. Two helis, light coordination. Recommended: Duo. Manageable, but don’t get sloppy." },
+                { "helisignal_elite", "Karen filed a complaint. High pressure, aggressive targeting, and serious damage output. Recommended: Small Team (2\u20133). You will feel this one." },
+                { "multiheli_easy", "You called Karen\u2026 and her friend. Two helis, light coordination. Recommended: Duo. Manageable, but don\u2019t get sloppy." },
                 { "multiheli_medium", "Karen brought backup. Dual heli pressure with overlapping fire. Recommended: Duo / Small Team. Positioning starts to matter." },
-                { "multiheli_hard", "Karen formed a committee. Constant pressure from multiple angles. Recommended: Small Team (2–4). Expect chaos." },
-                { "multiheli_elite", "Karen escalated this to management. Multiple helis, relentless fire, and zero breathing room. Recommended: Full Team (3–5). Good luck." },
-                { "heliwave_normal", "They just keep coming. Sequential heli waves increasing in difficulty. Recommended: Full Team (3–5). Ammo check before you start." },
-                { "heliwave_hard", "This is a mistake. Continuous waves, escalating chaos, and no real downtime. Recommended: Full Team (4–6+). Bring everything. Lose nothing." },
+                { "multiheli_hard", "Karen formed a committee. Constant pressure from multiple angles. Recommended: Small Team (2\u20134). Expect chaos." },
+                { "multiheli_elite", "Karen escalated this to management. Multiple helis, relentless fire, and zero breathing room. Recommended: Full Team (3\u20135). Good luck." },
+                { "heliwave_normal", "They just keep coming. Sequential heli waves increasing in difficulty. Recommended: Full Team (3\u20135). Ammo check before you start." },
+                { "heliwave_hard", "This is a mistake. Continuous waves, escalating chaos, and no real downtime. Recommended: Full Team (4\u20136+). Bring everything. Lose nothing." },
                 { "dungeon_easy", "A gentle introduction into the unknown. Light resistance and modest rewards. Recommended: Solo / Duo. Great for testing builds, aim, or bad decisions with minimal consequences." },
-                { "dungeon_normal", "Things start to bite back. Expect smarter enemies and more pressure. Recommended: Solo / Duo. Bring meds—you’ll actually use them now." },
-                { "dungeon_medium", "You’re no longer the main character here. Stronger enemies and tighter fights. Recommended: Duo / Small Team. Solo possible… but bold of you." },
-                { "dungeon_hard", "Aggressive AI and real pressure. Mistakes get punished fast. Recommended: Small Team (2–3). Bring ammo, meds, and at least one competent friend." },
-                { "dungeon_nightmare", "This dungeon does not like you. Chaos, high-tier enemies, and relentless pressure. Recommended: Full Team (3–5). Solo not recommended unless you enjoy suffering." },
-                { "dungeon_impossible", "This was a bad idea. Overwhelming difficulty, nonstop aggression, zero forgiveness. Recommended: Full Team (4–6+). Communication required. Survival optional." },
+                { "dungeon_normal", "Things start to bite back. Expect smarter enemies and more pressure. Recommended: Solo / Duo. Bring meds\u2014you\u2019ll actually use them now." },
+                { "dungeon_medium", "You\u2019re no longer the main character here. Stronger enemies and tighter fights. Recommended: Duo / Small Team. Solo possible\u2026 but bold of you." },
+                { "dungeon_hard", "Aggressive AI and real pressure. Mistakes get punished fast. Recommended: Small Team (2\u20133). Bring ammo, meds, and at least one competent friend." },
+                { "dungeon_nightmare", "This dungeon does not like you. Chaos, high-tier enemies, and relentless pressure. Recommended: Full Team (3\u20135). Solo not recommended unless you enjoy suffering." },
+                { "dungeon_impossible", "This was a bad idea. Overwhelming difficulty, nonstop aggression, zero forgiveness. Recommended: Full Team (4\u20136+). Communication required. Survival optional." },
                 { "VIP_Market", "The fancy gremlin counter. VIP-only goodies, questionable perks, and just enough privilege to make the loot goblins jealous." },
-                { "bradsignal_easy", "Summons an Easy Bradley encounter. Recommended: 1 player. Baby’s first tank tantrum. Still has bullets, still has feelings, still very much would like you deleted." },
-                { "bradsignal_medium", "Summons a Medium Bradley encounter. Recommended: 1–2 players. For when Easy was too polite and you’re ready for the tank to develop a personality disorder." },
-                { "bradsignal_hard", "Summons a Hard Bradley encounter. Recommended: 2–3 players. This is where the tank stops being a loot piñata and starts being your therapist’s next invoice." },
-                { "bradsignal_elite", "Summons an Elite Bradley encounter. Recommended: 3–4 players. Expensive, angry, and built like it knows you have meds on your hotbar." },
-                { "bradsignal_expert", "Summons an Expert Bradley encounter. Recommended: 4–5 players. The tank has studied your habits, judged your base design, and chosen violence professionally." },
+                { "bradsignal_easy", "Summons an Easy Bradley encounter. Recommended: 1 player. Baby\u2019s first tank tantrum. Still has bullets, still has feelings, still very much would like you deleted." },
+                { "bradsignal_medium", "Summons a Medium Bradley encounter. Recommended: 1\u20132 players. For when Easy was too polite and you\u2019re ready for the tank to develop a personality disorder." },
+                { "bradsignal_hard", "Summons a Hard Bradley encounter. Recommended: 2\u20133 players. This is where the tank stops being a loot pi\u00F1ata and starts being your therapist\u2019s next invoice." },
+                { "bradsignal_elite", "Summons an Elite Bradley encounter. Recommended: 3\u20134 players. Expensive, angry, and built like it knows you have meds on your hotbar." },
+                { "bradsignal_expert", "Summons an Expert Bradley encounter. Recommended: 4\u20135 players. The tank has studied your habits, judged your base design, and chosen violence professionally." },
                 { "bradsignal_nightmare", "Summons a Nightmare Bradley encounter. Recommended: 5+ players. Not recommended for the fragile, the sleepy, or anyone emotionally attached to their inventory." },
-                { "bradwave_normal", "Starts a Normal Bradley wave event. Recommended: 3–4 players. One tank was apparently not enough, so now we’re ordering armored problems in bulk." },
+                { "bradwave_normal", "Starts a Normal Bradley wave event. Recommended: 3\u20134 players. One tank was apparently not enough, so now we\u2019re ordering armored problems in bulk." },
                 { "bradwave_hard", "Starts a Hard Bradley wave event. Recommended: 5+ players. Multiple tanks, fewer life choices, and a very real chance your team comms become farm animal noises." },
                 { "helisignal_expert", "Summons an Expert Patrol Heli. It arrives loud, rude, and fully prepared to turn your confidence into a smoking crater." },
                 { "helisignal_nightmare", "Summons a Nightmare Patrol Heli. This is not a fight. This is an airborne HR complaint with rockets." },
                 { "multiheli_expert", "Summons multiple Expert helis. Because apparently one flying war blender was not enough seasoning for your evening." },
                 { "multiheli_nightmare", "Summons multiple Nightmare helis. Congratulations, you have purchased sky-based emotional damage with a side of rotor noises." },
                 { "adv_large_planter_t1", "A reinforced large planter infused with early-stage enhancements. Operates at 80% optimal conditions with no water or light required, offering a reliable and low-maintenance farming upgrade." },
-                { "adv_large_planter_t2", "A refined large planter engineered for efficiency. Operates at 100% optimal conditions with no water or light required, and crops remain ripe without decaying—perfect for consistent, hands-off farming." },
-                { "adv_large_planter_t3", "A high-tier agricultural planter designed for maximum performance. Operates at 150% optimal conditions with no water or light required, and crops never decay when ripe—ideal for large-scale, high-output farming." },
+                { "adv_large_planter_t2", "A refined large planter engineered for efficiency. Operates at 100% optimal conditions with no water or light required, and crops remain ripe without decaying\u2014perfect for consistent, hands-off farming." },
+                { "adv_large_planter_t3", "A high-tier agricultural planter designed for maximum performance. Operates at 150% optimal conditions with no water or light required, and crops never decay when ripe\u2014ideal for large-scale, high-output farming." },
                 { "adv_small_planter_t1", "A compact planter upgraded with basic enhancements. Operates at 80% optimal conditions with no water or light required, making it ideal for simple, low-maintenance setups." },
-                { "adv_small_planter_t2", "An optimized small planter built for reliable harvests. Operates at 100% optimal conditions with no water or light required, and crops remain ripe without decaying—perfect for efficient micro-farming." },
-                { "adv_small_planter_t3", "A precision-engineered small planter built for peak efficiency. Operates at 150% optimal conditions with no water or light required, and crops never decay when ripe—enabling powerful, fully automated farming setups." },
+                { "adv_small_planter_t2", "An optimized small planter built for reliable harvests. Operates at 100% optimal conditions with no water or light required, and crops remain ripe without decaying\u2014perfect for efficient micro-farming." },
+                { "adv_small_planter_t3", "A precision-engineered small planter built for peak efficiency. Operates at 150% optimal conditions with no water or light required, and crops never decay when ripe\u2014enabling powerful, fully automated farming setups." },
                 { "Animal_Pen", "A cozy little livestock jail for your future nuggets, bacon seeds, and questionable farming ambitions. Place it, feed the chaos, pretend this was a survival game plan." },
                 { "pump_jack", "Virtual Quarry Only - oil goblin. Slap this in and let it scream crude oil out of the earth like the map owes you child support." },
                 { "mining_quarry", "Virtual Quarry Only - Rock muncher. Fuel it, and watch it chew the planet into resources while you do literally anything else." },
@@ -298,7 +298,7 @@ namespace Oxide.Plugins
                 { "super_tea", "Liquid productivity with suspicious side effects. Chug it and become the kind of person nodes warn each other about." },
                 { "test_generator", "Forbidden hum box. Produces power, bad decisions, and the vibe of someone who absolutely bypassed the intended tech tree." },
                 { "mlrs_truck", "Mobile war crime-adjacent driveway decoration. Place it carefully, aim responsibly, and remember: consequences are just content with extra steps. (Player Placeable)" },
-                { "door_closer", "For people who were raised in a barn but are now trying to heal. Automatically shuts doors before the base becomes a loot piñata." },
+                { "door_closer", "For people who were raised in a barn but are now trying to heal. Automatically shuts doors before the base becomes a loot pi\u00F1ata." },
                 { "hobo_barrel", "A warm little barrel of questionable comfort. Perfect for mood lighting, frostbite prevention, and looking like you lost an argument with capitalism." },
                 { "plush_scientist", "Tiny scientist. Zero threat. Maximum judgment. Place him somewhere important so he can silently disapprove of your base layout." },
                 { "plush_hazmat", "Soft little hazmat buddy. Immune to radiation, vulnerable to being placed in cursed corners for decoration crimes." },
@@ -1501,7 +1501,7 @@ namespace Oxide.Plugins
             var item = FindItem(s.BuyItem, out cat);
             if (item == null) { s.BuyItem = 0; s.BuyToken = null; return; }
             s.BuyQty = Mathf.Clamp(s.BuyQty, 1, PopupMax(p, item));
-            string box = ModalBox(c, tc, 560, 460, "PURCHASE • " + ItemLabel(item));
+            string box = ModalBox(c, tc, 560, 460, "PURCHASE \u2022 " + ItemLabel(item));
             ListIcon(c, box, item.Icon, CardIcon(item), IsEvent(item) ? 0 : item.Skin, R(22, 304, 110, 392));
             string desc = ItemDescription(item);
             if (string.IsNullOrWhiteSpace(desc)) desc = "No additional description has been provided for this item.";
@@ -1512,8 +1512,8 @@ namespace Oxide.Plugins
             int max = PopupMax(p, item);
             if (max > 1)
             {
-                Label(c, box, "QUANTITY • drag the handle, click the bar, or enter a number", 12, tc.SubText, TextAnchor.MiddleCenter, R(20, 168, 540, 198));
-                Btn(c, box, $"{UiCmd} buyqty {s.BuyToken} {Math.Max(1, s.BuyQty - 1)}", tc.Button, R(24, 126, 64, 158), "−", 22, tc.ButtonText);
+                Label(c, box, "QUANTITY \u2022 drag the handle, click the bar, or enter a number", 12, tc.SubText, TextAnchor.MiddleCenter, R(20, 168, 540, 198));
+                Btn(c, box, $"{UiCmd} buyqty {s.BuyToken} {Math.Max(1, s.BuyQty - 1)}", tc.Button, R(24, 126, 64, 158), "\u2212", 22, tc.ButtonText);
                 Btn(c, box, $"{UiCmd} buyqty {s.BuyToken} {Math.Min(max, s.BuyQty + 1)}", tc.Button, R(496, 126, 536, 158), "+", 22, tc.ButtonText);
                 string track = Box(c, box, tc.Panel, R(100, 130, 460, 154));
                 Box(c, track, tc.Button, R(12, 9, 348, 15));
@@ -1541,10 +1541,10 @@ namespace Oxide.Plugins
                 });
                 Label(c, box, "TYPE QTY", 11, tc.SubText, TextAnchor.MiddleRight, R(50, 76, 150, 106));
                 Input(c, box, s.BuyQty.ToString(), $"{UiCmd} buyqty {s.BuyToken}", tc.Card, tc.Text, R(160, 76, 245, 106), 14, 4);
-                Label(c, box, "1–" + max + " purchases • Enter to apply", 11, tc.SubText, TextAnchor.MiddleLeft, R(258, 76, 530, 106), false);
+                Label(c, box, "1\u2013" + max + " purchases \u2022 Enter to apply", 11, tc.SubText, TextAnchor.MiddleLeft, R(258, 76, 530, 106), false);
             }
             else
-                Label(c, box, "QUANTITY: 1 • This listing is limited to one per purchase.", 14, tc.SubText, TextAnchor.MiddleCenter, R(20, 92, 540, 158));
+                Label(c, box, "QUANTITY: 1 \u2022 This listing is limited to one per purchase.", 14, tc.SubText, TextAnchor.MiddleCenter, R(20, 92, 540, 158));
             DrawPurchaseTotals(c, p, s, item, tc);
             Btn(c, box, $"{UiCmd} buycancel", tc.Button, R(20, 16, 200, 54), "CANCEL", 14, tc.ButtonText);
             Btn(c, box, $"{UiCmd} buyconfirm {s.BuyToken}", tc.Accent, R(216, 16, 540, 54), "CONFIRM PURCHASE", 14, tc.AccentText);
@@ -1556,8 +1556,8 @@ namespace Oxide.Plugins
             Box(c, UiModal + ".Box", tc.Panel, R(20, 198, 540, 216), total);
             long cost = (long)Math.Max(0, item.Price) * s.BuyQty;
             string price = IsEvent(item) && item.ChargedByPlugin && item.PluginPricing ? "PRICED BY EVENT PLUGIN" : $"{cost:N0} RP";
-            string amount = IsEvent(item) || !item.GiveItem ? $"{s.BuyQty:N0} purchase(s)" : $"{s.BuyQty:N0} × {item.Amount:N0} = {(long)s.BuyQty * item.Amount:N0} items";
-            Label(c, total, amount + "    •    TOTAL: " + price, 12, cost > Balance(p) ? tc.Danger : tc.Accent, TextAnchor.MiddleCenter, Full());
+            string amount = IsEvent(item) || !item.GiveItem ? $"{s.BuyQty:N0} purchase(s)" : $"{s.BuyQty:N0} \u00D7 {item.Amount:N0} = {(long)s.BuyQty * item.Amount:N0} items";
+            Label(c, total, amount + "    \u2022    TOTAL: " + price, 12, cost > Balance(p) ? tc.Danger : tc.Accent, TextAnchor.MiddleCenter, Full());
         }
 
         private void OnCuiDraggableDrag(BasePlayer player, string name, Vector3 position, CommunityEntity.DraggablePositionSendType type)
@@ -1602,11 +1602,11 @@ namespace Oxide.Plugins
             ShopCategory cat;
             var item = FindItem(s.EditItem, out cat);
             if (item == null) { s.DescriptionEdit = false; return; }
-            string box = ModalBox(c, tc, 740, 490, "DESCRIPTION • " + ItemLabel(item));
+            string box = ModalBox(c, tc, 740, 490, "DESCRIPTION \u2022 " + ItemLabel(item));
             string cmd = $"{UiCmd} iset {item.Id}";
-            Label(c, box, "CUSTOM DESCRIPTION • type/paste, then press Enter", 12, tc.SubText, TextAnchor.MiddleLeft, R(20, 399, 720, 429));
+            Label(c, box, "CUSTOM DESCRIPTION \u2022 type/paste, then press Enter", 12, tc.SubText, TextAnchor.MiddleLeft, R(20, 399, 720, 429));
             Input(c, box, item.Description, cmd + " description", tc.Card, tc.Text, R(20, 357, 720, 397), 13, 1200);
-            Label(c, box, "IMPORTED KEY • e.g. helisignal_easy, mlrs_truck, adv_large_planter_t1", 12, tc.SubText, TextAnchor.MiddleLeft, R(20, 315, 720, 345));
+            Label(c, box, "IMPORTED KEY \u2022 e.g. helisignal_easy, mlrs_truck, adv_large_planter_t1", 12, tc.SubText, TextAnchor.MiddleLeft, R(20, 315, 720, 345));
             Input(c, box, item.DescriptionKey, cmd + " descriptionkey", tc.Card, tc.Text, R(20, 277, 520, 313), 13, 100);
             Btn(c, box, cmd + " cleardescription", tc.Button, R(534, 277, 720, 313), "USE IMPORTED TEXT", 11, tc.ButtonText);
             Btn(c, box, cmd + " carddescription", item.ShowDescriptionOnCard ? tc.Accent : tc.Button, R(20, 224, 380, 262),
@@ -2661,7 +2661,7 @@ namespace Oxide.Plugins
                 Btn(c, tabs, $"{UiCmd} tab 1", s.Tab == 1 ? tc.Accent : tc.Button, R(204, 6, 384, 34), config.ExchangeTabName, 15, s.Tab == 1 ? tc.AccentText : tc.ButtonText);
 
             if (s.Tab == 0)
-                Label(c, tabs, "SELECT AN ITEM • REVIEW • CONFIRM", 12, tc.SubText, TextAnchor.MiddleCenter, R(400, 6, 910, 34), false);
+                Label(c, tabs, "SELECT AN ITEM \u2022 REVIEW \u2022 CONFIRM", 12, tc.SubText, TextAnchor.MiddleCenter, R(400, 6, 910, 34), false);
 
             if (admin)
                 Btn(c, tabs, $"{UiCmd} admin", s.Admin ? tc.Danger : tc.Button, R(930, 6, 1084, 34), s.Admin ? "ADMIN MODE: ON" : "ADMIN MODE: OFF", 13, s.Admin ? tc.DangerText : tc.ButtonText);
@@ -2748,7 +2748,7 @@ namespace Oxide.Plugins
             }
             else
             {
-                Label(c, grid, current.RaidableTab ? "BUY A RAID • PRICES SET BY RAIDABLE BASES" : $"{listings.Count} ITEMS", current.RaidableTab ? 10 : 12, tc.SubText, TextAnchor.MiddleRight, R(560, 414, 818, 446));
+                Label(c, grid, current.RaidableTab ? "BUY A RAID \u2022 PRICES SET BY RAIDABLE BASES" : $"{listings.Count} ITEMS", current.RaidableTab ? 10 : 12, tc.SubText, TextAnchor.MiddleRight, R(560, 414, 818, 446));
             }
 
             const int cardW = 152, gap = 9, perRow = 5;
@@ -2771,7 +2771,7 @@ namespace Oxide.Plugins
                 if (descriptionH > 0 && item.ShowDescriptionOnCard && !string.IsNullOrWhiteSpace(description))
                 {
                     string info = Box(c, tile, tc.Header, R(0, 0, cardW, descriptionH - 4));
-                    string preview = description.Length > 145 ? description.Substring(0, 142).TrimEnd() + "…" : description;
+                    string preview = description.Length > 145 ? description.Substring(0, 142).TrimEnd() + "\u2026" : description;
                     Label(c, info, preview, 11, tc.SubText, TextAnchor.UpperLeft, R(8, 6, cardW - 8, descriptionH - 12), false);
                 }
 
@@ -2846,7 +2846,7 @@ namespace Oxide.Plugins
 
             Btn(c, panel, $"{UiCmd} tback", tc.Button, R(16, 414, 110, 444), "< BACK", 13, tc.ButtonText);
             Label(c, panel, catName, 20, tc.Text, TextAnchor.MiddleLeft, R(122, 414, 600, 446));
-            Label(c, panel, $"{config.ExchangeTabName}  •  {trades.Count} TRADES", 12, tc.SubText, TextAnchor.MiddleLeft, R(16, 392, 800, 414), false);
+            Label(c, panel, $"{config.ExchangeTabName}  \u2022  {trades.Count} TRADES", 12, tc.SubText, TextAnchor.MiddleLeft, R(16, 392, 800, 414), false);
             if (s.Admin)
             {
                 if (!other)
@@ -2882,7 +2882,7 @@ namespace Oxide.Plugins
                 Label(c, row, $"{ex.InAmount:N0} {NameOf(ex.InShortname)}", 16, tc.Text, TextAnchor.MiddleLeft, R(86, 42, 330, 72));
                 Label(c, row, $"You have {have:N0}", 12, can ? tc.SubText : tc.Danger, TextAnchor.MiddleLeft, R(86, 14, 330, 40), false);
 
-                Label(c, row, "»", 34, tc.Accent, TextAnchor.MiddleCenter, R(330, 10, 390, 74));
+                Label(c, row, "\u00BB", 34, tc.Accent, TextAnchor.MiddleCenter, R(330, 10, 390, 74));
 
                 DrawTradeIcon(c, row, ex.OutShortname, outDef, ex.OutSkin, 400, tc);
                 Label(c, row, $"{ex.OutAmount:N0} {NameOf(ex.OutShortname, ex.OutName)}", 16, tc.Text, TextAnchor.MiddleLeft, R(474, 42, 604, 72));
@@ -2893,7 +2893,7 @@ namespace Oxide.Plugins
                 int times = !selected ? 0 : s.TradeQty == "max" ? maxTimes : s.TradeQty == "10" ? 10 : 1;
                 string preview = selected
                     ? (times <= maxTimes
-                        ? $"x{times:N0}: {(long)ex.InAmount * times:N0} » {(long)ex.OutAmount * times:N0}"
+                        ? $"x{times:N0}: {(long)ex.InAmount * times:N0} \u00BB {(long)ex.OutAmount * times:N0}"
                         : $"x{times} needs {(long)ex.InAmount * times:N0}")
                     : "per trade";
                 Label(c, row, preview, 12, selected && times > maxTimes ? tc.Danger : tc.SubText, TextAnchor.MiddleLeft, R(474, 14, 604, 40), false);
