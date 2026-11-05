@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeInfo", "Nightshade", "1.2.0")]
+    [Info("NightshadeInfo", "Nightshade", "1.2.1")]
     [Description("Nightshade info panel: live status, rules, and Discord.")]
     public class NightshadeInfo : RustPlugin
     {
@@ -142,6 +142,8 @@ namespace Oxide.Plugins
             public List<Line> DiscordLines = new List<Line>();
             [JsonProperty("Discord invite")] public string DiscordInvite;
             [JsonProperty("Discord QR URL")] public string DiscordQr;
+            [JsonProperty("Discord QR invite min")] public string DiscordQrInviteMin = "0.2379 0.3154";
+            [JsonProperty("Discord QR invite max")] public string DiscordQrInviteMax = "0.5849 0.4096";
             [JsonProperty("Buttons", ObjectCreationHandling = ObjectCreationHandling.Replace)]
             public List<Btn> Buttons = new List<Btn>();
         }
@@ -582,37 +584,6 @@ namespace Oxide.Plugins
                 var block = new Block { Lines = tab.DiscordLines };
                 DrawBlock(container, parent, block, 0f, width, ref y);
             }
-            string invite = string.IsNullOrEmpty(tab.DiscordInvite) ? "discord.gg/dFmeweQmsy" : tab.DiscordInvite;
-            y += 6f;
-            Label(container, parent + ".InviteCap", parent, "INVITE", Hex(settings.MutedColor), 10, TextAnchor.MiddleLeft, true,
-                "0 1", "0 1", Px(0f, -(y + 16f)), Px(width, -y));
-            y += 20f;
-            Box(container, parent + ".InviteEdge", parent, Hex(settings.Accent, 0.45f), "0 1", "0 1", Px(0f, -(y + 36f)), Px(width, -y), null);
-            Box(container, parent + ".InviteBg", parent + ".InviteEdge", Hex("#16131C", 0.98f), "0 0", "1 1", "1 1", "-1 -1", null);
-            container.Add(new CuiElement
-            {
-                Name = parent + ".Invite",
-                Parent = parent + ".InviteBg",
-                Components =
-                {
-                    new CuiInputFieldComponent
-                    {
-                        Text = invite,
-                        FontSize = 16,
-                        Font = "robotocondensed-bold.ttf",
-                        Align = TextAnchor.MiddleCenter,
-                        Color = Hex(settings.Accent),
-                        CharsLimit = 64,
-                        ReadOnly = true,
-                        NeedsKeyboard = true
-                    },
-                    new CuiRectTransformComponent { AnchorMin = "0 0", AnchorMax = "1 1", OffsetMin = "8 0", OffsetMax = "-8 0" }
-                }
-            });
-            y += 48f;
-            Label(container, parent + ".InviteHint", parent, "Select the invite to copy it.", Hex(settings.MutedColor), 12, TextAnchor.UpperLeft, false,
-                "0 1", "0 1", Px(0f, -(y + 18f)), Px(width, -y));
-            y += 24f;
         }
 
         private void DrawQrCard(CuiElementContainer container, string parent, Tab tab, float top)
@@ -625,6 +596,35 @@ namespace Oxide.Plugins
             Box(container, card + ".Edge", parent, Hex(settings.Accent, 0.4f), "1 1", "1 1", Px(-(w + 16f), -(y + h)), Px(-12f, -y), null);
             Box(container, card, card + ".Edge", Hex("#16131C", 0.98f), "0 0", "1 1", "1 1", "-1 -1", null);
             AddRawImage(container, card + ".Img", card, url, QrKey(url), "0 0", "1 1", "6 6", "-6 -6");
+            string invite = tab != null && !string.IsNullOrEmpty(tab.DiscordInvite) ? tab.DiscordInvite : "discord.gg/dFmeweQmsy";
+            string inviteMin = tab != null && !string.IsNullOrEmpty(tab.DiscordQrInviteMin) ? tab.DiscordQrInviteMin : "0.2379 0.3154";
+            string inviteMax = tab != null && !string.IsNullOrEmpty(tab.DiscordQrInviteMax) ? tab.DiscordQrInviteMax : "0.5849 0.4096";
+            container.Add(new CuiElement
+            {
+                Name = card + ".Invite",
+                Parent = card + ".Img",
+                Components =
+                {
+                    new CuiInputFieldComponent
+                    {
+                        Text = invite,
+                        FontSize = 10,
+                        Font = "robotocondensed-bold.ttf",
+                        Align = TextAnchor.MiddleCenter,
+                        Color = Hex("#F4F1EA"),
+                        CharsLimit = 64,
+                        ReadOnly = true,
+                        NeedsKeyboard = true
+                    },
+                    new CuiRectTransformComponent
+                    {
+                        AnchorMin = inviteMin,
+                        AnchorMax = inviteMax,
+                        OffsetMin = "4 -3",
+                        OffsetMax = "-4 3"
+                    }
+                }
+            });
         }
 
         private void DrawStatus(CuiElementContainer container, string parent, BasePlayer player, float width, ref float y)
@@ -1481,10 +1481,12 @@ namespace Oxide.Plugins
                         DiscordTitle = "JOIN THE SERVER",
                         DiscordInvite = "discord.gg/dFmeweQmsy",
                         DiscordQr = DefaultQr,
+                        DiscordQrInviteMin = "0.2379 0.3154",
+                        DiscordQrInviteMax = "0.5849 0.4096",
                         DiscordLines = new List<Line>
                         {
                             L("\u2022 Wipe changes, events, and support are posted in Discord."),
-                            L("\u2022 Select the invite if you want to copy it, or scan the QR code."),
+                            L("\u2022 Select the link on the picture to copy it, or scan the QR code."),
                             L("\u2022 Donate through the store link in Discord. After you donate, post in the donation channel with your in-game name."),
                             L("\u2022 VIP is permanent after one donation, unless you break the rules."),
                             L("\u2022 VIPx is a monthly subscription.", "muted")
