@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Oxide.Core;
 using Oxide.Core.Plugins;
 using Oxide.Game.Rust.Cui;
@@ -10,7 +12,7 @@ using UnityEngine.UI;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeInfo", "Nightshade", "1.0.0")]
+    [Info("NightshadeInfo", "Nightshade", "1.1.0")]
     [Description("Nightshade info panel: live status, rules, and Discord on the home page.")]
     public class NightshadeInfo : RustPlugin
     {
@@ -30,6 +32,9 @@ namespace Oxide.Plugins
         private TimeZoneInfo zone;
         private bool zoneFallback;
         private Timer clock;
+        private bool statusLogged;
+        private string rulesetCache = string.Empty;
+        private float rulesetChecked = -30f;
         private readonly Dictionary<ulong, View> open = new Dictionary<ulong, View>();
         private readonly Dictionary<string, int[]> commands = new Dictionary<string, int[]>(StringComparer.OrdinalIgnoreCase);
 
@@ -47,8 +52,8 @@ namespace Oxide.Plugins
             [JsonProperty("Logo URL")] public string LogoUrl = DefaultLogo;
             [JsonProperty("Server name")] public string ServerName = "Nightshade";
             [JsonProperty("Server tag")] public string ServerTag = "Solo/Duo";
-            [JsonProperty("Panel width")] public float PanelWidth = 1080f;
-            [JsonProperty("Panel height")] public float PanelHeight = 680f;
+            [JsonProperty("Panel width")] public float PanelWidth = 800f;
+            [JsonProperty("Panel height")] public float PanelHeight = 420f;
             [JsonProperty("Accent color")] public string Accent = "#A267D3";
             [JsonProperty("PvE color")] public string PveColor = "#3DDC84";
             [JsonProperty("PvP color")] public string PvpColor = "#FF4D4D";
@@ -63,6 +68,7 @@ namespace Oxide.Plugins
             [JsonProperty("Count admins in online")] public bool CountAdmins = false;
             [JsonProperty("Status refresh seconds")] public float RefreshSeconds = 1f;
             [JsonProperty("Wipe")] public WipeCfg Wipe = new WipeCfg();
+            [JsonProperty("Purge")] public PurgeCfg Purge = new PurgeCfg();
             [JsonProperty("Labels")] public Labels Labels = new Labels();
             [JsonProperty("Pages", ObjectCreationHandling = ObjectCreationHandling.Replace)]
             public List<Page> Pages = new List<Page>();
@@ -77,23 +83,30 @@ namespace Oxide.Plugins
             [JsonProperty("Label")] public string Label = "First Thursday · 2:00 PM Eastern";
         }
 
+        private class PurgeCfg
+        {
+            [JsonProperty("Days before wipe")] public int DaysBeforeWipe = 2;
+            [JsonProperty("Start hour")] public int StartHour = 14;
+            [JsonProperty("Start minute")] public int StartMinute = 0;
+            [JsonProperty("Color")] public string Color = "#FF8C1A";
+        }
+
         private class Labels
         {
-            [JsonProperty("Mode title")] public string ModeTitle = "MODE";
             [JsonProperty("PvE name")] public string PveName = "PVE";
             [JsonProperty("PvP name")] public string PvpName = "PVP";
-            [JsonProperty("PvP window")] public string Window = "Friday 8:00 PM – Monday 3:00 AM Eastern";
-            [JsonProperty("PvP ends")] public string PvpEnds = "Ends in {time}";
-            [JsonProperty("PvP starts")] public string PvpStarts = "Starts in {time}";
-            [JsonProperty("Mode unavailable")] public string ModeUnavailable = "Weekend window unavailable";
-            [JsonProperty("Purge title")] public string PurgeTitle = "PURGE";
-            [JsonProperty("Purge inactive")] public string PurgeInactive = "Not active";
-            [JsonProperty("Purge active")] public string PurgeActive = "ACTIVE";
-            [JsonProperty("Purge ends")] public string PurgeEnds = "Ends in {time}";
-            [JsonProperty("Purge unavailable")] public string PurgeUnavailable = "Purge status unavailable";
-            [JsonProperty("Wipe title")] public string WipeTitle = "NEXT WIPE";
-            [JsonProperty("Wipe in")] public string WipeIn = "In {time}";
-            [JsonProperty("Players title")] public string PlayersTitle = "PLAYERS";
+            [JsonProperty("Purge name")] public string PurgeName = "PURGE";
+            [JsonProperty("PvE detail")] public string PveDetail = "Weekday. Monuments and events are still PvP.";
+            [JsonProperty("PvP detail")] public string PvpDetail = "Friday 8:00 PM to Monday 3:00 AM Eastern.";
+            [JsonProperty("Purge detail")] public string PurgeDetail = "Tuesday of wipe week until the Thursday wipe.";
+            [JsonProperty("Manual purge detail")] public string ManualPurgeDetail = "A manual purge is on.";
+            [JsonProperty("PvP waiting")] public string PvpWaiting = "Time until PvP weekend";
+            [JsonProperty("PvP active")] public string PvpActive = "PvP weekend ends in";
+            [JsonProperty("Purge waiting")] public string PurgeWaiting = "Time until Purge";
+            [JsonProperty("Purge active")] public string PurgeActive = "Purge ends in";
+            [JsonProperty("PvP unavailable")] public string PvpUnavailable = "Weekend window unavailable";
+            [JsonProperty("Wipe title")] public string WipeTitle = "Next wipe";
+            [JsonProperty("Wipe in")] public string WipeIn = "in {time}";
             [JsonProperty("Online")] public string Online = "Online {online}";
             [JsonProperty("Sleepers")] public string Sleepers = "Sleepers {sleepers}";
             [JsonProperty("Reward points")] public string RewardPoints = "{amount} RP";
@@ -162,20 +175,15 @@ namespace Oxide.Plugins
 
         private class Snap
         {
-            public bool ModeOk;
-            public bool Pvp;
             public string ModeValue;
             public string ModeDetail;
             public string ModeColor;
-            public bool PurgeOk;
-            public bool Purge;
+            public string PvpValue;
+            public string PvpDetail;
             public string PurgeValue;
             public string PurgeDetail;
-            public string WipeValue;
-            public string WipeDetail;
             public string Online;
-            public string Sleepers;
-            public string Points;
+            public string PlayersDetail;
         }
 
         protected override void LoadDefaultConfig()
@@ -312,8 +320,8 @@ namespace Oxide.Plugins
                 }
             });
 
-            float width = Mathf.Clamp(settings.PanelWidth, 760f, 1400f);
-            float height = Mathf.Clamp(settings.PanelHeight, 480f, 900f);
+            float width = Mathf.Clamp(settings.PanelWidth, 640f, 1100f);
+            float height = Mathf.Clamp(settings.PanelHeight, 340f, 560f);
             Button(container, Root, Root + ".Dim", UiCommand + " close", Hex(settings.DimColor, settings.DimOpacity / 100f), 0f, 0f, 1f, 1f, true);
             string window = Root + ".Window";
             Box(container, window, Root, Hex(settings.PanelColor, settings.PanelOpacity / 100f),
@@ -337,7 +345,7 @@ namespace Oxide.Plugins
 
         private void DrawHeader(CuiElementContainer container, string window, float width)
         {
-            const float header = 68f;
+            const float header = 52f;
             Box(container, window + ".Header", window, Hex("#120E16", 0.55f), "0 1", "1 1", "0 -" + F(header), "0 0", null);
             container.Add(new CuiElement
             {
@@ -351,23 +359,23 @@ namespace Oxide.Plugins
                         Color = "1 1 1 1",
                         Sprite = "assets/content/textures/generic/fulltransparent.tga"
                     },
-                    new CuiRectTransformComponent { AnchorMin = "0 0.5", AnchorMax = "0 0.5", OffsetMin = "16 -23", OffsetMax = "62 23" }
+                    new CuiRectTransformComponent { AnchorMin = "0 0.5", AnchorMax = "0 0.5", OffsetMin = "12 -16", OffsetMax = "44 16" }
                 }
             });
-            Label(container, window + ".Name", window + ".Header", settings.ServerName, Hex("#F4F1EA"), 22, TextAnchor.MiddleLeft, true,
-                "0 0.5", "0 0.5", "74 -2", "360 24");
-            float tagW = Mathf.Clamp(settings.ServerTag.Length * 8.2f + 18f, 72f, 160f);
-            Box(container, window + ".Tag", window + ".Header", Hex(settings.Accent, 0.22f), "0 0.5", "0 0.5", "74 -24", F(74f + tagW) + " -4", null);
+            Label(container, window + ".Name", window + ".Header", settings.ServerName, Hex("#F4F1EA"), 18, TextAnchor.MiddleLeft, true,
+                "0 0.5", "0 0.5", "52 -2", "280 16");
+            float tagW = Mathf.Clamp(settings.ServerTag.Length * 7.4f + 16f, 64f, 140f);
+            Box(container, window + ".Tag", window + ".Header", Hex(settings.Accent, 0.22f), "0 0.5", "0 0.5", "52 -20", F(52f + tagW) + " -4", null);
             Label(container, window + ".TagText", window + ".Tag", settings.ServerTag, Hex(settings.Accent), 12, TextAnchor.MiddleCenter, true,
                 "0 0", "1 1", "0 0", "0 0");
-            Button(container, window + ".Header", window + ".Close", UiCommand + " close", Hex("#2A2033", 0.9f), width - 48f, 18f, 32f, 32f, false);
+            Button(container, window + ".Header", window + ".Close", UiCommand + " close", Hex("#2A2033", 0.9f), width - 40f, 12f, 26f, 26f, false);
             Label(container, window + ".CloseX", window + ".Close", "✕", Hex("#F4F1EA"), 16, TextAnchor.MiddleCenter, true, "0 0", "1 1", "0 0", "0 0");
         }
 
         private void DrawSidebar(CuiElementContainer container, string window, float height, int selected)
         {
-            const float side = 196f;
-            const float header = 68f;
+            const float side = 150f;
+            const float header = 52f;
             Box(container, window + ".Side", window, Hex("#08070B", 0.45f), "0 0", "0 1", "0 0", F(side) + " -" + F(header), null);
             float y = 14f;
             for (int i = 0; i < settings.Pages.Count; i++)
@@ -387,8 +395,8 @@ namespace Oxide.Plugins
 
         private void DrawContent(CuiElementContainer container, string window, float width, float height, Page page, int pageIndex, int tabIndex, BasePlayer player)
         {
-            const float side = 196f;
-            const float header = 68f;
+            const float side = 150f;
+            const float header = 52f;
             float contentW = width - side;
             float contentH = height - header;
             string content = window + ".Content";
@@ -581,31 +589,31 @@ namespace Oxide.Plugins
         private void DrawStatus(CuiElementContainer container, string parent, BasePlayer player, float width, ref float y)
         {
             Snap snap = ReadStatus(player);
-            float gap = 8f;
+            float gap = 6f;
             float cardW = (width - gap * 3f) / 4f;
-            float cardH = 124f;
-            DrawCard(container, parent, "Mode", 0f, y, cardW, cardH, snap.ModeColor, settings.Labels.ModeTitle, snap.ModeValue, snap.ModeDetail, snap.ModeColor);
-            DrawCard(container, parent, "Purge", cardW + gap, y, cardW, cardH, snap.Purge ? settings.PvpColor : settings.MutedColor, settings.Labels.PurgeTitle, snap.PurgeValue, snap.PurgeDetail, snap.Purge ? settings.PvpColor : settings.TextColor);
-            DrawCard(container, parent, "Wipe", (cardW + gap) * 2f, y, cardW, cardH, settings.Accent, settings.Labels.WipeTitle, snap.WipeValue, snap.WipeDetail, settings.Accent);
-            DrawCard(container, parent, "Pop", (cardW + gap) * 3f, y, cardW, cardH, settings.Accent, settings.Labels.PlayersTitle, snap.Online, snap.Sleepers + "\n" + snap.Points, settings.TextColor);
-            y += cardH + 14f;
+            float cardH = 96f;
+            DrawCard(container, parent, "Mode", 0f, y, cardW, cardH, snap.ModeColor, "MODE", snap.ModeValue, snap.ModeDetail, snap.ModeColor);
+            DrawCard(container, parent, "Pvp", cardW + gap, y, cardW, cardH, settings.PvpColor, "PVP WEEKEND", snap.PvpValue, snap.PvpDetail, "#F4F1EA");
+            DrawCard(container, parent, "Purge", (cardW + gap) * 2f, y, cardW, cardH, settings.Purge != null ? settings.Purge.Color : "#FF8C1A", "PURGE", snap.PurgeValue, snap.PurgeDetail, "#F4F1EA");
+            DrawCard(container, parent, "Pop", (cardW + gap) * 3f, y, cardW, cardH, settings.Accent, "PLAYERS", snap.Online, snap.PlayersDetail, "#F4F1EA");
+            y += cardH + 12f;
         }
 
         private void DrawCard(CuiElementContainer container, string parent, string key, float x, float y, float w, float h, string bar, string title, string value, string detail, string valueColor)
         {
             string name = "NightshadeInfo.St." + key;
-            Box(container, name, parent, Hex("#FFFFFF", 0.045f), "0 1", "0 1", Px(x, -(y + h)), Px(x + w, -y), null);
-            Box(container, name + ".Bar", name, Hex(bar), "0 0", "0 1", "0 8", "3 -8", null);
-            Label(container, name + ".K", name, title ?? string.Empty, Hex(settings.MutedColor), 10, TextAnchor.UpperLeft, true, "0 1", "1 1", "12 -22", "-8 -6");
-            Label(container, name + ".V", name, value ?? string.Empty, Hex(valueColor), 16, TextAnchor.UpperLeft, true, "0 1", "1 1", "12 -46", "-8 -22");
-            Label(container, name + ".D", name, detail ?? string.Empty, Hex(settings.TextColor), 11, TextAnchor.UpperLeft, false, "0 1", "1 1", "12 -112", "-8 -48");
+            Box(container, name, parent, Hex("#FFFFFF", 0.05f), "0 1", "0 1", Px(x, -(y + h)), Px(x + w, -y), null);
+            Box(container, name + ".Bar", name, Hex(bar), "0 0", "0 1", "0 6", "3 -6", null);
+            Label(container, name + ".K", name, title ?? string.Empty, Hex(settings.MutedColor), 9, TextAnchor.UpperLeft, true, "0 1", "1 1", "8 -16", "-4 -3");
+            Label(container, name + ".V", name, value ?? string.Empty, Hex(valueColor), 13, TextAnchor.UpperLeft, true, "0 1", "1 1", "8 -36", "-4 -16");
+            Label(container, name + ".D", name, detail ?? string.Empty, Hex(settings.TextColor), 10, TextAnchor.UpperLeft, false, "0 1", "1 1", "8 -90", "-4 -36");
         }
 
         private void DrawHeading(CuiElementContainer container, string parent, string text, float x, float width, ref float y)
         {
-            Label(container, parent + ".H." + F(x) + "." + F(y), parent, text, Hex(settings.Accent), 15, TextAnchor.MiddleLeft, true,
-                "0 1", "0 1", Px(x, -(y + 22f)), Px(x + width, -y));
-            y += 26f;
+            Label(container, parent + ".H." + F(x) + "." + F(y), parent, text, Hex(settings.Accent), 16, TextAnchor.MiddleLeft, true,
+                "0 1", "0 1", Px(x, -(y + 24f)), Px(x + width, -y));
+            y += 32f;
         }
 
         private void DrawBlock(CuiElementContainer container, string parent, Block block, float x, float width, ref float y)
@@ -613,25 +621,25 @@ namespace Oxide.Plugins
             if (block == null) return;
             if (!string.IsNullOrEmpty(block.Heading))
             {
-                Label(container, parent + ".B." + F(x) + "." + F(y), parent, block.Heading, Hex(settings.Accent), 13, TextAnchor.UpperLeft, true,
-                    "0 1", "0 1", Px(x, -(y + 18f)), Px(x + width, -y));
-                y += 20f;
+                Label(container, parent + ".B." + F(x) + "." + F(y), parent, block.Heading, Hex(settings.Accent), 14, TextAnchor.UpperLeft, true,
+                    "0 1", "0 1", Px(x, -(y + 20f)), Px(x + width, -y));
+                y += 26f;
             }
             if (block.Lines == null) return;
             foreach (Line line in block.Lines)
             {
                 if (line == null || string.IsNullOrEmpty(line.Text))
                 {
-                    y += 8f;
+                    y += 10f;
                     continue;
                 }
-                int rows = Rows(Visible(line.Text), width, 12);
-                float h = rows * 16f;
-                Label(container, parent + ".L." + F(x) + "." + F(y), parent, line.Text, Tone(line), 12, TextAnchor.UpperLeft, false,
+                int rows = Rows(Visible(line.Text), width, 13);
+                float h = rows * 18f;
+                Label(container, parent + ".L." + F(x) + "." + F(y), parent, line.Text, Tone(line), 13, TextAnchor.UpperLeft, false,
                     "0 1", "0 1", Px(x, -(y + h)), Px(x + width, -y));
-                y += h + 2f;
+                y += h + 8f;
             }
-            y += 8f;
+            y += 14f;
         }
 
         private void Tick()
@@ -656,87 +664,75 @@ namespace Oxide.Plugins
         {
             Snap snap = ReadStatus(player);
             var container = new CuiElementContainer();
-            UpdateText(container, "NightshadeInfo.St.Mode.V", snap.ModeValue, Hex(snap.ModeColor), 16, true);
-            UpdateText(container, "NightshadeInfo.St.Mode.D", snap.ModeDetail, Hex(settings.TextColor), 11, false);
+            UpdateText(container, "NightshadeInfo.St.Mode.V", snap.ModeValue, Hex(snap.ModeColor), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Mode.D", snap.ModeDetail, Hex(settings.TextColor), 10, false, TextAnchor.UpperLeft);
             UpdateImage(container, "NightshadeInfo.St.Mode.Bar", Hex(snap.ModeColor));
-            UpdateText(container, "NightshadeInfo.St.Purge.V", snap.PurgeValue, Hex(snap.Purge ? settings.PvpColor : settings.TextColor), 16, true);
-            UpdateText(container, "NightshadeInfo.St.Purge.D", snap.PurgeDetail, Hex(settings.TextColor), 11, false);
-            UpdateImage(container, "NightshadeInfo.St.Purge.Bar", Hex(snap.Purge ? settings.PvpColor : settings.MutedColor));
-            UpdateText(container, "NightshadeInfo.St.Wipe.V", snap.WipeValue, Hex(settings.Accent), 16, true);
-            UpdateText(container, "NightshadeInfo.St.Wipe.D", snap.WipeDetail, Hex(settings.TextColor), 11, false);
-            UpdateText(container, "NightshadeInfo.St.Pop.V", snap.Online, Hex(settings.TextColor), 16, true);
-            UpdateText(container, "NightshadeInfo.St.Pop.D", snap.Sleepers + "\n" + snap.Points, Hex(settings.TextColor), 11, false);
+            UpdateText(container, "NightshadeInfo.St.Pvp.V", snap.PvpValue, Hex("#F4F1EA"), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Purge.V", snap.PurgeValue, Hex("#F4F1EA"), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Purge.D", snap.PurgeDetail, Hex(settings.TextColor), 10, false, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Pop.V", snap.Online, Hex("#F4F1EA"), 13, true, TextAnchor.UpperLeft);
+            UpdateText(container, "NightshadeInfo.St.Pop.D", snap.PlayersDetail, Hex(settings.TextColor), 10, false, TextAnchor.UpperLeft);
             CuiHelper.AddUi(player, container);
         }
 
         private Snap ReadStatus(BasePlayer player)
         {
             var snap = new Snap();
-            bool active = false;
-            double seconds = 0d;
-            bool modeOk = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded;
-            if (modeOk)
+            Labels labels = settings.Labels ?? new Labels();
+            bool weekend = false;
+            double weekendSeconds = 0d;
+            string weekendSource = ReadWeekend(out weekend, out weekendSeconds);
+
+            bool manual = false;
+            double manualEnd = 0d;
+            string manualSource = ReadManualPurge(out manual, out manualEnd);
+            bool rulesetPurge = RulesetIsPurge();
+
+            DateTime now = DateTime.UtcNow;
+            DateTime purgeStart;
+            DateTime wipe;
+            PurgeWindow(out purgeStart, out wipe);
+            bool scheduled = now >= purgeStart && now < wipe;
+            bool purge = manual || rulesetPurge || scheduled;
+            string purgeColor = settings.Purge != null && !string.IsNullOrEmpty(settings.Purge.Color) ? settings.Purge.Color : "#FF8C1A";
+            if (purge)
             {
-                object flag = NightshadeRaidProtection.Call("API_IsPvPActive");
-                object left = NightshadeRaidProtection.Call("API_SecondsUntilPvPChange");
-                if (flag is bool && left != null)
-                {
-                    active = (bool)flag;
-                    seconds = ToDouble(left);
-                    snap.ModeOk = true;
-                }
+                snap.ModeValue = labels.PurgeName;
+                snap.ModeColor = purgeColor;
+                snap.ModeDetail = "Until the wipe";
             }
-            snap.Pvp = snap.ModeOk && active;
-            snap.ModeColor = snap.Pvp ? settings.PvpColor : settings.PveColor;
-            if (!snap.ModeOk)
+            else if (weekend)
             {
-                snap.ModeValue = "—";
-                snap.ModeDetail = settings.Labels.ModeUnavailable;
-                snap.ModeColor = settings.MutedColor;
+                snap.ModeValue = labels.PvpName;
+                snap.ModeColor = settings.PvpColor;
+                snap.ModeDetail = "Weekend window";
             }
             else
             {
-                snap.ModeValue = snap.Pvp ? settings.Labels.PvpName : settings.Labels.PveName;
-                string when = (snap.Pvp ? settings.Labels.PvpEnds : settings.Labels.PvpStarts).Replace("{time}", FormatDur(seconds));
-                snap.ModeDetail = settings.Labels.Window + "\n" + when;
+                snap.ModeValue = labels.PveName;
+                snap.ModeColor = settings.PveColor;
+                snap.ModeDetail = "Weekday";
             }
 
-            bool purgeOk = PurgeStatus != null && PurgeStatus.IsLoaded;
-            bool purge = false;
-            double end = 0d;
-            if (purgeOk)
+            snap.PvpDetail = "Fri 8 PM - Mon 3 AM ET";
+            snap.PvpValue = (weekend ? "Ends in " : "Starts in ") + FormatDur(weekendSeconds);
+            double purgeSeconds;
+            if (purge)
             {
-                object flag = PurgeStatus.Call("API_IsPurgeActive");
-                if (flag is bool)
+                DateTime end = wipe;
+                if (manual)
                 {
-                    purge = (bool)flag;
-                    snap.PurgeOk = true;
-                    object stamp = PurgeStatus.Call("API_GetPurgeEndTimestamp");
-                    if (stamp != null) end = ToDouble(stamp);
+                    DateTime manualAt;
+                    if (TryUnix(manualEnd, out manualAt) && manualAt > now && (!scheduled || manualAt > wipe))
+                        end = manualAt;
                 }
+                purgeSeconds = (end - now).TotalSeconds;
             }
-            snap.Purge = snap.PurgeOk && purge;
-            if (!snap.PurgeOk)
-            {
-                snap.PurgeValue = "—";
-                snap.PurgeDetail = settings.Labels.PurgeUnavailable;
-            }
-            else if (!snap.Purge)
-            {
-                snap.PurgeValue = settings.Labels.PurgeInactive;
-                snap.PurgeDetail = "Last days of wipe, when an admin starts it";
-            }
-            else
-            {
-                snap.PurgeValue = settings.Labels.PurgeActive;
-                double now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-                snap.PurgeDetail = end > now ? settings.Labels.PurgeEnds.Replace("{time}", FormatDur(end - now)) : settings.Labels.PurgeActive;
-            }
+            else purgeSeconds = (purgeStart - now).TotalSeconds;
+            snap.PurgeValue = (purge ? "Ends in " : "Starts in ") + FormatDur(purgeSeconds);
 
-            DateTime next = NextWipeUtc();
-            snap.WipeValue = (settings.Labels.WipeIn ?? "In {time}").Replace("{time}", FormatDur((next - DateTime.UtcNow).TotalSeconds));
-            snap.WipeDetail = settings.Wipe == null || string.IsNullOrEmpty(settings.Wipe.Label) ? "First Thursday · 2:00 PM Eastern" : settings.Wipe.Label;
-
+            string wipeLabel = settings.Wipe == null || string.IsNullOrEmpty(settings.Wipe.Label) ? "First Thursday · 2:00 PM Eastern" : settings.Wipe.Label;
+            snap.PurgeDetail = "Tue of wipe week - Thu 2 PM wipe\n" + wipeLabel;
             int online = 0;
             foreach (BasePlayer other in BasePlayer.activePlayerList)
             {
@@ -745,10 +741,176 @@ namespace Oxide.Plugins
                 online++;
             }
             int sleepers = BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count;
-            snap.Online = settings.Labels.Online.Replace("{online}", online.ToString(CultureInfo.InvariantCulture));
-            snap.Sleepers = settings.Labels.Sleepers.Replace("{sleepers}", sleepers.ToString(CultureInfo.InvariantCulture));
-            snap.Points = settings.Labels.RewardPoints.Replace("{amount}", RewardPoints(player));
+            string onlineText = labels.Online.Replace("{online}", online.ToString(CultureInfo.InvariantCulture));
+            string sleeperText = labels.Sleepers.Replace("{sleepers}", sleepers.ToString(CultureInfo.InvariantCulture));
+            string points = labels.RewardPoints.Replace("{amount}", RewardPoints(player));
+            snap.Online = onlineText;
+            snap.PlayersDetail = sleeperText + "\n" + points;
+            if (!statusLogged)
+            {
+                statusLogged = true;
+                string purgeSource = scheduled ? "built-in schedule" : "built-in schedule (not in window)";
+                if (manual) purgeSource = manualSource + (scheduled ? " + built-in schedule" : "");
+                else if (rulesetPurge) purgeSource = "TruePVE ruleset purge" + (scheduled ? " + built-in schedule" : "");
+                Puts("NightshadeInfo status: PvP from " + weekendSource + ". Purge from " + purgeSource + ". Mode " + snap.ModeValue + ".");
+            }
             return snap;
+        }
+
+        private string ReadWeekend(out bool active, out double seconds)
+        {
+            object flag;
+            object left;
+            if (TryPair(NightshadeRaidProtection, "API_IsPvPActive", "API_SecondsUntilPvPChange", out flag, out left) && flag is bool)
+            {
+                active = (bool)flag;
+                seconds = left != null ? ToDouble(left) : LocalSeconds(active);
+                return "NightshadeRaidProtection.Call";
+            }
+            if (TryHookPair("API_IsPvPActive", "API_SecondsUntilPvPChange", out flag, out left) && flag is bool)
+            {
+                active = (bool)flag;
+                seconds = left != null ? ToDouble(left) : LocalSeconds(active);
+                return "Interface.CallHook";
+            }
+            LocalWeekend(out active, out seconds);
+            return "built-in Eastern schedule";
+        }
+
+        private string ReadManualPurge(out bool active, out double endUnix)
+        {
+            active = false;
+            endUnix = 0d;
+            object flag;
+            object stamp;
+            if (NightshadePurgeStatusLoaded() && TryPair(PurgeStatus, "API_IsPurgeActive", "API_GetPurgeEndTimestamp", out flag, out stamp) && flag is bool)
+            {
+                active = (bool)flag;
+                if (stamp != null) endUnix = ToDouble(stamp);
+                return "NightshadePurgeStatus.Call";
+            }
+            if (TryHookPair("API_IsPurgeActive", "API_GetPurgeEndTimestamp", out flag, out stamp) && flag is bool)
+            {
+                active = (bool)flag;
+                if (stamp != null) endUnix = ToDouble(stamp);
+                return "Interface.CallHook";
+            }
+            return "none";
+        }
+
+        private bool NightshadePurgeStatusLoaded()
+        {
+            return PurgeStatus != null && PurgeStatus.IsLoaded;
+        }
+
+        private static bool TryPair(Plugin plugin, string flagName, string valueName, out object flag, out object value)
+        {
+            flag = null;
+            value = null;
+            if (plugin == null || !plugin.IsLoaded) return false;
+            try
+            {
+                flag = plugin.Call(flagName);
+                value = plugin.Call(valueName);
+                return flag != null || value != null;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private static bool TryHookPair(string flagName, string valueName, out object flag, out object value)
+        {
+            flag = null;
+            value = null;
+            try
+            {
+                flag = Interface.CallHook(flagName);
+                value = Interface.CallHook(valueName);
+                return flag != null || value != null;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private bool RulesetIsPurge()
+        {
+            if (UnityEngine.Time.realtimeSinceStartup - rulesetChecked < 5f) return rulesetCache == "purge";
+            rulesetChecked = UnityEngine.Time.realtimeSinceStartup;
+            rulesetCache = string.Empty;
+            try
+            {
+                string path = Path.Combine(Interface.Oxide.ConfigDirectory, "TruePVE.json");
+                if (!File.Exists(path)) return false;
+                JObject obj = JObject.Parse(File.ReadAllText(path));
+                JToken token = obj["Default RuleSet"];
+                rulesetCache = token == null ? string.Empty : token.ToString().Trim();
+            }
+            catch (Exception)
+            {
+                rulesetCache = string.Empty;
+            }
+            return string.Equals(rulesetCache, "purge", StringComparison.OrdinalIgnoreCase);
+        }
+
+        private double LocalSeconds(bool active)
+        {
+            bool localActive;
+            double seconds;
+            LocalWeekend(out localActive, out seconds);
+            return seconds;
+        }
+
+        private void LocalWeekend(out bool active, out double seconds)
+        {
+            DateTime local = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zone);
+            int daysSinceFriday = ((int)local.DayOfWeek - (int)DayOfWeek.Friday + 7) % 7;
+            DateTime start = local.Date.AddDays(-daysSinceFriday).AddHours(20);
+            DateTime end = start.AddDays(2).AddHours(7);
+            if (local < start)
+            {
+                active = false;
+                seconds = (start - local).TotalSeconds;
+                return;
+            }
+            if (local < end)
+            {
+                active = true;
+                seconds = (end - local).TotalSeconds;
+                return;
+            }
+            active = false;
+            seconds = (start.AddDays(7) - local).TotalSeconds;
+        }
+
+        private static bool TryUnix(double seconds, out DateTime utc)
+        {
+            utc = DateTime.UtcNow;
+            if (seconds < 1000000000d || seconds > 20000000000d) return false;
+            try
+            {
+                utc = DateTimeOffset.FromUnixTimeSeconds((long)seconds).UtcDateTime;
+                return true;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                return false;
+            }
+        }
+
+        private void PurgeWindow(out DateTime startUtc, out DateTime wipeUtc)
+        {
+            wipeUtc = NextWipeUtc();
+            PurgeCfg purge = settings.Purge ?? new PurgeCfg();
+            DateTime wipeLocal = TimeZoneInfo.ConvertTimeFromUtc(wipeUtc, zone);
+            int days = purge.DaysBeforeWipe < 0 ? 0 : purge.DaysBeforeWipe;
+            int hour = Mathf.Clamp(purge.StartHour, 0, 23);
+            int minute = Mathf.Clamp(purge.StartMinute, 0, 59);
+            DateTime startLocal = wipeLocal.Date.AddDays(-days).AddHours(hour).AddMinutes(minute);
+            startUtc = TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(startLocal, DateTimeKind.Unspecified), zone);
         }
 
         private string RewardPoints(BasePlayer player)
@@ -859,6 +1021,7 @@ namespace Oxide.Plugins
             if (value.ToggleCommands == null) value.ToggleCommands = new List<string>();
             if (value.Pages == null) value.Pages = new List<Page>();
             if (value.Wipe == null) value.Wipe = new WipeCfg();
+            if (value.Purge == null) value.Purge = new PurgeCfg();
             if (value.Labels == null) value.Labels = new Labels();
             foreach (Page page in value.Pages)
             {
@@ -935,7 +1098,7 @@ namespace Oxide.Plugins
             return builder.ToString();
         }
 
-        private static void UpdateText(CuiElementContainer container, string name, string text, string color, int size, bool bold)
+        private static void UpdateText(CuiElementContainer container, string name, string text, string color, int size, bool bold, TextAnchor align)
         {
             container.Add(new CuiElement
             {
@@ -947,7 +1110,7 @@ namespace Oxide.Plugins
                     {
                         Text = text ?? string.Empty,
                         FontSize = size,
-                        Align = TextAnchor.UpperLeft,
+                        Align = align,
                         Color = color,
                         Font = bold ? "robotocondensed-bold.ttf" : "robotocondensed-regular.ttf"
                     }
@@ -1136,45 +1299,57 @@ namespace Oxide.Plugins
                         ShowStatus = true,
                         About = new List<Block>
                         {
-                            Bk("WELCOME TO NIGHTSHADE",
-                                L("Nightshade is a cozy-but-feral hybrid PvPvE Rust server: PvE outside protected PvP areas, with monuments and event zones ready to bite."),
-                                L("Vanilla gathering on resources, components, and food."),
-                                L("10x+ stack sizes, with exceptions for balance."),
-                                L("Monthly wipe: first Thursday at 2:00 PM Eastern, unless Discord says otherwise."),
-                                L("Monuments are always PvP. Watch the zone warnings before wandering in.", "warn"),
-                                L("Progression runs through /shop, Skill Tree, quarries, events, and VIP perks."),
-                                L("Loot protection covers earned kills, crates, drops, and event rewards."),
-                                L("Active admins. Read the rules on this page, then Commands, then /shop when you want to spend RP."))
+                            Bk("WELCOME",
+                                L("• Nightshade is a cozy-but-feral solo/duo server. Max team size is 2."),
+                                L("• The week is PvE. PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
+                                L("• Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. Serverwide FAFO."),
+                                L("• Monuments and events are always PvP."),
+                                L("• Vanilla gathering on resources, components, and food."),
+                                L("• 10x+ stack sizes, with exceptions for balance."),
+                                L("• Monthly wipe: first Thursday at 2:00 PM Eastern, unless Discord says otherwise."),
+                                L("• Custom progression through /shop, Skill Tree, events, and VIP perks."),
+                                L("• Earned event loot locks to you. Base boxes stay yours. See Systems for the timers."),
+                                L("• Active admins and Discord support.")),
+                            Bk("WHERE TO START",
+                                L("• /rules on this page. /commands second. /shop when you are ready to make questionable financial choices with RP."))
                         },
                         RulesTitle = "SERVER RULES",
                         Rules = new List<Block>
                         {
+                            Bk("TEAMS",
+                                L("• Solo/duo only. Max team size is 2.")),
                             Bk("BASES & BUILDING",
-                                L("No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside Purge or approved raid events.", "warn"),
-                                L("Do not block roads, monuments, caves, vendors, event areas, or another player's build.", "warn"),
-                                L("Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.")),
-                            Bk("LOOT & OWNERSHIP",
-                                L("Do not steal from player containers, bodies, drops, event crates, or protected loot.", "warn"),
-                                L("If Loot Protection says it is not yours, it is not yours. This is not a riddle.", "warn"),
-                                L("Team up or ask for share access when you want to split loot.")),
+                                L("• No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.", "warn"),
+                                L("• PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
+                                L("• Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe."),
+                                L("• Do not block roads, monuments, caves, vendors, event areas, or another player's build.", "warn"),
+                                L("• Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.")),
+                            Bk("LOOT",
+                                L("• Do not take from another player's boxes, furnaces, or TC storage.", "warn"),
+                                L("• You, your teammate, TC auth, or someone you /share with can open them."),
+                                L("• Sleeping players cannot be looted, including during PvP weekend and Purge.", "warn"),
+                                L("• Bradley, heli, NPC, hackable crates, and supply drops lock to whoever earned them."),
+                                L("• Those locks, and base storage locks, turn off during the PvP weekend only."),
+                                L("• Purge does not turn loot protection off. A PvP monument does not either."),
+                                L("• If it says the loot is not yours, it is not yours.", "warn")),
                             Bk("PVP",
-                                L("PvP is allowed inside marked PvP monuments, PvP domes, PvP-enabled events, during the weekend window, and during Purge."),
-                                L("The weekend window is Friday 8:00 PM through Monday 3:00 AM Eastern. The status cards above are the live reading."),
-                                L("Outside those areas, do not attack, bait, exploit rules, or play loophole lawyer.", "warn"),
-                                L("Watch entry and leave messages. If a dome looks spicy, assume it bites.")),
+                                L("• Monuments and events are always PvP.", "warn"),
+                                L("• Raiding and PvP are allowed during the PvP weekend and during Purge."),
+                                L("• Outside those, do not attack, bait, exploit rules, or play loophole lawyer.", "warn")),
                             Bk("COMMUNITY",
-                                L("No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.", "warn"),
-                                L("Trash talk can be spicy. Do not make it personal, creepy, or radioactive."),
-                                L("Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene."))
+                                L("• No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.", "warn"),
+                                L("• Trash talk can be spicy. Do not make it personal, creepy, or radioactive."),
+                                L("• Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene."))
                         },
                         DiscordTitle = "DISCORD",
                         DiscordInvite = "discord.gg/dFmeweQmsy",
                         DiscordLines = new List<Line>
                         {
-                            L("Wipe changes, events, and support are posted in Discord."),
-                            L("Select the invite below if you want to copy it."),
-                            L("Donations go through the store link in Discord. After you donate, post in the donation channel with your in-game name so an admin can apply VIP."),
-                            L("VIP lasts until map wipe unless Discord says otherwise. VIPx follows the vipx group.", "muted")
+                            L("• Wipe changes, events, and support are posted in Discord."),
+                            L("• Select the invite below if you want to copy it."),
+                            L("• Donate through the store link in Discord. After you donate, post in the donation channel with your in-game name."),
+                            L("• VIP is permanent after one donation, unless you break the rules."),
+                            L("• VIPx is a monthly subscription.", "muted")
                         }
                     }
                 }
@@ -1197,34 +1372,32 @@ namespace Oxide.Plugins
                         {
                             Col(
                                 Bk("CORE",
-                                    L("/info — open this panel"),
-                                    L("/rules — rules on the home page"),
-                                    L("/commands — this list"),
-                                    L("/systems — economy, loot, vehicles"),
-                                    L("/events — events and help"),
-                                    L("/vip — VIP perks and donation help")),
+                                    L("• /info — open this panel"),
+                                    L("• /rules — rules on this home page"),
+                                    L("• /commands — this list"),
+                                    L("• /systems — server systems"),
+                                    L("• /events — events and help"),
+                                    L("• /vip — VIP perks and donation help")),
                                 Bk("HOMES",
-                                    L("/sethome <name> — save a home"),
-                                    L("/home <name> — teleport home"),
-                                    L("/removehome <name> — remove a home"),
-                                    L("Player-to-player teleport commands are not listed for next wipe.", "muted"))),
+                                    L("• /sethome <name> — save a home"),
+                                    L("• /home <name> — teleport home"),
+                                    L("• /removehome <name> — remove a home"),
+                                    L("• Player-to-player teleport commands are not listed for next wipe.", "muted"))),
                             Col(
-                                Bk("PROGRESSION & QOL",
-                                    L("/shop or /store — Nightshade Market, priced in RP"),
-                                    L("/vq — virtual quarries"),
-                                    L("/skills, /skilltree, /st — Skill Tree"),
-                                    L("/limits — entity limits"),
-                                    L("/perks — VIP kit status"),
-                                    L("/perks daily and /perks 4day — claim VIP kits")),
-                                Bk("SKINS / LOOT / HELP",
-                                    L("/skin, /skincraft, /skinitem, /skininv, /skinauto, /skinbase"),
-                                    L("/skinrequest <WorkshopID> — request a Workshop skin"),
-                                    L("/loot, /share, /unshare, /sharelist, /shareclear"),
-                                    L("/vehicleinfo — vehicle rules"),
-                                    L("/hordehelp — Hordes help"),
-                                    L("/checkfoundations — Defendable Homes foundations"),
-                                    L("/raidbuilderinfo — vetted raidbase builder help"),
-                                    L("/tug or /tugboat — VIPx vehicle license")))
+                                Bk("PROGRESSION",
+                                    L("• /shop or /store — the RP shop"),
+                                    L("• /skills, /skilltree, /st — Skill Tree"),
+                                    L("• /perks — VIP kit status"),
+                                    L("• /perks daily and /perks 4day — claim VIP kits")),
+                                Bk("SKINS, LOOT, HELP",
+                                    L("• /skin, /skincraft, /skinitem, /skininv, /skinauto, /skinbase"),
+                                    L("• /skinrequest <WorkshopID> — request a Workshop skin"),
+                                    L("• /loot — who owns the container you are looking at"),
+                                    L("• /share, /share list, /share remove, /share clear"),
+                                    L("• /hordehelp — Hordes help"),
+                                    L("• /checkfoundations — Defendable Homes foundations"),
+                                    L("• /raidbuilderinfo — vetted raidbase builder help"),
+                                    L("• /tug or /tugboat — VIPx tugboat license")))
                         }
                     }
                 }
@@ -1247,27 +1420,29 @@ namespace Oxide.Plugins
                         {
                             Col(
                                 Bk("ECONOMY",
-                                    L("/shop and /store open the Nightshade Market. Listings are priced in ServerRewards RP."),
-                                    L("RP is the player currency. Activity rewards deposit RP. Economics rewards are off, and the ServerRewards exchange tab is off."),
-                                    L("The Admin Shop tab is item barter: fish and components trade for Blood, and the Blood Market spends Blood. It is not a second cash currency."),
-                                    L("There is no separate Black Market currency. The shop card named Black Market: MLRS Truck is an RP purchase."),
-                                    L("Shop stock is whatever is saved in the Nightshade Market. It does not rotate on its own."),
-                                    L("The balance on Home is ServerRewards CheckPoints. If that call does not answer, it shows -.")),
+                                    L("• /shop opens the RP shop. /store does the same."),
+                                    L("• RP is the player currency. It is ServerRewards points."),
+                                    L("• Activity rewards pay RP. Economics is turned off."),
+                                    L("• The Admin Shop tab trades items for Blood. It is not a second cash shop."),
+                                    L("• There is no separate Black Market currency."),
+                                    L("• Your RP on Home comes from ServerRewards. If it does not answer, it shows -.")),
                                 Bk("LOOT PROTECTION",
-                                    L("Kills, crates, drops, and event rewards may lock to the player or team that earned them."),
-                                    L("Use /share when you want another player to access protected loot."),
-                                    L("If a protected container says no, believe it.", "warn"))),
+                                    L("• Boxes, furnaces, and TC storage: you, your teammate, or TC auth. /share opens one container for someone else."),
+                                    L("• Sleeping players stay unlootable all week, including PvP weekend and Purge. Teammates can still loot them."),
+                                    L("• Bradley locks 5 min after 20% damage. Heli locks 8 min after 35%. NPC locks 5 min after 20%."),
+                                    L("• A hacked crate locks 15 min to the hacker. A supply drop locks 10 min to whoever threw the signal."),
+                                    L("• During the PvP weekend those locks, and base storage locks, turn off."),
+                                    L("• Purge does not turn them off. Monuments being PvP does not turn them off."),
+                                    L("• Domes only show over events, not monuments.", "muted"))),
                             Col(
-                                Bk("QUARRIES / PROGRESSION",
-                                    L("/vq opens Virtual Quarries when enabled."),
-                                    L("Skill Tree unlocks long-term bonuses and progression perks.")),
-                                Bk("VEHICLES / QOL",
-                                    L("Car chassis are bought with RP from /shop and built at the car lift."),
-                                    L("The 4-socket chassis is a one-per-wipe RP listing in the VIP shop category. It grants craftchassis.4 until wipe."),
-                                    L("/tug and /tugboat are the VIPx vehicle license. Buying a tugboat with resources is available to the default group, so it is not VIP-only."),
-                                    L("Chest stacks: 2 small and 3 large by default. VIP raises both to 5."),
-                                    L("VIP has no decay on personal boats and tugboats."),
-                                    L("Use /limits before the server starts judging your decor.")))
+                                Bk("PROGRESSION",
+                                    L("• Skill Tree unlocks long-term bonuses. /skills, /skilltree, or /st.")),
+                                Bk("VEHICLES",
+                                    L("• Car chassis are buyable with RP from /shop."),
+                                    L("• Build a purchased chassis at the car lift."),
+                                    L("• 4-module chassis are in the VIP shop."),
+                                    L("• /tug or /tugboat is the tugboat license."),
+                                    L("• ChestStacks: 3 stacks for non-VIP, 5 stacks for VIP.")))
                         }
                     }
                 }
@@ -1291,22 +1466,23 @@ namespace Oxide.Plugins
                         {
                             Col(
                                 Bk("REGULAR EVENTS",
-                                    L("Hide and Seek runs on scheduled event days when announced."),
-                                    L("Purge is the last stretch of wipe, started by an admin: PvP, raiding, and base destruction are allowed serverwide."),
-                                    L("Monuments are always PvP. Watch the zone warnings.", "warn")),
-                                Bk("SIGNALS / BOSSES",
-                                    L("Heli and Bradley signals may have tiers, cooldowns, rewards, and team recommendations."),
-                                    L("Read event warnings before throwing expensive signals like a gremlin with fireworks."))),
+                                    L("• Hide and Seek runs on scheduled event days when announced."),
+                                    L("• Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. PvP, raiding, and base destruction are allowed serverwide."),
+                                    L("• Monuments and events are always PvP.", "warn"),
+                                    L("• The PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern.")),
+                                Bk("SIGNALS",
+                                    L("• Heli and Bradley signals may have tiers, cooldowns, rewards, and team recommendations."),
+                                    L("• Read the signal card before you call one. Solo/duo is the server cap."))),
                             Col(
-                                Bk("SIGNALS / RAID CONTENT",
-                                    L("Bradley and Heli signals are player-triggered combat events. Bradley buys spend RP."),
-                                    L("Raidable Bases are event bases, not normal player bases."),
-                                    L("Read difficulty and tier info before donating your kit to the floor.")),
+                                Bk("RAID CONTENT",
+                                    L("• Bradley and Heli signals are player-triggered combat events."),
+                                    L("• Raidable Bases are event bases, not normal player bases."),
+                                    L("• Read the difficulty before you start one.")),
                                 Bk("HELP PAGES",
-                                    L("/hordehelp — Hordes rules and reminders"),
-                                    L("/raidbuilderinfo — vetted raidbase builder commands"),
-                                    L("/rbinfo — raidable bases overview"),
-                                    L("/pvpinfo — PvP zone reminders")))
+                                    L("• /hordehelp — Hordes rules"),
+                                    L("• /raidbuilderinfo — vetted raidbase builder commands"),
+                                    L("• /rbinfo — raidable bases"),
+                                    L("• /pvpinfo — where PvP is allowed")))
                         }
                     },
                     new Tab
@@ -1315,22 +1491,22 @@ namespace Oxide.Plugins
                         Commands = new List<string> { "hordehelp", "hordeshelp" },
                         Columns = new List<Column>
                         {
-                            Col(Bk("HORDES HELP",
-                                L("Hordes are Defendable Homes style wave events. Build smart, check your foundations, then try not to become part of the furniture."),
-                                L("Your Defendable Home must be built on normal terrain using owned square or triangle foundations."),
-                                L("Foundations must belong to you or your team, friends, or clan."),
-                                L("You must be inside the Tool Cupboard area of the house when checking."),
-                                L("Invalid areas include monuments, cliffs, mountains, clutter or decor terrain, and bad topology."),
-                                L("Do not build too close to another active Defendable Homes event."),
-                                L("Use /checkfoundations to check all foundations for the event."),
-                                L("⊘ You or friends are not the foundation owner.", "muted"),
-                                L("⊝ Foundation height or depth does not match.", "muted"),
-                                L("⊛ Terrain topology is invalid. Prohibited: Cliff, Cliffside, Decor, Building, Monument, Clutter, Mountain.", "muted"),
-                                L("◉ Foundation is within 40m of a custom monument.", "muted"),
-                                L("Bring ammo, meds, armor, and room in your inventory."),
-                                L("Do not drag hordes into player bases, vendors, safe builds, or random bystanders."),
-                                L("PvP only applies if the event area is marked PvP, the weekend window is open, or the server is in Purge."),
-                                L("Loot ownership follows Loot Protection and event rules.")))
+                            Col(Bk("HORDES",
+                                L("• Hordes are Defendable Homes style wave events. Build smart, check your foundations, then try not to become part of the furniture."),
+                                L("• Your Defendable Home must be built on normal terrain using owned square or triangle foundations."),
+                                L("• Foundations must belong to you or your team. Max team size is 2."),
+                                L("• You must be inside the Tool Cupboard area of the house when checking."),
+                                L("• Invalid areas include monuments, cliffs, mountains, clutter or decor terrain, and bad topology."),
+                                L("• Do not build too close to another active Defendable Homes event."),
+                                L("• Use /checkfoundations to check all foundations for the event."),
+                                L("• ⊘ You are not the foundation owner.", "muted"),
+                                L("• ⊝ Foundation height or depth does not match.", "muted"),
+                                L("• ⊛ Terrain topology is invalid. Prohibited: Cliff, Cliffside, Decor, Building, Monument, Clutter, Mountain.", "muted"),
+                                L("• ◉ Foundation is within 40m of a custom monument.", "muted"),
+                                L("• Bring ammo, meds, armor, and room in your inventory."),
+                                L("• Do not drag hordes into player bases, vendors, safe builds, or random bystanders."),
+                                L("• Hordes are events, so they are PvP. The rest of the map follows the weekend window and Purge."),
+                                L("• Loot ownership follows Loot Protection and event rules.")))
                         }
                     },
                     new Tab
@@ -1340,15 +1516,16 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("RAIDABLE BASES",
-                                L("Raidable Bases are event bases. They are not normal player bases, and normal player bases stay protected outside Purge or approved raid events."),
-                                L("Easy: available immediately."),
-                                L("Medium: 24h after wipe. A 12h override exists, but that permission is not on the VIP group."),
-                                L("Hard: 72h after wipe. The 48h override is the same story."),
-                                L("Expert: 120h after wipe. The 96h override is not granted with VIP."),
-                                L("Nightmare: 168h after wipe. The 144h override is not granted with VIP."),
-                                L("Do not interfere with another player's PvE raid unless event rules allow it."),
-                                L("PvP raid bases, PvP domes, the weekend window, and Purge are different. Read the warnings."),
-                                L("If you started it, finish it before the server starts spawning consequences with your name on them.")))
+                                L("• Raidable Bases are event bases. They are not player bases."),
+                                L("• Player bases stay protected outside the PvP weekend and Purge."),
+                                L("• Easy: available right away for everyone."),
+                                L("• Medium: 24h after wipe. VIP: 12h."),
+                                L("• Hard: 72h after wipe. VIP: 48h."),
+                                L("• Expert: 120h after wipe. VIP: 96h."),
+                                L("• Nightmare: 168h after wipe. VIP: 144h."),
+                                L("• Do not interfere with another player's PvE raid unless the event rules allow it."),
+                                L("• PvP raid bases, the weekend window, and Purge are different. Read the card."),
+                                L("• If you started it, finish it.")))
                         }
                     },
                     new Tab
@@ -1357,18 +1534,18 @@ namespace Oxide.Plugins
                         Commands = new List<string> { "raidbuilderinfo", "raidbuildinfo", "raidguide" },
                         Columns = new List<Column>
                         {
-                            Col(Bk("RAIDBASE BUILDER HELP",
-                                L("Raidbase builder access is admin-only after vetting. This is not a public toy box.", "warn"),
-                                L("Players approved to help build or test raidbase content."),
-                                L("Permissions are assigned by an admin only after vetting."),
-                                L("Do not share commands, bases, or access with unapproved players."),
-                                L("/raidbasestart — start or set up a player raidbase build session"),
-                                L("/raidreadypve — mark the saved raidbase ready for PvE use"),
-                                L("/raidreadypvp — mark the saved raidbase ready for PvP use"),
-                                L("/raidbaseend — end or clean up the active raidbase session"),
-                                L("Build clean, playable bases with accessible paths and fair loot flow."),
-                                L("Avoid traps that softlock players, exploit terrain, or create impossible raid paths."),
-                                L("Ask an admin before making major format changes.")))
+                            Col(Bk("RAIDBASE BUILDER",
+                                L("• Raidbase builder access is admin-only after vetting. This is not a public toy box.", "warn"),
+                                L("• For players approved to help build or test raidbase content."),
+                                L("• Permissions are assigned by an admin only after vetting."),
+                                L("• Do not share commands, bases, or access with unapproved players."),
+                                L("• /raidbasestart — start a player raidbase build session"),
+                                L("• /raidreadypve — mark the saved raidbase ready for PvE"),
+                                L("• /raidreadypvp — mark the saved raidbase ready for PvP"),
+                                L("• /raidbaseend — end the active raidbase session"),
+                                L("• Build clean, playable bases with accessible paths and fair loot flow."),
+                                L("• Avoid traps that softlock players, exploit terrain, or create impossible raid paths."),
+                                L("• Ask an admin before making major format changes.")))
                         }
                     },
                     new Tab
@@ -1377,15 +1554,13 @@ namespace Oxide.Plugins
                         Commands = new List<string> { "pvpinfo", "pvpzonesinfo" },
                         Columns = new List<Column>
                         {
-                            Col(Bk("PVP ZONES",
-                                L("Monuments are always PvP. Watch the zone warnings before entering.", "warn"),
-                                L("Event domes and PvP-marked areas may also allow player combat."),
-                                L("The weekend window is Friday 8:00 PM through Monday 3:00 AM Eastern. Home shows whether it is open."),
-                                L("Purge is separate. It is an admin toggle for the end of wipe, not the weekend window."),
-                                L("Watch entry and exit messages."),
-                                L("Watch dome and warning visuals."),
-                                L("Watch Purge announcements during the last days of wipe."),
-                                L("When the server tells you an area is PvP, believe it.", "warn")))
+                            Col(Bk("WHERE PVP IS ON",
+                                L("• Monuments are always PvP.", "warn"),
+                                L("• Events are always PvP. A dome only appears over an event.", "warn"),
+                                L("• PvP weekend: Friday 8:00 PM to Monday 3:00 AM Eastern. Raiding is allowed."),
+                                L("• Purge: Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. Raiding is allowed."),
+                                L("• Outside those, do not attack players or raid bases."),
+                                L("• Home shows which of PVE, PVP, or PURGE is on right now.")))
                         }
                     }
                 }
@@ -1407,33 +1582,44 @@ namespace Oxide.Plugins
                         Commands = new List<string> { "vip", "vipinfo" },
                         Columns = new List<Column>
                         {
-                            Col(
-                                Bk("TRAVEL",
-                                    L("VIP: 4 homes. Default is 3. Home cooldown and countdown are 5 seconds, down from 10."),
-                                    L("VIPx: 5 homes, with no home cooldown or countdown."),
-                                    L("Home teleports do not cost RP for anyone. VIP is not a waived fee."),
-                                    L("Homes on tugboats are allowed for everyone."),
-                                    L("VIPx can use /tug and /tugboat with a free vehicle license. A resource-bought tugboat is not VIP-only.")),
-                                Bk("QUEUE & KITS",
-                                    L("VIP gets a reconnect grace. VIPx gets the queue skip. They are not the same perk."),
-                                    L("/perks shows crate time and kit status. /perks daily and /perks 4day claim the kits."),
-                                    L("Kits stay locked for 48 hours after wipe."),
-                                    L("Hackable crates: 2.5 minutes for VIP, 60 seconds for VIPx."),
-                                    L("/afk is VIP and VIPx only.")),
-                                Bk("ECONOMY & REWARDS",
-                                    L("Heli signal rewards: 1.25× for VIP, 1.5× for VIPx."),
-                                    L("A 1.1× activity-reward multiplier exists, but that permission is not on the VIP group."),
-                                    L("Bradley cooldown cuts are configured for permissions the VIP groups do not have, and Bradley RP rewards are disabled. Do not count on a shorter Bradley cooldown."),
-                                    L("Chest stacks: 2 small and 3 large by default, 5 and 5 for VIP."),
-                                    L("The VIP shop category has claimable tools: iron axe and pickaxe for VIP, salvaged axe and pickaxe for VIPx, plus a one-per-wipe 4-socket chassis for 7000 RP."))),
-                            Col(
-                                Bk("GAMEPLAY",
-                                    L("No decay on personal boats and tugboats for VIP."),
-                                    L("Some cosmetic and building skin perks are VIP gated.")),
-                                Bk("EARLY WIPE ACCESS",
-                                    L("Easy raids are immediate for everyone."),
-                                    L("Default unlocks: Medium 24h, Hard 72h, Expert 120h, Nightmare 168h."),
-                                    L("Shorter times (12h, 48h, 96h, 144h) are configured, and those permissions are not on the VIP group. VIP alone does not unlock them early.")))
+                            Col(Bk("VIP",
+                                L("• Permanent — one donation", "accent"),
+                                L("• Kept unless you break the rules."),
+                                L("• 4 /home slots instead of 3."),
+                                L("• Reduced /home cooldown: 5 seconds, down from 10."),
+                                L("• Home teleport has no RP cost."),
+                                L("• Can set a home on your tugboat."),
+                                L("• Queue skip and a 5-minute reconnect hold."),
+                                L("• 1.1× RP activity multiplier."),
+                                L("• HeliSignals reward multiplier: 1.25×."),
+                                L("• Bradley signal cooldown: 50 min."),
+                                L("• ChestStacks: 5 stacks instead of 3."),
+                                L("• Hackable crates unlock in 2.5 minutes."),
+                                L("• No decay on personal boats and tugboats."),
+                                L("• 4-module car chassis access in the RP shop."),
+                                L("• Claimable tool kits in the VIP shop. /perks daily and /perks 4day."),
+                                L("• Medium raids: 12h after wipe (default 24h)."),
+                                L("• Hard raids: 48h after wipe (default 72h)."),
+                                L("• Expert raids: 96h after wipe (default 120h)."),
+                                L("• Nightmare raids: 144h after wipe (default 168h)."))),
+                            Col(Bk("VIPx",
+                                L("• Monthly", "accent"),
+                                L("• A monthly subscription."),
+                                L("• 5 /home slots instead of 3."),
+                                L("• No /home cooldown."),
+                                L("• Home teleport has no RP cost."),
+                                L("• Can set a home on your tugboat."),
+                                L("• Can use /tug. The license is free."),
+                                L("• Queue skip and a 5-minute reconnect hold."),
+                                L("• 1.1× RP activity multiplier."),
+                                L("• HeliSignals reward multiplier: 1.5×."),
+                                L("• Bradley signal cooldown: 30 min."),
+                                L("• ChestStacks: 5 stacks instead of 3."),
+                                L("• Hackable crates unlock in 60 seconds."),
+                                L("• No decay on personal boats and tugboats."),
+                                L("• 4-module car chassis access in the RP shop."),
+                                L("• VIPx shop tools, plus /perks daily and /perks 4day."),
+                                L("• Same early raids as VIP: Medium 12h, Hard 48h, Expert 96h, Nightmare 144h.")))
                         }
                     },
                     new Tab
@@ -1443,14 +1629,15 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("HOW TO GET VIP",
-                                L("VIP is donation-supported, and it is not fully automatic yet."),
-                                L("Donate through the server store link listed in Discord."),
-                                L("After donating, post in the donation channel."),
-                                L("Include your in-game name so an admin can apply the right group."),
-                                L("VIP lasts until map wipe unless otherwise stated. VIPx follows the vipx group."),
-                                L("Discord: discord.gg/dFmeweQmsy", "accent"),
-                                L("/vip opens this page."),
-                                L("VIP is convenience. Core content stays playable for everyone.", "muted")))
+                                L("• VIP is permanent after one donation, unless you break the rules.", "accent"),
+                                L("• VIPx is monthly.", "accent"),
+                                L("• It is donation-supported, and it is not fully automatic yet."),
+                                L("• Donate through the server store link in Discord."),
+                                L("• After donating, post in the donation channel."),
+                                L("• Include your in-game name so an admin can apply the right group."),
+                                L("• Discord: discord.gg/dFmeweQmsy"),
+                                L("• /vip opens this page."),
+                                L("• VIP is convenience. Core content stays playable for everyone.", "muted")))
                         }
                     }
                 }
