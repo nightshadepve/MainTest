@@ -532,6 +532,28 @@
               "Maximum Amount": 2
             },
             {
+              "Shortname": "ammo.rocket.hv",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
+              "Shortname": "ammo.rocket.seeker",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
+            {
               "Shortname": "ammo.rocket.mlrs",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -555,28 +577,6 @@
             },
             {
               "Shortname": "ammo.rocket.fire",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 2
-            },
-            {
-              "Shortname": "ammo.rocket.hv",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 2
-            },
-            {
-              "Shortname": "ammo.rocket.seeker",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -1312,6 +1312,28 @@
           "Maximum Unique Items": 1,
           "Item Pool": [
             {
+              "Shortname": "smg.thompson",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.semiauto",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
               "Shortname": "smg.2",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -1335,28 +1357,6 @@
             },
             {
               "Shortname": "shotgun.spas12",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "smg.thompson",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "rifle.semiauto",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -1403,6 +1403,17 @@
           "Maximum Unique Items": 4,
           "Item Pool": [
             {
+              "Shortname": "grenade.molotov",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
+            {
               "Shortname": "grenade.f1",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -1448,17 +1459,6 @@
             },
             {
               "Shortname": "explosive.satchel",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 3,
-              "Maximum Amount": 10
-            },
-            {
-              "Shortname": "grenade.molotov",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -1552,7 +1552,7 @@
           "Maximum Unique Items": 2,
           "Item Pool": [
             {
-              "Shortname": "lowgradefuel",
+              "Shortname": "crude.oil",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -1563,7 +1563,7 @@
               "Maximum Amount": 200
             },
             {
-              "Shortname": "crude.oil",
+              "Shortname": "lowgradefuel",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -1609,28 +1609,6 @@
           "Minimum Unique Items": 9,
           "Maximum Unique Items": 9,
           "Item Pool": [
-            {
-              "Shortname": "metal.fragments",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
-              "Minimum Amount": 1500,
-              "Maximum Amount": 3000
-            },
-            {
-              "Shortname": "scrap",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
-              "Minimum Amount": 100,
-              "Maximum Amount": 300
-            },
             {
               "Shortname": "diesel_barrel",
               "SkinID": 0,
@@ -1707,6 +1685,28 @@
               "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 75,
               "Maximum Amount": 125
+            },
+            {
+              "Shortname": "metal.fragments",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1500,
+              "Maximum Amount": 3000
+            },
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 100,
+              "Maximum Amount": 300
             }
           ]
         }
@@ -1744,6 +1744,17 @@
           "Minimum Unique Items": 4,
           "Maximum Unique Items": 4,
           "Item Pool": [
+            {
+              "Shortname": "grenade.flashbang",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
             {
               "Shortname": "weapon.mod.holosight",
               "SkinID": 0,
@@ -1798,17 +1809,6 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 3,
               "Maximum Amount": 10
-            },
-            {
-              "Shortname": "grenade.flashbang",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 3,
-              "Maximum Amount": 10
             }
           ]
         }
@@ -1846,17 +1846,6 @@
           "Minimum Unique Items": 2,
           "Maximum Unique Items": 2,
           "Item Pool": [
-            {
-              "Shortname": "rifle.bolt",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
             {
               "Shortname": "smg.thompson",
               "SkinID": 0,
@@ -1933,6 +1922,17 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 1,
               "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.bolt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
             }
           ]
         }
@@ -1970,6 +1970,17 @@
           "Minimum Unique Items": 3,
           "Maximum Unique Items": 3,
           "Item Pool": [
+            {
+              "Shortname": "ammo.rocket.seeker",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 2
+            },
             {
               "Shortname": "ammo.rocket.basic",
               "SkinID": 0,
@@ -2024,17 +2035,6 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 1,
               "Maximum Amount": 2
-            },
-            {
-              "Shortname": "ammo.rocket.seeker",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 2
             }
           ]
         }
@@ -2072,61 +2072,6 @@
           "Minimum Unique Items": 6,
           "Maximum Unique Items": 6,
           "Item Pool": [
-            {
-              "Shortname": "smg.2",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "smg.mp5",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "ammo.rifle",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 64,
-              "Maximum Amount": 128
-            },
-            {
-              "Shortname": "roadsign.kilt",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "syringe.medical",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 5,
-              "Maximum Amount": 10
-            },
             {
               "Shortname": "metal.facemask",
               "SkinID": 0,
@@ -2203,6 +2148,61 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 1,
               "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.2",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "smg.mp5",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "ammo.rifle",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 64,
+              "Maximum Amount": 128
+            },
+            {
+              "Shortname": "roadsign.kilt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 5,
+              "Maximum Amount": 10
             }
           ]
         }
@@ -2240,6 +2240,17 @@
           "Minimum Unique Items": 9,
           "Maximum Unique Items": 9,
           "Item Pool": [
+            {
+              "Shortname": "rifle.lr300",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
             {
               "Shortname": "rifle.ak",
               "SkinID": 0,
@@ -2292,28 +2303,6 @@
               "Is Blueprint": false,
               "Genomes": [],
               "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "rifle.lr300",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "roadsign.kilt",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 1,
               "Maximum Amount": 1
             },
@@ -2393,6 +2382,17 @@
               "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 5,
               "Maximum Amount": 10
+            },
+            {
+              "Shortname": "roadsign.kilt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
             }
           ]
         }
@@ -2544,6 +2544,17 @@
           "Maximum Unique Items": 3,
           "Item Pool": [
             {
+              "Shortname": "rifle.ak",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
               "Shortname": "rifle.bolt",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -2597,17 +2608,6 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 1,
               "Maximum Amount": 1
-            },
-            {
-              "Shortname": "rifle.ak",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
             }
           ]
         }
@@ -2645,6 +2645,17 @@
           "Minimum Unique Items": 4,
           "Maximum Unique Items": 4,
           "Item Pool": [
+            {
+              "Shortname": "grenade.flashbang",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 3,
+              "Maximum Amount": 10
+            },
             {
               "Shortname": "weapon.mod.holosight",
               "SkinID": 0,
@@ -2699,17 +2710,6 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 3,
               "Maximum Amount": 10
-            },
-            {
-              "Shortname": "grenade.flashbang",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 3,
-              "Maximum Amount": 10
             }
           ]
         }
@@ -2747,28 +2747,6 @@
           "Minimum Unique Items": 9,
           "Maximum Unique Items": 9,
           "Item Pool": [
-            {
-              "Shortname": "metal.fragments",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
-              "Minimum Amount": 7500,
-              "Maximum Amount": 15000
-            },
-            {
-              "Shortname": "scrap",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
-              "Minimum Amount": 500,
-              "Maximum Amount": 1500
-            },
             {
               "Shortname": "diesel_barrel",
               "SkinID": 0,
@@ -2845,6 +2823,28 @@
               "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 350,
               "Maximum Amount": 500
+            },
+            {
+              "Shortname": "metal.fragments",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 7500,
+              "Maximum Amount": 15000
+            },
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 500,
+              "Maximum Amount": 1500
             }
           ]
         }
@@ -2882,6 +2882,17 @@
           "Minimum Unique Items": 9,
           "Maximum Unique Items": 9,
           "Item Pool": [
+            {
+              "Shortname": "rifle.lr300",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
             {
               "Shortname": "rifle.ak",
               "SkinID": 0,
@@ -2934,28 +2945,6 @@
               "Is Blueprint": false,
               "Genomes": [],
               "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "rifle.lr300",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "roadsign.kilt",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 1,
               "Maximum Amount": 1
             },
@@ -3035,6 +3024,17 @@
               "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 5,
               "Maximum Amount": 10
+            },
+            {
+              "Shortname": "roadsign.kilt",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
             }
           ]
         }
@@ -3072,28 +3072,6 @@
           "Minimum Unique Items": 9,
           "Maximum Unique Items": 9,
           "Item Pool": [
-            {
-              "Shortname": "metal.fragments",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
-              "Minimum Amount": 10000,
-              "Maximum Amount": 17500
-            },
-            {
-              "Shortname": "scrap",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 100.0,
-              "Minimum Amount": 1000,
-              "Maximum Amount": 2000
-            },
             {
               "Shortname": "diesel_barrel",
               "SkinID": 0,
@@ -3170,6 +3148,28 @@
               "Chance [0.0-100.0]": 100.0,
               "Minimum Amount": 350,
               "Maximum Amount": 500
+            },
+            {
+              "Shortname": "metal.fragments",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 10000,
+              "Maximum Amount": 17500
+            },
+            {
+              "Shortname": "scrap",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 100.0,
+              "Minimum Amount": 1000,
+              "Maximum Amount": 2000
             }
           ]
         }
@@ -3258,6 +3258,17 @@
           "Maximum Unique Items": 1,
           "Item Pool": [
             {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            },
+            {
               "Shortname": "bandage",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -3270,17 +3281,6 @@
             },
             {
               "Shortname": "largemedkit",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 3
-            },
-            {
-              "Shortname": "syringe.medical",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -3371,6 +3371,17 @@
           "Maximum Unique Items": 1,
           "Item Pool": [
             {
+              "Shortname": "syringe.medical",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 3
+            },
+            {
               "Shortname": "bandage",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -3383,17 +3394,6 @@
             },
             {
               "Shortname": "largemedkit",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 3
-            },
-            {
-              "Shortname": "syringe.medical",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
@@ -3488,6 +3488,17 @@
           "Maximum Unique Items": 4,
           "Item Pool": [
             {
+              "Shortname": "ammo.shotgun.fire",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 15,
+              "Maximum Amount": 30
+            },
+            {
               "Shortname": "ammo.shotgun",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -3541,17 +3552,6 @@
               "Chance [0.0-100.0]": 20.0,
               "Minimum Amount": 60,
               "Maximum Amount": 80
-            },
-            {
-              "Shortname": "ammo.shotgun.fire",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 15,
-              "Maximum Amount": 30
             }
           ]
         }
@@ -3646,17 +3646,6 @@
           "Maximum Unique Items": 1,
           "Item Pool": [
             {
-              "Shortname": "explosive.timed",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 4.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
               "Shortname": "ammo.rocket.basic",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -3690,6 +3679,39 @@
               "Maximum Amount": 1
             },
             {
+              "Shortname": "explosive.timed",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 4.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "shotgun.spas12",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
+              "Shortname": "rifle.semiauto",
+              "SkinID": 0,
+              "Display Name (empty - default)": "",
+              "Owner Display Name": "",
+              "Is Blueprint": false,
+              "Genomes": [],
+              "Chance [0.0-100.0]": 20.0,
+              "Minimum Amount": 1,
+              "Maximum Amount": 1
+            },
+            {
               "Shortname": "smg.2",
               "SkinID": 0,
               "Display Name (empty - default)": "",
@@ -3713,28 +3735,6 @@
             },
             {
               "Shortname": "smg.thompson",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "shotgun.spas12",
-              "SkinID": 0,
-              "Display Name (empty - default)": "",
-              "Owner Display Name": "",
-              "Is Blueprint": false,
-              "Genomes": [],
-              "Chance [0.0-100.0]": 20.0,
-              "Minimum Amount": 1,
-              "Maximum Amount": 1
-            },
-            {
-              "Shortname": "rifle.semiauto",
               "SkinID": 0,
               "Display Name (empty - default)": "",
               "Owner Display Name": "",
