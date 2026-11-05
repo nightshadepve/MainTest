@@ -1,0 +1,92 @@
+{
+  "Text under the ADMIN MENU": "BY 0XF",
+  "Button to hook (X | F | OFF)": "X",
+  "Disable player avatars": false,
+  "Chat command to show admin menu": "admin",
+  "Theme": {
+    "PANEL_SIDEBAR_BACKGROUND": "0.1 0.07 0.18 0.92",
+    "PANEL_SIDEBAR_SELECTED": "0.69 0.52 1 0.3",
+    "POPUP_HEADER": "0.08 0.05 0.14 1",
+    "POPUP_HEADER_TEXT": "0.9 0.87 1 0.95"
+  },
+  "Custom Quick Buttons": [
+    {
+      "Bulk sending of command to each player. Available values: None, Online, Offline, Everyone": "None",
+      "Label": "Custom Button",
+      "Execution as server": false,
+      "Commands": [
+        "chat.say \"/custom\"",
+        "adminmenu openinfopanel custom_buttons"
+      ],
+      "Commands for Toggled state": [],
+      "Permission": "fullaccess",
+      "Style": {
+        "BackgroundColor": "0.42 0.25 0.71 0.72",
+        "ActiveBackgroundColor": "0.00 1.00 1.00 0.22",
+        "TextColor": "0.95 0.91 1.00 1"
+      },
+      "Position": [
+        0,
+        4
+      ]
+    }
+  ],
+  "User Custom Buttons": [
+    {
+      "Label": "Custom Button",
+      "Execution as server": false,
+      "Commands": [
+        "chat.say \"/custom {steamID}\"",
+        "adminmenu openinfopanel custom_buttons"
+      ],
+      "Commands for Toggled state": [],
+      "Permission": "fullaccess",
+      "Style": {
+        "BackgroundColor": "0.16 0.11 0.28 0.72",
+        "ActiveBackgroundColor": "0.00 1.00 1.00 0.22",
+        "TextColor": "0.95 0.91 1.00 1"
+      },
+      "Position": [
+        9,
+        0
+      ]
+    }
+  ],
+  "Give menu item presets (add your custom items for easy give)": [
+    {
+      "Short Name": "chocolate",
+      "Skin Id": 3161523786,
+      "Name": "Delicious cookies with chocolate",
+      "Category Name": "Food"
+    }
+  ],
+  "Swap the “ALL” and “FAVORITES” give menu categories?": false,
+  "Favorite Plugins": [
+    "NightshadeRaidBase",
+    "FancyDrop",
+    "GatherManager"
+  ],
+  "Logs Properties": {
+    "Discord Webhook URL for logs (https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)": "https://discord.com/api/webhooks/1490438007671492779/50wrAc6QDcxUndKpdMAFWJ_Oq6g1senKe6eVIEB5xAAuEnXvaOqPx4DoChN1BsRtw7c8",
+    "Info": "You can override the url for each log type, just specify the url as string instead of true/false.",
+    "Give": true,
+    "Admin teleports": true,
+    "Spectate": true,
+    "Heal": true,
+    "Kill": true,
+    "Look inventory": true,
+    "Strip inventory": true,
+    "Blueprints": true,
+    "Mute/Unmute": true,
+    "Toggle Creative": true,
+    "Cuff": true,
+    "Kick the player": true,
+    "Ban the player": true,
+    "Using custom buttons": true,
+    "Spawn entities": true,
+    "Set time": true,
+    "ConVars": true,
+    "Plugin Manager": true,
+    "Permission Manager": true
+  }
+}
