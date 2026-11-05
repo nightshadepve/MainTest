@@ -17,7 +17,7 @@ namespace Oxide.Plugins
     public class NightshadeInfo : RustPlugin
     {
         private const string Root = "NightshadeInfo";
-        private const string DataPath = "NightshadeInfo/Players";
+        private const string DataPath = "Nightshade/NightshadeInfo/Players";
         private const string UiCommand = "nightshadeinfo.ui";
         private const string DefaultLogo = "https://raw.githubusercontent.com/nightshadepve/Nightshadeserver/refs/heads/main/260625_Logo_75_nobg.png";
         private const string DefaultQr = "https://i.ibb.co/fz03Kqzb/discord.png";
