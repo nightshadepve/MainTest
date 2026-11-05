@@ -19,6 +19,7 @@ namespace Oxide.Plugins
 
         private const string PermAdmin = "nightshadepurgestatus.admin";
         private const string BarId = "NightshadePurge";
+        private const string DataPath = "Nightshade/NightshadePurgeStatus";
 
         private PurgeData _data;
         private Timer _endTimer;
@@ -33,11 +34,11 @@ namespace Oxide.Plugins
             public string PreviousTruePveRuleset;
         }
 
-        private void SaveData() => Interface.Oxide.DataFileSystem.WriteObject(Name, _data);
+        private void SaveData() => Interface.Oxide.DataFileSystem.WriteObject(DataPath, _data);
 
         private void LoadData()
         {
-            _data = Interface.Oxide.DataFileSystem.ReadObject<PurgeData>(Name) ?? new PurgeData();
+            _data = Interface.Oxide.DataFileSystem.ReadObject<PurgeData>(DataPath) ?? new PurgeData();
         }
 
         #endregion
@@ -52,7 +53,7 @@ namespace Oxide.Plugins
             public string Command = "purge";
 
             [JsonProperty("Join message (use {time} for remaining time)")]
-            public string JoinMessage = "<color=#FF2D75>[Purge]</color> The purge is <color=#FF3B3B>ACTIVE</color> until end of wipe! <color=#FFAA00>{time}</color> remaining — no mercy.";
+            public string JoinMessage = "<color=#FF2D75>[Purge]</color> The purge is <color=#FF3B3B>ACTIVE</color> until end of wipe! <color=#FFAA00>{time}</color> remaining \u2014 no mercy.";
 
             [JsonProperty("Broadcast message on start (use {time} for remaining time)")]
             public string StartBroadcast = "<color=#FF2D75>[Purge]</color> The purge has begun! Chaos reigns for the next <color=#FFAA00>{time}</color>.";

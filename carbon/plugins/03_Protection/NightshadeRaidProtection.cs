@@ -16,7 +16,7 @@ namespace Oxide.Plugins
     public class NightshadeRaidProtection : RustPlugin
     {
         private const string PermAdmin = "nightshaderaidprotection.admin";
-        private const string DataPath = "Nightshade/RaidProtection";
+        private const string DataPath = "Nightshade/NightshadeRaidProtection/RaidProtection";
         // These IDs identify the three dedicated custom-icon voucher skins.
         // The shop delivers PAPER items using these IDs. No purchase-registration plugin is needed.
         private const string VoucherShortname = "paper";
