@@ -12,19 +12,21 @@ using UnityEngine.UI;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeInfo", "Nightshade", "1.1.1")]
-    [Description("Nightshade info panel: live status, rules, and Discord on the home page.")]
+    [Info("NightshadeInfo", "Nightshade", "1.2.0")]
+    [Description("Nightshade info panel: live status, rules, and Discord.")]
     public class NightshadeInfo : RustPlugin
     {
         private const string Root = "NightshadeInfo";
         private const string DataPath = "NightshadeInfo/Players";
         private const string UiCommand = "nightshadeinfo.ui";
         private const string DefaultLogo = "https://raw.githubusercontent.com/nightshadepve/Nightshadeserver/refs/heads/main/260625_Logo_75_nobg.png";
+        private const string DefaultQr = "https://i.ibb.co/fz03Kqzb/discord.png";
 
 #pragma warning disable 0649
         [PluginReference] private Plugin NightshadeRaidProtection;
         [PluginReference("Nightshade Purge Status")] private Plugin PurgeStatus;
         [PluginReference] private Plugin ServerRewards;
+        [PluginReference] private Plugin ImageLibrary;
 #pragma warning restore 0649
 
         private Settings settings;
@@ -139,6 +141,7 @@ namespace Oxide.Plugins
             [JsonProperty("Discord lines", ObjectCreationHandling = ObjectCreationHandling.Replace)]
             public List<Line> DiscordLines = new List<Line>();
             [JsonProperty("Discord invite")] public string DiscordInvite;
+            [JsonProperty("Discord QR URL")] public string DiscordQr;
             [JsonProperty("Buttons", ObjectCreationHandling = ObjectCreationHandling.Replace)]
             public List<Btn> Buttons = new List<Btn>();
         }
@@ -230,6 +233,12 @@ namespace Oxide.Plugins
                 PrintWarning("Time zone '" + settings.TimeZoneId + "' was not found. Using an Eastern fallback for the wipe clock.");
             float rate = settings.RefreshSeconds < 0.5f ? 0.5f : settings.RefreshSeconds;
             clock = timer.Every(rate, Tick);
+            timer.Once(1f, RegisterImages);
+        }
+
+        private void OnPluginLoaded(Plugin plugin)
+        {
+            if (plugin != null && plugin.Name == "ImageLibrary") RegisterImages();
         }
 
         private void Unload()
@@ -323,9 +332,12 @@ namespace Oxide.Plugins
             float width = Mathf.Clamp(settings.PanelWidth, 640f, 1100f);
             float height = Mathf.Clamp(settings.PanelHeight, 340f, 560f);
             Button(container, Root, Root + ".Dim", UiCommand + " close", Hex(settings.DimColor, settings.DimOpacity / 100f), 0f, 0f, 1f, 1f, true);
+            string frame = Root + ".Frame";
+            Box(container, frame, Root, Hex(settings.Accent, 0.7f),
+                "0.5 0.5", "0.5 0.5", Px(-width / 2f - 1f, -height / 2f - 1f), Px(width / 2f + 1f, height / 2f + 1f), null);
             string window = Root + ".Window";
-            Box(container, window, Root, Hex(settings.PanelColor, settings.PanelOpacity / 100f),
-                "0.5 0.5", "0.5 0.5", Px(-width / 2f, -height / 2f), Px(width / 2f, height / 2f),
+            Box(container, window, frame, Hex(settings.PanelColor, settings.PanelOpacity / 100f),
+                "0 0", "1 1", "1 1", "-1 -1",
                 "assets/content/ui/uibackgroundblur-ingamemenu.mat");
             Button(container, window, window + ".Catch", UiCommand + " hold", "0 0 0 0", 0f, 0f, 1f, 1f, true);
             Box(container, window + ".Accent", window, Hex(settings.Accent), "0 1", "1 1", "0 -3", "0 0", null);
@@ -346,7 +358,8 @@ namespace Oxide.Plugins
         private void DrawHeader(CuiElementContainer container, string window, float width)
         {
             const float header = 52f;
-            Box(container, window + ".Header", window, Hex("#120E16", 0.55f), "0 1", "1 1", "0 -" + F(header), "0 0", null);
+            Box(container, window + ".Header", window, Hex("#120E16", 0.72f), "0 1", "1 1", "0 -" + F(header), "0 0", null);
+            Box(container, window + ".HeaderLine", window + ".Header", Hex(settings.Accent, 0.35f), "0 0", "1 0", "0 0", "0 1", null);
             container.Add(new CuiElement
             {
                 Name = window + ".Logo",
@@ -359,16 +372,27 @@ namespace Oxide.Plugins
                         Color = "1 1 1 1",
                         Sprite = "assets/content/textures/generic/fulltransparent.tga"
                     },
-                    new CuiRectTransformComponent { AnchorMin = "0 0.5", AnchorMax = "0 0.5", OffsetMin = "12 -16", OffsetMax = "44 16" }
+                    new CuiRectTransformComponent { AnchorMin = "0 0.5", AnchorMax = "0 0.5", OffsetMin = "14 -18", OffsetMax = "50 18" }
                 }
             });
-            Label(container, window + ".Name", window + ".Header", settings.ServerName, Hex("#F4F1EA"), 18, TextAnchor.MiddleLeft, true,
-                "0 0.5", "0 0.5", "52 -2", "280 16");
-            float tagW = Mathf.Clamp(settings.ServerTag.Length * 7.4f + 16f, 64f, 140f);
-            Box(container, window + ".Tag", window + ".Header", Hex(settings.Accent, 0.22f), "0 0.5", "0 0.5", "52 -20", F(52f + tagW) + " -4", null);
-            Label(container, window + ".TagText", window + ".Tag", settings.ServerTag, Hex(settings.Accent), 12, TextAnchor.MiddleCenter, true,
-                "0 0", "1 1", "0 0", "0 0");
-            Button(container, window + ".Header", window + ".Close", UiCommand + " close", Hex("#2A2033", 0.9f), width - 40f, 12f, 26f, 26f, false);
+            string serverName = string.IsNullOrEmpty(settings.ServerName) ? "Nightshade" : settings.ServerName;
+            float nameX = 60f;
+            float nameW = Mathf.Clamp(serverName.Length * 12.2f, 96f, 260f);
+            Label(container, window + ".Name", window + ".Header", serverName, Hex("#F4F1EA"), 20, TextAnchor.MiddleLeft, true,
+                "0 0.5", "0 0.5", F(nameX) + " -16", F(nameX + nameW) + " 16");
+            string tag = settings.ServerTag ?? string.Empty;
+            if (tag.Length > 0)
+            {
+                float tagW = Mathf.Clamp(tag.Length * 7.2f + 18f, 72f, 120f);
+                float tagX = nameX + nameW + 8f;
+                Box(container, window + ".Tag", window + ".Header", Hex(settings.Accent, 0.22f), "0 0.5", "0 0.5",
+                    F(tagX) + " -11", F(tagX + tagW) + " 11", null);
+                Box(container, window + ".TagEdge", window + ".Tag", Hex(settings.Accent, 0.55f), "0 0", "1 1", "0 0", "0 0", null);
+                Box(container, window + ".TagFill", window + ".Tag", Hex("#1A1224", 0.92f), "0 0", "1 1", "1 1", "-1 -1", null);
+                Label(container, window + ".TagText", window + ".TagFill", tag, Hex(settings.Accent), 11, TextAnchor.MiddleCenter, true,
+                    "0 0", "1 1", "0 0", "0 0");
+            }
+            Button(container, window + ".Header", window + ".Close", UiCommand + " close", Hex("#2A2033", 0.95f), width - 40f, 13f, 26f, 26f, false);
             Label(container, window + ".CloseX", window + ".Close", "\u2715", Hex("#F4F1EA"), 16, TextAnchor.MiddleCenter, true, "0 0", "1 1", "0 0", "0 0");
         }
 
@@ -376,20 +400,21 @@ namespace Oxide.Plugins
         {
             const float side = 150f;
             const float header = 52f;
-            Box(container, window + ".Side", window, Hex("#08070B", 0.45f), "0 0", "0 1", "0 0", F(side) + " -" + F(header), null);
-            float y = 14f;
+            Box(container, window + ".Side", window, Hex("#08070B", 0.62f), "0 0", "0 1", "0 0", F(side) + " -" + F(header), null);
+            Box(container, window + ".SideLine", window + ".Side", Hex("#FFFFFF", 0.06f), "1 0", "1 1", "-1 0", "0 0", null);
+            float y = 12f;
             for (int i = 0; i < settings.Pages.Count; i++)
             {
                 Page page = settings.Pages[i];
                 if (page == null || !page.Enabled) continue;
                 bool on = i == selected;
-                string color = on ? Hex(settings.Accent, 0.28f) : Hex("#FFFFFF", 0.04f);
-                Button(container, window + ".Side", window + ".Nav." + i, UiCommand + " page " + i, color, 12f, y, side - 24f, 36f, false);
-                if (on) Box(container, window + ".NavBar." + i, window + ".Nav." + i, Hex(settings.Accent), "0 0", "0 1", "0 4", "3 -4", null);
+                string color = on ? Hex(settings.Accent, 0.46f) : Hex("#FFFFFF", 0.035f);
+                Button(container, window + ".Side", window + ".Nav." + i, UiCommand + " page " + i, color, 10f, y, side - 20f, 32f, false);
+                if (on) Box(container, window + ".NavBar." + i, window + ".Nav." + i, Hex(settings.Accent), "0 0", "0 1", "0 5", "4 -5", null);
                 Label(container, window + ".NavText." + i, window + ".Nav." + i, page.Title ?? page.Id, on ? Hex("#F4F1EA") : Hex(settings.MutedColor),
-                    13, TextAnchor.MiddleLeft, true, "0 0", "1 1", "14 0", "-8 0");
-                y += 42f;
-                if (y > height - header - 20f) break;
+                    13, TextAnchor.MiddleLeft, true, "0 0", "1 1", "16 0", "-8 0");
+                y += 36f;
+                if (y > height - header - 16f) break;
             }
         }
 
@@ -404,29 +429,41 @@ namespace Oxide.Plugins
 
             Tab tab = page.Tabs != null && page.Tabs.Count > 0 ? page.Tabs[tabIndex] : null;
             float top = 0f;
-            if (page.Layout != "home" && page.Tabs != null && page.Tabs.Count > 1)
+            bool multi = page.Layout != "home" && page.Tabs != null && page.Tabs.Count > 1;
+            if (page.Layout != "home")
+            {
+                string title = page.Title ?? page.Id ?? string.Empty;
+                Label(container, content + ".Title", content, title.ToUpperInvariant(), Hex("#F4F1EA"), 15, TextAnchor.MiddleLeft, true,
+                    "0 1", "1 1", "16 -30", "-16 -6");
+                Box(container, content + ".TitleLine", content, Hex(settings.Accent, 0.8f), "0 1", "0 1", "16 -33", "58 -31", null);
+                top = multi ? 72f : 38f;
+            }
+            if (multi)
             {
                 float x = 16f;
                 for (int i = 0; i < page.Tabs.Count; i++)
                 {
                     string title = page.Tabs[i].Title ?? ("Page " + (i + 1));
-                    float w = Mathf.Clamp(title.Length * 7.4f + 28f, 92f, 210f);
+                    float w = Mathf.Clamp(title.Length * 7.2f + 26f, 88f, 200f);
                     bool on = i == tabIndex;
                     Button(container, content, content + ".Tab." + i, UiCommand + " tab " + pageIndex + " " + i,
-                        on ? Hex(settings.Accent, 0.34f) : Hex("#FFFFFF", 0.05f), x, 12f, w, 28f, false);
+                        on ? Hex(settings.Accent, 0.5f) : Hex("#FFFFFF", 0.05f), x, 8f, w, 26f, false);
+                    if (on) Box(container, content + ".TabBar." + i, content + ".Tab." + i, Hex(settings.Accent), "0 0", "1 0", "8 0", "-8 2", null);
                     Label(container, content + ".TabText." + i, content + ".Tab." + i, title, on ? Hex("#F4F1EA") : Hex(settings.MutedColor),
                         12, TextAnchor.MiddleCenter, true, "0 0", "1 1", "0 0", "0 0");
                     x += w + 8f;
                 }
-                top = 48f;
             }
 
+            bool discord = page.Layout == "discord";
+            float gutter = discord ? 356f : 0f;
             float viewH = contentH - top - 12f;
-            float innerW = contentW - 28f;
+            float innerW = contentW - 28f - gutter;
             var body = new CuiElementContainer();
             float y = 8f;
             string scroll = content + ".Scroll";
             if (page.Layout == "home") DrawHome(body, scroll, tab, player, innerW, ref y);
+            else if (discord) DrawDiscordText(body, scroll, tab, innerW, ref y);
             else DrawSections(body, scroll, tab, pageIndex, tabIndex, innerW, ref y);
             y += 16f;
 
@@ -468,11 +505,12 @@ namespace Oxide.Plugins
                         AnchorMin = "0 0",
                         AnchorMax = "1 1",
                         OffsetMin = "14 " + F(10f),
-                        OffsetMax = "-10 -" + F(top + 4f)
+                        OffsetMax = (discord ? "-356" : "-10") + " -" + F(top + 4f)
                     }
                 }
             });
             foreach (CuiElement element in body) container.Add(element);
+            if (discord) DrawQrCard(container, content, tab, top);
         }
 
         private void DrawHome(CuiElementContainer container, string parent, Tab tab, BasePlayer player, float width, ref float y)
@@ -483,20 +521,6 @@ namespace Oxide.Plugins
             {
                 foreach (Block block in tab.About) DrawBlock(container, parent, block, 0f, width, ref y);
             }
-            float top = y + 6f;
-            float leftW = (width - 16f) * 0.62f;
-            float rightX = leftW + 16f;
-            float rightW = width - rightX;
-            float left = top;
-            float right = top;
-            if (!string.IsNullOrEmpty(tab.RulesTitle))
-                DrawHeading(container, parent, tab.RulesTitle, 0f, leftW, ref left);
-            if (tab.Rules != null)
-            {
-                foreach (Block block in tab.Rules) DrawBlock(container, parent, block, 0f, leftW, ref left);
-            }
-            DrawDiscord(container, parent, tab, rightX, rightW, ref right);
-            y = Mathf.Max(left, right);
         }
 
         private void DrawSections(CuiElementContainer container, string parent, Tab tab, int pageIndex, int tabIndex, float width, ref float y)
@@ -548,21 +572,23 @@ namespace Oxide.Plugins
             }
         }
 
-        private void DrawDiscord(CuiElementContainer container, string parent, Tab tab, float x, float width, ref float y)
+        private void DrawDiscordText(CuiElementContainer container, string parent, Tab tab, float width, ref float y)
         {
-            string title = string.IsNullOrEmpty(tab.DiscordTitle) ? "DISCORD" : tab.DiscordTitle;
-            DrawHeading(container, parent, title, x, width, ref y);
+            if (tab == null) tab = new Tab();
+            if (!string.IsNullOrEmpty(tab.DiscordTitle))
+                DrawHeading(container, parent, tab.DiscordTitle, 0f, width, ref y);
             if (tab.DiscordLines != null)
             {
-                foreach (Line line in tab.DiscordLines)
-                {
-                    var block = new Block { Lines = new List<Line> { line } };
-                    DrawBlock(container, parent, block, x, width, ref y);
-                }
+                var block = new Block { Lines = tab.DiscordLines };
+                DrawBlock(container, parent, block, 0f, width, ref y);
             }
-            if (string.IsNullOrEmpty(tab.DiscordInvite)) return;
-            y += 4f;
-            Box(container, parent + ".InviteBg", parent, Hex("#FFFFFF", 0.06f), "0 1", "0 1", Px(x, -(y + 32f)), Px(x + width, -y), null);
+            string invite = string.IsNullOrEmpty(tab.DiscordInvite) ? "discord.gg/dFmeweQmsy" : tab.DiscordInvite;
+            y += 6f;
+            Label(container, parent + ".InviteCap", parent, "INVITE", Hex(settings.MutedColor), 10, TextAnchor.MiddleLeft, true,
+                "0 1", "0 1", Px(0f, -(y + 16f)), Px(width, -y));
+            y += 20f;
+            Box(container, parent + ".InviteEdge", parent, Hex(settings.Accent, 0.45f), "0 1", "0 1", Px(0f, -(y + 36f)), Px(width, -y), null);
+            Box(container, parent + ".InviteBg", parent + ".InviteEdge", Hex("#16131C", 0.98f), "0 0", "1 1", "1 1", "-1 -1", null);
             container.Add(new CuiElement
             {
                 Name = parent + ".Invite",
@@ -571,8 +597,8 @@ namespace Oxide.Plugins
                 {
                     new CuiInputFieldComponent
                     {
-                        Text = tab.DiscordInvite,
-                        FontSize = 14,
+                        Text = invite,
+                        FontSize = 16,
                         Font = "robotocondensed-bold.ttf",
                         Align = TextAnchor.MiddleCenter,
                         Color = Hex(settings.Accent),
@@ -583,7 +609,22 @@ namespace Oxide.Plugins
                     new CuiRectTransformComponent { AnchorMin = "0 0", AnchorMax = "1 1", OffsetMin = "8 0", OffsetMax = "-8 0" }
                 }
             });
-            y += 40f;
+            y += 48f;
+            Label(container, parent + ".InviteHint", parent, "Select the invite to copy it.", Hex(settings.MutedColor), 12, TextAnchor.UpperLeft, false,
+                "0 1", "0 1", Px(0f, -(y + 18f)), Px(width, -y));
+            y += 24f;
+        }
+
+        private void DrawQrCard(CuiElementContainer container, string parent, Tab tab, float top)
+        {
+            string url = DiscordQrUrl(tab);
+            float w = 332f;
+            float h = 210f;
+            float y = top + 8f;
+            string card = parent + ".Qr";
+            Box(container, card + ".Edge", parent, Hex(settings.Accent, 0.4f), "1 1", "1 1", Px(-(w + 16f), -(y + h)), Px(-12f, -y), null);
+            Box(container, card, card + ".Edge", Hex("#16131C", 0.98f), "0 0", "1 1", "1 1", "-1 -1", null);
+            AddRawImage(container, card + ".Img", card, url, QrKey(url), "0 0", "1 1", "6 6", "-6 -6");
         }
 
         private void DrawStatus(CuiElementContainer container, string parent, BasePlayer player, float width, ref float y)
@@ -602,11 +643,12 @@ namespace Oxide.Plugins
         private void DrawCard(CuiElementContainer container, string parent, string key, float x, float y, float w, float h, string bar, string title, string value, string detail, string valueColor)
         {
             string name = "NightshadeInfo.St." + key;
-            Box(container, name, parent, Hex("#FFFFFF", 0.05f), "0 1", "0 1", Px(x, -(y + h)), Px(x + w, -y), null);
-            Box(container, name + ".Bar", name, Hex(bar), "0 0", "0 1", "0 6", "3 -6", null);
-            Label(container, name + ".K", name, title ?? string.Empty, Hex(settings.MutedColor), 9, TextAnchor.UpperLeft, true, "0 1", "1 1", "8 -16", "-4 -3");
-            Label(container, name + ".V", name, value ?? string.Empty, Hex(valueColor), 13, TextAnchor.UpperLeft, true, "0 1", "1 1", "8 -36", "-4 -16");
-            Label(container, name + ".D", name, detail ?? string.Empty, Hex(settings.TextColor), 10, TextAnchor.UpperLeft, false, "0 1", "1 1", "8 -90", "-4 -36");
+            Box(container, name + ".Edge", parent, Hex("#FFFFFF", 0.08f), "0 1", "0 1", Px(x, -(y + h)), Px(x + w, -y), null);
+            Box(container, name, name + ".Edge", Hex("#16131C", 0.98f), "0 0", "1 1", "1 1", "-1 -1", null);
+            Box(container, name + ".Bar", name, Hex(bar), "0 0", "0 1", "0 8", "3 -8", null);
+            Label(container, name + ".K", name, title ?? string.Empty, Hex(settings.MutedColor), 9, TextAnchor.UpperLeft, true, "0 1", "1 1", "12 -18", "-6 -4");
+            Label(container, name + ".V", name, value ?? string.Empty, Hex(valueColor), 15, TextAnchor.UpperLeft, true, "0 1", "1 1", "12 -40", "-6 -18");
+            Label(container, name + ".D", name, detail ?? string.Empty, Hex(settings.TextColor), 10, TextAnchor.UpperLeft, false, "0 1", "1 1", "12 -92", "-6 -42");
         }
 
         private void DrawHeading(CuiElementContainer container, string parent, string text, float x, float width, ref float y)
@@ -621,9 +663,11 @@ namespace Oxide.Plugins
             if (block == null) return;
             if (!string.IsNullOrEmpty(block.Heading))
             {
-                Label(container, parent + ".B." + F(x) + "." + F(y), parent, block.Heading, Hex(settings.Accent), 14, TextAnchor.UpperLeft, true,
-                    "0 1", "0 1", Px(x, -(y + 20f)), Px(x + width, -y));
-                y += 26f;
+                Label(container, parent + ".B." + F(x) + "." + F(y), parent, block.Heading, Hex(settings.Accent), 13, TextAnchor.UpperLeft, true,
+                    "0 1", "0 1", Px(x, -(y + 18f)), Px(x + width, -y));
+                Box(container, parent + ".U." + F(x) + "." + F(y), parent, Hex(settings.Accent, 0.85f), "0 1", "0 1",
+                    Px(x, -(y + 22f)), Px(x + Mathf.Min(48f, width), -(y + 20f)), null);
+                y += 30f;
             }
             if (block.Lines == null) return;
             foreach (Line line in block.Lines)
@@ -1016,6 +1060,61 @@ namespace Oxide.Plugins
             Interface.Oxide.DataFileSystem.WriteObject(DataPath, stored);
         }
 
+        private void RegisterImages()
+        {
+            if (ImageLibrary == null || !ImageLibrary.IsLoaded || settings == null || settings.Pages == null) return;
+            var seen = new HashSet<string>(StringComparer.Ordinal);
+            foreach (Page page in settings.Pages)
+            {
+                if (page == null || page.Tabs == null) continue;
+                foreach (Tab tab in page.Tabs)
+                {
+                    if (tab == null || page.Layout != "discord") continue;
+                    string url = DiscordQrUrl(tab);
+                    if (!seen.Add(url)) continue;
+                    ImageLibrary.Call("AddImage", url, QrKey(url), 0UL);
+                }
+            }
+        }
+
+        private static string QrKey(string url)
+        {
+            return string.IsNullOrEmpty(url) ? "NightshadeInfo.Qr" : "NightshadeInfo.Qr";
+        }
+
+        private static string DiscordQrUrl(Tab tab)
+        {
+            if (tab != null && !string.IsNullOrEmpty(tab.DiscordQr)) return tab.DiscordQr;
+            return DefaultQr;
+        }
+
+        private void AddRawImage(CuiElementContainer container, string name, string parent, string url, string key, string anchorMin, string anchorMax, string offsetMin, string offsetMax)
+        {
+            string png = null;
+            if (ImageLibrary != null && ImageLibrary.IsLoaded)
+            {
+                png = ImageLibrary.Call<string>("GetImage", key);
+                if (png == "0" || png == "NONE_0") png = null;
+            }
+            var image = new CuiRawImageComponent
+            {
+                Color = "1 1 1 1",
+                Sprite = "assets/content/textures/generic/fulltransparent.tga"
+            };
+            if (!string.IsNullOrEmpty(png)) image.Png = png;
+            else image.Url = url ?? string.Empty;
+            container.Add(new CuiElement
+            {
+                Name = name,
+                Parent = parent,
+                Components =
+                {
+                    image,
+                    new CuiRectTransformComponent { AnchorMin = anchorMin, AnchorMax = anchorMax, OffsetMin = offsetMin, OffsetMax = offsetMax }
+                }
+            });
+        }
+
         private static void Normalize(Settings value)
         {
             if (value.ToggleCommands == null) value.ToggleCommands = new List<string>();
@@ -1032,6 +1131,7 @@ namespace Oxide.Plugins
                     if (tab.Commands == null) tab.Commands = new List<string>();
                     if (tab.Columns == null) tab.Columns = new List<Column>();
                     if (tab.About == null) tab.About = new List<Block>();
+                    if (tab.RulesTitle == null) tab.RulesTitle = string.Empty;
                     if (tab.Rules == null) tab.Rules = new List<Block>();
                     if (tab.DiscordLines == null) tab.DiscordLines = new List<Line>();
                     if (tab.Buttons == null) tab.Buttons = new List<Btn>();
@@ -1275,6 +1375,8 @@ namespace Oxide.Plugins
                 Pages = new List<Page>
                 {
                     HomePage(),
+                    RulesPage(),
+                    DiscordPage(),
                     CommandsPage(),
                     SystemsPage(),
                     EventsPage(),
@@ -1290,7 +1392,7 @@ namespace Oxide.Plugins
                 Id = "home",
                 Title = "Home",
                 Layout = "home",
-                Commands = new List<string> { "info", "start", "rules", "rule", "discord", "discordinfo" },
+                Commands = new List<string> { "info", "start" },
                 Tabs = new List<Tab>
                 {
                     new Tab
@@ -1308,45 +1410,81 @@ namespace Oxide.Plugins
                                 L("\u2022 10x+ stack sizes, with exceptions for balance."),
                                 L("\u2022 Monthly wipe: first Thursday at 2:00 PM Eastern, unless Discord says otherwise."),
                                 L("\u2022 Custom progression through /shop, Skill Tree, events, and VIP perks."),
-                                L("\u2022 Earned event loot locks to you. Base boxes stay yours. See Systems for the timers."),
-                                L("\u2022 Active admins and Discord support.")),
+                                L("\u2022 Event loot is public. Hacked crates, supply drops, and heli or Bradley crates are not locked."),
+                                L("\u2022 Base boxes stay yours. Sleeping players stay protected.")),
                             Bk("WHERE TO START",
-                                L("\u2022 /rules on this page. /commands second. /shop when you are ready to make questionable financial choices with RP."))
-                        },
-                        RulesTitle = "SERVER RULES",
-                        Rules = new List<Block>
+                                L("\u2022 Rules has the full list. Discord has the invite and a QR code."),
+                                L("\u2022 Commands is next. /shop is there when you want to spend RP."))
+                        }
+                    }
+                }
+            };
+        }
+
+        private static Page RulesPage()
+        {
+            return new Page
+            {
+                Id = "rules",
+                Title = "Rules",
+                Commands = new List<string> { "rules", "rule" },
+                Tabs = new List<Tab>
+                {
+                    new Tab
+                    {
+                        Title = "Rules",
+                        Columns = new List<Column>
                         {
-                            Bk("TEAMS",
-                                L("\u2022 Solo/duo only. Max team size is 2.")),
-                            Bk("BASES & BUILDING",
-                                L("\u2022 No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.", "warn"),
-                                L("\u2022 PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
-                                L("\u2022 Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe."),
-                                L("\u2022 Do not block roads, monuments, caves, vendors, event areas, or another player's build.", "warn"),
-                                L("\u2022 Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.")),
-                            Bk("LOOT",
-                                L("\u2022 Do not take from another player's boxes, furnaces, or TC storage.", "warn"),
-                                L("\u2022 You, your teammate, TC auth, or someone you /share with can open them."),
-                                L("\u2022 Sleeping players cannot be looted, including during PvP weekend and Purge.", "warn"),
-                                L("\u2022 Bradley, heli, NPC, hackable crates, and supply drops lock to whoever earned them."),
-                                L("\u2022 Those locks, and base storage locks, turn off during the PvP weekend only."),
-                                L("\u2022 Purge does not turn loot protection off. A PvP monument does not either."),
-                                L("\u2022 If it says the loot is not yours, it is not yours.", "warn")),
-                            Bk("PVP",
-                                L("\u2022 Monuments and events are always PvP.", "warn"),
-                                L("\u2022 Raiding and PvP are allowed during the PvP weekend and during Purge."),
-                                L("\u2022 Outside those, do not attack, bait, exploit rules, or play loophole lawyer.", "warn")),
-                            Bk("COMMUNITY",
-                                L("\u2022 No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.", "warn"),
-                                L("\u2022 Trash talk can be spicy. Do not make it personal, creepy, or radioactive."),
-                                L("\u2022 Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene."))
-                        },
-                        DiscordTitle = "DISCORD",
+                            Col(
+                                Bk("TEAMS",
+                                    L("\u2022 Solo/duo only. Max team size is 2.")),
+                                Bk("BASES & BUILDING",
+                                    L("\u2022 No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.", "warn"),
+                                    L("\u2022 PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
+                                    L("\u2022 Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe."),
+                                    L("\u2022 Do not block roads, monuments, caves, vendors, event areas, or another player's build.", "warn"),
+                                    L("\u2022 Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.")),
+                                Bk("LOOT & OWNERSHIP",
+                                    L("\u2022 Do not take from another player's boxes, furnaces, or TC storage.", "warn"),
+                                    L("\u2022 You, your teammate, TC auth, or someone you /share with can open them."),
+                                    L("\u2022 Sleeping players cannot be looted, including during PvP weekend and Purge.", "warn"),
+                                    L("\u2022 Event loot is open to anyone and is not locked."),
+                                    L("\u2022 Hacked crates, supply drops, and heli or Bradley crates from events are public."),
+                                    L("\u2022 If a base box says the loot is not yours, it is not yours.", "warn")),
+                                Bk("PVP",
+                                    L("\u2022 Monuments and events are always PvP.", "warn"),
+                                    L("\u2022 Raiding and PvP are allowed during the PvP weekend and during Purge."),
+                                    L("\u2022 Outside those, do not attack, bait, exploit rules, or play loophole lawyer.", "warn")),
+                                Bk("COMMUNITY",
+                                    L("\u2022 No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.", "warn"),
+                                    L("\u2022 Trash talk can be spicy. Do not make it personal, creepy, or radioactive."),
+                                    L("\u2022 Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene.")))
+                        }
+                    }
+                }
+            };
+        }
+
+        private static Page DiscordPage()
+        {
+            return new Page
+            {
+                Id = "discord",
+                Title = "Discord",
+                Layout = "discord",
+                Commands = new List<string> { "discord", "discordinfo" },
+                Tabs = new List<Tab>
+                {
+                    new Tab
+                    {
+                        Title = "Discord",
+                        DiscordTitle = "JOIN THE SERVER",
                         DiscordInvite = "discord.gg/dFmeweQmsy",
+                        DiscordQr = DefaultQr,
                         DiscordLines = new List<Line>
                         {
                             L("\u2022 Wipe changes, events, and support are posted in Discord."),
-                            L("\u2022 Select the invite below if you want to copy it."),
+                            L("\u2022 Select the invite if you want to copy it, or scan the QR code."),
                             L("\u2022 Donate through the store link in Discord. After you donate, post in the donation channel with your in-game name."),
                             L("\u2022 VIP is permanent after one donation, unless you break the rules."),
                             L("\u2022 VIPx is a monthly subscription.", "muted")
@@ -1373,7 +1511,8 @@ namespace Oxide.Plugins
                             Col(
                                 Bk("CORE",
                                     L("\u2022 /info \u2014 open this panel"),
-                                    L("\u2022 /rules \u2014 rules on this home page"),
+                                    L("\u2022 /rules \u2014 the Rules tab"),
+                                    L("\u2022 /discord \u2014 invite and QR code"),
                                     L("\u2022 /commands \u2014 this list"),
                                     L("\u2022 /systems \u2014 server systems"),
                                     L("\u2022 /events \u2014 events and help"),
@@ -1429,10 +1568,9 @@ namespace Oxide.Plugins
                                 Bk("LOOT PROTECTION",
                                     L("\u2022 Boxes, furnaces, and TC storage: you, your teammate, or TC auth. /share opens one container for someone else."),
                                     L("\u2022 Sleeping players stay unlootable all week, including PvP weekend and Purge. Teammates can still loot them."),
-                                    L("\u2022 Bradley locks 5 min after 20% damage. Heli locks 8 min after 35%. NPC locks 5 min after 20%."),
-                                    L("\u2022 A hacked crate locks 15 min to the hacker. A supply drop locks 10 min to whoever threw the signal."),
-                                    L("\u2022 During the PvP weekend those locks, and base storage locks, turn off."),
-                                    L("\u2022 Purge does not turn them off. Monuments being PvP does not turn them off."),
+                                    L("\u2022 Event loot is open to anyone and is not locked."),
+                                    L("\u2022 Hacked crates, supply drops, and heli or Bradley crates from events are public."),
+                                    L("\u2022 Purge does not turn base storage or sleeper protection off. A PvP monument does not either."),
                                     L("\u2022 Domes only show over events, not monuments.", "muted"))),
                             Col(
                                 Bk("PROGRESSION",
@@ -1506,7 +1644,7 @@ namespace Oxide.Plugins
                                 L("\u2022 Bring ammo, meds, armor, and room in your inventory."),
                                 L("\u2022 Do not drag hordes into player bases, vendors, safe builds, or random bystanders."),
                                 L("\u2022 Hordes are events, so they are PvP. The rest of the map follows the weekend window and Purge."),
-                                L("\u2022 Loot ownership follows Loot Protection and event rules.")))
+                                L("\u2022 Event loot is public. Base storage and sleepers stay protected.")))
                         }
                     },
                     new Tab

@@ -65,11 +65,7 @@
       "Layout (home or sections)": "home",
       "Commands": [
         "info",
-        "start",
-        "rules",
-        "rule",
-        "discord",
-        "discordinfo"
+        "start"
       ],
       "Tabs": [
         {
@@ -104,105 +100,168 @@
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
-                  "Text": "Earned event loot locks to you for a few minutes. Base boxes stay on TC auth. PvP weekend turns those locks off. Purge does not.",
+                  "Text": "Event loot is public. Hacked crates, supply drops, and heli or Bradley crates are not locked. Base boxes stay on TC auth, and sleeping players cannot be looted.",
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
-                  "Text": "Active admins. Read the rules on this page, then Commands, then /shop when you want to spend RP.",
-                  "Tone (body, accent, warn, muted)": "body"
-                }
-              ]
-            }
-          ],
-          "Rules title": "SERVER RULES",
-          "Rules": [
-            {
-              "Heading": "TEAMS",
-              "Lines": [
-                {
-                  "Text": "Solo/duo only. Max team size is 2.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                }
-              ]
-            },
-            {
-              "Heading": "BASES & BUILDING",
-              "Lines": [
-                {
-                  "Text": "No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "Do not block roads, monuments, caves, vendors, event areas, or another player's build.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.",
-                  "Tone (body, accent, warn, muted)": "body"
-                }
-              ]
-            },
-            {
-              "Heading": "LOOT & OWNERSHIP",
-              "Lines": [
-                {
-                  "Text": "Do not steal from player containers, bodies, drops, event crates, or protected loot.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "If Loot Protection says it is not yours, it is not yours. This is not a riddle.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "Team up or ask for share access when you want to split loot.",
-                  "Tone (body, accent, warn, muted)": "body"
-                }
-              ]
-            },
-            {
-              "Heading": "PVP",
-              "Lines": [
-                {
-                  "Text": "Monuments and events are always PvP. A dome only appears over an event. Raiding is allowed during the PvP weekend and during Purge.",
-                  "Tone (body, accent, warn, muted)": "body"
-                },
-                {
-                  "Text": "The weekend window is Friday 8:00 PM through Monday 3:00 AM Eastern. The status cards above are the live reading.",
-                  "Tone (body, accent, warn, muted)": "body"
-                },
-                {
-                  "Text": "Outside those areas, do not attack, bait, exploit rules, or play loophole lawyer.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                }
-              ]
-            },
-            {
-              "Heading": "COMMUNITY",
-              "Lines": [
-                {
-                  "Text": "No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "Trash talk can be spicy. Do not make it personal, creepy, or radioactive.",
-                  "Tone (body, accent, warn, muted)": "body"
-                },
-                {
-                  "Text": "Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene.",
+                  "Text": "Active admins. Open Rules for the full list, and Discord for the invite and QR code.",
                   "Tone (body, accent, warn, muted)": "body"
                 }
               ]
             }
           ],
-          "Discord title": "DISCORD",
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord invite": null,
+          "Discord lines": [],
+          "Commands": [],
+          "Columns": [],
+          "Buttons": []
+        }
+      ],
+      "Enabled": true
+    },
+    {
+      "Id": "rules",
+      "Sidebar title": "Rules",
+      "Enabled": true,
+      "Layout (home or sections)": "sections",
+      "Commands": [
+        "rules",
+        "rule"
+      ],
+      "Tabs": [
+        {
+          "Title": "Rules",
+          "Commands": [],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "TEAMS",
+                  "Lines": [
+                    {
+                      "Text": "Solo/duo only. Max team size is 2.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "BASES & BUILDING",
+                  "Lines": [
+                    {
+                      "Text": "No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Do not block roads, monuments, caves, vendors, event areas, or another player's build.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "LOOT & OWNERSHIP",
+                  "Lines": [
+                    {
+                      "Text": "Do not steal from player containers, bodies, or other base loot. Event loot is public.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Base containers and sleeping players stay protected. If a base box says the loot is not yours, it is not yours.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Team up or ask for share access when you want to split loot.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Event loot is open to anyone and is not locked. Hacked crates, supply drops, and heli or Bradley crates from events are public.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "PVP",
+                  "Lines": [
+                    {
+                      "Text": "Monuments and events are always PvP. A dome only appears over an event. Raiding is allowed during the PvP weekend and during Purge.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "The weekend window is Friday 8:00 PM through Monday 3:00 AM Eastern. The status cards above are the live reading.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Outside those areas, do not attack, bait, exploit rules, or play loophole lawyer.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "COMMUNITY",
+                  "Lines": [
+                    {
+                      "Text": "No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Trash talk can be spicy. Do not make it personal, creepy, or radioactive.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Discord QR URL": null,
+          "Buttons": []
+        }
+      ]
+    },
+    {
+      "Id": "discord",
+      "Sidebar title": "Discord",
+      "Enabled": true,
+      "Layout (home or sections)": "discord",
+      "Commands": [
+        "discord",
+        "discordinfo"
+      ],
+      "Tabs": [
+        {
+          "Title": "Discord",
+          "Commands": [],
+          "Columns": [],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": "JOIN THE SERVER",
           "Discord invite": "discord.gg/dFmeweQmsy",
+          "Discord QR URL": "https://i.ibb.co/fz03Kqzb/discord.png",
           "Discord lines": [
             {
               "Text": "Wipe changes, events, and support are posted in Discord.",
               "Tone (body, accent, warn, muted)": "body"
             },
             {
-              "Text": "Select the invite below if you want to copy it.",
+              "Text": "Select the invite if you want to copy it, or scan the QR code.",
               "Tone (body, accent, warn, muted)": "body"
             },
             {
@@ -214,12 +273,9 @@
               "Tone (body, accent, warn, muted)": "muted"
             }
           ],
-          "Commands": [],
-          "Columns": [],
           "Buttons": []
         }
-      ],
-      "Enabled": true
+      ]
     },
     {
       "Id": "commands",
@@ -243,7 +299,11 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "/rules — rules on the home page",
+                      "Text": "/rules — the Rules tab",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/discord — invite and QR code",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -402,7 +462,7 @@
                   "Heading": "LOOT PROTECTION",
                   "Lines": [
                     {
-                      "Text": "Bradley locks 5 min after 20% damage. Heli locks 8 min after 35%. NPC locks 5 min after 20%. Hacked crates lock 15 min. Supply drops lock 10 min.",
+                      "Text": "Event loot is open to anyone and is not locked. Hacked crates, supply drops, and heli or Bradley crates from events are public.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -638,7 +698,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Loot ownership follows Loot Protection and event rules.",
+                      "Text": "Event loot is public. Base storage and sleepers stay protected.",
                       "Tone (body, accent, warn, muted)": "body"
                     }
                   ]
