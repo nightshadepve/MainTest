@@ -2,24 +2,61 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Oxide.Core;
-using Oxide.Core.Plugins;
 using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("IslandStorm", "Grok", "1.0.0")]
-    [Description("Island-wide total radiation storm with whipping winds, inspired by RadStorm")]
+    // Local Nightshade change on Grok's IslandStorm 1.0.0.
+    // Weather eases in and out. Replacing this file with a stock 1.0.0 copy removes that.
+    [Info("IslandStorm", "Grok", "1.1.0")]
+    [Description("Island-wide radiation storm with whipping winds. Nightshade build: weather eases in and out (based on Grok 1.0.0).")]
     public class IslandStorm : RustPlugin
     {
         #region Fields
+        private const string BackupFile = "IslandStorm_Weather";
+
         private PluginConfig config;
         private bool isStormActive;
-        private Timer rampTimer;
+        private Timer weatherTimer;
         private Timer damageTimer;
         private Timer durationTimer;
-        private float currentProgress; // 0 to 1 during ramp
-        private bool isRampingUp;
-        private bool isRampingDown;
+        private Timer autoTimer;
+        private float blend; // 0 = captured baseline, 1 = storm peaks
+        private float rampFrom;
+        private float rampTo;
+        private float rampDuration;
+        private float rampStartedAt;
+        private bool rampActive;
+        private StormPhase phase = StormPhase.Idle;
+        private List<WeatherChannel> channels;
+
+        private enum StormPhase
+        {
+            Idle,
+            Rising,
+            Peak,
+            Falling
+        }
+
+        private class WeatherChannel
+        {
+            public string Key;
+            public float Original;
+            public float Baseline;
+            public float Target;
+        }
+
+        private class WeatherBackup
+        {
+            public bool Dirty;
+            public List<BackupChannel> Channels = new List<BackupChannel>();
+        }
+
+        private class BackupChannel
+        {
+            public string Key;
+            public float Original;
+        }
         #endregion
 
         #region Config
@@ -33,6 +70,7 @@ namespace Oxide.Plugins
         private class StormSettings
         {
             public float RampTimeSeconds { get; set; } = 120f;
+            public float WeatherTickSeconds { get; set; } = 1.5f;
             public float StormDurationSeconds { get; set; } = 300f;
             public float RadiationPerTick { get; set; } = 35f;
             public float DamageTickInterval { get; set; } = 2f;
@@ -43,6 +81,7 @@ namespace Oxide.Plugins
             public float PeakRain { get; set; } = 1.0f;
             public float PeakThunder { get; set; } = 1.0f;
             public float PeakFog { get; set; } = 0.8f;
+            public float PeakCloudCoverage { get; set; } = 1.0f;
             public float RedSkyRayleigh { get; set; } = 0.2f;
             public float RedSkyMie { get; set; } = 1.5f;
             public float RedSkyBrightness { get; set; } = 0.4f;
@@ -80,13 +119,41 @@ namespace Oxide.Plugins
             try
             {
                 config = Config.ReadObject<PluginConfig>();
-                if (config == null) LoadDefaultConfig();
+                if (config == null)
+                {
+                    LoadDefaultConfig();
+                    return;
+                }
             }
             catch
             {
                 PrintWarning("Config file is corrupt, loading defaults.");
                 LoadDefaultConfig();
+                return;
             }
+
+            if (config.Storm == null) config.Storm = new StormSettings();
+            if (config.Bonus == null) config.Bonus = new BonusSettings();
+            if (config.Messages == null) config.Messages = new Messages();
+
+            bool corrected = false;
+            if (config.Storm.WeatherTickSeconds < 0.5f)
+            {
+                config.Storm.WeatherTickSeconds = 1.5f;
+                corrected = true;
+            }
+            if (config.Storm.RampTimeSeconds < 1f)
+            {
+                config.Storm.RampTimeSeconds = 120f;
+                corrected = true;
+            }
+            if (config.Storm.DamageTickInterval < 0.5f)
+            {
+                config.Storm.DamageTickInterval = 2f;
+                corrected = true;
+            }
+            if (corrected)
+                SaveConfig();
         }
 
         protected override void SaveConfig() => Config.WriteObject(config);
@@ -103,19 +170,35 @@ namespace Oxide.Plugins
         private void OnServerInitialized()
         {
             Puts("IslandStorm ready. Grant permission with: oxide.grant user <steamid> islandstorm.admin");
-            if (config != null && config.Storm.AutoStart)
-            {
+            TryRestoreBackupFromDisk();
+            if (config != null && config.Storm.AutoStart && phase == StormPhase.Idle)
                 ScheduleNextAutoStorm();
-            }
+        }
+
+        private void OnServerShutdown()
+        {
+            StopAllTimers();
+            if (channels != null && channels.Count > 0)
+                RestoreOriginalsImmediate();
+            phase = StormPhase.Idle;
+            isStormActive = false;
         }
 
         private void Unload()
         {
             StopAllTimers();
-            if (isStormActive)
+            if (channels != null && channels.Count > 0)
             {
-                ResetWeatherImmediate();
+                RestoreOriginalsImmediate();
+                Puts("IslandStorm unloaded. Pre-storm weather restored.");
             }
+            else
+            {
+                TryRestoreBackupFromDisk();
+            }
+
+            phase = StormPhase.Idle;
+            isStormActive = false;
         }
 
         private object OnDispenserGather(ResourceDispenser dispenser, BasePlayer player, Item item)
@@ -127,12 +210,17 @@ namespace Oxide.Plugins
             return null;
         }
 
-        private void OnCollectiblePickedup(CollectibleEntity entity, BasePlayer player, Item item)
+        // The old hook was named OnCollectiblePickedup and never ran.
+        private void OnCollectiblePickup(CollectibleEntity entity, BasePlayer player)
         {
-            if (!isStormActive || player == null || item == null) return;
+            if (!isStormActive || player == null || entity == null || entity.itemList == null) return;
             if (permission.UserHasPermission(player.UserIDString, "islandstorm.exempt")) return;
 
-            item.amount = Mathf.CeilToInt(item.amount * config.Bonus.PickupRateMultiplier);
+            foreach (var item in entity.itemList)
+            {
+                if (item == null) continue;
+                item.amount = Mathf.CeilToInt(item.amount * config.Bonus.PickupRateMultiplier);
+            }
         }
         #endregion
 
@@ -165,39 +253,52 @@ namespace Oxide.Plugins
         {
             if (args == null || args.Length == 0)
             {
-                string status = isStormActive ? "ACTIVE" : "INACTIVE";
-                string msg = $"IslandStorm status: {status}";
-                if (player != null) SendReply(player, msg);
-                else Puts(msg);
+                Reply(player, StatusText());
                 return;
             }
 
             switch (args[0].ToLower())
             {
                 case "start":
-                    if (isStormActive)
+                    if (phase != StormPhase.Idle)
                     {
                         Reply(player, config.Messages.AlreadyActive);
                         return;
                     }
                     StartStorm();
-                    Reply(player, "Storm started.");
+                    Reply(player, "Storm is rolling in.");
                     break;
 
                 case "stop":
-                    if (!isStormActive)
+                    if (phase == StormPhase.Idle)
                     {
                         Reply(player, config.Messages.NotActive);
                         return;
                     }
+                    if (phase == StormPhase.Falling)
+                    {
+                        Reply(player, "The storm is already clearing.");
+                        return;
+                    }
                     StopStorm();
-                    Reply(player, "Storm stopped.");
+                    Reply(player, "Storm is clearing.");
                     break;
 
                 default:
                     Reply(player, "Usage: /storm <start|stop>   or   startstorm <start|stop>");
                     break;
             }
+        }
+
+        private string StatusText()
+        {
+            if (phase == StormPhase.Idle)
+                return "IslandStorm status: inactive";
+
+            string label = phase == StormPhase.Rising ? "rolling in"
+                : phase == StormPhase.Peak ? "peak"
+                : "clearing";
+            return $"IslandStorm status: {label} ({Mathf.RoundToInt(blend * 100f)}%).";
         }
 
         private void Reply(BasePlayer player, string message)
@@ -212,152 +313,166 @@ namespace Oxide.Plugins
         #region Storm Logic
         private void StartStorm()
         {
-            if (isStormActive) return;
+            if (phase != StormPhase.Idle) return;
 
+            Kill(ref autoTimer);
+            CaptureChannels();
             isStormActive = true;
-            isRampingUp = true;
-            isRampingDown = false;
-            currentProgress = 0.2f;
+            phase = StormPhase.Rising;
+            blend = 0f;
 
-            string incoming = config?.Messages?.StormIncoming ?? "A massive radiation storm is rolling in across the entire island!";
-            Broadcast(incoming);
-            Puts("Island-wide storm starting!");
-
-            // Force the built-in storm preset first for immediate effect
-            RunWeatherCommand("weather.load", null, "storm");
-            ApplyWeather(0.5f);
+            Broadcast(config.Messages.StormIncoming);
+            Puts($"IslandStorm rolling in over {config.Storm.RampTimeSeconds:0}s.");
 
             StartDamageTimer();
-            StartRampTimer(true);
+            BeginRamp(1f);
         }
 
         private void StopStorm()
         {
-            if (!isStormActive) return;
+            if (phase == StormPhase.Idle || phase == StormPhase.Falling) return;
 
-            isRampingUp = false;
-            isRampingDown = true;
+            phase = StormPhase.Falling;
+            Kill(ref durationTimer);
             Broadcast(config.Messages.StormEnding);
-
-            StopDamageTimer();
-            if (durationTimer != null && !durationTimer.Destroyed)
-                durationTimer.Destroy();
-
-            StartRampTimer(false);
+            Puts("IslandStorm clearing.");
+            BeginRamp(0f);
         }
 
-        private void StartRampTimer(bool rampUp)
+        private void BeginRamp(float target)
         {
-            if (rampTimer != null && !rampTimer.Destroyed)
-                rampTimer.Destroy();
+            rampFrom = blend;
+            rampTo = target;
+            rampStartedAt = Time.realtimeSinceStartup;
+            float distance = Mathf.Abs(target - blend);
+            rampDuration = Mathf.Max(config.Storm.WeatherTickSeconds, config.Storm.RampTimeSeconds * Mathf.Clamp01(distance));
 
-            float steps = 20f;
-            float interval = config.Storm.RampTimeSeconds / steps;
-            float progressStep = 1f / steps;
-
-            rampTimer = timer.Every(interval, () =>
+            if (distance <= 0.001f)
             {
-                if (rampUp)
-                {
-                    currentProgress = Mathf.Min(1f, currentProgress + progressStep);
-                    ApplyWeather(currentProgress);
+                rampActive = false;
+                blend = target;
+                ApplyBlend();
+                OnRampFinished();
+                return;
+            }
 
-                    if (currentProgress >= 1f)
-                    {
-                        isRampingUp = false;
-                        OnPeakReached();
-                        rampTimer.Destroy();
-                    }
-                }
-                else
-                {
-                    currentProgress = Mathf.Max(0f, currentProgress - progressStep);
-                    ApplyWeather(currentProgress);
+            rampActive = true;
+            EnsureWeatherTimer();
+            WeatherTick();
+        }
 
-                    if (currentProgress <= 0f)
-                    {
-                        isRampingDown = false;
-                        isStormActive = false;
-                        ResetWeatherImmediate();
-                        Broadcast(config.Messages.StormEnded);
-                        Puts("Storm fully ended.");
-                        rampTimer.Destroy();
+        private void EnsureWeatherTimer()
+        {
+            if (weatherTimer != null && !weatherTimer.Destroyed) return;
+            weatherTimer = timer.Every(config.Storm.WeatherTickSeconds, WeatherTick);
+        }
 
-                        if (config.Storm.AutoStart)
-                            ScheduleNextAutoStorm();
-                    }
-                }
-            });
+        private void WeatherTick()
+        {
+            if (!rampActive) return;
+
+            float elapsed = Time.realtimeSinceStartup - rampStartedAt;
+            float t = rampDuration <= 0.01f ? 1f : Mathf.Clamp01(elapsed / rampDuration);
+            float eased = SmoothStep(t);
+            blend = Mathf.Lerp(rampFrom, rampTo, eased);
+            ApplyBlend();
+
+            if (t < 1f) return;
+
+            rampActive = false;
+            blend = rampTo;
+            ApplyBlend();
+            OnRampFinished();
+        }
+
+        private static float SmoothStep(float t)
+        {
+            t = Mathf.Clamp01(t);
+            return t * t * (3f - 2f * t);
+        }
+
+        private void OnRampFinished()
+        {
+            Kill(ref weatherTimer);
+
+            if (phase == StormPhase.Rising)
+            {
+                phase = StormPhase.Peak;
+                blend = 1f;
+                ApplyBlend();
+                OnPeakReached();
+                return;
+            }
+
+            if (phase == StormPhase.Falling)
+                FinishStorm();
         }
 
         private void OnPeakReached()
         {
             Broadcast(config.Messages.StormActive);
-            Puts("Storm peaked - extreme weather and peak radiation.");
+            Puts("IslandStorm peaked.");
 
-            if (durationTimer != null && !durationTimer.Destroyed)
-                durationTimer.Destroy();
+            Kill(ref durationTimer);
+            if (config.Storm.StormDurationSeconds <= 0f)
+            {
+                StopStorm();
+                return;
+            }
 
             durationTimer = timer.Once(config.Storm.StormDurationSeconds, () =>
             {
-                if (isStormActive)
+                durationTimer = null;
+                if (phase == StormPhase.Peak)
                     StopStorm();
             });
         }
 
-        private void StartDamageTimer()
+        private void FinishStorm()
         {
-            if (damageTimer != null && !damageTimer.Destroyed)
-                damageTimer.Destroy();
+            RestoreOriginalsImmediate();
+            Kill(ref damageTimer);
+            Kill(ref weatherTimer);
+            Kill(ref durationTimer);
+            phase = StormPhase.Idle;
+            isStormActive = false;
+            blend = 0f;
+            rampActive = false;
 
-            damageTimer = timer.Every(config.Storm.DamageTickInterval, ApplyRadiationDamage);
+            Broadcast(config.Messages.StormEnded);
+            Puts("IslandStorm ended. Weather restored.");
+
+            if (config.Storm.AutoStart)
+                ScheduleNextAutoStorm();
         }
 
-        private void StopDamageTimer()
+        private void StartDamageTimer()
         {
-            if (damageTimer != null && !damageTimer.Destroyed)
-                damageTimer.Destroy();
+            Kill(ref damageTimer);
+            damageTimer = timer.Every(config.Storm.DamageTickInterval, ApplyRadiationDamage);
         }
 
         private void ApplyRadiationDamage()
         {
-            if (!isStormActive) return;
-
-            float totalProgress = GetTotalStormProgress();
-            // Triangle / bell curve peaking at 0.5
-            float intensity = totalProgress <= 0.5f
-                ? totalProgress * 2f
-                : (1f - totalProgress) * 2f;
-            intensity = Mathf.Clamp01(intensity);
+            if (!isStormActive || blend <= 0f) return;
 
             foreach (var player in BasePlayer.activePlayerList)
             {
                 if (player == null || !player.IsConnected || player.IsDead()) continue;
                 if (permission.UserHasPermission(player.UserIDString, "islandstorm.exempt")) continue;
-
                 if (player.IsSleeping() && !config.Storm.HurtSleepers) continue;
 
                 float buildingMultiplier = GetBuildingProtectionMultiplier(player);
                 if (buildingMultiplier <= 0f) continue;
 
                 float gearMultiplier = HasRadiationProtection(player) ? config.Storm.RadiationSuitMultiplier : 1.0f;
-
-                float damage = config.Storm.RadiationPerTick * intensity * buildingMultiplier * gearMultiplier;
-                if (damage > 0)
+                float damage = config.Storm.RadiationPerTick * blend * buildingMultiplier * gearMultiplier;
+                if (damage > 0f)
                 {
                     player.metabolism.radiation_poison.Add(damage);
                     player.metabolism.SendChangesToClient();
                 }
             }
-        }
-
-        private float GetTotalStormProgress()
-        {
-            // Approximate overall progress: ramp up (0-0.3), hold (0.3-0.7), ramp down (0.7-1.0)
-            // For simplicity we use currentProgress during ramp and estimate during hold
-            if (isRampingUp) return currentProgress * 0.3f;
-            if (isRampingDown) return 0.7f + (1f - currentProgress) * 0.3f;
-            return 0.5f; // peak during hold
         }
 
         /// <summary>
@@ -377,16 +492,15 @@ namespace Oxide.Plugins
                     switch (block.grade)
                     {
                         case BuildingGrade.Enum.Twigs:
-                            return 1.0f; // No protection
+                            return 1.0f;
                         case BuildingGrade.Enum.Wood:
-                            return 0.5f; // Half protection
+                            return 0.5f;
                         default:
-                            return 0.0f; // Stone, Metal, Armored = full protection
+                            return 0.0f;
                     }
                 }
             }
 
-            // No building overhead — full radiation if "outside" logic wants it
             return config.Storm.OnlyOutside ? 1.0f : 1.0f;
         }
 
@@ -406,91 +520,260 @@ namespace Oxide.Plugins
 
         private bool IsPlayerOutside(BasePlayer player)
         {
-            // Simple check: not in a building privilege area or raycast up for roof
             if (player.IsBuildingBlocked()) return false;
 
             RaycastHit hit;
             if (Physics.Raycast(player.transform.position + Vector3.up, Vector3.up, out hit, 10f, LayerMask.GetMask("Construction", "Deployed")))
-            {
-                return false; // Under something
-            }
+                return false;
+
             return true;
-        }
-
-        private void ApplyWeather(float progress)
-        {
-            float wind = Mathf.Lerp(0f, config.Storm.PeakWind, progress);
-            float rain = Mathf.Lerp(0f, config.Storm.PeakRain, progress);
-            float thunder = Mathf.Lerp(0f, config.Storm.PeakThunder, progress);
-            float fog = Mathf.Lerp(0f, config.Storm.PeakFog, progress);
-
-            RunWeatherCommand("weather.wind", wind);
-            RunWeatherCommand("weather.rain", rain);
-            RunWeatherCommand("weather.thunder", thunder);
-            RunWeatherCommand("weather.fog", fog);
-
-            // Red sky effect
-            float rayleigh = Mathf.Lerp(-1f, config.Storm.RedSkyRayleigh, progress);
-            float mie = Mathf.Lerp(-1f, config.Storm.RedSkyMie, progress);
-            float brightness = Mathf.Lerp(-1f, config.Storm.RedSkyBrightness, progress);
-
-            RunWeatherCommand("weather.atmosphere_rayleigh", rayleigh);
-            RunWeatherCommand("weather.atmosphere_mie", mie);
-            RunWeatherCommand("weather.atmosphere_brightness", brightness);
-        }
-
-        private void ResetWeatherImmediate()
-        {
-            RunWeatherCommand("weather.reset", null);
-            RunWeatherCommand("weather.wind", -1f);
-            RunWeatherCommand("weather.rain", -1f);
-            RunWeatherCommand("weather.thunder", -1f);
-            RunWeatherCommand("weather.fog", -1f);
-            RunWeatherCommand("weather.atmosphere_rayleigh", -1f);
-            RunWeatherCommand("weather.atmosphere_mie", -1f);
-            RunWeatherCommand("weather.atmosphere_brightness", -1f);
-        }
-
-        private void RunWeatherCommand(string command, float? value, string extra = null)
-        {
-            try
-            {
-                string valueStr = value.HasValue ? value.Value.ToString("F2") : (extra ?? "");
-                Puts($"[IslandStorm] Running: {command} {valueStr}");
-
-                if (value.HasValue)
-                    ConsoleSystem.Run(ConsoleSystem.Option.Server, command, value.Value.ToString("F2"));
-                else if (!string.IsNullOrEmpty(extra))
-                    ConsoleSystem.Run(ConsoleSystem.Option.Server, command, extra);
-                else
-                    ConsoleSystem.Run(ConsoleSystem.Option.Server, command);
-            }
-            catch (Exception ex)
-            {
-                PrintWarning($"Failed to run weather command {command}: {ex.Message}");
-            }
         }
 
         private void ScheduleNextAutoStorm()
         {
-            float delay = UnityEngine.Random.Range(config.Storm.MinAutoInterval, config.Storm.MaxAutoInterval);
-            timer.Once(delay, () =>
+            Kill(ref autoTimer);
+
+            float min = config.Storm.MinAutoInterval;
+            float max = config.Storm.MaxAutoInterval;
+            if (max < min)
             {
-                if (!isStormActive)
+                float swap = min;
+                min = max;
+                max = swap;
+            }
+            if (min < 1f) min = 1f;
+            if (max < min) max = min;
+
+            float delay = UnityEngine.Random.Range(min, max);
+            autoTimer = timer.Once(delay, () =>
+            {
+                autoTimer = null;
+                if (phase == StormPhase.Idle)
                     StartStorm();
             });
         }
 
         private void StopAllTimers()
         {
-            rampTimer?.Destroy();
-            damageTimer?.Destroy();
-            durationTimer?.Destroy();
+            Kill(ref weatherTimer);
+            Kill(ref damageTimer);
+            Kill(ref durationTimer);
+            Kill(ref autoTimer);
+            rampActive = false;
+        }
+
+        private void Kill(ref Timer handle)
+        {
+            if (handle != null && !handle.Destroyed)
+                handle.Destroy();
+            handle = null;
         }
 
         private void Broadcast(string message)
         {
+            if (string.IsNullOrEmpty(message)) return;
             Server.Broadcast(message);
+        }
+        #endregion
+
+        #region Weather
+        private void CaptureChannels()
+        {
+            channels = new List<WeatherChannel>(8);
+            AddChannel("rain", config.Storm.PeakRain);
+            AddChannel("wind", config.Storm.PeakWind);
+            AddChannel("thunder", config.Storm.PeakThunder);
+            AddChannel("fog", config.Storm.PeakFog);
+            AddChannel("cloud_coverage", config.Storm.PeakCloudCoverage);
+            AddChannel("atmosphere_rayleigh", config.Storm.RedSkyRayleigh);
+            AddChannel("atmosphere_mie", config.Storm.RedSkyMie);
+            AddChannel("atmosphere_brightness", config.Storm.RedSkyBrightness);
+            SaveBackup();
+        }
+
+        private void AddChannel(string key, float target)
+        {
+            float original = ReadChannel(key);
+            channels.Add(new WeatherChannel
+            {
+                Key = key,
+                Original = original,
+                Baseline = VisibleBaseline(key, original),
+                Target = target
+            });
+        }
+
+        private void ApplyBlend()
+        {
+            if (channels == null) return;
+
+            for (int i = 0; i < channels.Count; i++)
+            {
+                WeatherChannel channel = channels[i];
+                float value = Mathf.Lerp(channel.Baseline, channel.Target, blend);
+                SetChannel(channel.Key, value);
+            }
+        }
+
+        private void RestoreOriginalsImmediate()
+        {
+            if (channels != null)
+            {
+                for (int i = 0; i < channels.Count; i++)
+                    SetChannel(channels[i].Key, channels[i].Original);
+            }
+
+            channels = null;
+            ClearBackup();
+        }
+
+        private void SaveBackup()
+        {
+            var backup = new WeatherBackup { Dirty = true, Channels = new List<BackupChannel>() };
+            if (channels != null)
+            {
+                for (int i = 0; i < channels.Count; i++)
+                {
+                    backup.Channels.Add(new BackupChannel
+                    {
+                        Key = channels[i].Key,
+                        Original = channels[i].Original
+                    });
+                }
+            }
+
+            try
+            {
+                Interface.Oxide.DataFileSystem.WriteObject(BackupFile, backup);
+            }
+            catch (Exception ex)
+            {
+                PrintWarning($"Could not save weather backup: {ex.Message}");
+            }
+        }
+
+        private void ClearBackup()
+        {
+            try
+            {
+                if (Interface.Oxide.DataFileSystem.ExistsDatafile(BackupFile))
+                    Interface.Oxide.DataFileSystem.DeleteDataFile(BackupFile);
+            }
+            catch (Exception ex)
+            {
+                PrintWarning($"Could not clear weather backup: {ex.Message}");
+            }
+        }
+
+        private void TryRestoreBackupFromDisk()
+        {
+            WeatherBackup backup = null;
+            try
+            {
+                if (!Interface.Oxide.DataFileSystem.ExistsDatafile(BackupFile))
+                    return;
+                backup = Interface.Oxide.DataFileSystem.ReadObject<WeatherBackup>(BackupFile);
+            }
+            catch (Exception ex)
+            {
+                PrintWarning($"Could not read weather backup: {ex.Message}");
+                return;
+            }
+
+            if (backup == null || !backup.Dirty || backup.Channels == null || backup.Channels.Count == 0)
+            {
+                ClearBackup();
+                return;
+            }
+
+            for (int i = 0; i < backup.Channels.Count; i++)
+            {
+                BackupChannel saved = backup.Channels[i];
+                if (saved == null || string.IsNullOrEmpty(saved.Key)) continue;
+                SetChannel(saved.Key, saved.Original);
+            }
+
+            ClearBackup();
+            Puts("IslandStorm restored pre-storm weather after an interrupted storm.");
+        }
+
+        private float ReadChannel(string key)
+        {
+            switch (key)
+            {
+                case "rain": return ConVar.Weather.rain;
+                case "wind": return ConVar.Weather.wind;
+                case "thunder": return ConVar.Weather.thunder;
+                case "fog": return ConVar.Weather.fog;
+                case "cloud_coverage": return ConVar.Weather.cloud_coverage;
+                case "atmosphere_rayleigh": return ConVar.Weather.atmosphere_rayleigh;
+                case "atmosphere_mie": return ConVar.Weather.atmosphere_mie;
+                case "atmosphere_brightness": return ConVar.Weather.atmosphere_brightness;
+                default: return 0f;
+            }
+        }
+
+        private void SetChannel(string key, float value)
+        {
+            switch (key)
+            {
+                case "rain": ConVar.Weather.rain = value; break;
+                case "wind": ConVar.Weather.wind = value; break;
+                case "thunder": ConVar.Weather.thunder = value; break;
+                case "fog": ConVar.Weather.fog = value; break;
+                case "cloud_coverage": ConVar.Weather.cloud_coverage = value; break;
+                case "atmosphere_rayleigh": ConVar.Weather.atmosphere_rayleigh = value; break;
+                case "atmosphere_mie": ConVar.Weather.atmosphere_mie = value; break;
+                case "atmosphere_brightness": ConVar.Weather.atmosphere_brightness = value; break;
+            }
+        }
+
+        private float VisibleBaseline(string key, float convar)
+        {
+            if (convar >= 0f)
+                return convar;
+
+            try
+            {
+                Vector3 origin = Vector3.zero;
+                switch (key)
+                {
+                    case "rain": return SanitizeSample(Climate.GetRain(origin));
+                    case "wind": return SanitizeSample(Climate.GetWind(origin));
+                    case "thunder": return SanitizeSample(Climate.GetThunder(origin));
+                    case "fog": return SanitizeSample(Climate.GetFog(origin));
+                    case "cloud_coverage": return SanitizeSample(Climate.GetClouds(origin));
+                    case "atmosphere_rayleigh": return SampleAtmosphere(0, 1f);
+                    case "atmosphere_mie": return SampleAtmosphere(1, 1f);
+                    case "atmosphere_brightness": return SampleAtmosphere(2, 1f);
+                }
+            }
+            catch (Exception ex)
+            {
+                PrintWarning($"Could not sample {key}: {ex.Message}");
+            }
+
+            return 0f;
+        }
+
+        private float SampleAtmosphere(int part, float fallback)
+        {
+            Climate climate = Climate.Instance;
+            if (climate == null || climate.WeatherState == null || climate.WeatherState.Atmosphere == null)
+                return fallback;
+
+            TOD_AtmosphereParameters atmosphere = climate.WeatherState.Atmosphere;
+            float value = part == 0 ? atmosphere.RayleighMultiplier
+                : part == 1 ? atmosphere.MieMultiplier
+                : atmosphere.Brightness;
+            return SanitizeSample(value);
+        }
+
+        private static float SanitizeSample(float value)
+        {
+            if (float.IsNaN(value) || float.IsInfinity(value) || value < 0f)
+                return 0f;
+            return value;
         }
         #endregion
     }

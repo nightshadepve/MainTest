@@ -11,8 +11,8 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.0.1")]
-    [Description("Top-right text HUD: Eastern clock, weekend PvP countdown, TC shield, and event labels.")]
+    [Info("NightshadeHud", "Nightshade", "1.1.0")]
+    [Description("Text HUD on the top-right or under the missions bar: clock, PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
         private const string Root = "NightshadeHud";
@@ -24,6 +24,9 @@ namespace Oxide.Plugins
         private const string DataPath = "Nightshade/NightshadeHud/State";
         private const float Pad = 6f;
         private const float Line = 15f;
+        private const int BadgeFont = 8;
+        private const string BadgeBgName = "NightshadeHud.BadgeBg";
+        private const string BadgeName = "NightshadeHud.Badge";
 
         [PluginReference] private Plugin NightshadeRaidProtection;
         [PluginReference("Nightshade Purge Status")] private Plugin PurgeStatus;
@@ -44,6 +47,9 @@ namespace Oxide.Plugins
         private Coroutine convoyRoutine;
 
         private readonly Dictionary<ulong, string> mode = new Dictionary<ulong, string>();
+        private readonly Dictionary<ulong, float> dragStartX = new Dictionary<ulong, float>();
+        private readonly Dictionary<ulong, float> dragLastX = new Dictionary<ulong, float>();
+        private readonly Dictionary<ulong, float> ignoreCycleUntil = new Dictionary<ulong, float>();
         private readonly Dictionary<ulong, string> shown = new Dictionary<ulong, string>();
         private readonly HashSet<ulong> station = new HashSet<ulong>();
         private readonly Dictionary<ulong, string> shieldCache = new Dictionary<ulong, string>();
@@ -52,6 +58,9 @@ namespace Oxide.Plugins
         private string clockCache = "\0";
         private string onlineCache = "\0";
         private string countdownCache = "\0";
+        private string deepSeaCache = "\0";
+        private string heliCache = "\0";
+        private string bradCache = "\0";
 
         private readonly HashSet<ulong> bradleys = new HashSet<ulong>();
         private readonly HashSet<ulong> helis = new HashSet<ulong>();
@@ -81,6 +90,7 @@ namespace Oxide.Plugins
             [JsonProperty("Default state for new players (minimized, half, full)")] public string DefaultState = "full";
             [JsonProperty("Layer (Overlay shows in the inventory)")] public string Layer = "Overlay";
             [JsonProperty("Anchor")] public string Anchor = "1 1";
+            [JsonProperty("Left anchor (under the missions bar)")] public string LeftAnchor = "0.008 0.905";
             [JsonProperty("Inset from the right (px)")] public float Right = 16f;
             [JsonProperty("Inset from the top (px)")] public float Top = 58f;
             [JsonProperty("Width (px)")] public float Width = 252f;
@@ -89,6 +99,8 @@ namespace Oxide.Plugins
             [JsonProperty("Hide while using a computer station")] public bool HideInComputerStation = true;
             [JsonProperty("Logo URL")] public string LogoUrl = "https://raw.githubusercontent.com/nightshadepve/Nightshadeserver/refs/heads/main/260625_Logo_75_nobg.png";
             [JsonProperty("Server name")] public string ServerName = "Nightshade";
+            [JsonProperty("Tag text")] public string TagText = "Solo/Duo";
+            [JsonProperty("Tag color")] public string TagColor = "#C4A6E0";
             [JsonProperty("Use 24-hour clock")] public bool Use24Hour = false;
             [JsonProperty("Time zone id")] public string TimeZoneId = "America/New_York";
             [JsonProperty("Show ET label")] public bool ShowZoneLabel = true;
@@ -100,12 +112,18 @@ namespace Oxide.Plugins
             [JsonProperty("Hide shield line when none")] public bool HideShieldWhenNone = false;
             [JsonProperty("Panel color")] public string PanelColor = "#0E0E12";
             [JsonProperty("Panel opacity (0-100)")] public float PanelOpacity = 78f;
-            [JsonProperty("Name color")] public string NameColor = "#F4F1EA";
+            [JsonProperty("Name color")] public string NameColor = "#A267D3";
             [JsonProperty("Clock color")] public string ClockColor = "#E7E2F2";
             [JsonProperty("Muted text color")] public string MutedColor = "#8A8A8A";
             [JsonProperty("Inactive event alpha (0-1)")] public float InactiveAlpha = 0.55f;
             [JsonProperty("Active event color")] public string ActiveColor = "#3DDC84";
             [JsonProperty("Contested event color")] public string ContestedColor = "#FFB020";
+            [JsonProperty("Deep Sea open color")] public string DeepSeaOpenColor = "#7EC8FF";
+            [JsonProperty("Patrol heli label")] public string HeliLabel = "KAREN";
+            [JsonProperty("Patrol heli active color")] public string HeliActiveColor = "#FF4D4D";
+            [JsonProperty("Bradley label")] public string BradleyLabel = "BRAD";
+            [JsonProperty("Bradley active color")] public string BradleyActiveColor = "";
+            [JsonProperty("Event font size")] public int EventFontSize = 9;
             [JsonProperty("PvE badge text")] public string BadgePveText = "PVE";
             [JsonProperty("PvP badge text")] public string BadgePvpText = "PVP";
             [JsonProperty("PvE badge color")] public string BadgePveColor = "#3DDC84";
@@ -134,6 +152,7 @@ namespace Oxide.Plugins
         private class Stored
         {
             public Dictionary<string, string> Players = new Dictionary<string, string>(StringComparer.Ordinal);
+            public Dictionary<string, string> Sides = new Dictionary<string, string>(StringComparer.Ordinal);
         }
 
         protected override void LoadDefaultConfig()
@@ -155,6 +174,17 @@ namespace Oxide.Plugins
             if (config.Columns < 1) config.Columns = 3;
             if (config.Width < 120f) config.Width = 120f;
             if (config.IconSize < 16f) config.IconSize = 16f;
+            if (config.EventFontSize < 8 || config.EventFontSize > 16) config.EventFontSize = 9;
+            if (string.IsNullOrEmpty(config.DeepSeaOpenColor)) config.DeepSeaOpenColor = "#7EC8FF";
+            if (string.IsNullOrEmpty(config.NameColor) || string.Equals(config.NameColor, "#F4F1EA", StringComparison.OrdinalIgnoreCase))
+                config.NameColor = "#A267D3";
+            if (config.TagText == null) config.TagText = "Solo/Duo";
+            if (string.IsNullOrEmpty(config.TagColor)) config.TagColor = "#C4A6E0";
+            if (string.IsNullOrEmpty(config.LeftAnchor)) config.LeftAnchor = "0.008 0.905";
+            if (string.IsNullOrEmpty(config.HeliLabel)) config.HeliLabel = "KAREN";
+            if (string.IsNullOrEmpty(config.HeliActiveColor)) config.HeliActiveColor = "#FF4D4D";
+            if (string.IsNullOrEmpty(config.BradleyLabel)) config.BradleyLabel = "BRAD";
+            if (config.BradleyActiveColor == null) config.BradleyActiveColor = "";
             bool added = false;
             foreach (var known in DefaultEvents())
             {
@@ -163,8 +193,16 @@ namespace Oxide.Plugins
                 added = true;
             }
             config.Events.RemoveAll(e => e == null || string.IsNullOrEmpty(e.Key));
-            if (added || config.Events.Count == 0) SaveConfig();
-            else SaveConfig();
+            foreach (var entry in config.Events)
+            {
+                string updated;
+                if (entry != null && OldLabels.TryGetValue(entry.Key + "|" + entry.Label, out updated))
+                {
+                    entry.Label = updated;
+                    added = true;
+                }
+            }
+            SaveConfig();
         }
 
         protected override void SaveConfig() => Config.WriteObject(config, true);
@@ -176,6 +214,7 @@ namespace Oxide.Plugins
             try { stored = Interface.Oxide.DataFileSystem.ReadObject<Stored>(DataPath) ?? new Stored(); }
             catch { stored = new Stored(); }
             if (stored.Players == null) stored.Players = new Dictionary<string, string>(StringComparer.Ordinal);
+            if (stored.Sides == null) stored.Sides = new Dictionary<string, string>(StringComparer.Ordinal);
             zone = ResolveZone(config.TimeZoneId, out zoneFallback);
         }
 
@@ -184,9 +223,9 @@ namespace Oxide.Plugins
             if (zoneFallback)
                 PrintWarning("Time zone '" + config.TimeZoneId + "' was not found. Using a built-in US Eastern zone.");
             if (ServerMgr.Instance != null)
-                startupRoutine = ServerMgr.Instance.StartCoroutine(Startup());
+                startupRoutine = ServerMgr.Instance.StartCoroutine(BootHud());
             else
-                timer.Once(1f, () => { if (ServerMgr.Instance != null) startupRoutine = ServerMgr.Instance.StartCoroutine(Startup()); });
+                timer.Once(1f, () => { if (ServerMgr.Instance != null) startupRoutine = ServerMgr.Instance.StartCoroutine(BootHud()); });
         }
 
         private void Unload()
@@ -223,6 +262,9 @@ namespace Oxide.Plugins
             shown.Remove(player.userID);
             station.Remove(player.userID);
             shieldCache.Remove(player.userID);
+            dragStartX.Remove(player.userID);
+            dragLastX.Remove(player.userID);
+            ignoreCycleUntil.Remove(player.userID);
             MarkPop();
         }
 
@@ -252,26 +294,42 @@ namespace Oxide.Plugins
         private void CmdHud(BasePlayer player, string command, string[] args)
         {
             if (player == null) return;
-            string requested = args == null || args.Length == 0 ? "cycle" : Normalize(args[0]);
-            if (requested == null)
+            if (args != null && args.Length > 0 && args[0].Equals("debug", StringComparison.OrdinalIgnoreCase))
             {
-                player.ChatMessage("<color=#b084ff>[Nightshade]</color> /" + config.Command + " min | half | full | cycle");
+                if (!player.IsAdmin) { player.ChatMessage("<color=#b084ff>[Nightshade]</color> HUD debug is admin only."); return; }
+                DebugHud(player);
                 return;
             }
-            SetState(player, requested == "cycle" ? Cycle(StateOf(player)) : requested, true);
+            string requested = args == null || args.Length == 0 ? "cycle" : Normalize(args[0]);
+            if (requested == "left" || requested == "right" || requested == "side")
+            {
+                SetSide(player, requested);
+                return;
+            }
+            if (requested == "cycle")
+            {
+                float until;
+                if (ignoreCycleUntil.TryGetValue(player.userID, out until) && Time.realtimeSinceStartup < until)
+                    return;
+            }
+            if (requested == null)
+            {
+                player.ChatMessage("<color=#b084ff>[Nightshade]</color> /" + config.Command + " min | half | full | cycle | left | right | side");
+                return;
+            }
+            SetState(player, requested == "cycle" ? Cycle(StateOf(player)) : requested);
         }
 
         private void CmdUi(ConsoleSystem.Arg arg)
         {
             var player = arg.Player();
             if (player == null) return;
-            SetState(player, Cycle(StateOf(player)), false);
+            SetState(player, Cycle(StateOf(player)));
         }
 
-        private void SetState(BasePlayer player, string next, bool announce)
+        private void SetState(BasePlayer player, string next)
         {
             string id = player.UserIDString;
-            string previous = StateOf(player);
             mode[player.userID] = next;
             stored.Players[id] = next;
             SaveData();
@@ -279,8 +337,6 @@ namespace Oxide.Plugins
             string visible;
             if (!shown.TryGetValue(player.userID, out visible)) Show(player);
             else if (visible != next) Transition(player, visible, next);
-            if (announce)
-                player.ChatMessage("<color=#b084ff>[Nightshade]</color> HUD: " + next + ".");
         }
 
         private string StateOf(BasePlayer player)
@@ -321,6 +377,9 @@ namespace Oxide.Plugins
                 case "all":
                 case "3": return "full";
                 case "cycle": return "cycle";
+                case "left": return "left";
+                case "right": return "right";
+                case "side": return "side";
                 default: return null;
             }
         }
@@ -338,14 +397,14 @@ namespace Oxide.Plugins
             }
             string state = StateOf(player);
             var container = new CuiElementContainer();
-            AddRoot(container, state);
-            AddIcon(container, state);
+            AddRoot(container, player, state);
             if (state != "minimized")
             {
                 AddBackground(container);
                 AddHalf(container, player);
                 if (state == "full") AddEvents(container);
             }
+            AddIconGroup(container, state);
             CuiHelper.AddUi(player, container);
             shown[player.userID] = state;
         }
@@ -354,7 +413,6 @@ namespace Oxide.Plugins
         {
             if (from == to) return;
             Resize(player, to);
-            MoveIcon(player, to);
             if (from == "minimized")
             {
                 var add = new CuiElementContainer();
@@ -379,12 +437,21 @@ namespace Oxide.Plugins
             {
                 CuiHelper.DestroyUi(player, Events);
             }
+            if (from == "minimized")
+            {
+                var icon = new CuiElementContainer();
+                AddIconGroup(icon, to);
+                CuiHelper.AddUi(player, icon);
+            }
+            else
+                MoveIconGroup(player, to);
             shown[player.userID] = to;
             if (to != "minimized") shieldCache[player.userID] = ShieldSignature(player);
         }
 
-        private void AddRoot(CuiElementContainer container, string state)
+        private void AddRoot(CuiElementContainer container, BasePlayer player, string state)
         {
+            string anchor = AnchorOf(player);
             container.Add(new CuiElement
             {
                 Name = Root,
@@ -393,7 +460,7 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiImageComponent { Color = "0 0 0 0" },
-                    new CuiRectTransformComponent { AnchorMin = config.Anchor, AnchorMax = config.Anchor, OffsetMin = OffsetMin(state), OffsetMax = OffsetMax() }
+                    new CuiRectTransformComponent { AnchorMin = anchor, AnchorMax = anchor, OffsetMin = OffsetMin(player, state), OffsetMax = OffsetMax(player, state) }
                 }
             });
         }
@@ -412,14 +479,61 @@ namespace Oxide.Plugins
             });
         }
 
+        private void MoveIconGroup(BasePlayer player, string state)
+        {
+            float left, top, badgeLeft, badgeBottom, badgeRight, badgeTop, hitLeft, hitBottom, hitRight, hitTop;
+            IconOrigin(state, out left, out top);
+            BadgeRect(state, out badgeLeft, out badgeBottom, out badgeRight, out badgeTop);
+            HitRect(state, out hitLeft, out hitBottom, out hitRight, out hitTop);
+            var container = new CuiElementContainer();
+            container.Add(new CuiElement
+            {
+                Name = Icon,
+                Update = true,
+                Components =
+                {
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, top - config.IconSize), OffsetMax = Px(left + config.IconSize, top) }
+                }
+            });
+            container.Add(new CuiElement
+            {
+                Name = BadgeBgName,
+                Update = true,
+                Components =
+                {
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(badgeLeft, badgeBottom), OffsetMax = Px(badgeRight, badgeTop) }
+                }
+            });
+            container.Add(new CuiElement
+            {
+                Name = IconHit,
+                Update = true,
+                Components =
+                {
+                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(hitLeft, hitBottom), OffsetMax = Px(hitRight, hitTop) },
+                    IconDrag()
+                }
+            });
+            CuiHelper.AddUi(player, container);
+        }
+
+        private void AddIconGroup(CuiElementContainer container, string state)
+        {
+            AddIcon(container, state);
+            AddBadge(container, state);
+            AddIconButton(container, state);
+        }
+
         private void AddIcon(CuiElementContainer container, string state)
         {
-            string min = state == "minimized" ? Px(0f, -config.IconSize) : Px(Pad, -Pad - config.IconSize);
-            string max = state == "minimized" ? Px(config.IconSize, 0f) : Px(Pad + config.IconSize, -Pad);
+            float left, top;
+            IconOrigin(state, out left, out top);
             container.Add(new CuiElement
             {
                 Name = Icon,
                 Parent = Root,
+                DestroyUi = Icon,
                 Components =
                 {
                     new CuiRawImageComponent
@@ -428,46 +542,217 @@ namespace Oxide.Plugins
                         Color = "1 1 1 1",
                         Sprite = "assets/content/textures/generic/fulltransparent.tga"
                     },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
-                }
-            });
-            container.Add(new CuiElement
-            {
-                Name = IconHit,
-                Parent = Root,
-                Components =
-                {
-                    new CuiButtonComponent { Command = "nightshadehud.ui", Color = "0 0 0 0" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, top - config.IconSize), OffsetMax = Px(left + config.IconSize, top) }
                 }
             });
         }
 
-        private void AddHalf(CuiElementContainer container, BasePlayer player)
+        private void AddBadge(CuiElementContainer container, string state)
         {
             bool pvp = CombatPvp();
-            float textX = Pad + config.IconSize + 6f;
+            float left, bottom, right, top;
+            BadgeRect(state, out left, out bottom, out right, out top);
+            string text = pvp ? BadgeWord(config.BadgePvpText, "PVP") : BadgeWord(config.BadgePveText, "PVE");
+            container.Add(new CuiElement
+            {
+                Name = BadgeBgName,
+                Parent = Root,
+                DestroyUi = BadgeBgName,
+                Components =
+                {
+                    new CuiImageComponent { Color = Hex(pvp ? config.BadgePvpBg : config.BadgePveBg) },
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) }
+                }
+            });
+            container.Add(new CuiElement
+            {
+                Name = BadgeName,
+                Parent = BadgeBgName,
+                Components =
+                {
+                    new CuiTextComponent
+                    {
+                        Text = text,
+                        FontSize = BadgeFont,
+                        Align = TextAnchor.MiddleCenter,
+                        Color = Hex(pvp ? config.BadgePvpColor : config.BadgePveColor),
+                        Font = "robotocondensed-bold.ttf"
+                    },
+                    new CuiRectTransformComponent { AnchorMin = "0 0", AnchorMax = "1 1", OffsetMin = "0 0", OffsetMax = "0 0" }
+                }
+            });
+            badgeCache = pvp ? "1" : "0";
+        }
+
+        private void AddIconButton(CuiElementContainer container, string state)
+        {
+            float left, bottom, right, top;
+            HitRect(state, out left, out bottom, out right, out top);
+            container.Add(new CuiElement
+            {
+                Name = IconHit,
+                Parent = Root,
+                DestroyUi = IconHit,
+                Components =
+                {
+                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) },
+                    IconDrag()
+                }
+            });
+        }
+
+        private static CuiDraggableComponent IconDrag()
+        {
+            return new CuiDraggableComponent
+            {
+                LimitToParent = false,
+                MaxDistance = -1f,
+                AllowSwapping = false,
+                DropAnywhere = true,
+                DragAlpha = 0.9f,
+                ParentLimitIndex = 1,
+                ParentPadding = "0 0",
+                AnchorOffset = "0 0",
+                KeepOnTop = true,
+                PositionRPC = CommunityEntity.DraggablePositionSendType.NormalizedScreen,
+                MoveToAnchor = false,
+                RebuildAnchor = false,
+                Enabled = true
+            };
+        }
+
+        private static string BadgeWord(string text, string fallback)
+        {
+            return string.IsNullOrEmpty(text) ? fallback : text;
+        }
+
+        private void IconOrigin(string state, out float left, out float top)
+        {
+            if (state == "minimized")
+            {
+                left = 0f;
+                top = 0f;
+                return;
+            }
+            left = Pad;
+            top = -Pad;
+        }
+
+        private void BadgeMetrics(out float width, out float height, out float hang)
+        {
+            float text = Mathf.Max(TextWidth(BadgeWord(config.BadgePveText, "PVE"), BadgeFont, true), TextWidth(BadgeWord(config.BadgePvpText, "PVP"), BadgeFont, true));
+            width = text + 6f;
+            height = BadgeFont + 2f;
+            hang = height / 3f;
+        }
+
+        private void BadgeRect(string state, out float left, out float bottom, out float right, out float top)
+        {
+            float iconLeft, iconTop, width, height, hang;
+            IconOrigin(state, out iconLeft, out iconTop);
+            BadgeMetrics(out width, out height, out hang);
+            float center = iconLeft + config.IconSize * 0.5f;
+            left = center - width * 0.5f;
+            right = left + width;
+            bottom = iconTop - config.IconSize - hang;
+            top = bottom + height;
+        }
+
+        private float BadgeHang()
+        {
+            float width, height, hang;
+            BadgeMetrics(out width, out height, out hang);
+            return hang;
+        }
+
+        private void HitRect(string state, out float left, out float bottom, out float right, out float top)
+        {
+            float iconLeft, iconTop, badgeLeft, badgeBottom, badgeRight, badgeTop;
+            IconOrigin(state, out iconLeft, out iconTop);
+            BadgeRect(state, out badgeLeft, out badgeBottom, out badgeRight, out badgeTop);
+            left = Mathf.Min(iconLeft, badgeLeft);
+            right = Mathf.Max(iconLeft + config.IconSize, badgeRight);
+            top = iconTop;
+            bottom = Mathf.Min(iconTop - config.IconSize, badgeBottom);
+        }
+
+        private string IconCommand()
+        {
+            string command = string.IsNullOrEmpty(config.Command) ? "hud" : config.Command;
+            return "chat.say /" + command + " cycle";
+        }
+
+        private void AddHalf(CuiElementContainer container, BasePlayer player)
+        {
             float top = -Pad;
             string parent = HalfParent(container);
-            AddImage(container, "NightshadeHud.BadgeBg", parent, Hex(pvp ? config.BadgePvpBg : config.BadgePveBg), Px(textX, top - 16f), Px(textX + 42f, top));
-            AddLabel(container, "NightshadeHud.Badge", "NightshadeHud.BadgeBg", pvp ? config.BadgePvpText : config.BadgePveText, Hex(pvp ? config.BadgePvpColor : config.BadgePveColor), 11, TextAnchor.MiddleCenter, "0 0", "1 1", "0 0", "0 0", true);
-            AddLabel(container, "NightshadeHud.Name", parent, config.ServerName, Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(textX + 48f, top - 16f), Px(config.Width - 104f, top), true);
-            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - 100f, top - 16f), Px(config.Width - Pad, top));
-            float y = top - config.IconSize - 4f;
-            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.9f), 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
-            y -= Line;
+            float nameX = Pad + config.IconSize + 3f;
+            float edge = config.Width - Pad;
+            string name = string.IsNullOrEmpty(config.ServerName) ? "Nightshade" : config.ServerName;
+            float nameInk = TextWidth(name, 12, true);
+            float nameRight = Mathf.Min(nameX + nameInk + 1f, edge);
+            AddLabel(container, "NightshadeHud.Name", parent, name, Hex(config.NameColor), 12, TextAnchor.MiddleLeft, "0 1", "0 1", Px(nameX, top - 16f), Px(nameRight, top), true);
+            float tagX = nameX + nameInk + 4f;
+            if (!string.IsNullOrEmpty(config.TagText) && tagX < edge - 8f)
+                AddLabel(container, "NightshadeHud.Tag", parent, config.TagText, Hex(config.TagColor), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(tagX, top - 16f), Px(edge, top));
+            float row2 = top - 18f;
+            float clockW = 68f;
+            AddLabel(container, "NightshadeHud.Online", parent, OnlineText(), Hex(config.MutedColor, 0.95f), 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(nameX, row2 - 16f), Px(config.Width - Pad - clockW - 4f, row2));
+            AddLabel(container, "NightshadeHud.Clock", parent, ClockText(), Hex(config.ClockColor), 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(config.Width - Pad - clockW, row2 - 16f), Px(config.Width - Pad, row2));
+            float y = -(Pad + config.IconSize + BadgeHang() + 2f);
             string countText, countColor;
             Countdown(out countText, out countColor);
-            AddLabel(container, "NightshadeHud.Countdown", parent, countText, countColor, 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
-            y -= Line;
+            float split = Mathf.Max(120f, config.Width * 0.56f);
+            AddLabel(container, "NightshadeHud.Countdown", parent, countText, countColor, 11, TextAnchor.MiddleLeft, "0 1", "0 1", Px(Pad, y - Line), Px(split, y));
             string shieldText, shieldColor;
             ShieldLine(player, out shieldText, out shieldColor);
-            AddLabel(container, "NightshadeHud.Shield", parent, shieldText, shieldColor, 11, TextAnchor.MiddleLeft, "0 1", "1 1", Px(Pad, y - Line), Px(-Pad, y));
+            AddLabel(container, "NightshadeHud.Shield", parent, shieldText, shieldColor, 11, TextAnchor.MiddleRight, "0 1", "0 1", Px(split + 4f, y - Line), Px(config.Width - Pad, y));
+            y -= Line;
+            AddStatusLine(container, parent, y);
             if (player != null) shieldCache[player.userID] = shieldText + "|" + shieldColor;
-            badgeCache = pvp ? "1" : "0";
             clockCache = ClockText();
             onlineCache = OnlineText();
             countdownCache = countText + "|" + countColor;
+        }
+
+        private void AddStatusLine(CuiElementContainer container, string parent, float y)
+        {
+            float x = Pad;
+            float limit = config.Width - Pad;
+            const float gap = 10f;
+            const int font = 11;
+            if (ShowDeepSea())
+            {
+                string text, color;
+                DeepSeaLine(out text, out color);
+                x = AddChip(container, "NightshadeHud.DeepSea", parent, text, color, font, x, TextWidth(text, font, false) + 2f, limit, y) + gap;
+                deepSeaCache = text + "|" + color;
+            }
+            if (ShowChip("PatrolHeli") && x < limit)
+            {
+                string text, color;
+                HeliLine(out text, out color);
+                x = AddChip(container, "NightshadeHud.Karen", parent, text, color, font, x, TextWidth(text, font, false) + 2f, limit, y) + gap;
+                heliCache = text + "|" + color;
+            }
+            if (ShowChip("Bradley") && x < limit)
+            {
+                string text, color;
+                BradleyLine(out text, out color);
+                float width = Mathf.Max(TextWidth(text, font, false), TextWidth(BradleySlotText(), font, false)) + 2f;
+                AddChip(container, "NightshadeHud.Brad", parent, text, color, font, x, width, limit, y);
+                bradCache = text + "|" + color;
+            }
+        }
+
+        private float AddChip(CuiElementContainer container, string name, string parent, string text, string color, int font, float x, float width, float limit, float y)
+        {
+            float end = x + width;
+            if (end > limit) end = limit;
+            if (end - x < 8f) return x;
+            AddLabel(container, name, parent, text, color, font, TextAnchor.MiddleLeft, "0 1", "0 1", Px(x, y - Line), Px(end, y));
+            return end;
         }
 
         private string HalfParent(CuiElementContainer container)
@@ -513,7 +798,7 @@ namespace Oxide.Plugins
                 int row = i / columns;
                 float x = Pad + col * colW;
                 float y = -row * Line;
-                AddLabel(container, "NightshadeHud.Ev." + entry.Key, Events, text, color, 10, TextAnchor.MiddleLeft, "0 1", "0 1", Px(x, y - Line), Px(x + colW, y));
+                AddLabel(container, "NightshadeHud.Ev." + entry.Key, Events, text, color, EventFont(), TextAnchor.MiddleLeft, "0 1", "0 1", Px(x, y - Line), Px(x + colW, y));
             }
         }
 
@@ -527,35 +812,7 @@ namespace Oxide.Plugins
                 Components =
                 {
                     new CuiImageComponent { Color = "0 0 0 0" },
-                    new CuiRectTransformComponent { AnchorMin = config.Anchor, AnchorMax = config.Anchor, OffsetMin = OffsetMin(state), OffsetMax = OffsetMax() }
-                }
-            });
-            CuiHelper.AddUi(player, container);
-        }
-
-        private void MoveIcon(BasePlayer player, string state)
-        {
-            string min = state == "minimized" ? Px(0f, -config.IconSize) : Px(Pad, -Pad - config.IconSize);
-            string max = state == "minimized" ? Px(config.IconSize, 0f) : Px(Pad + config.IconSize, -Pad);
-            var container = new CuiElementContainer();
-            container.Add(new CuiElement
-            {
-                Name = Icon,
-                Update = true,
-                Components =
-                {
-                    new CuiRawImageComponent { Url = config.LogoUrl, Color = "1 1 1 1", Sprite = "assets/content/textures/generic/fulltransparent.tga" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
-                }
-            });
-            container.Add(new CuiElement
-            {
-                Name = IconHit,
-                Update = true,
-                Components =
-                {
-                    new CuiButtonComponent { Command = "nightshadehud.ui", Color = "0 0 0 0" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = min, OffsetMax = max }
+                    new CuiRectTransformComponent { AnchorMin = AnchorOf(player), AnchorMax = AnchorOf(player), OffsetMin = OffsetMin(player, state), OffsetMax = OffsetMax(player, state) }
                 }
             });
             CuiHelper.AddUi(player, container);
@@ -563,20 +820,109 @@ namespace Oxide.Plugins
 
         private static string Px(float x, float y) => x.ToString("0.#", CultureInfo.InvariantCulture) + " " + y.ToString("0.#", CultureInfo.InvariantCulture);
 
-        private string OffsetMax() => Px(-config.Right, -config.Top);
+        // Advance widths in thousandths of an em, measured from Roboto Condensed (the robotocondensed face).
+        private static readonly int[] BoldUpper = { 597, 561, 570, 565, 491, 476, 585, 614, 271, 490, 553, 479, 758, 612, 604, 569, 604, 554, 540, 543, 571, 578, 749, 560, 542, 530 };
+        private static readonly int[] BoldLower = { 471, 495, 460, 496, 479, 328, 503, 492, 252, 246, 479, 252, 742, 492, 498, 495, 497, 332, 454, 307, 492, 449, 633, 453, 446, 453 };
+        private static readonly int[] RegUpper = { 576, 545, 567, 571, 497, 480, 591, 620, 250, 483, 545, 475, 755, 619, 601, 554, 601, 531, 518, 521, 562, 560, 762, 551, 524, 522 };
+        private static readonly int[] RegLower = { 479, 493, 462, 496, 468, 316, 493, 483, 229, 224, 451, 229, 752, 484, 502, 493, 500, 304, 456, 295, 483, 428, 650, 439, 417, 439 };
 
-        private string OffsetMin(string state)
+        private static float TextWidth(string text, int fontSize, bool bold)
         {
-            float width = state == "minimized" ? config.IconSize : config.Width;
-            float height = PanelHeight(state);
-            return Px(-config.Right - width, -config.Top - height);
+            if (string.IsNullOrEmpty(text) || fontSize <= 0) return 0f;
+            int[] upper = bold ? BoldUpper : RegUpper;
+            int[] lower = bold ? BoldLower : RegLower;
+            int sum = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                char c = text[i];
+                if (c >= 'A' && c <= 'Z') sum += upper[c - 'A'];
+                else if (c >= 'a' && c <= 'z') sum += lower[c - 'a'];
+                else if (c >= '0' && c <= '9') sum += bold ? 506 : 494;
+                else if (c == ' ') sum += bold ? 230 : 229;
+                else if (c == '/' || c == '\\') sum += bold ? 331 : 371;
+                else if (c == '-' || c == '\u2013') sum += bold ? 363 : 248;
+                else sum += bold ? 500 : 480;
+            }
+            return sum / 1000f * fontSize;
         }
 
-        private float HalfHeight() => Pad + config.IconSize + 4f + Line * 3f + Pad;
+        private string OffsetMax(BasePlayer player, string state)
+        {
+            if (!OnLeft(player)) return Px(-config.Right, -config.Top);
+            float width = state == "minimized" ? config.IconSize : config.Width;
+            return Px(width, 0f);
+        }
+
+        private string OffsetMin(BasePlayer player, string state)
+        {
+            float height = PanelHeight(state);
+            if (!OnLeft(player))
+            {
+                float width = state == "minimized" ? config.IconSize : config.Width;
+                return Px(-config.Right - width, -config.Top - height);
+            }
+            return Px(0f, -height);
+        }
+
+        private string AnchorOf(BasePlayer player)
+        {
+            return OnLeft(player) ? config.LeftAnchor : (string.IsNullOrEmpty(config.Anchor) ? "1 1" : config.Anchor);
+        }
+
+        private bool OnLeft(BasePlayer player)
+        {
+            string side;
+            if (player == null || stored == null || stored.Sides == null) return false;
+            return stored.Sides.TryGetValue(player.UserIDString, out side) && side == "left";
+        }
+
+        private void SetSide(BasePlayer player, string word)
+        {
+            if (player == null) return;
+            bool left = word == "side" ? !OnLeft(player) : word == "left";
+            if (stored.Sides == null) stored.Sides = new Dictionary<string, string>(StringComparer.Ordinal);
+            stored.Sides[player.UserIDString] = left ? "left" : "right";
+            SaveData();
+            string state;
+            if (!shown.TryGetValue(player.userID, out state)) return;
+            Show(player);
+        }
+
+        private void OnCuiDraggableDrag(BasePlayer player, string name, Vector3 position, CommunityEntity.DraggablePositionSendType type)
+        {
+            if (player == null || name != IconHit || type != CommunityEntity.DraggablePositionSendType.NormalizedScreen) return;
+            if (float.IsNaN(position.x) || float.IsInfinity(position.x)) return;
+            float start;
+            if (!dragStartX.TryGetValue(player.userID, out start))
+                dragStartX[player.userID] = position.x;
+            dragLastX[player.userID] = position.x;
+            if (dragStartX.TryGetValue(player.userID, out start) && Mathf.Abs(position.x - start) >= 0.03f)
+                ignoreCycleUntil[player.userID] = Time.realtimeSinceStartup + 0.6f;
+        }
+
+        private void OnCuiDraggableDrop(BasePlayer player, string draggedName, string draggedSlot, string swappedName, string swappedSlot)
+        {
+            if (player == null || draggedName != IconHit) return;
+            float start = 0f;
+            float last = 0f;
+            bool moved = dragStartX.TryGetValue(player.userID, out start) && dragLastX.TryGetValue(player.userID, out last) && Mathf.Abs(last - start) >= 0.03f;
+            dragStartX.Remove(player.userID);
+            dragLastX.Remove(player.userID);
+            if (!moved) return;
+            ignoreCycleUntil[player.userID] = Time.realtimeSinceStartup + 0.6f;
+            SetSide(player, last < 0.5f ? "left" : "right");
+        }
+
+        private float HalfHeight()
+        {
+            float height = Pad + config.IconSize + BadgeHang() + 2f + Line;
+            if (HasStatusLine()) height += Line;
+            return height + Pad;
+        }
 
         private float PanelHeight(string state)
         {
-            if (state == "minimized") return config.IconSize;
+            if (state == "minimized") return config.IconSize + BadgeHang();
             if (state != "full") return HalfHeight();
             int count = EnabledEvents().Count;
             int columns = Math.Max(1, config.Columns);
@@ -591,8 +937,7 @@ namespace Oxide.Plugins
         private void ScheduleClock()
         {
             clockTimer?.Destroy();
-            double seconds = CountdownSeconds();
-            float delay = seconds <= 600d ? 10f : 60f;
+            float delay = 12f;
             clockTimer = timer.Once(delay, () =>
             {
                 TickShared(true);
@@ -617,18 +962,49 @@ namespace Oxide.Plugins
             if (onlineChanged) onlineCache = online;
             if (countChanged) countdownCache = countSig;
             if (badgeChanged) badgeCache = badge;
-            if (!clockChanged && !onlineChanged && !countChanged && !badgeChanged && !includeShield) return;
+            string seaText = null;
+            string seaColor = null;
+            bool seaChanged = false;
+            if (ShowDeepSea())
+            {
+                DeepSeaLine(out seaText, out seaColor);
+                string seaSig = seaText + "|" + seaColor;
+                seaChanged = seaSig != deepSeaCache;
+                if (seaChanged) deepSeaCache = seaSig;
+            }
+            string heliText = null;
+            string heliColor = null;
+            string bradText = null;
+            string bradColor = null;
+            bool heliChanged = ChipChanged(ShowChip("PatrolHeli"), true, ref heliText, ref heliColor, ref heliCache);
+            bool bradChanged = ChipChanged(ShowChip("Bradley"), false, ref bradText, ref bradColor, ref bradCache);
+            if (!clockChanged && !onlineChanged && !countChanged && !badgeChanged && !includeShield && !seaChanged && !heliChanged && !bradChanged) return;
             foreach (var player in BasePlayer.activePlayerList)
             {
                 if (player == null || !player.IsConnected) continue;
                 string state;
-                if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
+                if (!shown.TryGetValue(player.userID, out state)) continue;
                 if (badgeChanged) PushBadge(player, pvp);
-                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor));
-                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.9f));
-                if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor);
+                if (state == "minimized") continue;
+                if (clockChanged) PushText(player, "NightshadeHud.Clock", clock, Hex(config.ClockColor), TextAnchor.MiddleRight, 11);
+                if (onlineChanged) PushText(player, "NightshadeHud.Online", online, Hex(config.MutedColor, 0.95f), TextAnchor.MiddleLeft, 10);
+                if (countChanged) PushText(player, "NightshadeHud.Countdown", countText, countColor, TextAnchor.MiddleLeft);
                 if (includeShield) PushShield(player, false);
+                if (seaChanged) PushText(player, "NightshadeHud.DeepSea", seaText, seaColor, TextAnchor.MiddleLeft);
+                if (heliChanged) PushText(player, "NightshadeHud.Karen", heliText, heliColor, TextAnchor.MiddleLeft);
+                if (bradChanged) PushText(player, "NightshadeHud.Brad", bradText, bradColor, TextAnchor.MiddleLeft);
             }
+        }
+
+        private bool ChipChanged(bool shownChip, bool heli, ref string text, ref string color, ref string cache)
+        {
+            if (!shownChip) return false;
+            if (heli) HeliLine(out text, out color);
+            else BradleyLine(out text, out color);
+            string sig = text + "|" + color;
+            if (sig == cache) return false;
+            cache = sig;
+            return true;
         }
 
         private void PushModeLine()
@@ -667,7 +1043,7 @@ namespace Oxide.Plugins
             shieldCache[player.userID] = sig;
             string text, color;
             ShieldLine(player, out text, out color);
-            PushText(player, "NightshadeHud.Shield", text, color);
+            PushText(player, "NightshadeHud.Shield", text, color, TextAnchor.MiddleRight);
         }
 
         private void PushBadge(BasePlayer player, bool pvp)
@@ -675,20 +1051,20 @@ namespace Oxide.Plugins
             var container = new CuiElementContainer();
             container.Add(new CuiElement
             {
-                Name = "NightshadeHud.BadgeBg",
+                Name = BadgeBgName,
                 Update = true,
                 Components = { new CuiImageComponent { Color = Hex(pvp ? config.BadgePvpBg : config.BadgePveBg) } }
             });
             container.Add(new CuiElement
             {
-                Name = "NightshadeHud.Badge",
+                Name = BadgeName,
                 Update = true,
                 Components =
                 {
                     new CuiTextComponent
                     {
-                        Text = pvp ? config.BadgePvpText : config.BadgePveText,
-                        FontSize = 11,
+                        Text = pvp ? BadgeWord(config.BadgePvpText, "PVP") : BadgeWord(config.BadgePveText, "PVE"),
+                        FontSize = BadgeFont,
                         Align = TextAnchor.MiddleCenter,
                         Color = Hex(pvp ? config.BadgePvpColor : config.BadgePveColor),
                         Font = "robotocondensed-bold.ttf"
@@ -698,14 +1074,14 @@ namespace Oxide.Plugins
             CuiHelper.AddUi(player, container);
         }
 
-        private void PushText(BasePlayer player, string name, string text, string color)
+        private void PushText(BasePlayer player, string name, string text, string color, TextAnchor align, int fontSize = 11)
         {
             var container = new CuiElementContainer();
             container.Add(new CuiElement
             {
                 Name = name,
                 Update = true,
-                Components = { new CuiTextComponent { Text = text ?? string.Empty, FontSize = 11, Align = TextAnchor.MiddleLeft, Color = color, Font = "robotocondensed-regular.ttf" } }
+                Components = { new CuiTextComponent { Text = text ?? string.Empty, FontSize = fontSize, Align = align, Color = color, Font = "robotocondensed-regular.ttf" } }
             });
             CuiHelper.AddUi(player, container);
         }
@@ -733,35 +1109,47 @@ namespace Oxide.Plugins
                 eventCache[entry.Key] = sig;
                 dirty.Add(entry);
             }
-            if (dirty.Count == 0) return;
+            string heliText = null;
+            string heliColor = null;
+            string bradText = null;
+            string bradColor = null;
+            bool heliChanged = ChipChanged(ShowChip("PatrolHeli"), true, ref heliText, ref heliColor, ref heliCache);
+            bool bradChanged = ChipChanged(ShowChip("Bradley"), false, ref bradText, ref bradColor, ref bradCache);
+            if (dirty.Count == 0 && !heliChanged && !bradChanged) return;
             foreach (var player in BasePlayer.activePlayerList)
             {
+                if (player == null) continue;
                 string state;
-                if (player == null || !shown.TryGetValue(player.userID, out state) || state != "full") continue;
-                var container = new CuiElementContainer();
-                foreach (var entry in dirty)
+                if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
+                if (state == "full" && dirty.Count > 0)
                 {
-                    int count;
-                    bool on, contested;
-                    ReadEvent(entry.Key, out count, out on, out contested);
-                    container.Add(new CuiElement
+                    var container = new CuiElementContainer();
+                    foreach (var entry in dirty)
                     {
-                        Name = "NightshadeHud.Ev." + entry.Key,
-                        Update = true,
-                        Components =
+                        int count;
+                        bool on, contested;
+                        ReadEvent(entry.Key, out count, out on, out contested);
+                        container.Add(new CuiElement
                         {
-                            new CuiTextComponent
+                            Name = "NightshadeHud.Ev." + entry.Key,
+                            Update = true,
+                            Components =
                             {
-                                Text = EventText(entry, count, on),
-                                FontSize = 10,
-                                Align = TextAnchor.MiddleLeft,
-                                Color = EventColor(on, contested),
-                                Font = "robotocondensed-bold.ttf"
+                                new CuiTextComponent
+                                {
+                                    Text = EventText(entry, count, on),
+                                    FontSize = EventFont(),
+                                    Align = TextAnchor.MiddleLeft,
+                                    Color = EventColor(on, contested),
+                                    Font = "robotocondensed-bold.ttf"
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                    CuiHelper.AddUi(player, container);
                 }
-                CuiHelper.AddUi(player, container);
+                if (heliChanged) PushText(player, "NightshadeHud.Karen", heliText, heliColor, TextAnchor.MiddleLeft);
+                if (bradChanged) PushText(player, "NightshadeHud.Brad", bradText, bradColor, TextAnchor.MiddleLeft);
             }
         }
 
@@ -777,22 +1165,32 @@ namespace Oxide.Plugins
 
         private string ClockText()
         {
-            DateTime local = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zone);
-            string text = local.ToString(config.Use24Hour ? "HH:mm" : "h:mm tt", CultureInfo.InvariantCulture);
-            if (config.ShowZoneLabel) text += " ET";
-            return text;
+            TOD_Sky sky = TOD_Sky.Instance;
+            if (sky == null || sky.Cycle == null) return "--:--";
+            float hour = sky.Cycle.Hour;
+            if (float.IsNaN(hour) || float.IsInfinity(hour)) return "--:--";
+            int hours = Mathf.FloorToInt(Mathf.Repeat(hour, 24f));
+            int minutes = Mathf.FloorToInt(Mathf.Repeat(hour, 1f) * 60f);
+            if (minutes > 59) minutes = 59;
+            if (config.Use24Hour) return hours.ToString("00") + ":" + minutes.ToString("00");
+            int hour12 = hours % 12;
+            if (hour12 == 0) hour12 = 12;
+            return hour12 + ":" + minutes.ToString("00") + (hours < 12 ? " AM" : " PM");
+        }
+
+        private int ConnectedCount()
+        {
+            int online = 0;
+            if (BasePlayer.activePlayerList == null) return 0;
+            foreach (var player in BasePlayer.activePlayerList)
+                if (player != null && player.IsConnected) online++;
+            return online;
         }
 
         private string OnlineText()
         {
             if (!config.ShowOnline && !config.ShowSleepers) return string.Empty;
-            int online = 0;
-            foreach (var player in BasePlayer.activePlayerList)
-            {
-                if (player == null) continue;
-                if (!config.CountAdmins && player.IsAdmin) continue;
-                online++;
-            }
+            int online = ConnectedCount();
             int sleepers = BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count;
             if (config.ShowOnline && config.ShowSleepers)
                 return "Online " + online + "  \u00B7  Sleepers " + sleepers;
@@ -840,22 +1238,22 @@ namespace Oxide.Plugins
                 color = Hex(config.MutedColor, config.InactiveAlpha);
                 return;
             }
-            var raw = NightshadeRaidProtection.Call("API_GetPlayerShield", player) as Dictionary<string, object>;
-            string state = raw != null && raw.ContainsKey("state") ? raw["state"] as string : "none";
-            double seconds = raw != null && raw.ContainsKey("seconds") ? ToDouble(raw["seconds"]) : 0d;
+            object raw = NightshadeRaidProtection.Call("API_GetPlayerShield", player);
+            string state = DictString(raw, "state") ?? "none";
+            double seconds = ToDouble(DictValue(raw, "seconds"));
             if (state == "active")
             {
-                text = "Shield: active " + FormatDur(seconds);
+                text = "Shield " + FormatDur(seconds);
                 color = Hex(config.ShieldActive);
                 return;
             }
             if (state == "queued")
             {
-                text = "Shield: queued " + FormatDur(seconds);
+                text = "Shield queued";
                 color = Hex(config.ShieldQueued);
                 return;
             }
-            text = config.HideShieldWhenNone ? string.Empty : "Shield: none";
+            text = config.HideShieldWhenNone ? string.Empty : "No shield";
             color = Hex(config.MutedColor, config.InactiveAlpha);
         }
 
@@ -864,6 +1262,29 @@ namespace Oxide.Plugins
             string text, color;
             ShieldLine(player, out text, out color);
             return text + "|" + color;
+        }
+
+        private void DebugHud(BasePlayer player)
+        {
+            object activeRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_IsPvPActive") : null;
+            object secondsRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_SecondsUntilPvPChange") : null;
+            object weekendRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_GetWeekend") : null;
+            object shieldRaw = NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? NightshadeRaidProtection.Call("API_GetPlayerShield", player) : null;
+            BuildingPrivlidge tc = player.GetBuildingPrivilege();
+            bool authed = tc != null && tc.authorizedPlayers != null && tc.authorizedPlayers.Contains(player.userID);
+            string ruleset = DictString(weekendRaw, "ruleset") ?? "(no weekend result)";
+            player.ChatMessage("<color=#b084ff>[Nightshade HUD]</color> mode " + StateOf(player)
+                + " | raid plugin " + (NightshadeRaidProtection != null && NightshadeRaidProtection.IsLoaded ? "loaded" : "MISSING"));
+            player.ChatMessage("PvP active raw: " + (activeRaw == null ? "null" : activeRaw.GetType().Name + " " + activeRaw)
+                + " | seconds raw: " + (secondsRaw == null ? "null" : secondsRaw.GetType().Name + " " + secondsRaw)
+                + " | ruleset: " + ruleset);
+            player.ChatMessage("Online count: " + ConnectedCount() + " (you are admin: " + player.IsAdmin + ") | sleepers: " + (BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count));
+            player.ChatMessage("Cupboard net id: " + (tc == null || tc.net == null ? "none" : tc.net.ID.Value.ToString())
+                + " | building " + (tc == null ? "none" : tc.buildingID.ToString())
+                + " | authorized: " + authed
+                + " | shield: " + (DictString(shieldRaw, "state") ?? "null call")
+                + " " + ToDouble(DictValue(shieldRaw, "seconds")).ToString("0") + "s"
+                + " tc " + (DictString(shieldRaw, "tcId") ?? "-"));
         }
 
         private static string FormatDur(double seconds)
@@ -924,8 +1345,25 @@ namespace Oxide.Plugins
         private void OnEntityKill(HackableLockedCrate entity) { if (!scanning) NoteOil(entity, false); }
         private void OnCrateHack(HackableLockedCrate entity) { if (entity != null && entity.net != null) oilHacking.Add(entity.net.ID.Value); MarkEvents(); }
         private void OnCrateHackEnd(HackableLockedCrate entity) { if (entity != null && entity.net != null) oilHacking.Remove(entity.net.ID.Value); MarkEvents(); }
-        private void OnDeepSeaOpened(DeepSeaManager manager) { deepSea = true; MarkEvents(); }
-        private void OnDeepSeaClosed(DeepSeaManager manager) { deepSea = false; MarkEvents(); }
+        private void OnDeepSeaOpened(DeepSeaManager manager) { deepSea = true; deepSeaCache = "\0"; PushDeepSeaAll(); }
+        private void OnDeepSeaClosed(DeepSeaManager manager) { deepSea = false; deepSeaCache = "\0"; PushDeepSeaAll(); }
+
+        private void PushDeepSeaAll()
+        {
+            if (!ShowDeepSea()) return;
+            string text, color;
+            DeepSeaLine(out text, out color);
+            string sig = text + "|" + color;
+            deepSeaCache = sig;
+            if (BasePlayer.activePlayerList == null) return;
+            foreach (var player in BasePlayer.activePlayerList)
+            {
+                string state;
+                if (player == null || !player.IsConnected) continue;
+                if (!shown.TryGetValue(player.userID, out state) || state == "minimized") continue;
+                PushText(player, "NightshadeHud.DeepSea", text, color, TextAnchor.MiddleLeft);
+            }
+        }
         private void OnConvoyStart() { convoy = true; MarkEvents(); }
         private void OnConvoyStop() { convoy = false; MarkEvents(); }
         private void OnArmoredTrainEventStart() { train = true; MarkEvents(); }
@@ -1002,16 +1440,30 @@ namespace Oxide.Plugins
         {
             smallOilFound = false;
             largeOilFound = false;
-            if (TerrainMeta.Path == null || TerrainMeta.Path.Monuments == null) return;
-            foreach (var monument in TerrainMeta.Path.Monuments)
+            var path = TerrainMeta.Path;
+            if (path == null) return;
+            object raw = null;
+            try
             {
+                var field = typeof(TerrainPath).GetField("Monuments", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+                if (field != null) raw = field.GetValue(path);
+            }
+            catch
+            {
+                return;
+            }
+            var monuments = raw as System.Collections.IEnumerable;
+            if (monuments == null) return;
+            foreach (var entry in monuments)
+            {
+                var monument = entry as MonumentInfo;
                 if (monument == null || string.IsNullOrEmpty(monument.name)) continue;
                 if (monument.name.Contains("oilrig_2")) { smallOil = monument.transform.position; smallOilFound = true; }
                 else if (monument.name.Contains("oilrig_1")) { largeOil = monument.transform.position; largeOilFound = true; }
             }
         }
 
-        private IEnumerator Startup()
+        private IEnumerator BootHud()
         {
             // Return from OnServerInitialized before any scene query or CUI build.
             yield return null;
@@ -1259,9 +1711,86 @@ namespace Oxide.Plugins
         {
             var list = new List<EventCfg>();
             foreach (var entry in config.Events)
-                if (entry != null && entry.Enabled && !string.IsNullOrEmpty(entry.Key)) list.Add(entry);
+            {
+                if (entry == null || !entry.Enabled || string.IsNullOrEmpty(entry.Key)) continue;
+                if (entry.Key == "DeepSea" || entry.Key == "PatrolHeli" || entry.Key == "Bradley") continue;
+                list.Add(entry);
+            }
             list.Sort((a, b) => a.Order.CompareTo(b.Order));
             return list;
+        }
+
+        private bool ShowDeepSea() => ShowChip("DeepSea");
+
+        private bool HasStatusLine()
+        {
+            return ShowChip("DeepSea") || ShowChip("PatrolHeli") || ShowChip("Bradley");
+        }
+
+        private bool ShowChip(string key)
+        {
+            EventCfg entry = FindEvent(key);
+            return entry == null || entry.Enabled;
+        }
+
+        private EventCfg FindEvent(string key)
+        {
+            if (config.Events == null || string.IsNullOrEmpty(key)) return null;
+            foreach (var entry in config.Events)
+                if (entry != null && entry.Key == key) return entry;
+            return null;
+        }
+
+        private string DeepSeaLabel()
+        {
+            if (config.Events != null)
+            {
+                foreach (var entry in config.Events)
+                    if (entry != null && entry.Key == "DeepSea" && !string.IsNullOrEmpty(entry.Label)) return entry.Label;
+            }
+            return "DEEP SEA";
+        }
+
+        private void DeepSeaLine(out string text, out string color)
+        {
+            text = DeepSeaLabel();
+            bool open = false;
+            DeepSeaManager manager = PointEntity<DeepSeaManager>.ServerInstance;
+            if (manager != null) open = manager.IsOpen() || manager.IsBusy();
+            deepSea = open;
+            color = open ? Hex(config.DeepSeaOpenColor) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private void HeliLine(out string text, out string color)
+        {
+            text = string.IsNullOrEmpty(config.HeliLabel) ? "KAREN" : config.HeliLabel;
+            color = helis.Count > 0 ? Hex(config.HeliActiveColor) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private void BradleyLine(out string text, out string color)
+        {
+            string label = string.IsNullOrEmpty(config.BradleyLabel) ? "BRAD" : config.BradleyLabel;
+            EventCfg entry = FindEvent("Bradley");
+            bool showCount = entry == null || entry.ShowCount;
+            text = bradleys.Count > 1 && showCount ? label + " " + bradleys.Count.ToString(CultureInfo.InvariantCulture) : label;
+            string active = string.IsNullOrEmpty(config.BradleyActiveColor) ? config.ActiveColor : config.BradleyActiveColor;
+            color = bradleys.Count > 0 ? Hex(active) : Hex(config.MutedColor, config.InactiveAlpha);
+        }
+
+        private string BradleySlotText()
+        {
+            string label = string.IsNullOrEmpty(config.BradleyLabel) ? "BRAD" : config.BradleyLabel;
+            EventCfg entry = FindEvent("Bradley");
+            if (entry != null && !entry.ShowCount) return label;
+            return label + " 99";
+        }
+
+        private int EventFont()
+        {
+            int size = config.EventFontSize;
+            if (size < 8) return 9;
+            if (size > 16) return 9;
+            return size;
         }
 
         private static string EventText(EventCfg entry, int count, bool on)
@@ -1281,25 +1810,33 @@ namespace Oxide.Plugins
         {
             return new List<EventCfg>
             {
-                Ev("Bradley", "BRAD", true, true, 10),
+                Ev("Bradley", "BRADLEY", true, true, 10),
                 Ev("PatrolHeli", "HELI", true, true, 20),
                 Ev("Cargo", "CARGO", true, true, 30),
                 Ev("Harbor", "HARBOR", true, false, 40),
-                Ev("AirDrop", "DROP", true, true, 50),
+                Ev("AirDrop", "AIRDROP", true, true, 50),
                 Ev("CH47", "CH47", false, true, 60),
                 Ev("SmallOil", "OIL-S", false, false, 70),
                 Ev("LargeOil", "OIL-L", false, false, 80),
-                Ev("DeepSea", "DEEP", true, false, 90),
+                Ev("DeepSea", "DEEP SEA", true, false, 90),
                 Ev("Convoy", "CONVOY", true, false, 100),
                 Ev("ArmoredTrain", "TRAIN", true, false, 110),
                 Ev("Raids", "RAIDS", true, true, 120),
                 Ev("Dungeon", "DUNGEON", true, true, 130),
-                Ev("Defend", "DEFEND", true, true, 140),
+                Ev("Defend", "DEFENDABLE", true, true, 140),
                 Ev("Purge", "PURGE", true, false, 150),
                 Ev("Sputnik", "SPUTNIK", false, false, 160),
                 Ev("HarborEvent", "HARBOR-EV", false, false, 170)
             };
         }
+
+        private static readonly Dictionary<string, string> OldLabels = new Dictionary<string, string>
+        {
+            { "Bradley|BRAD", "BRADLEY" },
+            { "AirDrop|DROP", "AIRDROP" },
+            { "DeepSea|DEEP", "DEEP SEA" },
+            { "Defend|DEFEND", "DEFENDABLE" }
+        };
 
         private static EventCfg Ev(string key, string label, bool enabled, bool count, int order)
         {
@@ -1336,6 +1873,19 @@ namespace Oxide.Plugins
                     new CuiRectTransformComponent { AnchorMin = anchorMin, AnchorMax = anchorMax, OffsetMin = offsetMin, OffsetMax = offsetMax }
                 }
             });
+        }
+
+        private static object DictValue(object raw, string key)
+        {
+            var dict = raw as System.Collections.IDictionary;
+            if (dict == null || !dict.Contains(key)) return null;
+            return dict[key];
+        }
+
+        private static string DictString(object raw, string key)
+        {
+            object value = DictValue(raw, key);
+            return value == null ? null : value.ToString();
         }
 
         private static bool CallBool(Plugin plugin, string method)
