@@ -52,7 +52,7 @@ namespace Oxide.Plugins
             public string Command = "purge";
 
             [JsonProperty("Join message (use {time} for remaining time)")]
-            public string JoinMessage = "<color=#FF2D75>[Purge]</color> The purge is <color=#FF3B3B>ACTIVE</color> until end of wipe! <color=#FFAA00>{time}</color> remaining — no mercy.";
+            public string JoinMessage = "<color=#FF2D75>[Purge]</color> The purge is <color=#FF3B3B>ACTIVE</color> until end of wipe! <color=#FFAA00>{time}</color> remaining \u2014 no mercy.";
 
             [JsonProperty("Broadcast message on start (use {time} for remaining time)")]
             public string StartBroadcast = "<color=#FF2D75>[Purge]</color> The purge has begun! Chaos reigns for the next <color=#FFAA00>{time}</color>.";

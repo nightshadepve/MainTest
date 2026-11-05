@@ -1193,7 +1193,7 @@ namespace Oxide.Plugins
             int online = ConnectedCount();
             int sleepers = BasePlayer.sleepingPlayerList == null ? 0 : BasePlayer.sleepingPlayerList.Count;
             if (config.ShowOnline && config.ShowSleepers)
-                return "Online " + online + "  ·  Sleepers " + sleepers;
+                return "Online " + online + "  \u00B7  Sleepers " + sleepers;
             if (config.ShowOnline) return "Online " + online;
             return "Sleepers " + sleepers;
         }
@@ -1214,7 +1214,7 @@ namespace Oxide.Plugins
             }
             bool active = CallBool(NightshadeRaidProtection, "API_IsPvPActive");
             double seconds = ToDouble(NightshadeRaidProtection.Call("API_SecondsUntilPvPChange"));
-            text = active ? "PVP · ends in " + FormatDur(seconds) : "PvP in " + FormatDur(seconds);
+            text = active ? "PVP \u00B7 ends in " + FormatDur(seconds) : "PvP in " + FormatDur(seconds);
             color = Hex(active ? config.CountdownActive : config.CountdownIdle);
         }
 
@@ -1234,7 +1234,7 @@ namespace Oxide.Plugins
             }
             if (player == null || NightshadeRaidProtection == null || !NightshadeRaidProtection.IsLoaded)
             {
-                text = "Shield: —";
+                text = "Shield: \u2014";
                 color = Hex(config.MutedColor, config.InactiveAlpha);
                 return;
             }
