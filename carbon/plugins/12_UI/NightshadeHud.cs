@@ -21,7 +21,7 @@ namespace Oxide.Plugins
         private const string IconHit = "NightshadeHud.IconHit";
         private const string Half = "NightshadeHud.Half";
         private const string Events = "NightshadeHud.Events";
-        private const string DataPath = "NightshadeHud/State";
+        private const string DataPath = "Nightshade/NightshadeHud/State";
         private const float Pad = 6f;
         private const float Line = 15f;
         private const int BadgeFont = 8;

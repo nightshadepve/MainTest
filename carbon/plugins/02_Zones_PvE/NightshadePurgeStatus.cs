@@ -19,6 +19,7 @@ namespace Oxide.Plugins
 
         private const string PermAdmin = "nightshadepurgestatus.admin";
         private const string BarId = "NightshadePurge";
+        private const string DataPath = "Nightshade/NightshadePurgeStatus";
 
         private PurgeData _data;
         private Timer _endTimer;
@@ -33,11 +34,11 @@ namespace Oxide.Plugins
             public string PreviousTruePveRuleset;
         }
 
-        private void SaveData() => Interface.Oxide.DataFileSystem.WriteObject(Name, _data);
+        private void SaveData() => Interface.Oxide.DataFileSystem.WriteObject(DataPath, _data);
 
         private void LoadData()
         {
-            _data = Interface.Oxide.DataFileSystem.ReadObject<PurgeData>(Name) ?? new PurgeData();
+            _data = Interface.Oxide.DataFileSystem.ReadObject<PurgeData>(DataPath) ?? new PurgeData();
         }
 
         #endregion
