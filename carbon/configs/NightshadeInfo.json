@@ -7,8 +7,8 @@
   "Logo URL": "https://raw.githubusercontent.com/nightshadepve/Nightshadeserver/refs/heads/main/260625_Logo_75_nobg.png",
   "Server name": "Nightshade",
   "Server tag": "Solo/Duo",
-  "Panel width": 1080.0,
-  "Panel height": 680.0,
+  "Panel width": 800.0,
+  "Panel height": 420.0,
   "Accent color": "#A267D3",
   "PvE color": "#3DDC84",
   "PvP color": "#FF4D4D",
@@ -39,15 +39,24 @@
     "Mode unavailable": "Weekend window unavailable",
     "Purge title": "PURGE",
     "Purge inactive": "Not active",
-    "Purge active": "ACTIVE",
+    "Purge active": "Purge ends in",
     "Purge ends": "Ends in {time}",
     "Purge unavailable": "Purge status unavailable",
-    "Wipe title": "NEXT WIPE",
-    "Wipe in": "In {time}",
+    "Wipe title": "Next wipe",
+    "Wipe in": "in {time}",
     "Players title": "PLAYERS",
     "Online": "Online {online}",
     "Sleepers": "Sleepers {sleepers}",
-    "Reward points": "{amount} RP"
+    "Reward points": "{amount} RP",
+    "Purge name": "PURGE",
+    "PvE detail": "Weekday. Monuments and events are still PvP.",
+    "PvP detail": "Friday 8:00 PM to Monday 3:00 AM Eastern.",
+    "Purge detail": "Tuesday of wipe week until the Thursday wipe.",
+    "Manual purge detail": "A manual purge is on.",
+    "PvP waiting": "Time until PvP weekend",
+    "PvP active": "PvP weekend ends in",
+    "Purge waiting": "Time until Purge",
+    "PvP unavailable": "Weekend window unavailable"
   },
   "Pages": [
     {
@@ -71,7 +80,7 @@
               "Heading": "WELCOME TO NIGHTSHADE",
               "Lines": [
                 {
-                  "Text": "Nightshade is a cozy-but-feral hybrid PvPvE Rust server: PvE outside protected PvP areas, with monuments and event zones ready to bite.",
+                  "Text": "Nightshade is a cozy-but-feral solo/duo server. Max team size is 2. The week is PvE. Friday 8:00 PM to Monday 3:00 AM Eastern is PvP.",
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
@@ -87,15 +96,11 @@
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
-                  "Text": "Monuments are always PvP. Watch the zone warnings before wandering in.",
-                  "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "Progression runs through /shop, Skill Tree, quarries, events, and VIP perks.",
+                  "Text": "Progression runs through /shop, Skill Tree, events, and VIP perks.",
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
-                  "Text": "Loot protection covers earned kills, crates, drops, and event rewards.",
+                  "Text": "Earned event loot locks to you for a few minutes. Base boxes stay on TC auth. PvP weekend turns those locks off. Purge does not.",
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
@@ -111,7 +116,7 @@
               "Heading": "BASES & BUILDING",
               "Lines": [
                 {
-                  "Text": "No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside Purge or approved raid events.",
+                  "Text": "No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.",
                   "Tone (body, accent, warn, muted)": "warn"
                 },
                 {
@@ -145,7 +150,7 @@
               "Heading": "PVP",
               "Lines": [
                 {
-                  "Text": "PvP is allowed inside marked PvP monuments, PvP domes, PvP-enabled events, during the weekend window, and during Purge.",
+                  "Text": "Monuments and events are always PvP. A dome only appears over an event. Raiding is allowed during the PvP weekend and during Purge.",
                   "Tone (body, accent, warn, muted)": "body"
                 },
                 {
@@ -155,10 +160,6 @@
                 {
                   "Text": "Outside those areas, do not attack, bait, exploit rules, or play loophole lawyer.",
                   "Tone (body, accent, warn, muted)": "warn"
-                },
-                {
-                  "Text": "Watch entry and leave messages. If a dome looks spicy, assume it bites.",
-                  "Tone (body, accent, warn, muted)": "body"
                 }
               ]
             },
@@ -196,7 +197,7 @@
               "Tone (body, accent, warn, muted)": "body"
             },
             {
-              "Text": "VIP lasts until map wipe unless Discord says otherwise. VIPx follows the vipx group.",
+              "Text": "VIP is permanent after one donation, unless you break the rules. VIPx is a monthly subscription.",
               "Tone (body, accent, warn, muted)": "muted"
             }
           ],
@@ -283,15 +284,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "/vq — virtual quarries",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
                       "Text": "/skills, /skilltree, /st — Skill Tree",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "/limits — entity limits",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -313,14 +306,6 @@
                     },
                     {
                       "Text": "/skinrequest <WorkshopID> — request a Workshop skin",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "/loot, /share, /unshare, /sharelist, /shareclear",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "/vehicleinfo — vehicle rules",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -404,15 +389,15 @@
                   "Heading": "LOOT PROTECTION",
                   "Lines": [
                     {
-                      "Text": "Kills, crates, drops, and event rewards may lock to the player or team that earned them.",
+                      "Text": "Bradley locks 5 min after 20% damage. Heli locks 8 min after 35%. NPC locks 5 min after 20%. Hacked crates lock 15 min. Supply drops lock 10 min.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Use /share when you want another player to access protected loot.",
+                      "Text": "Boxes and TC storage: you, your teammate, or TC auth. /share opens that one container for someone else.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "If a protected container says no, believe it.",
+                      "Text": "Sleeping players cannot be looted, including on PvP weekend and during Purge. If it says the loot is not yours, it is not yours.",
                       "Tone (body, accent, warn, muted)": "warn"
                     }
                   ]
@@ -422,12 +407,8 @@
             {
               "Blocks": [
                 {
-                  "Heading": "QUARRIES / PROGRESSION",
+                  "Heading": "SKILL TREE",
                   "Lines": [
-                    {
-                      "Text": "/vq opens Virtual Quarries when enabled.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
                     {
                       "Text": "Skill Tree unlocks long-term bonuses and progression perks.",
                       "Tone (body, accent, warn, muted)": "body"
@@ -455,10 +436,6 @@
                     },
                     {
                       "Text": "VIP has no decay on personal boats and tugboats.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "Use /limits before the server starts judging your decor.",
                       "Tone (body, accent, warn, muted)": "body"
                     }
                   ]
@@ -509,10 +486,6 @@
                     {
                       "Text": "Purge is the last stretch of wipe, started by an admin: PvP, raiding, and base destruction are allowed serverwide.",
                       "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "Monuments are always PvP. Watch the zone warnings.",
-                      "Tone (body, accent, warn, muted)": "warn"
                     }
                   ]
                 },
@@ -524,7 +497,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "Read event warnings before throwing expensive signals like a gremlin with fireworks.",
+                      "Text": "Read the signal card before you call one. Solo/duo is the server cap.",
                       "Tone (body, accent, warn, muted)": "body"
                     }
                   ]
@@ -566,7 +539,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "/pvpinfo — PvP zone reminders",
+                      "Text": "/pvpinfo — where PvP is allowed",
                       "Tone (body, accent, warn, muted)": "body"
                     }
                   ]
@@ -710,7 +683,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "PvP raid bases, PvP domes, the weekend window, and Purge are different. Read the warnings.",
+                      "Text": "Event domes, the PvP weekend, and Purge are different. A dome is only over an event.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -815,11 +788,7 @@
                   "Heading": "PVP ZONES",
                   "Lines": [
                     {
-                      "Text": "Monuments are always PvP. Watch the zone warnings before entering.",
-                      "Tone (body, accent, warn, muted)": "warn"
-                    },
-                    {
-                      "Text": "Event domes and PvP-marked areas may also allow player combat.",
+                      "Text": "Events are always PvP. A dome only appears over an event.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -828,14 +797,6 @@
                     },
                     {
                       "Text": "Purge is separate. It is an admin toggle for the end of wipe, not the weekend window.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "Watch entry and exit messages.",
-                      "Tone (body, accent, warn, muted)": "body"
-                    },
-                    {
-                      "Text": "Watch dome and warning visuals.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -1032,7 +993,7 @@
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
-                      "Text": "VIP lasts until map wipe unless otherwise stated. VIPx follows the vipx group.",
+                      "Text": "VIP is permanent after one donation, unless you break the rules. VIPx is a monthly subscription.",
                       "Tone (body, accent, warn, muted)": "body"
                     },
                     {
@@ -1065,5 +1026,11 @@
       "Enabled": true,
       "Layout (home or sections)": "sections"
     }
-  ]
+  ],
+  "Purge": {
+    "Days before wipe": 2,
+    "Start hour": 14,
+    "Start minute": 0,
+    "Color": "#FF8C1A"
+  }
 }
