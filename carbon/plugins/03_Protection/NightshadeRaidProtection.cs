@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeRaidProtection", "Nightshade", "1.1.2")]
+    [Info("NightshadeRaidProtection", "Nightshade", "1.1.3")]
     [Description("PvP-window Tool Cupboard raid shields, offline protection, and the Eastern-time weekend window that drives TruePVE.")]
     public class NightshadeRaidProtection : RustPlugin
     {
@@ -189,6 +189,7 @@ namespace Oxide.Plugins
         // OnNightshadeShieldQueued(ulong cupboardNetId, uint buildingId, double remainingSeconds)
         // OnNightshadeShieldEnded(ulong cupboardNetId, uint buildingId)
 
+        [HookMethod("API_IsPvPActive")]
         public bool API_IsPvPActive()
         {
             DateTime start, end;
@@ -197,6 +198,7 @@ namespace Oxide.Plugins
             return active;
         }
 
+        [HookMethod("API_SecondsUntilPvPChange")]
         public double API_SecondsUntilPvPChange()
         {
             DateTime start, end;

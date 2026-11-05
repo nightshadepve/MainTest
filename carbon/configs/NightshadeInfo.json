@@ -1,0 +1,1069 @@
+{
+  "Toggle commands": [
+    "info",
+    "start"
+  ],
+  "Show on first join": false,
+  "Logo URL": "https://raw.githubusercontent.com/nightshadepve/Nightshadeserver/refs/heads/main/260625_Logo_75_nobg.png",
+  "Server name": "Nightshade",
+  "Server tag": "Solo/Duo",
+  "Panel width": 1080.0,
+  "Panel height": 680.0,
+  "Accent color": "#A267D3",
+  "PvE color": "#3DDC84",
+  "PvP color": "#FF4D4D",
+  "Warning color": "#D58D7C",
+  "Text color": "#E8DDD5",
+  "Muted color": "#A39BB0",
+  "Panel color": "#0E0E12",
+  "Panel opacity (0-100)": 94.0,
+  "Dim color": "#000000",
+  "Dim opacity (0-100)": 72.0,
+  "Time zone id": "America/New_York",
+  "Count admins in online": false,
+  "Status refresh seconds": 1.0,
+  "Wipe": {
+    "Weekday": "Thursday",
+    "Ordinal in month (1 = first)": 1,
+    "Hour": 14,
+    "Minute": 0,
+    "Label": "First Thursday · 2:00 PM Eastern"
+  },
+  "Labels": {
+    "Mode title": "MODE",
+    "PvE name": "PVE",
+    "PvP name": "PVP",
+    "PvP window": "Friday 8:00 PM – Monday 3:00 AM Eastern",
+    "PvP ends": "Ends in {time}",
+    "PvP starts": "Starts in {time}",
+    "Mode unavailable": "Weekend window unavailable",
+    "Purge title": "PURGE",
+    "Purge inactive": "Not active",
+    "Purge active": "ACTIVE",
+    "Purge ends": "Ends in {time}",
+    "Purge unavailable": "Purge status unavailable",
+    "Wipe title": "NEXT WIPE",
+    "Wipe in": "In {time}",
+    "Players title": "PLAYERS",
+    "Online": "Online {online}",
+    "Sleepers": "Sleepers {sleepers}",
+    "Reward points": "{amount} RP"
+  },
+  "Pages": [
+    {
+      "Id": "home",
+      "Sidebar title": "Home",
+      "Layout (home or sections)": "home",
+      "Commands": [
+        "info",
+        "start",
+        "rules",
+        "rule",
+        "discord",
+        "discordinfo"
+      ],
+      "Tabs": [
+        {
+          "Title": "Home",
+          "Show status": true,
+          "About": [
+            {
+              "Heading": "WELCOME TO NIGHTSHADE",
+              "Lines": [
+                {
+                  "Text": "Nightshade is a cozy-but-feral hybrid PvPvE Rust server: PvE outside protected PvP areas, with monuments and event zones ready to bite.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Vanilla gathering on resources, components, and food.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "10x+ stack sizes, with exceptions for balance.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Monthly wipe: first Thursday at 2:00 PM Eastern, unless Discord says otherwise.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Monuments are always PvP. Watch the zone warnings before wandering in.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "Progression runs through /shop, Skill Tree, quarries, events, and VIP perks.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Loot protection covers earned kills, crates, drops, and event rewards.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Active admins. Read the rules on this page, then Commands, then /shop when you want to spend RP.",
+                  "Tone (body, accent, warn, muted)": "body"
+                }
+              ]
+            }
+          ],
+          "Rules title": "SERVER RULES",
+          "Rules": [
+            {
+              "Heading": "BASES & BUILDING",
+              "Lines": [
+                {
+                  "Text": "No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside Purge or approved raid events.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "Do not block roads, monuments, caves, vendors, event areas, or another player's build.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.",
+                  "Tone (body, accent, warn, muted)": "body"
+                }
+              ]
+            },
+            {
+              "Heading": "LOOT & OWNERSHIP",
+              "Lines": [
+                {
+                  "Text": "Do not steal from player containers, bodies, drops, event crates, or protected loot.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "If Loot Protection says it is not yours, it is not yours. This is not a riddle.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "Team up or ask for share access when you want to split loot.",
+                  "Tone (body, accent, warn, muted)": "body"
+                }
+              ]
+            },
+            {
+              "Heading": "PVP",
+              "Lines": [
+                {
+                  "Text": "PvP is allowed inside marked PvP monuments, PvP domes, PvP-enabled events, during the weekend window, and during Purge.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "The weekend window is Friday 8:00 PM through Monday 3:00 AM Eastern. The status cards above are the live reading.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Outside those areas, do not attack, bait, exploit rules, or play loophole lawyer.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "Watch entry and leave messages. If a dome looks spicy, assume it bites.",
+                  "Tone (body, accent, warn, muted)": "body"
+                }
+              ]
+            },
+            {
+              "Heading": "COMMUNITY",
+              "Lines": [
+                {
+                  "Text": "No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.",
+                  "Tone (body, accent, warn, muted)": "warn"
+                },
+                {
+                  "Text": "Trash talk can be spicy. Do not make it personal, creepy, or radioactive.",
+                  "Tone (body, accent, warn, muted)": "body"
+                },
+                {
+                  "Text": "Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene.",
+                  "Tone (body, accent, warn, muted)": "body"
+                }
+              ]
+            }
+          ],
+          "Discord title": "DISCORD",
+          "Discord invite": "discord.gg/dFmeweQmsy",
+          "Discord lines": [
+            {
+              "Text": "Wipe changes, events, and support are posted in Discord.",
+              "Tone (body, accent, warn, muted)": "body"
+            },
+            {
+              "Text": "Select the invite below if you want to copy it.",
+              "Tone (body, accent, warn, muted)": "body"
+            },
+            {
+              "Text": "Donations go through the store link in Discord. After you donate, post in the donation channel with your in-game name so an admin can apply VIP.",
+              "Tone (body, accent, warn, muted)": "body"
+            },
+            {
+              "Text": "VIP lasts until map wipe unless Discord says otherwise. VIPx follows the vipx group.",
+              "Tone (body, accent, warn, muted)": "muted"
+            }
+          ],
+          "Commands": [],
+          "Columns": [],
+          "Buttons": []
+        }
+      ],
+      "Enabled": true
+    },
+    {
+      "Id": "commands",
+      "Sidebar title": "Commands",
+      "Commands": [
+        "commands",
+        "cmds",
+        "command"
+      ],
+      "Tabs": [
+        {
+          "Title": "Commands",
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "CORE",
+                  "Lines": [
+                    {
+                      "Text": "/info — open this panel",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/rules — rules on the home page",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/commands — this list",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/systems — economy, loot, vehicles",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/events — events and help",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/vip — VIP perks and donation help",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "HOMES",
+                  "Lines": [
+                    {
+                      "Text": "/sethome <name> — save a home",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/home <name> — teleport home",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/removehome <name> — remove a home",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Player-to-player teleport commands are not listed for next wipe.",
+                      "Tone (body, accent, warn, muted)": "muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Blocks": [
+                {
+                  "Heading": "PROGRESSION & QOL",
+                  "Lines": [
+                    {
+                      "Text": "/shop or /store — Nightshade Market, priced in RP",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/vq — virtual quarries",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/skills, /skilltree, /st — Skill Tree",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/limits — entity limits",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/perks — VIP kit status",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/perks daily and /perks 4day — claim VIP kits",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "SKINS / LOOT / HELP",
+                  "Lines": [
+                    {
+                      "Text": "/skin, /skincraft, /skinitem, /skininv, /skinauto, /skinbase",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/skinrequest <WorkshopID> — request a Workshop skin",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/loot, /share, /unshare, /sharelist, /shareclear",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/vehicleinfo — vehicle rules",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/hordehelp — Hordes help",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/checkfoundations — Defendable Homes foundations",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/raidbuilderinfo — vetted raidbase builder help",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/tug or /tugboat — VIPx vehicle license",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Commands": [],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        }
+      ],
+      "Enabled": true,
+      "Layout (home or sections)": "sections"
+    },
+    {
+      "Id": "systems",
+      "Sidebar title": "Systems",
+      "Commands": [
+        "systems",
+        "sys"
+      ],
+      "Tabs": [
+        {
+          "Title": "Systems",
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "ECONOMY",
+                  "Lines": [
+                    {
+                      "Text": "/shop and /store open the Nightshade Market. Listings are priced in ServerRewards RP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "RP is the player currency. Activity rewards deposit RP. Economics rewards are off, and the ServerRewards exchange tab is off.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "The Admin Shop tab is item barter: fish and components trade for Blood, and the Blood Market spends Blood. It is not a second cash currency.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "There is no separate Black Market currency. The shop card named Black Market: MLRS Truck is an RP purchase.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Shop stock is whatever is saved in the Nightshade Market. It does not rotate on its own.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "The balance on Home is ServerRewards CheckPoints. If that call does not answer, it shows -.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "LOOT PROTECTION",
+                  "Lines": [
+                    {
+                      "Text": "Kills, crates, drops, and event rewards may lock to the player or team that earned them.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Use /share when you want another player to access protected loot.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "If a protected container says no, believe it.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Blocks": [
+                {
+                  "Heading": "QUARRIES / PROGRESSION",
+                  "Lines": [
+                    {
+                      "Text": "/vq opens Virtual Quarries when enabled.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Skill Tree unlocks long-term bonuses and progression perks.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "VEHICLES / QOL",
+                  "Lines": [
+                    {
+                      "Text": "Car chassis are bought with RP from /shop and built at the car lift.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "The 4-socket chassis is a one-per-wipe RP listing in the VIP shop category. It grants craftchassis.4 until wipe.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/tug and /tugboat are the VIPx vehicle license. Buying a tugboat with resources is available to the default group, so it is not VIP-only.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Chest stacks: 2 small and 3 large by default. VIP raises both to 5.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "VIP has no decay on personal boats and tugboats.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Use /limits before the server starts judging your decor.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Commands": [],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        }
+      ],
+      "Enabled": true,
+      "Layout (home or sections)": "sections"
+    },
+    {
+      "Id": "events",
+      "Sidebar title": "Events",
+      "Commands": [
+        "events",
+        "eventinfo",
+        "help"
+      ],
+      "Tabs": [
+        {
+          "Title": "Overview",
+          "Commands": [
+            "events",
+            "eventinfo",
+            "help"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "REGULAR EVENTS",
+                  "Lines": [
+                    {
+                      "Text": "Hide and Seek runs on scheduled event days when announced.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Purge is the last stretch of wipe, started by an admin: PvP, raiding, and base destruction are allowed serverwide.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Monuments are always PvP. Watch the zone warnings.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "SIGNALS / BOSSES",
+                  "Lines": [
+                    {
+                      "Text": "Heli and Bradley signals may have tiers, cooldowns, rewards, and team recommendations.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Read event warnings before throwing expensive signals like a gremlin with fireworks.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Blocks": [
+                {
+                  "Heading": "SIGNALS / RAID CONTENT",
+                  "Lines": [
+                    {
+                      "Text": "Bradley and Heli signals are player-triggered combat events. Bradley buys spend RP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Raidable Bases are event bases, not normal player bases.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Read difficulty and tier info before donating your kit to the floor.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "HELP PAGES",
+                  "Lines": [
+                    {
+                      "Text": "/hordehelp — Hordes rules and reminders",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/raidbuilderinfo — vetted raidbase builder commands",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/rbinfo — raidable bases overview",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/pvpinfo — PvP zone reminders",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        },
+        {
+          "Title": "Hordes",
+          "Commands": [
+            "hordehelp",
+            "hordeshelp"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "HORDES HELP",
+                  "Lines": [
+                    {
+                      "Text": "Hordes are Defendable Homes style wave events. Build smart, check your foundations, then try not to become part of the furniture.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Your Defendable Home must be built on normal terrain using owned square or triangle foundations.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Foundations must belong to you or your team, friends, or clan.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "You must be inside the Tool Cupboard area of the house when checking.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Invalid areas include monuments, cliffs, mountains, clutter or decor terrain, and bad topology.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Do not build too close to another active Defendable Homes event.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Use /checkfoundations to check all foundations for the event.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "⊘ You or friends are not the foundation owner.",
+                      "Tone (body, accent, warn, muted)": "muted"
+                    },
+                    {
+                      "Text": "⊝ Foundation height or depth does not match.",
+                      "Tone (body, accent, warn, muted)": "muted"
+                    },
+                    {
+                      "Text": "⊛ Terrain topology is invalid. Prohibited: Cliff, Cliffside, Decor, Building, Monument, Clutter, Mountain.",
+                      "Tone (body, accent, warn, muted)": "muted"
+                    },
+                    {
+                      "Text": "◉ Foundation is within 40m of a custom monument.",
+                      "Tone (body, accent, warn, muted)": "muted"
+                    },
+                    {
+                      "Text": "Bring ammo, meds, armor, and room in your inventory.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Do not drag hordes into player bases, vendors, safe builds, or random bystanders.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "PvP only applies if the event area is marked PvP, the weekend window is open, or the server is in Purge.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Loot ownership follows Loot Protection and event rules.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        },
+        {
+          "Title": "Raidable Bases",
+          "Commands": [
+            "rbinfo",
+            "raidablebasesinfo"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "RAIDABLE BASES",
+                  "Lines": [
+                    {
+                      "Text": "Raidable Bases are event bases. They are not normal player bases, and normal player bases stay protected outside Purge or approved raid events.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Easy: available immediately.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Medium: 24h after wipe. A 12h override exists, but that permission is not on the VIP group.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Hard: 72h after wipe. The 48h override is the same story.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Expert: 120h after wipe. The 96h override is not granted with VIP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Nightmare: 168h after wipe. The 144h override is not granted with VIP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Do not interfere with another player's PvE raid unless event rules allow it.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "PvP raid bases, PvP domes, the weekend window, and Purge are different. Read the warnings.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "If you started it, finish it before the server starts spawning consequences with your name on them.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        },
+        {
+          "Title": "Builder",
+          "Commands": [
+            "raidbuilderinfo",
+            "raidbuildinfo",
+            "raidguide"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "RAIDBASE BUILDER HELP",
+                  "Lines": [
+                    {
+                      "Text": "Raidbase builder access is admin-only after vetting. This is not a public toy box.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Players approved to help build or test raidbase content.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Permissions are assigned by an admin only after vetting.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Do not share commands, bases, or access with unapproved players.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/raidbasestart — start or set up a player raidbase build session",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/raidreadypve — mark the saved raidbase ready for PvE use",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/raidreadypvp — mark the saved raidbase ready for PvP use",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/raidbaseend — end or clean up the active raidbase session",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Build clean, playable bases with accessible paths and fair loot flow.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Avoid traps that softlock players, exploit terrain, or create impossible raid paths.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Ask an admin before making major format changes.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        },
+        {
+          "Title": "PvP Zones",
+          "Commands": [
+            "pvpinfo",
+            "pvpzonesinfo"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "PVP ZONES",
+                  "Lines": [
+                    {
+                      "Text": "Monuments are always PvP. Watch the zone warnings before entering.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    },
+                    {
+                      "Text": "Event domes and PvP-marked areas may also allow player combat.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "The weekend window is Friday 8:00 PM through Monday 3:00 AM Eastern. Home shows whether it is open.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Purge is separate. It is an admin toggle for the end of wipe, not the weekend window.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Watch entry and exit messages.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Watch dome and warning visuals.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Watch Purge announcements during the last days of wipe.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "When the server tells you an area is PvP, believe it.",
+                      "Tone (body, accent, warn, muted)": "warn"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        }
+      ],
+      "Enabled": true,
+      "Layout (home or sections)": "sections"
+    },
+    {
+      "Id": "vip",
+      "Sidebar title": "VIP",
+      "Commands": [
+        "vip",
+        "vipinfo"
+      ],
+      "Tabs": [
+        {
+          "Title": "Perks",
+          "Commands": [
+            "vip",
+            "vipinfo"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "TRAVEL",
+                  "Lines": [
+                    {
+                      "Text": "VIP: 4 homes. Default is 3. Home cooldown and countdown are 5 seconds, down from 10.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "VIPx: 5 homes, with no home cooldown or countdown.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Home teleports do not cost RP for anyone. VIP is not a waived fee.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Homes on tugboats are allowed for everyone.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "VIPx can use /tug and /tugboat with a free vehicle license. A resource-bought tugboat is not VIP-only.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "QUEUE & KITS",
+                  "Lines": [
+                    {
+                      "Text": "VIP gets a reconnect grace. VIPx gets the queue skip. They are not the same perk.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/perks shows crate time and kit status. /perks daily and /perks 4day claim the kits.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Kits stay locked for 48 hours after wipe.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Hackable crates: 2.5 minutes for VIP, 60 seconds for VIPx.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "/afk is VIP and VIPx only.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "ECONOMY & REWARDS",
+                  "Lines": [
+                    {
+                      "Text": "Heli signal rewards: 1.25× for VIP, 1.5× for VIPx.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "A 1.1× activity-reward multiplier exists, but that permission is not on the VIP group.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Bradley cooldown cuts are configured for permissions the VIP groups do not have, and Bradley RP rewards are disabled. Do not count on a shorter Bradley cooldown.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Chest stacks: 2 small and 3 large by default, 5 and 5 for VIP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "The VIP shop category has claimable tools: iron axe and pickaxe for VIP, salvaged axe and pickaxe for VIPx, plus a one-per-wipe 4-socket chassis for 7000 RP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Blocks": [
+                {
+                  "Heading": "GAMEPLAY",
+                  "Lines": [
+                    {
+                      "Text": "No decay on personal boats and tugboats for VIP.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Some cosmetic and building skin perks are VIP gated.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                },
+                {
+                  "Heading": "EARLY WIPE ACCESS",
+                  "Lines": [
+                    {
+                      "Text": "Easy raids are immediate for everyone.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Default unlocks: Medium 24h, Hard 72h, Expert 120h, Nightmare 168h.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Shorter times (12h, 48h, 96h, 144h) are configured, and those permissions are not on the VIP group. VIP alone does not unlock them early.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        },
+        {
+          "Title": "Donate",
+          "Commands": [
+            "viphelp",
+            "donationinfo",
+            "donateinfo"
+          ],
+          "Columns": [
+            {
+              "Blocks": [
+                {
+                  "Heading": "HOW TO GET VIP",
+                  "Lines": [
+                    {
+                      "Text": "VIP is donation-supported, and it is not fully automatic yet.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Donate through the server store link listed in Discord.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "After donating, post in the donation channel.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Include your in-game name so an admin can apply the right group.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "VIP lasts until map wipe unless otherwise stated. VIPx follows the vipx group.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "Discord: discord.gg/dFmeweQmsy",
+                      "Tone (body, accent, warn, muted)": "accent"
+                    },
+                    {
+                      "Text": "/vip opens this page.",
+                      "Tone (body, accent, warn, muted)": "body"
+                    },
+                    {
+                      "Text": "VIP is convenience. Core content stays playable for everyone.",
+                      "Tone (body, accent, warn, muted)": "muted"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Show status": false,
+          "About": [],
+          "Rules title": null,
+          "Rules": [],
+          "Discord title": null,
+          "Discord lines": [],
+          "Discord invite": null,
+          "Buttons": []
+        }
+      ],
+      "Enabled": true,
+      "Layout (home or sections)": "sections"
+    }
+  ]
+}
