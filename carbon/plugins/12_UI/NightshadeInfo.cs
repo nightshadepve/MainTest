@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeInfo", "Nightshade", "1.1.0")]
+    [Info("NightshadeInfo", "Nightshade", "1.1.1")]
     [Description("Nightshade info panel: live status, rules, and Discord on the home page.")]
     public class NightshadeInfo : RustPlugin
     {
@@ -80,7 +80,7 @@ namespace Oxide.Plugins
             [JsonProperty("Ordinal in month (1 = first)")] public int Ordinal = 1;
             [JsonProperty("Hour")] public int Hour = 14;
             [JsonProperty("Minute")] public int Minute = 0;
-            [JsonProperty("Label")] public string Label = "First Thursday · 2:00 PM Eastern";
+            [JsonProperty("Label")] public string Label = "First Thursday \u00B7 2:00 PM Eastern";
         }
 
         private class PurgeCfg
@@ -369,7 +369,7 @@ namespace Oxide.Plugins
             Label(container, window + ".TagText", window + ".Tag", settings.ServerTag, Hex(settings.Accent), 12, TextAnchor.MiddleCenter, true,
                 "0 0", "1 1", "0 0", "0 0");
             Button(container, window + ".Header", window + ".Close", UiCommand + " close", Hex("#2A2033", 0.9f), width - 40f, 12f, 26f, 26f, false);
-            Label(container, window + ".CloseX", window + ".Close", "✕", Hex("#F4F1EA"), 16, TextAnchor.MiddleCenter, true, "0 0", "1 1", "0 0", "0 0");
+            Label(container, window + ".CloseX", window + ".Close", "\u2715", Hex("#F4F1EA"), 16, TextAnchor.MiddleCenter, true, "0 0", "1 1", "0 0", "0 0");
         }
 
         private void DrawSidebar(CuiElementContainer container, string window, float height, int selected)
@@ -731,7 +731,7 @@ namespace Oxide.Plugins
             else purgeSeconds = (purgeStart - now).TotalSeconds;
             snap.PurgeValue = (purge ? "Ends in " : "Starts in ") + FormatDur(purgeSeconds);
 
-            string wipeLabel = settings.Wipe == null || string.IsNullOrEmpty(settings.Wipe.Label) ? "First Thursday · 2:00 PM Eastern" : settings.Wipe.Label;
+            string wipeLabel = settings.Wipe == null || string.IsNullOrEmpty(settings.Wipe.Label) ? "First Thursday \u00B7 2:00 PM Eastern" : settings.Wipe.Label;
             snap.PurgeDetail = "Tue of wipe week - Thu 2 PM wipe\n" + wipeLabel;
             int online = 0;
             foreach (BasePlayer other in BasePlayer.activePlayerList)
@@ -1300,56 +1300,56 @@ namespace Oxide.Plugins
                         About = new List<Block>
                         {
                             Bk("WELCOME",
-                                L("• Nightshade is a cozy-but-feral solo/duo server. Max team size is 2."),
-                                L("• The week is PvE. PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
-                                L("• Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. Serverwide FAFO."),
-                                L("• Monuments and events are always PvP."),
-                                L("• Vanilla gathering on resources, components, and food."),
-                                L("• 10x+ stack sizes, with exceptions for balance."),
-                                L("• Monthly wipe: first Thursday at 2:00 PM Eastern, unless Discord says otherwise."),
-                                L("• Custom progression through /shop, Skill Tree, events, and VIP perks."),
-                                L("• Earned event loot locks to you. Base boxes stay yours. See Systems for the timers."),
-                                L("• Active admins and Discord support.")),
+                                L("\u2022 Nightshade is a cozy-but-feral solo/duo server. Max team size is 2."),
+                                L("\u2022 The week is PvE. PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
+                                L("\u2022 Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. Serverwide FAFO."),
+                                L("\u2022 Monuments and events are always PvP."),
+                                L("\u2022 Vanilla gathering on resources, components, and food."),
+                                L("\u2022 10x+ stack sizes, with exceptions for balance."),
+                                L("\u2022 Monthly wipe: first Thursday at 2:00 PM Eastern, unless Discord says otherwise."),
+                                L("\u2022 Custom progression through /shop, Skill Tree, events, and VIP perks."),
+                                L("\u2022 Earned event loot locks to you. Base boxes stay yours. See Systems for the timers."),
+                                L("\u2022 Active admins and Discord support.")),
                             Bk("WHERE TO START",
-                                L("• /rules on this page. /commands second. /shop when you are ready to make questionable financial choices with RP."))
+                                L("\u2022 /rules on this page. /commands second. /shop when you are ready to make questionable financial choices with RP."))
                         },
                         RulesTitle = "SERVER RULES",
                         Rules = new List<Block>
                         {
                             Bk("TEAMS",
-                                L("• Solo/duo only. Max team size is 2.")),
+                                L("\u2022 Solo/duo only. Max team size is 2.")),
                             Bk("BASES & BUILDING",
-                                L("• No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.", "warn"),
-                                L("• PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
-                                L("• Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe."),
-                                L("• Do not block roads, monuments, caves, vendors, event areas, or another player's build.", "warn"),
-                                L("• Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.")),
+                                L("\u2022 No raiding, damaging, griefing, laddering, walling in, trapping, or messing with player bases outside the PvP weekend and Purge.", "warn"),
+                                L("\u2022 PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern."),
+                                L("\u2022 Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe."),
+                                L("\u2022 Do not block roads, monuments, caves, vendors, event areas, or another player's build.", "warn"),
+                                L("\u2022 Build for style, defense, roleplay, and deeply suspicious architecture. That part is encouraged.")),
                             Bk("LOOT",
-                                L("• Do not take from another player's boxes, furnaces, or TC storage.", "warn"),
-                                L("• You, your teammate, TC auth, or someone you /share with can open them."),
-                                L("• Sleeping players cannot be looted, including during PvP weekend and Purge.", "warn"),
-                                L("• Bradley, heli, NPC, hackable crates, and supply drops lock to whoever earned them."),
-                                L("• Those locks, and base storage locks, turn off during the PvP weekend only."),
-                                L("• Purge does not turn loot protection off. A PvP monument does not either."),
-                                L("• If it says the loot is not yours, it is not yours.", "warn")),
+                                L("\u2022 Do not take from another player's boxes, furnaces, or TC storage.", "warn"),
+                                L("\u2022 You, your teammate, TC auth, or someone you /share with can open them."),
+                                L("\u2022 Sleeping players cannot be looted, including during PvP weekend and Purge.", "warn"),
+                                L("\u2022 Bradley, heli, NPC, hackable crates, and supply drops lock to whoever earned them."),
+                                L("\u2022 Those locks, and base storage locks, turn off during the PvP weekend only."),
+                                L("\u2022 Purge does not turn loot protection off. A PvP monument does not either."),
+                                L("\u2022 If it says the loot is not yours, it is not yours.", "warn")),
                             Bk("PVP",
-                                L("• Monuments and events are always PvP.", "warn"),
-                                L("• Raiding and PvP are allowed during the PvP weekend and during Purge."),
-                                L("• Outside those, do not attack, bait, exploit rules, or play loophole lawyer.", "warn")),
+                                L("\u2022 Monuments and events are always PvP.", "warn"),
+                                L("\u2022 Raiding and PvP are allowed during the PvP weekend and during Purge."),
+                                L("\u2022 Outside those, do not attack, bait, exploit rules, or play loophole lawyer.", "warn")),
                             Bk("COMMUNITY",
-                                L("• No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.", "warn"),
-                                L("• Trash talk can be spicy. Do not make it personal, creepy, or radioactive."),
-                                L("• Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene."))
+                                L("\u2022 No hate speech, harassment, stalking, threats, doxxing, slurs, cheating, exploiting, or ban evading.", "warn"),
+                                L("\u2022 Trash talk can be spicy. Do not make it personal, creepy, or radioactive."),
+                                L("\u2022 Admins have final say on edge cases. If you have to say \"technically,\" step away from the crime scene."))
                         },
                         DiscordTitle = "DISCORD",
                         DiscordInvite = "discord.gg/dFmeweQmsy",
                         DiscordLines = new List<Line>
                         {
-                            L("• Wipe changes, events, and support are posted in Discord."),
-                            L("• Select the invite below if you want to copy it."),
-                            L("• Donate through the store link in Discord. After you donate, post in the donation channel with your in-game name."),
-                            L("• VIP is permanent after one donation, unless you break the rules."),
-                            L("• VIPx is a monthly subscription.", "muted")
+                            L("\u2022 Wipe changes, events, and support are posted in Discord."),
+                            L("\u2022 Select the invite below if you want to copy it."),
+                            L("\u2022 Donate through the store link in Discord. After you donate, post in the donation channel with your in-game name."),
+                            L("\u2022 VIP is permanent after one donation, unless you break the rules."),
+                            L("\u2022 VIPx is a monthly subscription.", "muted")
                         }
                     }
                 }
@@ -1372,32 +1372,32 @@ namespace Oxide.Plugins
                         {
                             Col(
                                 Bk("CORE",
-                                    L("• /info — open this panel"),
-                                    L("• /rules — rules on this home page"),
-                                    L("• /commands — this list"),
-                                    L("• /systems — server systems"),
-                                    L("• /events — events and help"),
-                                    L("• /vip — VIP perks and donation help")),
+                                    L("\u2022 /info \u2014 open this panel"),
+                                    L("\u2022 /rules \u2014 rules on this home page"),
+                                    L("\u2022 /commands \u2014 this list"),
+                                    L("\u2022 /systems \u2014 server systems"),
+                                    L("\u2022 /events \u2014 events and help"),
+                                    L("\u2022 /vip \u2014 VIP perks and donation help")),
                                 Bk("HOMES",
-                                    L("• /sethome <name> — save a home"),
-                                    L("• /home <name> — teleport home"),
-                                    L("• /removehome <name> — remove a home"),
-                                    L("• Player-to-player teleport commands are not listed for next wipe.", "muted"))),
+                                    L("\u2022 /sethome <name> \u2014 save a home"),
+                                    L("\u2022 /home <name> \u2014 teleport home"),
+                                    L("\u2022 /removehome <name> \u2014 remove a home"),
+                                    L("\u2022 Player-to-player teleport commands are not listed for next wipe.", "muted"))),
                             Col(
                                 Bk("PROGRESSION",
-                                    L("• /shop or /store — the RP shop"),
-                                    L("• /skills, /skilltree, /st — Skill Tree"),
-                                    L("• /perks — VIP kit status"),
-                                    L("• /perks daily and /perks 4day — claim VIP kits")),
+                                    L("\u2022 /shop or /store \u2014 the RP shop"),
+                                    L("\u2022 /skills, /skilltree, /st \u2014 Skill Tree"),
+                                    L("\u2022 /perks \u2014 VIP kit status"),
+                                    L("\u2022 /perks daily and /perks 4day \u2014 claim VIP kits")),
                                 Bk("SKINS, LOOT, HELP",
-                                    L("• /skin, /skincraft, /skinitem, /skininv, /skinauto, /skinbase"),
-                                    L("• /skinrequest <WorkshopID> — request a Workshop skin"),
-                                    L("• /loot — who owns the container you are looking at"),
-                                    L("• /share, /share list, /share remove, /share clear"),
-                                    L("• /hordehelp — Hordes help"),
-                                    L("• /checkfoundations — Defendable Homes foundations"),
-                                    L("• /raidbuilderinfo — vetted raidbase builder help"),
-                                    L("• /tug or /tugboat — VIPx tugboat license")))
+                                    L("\u2022 /skin, /skincraft, /skinitem, /skininv, /skinauto, /skinbase"),
+                                    L("\u2022 /skinrequest <WorkshopID> \u2014 request a Workshop skin"),
+                                    L("\u2022 /loot \u2014 who owns the container you are looking at"),
+                                    L("\u2022 /share, /share list, /share remove, /share clear"),
+                                    L("\u2022 /hordehelp \u2014 Hordes help"),
+                                    L("\u2022 /checkfoundations \u2014 Defendable Homes foundations"),
+                                    L("\u2022 /raidbuilderinfo \u2014 vetted raidbase builder help"),
+                                    L("\u2022 /tug or /tugboat \u2014 VIPx tugboat license")))
                         }
                     }
                 }
@@ -1420,29 +1420,29 @@ namespace Oxide.Plugins
                         {
                             Col(
                                 Bk("ECONOMY",
-                                    L("• /shop opens the RP shop. /store does the same."),
-                                    L("• RP is the player currency. It is ServerRewards points."),
-                                    L("• Activity rewards pay RP. Economics is turned off."),
-                                    L("• The Admin Shop tab trades items for Blood. It is not a second cash shop."),
-                                    L("• There is no separate Black Market currency."),
-                                    L("• Your RP on Home comes from ServerRewards. If it does not answer, it shows -.")),
+                                    L("\u2022 /shop opens the RP shop. /store does the same."),
+                                    L("\u2022 RP is the player currency. It is ServerRewards points."),
+                                    L("\u2022 Activity rewards pay RP. Economics is turned off."),
+                                    L("\u2022 The Admin Shop tab trades items for Blood. It is not a second cash shop."),
+                                    L("\u2022 There is no separate Black Market currency."),
+                                    L("\u2022 Your RP on Home comes from ServerRewards. If it does not answer, it shows -.")),
                                 Bk("LOOT PROTECTION",
-                                    L("• Boxes, furnaces, and TC storage: you, your teammate, or TC auth. /share opens one container for someone else."),
-                                    L("• Sleeping players stay unlootable all week, including PvP weekend and Purge. Teammates can still loot them."),
-                                    L("• Bradley locks 5 min after 20% damage. Heli locks 8 min after 35%. NPC locks 5 min after 20%."),
-                                    L("• A hacked crate locks 15 min to the hacker. A supply drop locks 10 min to whoever threw the signal."),
-                                    L("• During the PvP weekend those locks, and base storage locks, turn off."),
-                                    L("• Purge does not turn them off. Monuments being PvP does not turn them off."),
-                                    L("• Domes only show over events, not monuments.", "muted"))),
+                                    L("\u2022 Boxes, furnaces, and TC storage: you, your teammate, or TC auth. /share opens one container for someone else."),
+                                    L("\u2022 Sleeping players stay unlootable all week, including PvP weekend and Purge. Teammates can still loot them."),
+                                    L("\u2022 Bradley locks 5 min after 20% damage. Heli locks 8 min after 35%. NPC locks 5 min after 20%."),
+                                    L("\u2022 A hacked crate locks 15 min to the hacker. A supply drop locks 10 min to whoever threw the signal."),
+                                    L("\u2022 During the PvP weekend those locks, and base storage locks, turn off."),
+                                    L("\u2022 Purge does not turn them off. Monuments being PvP does not turn them off."),
+                                    L("\u2022 Domes only show over events, not monuments.", "muted"))),
                             Col(
                                 Bk("PROGRESSION",
-                                    L("• Skill Tree unlocks long-term bonuses. /skills, /skilltree, or /st.")),
+                                    L("\u2022 Skill Tree unlocks long-term bonuses. /skills, /skilltree, or /st.")),
                                 Bk("VEHICLES",
-                                    L("• Car chassis are buyable with RP from /shop."),
-                                    L("• Build a purchased chassis at the car lift."),
-                                    L("• 4-module chassis are in the VIP shop."),
-                                    L("• /tug or /tugboat is the tugboat license."),
-                                    L("• ChestStacks: 3 stacks for non-VIP, 5 stacks for VIP.")))
+                                    L("\u2022 Car chassis are buyable with RP from /shop."),
+                                    L("\u2022 Build a purchased chassis at the car lift."),
+                                    L("\u2022 4-module chassis are in the VIP shop."),
+                                    L("\u2022 /tug or /tugboat is the tugboat license."),
+                                    L("\u2022 ChestStacks: 3 stacks for non-VIP, 5 stacks for VIP.")))
                         }
                     }
                 }
@@ -1466,23 +1466,23 @@ namespace Oxide.Plugins
                         {
                             Col(
                                 Bk("REGULAR EVENTS",
-                                    L("• Hide and Seek runs on scheduled event days when announced."),
-                                    L("• Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. PvP, raiding, and base destruction are allowed serverwide."),
-                                    L("• Monuments and events are always PvP.", "warn"),
-                                    L("• The PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern.")),
+                                    L("\u2022 Hide and Seek runs on scheduled event days when announced."),
+                                    L("\u2022 Purge is Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. PvP, raiding, and base destruction are allowed serverwide."),
+                                    L("\u2022 Monuments and events are always PvP.", "warn"),
+                                    L("\u2022 The PvP weekend is Friday 8:00 PM to Monday 3:00 AM Eastern.")),
                                 Bk("SIGNALS",
-                                    L("• Heli and Bradley signals may have tiers, cooldowns, rewards, and team recommendations."),
-                                    L("• Read the signal card before you call one. Solo/duo is the server cap."))),
+                                    L("\u2022 Heli and Bradley signals may have tiers, cooldowns, rewards, and team recommendations."),
+                                    L("\u2022 Read the signal card before you call one. Solo/duo is the server cap."))),
                             Col(
                                 Bk("RAID CONTENT",
-                                    L("• Bradley and Heli signals are player-triggered combat events."),
-                                    L("• Raidable Bases are event bases, not normal player bases."),
-                                    L("• Read the difficulty before you start one.")),
+                                    L("\u2022 Bradley and Heli signals are player-triggered combat events."),
+                                    L("\u2022 Raidable Bases are event bases, not normal player bases."),
+                                    L("\u2022 Read the difficulty before you start one.")),
                                 Bk("HELP PAGES",
-                                    L("• /hordehelp — Hordes rules"),
-                                    L("• /raidbuilderinfo — vetted raidbase builder commands"),
-                                    L("• /rbinfo — raidable bases"),
-                                    L("• /pvpinfo — where PvP is allowed")))
+                                    L("\u2022 /hordehelp \u2014 Hordes rules"),
+                                    L("\u2022 /raidbuilderinfo \u2014 vetted raidbase builder commands"),
+                                    L("\u2022 /rbinfo \u2014 raidable bases"),
+                                    L("\u2022 /pvpinfo \u2014 where PvP is allowed")))
                         }
                     },
                     new Tab
@@ -1492,21 +1492,21 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("HORDES",
-                                L("• Hordes are Defendable Homes style wave events. Build smart, check your foundations, then try not to become part of the furniture."),
-                                L("• Your Defendable Home must be built on normal terrain using owned square or triangle foundations."),
-                                L("• Foundations must belong to you or your team. Max team size is 2."),
-                                L("• You must be inside the Tool Cupboard area of the house when checking."),
-                                L("• Invalid areas include monuments, cliffs, mountains, clutter or decor terrain, and bad topology."),
-                                L("• Do not build too close to another active Defendable Homes event."),
-                                L("• Use /checkfoundations to check all foundations for the event."),
-                                L("• ⊘ You are not the foundation owner.", "muted"),
-                                L("• ⊝ Foundation height or depth does not match.", "muted"),
-                                L("• ⊛ Terrain topology is invalid. Prohibited: Cliff, Cliffside, Decor, Building, Monument, Clutter, Mountain.", "muted"),
-                                L("• ◉ Foundation is within 40m of a custom monument.", "muted"),
-                                L("• Bring ammo, meds, armor, and room in your inventory."),
-                                L("• Do not drag hordes into player bases, vendors, safe builds, or random bystanders."),
-                                L("• Hordes are events, so they are PvP. The rest of the map follows the weekend window and Purge."),
-                                L("• Loot ownership follows Loot Protection and event rules.")))
+                                L("\u2022 Hordes are Defendable Homes style wave events. Build smart, check your foundations, then try not to become part of the furniture."),
+                                L("\u2022 Your Defendable Home must be built on normal terrain using owned square or triangle foundations."),
+                                L("\u2022 Foundations must belong to you or your team. Max team size is 2."),
+                                L("\u2022 You must be inside the Tool Cupboard area of the house when checking."),
+                                L("\u2022 Invalid areas include monuments, cliffs, mountains, clutter or decor terrain, and bad topology."),
+                                L("\u2022 Do not build too close to another active Defendable Homes event."),
+                                L("\u2022 Use /checkfoundations to check all foundations for the event."),
+                                L("\u2022 \u2298 You are not the foundation owner.", "muted"),
+                                L("\u2022 \u229D Foundation height or depth does not match.", "muted"),
+                                L("\u2022 \u229B Terrain topology is invalid. Prohibited: Cliff, Cliffside, Decor, Building, Monument, Clutter, Mountain.", "muted"),
+                                L("\u2022 \u25C9 Foundation is within 40m of a custom monument.", "muted"),
+                                L("\u2022 Bring ammo, meds, armor, and room in your inventory."),
+                                L("\u2022 Do not drag hordes into player bases, vendors, safe builds, or random bystanders."),
+                                L("\u2022 Hordes are events, so they are PvP. The rest of the map follows the weekend window and Purge."),
+                                L("\u2022 Loot ownership follows Loot Protection and event rules.")))
                         }
                     },
                     new Tab
@@ -1516,16 +1516,16 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("RAIDABLE BASES",
-                                L("• Raidable Bases are event bases. They are not player bases."),
-                                L("• Player bases stay protected outside the PvP weekend and Purge."),
-                                L("• Easy: available right away for everyone."),
-                                L("• Medium: 24h after wipe. VIP: 12h."),
-                                L("• Hard: 72h after wipe. VIP: 48h."),
-                                L("• Expert: 120h after wipe. VIP: 96h."),
-                                L("• Nightmare: 168h after wipe. VIP: 144h."),
-                                L("• Do not interfere with another player's PvE raid unless the event rules allow it."),
-                                L("• PvP raid bases, the weekend window, and Purge are different. Read the card."),
-                                L("• If you started it, finish it.")))
+                                L("\u2022 Raidable Bases are event bases. They are not player bases."),
+                                L("\u2022 Player bases stay protected outside the PvP weekend and Purge."),
+                                L("\u2022 Easy: available right away for everyone."),
+                                L("\u2022 Medium: 24h after wipe. VIP: 12h."),
+                                L("\u2022 Hard: 72h after wipe. VIP: 48h."),
+                                L("\u2022 Expert: 120h after wipe. VIP: 96h."),
+                                L("\u2022 Nightmare: 168h after wipe. VIP: 144h."),
+                                L("\u2022 Do not interfere with another player's PvE raid unless the event rules allow it."),
+                                L("\u2022 PvP raid bases, the weekend window, and Purge are different. Read the card."),
+                                L("\u2022 If you started it, finish it.")))
                         }
                     },
                     new Tab
@@ -1535,17 +1535,17 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("RAIDBASE BUILDER",
-                                L("• Raidbase builder access is admin-only after vetting. This is not a public toy box.", "warn"),
-                                L("• For players approved to help build or test raidbase content."),
-                                L("• Permissions are assigned by an admin only after vetting."),
-                                L("• Do not share commands, bases, or access with unapproved players."),
-                                L("• /raidbasestart — start a player raidbase build session"),
-                                L("• /raidreadypve — mark the saved raidbase ready for PvE"),
-                                L("• /raidreadypvp — mark the saved raidbase ready for PvP"),
-                                L("• /raidbaseend — end the active raidbase session"),
-                                L("• Build clean, playable bases with accessible paths and fair loot flow."),
-                                L("• Avoid traps that softlock players, exploit terrain, or create impossible raid paths."),
-                                L("• Ask an admin before making major format changes.")))
+                                L("\u2022 Raidbase builder access is admin-only after vetting. This is not a public toy box.", "warn"),
+                                L("\u2022 For players approved to help build or test raidbase content."),
+                                L("\u2022 Permissions are assigned by an admin only after vetting."),
+                                L("\u2022 Do not share commands, bases, or access with unapproved players."),
+                                L("\u2022 /raidbasestart \u2014 start a player raidbase build session"),
+                                L("\u2022 /raidreadypve \u2014 mark the saved raidbase ready for PvE"),
+                                L("\u2022 /raidreadypvp \u2014 mark the saved raidbase ready for PvP"),
+                                L("\u2022 /raidbaseend \u2014 end the active raidbase session"),
+                                L("\u2022 Build clean, playable bases with accessible paths and fair loot flow."),
+                                L("\u2022 Avoid traps that softlock players, exploit terrain, or create impossible raid paths."),
+                                L("\u2022 Ask an admin before making major format changes.")))
                         }
                     },
                     new Tab
@@ -1555,12 +1555,12 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("WHERE PVP IS ON",
-                                L("• Monuments are always PvP.", "warn"),
-                                L("• Events are always PvP. A dome only appears over an event.", "warn"),
-                                L("• PvP weekend: Friday 8:00 PM to Monday 3:00 AM Eastern. Raiding is allowed."),
-                                L("• Purge: Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. Raiding is allowed."),
-                                L("• Outside those, do not attack players or raid bases."),
-                                L("• Home shows which of PVE, PVP, or PURGE is on right now.")))
+                                L("\u2022 Monuments are always PvP.", "warn"),
+                                L("\u2022 Events are always PvP. A dome only appears over an event.", "warn"),
+                                L("\u2022 PvP weekend: Friday 8:00 PM to Monday 3:00 AM Eastern. Raiding is allowed."),
+                                L("\u2022 Purge: Tuesday of wipe week at 2:00 PM Eastern until the Thursday wipe. Raiding is allowed."),
+                                L("\u2022 Outside those, do not attack players or raid bases."),
+                                L("\u2022 Home shows which of PVE, PVP, or PURGE is on right now.")))
                         }
                     }
                 }
@@ -1583,43 +1583,43 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("VIP",
-                                L("• Permanent — one donation", "accent"),
-                                L("• Kept unless you break the rules."),
-                                L("• 4 /home slots instead of 3."),
-                                L("• Reduced /home cooldown: 5 seconds, down from 10."),
-                                L("• Home teleport has no RP cost."),
-                                L("• Can set a home on your tugboat."),
-                                L("• Queue skip and a 5-minute reconnect hold."),
-                                L("• 1.1× RP activity multiplier."),
-                                L("• HeliSignals reward multiplier: 1.25×."),
-                                L("• Bradley signal cooldown: 50 min."),
-                                L("• ChestStacks: 5 stacks instead of 3."),
-                                L("• Hackable crates unlock in 2.5 minutes."),
-                                L("• No decay on personal boats and tugboats."),
-                                L("• 4-module car chassis access in the RP shop."),
-                                L("• Claimable tool kits in the VIP shop. /perks daily and /perks 4day."),
-                                L("• Medium raids: 12h after wipe (default 24h)."),
-                                L("• Hard raids: 48h after wipe (default 72h)."),
-                                L("• Expert raids: 96h after wipe (default 120h)."),
-                                L("• Nightmare raids: 144h after wipe (default 168h)."))),
+                                L("\u2022 Permanent \u2014 one donation", "accent"),
+                                L("\u2022 Kept unless you break the rules."),
+                                L("\u2022 4 /home slots instead of 3."),
+                                L("\u2022 Reduced /home cooldown: 5 seconds, down from 10."),
+                                L("\u2022 Home teleport has no RP cost."),
+                                L("\u2022 Can set a home on your tugboat."),
+                                L("\u2022 Queue skip and a 5-minute reconnect hold."),
+                                L("\u2022 1.1\u00D7 RP activity multiplier."),
+                                L("\u2022 HeliSignals reward multiplier: 1.25\u00D7."),
+                                L("\u2022 Bradley signal cooldown: 50 min."),
+                                L("\u2022 ChestStacks: 5 stacks instead of 3."),
+                                L("\u2022 Hackable crates unlock in 2.5 minutes."),
+                                L("\u2022 No decay on personal boats and tugboats."),
+                                L("\u2022 4-module car chassis access in the RP shop."),
+                                L("\u2022 Claimable tool kits in the VIP shop. /perks daily and /perks 4day."),
+                                L("\u2022 Medium raids: 12h after wipe (default 24h)."),
+                                L("\u2022 Hard raids: 48h after wipe (default 72h)."),
+                                L("\u2022 Expert raids: 96h after wipe (default 120h)."),
+                                L("\u2022 Nightmare raids: 144h after wipe (default 168h)."))),
                             Col(Bk("VIPx",
-                                L("• Monthly", "accent"),
-                                L("• A monthly subscription."),
-                                L("• 5 /home slots instead of 3."),
-                                L("• No /home cooldown."),
-                                L("• Home teleport has no RP cost."),
-                                L("• Can set a home on your tugboat."),
-                                L("• Can use /tug. The license is free."),
-                                L("• Queue skip and a 5-minute reconnect hold."),
-                                L("• 1.1× RP activity multiplier."),
-                                L("• HeliSignals reward multiplier: 1.5×."),
-                                L("• Bradley signal cooldown: 30 min."),
-                                L("• ChestStacks: 5 stacks instead of 3."),
-                                L("• Hackable crates unlock in 60 seconds."),
-                                L("• No decay on personal boats and tugboats."),
-                                L("• 4-module car chassis access in the RP shop."),
-                                L("• VIPx shop tools, plus /perks daily and /perks 4day."),
-                                L("• Same early raids as VIP: Medium 12h, Hard 48h, Expert 96h, Nightmare 144h.")))
+                                L("\u2022 Monthly", "accent"),
+                                L("\u2022 A monthly subscription."),
+                                L("\u2022 5 /home slots instead of 3."),
+                                L("\u2022 No /home cooldown."),
+                                L("\u2022 Home teleport has no RP cost."),
+                                L("\u2022 Can set a home on your tugboat."),
+                                L("\u2022 Can use /tug. The license is free."),
+                                L("\u2022 Queue skip and a 5-minute reconnect hold."),
+                                L("\u2022 1.1\u00D7 RP activity multiplier."),
+                                L("\u2022 HeliSignals reward multiplier: 1.5\u00D7."),
+                                L("\u2022 Bradley signal cooldown: 30 min."),
+                                L("\u2022 ChestStacks: 5 stacks instead of 3."),
+                                L("\u2022 Hackable crates unlock in 60 seconds."),
+                                L("\u2022 No decay on personal boats and tugboats."),
+                                L("\u2022 4-module car chassis access in the RP shop."),
+                                L("\u2022 VIPx shop tools, plus /perks daily and /perks 4day."),
+                                L("\u2022 Same early raids as VIP: Medium 12h, Hard 48h, Expert 96h, Nightmare 144h.")))
                         }
                     },
                     new Tab
@@ -1629,15 +1629,15 @@ namespace Oxide.Plugins
                         Columns = new List<Column>
                         {
                             Col(Bk("HOW TO GET VIP",
-                                L("• VIP is permanent after one donation, unless you break the rules.", "accent"),
-                                L("• VIPx is monthly.", "accent"),
-                                L("• It is donation-supported, and it is not fully automatic yet."),
-                                L("• Donate through the server store link in Discord."),
-                                L("• After donating, post in the donation channel."),
-                                L("• Include your in-game name so an admin can apply the right group."),
-                                L("• Discord: discord.gg/dFmeweQmsy"),
-                                L("• /vip opens this page."),
-                                L("• VIP is convenience. Core content stays playable for everyone.", "muted")))
+                                L("\u2022 VIP is permanent after one donation, unless you break the rules.", "accent"),
+                                L("\u2022 VIPx is monthly.", "accent"),
+                                L("\u2022 It is donation-supported, and it is not fully automatic yet."),
+                                L("\u2022 Donate through the server store link in Discord."),
+                                L("\u2022 After donating, post in the donation channel."),
+                                L("\u2022 Include your in-game name so an admin can apply the right group."),
+                                L("\u2022 Discord: discord.gg/dFmeweQmsy"),
+                                L("\u2022 /vip opens this page."),
+                                L("\u2022 VIP is convenience. Core content stays playable for everyone.", "muted")))
                         }
                     }
                 }
