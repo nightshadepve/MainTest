@@ -324,11 +324,11 @@
           "List of prefabs": [
             {
               "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
+              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
+              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
@@ -342,39 +342,9 @@
           "Use minimum and maximum values? [true/false]": false,
           "List of items": [
             {
-              "ShortName": "grenade.f1",
-              "Minimum": 5,
-              "Maximum": 10,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "largemedkit",
-              "Minimum": 5,
-              "Maximum": 10,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "syringe.medical",
-              "Minimum": 30,
-              "Maximum": 60,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "ammo.pistol",
+              "ShortName": "scrap",
               "Minimum": 500,
-              "Maximum": 750,
+              "Maximum": 1000,
               "Chance probability [0.0-100.0]": 100.0,
               "Is this a blueprint? [true/false]": false,
               "SkinID (0 - default)": 0,
@@ -392,9 +362,39 @@
               "Name (empty - default)": ""
             },
             {
-              "ShortName": "scrap",
+              "ShortName": "ammo.pistol",
               "Minimum": 500,
-              "Maximum": 1000,
+              "Maximum": 750,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "syringe.medical",
+              "Minimum": 30,
+              "Maximum": 60,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "largemedkit",
+              "Minimum": 5,
+              "Maximum": 10,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "grenade.f1",
+              "Minimum": 5,
+              "Maximum": 10,
               "Chance probability [0.0-100.0]": 100.0,
               "Is this a blueprint? [true/false]": false,
               "SkinID (0 - default)": 0,
@@ -601,11 +601,7 @@
           "List of prefabs": [
             {
               "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
-            },
-            {
-              "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/bundled/prefabs/radtown/crate_elite.prefab"
+              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
@@ -613,7 +609,11 @@
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_elite.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
@@ -627,39 +627,9 @@
           "Use minimum and maximum values? [true/false]": false,
           "List of items": [
             {
-              "ShortName": "flare",
-              "Minimum": 1,
-              "Maximum": 1,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 2888602942,
-              "Text (empty - default)": "",
-              "Name (empty - default)": "Flare for MEDIUM"
-            },
-            {
-              "ShortName": "grenade.f1",
-              "Minimum": 7,
-              "Maximum": 15,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "largemedkit",
-              "Minimum": 7,
-              "Maximum": 15,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "syringe.medical",
-              "Minimum": 50,
-              "Maximum": 100,
+              "ShortName": "scrap",
+              "Minimum": 750,
+              "Maximum": 1500,
               "Chance probability [0.0-100.0]": 100.0,
               "Is this a blueprint? [true/false]": false,
               "SkinID (0 - default)": 0,
@@ -677,14 +647,44 @@
               "Name (empty - default)": ""
             },
             {
-              "ShortName": "scrap",
-              "Minimum": 750,
-              "Maximum": 1500,
+              "ShortName": "syringe.medical",
+              "Minimum": 50,
+              "Maximum": 100,
               "Chance probability [0.0-100.0]": 100.0,
               "Is this a blueprint? [true/false]": false,
               "SkinID (0 - default)": 0,
               "Text (empty - default)": "",
               "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "largemedkit",
+              "Minimum": 7,
+              "Maximum": 15,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "grenade.f1",
+              "Minimum": 7,
+              "Maximum": 15,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "flare",
+              "Minimum": 1,
+              "Maximum": 1,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 2888602942,
+              "Text (empty - default)": "",
+              "Name (empty - default)": "Flare for MEDIUM"
             },
             {
               "ShortName": "flare",
@@ -939,19 +939,7 @@
           "List of prefabs": [
             {
               "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
-            },
-            {
-              "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/bundled/prefabs/radtown/crate_elite.prefab"
-            },
-            {
-              "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/prefabs/misc/supply drop/supply_drop.prefab"
-            },
-            {
-              "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/prefabs/npc/m2bradley/bradley_crate.prefab"
+              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
@@ -959,7 +947,19 @@
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
-              "Prefab path": "assets/prefabs/deployable/chinooklockedcrate/codelockedhackablecrate.prefab"
+              "Prefab path": "assets/prefabs/npc/m2bradley/bradley_crate.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/prefabs/misc/supply drop/supply_drop.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/bundled/prefabs/radtown/crate_elite.prefab"
+            },
+            {
+              "Chance probability [0.0-100.0]": 100.0,
+              "Prefab path": "assets/rust.ai/agents/npcplayer/humannpc/scientist/scientistnpc_heavy.prefab"
             },
             {
               "Chance probability [0.0-100.0]": 100.0,
@@ -973,29 +973,9 @@
           "Use minimum and maximum values? [true/false]": false,
           "List of items": [
             {
-              "ShortName": "grenade.f1",
-              "Minimum": 10,
-              "Maximum": 20,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "largemedkit",
-              "Minimum": 10,
-              "Maximum": 20,
-              "Chance probability [0.0-100.0]": 100.0,
-              "Is this a blueprint? [true/false]": false,
-              "SkinID (0 - default)": 0,
-              "Text (empty - default)": "",
-              "Name (empty - default)": ""
-            },
-            {
-              "ShortName": "syringe.medical",
-              "Minimum": 100,
-              "Maximum": 200,
+              "ShortName": "scrap",
+              "Minimum": 1000,
+              "Maximum": 2000,
               "Chance probability [0.0-100.0]": 100.0,
               "Is this a blueprint? [true/false]": false,
               "SkinID (0 - default)": 0,
@@ -1013,9 +993,29 @@
               "Name (empty - default)": ""
             },
             {
-              "ShortName": "scrap",
-              "Minimum": 1000,
-              "Maximum": 2000,
+              "ShortName": "syringe.medical",
+              "Minimum": 100,
+              "Maximum": 200,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "largemedkit",
+              "Minimum": 10,
+              "Maximum": 20,
+              "Chance probability [0.0-100.0]": 100.0,
+              "Is this a blueprint? [true/false]": false,
+              "SkinID (0 - default)": 0,
+              "Text (empty - default)": "",
+              "Name (empty - default)": ""
+            },
+            {
+              "ShortName": "grenade.f1",
+              "Minimum": 10,
+              "Maximum": 20,
               "Chance probability [0.0-100.0]": 100.0,
               "Is this a blueprint? [true/false]": false,
               "SkinID (0 - default)": 0,

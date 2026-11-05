@@ -359,9 +359,11 @@ namespace Oxide.Plugins
             public Dictionary<ulong, MuteData> Mutes = new Dictionary<ulong, MuteData>();
         }
 
+        private const string DataPath = "Nightshade/NightshadeChat";
+
         private void LoadData()
         {
-            try { data = Interface.Oxide.DataFileSystem.ReadObject<StoredData>(Name); }
+            try { data = Interface.Oxide.DataFileSystem.ReadObject<StoredData>(DataPath); }
             catch { data = null; }
             if (data == null) data = new StoredData();
             if (data.Players == null) data.Players = new Dictionary<ulong, PlayerData>();
@@ -370,7 +372,7 @@ namespace Oxide.Plugins
 
         private void SaveData()
         {
-            Interface.Oxide.DataFileSystem.WriteObject(Name, data);
+            Interface.Oxide.DataFileSystem.WriteObject(DataPath, data);
             dataDirty = false;
         }
 
