@@ -16,7 +16,7 @@ namespace Oxide.Plugins
     public class NightshadeRaidProtection : RustPlugin
     {
         private const string PermAdmin = "nightshaderaidprotection.admin";
-        private const string DataPath = "Nightshade/RaidProtection";
+        private const string DataPath = "Nightshade/NightshadeRaidProtection/RaidProtection";
         // These IDs identify the three dedicated custom-icon voucher skins.
         // The shop delivers PAPER items using these IDs. No purchase-registration plugin is needed.
         private const string VoucherShortname = "paper";
@@ -207,6 +207,7 @@ namespace Oxide.Plugins
             return SecondsUntilNow(start, end, active);
         }
 
+        [HookMethod("API_GetPvPStartUtcTicks")]
         public long API_GetPvPStartUtcTicks()
         {
             DateTime start, end;
@@ -215,6 +216,7 @@ namespace Oxide.Plugins
             return start.Ticks;
         }
 
+        [HookMethod("API_GetPvPEndUtcTicks")]
         public long API_GetPvPEndUtcTicks()
         {
             DateTime start, end;
@@ -223,6 +225,7 @@ namespace Oxide.Plugins
             return end.Ticks;
         }
 
+        [HookMethod("API_GetWeekend")]
         public Dictionary<string, object> API_GetWeekend()
         {
             DateTime start, end;
@@ -238,14 +241,18 @@ namespace Oxide.Plugins
             };
         }
 
+        // The cupboard the player is standing in, whether or not they are authorized on it.
+        // Authorization still gates damage blocking; this is only the status lookup.
+        [HookMethod("API_GetPlayerShield")]
         public Dictionary<string, object> API_GetPlayerShield(BasePlayer player)
         {
             if (player == null) return NoneShield();
             BuildingPrivlidge tc = player.GetBuildingPrivilege();
-            if (tc == null || !Authorized(tc, player.userID)) return NoneShield();
+            if (tc == null) return NoneShield();
             return API_GetCupboardShield(CupboardId(tc));
         }
 
+        [HookMethod("API_GetCupboardShield")]
         public Dictionary<string, object> API_GetCupboardShield(ulong cupboardNetId)
         {
             Shield shield;
@@ -254,6 +261,7 @@ namespace Oxide.Plugins
             return Describe(shield);
         }
 
+        [HookMethod("API_GetBuildingShield")]
         public Dictionary<string, object> API_GetBuildingShield(uint buildingId)
         {
             if (buildingId == 0u) return NoneShield();

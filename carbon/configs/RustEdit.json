@@ -69,11 +69,18 @@
         "Minimum (minutes)": 25,
         "Maximum (minutes)": 40
       }
+    },
+    "Map Reports": {
+      "Enabled (players can send reports when the map takes them)": true,
+      "Chat command": "mapreport",
+      "Seconds between two reports of a player": 20,
+      "Reports per player per hour": 20,
+      "Tell players about the command when they join": true
     }
   },
   "Version": {
     "Major": 2,
     "Minor": 0,
-    "Patch": 2
+    "Patch": 3
   }
 }
