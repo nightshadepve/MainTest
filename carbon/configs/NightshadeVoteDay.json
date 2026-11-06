@@ -1,5 +1,8 @@
 {
-  "ChatPrefix": "<color=#7B68EE>[VoteDay]</color>",
+  "Chat server name (sender of vote messages)": "Nightshade",
+  "Chat avatar SteamID (0 = server icon)": 0,
+  "Vote mode (Daily = vote every night, SkipMultiple = one passing vote skips several nights)": "SkipMultiple",
+  "Nights to skip (SkipMultiple only, includes the voted night, minimum 1)": 2,
   "VoteStartTime (24hr format)": 19.0,
   "DayTime (Game hour to set if vote passes or day is purchased)": 8.0,
   "VoteDuration (Time players have to vote in seconds)": 60.0,

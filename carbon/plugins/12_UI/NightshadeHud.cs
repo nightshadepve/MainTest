@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("NightshadeHud", "Nightshade", "1.1.0")]
+    [Info("NightshadeHud", "Nightshade", "1.1.1")]
     [Description("Text HUD on the top-right or under the missions bar: clock, PvP countdown, TC shield, and event labels.")]
     public class NightshadeHud : RustPlugin
     {
@@ -19,6 +19,7 @@ namespace Oxide.Plugins
         private const string Bg = "NightshadeHud.Bg";
         private const string Icon = "NightshadeHud.Icon";
         private const string IconHit = "NightshadeHud.IconHit";
+        private const string IconDrag = "NightshadeHud.IconDrag";
         private const string Half = "NightshadeHud.Half";
         private const string Events = "NightshadeHud.Events";
         private const string DataPath = "Nightshade/NightshadeHud/State";
@@ -47,8 +48,8 @@ namespace Oxide.Plugins
         private Coroutine convoyRoutine;
 
         private readonly Dictionary<ulong, string> mode = new Dictionary<ulong, string>();
-        private readonly Dictionary<ulong, float> dragStartX = new Dictionary<ulong, float>();
-        private readonly Dictionary<ulong, float> dragLastX = new Dictionary<ulong, float>();
+        private readonly Dictionary<ulong, float> dragX = new Dictionary<ulong, float>();
+        private readonly Dictionary<ulong, Timer> dragCommit = new Dictionary<ulong, Timer>();
         private readonly Dictionary<ulong, float> ignoreCycleUntil = new Dictionary<ulong, float>();
         private readonly Dictionary<ulong, string> shown = new Dictionary<ulong, string>();
         private readonly HashSet<ulong> station = new HashSet<ulong>();
@@ -231,6 +232,9 @@ namespace Oxide.Plugins
         private void Unload()
         {
             clockTimer?.Destroy();
+            foreach (var pending in dragCommit.Values)
+                if (pending != null) pending.Destroy();
+            dragCommit.Clear();
             if (ServerMgr.Instance != null)
             {
                 if (startupRoutine != null) ServerMgr.Instance.StopCoroutine(startupRoutine);
@@ -262,8 +266,7 @@ namespace Oxide.Plugins
             shown.Remove(player.userID);
             station.Remove(player.userID);
             shieldCache.Remove(player.userID);
-            dragStartX.Remove(player.userID);
-            dragLastX.Remove(player.userID);
+            CancelDrag(player.userID);
             ignoreCycleUntil.Remove(player.userID);
             MarkPop();
         }
@@ -481,58 +484,44 @@ namespace Oxide.Plugins
 
         private void MoveIconGroup(BasePlayer player, string state)
         {
-            float left, top, badgeLeft, badgeBottom, badgeRight, badgeTop, hitLeft, hitBottom, hitRight, hitTop;
-            IconOrigin(state, out left, out top);
-            BadgeRect(state, out badgeLeft, out badgeBottom, out badgeRight, out badgeTop);
-            HitRect(state, out hitLeft, out hitBottom, out hitRight, out hitTop);
+            // Recreate the group. An update that includes the draggable component is treated by the
+            // client as moveToAnchor/rebuildAnchor and destroys the anchor while the element is live.
             var container = new CuiElementContainer();
-            container.Add(new CuiElement
-            {
-                Name = Icon,
-                Update = true,
-                Components =
-                {
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, top - config.IconSize), OffsetMax = Px(left + config.IconSize, top) }
-                }
-            });
-            container.Add(new CuiElement
-            {
-                Name = BadgeBgName,
-                Update = true,
-                Components =
-                {
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(badgeLeft, badgeBottom), OffsetMax = Px(badgeRight, badgeTop) }
-                }
-            });
-            container.Add(new CuiElement
-            {
-                Name = IconHit,
-                Update = true,
-                Components =
-                {
-                    new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(hitLeft, hitBottom), OffsetMax = Px(hitRight, hitTop) },
-                    IconDrag()
-                }
-            });
+            AddIconGroup(container, state);
             CuiHelper.AddUi(player, container);
         }
 
         private void AddIconGroup(CuiElementContainer container, string state)
         {
-            AddIcon(container, state);
-            AddBadge(container, state);
-            AddIconButton(container, state);
+            float hitLeft, hitBottom, hitRight, hitTop;
+            HitRect(state, out hitLeft, out hitBottom, out hitRight, out hitTop);
+            container.Add(new CuiElement
+            {
+                Name = IconDrag,
+                Parent = Root,
+                DestroyUi = IconDrag,
+                Components =
+                {
+                    new CuiImageComponent { Color = "0 0 0 0" },
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(hitLeft, hitBottom), OffsetMax = Px(hitRight, hitTop) },
+                    DragComponent()
+                }
+            });
+            AddIcon(container, state, hitLeft, hitTop);
+            AddBadge(container, state, hitLeft, hitTop);
+            AddIconButton(container, hitLeft, hitTop, hitRight, hitBottom);
         }
 
-        private void AddIcon(CuiElementContainer container, string state)
+        private void AddIcon(CuiElementContainer container, string state, float originLeft, float originTop)
         {
             float left, top;
             IconOrigin(state, out left, out top);
+            float x = left - originLeft;
+            float y = top - originTop;
             container.Add(new CuiElement
             {
                 Name = Icon,
-                Parent = Root,
+                Parent = IconDrag,
                 DestroyUi = Icon,
                 Components =
                 {
@@ -542,12 +531,12 @@ namespace Oxide.Plugins
                         Color = "1 1 1 1",
                         Sprite = "assets/content/textures/generic/fulltransparent.tga"
                     },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, top - config.IconSize), OffsetMax = Px(left + config.IconSize, top) }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(x, y - config.IconSize), OffsetMax = Px(x + config.IconSize, y) }
                 }
             });
         }
 
-        private void AddBadge(CuiElementContainer container, string state)
+        private void AddBadge(CuiElementContainer container, string state, float originLeft, float originTop)
         {
             bool pvp = CombatPvp();
             float left, bottom, right, top;
@@ -556,12 +545,12 @@ namespace Oxide.Plugins
             container.Add(new CuiElement
             {
                 Name = BadgeBgName,
-                Parent = Root,
+                Parent = IconDrag,
                 DestroyUi = BadgeBgName,
                 Components =
                 {
                     new CuiImageComponent { Color = Hex(pvp ? config.BadgePvpBg : config.BadgePveBg) },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) }
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left - originLeft, bottom - originTop), OffsetMax = Px(right - originLeft, top - originTop) }
                 }
             });
             container.Add(new CuiElement
@@ -584,25 +573,24 @@ namespace Oxide.Plugins
             badgeCache = pvp ? "1" : "0";
         }
 
-        private void AddIconButton(CuiElementContainer container, string state)
+        private void AddIconButton(CuiElementContainer container, float originLeft, float originTop, float hitRight, float hitBottom)
         {
-            float left, bottom, right, top;
-            HitRect(state, out left, out bottom, out right, out top);
             container.Add(new CuiElement
             {
                 Name = IconHit,
-                Parent = Root,
+                Parent = IconDrag,
                 DestroyUi = IconHit,
                 Components =
                 {
                     new CuiButtonComponent { Command = IconCommand(), Color = "0 0 0 0.02" },
-                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(left, bottom), OffsetMax = Px(right, top) },
-                    IconDrag()
+                    new CuiRectTransformComponent { AnchorMin = "0 1", AnchorMax = "0 1", OffsetMin = Px(0f, hitBottom - originTop), OffsetMax = Px(hitRight - originLeft, 0f) }
                 }
             });
         }
 
-        private static CuiDraggableComponent IconDrag()
+        // keepOnTop stays false so OnEndDrag parents the logo back under the HUD before the rebuild.
+        // The client fires DragRPC once, on release, and DropRPC only when two draggables swap.
+        private static CuiDraggableComponent DragComponent()
         {
             return new CuiDraggableComponent
             {
@@ -614,7 +602,7 @@ namespace Oxide.Plugins
                 ParentLimitIndex = 1,
                 ParentPadding = "0 0",
                 AnchorOffset = "0 0",
-                KeepOnTop = true,
+                KeepOnTop = false,
                 PositionRPC = CommunityEntity.DraggablePositionSendType.NormalizedScreen,
                 MoveToAnchor = false,
                 RebuildAnchor = false,
@@ -890,27 +878,45 @@ namespace Oxide.Plugins
 
         private void OnCuiDraggableDrag(BasePlayer player, string name, Vector3 position, CommunityEntity.DraggablePositionSendType type)
         {
-            if (player == null || name != IconHit || type != CommunityEntity.DraggablePositionSendType.NormalizedScreen) return;
+            if (player == null || name != IconDrag || type != CommunityEntity.DraggablePositionSendType.NormalizedScreen) return;
             if (float.IsNaN(position.x) || float.IsInfinity(position.x)) return;
-            float start;
-            if (!dragStartX.TryGetValue(player.userID, out start))
-                dragStartX[player.userID] = position.x;
-            dragLastX[player.userID] = position.x;
-            if (dragStartX.TryGetValue(player.userID, out start) && Mathf.Abs(position.x - start) >= 0.03f)
-                ignoreCycleUntil[player.userID] = Time.realtimeSinceStartup + 0.6f;
+            ulong id = player.userID;
+            dragX[id] = Mathf.Clamp01(position.x);
+            ignoreCycleUntil[id] = Time.realtimeSinceStartup + 0.75f;
+            Timer pending;
+            if (dragCommit.TryGetValue(id, out pending) && pending != null && !pending.Destroyed) pending.Destroy();
+            dragCommit[id] = timer.Once(0.2f, () => CommitDrag(id, true));
         }
 
         private void OnCuiDraggableDrop(BasePlayer player, string draggedName, string draggedSlot, string swappedName, string swappedSlot)
         {
-            if (player == null || draggedName != IconHit) return;
-            float start = 0f;
-            float last = 0f;
-            bool moved = dragStartX.TryGetValue(player.userID, out start) && dragLastX.TryGetValue(player.userID, out last) && Mathf.Abs(last - start) >= 0.03f;
-            dragStartX.Remove(player.userID);
-            dragLastX.Remove(player.userID);
-            if (!moved) return;
-            ignoreCycleUntil[player.userID] = Time.realtimeSinceStartup + 0.6f;
-            SetSide(player, last < 0.5f ? "left" : "right");
+            if (player == null || draggedName != IconDrag) return;
+            CommitDrag(player.userID, false);
+        }
+
+        private void CancelDrag(ulong id)
+        {
+            Timer pending;
+            if (dragCommit.TryGetValue(id, out pending) && pending != null && !pending.Destroyed) pending.Destroy();
+            dragCommit.Remove(id);
+            dragX.Remove(id);
+        }
+
+        private void CommitDrag(ulong id, bool fromTimer)
+        {
+            Timer pending;
+            if (dragCommit.TryGetValue(id, out pending))
+            {
+                dragCommit.Remove(id);
+                if (!fromTimer && pending != null && !pending.Destroyed) pending.Destroy();
+            }
+            float x;
+            if (!dragX.TryGetValue(id, out x)) return;
+            dragX.Remove(id);
+            BasePlayer player = BasePlayer.FindByID(id);
+            if (player == null || !player.IsConnected || !shown.ContainsKey(id)) return;
+            ignoreCycleUntil[id] = Time.realtimeSinceStartup + 0.75f;
+            SetSide(player, x < 0.5f ? "left" : "right");
         }
 
         private float HalfHeight()
